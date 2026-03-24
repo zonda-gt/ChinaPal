@@ -1,0 +1,27 @@
+{
+  "attractionName": "印象·刘三姐",
+  "cityName": "桂林",
+  "inputPath": "data/印象·刘三姐(桂林）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:56:11.191Z",
+  "count": 3,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "The Natural Theater — Li River & 12 Karst Mountains",
+      "query": "The Natural Theater — Li River & 12 Karst Mountains 印象·刘三姐 桂林",
+      "outputPath": "data/印象·刘三姐(桂林）/highlight_images/01-The_Natural_Theater_—_Li_River_&_12_Karst_Mountains/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "The Red Impression — 600 Performers on Water",
+      "query": "The Red Impression — 600 Performers on Water 印象·刘三姐 桂林",
+      "outputPath": "data/印象·刘三姐(桂林）/highlight_images/02-The_Red_Impression_—_600_Performers_on_Water/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "The Golden Impression — Fishing Fire",
+      "query": "The Golden Impression — Fishing Fire 印象·刘三姐 桂林",
+      "outputPath": "data/印象·刘三姐(桂林）/highlight_images/03-The_Golden_Impression_—_Fishing_Fire/raw/baidu_images.json"
+    }
+  ]
+}

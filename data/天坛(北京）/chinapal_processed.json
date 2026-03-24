@@ -1,0 +1,250 @@
+{
+  "attraction_name_cn": "天坛",
+  "attraction_name_en": "Temple of Heaven",
+  "address_cn": "北京市东城区天坛东里甲1号",
+  "experience_type": "sightseeing",
+  "hook": "The sacred complex where 22 emperors over 500 years came to pray for bountiful harvests — a UNESCO masterpiece of cosmological architecture four times the size of the Forbidden City, where ancient ritual grounds double as Beijing's most atmospheric morning exercise park.",
+  "honest_description": "The Temple of Heaven is one of Beijing's most rewarding visits — a genuinely awe-inspiring fusion of philosophical architecture and living local culture. The Hall of Prayer for Good Harvests with its iconic blue triple roof is breathtaking, the Circular Mound Altar's acoustic tricks are fascinating, and the Echo Wall actually works (when not drowned out by crowds). But what elevates the Temple of Heaven beyond its buildings is the park itself: hundreds of ancient cypress trees, wide paved paths, and — crucially — local Beijingers using the grounds for tai chi, ballroom dancing, choral singing, fan dancing, mahjong, and erhu performances every morning. This daily display of community life amid 600-year-old imperial architecture is uniquely magical. The complex is enormous (273 hectares), so you'll walk a lot. Without a guide, the buildings look beautiful but the deep symbolism around numbers, shapes, and cosmic philosophy is largely invisible. Highly recommended for all visitors to Beijing. A guide or audio guide transforms the experience from 'pretty buildings' to 'profound understanding.'",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I book tickets as a foreigner?",
+      "answer": "Foreign visitors must book digitally via the official 'Tiantan Park' WeChat mini-program using their passport number. Walk-up tickets are not reliably available for passport holders. Book at least one day in advance, especially for weekends. The system generates a QR code scanned at the gate. If you can't access WeChat, some visitors report success buying at the ticket machines using passport, or booking through Trip.com/Klook for a guided tour that includes entry."
+    },
+    {
+      "question": "Should I get the basic ticket or the combo ticket?",
+      "answer": "Always get the combo ticket (联票, ¥34 peak season / ¥28 off-season). The basic ticket (¥15/10) only gets you into the park — you cannot enter the Hall of Prayer for Good Harvests, Circular Mound Altar, or Echo Wall, which are the entire reason to visit. The combo ticket is essential."
+    }
+  ],
+  "experience_format_note": "Large imperial temple park — open park area with separately ticketed historical buildings inside. The park opens very early (6:00-6:30 AM) for morning exercise and closes at 9-10 PM. The historical buildings (Hall of Prayer, Circular Mound, Echo Wall, etc.) open 8:00 AM and close at 5:00-6:00 PM depending on season. Closed Mondays (except holidays and July 15 - Aug 31). Buy the combo ticket to access all buildings. Self-guided or with audio guide/human guide.",
+  "vibe": "Serene and profound during the day, like walking through a philosophical treatise made of wood, marble, and ancient trees — then surprisingly lively in the mornings when it transforms into Beijing's biggest community exercise park.",
+  "time_needed": {
+    "quick_visit": "1.5-2 hours (main buildings along the central axis: Circular Mound → Echo Wall → Hall of Prayer)",
+    "recommended": "3-4 hours (all main buildings plus park exploration and watching local morning activities)",
+    "deep_dive": "Half day (arrive at 7 AM for morning exercise culture, then explore all buildings with a guide, finish with park wandering)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at 7:00-8:00 AM to catch both the local morning exercise culture (tai chi, dancing, singing groups) and then visit the buildings when they open at 8:00 AM before tour groups arrive. Late afternoon (after 4 PM) offers golden light on the blue-roofed buildings and thinner crowds.",
+    "worst_time": "Mid-morning (10 AM - 12 PM) when tour groups flood the complex. Chinese public holidays. Monday when buildings are closed (park still open).",
+    "seasonal_notes": "Autumn (September-October) offers the best weather — clear blue skies that match the blue-roofed buildings perfectly. Spring brings flowering trees. Winter is cold but atmospheric with fewer tourists and possible snow. Summer is hot with limited shade between buildings.",
+    "pro_tip": "Visit on Friday or Saturday evening when the Hall of Prayer for Good Harvests is illuminated (approximately 5:30-7:30 PM) — the lit-up blue roof against the dark sky is spectacular and rarely seen by tourists."
+  },
+  "getting_in": {
+    "opening_hours": "Park: April-October 6:00 AM - 10:00 PM; November-March 6:30 AM - 10:00 PM (entry stops at 9:00 PM). Buildings: 8:00 AM - 5:00/6:00 PM depending on season. Buildings closed Mondays (except holidays and Jul 15 - Aug 31).",
+    "price_rmb": "Park only: ¥15 (peak) / ¥10 (off-peak). Combo ticket (recommended): ¥34 (peak) / ¥28 (off-peak).",
+    "price_usd": "Combo ticket: ~$4.70 (peak) / ~$3.90 (off-peak).",
+    "price_breakdown": [
+      {
+        "item": "Park entrance only",
+        "price": "¥15 (peak) / ¥10 (off-peak)",
+        "highlight": "Access to grounds and trees only — cannot enter any buildings"
+      },
+      {
+        "item": "Combo ticket (strongly recommended)",
+        "price": "¥34 (peak) / ¥28 (off-peak)",
+        "highlight": "Includes park + Hall of Prayer, Circular Mound, Echo Wall, and Fasting Palace"
+      },
+      {
+        "item": "Audio guide",
+        "price": "¥40",
+        "highlight": "Available at all gates in multiple languages including English"
+      }
+    ],
+    "booking_required": "Yes — digital booking required via WeChat mini-program or ticket machine with passport. Walk-up tickets are not reliably available for foreign passport holders. Book at least one day in advance for weekends.",
+    "booking_method": "Official 'Tiantan Park' WeChat mini-program — enter passport number, select combo ticket, pay via WeChat Pay. QR code generated for gate scanning. Alternative: Trip.com or Klook for guided tours that include entry. Some visitors report success at on-site ticket machines with passport. If the WeChat booking process is driving you crazy, message our concierge team — we can book your combo tickets using your passport number and send you the QR code.",
+    "passport_accepted": "Yes — foreigners aged 60+ with passport get free entry. Children under 18 with valid ID enter free. Standard adult foreigners use passport number for digital booking.",
+    "what_to_bring": "Physical passport (for ID verification at gates). Comfortable walking shoes (you'll cover 3-5 km). Water bottle. Sun protection in summer. Audio guide rental deposit (cash or mobile payment). Wear light-colored clothing for photos against the red walls and blue roofs.",
+    "queue_situation": "Gate entry is quick with QR code scan (2-5 minutes). The Hall of Prayer for Good Harvests can have 15-30 minute queues in peak season to enter the viewing area. The Echo Wall gets crowded but moves steadily. Arrive before 9 AM to avoid tour group congestion.",
+    "language_barrier_rating": "some-chinese-helps — Audio guides available in English and other languages at all gates. Building signage is bilingual. However, booking via WeChat mini-program requires Chinese language navigation (consider having a Chinese-speaking friend help, or use Trip.com instead). Staff speak limited English."
+  },
+  "highlights": [
+    {
+      "name": "Hall of Prayer for Good Harvests (祈年殿)",
+      "description": "The iconic triple-roofed circular hall with deep blue glazed tiles — Beijing's most recognizable silhouette after the Forbidden City. Built entirely without nails using 28 massive wooden pillars representing celestial concepts. Where emperors prayed for abundant harvests at the first lunar month.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The four central pillars represent the four seasons, the 12 middle pillars represent the 12 months, and the 12 outer pillars represent the 12 two-hour periods of the day. The entire building is a calendar and cosmological map encoded in wood — a guide makes this visible.",
+      "tip": "Photograph from the south approach along the Danbi Bridge for the classic symmetrical composition. The building is illuminated on Friday and Saturday evenings (5:30-7:30 PM approximately)."
+    },
+    {
+      "name": "Circular Mound Altar (圜丘坛)",
+      "description": "A three-tiered white marble platform where emperors performed the winter solstice sacrifice — the most sacred ritual in the Chinese imperial calendar. The center stone (Heavenly Heart Stone) creates an acoustic echo effect where your voice resonates and amplifies.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Every element uses the number nine or multiples of nine — the supreme yang number in Chinese numerology. Stand on the center stone and speak: your voice echoes back as if the heavens are answering. Ancient emperors believed this confirmed their divine mandate.",
+      "tip": "Visit early morning when fewer people are on the platform — the acoustic effect is drowned out by crowds. Stand exactly on the center stone and clap or speak to hear the echo."
+    },
+    {
+      "name": "Echo Wall & Imperial Vault of Heaven (回音壁/皇穹宇)",
+      "description": "A perfectly circular wall surrounding the Imperial Vault of Heaven that transmits whispers along its surface — speak at one end and someone at the opposite end can hear you clearly 65 meters away. An acoustic marvel created by the precision of the wall's curve.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The acoustic effect genuinely works but requires quiet conditions. The wall was built in 1530 and the acoustic properties were likely accidental but later recognized and preserved.",
+      "tip": "The echo effect is nearly impossible to experience when crowded — visit at opening time (8 AM) or near closing for the best chance. You need at least two people positioned at opposite sides of the wall."
+    },
+    {
+      "name": "Morning Exercise Culture in the Park",
+      "description": "Every morning between 6:00-9:00 AM, hundreds of local Beijingers fill the park paths and cypress groves with an extraordinary display of community life: tai chi groups, ballroom dancing, choir singing, erhu and flute players, fan dancers, calligraphy with water brushes, and mahjong circles — all set among 600-year-old trees.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is not a performance for tourists — it's authentic daily Beijing life. The diversity and energy of activities is remarkable and unique to Chinese parks. Locals are generally happy to have you watch or even join in.",
+      "tip": "Arrive between 7:00-8:00 AM on a weekday for the most genuine experience. The area south of the Hall of Prayer along the Long Corridor is the most active zone. Many groups welcome observers."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The ancient cypress grove (thousands of 500+ year old trees)",
+      "why": "The park contains over 3,500 ancient cypress and pine trees, some over 600 years old. Walking through these towering trees along the wide stone paths is one of the most peaceful experiences in Beijing, but most visitors rush between buildings and miss the forest for the temples."
+    },
+    {
+      "what": "The Fasting Palace (斋宫)",
+      "why": "Where emperors fasted and purified themselves for three days before performing sacrificial rituals. It's included in the combo ticket but most tour groups skip it. The architecture is intimate and the exhibits explain the fasting rituals in detail."
+    },
+    {
+      "what": "The Danbi Bridge (丹陛桥) symbolism",
+      "why": "The 360-meter raised walkway connecting the two main altar complexes has three parallel paths: the center was for the spirits of heaven, the east path for the emperor, and the west for ministers. Most visitors walk it without knowing they're on the 'spirit path.'"
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter via the East Gate (closest to metro, less crowded) → walk to Fasting Palace first (most visitors skip this) → head to the Circular Mound Altar and Heavenly Heart Stone (arrive before crowds) → Echo Wall and Imperial Vault of Heaven → walk north along Danbi Bridge → Hall of Prayer for Good Harvests (the climax) → wander through the ancient cypress groves → exit via the West Gate or North Gate. Total: 3-4 hours.",
+    "what_to_skip": "The gift shops inside the complex are overpriced. The 'incense offerings' some vendors push near temple areas are not part of the actual experience. If pressed for time, the Fasting Palace is the lowest priority among the buildings.",
+    "pro_tips": "A human guide (¥200-400 for 2 hours) or audio guide (¥40) is strongly recommended — the buildings look beautiful but the numerological symbolism, color coding, and ritual significance are invisible without explanation. For the best photos of the Hall of Prayer, wear light-colored or red clothing against the blue roof and red walls. The Long Corridor on the west side of the park is where the most active morning exercise groups gather. Our concierge can also match you with a vetted English-speaking guide for the Temple of Heaven — someone who can bring the numerological symbolism to life."
+  },
+  "heads_up": [
+    {
+      "warning": "The combo ticket is essential — the basic ticket is nearly useless",
+      "advice": "The ¥15 basic ticket only lets you into the park grounds. You cannot enter ANY of the historical buildings (Hall of Prayer, Circular Mound, Echo Wall) without the combo ticket (¥34). Always buy the combo ticket."
+    },
+    {
+      "warning": "Buildings are closed on Mondays",
+      "advice": "The park itself remains open on Mondays, but all historical buildings are closed. If you only have Monday, you can still enjoy the park, morning exercise culture, and cypress groves, but cannot enter the main attractions."
+    },
+    {
+      "warning": "Digital booking is mandatory and confusing for foreigners",
+      "advice": "The WeChat mini-program booking process requires navigating Chinese-language interfaces. Have a Chinese-speaking friend help, or book through Trip.com/Klook instead. Some visitors have succeeded at the on-site ticket machines using passport, but this is not guaranteed. Our team handles this booking for travelers daily — just send us your passport details and preferred date, and we will sort it out."
+    },
+    {
+      "warning": "The complex is much larger than expected",
+      "advice": "At 273 hectares (four times the Forbidden City), you'll easily walk 3-5 km. Wear comfortable shoes. Budget 3+ hours. Don't underestimate the distance between major buildings."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Booking tickets requires WeChat mini-program with passport number — this is a genuine obstacle for foreigners. If you can't navigate it, book a guided tour through Trip.com or Klook that includes entry, or ask your hotel to help book.",
+    "Bring your physical passport — it may be checked at the gate along with your QR code.",
+    "The Echo Wall acoustic effect requires quiet conditions that rarely exist during peak hours. Visit at 8 AM opening for the best chance to actually hear the whisper transmission.",
+    "Guides hanging around the entrance offer informal tours — negotiate price before starting (expect ¥200-400 for 2 hours). Some speak English; confirm language ability first.",
+    "The park is safe and well-patrolled. The main annoyance is tour groups with megaphone-wielding guides — stay ahead of or behind the group waves."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Can't book tickets through WeChat mini-program",
+      "what_to_do": "Try the on-site ticket machines at any gate — insert passport and follow the prompts. Alternatively, ask a Chinese-speaking person nearby to help you book via WeChat.",
+      "plan_b": "Book a guided tour through Trip.com, Klook, or GetYourGuide — these include ticket procurement and solve the booking problem entirely. Prices are typically ¥150-300 including guide. Or simply message our team — we book Temple of Heaven tickets for travelers regularly and can have your QR code ready within the hour."
+    },
+    {
+      "problem": "Arrived on Monday and buildings are closed",
+      "what_to_do": "The park itself is still open and worth visiting for the ancient cypress groves, morning exercise culture, and the exterior views of the buildings (you can see the Hall of Prayer from outside the fence).",
+      "plan_b": "Combine the park visit with nearby attractions: the Pearl Market is right outside the East Gate for shopping, and the Natural History Museum is a short walk south."
+    },
+    {
+      "problem": "Too crowded to experience the Echo Wall",
+      "what_to_do": "Return very early the next morning — the first 30 minutes after the 8 AM opening are the quietest. The echo effect works best with fewer than 10 people in the enclosure.",
+      "plan_b": "The Heavenly Heart Stone echo on the Circular Mound Altar is easier to experience even with moderate crowds — stand on the center stone and clap."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes (3-5 km of walking). Light-colored or red clothing photographs beautifully against the blue roofs and red walls. Layers in spring/autumn. Sun protection in summer (limited shade between buildings). Warm clothing in winter.",
+    "what_to_bring": "Physical passport. Phone with QR code ticket. Water bottle (limited vendors inside). Audio guide deposit (¥100 cash). Comfortable shoes. Sun protection in summer. If you realize you have left your passport at the hotel, message us before panicking — we may be able to help you sort out entry with on-site staff.",
+    "what_not_to_bring": "Large bags (security screening at gates). Drones (prohibited). Loud speakers (disruptive to the park atmosphere)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "Mostly flat walking on wide paved paths, but the sheer scale (273 hectares) means extensive walking. The Circular Mound Altar has steps but also ramp access. The Hall of Prayer area is elevated with some steps. Wheelchair accessible on main paths.",
+    "age_notes": "Suitable for all ages. Strollers work well on the wide main paths. Elderly visitors should pace themselves given the distances. Free stroller rental available at the visitor service center.",
+    "health_warnings": "Summer heat with limited shade between major buildings. Winter cold can be biting. Stay hydrated. The park is large enough that fatigue is common — bring snacks."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book English-speaking guided tour with ticket included",
+      "platform": "Trip.com, Klook, or GetYourGuide",
+      "value_to_user": "Solves the ticket booking problem AND transforms the experience. The symbolism of numbers, colors, and shapes is invisible without a guide. English-speaking guides cost ¥200-400 and are universally recommended by foreign visitors."
+    },
+    {
+      "action": "Book combo tour: Temple of Heaven + Forbidden City",
+      "platform": "Trip.com, Klook",
+      "value_to_user": "Many tour operators combine both in a single day. The Temple of Heaven is best in the morning (morning exercise + cooler temperatures), then move to the Forbidden City for the afternoon."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Tiāntán",
+      "chinese": "天坛",
+      "english": "Temple of Heaven"
+    },
+    {
+      "pinyin": "Qíniándiàn",
+      "chinese": "祈年殿",
+      "english": "Hall of Prayer for Good Harvests"
+    },
+    {
+      "pinyin": "Huíyīn Bì",
+      "chinese": "回音壁",
+      "english": "Echo Wall"
+    },
+    {
+      "pinyin": "Huánqiū Tán",
+      "chinese": "圜丘坛",
+      "english": "Circular Mound Altar"
+    },
+    {
+      "pinyin": "Liánpiào",
+      "chinese": "联票",
+      "english": "Combo ticket (what you need to buy)"
+    },
+    {
+      "pinyin": "Dōng Mén",
+      "chinese": "东门",
+      "english": "East Gate (closest to metro)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Pearl Market (红桥市场) for shopping",
+      "why": "Located right outside the Temple of Heaven's East Gate. A famous market for pearls, silk, souvenirs, and electronics. Good for bargaining practice after the contemplative temple visit.",
+      "travel_time": "5-minute walk from East Gate"
+    },
+    {
+      "suggestion": "Forbidden City (故宫)",
+      "why": "The other essential Beijing imperial attraction. The emperor would travel from the Forbidden City to the Temple of Heaven along a ceremonial route. Visit the Temple of Heaven in the morning, Forbidden City in the afternoon.",
+      "travel_time": "20 minutes by metro or taxi"
+    },
+    {
+      "suggestion": "Qianmen Street (前门大街)",
+      "why": "A restored commercial street with traditional Beijing shops and restaurants. Good for lunch between Temple of Heaven and Forbidden City visits. The old Qianmen Gate area connects the two.",
+      "travel_time": "15 minutes by taxi or 2 metro stops"
+    }
+  ],
+  "cultural_context": "The Temple of Heaven embodies one of China's most profound philosophical concepts: the emperor as the 'Son of Heaven' who mediates between the human and divine realms. The entire complex is designed around the principle of 'tianren heyi' (天人合一) — the unity of heaven and humanity. Circular shapes represent heaven, square shapes represent earth. The number nine (the supreme yang number) appears obsessively: 9 rings of paving stones, 9 steps on each tier, 81 (9x9) stones in the center ring. The blue glazed tiles represent heaven. Understanding that every single architectural choice encodes a philosophical message transforms the visit from sightseeing to revelation.",
+  "photo_spots": [
+    {
+      "location": "South approach to the Hall of Prayer for Good Harvests along the Danbi Bridge",
+      "tip": "Morning light is ideal. Center yourself on the bridge path for the symmetrical approach shot with the hall framed against the sky. Wear light or red clothing for contrast.",
+      "why": "The definitive Temple of Heaven photo — the iconic blue triple roof rising from the marble platform, perfectly symmetrical."
+    },
+    {
+      "location": "Circular Mound Altar from the upper tier",
+      "tip": "Early morning with low-angle light. The concentric marble rings create mesmerizing patterns. Best on a clear day with blue sky.",
+      "why": "The geometric perfection of the altar against the sky embodies the cosmic symbolism of the entire complex."
+    },
+    {
+      "location": "Ancient cypress grove paths",
+      "tip": "Morning light filtering through the 500-year-old trees. The wide paths framed by towering cypresses are atmospheric and uncrowded.",
+      "why": "A moody, contemplative image that captures the park's spiritual atmosphere beyond the famous buildings."
+    }
+  ],
+  "card_name": "Temple of Heaven",
+  "card_type": "IMPERIAL TEMPLE",
+  "card_hook": "Where emperors spoke to the sky and the sky answered back.",
+  "best_for": [
+    "architecture-lovers",
+    "cultural-depth",
+    "morning-visit",
+    "photographers",
+    "peaceful-escape-in-the-city"
+  ]
+}

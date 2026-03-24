@@ -1,0 +1,33 @@
+{
+  "attractionName": "人民广场",
+  "cityName": "上海",
+  "inputPath": "data/人民广场(上海）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:55:25.041Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Weekend Marriage Market (相亲角)",
+      "query": "相亲角 人民广场 上海",
+      "outputPath": "data/人民广场(上海）/highlight_images/01-相亲角/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Shanghai Museum (上海博物馆)",
+      "query": "上海博物馆 人民广场 上海",
+      "outputPath": "data/人民广场(上海）/highlight_images/02-上海博物馆/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "People's Park Morning Activities",
+      "query": "People's Park Morning Activities 人民广场 上海",
+      "outputPath": "data/人民广场(上海）/highlight_images/03-People's_Park_Morning_Activities/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Nanjing Road East (南京东路) Access",
+      "query": "南京东路 人民广场 上海",
+      "outputPath": "data/人民广场(上海）/highlight_images/04-南京东路/raw/baidu_images.json"
+    }
+  ]
+}

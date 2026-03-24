@@ -1,0 +1,33 @@
+{
+  "attractionName": "翠湖公园",
+  "cityName": "昆明",
+  "inputPath": "data/翠湖公园(昆明）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:58:08.782Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Winter gull feeding (红嘴鸥)",
+      "query": "红嘴鸥 翠湖公园 昆明",
+      "outputPath": "data/翠湖公园(昆明）/highlight_images/01-红嘴鸥/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Local life and cultural activities",
+      "query": "Local life and cultural activities 翠湖公园 昆明",
+      "outputPath": "data/翠湖公园(昆明）/highlight_images/02-Local_life_and_cultural_activities/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Qing Dynasty pavilions and causeways",
+      "query": "Qing Dynasty pavilions and causeways 翠湖公园 昆明",
+      "outputPath": "data/翠湖公园(昆明）/highlight_images/03-Qing_Dynasty_pavilions_and_causeways/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Surrounding neighborhood (Wenlin Street, Huanggong East Street)",
+      "query": "Surrounding neighborhood (Wenlin Street, Huanggong East Street) 翠湖公园 昆明",
+      "outputPath": "data/翠湖公园(昆明）/highlight_images/04-Surrounding_neighborhood_(Wenlin_Street,_Huanggong_East_Street)/raw/baidu_images.json"
+    }
+  ]
+}

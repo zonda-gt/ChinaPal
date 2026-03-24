@@ -1,0 +1,297 @@
+{
+  "attraction_name_cn": "上海博物馆（东馆）",
+  "attraction_name_en": "Shanghai Museum East",
+  "address_cn": "上海市浦东新区世纪大道1952号",
+  "experience_type": "sightseeing",
+  "hook": "A world-class museum that's completely free — 13 permanent galleries across 120,000 square meters housing 3,600 years of Chinese art, from bronzes that predate Rome to calligraphy that makes you rethink what handwriting can be.",
+  "honest_description": "Shanghai Museum East is genuinely one of the best museums in China, and the fact that it's free makes it almost absurd. The bronze gallery alone rivals dedicated museums elsewhere, the ceramics collection traces an unbroken 6,000-year thread, and the calligraphy and painting galleries are the only permanent exhibitions in the world that present ancient Chinese brush arts as a complete chronological story. The building itself — a white jade-inspired tower that opened fully in late 2024 — is modern, spacious, and thoughtfully designed with natural light, spiral ramps, and even a rooftop garden. The downside is scale: 20 exhibition halls across multiple floors means you genuinely cannot see everything in one visit, and decision fatigue sets in after 3-4 hours. The digital gallery and AR experiences are impressive but require separate reservations. Best for art lovers, history buffs, and anyone who wants to understand Chinese civilization through its objects. Skip it if you need interactive entertainment — this is a traditional viewing museum, beautifully done.",
+  "foreigner_top_questions": [
+    {
+      "question": "Do I need to book in advance, and how do I do it as a foreigner?",
+      "answer": "Individual visitors do NOT need a reservation for the East Branch — just show up with a valid passport and enter through the B1 East Gate near Dingxiang Road. This is a major improvement over the People's Square branch, which requires advance booking. However, special exhibitions and the digital gallery DO require separate reservations via the Shanghai Museum WeChat mini-program. Group visits of 20+ people need phone reservations 7-14 days ahead (021-20729999 ext. 134)."
+    },
+    {
+      "question": "Is there English signage and are audio guides available?",
+      "answer": "Yes — signage on major exhibits is bilingual (Chinese/English). English audio guides cost ¥40 per set and are available at the 1F Information Centre. AR smart glasses (¥60) offer an enhanced experience. Paid English guided tours start at ¥300. Free WiFi-based guides are available by scanning QR codes throughout the museum. The quality of English explanations is generally good, though some smaller exhibits may be Chinese-only."
+    }
+  ],
+  "experience_format_note": "Standard museum visit — no special preparation needed. Enter via B1 East Gate (near Dingxiang Road) with valid ID. Security screening at entry (lighters confiscated but returned at exit). The museum is spread across 4+ above-ground floors with 20 exhibition halls. A bottom-to-top visiting order is recommended. Free complimentary guidebooks and maps available at entry. Wheelchairs and strollers available for loan with valid ID or ¥300 deposit.",
+  "vibe": "Spacious, modern, and quietly overwhelming — like walking through the entire history of Chinese civilization in a building that feels more like a cathedral of light than a museum.",
+  "time_needed": {
+    "quick_visit": "1-2 hours (pick 2-3 galleries — bronze, ceramics, and one painting gallery)",
+    "recommended": "4-5 hours (all major permanent galleries plus the rooftop garden)",
+    "deep_dive": "6-8 hours or two visits (reviewers consistently say one day is not enough to see everything properly)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive right at opening at 10:00 AM when crowds are smallest. Weekday mornings are noticeably quieter than weekends.",
+    "worst_time": "Weekend afternoons, Chinese public holidays (National Day, May Day, Chinese New Year), and any period when a blockbuster special exhibition is running. The Ancient Egypt exhibition drew enormous crowds.",
+    "seasonal_notes": "The museum is climate-controlled and excellent year-round. Summer visits are especially pleasant as the AC provides welcome relief from Shanghai's heat. The rooftop garden and surrounding grounds have flowering trees in spring.",
+    "pro_tip": "Visit on a Tuesday-Friday morning for the smallest crowds. Start from the top floor and work down — most visitors start at the bottom, so upper floors are emptier in the morning."
+  },
+  "getting_in": {
+    "opening_hours": "Wednesday to Monday, 10:00-18:00 (last entry at 17:00). Closed on Tuesdays (except national holidays).",
+    "price_rmb": "Free (permanent exhibitions). Special exhibitions: ¥80 full price, ¥40 concession.",
+    "price_usd": "Free (permanent). Special exhibitions: ~$11 full / ~$5.50 concession.",
+    "price_breakdown": [
+      {
+        "item": "Permanent exhibitions (13 galleries)",
+        "price": "Free",
+        "highlight": "No reservation needed for individual visitors — just bring valid ID"
+      },
+      {
+        "item": "Special/temporary exhibitions",
+        "price": "¥80 (full) / ¥40 (concession)",
+        "highlight": "Varies by exhibition — some themed shows charge ¥68-88"
+      },
+      {
+        "item": "Chinese audio guide",
+        "price": "¥20",
+        "highlight": "Available at 1F Information Centre"
+      },
+      {
+        "item": "English audio guide",
+        "price": "¥40",
+        "highlight": "Available at 1F Information Centre"
+      },
+      {
+        "item": "AR smart glasses",
+        "price": "¥60",
+        "highlight": "Enhanced interactive experience"
+      },
+      {
+        "item": "English guided tour",
+        "price": "From ¥300",
+        "highlight": "Professional guided tours — highly recommended by reviewers for bringing context alive"
+      }
+    ],
+    "booking_required": "No — individual visitors can walk in with valid ID (passport for foreigners). No reservation needed for permanent exhibitions. Special exhibitions and the digital gallery require separate reservations via WeChat mini-program.",
+    "booking_method": "Search 'Shanghai Museum' on WeChat to access the mini-program for special exhibition bookings. Individual visitors for permanent galleries just walk in. Groups of 20+ call 021-20729999 ext. 134, 7-14 days ahead. For special exhibitions that require the WeChat mini-program, our concierge team can book tickets on your behalf if you don't have a Chinese phone number.",
+    "passport_accepted": "Yes — foreigners enter with physical passport at B1 East Gate. Your passport serves as your entry ID.",
+    "what_to_bring": "Physical passport (mandatory for foreigners). Light jacket or sweater (AC can be cold, especially in summer). Water bottle (free water stations on all floors). Portable charger for phone-based guides.",
+    "queue_situation": "Generally smooth entry with short security lines. Weekend afternoons and holiday periods can see 15-30 minute waits. Arriving right at 10:00 AM on weekdays typically means walking straight in.",
+    "language_barrier_rating": "some-chinese-helps — Major exhibits have bilingual signage. English audio guides available. Staff speak limited English. The WeChat booking system for special exhibitions is Chinese-focused and can be challenging for foreigners without a Chinese phone number."
+  },
+  "highlights": [
+    {
+      "name": "Bronze Gallery (中国古代青铜馆)",
+      "description": "Over 500 masterpieces spanning 3,600 years of Chinese bronze art from the Xia Dynasty to the Qing Dynasty. The star piece is the Da Ke Ding, a massive Western Zhou ritual vessel and national treasure. The gallery traces the evolution from ritual objects to art forms.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Chinese bronzes are fundamentally different from Western bronze sculpture — these were ritual vessels for communicating with ancestors and gods. The intricate patterns (taotie masks, dragons) are symbolic, not decorative.",
+      "tip": "Look for the detailed inscriptions inside the vessels — they're essentially ancient contracts and historical records cast in bronze, some of the oldest Chinese writing that survives."
+    },
+    {
+      "name": "Calligraphy & Painting Galleries (中国历代书法馆/绘画馆)",
+      "description": "The world's only permanent exhibitions presenting the complete history of Chinese calligraphy and painting separately. Works by Wang Xizhi, Song Dynasty masters, and the famous 'Four Masters of the Ming' — Shen Zhou, Tang Yin, Wen Zhengming, and Qiu Ying. Exhibitions rotate every six months, so repeat visits always reveal new treasures.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Chinese calligraphy is considered the highest art form — above painting. Even without reading Chinese, the visual rhythm and energy of the brushstrokes is captivating. The audio guide helps enormously here.",
+      "tip": "The galleries rotate works every six months due to the fragility of paper and silk. Check what's currently on display — you may see national treasures like the Xiao Xiang scroll or Song Huizong's Slender Gold calligraphy."
+    },
+    {
+      "name": "Ceramics Gallery (陶瓷馆)",
+      "description": "A comprehensive journey through 6,000 years of Chinese ceramic history, with 558 pieces including nearly half displayed publicly for the first time. From Neolithic pottery through Song Dynasty celadons to Ming-Qing porcelain, with interactive touch specimens.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Chinese ceramics influenced the entire world — the word 'china' literally means porcelain. The Song Dynasty celadon pieces are considered the pinnacle, with glazes that took centuries for European potters to replicate.",
+      "tip": "The gallery includes a hands-on area where you can touch ceramic specimens and feel the textures — rare for a museum of this caliber. Braille descriptions are also available."
+    },
+    {
+      "name": "Archaeology Gallery (考古馆)",
+      "description": "Over 2,000 archaeological relics illustrating Shanghai's 6,000-year urban evolution — surprising depth for a city most foreigners associate only with modern skyscrapers. Reveals Shanghai as an ancient settlement, not just a treaty-port creation.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "This gallery challenges the common assumption that Shanghai is purely a modern city. The archaeological record shows continuous habitation going back to the Neolithic era.",
+      "tip": "Located on the 4th floor alongside the Cultural Relics Restoration Gallery — combine them for a behind-the-scenes understanding of how artifacts are preserved."
+    },
+    {
+      "name": "Digital Gallery & Spiral Ramp",
+      "description": "An immersive AI-powered audiovisual space that is considered among the best in China's museum world. The architectural spiral ramp descends through the building's central atrium, aligned with the elliptical 'Eye of Shanghai Museum' skylight — a meditative architectural experience in itself.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The digital gallery requires a separate reservation but is worth planning for. The spiral ramp connecting floors is Instagram-worthy and designed to evoke the passage of historical time.",
+      "tip": "Walk the spiral ramp slowly from top to bottom — the changing light through the skylight creates different moods. It's a perfect photo spot and a moment to decompress between galleries."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Rooftop Garden (屋顶花园)",
+      "why": "Accessible via the elevator in the Jiangnan Gallery. An open-air classical garden with panoramic views — most visitors never find it because it's not on the standard floor plan. Perfect for a quiet break between galleries."
+    },
+    {
+      "what": "CeraMIX Gallery (陶瓷贸易馆)",
+      "why": "A separate gallery from the main ceramics collection, chronicling how Chinese ceramics traveled the Silk Road and sea routes, influencing cultures from Persia to Portugal. Tells a global trade story that connects China to everywhere."
+    },
+    {
+      "what": "Jade Gallery (玉器馆)",
+      "why": "Spans from Neolithic era to Qing Dynasty. Jade holds a spiritual significance in Chinese culture that has no Western equivalent — it was considered the flesh of immortality. Understanding jade changes how you see every Chinese artifact."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter via B1 East Gate → grab a free map at 1F Information Centre → take the elevator to the top floor (4F) and work your way down: Archaeology Gallery and Restoration Gallery (4F) → Ceramics and Currency Galleries (3F) → Jade, Seal, and Painting Galleries (2F) → Bronze and Sculpture Galleries (1F). Visit the rooftop garden via the Jiangnan Gallery elevator for a mid-visit break. End with the gift shop on 1F.",
+    "what_to_skip": "If pressed for time, the Currency Gallery and Seal Gallery are the most niche. Prioritize the Bronze Gallery, Ceramics Gallery, and one of the Painting/Calligraphy galleries. Skip the People's Square branch unless a specific special exhibition interests you — most permanent collections have moved to the East Branch.",
+    "pro_tips": "The guided tour lectures booked through Ctrip (around ¥138 for 1.5 hours in a group of 15) are highly praised by Chinese reviewers — guides like 'Sunyan teacher' and 'Liao teacher' are mentioned repeatedly for making bronzes and ceramics come alive. English guided tours start at ¥300 but transform the experience. The gift shop has excellent replicas and creative merchandise — Da Ke Ding miniatures and lotus-duck painting hairpins are popular."
+  },
+  "heads_up": [
+    {
+      "warning": "The museum is enormous and you cannot see everything in one visit",
+      "advice": "Pick 4-5 galleries that interest you most rather than trying to rush through all 20 halls. Most reviewers who attempted everything in one day reported exhaustion and diminishing returns after 4 hours."
+    },
+    {
+      "warning": "The AC is aggressive — dress warmly even in summer",
+      "advice": "Multiple reviewers warn about cold temperatures inside, especially in the painting and calligraphy galleries where climate control protects fragile works. Bring a light jacket or cardigan."
+    },
+    {
+      "warning": "Special exhibitions require separate tickets and bookings",
+      "advice": "Blockbuster shows (like the Ancient Egypt exhibition) can sell out weeks ahead and create extreme crowding. Check the WeChat mini-program before your visit. The permanent galleries alone are worth the trip. If you can't navigate the WeChat booking system for a special exhibition, drop our team a message and we can secure tickets for you."
+    },
+    {
+      "warning": "Limited food options inside but improving",
+      "advice": "There are cafes on multiple floors (1F-4F) and a restaurant on B1. Bring snacks if you plan a full-day visit. Free water is available on every floor."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You MUST carry your physical passport for entry — no exceptions. Photos and digital copies are not accepted.",
+    "The People's Square branch (original building) still exists but most permanent collections have moved to the East Branch. Many foreign visitors go to the wrong location. The East Branch is in Pudong near Shanghai Science and Technology Museum metro station, NOT at People's Square.",
+    "The WeChat mini-program for special exhibition booking requires a Chinese phone number, which most foreigners don't have. For special exhibitions, book through Trip.com or Klook instead, or ask our concierge team to handle the booking for you. Permanent galleries require no booking.",
+    "Flash photography is strictly prohibited throughout the museum. Security will intervene. Non-flash photography is fine in most galleries.",
+    "Payment for audio guides and cafe purchases may require WeChat Pay or Alipay. Bring cash as backup — some counters accept it but international credit cards are rarely accepted."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Can't book special exhibition tickets as a foreigner",
+      "what_to_do": "Try Trip.com or Klook for packaged tickets. Some exhibitions sell walk-up tickets at the 1F Information Centre — ask at the counter with your passport.",
+      "plan_b": "The 13 permanent galleries are free and require no booking. They contain the museum's greatest treasures and are honestly more impressive than most temporary shows."
+    },
+    {
+      "problem": "Museum is too crowded on arrival",
+      "what_to_do": "Head directly to upper floors (3F-4F) which are always less crowded. The Bronze Gallery on 1F draws the biggest crowds — save it for late afternoon when tour groups have left.",
+      "plan_b": "If it's truly overwhelming, the Shanghai Science and Technology Museum (same metro stop) or Century Park (walking distance) are nearby alternatives."
+    },
+    {
+      "problem": "Went to the People's Square branch by mistake",
+      "what_to_do": "Take Metro Line 2 directly from People's Square station to Shanghai Science and Technology Museum station (about 20 minutes). Exit Gate 8 and walk 500-700 meters to the East Branch.",
+      "plan_b": "The People's Square branch still has some exhibitions including rotating special shows. Check what's currently on display — it may still be worth a quick visit."
+    },
+    {
+      "problem": "Phone died and lost access to digital guides",
+      "what_to_do": "Rent a physical audio guide at the 1F Information Centre (¥40 for English). Free paper guidebooks and maps are also available at the information desk.",
+      "plan_b": "Most major exhibits have detailed bilingual signage. You can enjoy the museum fully without digital tools — many visitors prefer the unmediated experience."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — you'll cover significant ground across multiple floors. Bring a light jacket or sweater even in summer as the AC runs cold. Dressing in layers is the safest approach year-round.",
+    "what_to_bring": "Physical passport (mandatory). Light jacket. Water bottle (free refill stations on every floor). Portable charger. Cash for audio guides and cafe purchases.",
+    "what_not_to_bring": "Tripods and professional photography equipment (restricted). Lighters (confiscated at security but returned at exit). Large bags (slows security screening — use the free cloakroom on 1F)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Fully accessible modern building with elevators to all floors. Flat surfaces throughout. Free wheelchairs and strollers available at the Visitor Service Centre with valid ID or ¥300 deposit. Accessible toilets on every floor. The spiral ramp between floors is gentle and stroller/wheelchair friendly.",
+    "age_notes": "Excellent for families. Children under 12 and seniors over 65 bypass reservation requirements. The interactive touch areas in the ceramics gallery and the digital gallery are particularly engaging for children. Free stroller rental available.",
+    "health_warnings": "No significant health concerns. The museum is fully climate-controlled. Standing for extended periods viewing galleries is the main physical demand — take breaks in the cafes on each floor."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book English guided tour for deeper understanding",
+      "platform": "Trip.com, Klook, or directly at the museum (¥300+)",
+      "value_to_user": "Transforms the experience from 'looking at old objects' to understanding 3,600 years of Chinese civilization. Chinese-language group tours on Ctrip (¥138 for 1.5 hours) are heavily praised. English tours are more expensive but universally recommended by foreign reviewers. Our team can book an English-speaking guide matched to your interests and schedule."
+    },
+    {
+      "action": "Book special exhibition tickets (if applicable)",
+      "platform": "Shanghai Museum WeChat mini-program, Trip.com, or Klook",
+      "value_to_user": "Blockbuster exhibitions sell out fast. Having tickets pre-booked avoids the frustration of being turned away. Check what's currently showing before your visit."
+    },
+    {
+      "action": "Arrange shuttle between People's Square and East Branch",
+      "platform": "Museum shuttle service (¥4, runs Wed-Mon at 11:00, 12:00, 13:00, 14:00, 15:00)",
+      "value_to_user": "If visiting both branches in one day, the museum operates a shuttle bus. Saves navigating the metro with museum fatigue."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Shànghǎi Bówùguǎn Dōngguǎn",
+      "chinese": "上海博物馆东馆",
+      "english": "Shanghai Museum East Branch"
+    },
+    {
+      "pinyin": "Qīngtóng Guǎn",
+      "chinese": "青铜馆",
+      "english": "Bronze Gallery"
+    },
+    {
+      "pinyin": "Táocí Guǎn",
+      "chinese": "陶瓷馆",
+      "english": "Ceramics Gallery"
+    },
+    {
+      "pinyin": "Shūhuà Guǎn",
+      "chinese": "书画馆",
+      "english": "Calligraphy and Painting Gallery"
+    },
+    {
+      "pinyin": "Yǔ dǎo lǎn qì",
+      "chinese": "语导览器",
+      "english": "Audio guide"
+    },
+    {
+      "pinyin": "Wǒ yào yī gè Yīngwén dǎo lǎn",
+      "chinese": "我要一个英文导览",
+      "english": "I want an English audio guide"
+    },
+    {
+      "pinyin": "Xǐshǒujiān zài nǎlǐ?",
+      "chinese": "洗手间在哪里？",
+      "english": "Where is the restroom?"
+    },
+    {
+      "pinyin": "Dà Kè Dǐng",
+      "chinese": "大克鼎",
+      "english": "Da Ke Ding (the star bronze vessel — ask for it by name)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Shanghai Science and Technology Museum (上海科技馆)",
+      "why": "Same metro station (Line 2, Exit 8). A more interactive, family-friendly museum that pairs well as a morning/afternoon split. East meets West — ancient art then modern science.",
+      "travel_time": "5-minute walk from the same metro exit"
+    },
+    {
+      "suggestion": "Century Park (世纪公园)",
+      "why": "Shanghai's largest park is a short walk away. Perfect for decompressing after museum overload — green space, lake views, and fresh air. Great for families.",
+      "travel_time": "10-minute walk"
+    },
+    {
+      "suggestion": "Shanghai Museum People's Square Branch (上海博物馆人民广场馆)",
+      "why": "The original building still hosts rotating special exhibitions and the famous Ming-Qing furniture collection. Museum shuttle connects both branches (¥4). Combine for a full Shanghai Museum experience.",
+      "travel_time": "20 minutes by Metro Line 2 or museum shuttle"
+    }
+  ],
+  "cultural_context": "The Shanghai Museum holds over 1 million artifacts, including 144,000 classified as rare national treasures — making it one of the most important repositories of Chinese civilization outside Beijing. The East Branch, which fully opened in December 2024, represents China's ambition to build world-class museum infrastructure. The building's design concept, 'Window to Shanghai,' reflects Pudong's role as China's gateway to the world. The collections span every major Chinese art form: bronzes that were vessels for speaking to the dead, calligraphy that was the highest measure of a person's character, ceramics that literally gave China its English name, and jade that was believed to grant immortality. Understanding that these objects were never 'decorative art' but had deep spiritual, political, and philosophical purposes transforms the viewing experience.",
+  "photo_spots": [
+    {
+      "location": "Spiral ramp with 'Eye of Shanghai Museum' skylight",
+      "tip": "Shoot looking straight up or down the spiral for the best geometric composition. Natural light changes throughout the day — afternoon creates the most dramatic shadows.",
+      "why": "The museum's architectural signature — a spiraling descent through history with an elliptical skylight overhead. One of the most Instagrammable museum interiors in China."
+    },
+    {
+      "location": "B1 entrance corridor with perforated ceiling casting artifact shadows",
+      "tip": "Visit when sunlight is strong (late morning) — the perforated ceiling projects silhouettes of famous artifacts onto the walkway. Stand at different angles to see different patterns.",
+      "why": "A uniquely photogenic architectural detail that visitors rave about — the shadows of bronzes and ceramics dance on the floor as you walk in."
+    },
+    {
+      "location": "Rooftop garden overlooking Pudong",
+      "tip": "Access via the Jiangnan Gallery elevator. The classical Chinese garden elements against the modern Pudong skyline create a striking contrast.",
+      "why": "A hidden gem that most visitors miss. The juxtaposition of ancient garden design with 21st-century Shanghai makes for compelling photos."
+    },
+    {
+      "location": "Da Ke Ding in the Bronze Gallery",
+      "tip": "The low-reflection glass display cases allow clean photos. Get close for inscription details. The museum's lighting is specifically designed to minimize glare.",
+      "why": "The museum's most famous single object — a massive Western Zhou bronze vessel that is one of China's top national treasures. The inscriptions inside are among the longest surviving bronze texts."
+    }
+  ],
+  "card_name": "Shanghai Museum East",
+  "card_type": "WORLD-CLASS MUSEUM",
+  "card_hook": "A million artifacts, zero admission — China's art history in one building.",
+  "best_for": [
+    "culture-lovers",
+    "free-attraction",
+    "rainy-day-perfect",
+    "families-with-kids",
+    "half-day-commitment"
+  ]
+}

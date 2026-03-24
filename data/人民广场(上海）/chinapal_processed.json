@@ -1,0 +1,247 @@
+{
+  "attraction_name_cn": "人民广场",
+  "attraction_name_en": "People's Square / People's Park",
+  "address_cn": "上海市黄浦区人民大道120号",
+  "experience_type": "sightseeing",
+  "hook": "Shanghai's literal center — a former horse racing track turned massive public square with a marriage market where parents advertise their single children, flanked by world-class museums and the Nanjing Road shopping madness just steps away.",
+  "honest_description": "People's Square is less a traditional tourist attraction and more the beating heart of Shanghai. The square itself is a large open public space surrounded by important buildings — the Shanghai Museum, Shanghai Grand Theatre, Urban Planning Exhibition Center, and city government. Inside People's Park, the famous weekend marriage market draws curious tourists watching parents negotiate potential matches for their adult children. The park is a genuine urban oasis — green, shaded, and surprisingly peaceful given its central location. It's not a destination that requires hours, but as a transit hub and anchor point for the surrounding attractions, most Shanghai visitors pass through it. Best experienced on a weekend when the marriage market is active, combined with the Shanghai Museum (free, world-class) and a stroll down Nanjing Road.",
+  "foreigner_top_questions": [
+    {
+      "question": "What exactly is the marriage market and can I watch?",
+      "answer": "On weekends (primarily Saturdays and Sundays, roughly 12-5 PM), a section of People's Park transforms into an open-air 'marriage market' where parents spread out sheets of paper or cardboard displaying their adult children's details — age, height, education, salary, property ownership, and desired partner qualities. It's essentially analog Tinder run by parents. You can absolutely walk through and observe — it's a public space. Parents generally won't approach foreigners as their children rarely seek international matches, but it's a fascinating window into Chinese family dynamics and social pressures."
+    },
+    {
+      "question": "Is the square itself worth visiting or just a transit point?",
+      "answer": "Both. The square functions as Shanghai's most important metro hub (Lines 1, 2, and 8 converge here) and is surrounded by worth-visiting attractions. The square itself is pleasant but not spectacular — the real value is in what surrounds it: the Shanghai Museum (free, globally significant collection), Nanjing Road East (China's most famous shopping street), and the park with its marriage market. Budget 30 minutes for the square/park, 2+ hours for the museum, and as long as you want for Nanjing Road."
+    }
+  ],
+  "experience_format_note": "Open public square and park — no entrance gate or ticket. People's Park has gates but is free to enter during opening hours. The marriage market happens organically on weekends in a section of the park — no tickets, no schedule, just show up. Surrounding attractions (museums, theaters) have their own hours and ticketing.",
+  "vibe": "Centrally chaotic yet unexpectedly serene inside the park — the clash of glass skyscrapers, communist-era public space design, ancient museum treasures, and parents haggling over their children's futures creates Shanghai in microcosm.",
+  "time_needed": {
+    "quick_visit": "30 minutes (walk through the square and park, snap some photos)",
+    "recommended": "2-3 hours (park with marriage market on weekends, plus Shanghai Museum)",
+    "deep_dive": "4-5 hours (museum, park, marriage market, Nanjing Road exploration)"
+  },
+  "best_time": {
+    "best_time_of_day": "Weekend midday (12-3 PM) to catch the marriage market in full swing. Weekday mornings offer a quieter park experience with locals doing tai chi and dancing.",
+    "worst_time": "Rainy days when the park loses its appeal and the marriage market doesn't operate. National holiday weeks when everything is packed.",
+    "seasonal_notes": "Spring (March-May) and autumn (September-November) are most pleasant for outdoor time in the square and park. Summer is brutally hot and humid. Winter is cold and grey but the museums are indoor alternatives.",
+    "pro_tip": "Saturday afternoon is the perfect time — hit the marriage market first (12-3 PM), then escape into the air-conditioned Shanghai Museum until closing (5 PM), then walk Nanjing Road East at dusk when the neon lights come on."
+  },
+  "getting_in": {
+    "opening_hours": "People's Square: 24 hours (open public space). People's Park: approximately 6:00 AM–6:00 PM (seasonal variations). Shanghai Museum: 9:00 AM–5:00 PM (closed Mondays). Marriage market: weekends ~12:00–5:00 PM (weather-dependent, informal).",
+    "price_rmb": "Square and park: Free. Shanghai Museum: Free (booking required). Marriage market: Free.",
+    "price_usd": "Free",
+    "price_breakdown": [
+      {
+        "item": "People's Square and People's Park",
+        "price": "Free",
+        "highlight": "Open public space and urban park"
+      },
+      {
+        "item": "Shanghai Museum",
+        "price": "Free (advance booking required)",
+        "highlight": "World-class collection of Chinese art, bronzes, ceramics, and calligraphy"
+      },
+      {
+        "item": "Shanghai Urban Planning Exhibition Center",
+        "price": "~¥30",
+        "highlight": "Huge scale model of Shanghai's future development — fascinating for architecture fans"
+      },
+      {
+        "item": "Marriage market",
+        "price": "Free",
+        "highlight": "Weekends only, weather-dependent — organic social phenomenon in the park"
+      }
+    ],
+    "booking_required": "No booking for the square or park. Shanghai Museum requires free advance booking via its WeChat mini-program or official website.",
+    "booking_method": "Shanghai Museum: Book via official website or WeChat mini-program. Passport number required. Book at least 1-2 days ahead as slots fill up. If you are having trouble navigating the Chinese booking system, message our concierge and we can reserve your museum slot for you.",
+    "passport_accepted": "Yes — Shanghai Museum accepts foreign passport for booking and entry.",
+    "what_to_bring": "Phone for navigation (the area is a transport hub). Passport if visiting museums. Camera for the marriage market. Comfortable walking shoes for Nanjing Road extension.",
+    "queue_situation": "No queues for the square or park. Shanghai Museum may have 15-30 minute security lines on weekends. The marriage market has no queues — you just walk through.",
+    "language_barrier_rating": "minimal-chinese-needed — This is central Shanghai with good bilingual signage in the metro, museums, and surrounding streets. The marriage market displays are in Chinese but the visual spectacle needs no translation."
+  },
+  "highlights": [
+    {
+      "name": "Weekend Marriage Market (相亲角)",
+      "description": "Parents of unmarried adults spread handwritten or printed profiles across umbrellas, sheets of paper, and cardboard in a park section, listing their children's vital statistics (age, height, education, salary, housing status) and desired partner qualities. Other parents browse, compare, and negotiate potential matches.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is genuinely unique to China and endlessly fascinating as a window into family pressure, social expectations, and generational dynamics. The level of detail (salary, car ownership, hukou status) reveals what Chinese families prioritize in marriage. It's like watching societal forces made visible.",
+      "tip": "Come between 12-3 PM on Saturday for peak activity. You can walk through freely and observe. Taking photos is generally tolerated but be respectful — these are real families making real decisions. Parents rarely approach foreigners."
+    },
+    {
+      "name": "Shanghai Museum (上海博物馆)",
+      "description": "A world-class museum of ancient Chinese art with superb collections of bronzes, ceramics, calligraphy, jade, and furniture. The bronze collection alone rivals any museum globally. Free admission with advance booking.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Even if Chinese art isn't your usual interest, the ancient bronzes are jaw-dropping — 3,000-year-old vessels with intricate designs that rival any metalwork anywhere. The ceramics gallery traces the entire evolution of Chinese pottery, including the famous blue-and-white pieces that influenced European design.",
+      "tip": "Book online at least a day ahead — the free tickets have daily limits. The bronze and ceramics galleries are the must-sees if short on time."
+    },
+    {
+      "name": "People's Park Morning Activities",
+      "description": "Every morning, the park fills with locals doing tai chi, sword dancing, group aerobics, ballroom dancing, and playing traditional instruments. It's an authentic slice of daily Chinese life that tourists rarely plan for but always enjoy.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This scene repeats in parks across China but is particularly photogenic here with the Shanghai skyline visible above the trees. Locals are generally friendly if you want to join tai chi or dance groups.",
+      "tip": "Come between 7-9 AM on any day. The area near the main pond tends to have the most activity groups."
+    },
+    {
+      "name": "Nanjing Road East (南京东路) Access",
+      "description": "People's Square sits at the western end of Nanjing Road East — China's most famous shopping street stretching 1.5 km to the Bund. The pedestrian section offers neon-lit shopping, street food, and quintessential Shanghai energy.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "It's commercial and tourist-oriented, but the sheer scale and energy are worth experiencing. The Bund at the far eastern end is one of Shanghai's must-see viewpoints.",
+      "tip": "Walk Nanjing Road at dusk when the neon lights turn on. Start at People's Square and walk east toward the Bund — you'll arrive at the waterfront just as the Pudong skyline lights up."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The morning park culture (tai chi, dancing, music)",
+      "why": "Most tourists arrive midday for the marriage market or museum. The early morning park scene (7-9 AM) is equally cultural and completely different — meditative rather than mercantile."
+    },
+    {
+      "what": "Shanghai Urban Planning Exhibition Center",
+      "why": "Often overlooked next to the free Shanghai Museum, this paid attraction has a massive scale model of the entire Shanghai metropolitan area. Architecture and urban planning enthusiasts find it fascinating."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Metro to People's Square station (Lines 1/2/8) → walk through People's Park for the marriage market (weekends only, 12-3 PM) → cross to Shanghai Museum (book in advance, 2 hours) → exit museum and walk east along Nanjing Road East toward the Bund (1.5 km, 30-45 minutes with stops) → arrive at the Bund for sunset/dusk skyline views.",
+    "what_to_skip": "The square itself doesn't need much time — it's architecturally bland compared to what surrounds it. Skip the overpriced carnival rides in the park — they're old and aimed at small children.",
+    "pro_tips": "The metro station is one of Shanghai's busiest — follow signs carefully as exits are spread across a huge area. Exit 1 goes to People's Park, Exit 7 to Nanjing Road East, Exit 10 to Shanghai Museum. Getting the right exit saves 10+ minutes of walking."
+  },
+  "heads_up": [
+    {
+      "warning": "The marriage market is weather-dependent and informal",
+      "advice": "It happens most reliably on Saturday afternoons in decent weather. Rain cancels it. Don't build your entire day around it — have the museum as a backup plan."
+    },
+    {
+      "warning": "The metro station is massive and confusing",
+      "advice": "Three metro lines converge here with over 20 exits. Know your exit number in advance. Follow signs for your specific destination, not just 'Exit.'"
+    },
+    {
+      "warning": "Fundraisers and scammers operate in the park",
+      "advice": "Politely decline anyone approaching you to sign petitions, buy artwork, or donate to causes. These are common scams targeting tourists in central Shanghai. The park is safe overall with regular police presence. If someone pressures you into a situation that feels wrong, message our team immediately — we can advise you on the spot or call for help if needed."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The 'art student' scam is common here — young people claiming to be art students invite you to their 'gallery' to buy overpriced artwork. Politely decline and move on. If you are unsure whether an approach is legitimate, send us a quick message and we can confirm.",
+    "Shanghai Museum requires advance online booking with passport number — you cannot walk up without a reservation. Book at least 1-2 days ahead.",
+    "The marriage market parents are not performing for tourists — be respectful when observing and photographing. This is a real family activity, even if it looks exotic.",
+    "Nanjing Road food stalls near People's Square are tourist traps — walk a few blocks off the main drag for better and cheaper food. Ask our team for specific restaurant recommendations near People's Square — we know which places are worth your money and which to avoid.",
+    "Public toilets in the park are basic — the museums and nearby malls have much better facilities."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Marriage market not happening (weekday, bad weather, or off-season)",
+      "what_to_do": "The park is still pleasant for a walk. Focus on the Shanghai Museum and Nanjing Road instead.",
+      "plan_b": "The morning park activities (tai chi, dancing) happen daily regardless of weather. Come early the next morning for a different but equally cultural park experience."
+    },
+    {
+      "problem": "Shanghai Museum fully booked",
+      "what_to_do": "Check the booking page for cancellations — slots often open up on the day. Try refreshing in the early morning. Our concierge team can monitor the booking page for cancellations and grab a slot as soon as one opens up.",
+      "plan_b": "Visit the Shanghai Urban Planning Exhibition Center instead (paid but rarely fully booked), or walk Nanjing Road to the Bund for the iconic skyline view."
+    },
+    {
+      "problem": "Got lost in the massive metro station",
+      "what_to_do": "Look for the large exit maps posted throughout the station. Ask station staff: '上海博物馆从哪个出口？' (Which exit for Shanghai Museum?). Staff are helpful even with limited English.",
+      "plan_b": "Any exit will bring you to the surface near the square — once above ground, landmarks are visible and you can reorient easily."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — the area invites extended walking especially if you continue to Nanjing Road and the Bund. Dress for Shanghai's weather: hot and humid in summer, cold and damp in winter.",
+    "what_to_bring": "Phone with maps app. Passport (needed for museum entry). Portable charger. Umbrella (Shanghai rain is unpredictable). Camera for the marriage market.",
+    "what_not_to_bring": "Large bags slow you down in the museum security line and crowded metro. Travel light for this area."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Flat terrain throughout — the square, park, and museum are all fully accessible. Metro station has elevators. The walk to the Bund along Nanjing Road adds 1.5 km of flat pedestrian street.",
+    "age_notes": "Suitable for all ages. The park has some play areas for children. The museum may not engage very young children. The marriage market is best appreciated by adults.",
+    "health_warnings": "Summer heat and humidity can be extreme. The square and Nanjing Road offer limited shade. Seek air-conditioned spaces (museum, malls) regularly."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Shanghai Museum timed entry tickets",
+      "platform": "Official Shanghai Museum website or WeChat mini-program",
+      "value_to_user": "Mandatory for entry — the museum is free but requires advance booking with passport number. Helps avoid the frustration of showing up without a reservation."
+    },
+    {
+      "action": "Book a walking tour covering People's Square, marriage market, and the Bund",
+      "platform": "GetYourGuide, Klook",
+      "value_to_user": "A local guide adds cultural context to the marriage market and connects the dots between People's Square, Nanjing Road, and the Bund into a coherent Shanghai story."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Rénmín Guǎngchǎng",
+      "chinese": "人民广场",
+      "english": "People's Square"
+    },
+    {
+      "pinyin": "Rénmín Gōngyuán",
+      "chinese": "人民公园",
+      "english": "People's Park"
+    },
+    {
+      "pinyin": "Xiāngqīn jiǎo",
+      "chinese": "相亲角",
+      "english": "Marriage market corner"
+    },
+    {
+      "pinyin": "Shànghǎi Bówùguǎn",
+      "chinese": "上海博物馆",
+      "english": "Shanghai Museum"
+    },
+    {
+      "pinyin": "Nánjīng Lù",
+      "chinese": "南京路",
+      "english": "Nanjing Road"
+    },
+    {
+      "pinyin": "Dìtiě zhàn",
+      "chinese": "地铁站",
+      "english": "Metro station"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "The Bund (外滩)",
+      "why": "Walk east along Nanjing Road from People's Square and you'll arrive at Shanghai's most iconic waterfront — the colonial-era buildings facing the futuristic Pudong skyline. The natural endpoint of a People's Square day.",
+      "travel_time": "25-minute walk via Nanjing Road East, or 2 metro stops"
+    },
+    {
+      "suggestion": "Shanghai Museum (上海博物馆)",
+      "why": "Right on the square — one of China's best museums with world-class bronzes and ceramics. Free with advance booking. The perfect complement to the outdoor square experience.",
+      "travel_time": "5-minute walk (on the square)"
+    },
+    {
+      "suggestion": "Yu Garden and Old City (豫园)",
+      "why": "A 16th-century classical garden and surrounding traditional market area. A completely different Shanghai vibe — old-world charm versus People's Square's modern energy.",
+      "travel_time": "15 minutes by metro (Line 10, 2 stops)"
+    }
+  ],
+  "cultural_context": "People's Square occupies the site of the former Shanghai Race Club, a British-run horse racing and gambling venue that was a symbol of colonial Shanghai's decadence. After 1949, the Communist government transformed it into a 'people's' space — the very name is a political statement. The surrounding buildings tell Shanghai's story: the Shanghai Museum preserves 5,000 years of Chinese civilization, the Grand Theatre represents cultural aspiration, and the government buildings assert political authority. The marriage market adds another layer — it emerged organically as a response to China's rapid social change, reflecting anxious parents who grew up in a matchmaking culture now watching their children navigate modern dating. It's a living sociological exhibit, not a tourist attraction, and that's precisely what makes it compelling.",
+  "photo_spots": [
+    {
+      "location": "Marriage market umbrellas in People's Park",
+      "tip": "Shoot from a slight distance to capture rows of parent-held umbrellas covered in handwritten profiles. The visual pattern of text-covered umbrellas is uniquely photogenic. Be discreet and respectful.",
+      "why": "An image that captures something genuinely unique to Chinese culture — dozens of parents sitting with detailed profiles of their children, negotiating matches in a public park."
+    },
+    {
+      "location": "People's Square at dusk with skyline",
+      "tip": "Stand near the center of the square looking northwest for the best skyline composition. The park's green trees frame the surrounding skyscrapers nicely.",
+      "why": "The contrast between the open square, park greenery, and towering glass buildings captures Shanghai's density and diversity in one frame."
+    },
+    {
+      "location": "Shanghai Museum interior — bronze gallery",
+      "tip": "The lighting is carefully designed for photography. Use portrait mode on phones for beautiful bokeh effects on individual bronze pieces.",
+      "why": "The 3,000-year-old bronzes are visually stunning — green patina, intricate animal motifs, and dramatic museum lighting create gallery-worthy shots."
+    }
+  ],
+  "card_name": "People's Square",
+  "card_type": "URBAN HUB & CULTURAL CENTER",
+  "card_hook": "Shanghai's heartbeat — where parents sell their kids on paper and bronzes sell you on 5,000 years.",
+  "best_for": [
+    "first-time-shanghai-orientation",
+    "cultural-curiosity",
+    "free-world-class-museum",
+    "people-watching",
+    "transit-hub-with-substance"
+  ]
+}

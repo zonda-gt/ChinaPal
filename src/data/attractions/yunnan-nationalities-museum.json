@@ -1,0 +1,240 @@
+{
+  "attraction_name_cn": "云南民族博物馆",
+  "attraction_name_en": "Yunnan Nationalities Museum",
+  "address_cn": "云南省昆明市西山区滇池路1503号",
+  "experience_type": "museum",
+  "hook": "China's largest ethnic minority museum — 20,000 artifacts from 26 distinct peoples crammed into one sprawling complex next to Dianchi Lake, where you can see everything from Miao silver jewelry to Yi fire-grass cloaks in a single afternoon.",
+  "honest_description": "The Yunnan Nationalities Museum is a solid cultural stop if you want a crash course on China's ethnic diversity — 26 minorities represented across 11 exhibition halls covering costumes, musical instruments, masks, manuscripts, and daily life artifacts. The costume halls are genuinely impressive, with intricate embroidery and silver work that rivals dedicated craft museums. That said, it's more of a surface-level overview than a deep dive — you'll see beautiful objects but won't fully understand the living cultures behind them. The museum is free, uncrowded, and pairs perfectly with the adjacent Yunnan Nationalities Village. Best for culture-curious travelers who want context before visiting minority areas in Yunnan; skip it if you prefer immersive experiences over glass-case exhibits.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth visiting if I'm also going to actual minority villages in Yunnan?",
+      "answer": "Yes — think of it as a comprehensive preview. The museum gives you context on all 26 ethnic groups in one place, which makes visits to specific villages (Dali Bai, Lijiang Naxi, Xishuangbanna Dai) much richer. You'll recognize costumes, understand craft techniques, and appreciate cultural differences you'd otherwise miss. Budget 2-3 hours."
+    },
+    {
+      "question": "Is there English signage and do I need a guide?",
+      "answer": "Signage is bilingual (Chinese/English) for major exhibits, though some smaller displays are Chinese-only. Audio guides are available for rent and highly recommended — visitors who used them consistently rated their experience much higher. Without a guide, you're mostly admiring beautiful objects without much context."
+    }
+  ],
+  "experience_format_note": "Standard museum format — no special preparation needed. Two floors with 11 exhibition halls organized by theme (costumes, masks, instruments, manuscripts, etc.). You can follow the suggested route or cherry-pick halls based on interest. The costume and musical instrument halls are universally recommended as the highlights. Allow 2-4 hours depending on depth of interest.",
+  "vibe": "Quiet, educational, and surprisingly rich — like a cultural encyclopedia you can walk through, with moments of genuine wonder in the costume and craft halls.",
+  "time_needed": {
+    "quick_visit": "1.5 hours (hit the costume hall and musical instruments, skip the rest)",
+    "recommended": "2-3 hours (cover all major halls with audio guide)",
+    "deep_dive": "4 hours (every hall plus the adjacent Nationalities Village)"
+  },
+  "best_time": {
+    "best_time_of_day": "Morning arrival (9:00-10:00 AM) when the museum is nearly empty. By early afternoon, some tour groups arrive but it never gets truly crowded.",
+    "worst_time": "Chinese public holidays when tour groups from the adjacent Nationalities Village spill over. Weekday afternoons can feel deserted — good or bad depending on your preference.",
+    "seasonal_notes": "Kunming's 'Spring City' climate means any season works. The museum is fully indoor and climate-controlled. If combining with the Nationalities Village next door, spring (March-May) offers the best weather for the outdoor portions.",
+    "pro_tip": "Visit the museum first for context, then walk next door to the Yunnan Nationalities Village to see recreated minority architecture and cultural performances — the museum knowledge makes the village experience much more meaningful."
+  },
+  "getting_in": {
+    "opening_hours": "Tuesday–Sunday 9:00 AM–4:30 PM (last entry 4:00 PM). Closed Mondays.",
+    "price_rmb": "Free admission",
+    "price_usd": "Free",
+    "price_breakdown": [
+      {
+        "item": "Museum admission",
+        "price": "Free",
+        "highlight": "Free entry with valid ID/passport"
+      },
+      {
+        "item": "Audio guide rental",
+        "price": "~¥20-30",
+        "highlight": "Highly recommended — brings the exhibits alive with context"
+      },
+      {
+        "item": "Yunnan Nationalities Village (adjacent)",
+        "price": "¥90",
+        "highlight": "Separate attraction next door with outdoor cultural exhibits and performances"
+      }
+    ],
+    "booking_required": "No — walk in with passport. Free ticket collection at the entrance.",
+    "booking_method": "No advance booking needed. Present passport at the entrance for a free ticket.",
+    "passport_accepted": "Yes — foreigners enter with passport.",
+    "what_to_bring": "Passport (for free ticket). Phone for photos. Comfortable shoes if combining with Nationalities Village.",
+    "queue_situation": "Virtually no queues. Even during peak periods, entry is quick and straightforward.",
+    "language_barrier_rating": "some-chinese-helps — Major exhibits have bilingual signage but smaller displays and detailed descriptions are often Chinese-only. Audio guides bridge the gap significantly."
+  },
+  "highlights": [
+    {
+      "name": "Ethnic Costume Halls (民族服饰展厅)",
+      "description": "Two interconnected halls displaying the traditional dress of all 26 Yunnan ethnic groups — from Miao silver headdresses weighing several kilograms to Yi fire-grass cloaks, Bai tie-dye textiles, and Dai peacock-pattern brocade. The craftsmanship is extraordinary.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The sheer variety is stunning — each minority has completely distinct aesthetics. The silver work rivals anything you'd see in Southeast Asian craft museums.",
+      "tip": "Rent the audio guide before entering — it explains the symbolism behind patterns and materials that you'd otherwise miss entirely.",
+      "image": "民族服饰展厅.png"
+    },
+    {
+      "name": "Ethnic Musical Instruments Hall (民族乐器展厅)",
+      "description": "A collection of traditional instruments from across Yunnan's ethnic groups, many of which you won't see anywhere else. Bamboo flutes, bronze drums, gourd pipes (hulusi), and string instruments with fascinating stories behind them.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Even without musical knowledge, the instruments are visually beautiful. The hulusi (gourd flute) is Yunnan's signature instrument — you'll hear it everywhere in the province.",
+      "tip": "Some instruments have QR codes linking to audio samples. Having your phone ready to scan adds a whole extra dimension.",
+      "image": "民族乐器展厅.png"
+    },
+    {
+      "name": "Ethnic Masks Hall (民族面具展厅)",
+      "description": "A striking collection of ceremonial and theatrical masks used in religious rituals, festivals, and traditional performances. The range of styles — from terrifying guardian figures to playful festival characters — reflects the spiritual diversity of Yunnan's peoples.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "These masks are used in living traditions, not just historical artifacts. If you visit during minority festivals in Yunnan, you may see similar masks in active use.",
+      "tip": "The Nuo opera masks are the most dramatic — look for the ones with movable jaws and exaggerated features.",
+      "image": "民族面具展厅.jpg"
+    },
+    {
+      "name": "Marriage Customs and Tea Horse Road Exhibits (3rd Floor)",
+      "description": "Exhibits on traditional wedding customs across different minorities and a sand table model of the ancient Tea Horse Road trade route connecting Yunnan to Tibet and Southeast Asia.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The marriage customs exhibit reveals fascinating contrasts — some minorities are matrilineal, others have 'walking marriages,' and wedding attire varies dramatically between groups.",
+      "tip": "The Tea Horse Road exhibit provides excellent context if you're planning to visit Lijiang, Dali, or Shangri-La later in your trip.",
+      "image": "婚俗与茶马古道展厅.jpg"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The Naxi Dongba script and manuscript collection",
+      "why": "Tucked in the ancient texts hall, these are examples of the world's only living pictographic writing system — genuinely unique and fascinating, but most visitors walk past without realizing their significance."
+    },
+    {
+      "what": "Combining with Yunnan Nationalities Village next door",
+      "why": "The museum provides intellectual context that transforms the adjacent village from a tourist attraction into a meaningful cultural experience. Most visitors do one or the other but not both."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter → rent audio guide at reception → Floor 1: Ethnic Costumes halls (the highlight, spend most time here) → Masks hall → Floor 2: Musical Instruments → Ancient Texts/Manuscripts → Traditional Crafts → exit through gift shop → walk next door to Nationalities Village if time permits.",
+    "what_to_skip": "The general overview/statistics panels at the entrance can be skimmed quickly. The souvenir shop has generic items — better ethnic crafts can be found in the actual minority regions.",
+    "pro_tips": "The museum is rarely crowded, so take your time. Photography is allowed in most halls without flash. If you're visiting multiple Yunnan destinations, come here first — the context enhances every subsequent minority village and market you'll visit."
+  },
+  "heads_up": [
+    {
+      "warning": "Limited English depth beyond basic signage",
+      "advice": "The audio guide is essential for non-Chinese speakers. Without it, you're admiring beautiful objects but missing the stories and cultural significance. Budget the extra rental cost. If you want more context as you explore, message our team — we can translate specific exhibit descriptions or answer questions about the cultures represented in real time."
+    },
+    {
+      "warning": "The museum is far from Kunming city center",
+      "advice": "Located about 9 km south of downtown near Dianchi Lake. Plan to combine it with the Nationalities Village and possibly Dianchi Lake for a full half-day excursion. Take a taxi or ride-hail — public transport options are limited. We can arrange a round-trip car for the day so you do not have to worry about finding a ride back."
+    },
+    {
+      "warning": "Some halls may be under renovation",
+      "advice": "The museum occasionally closes individual halls for updates. This doesn't significantly impact the overall experience as there are 11 halls total."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The museum is free but you still need to collect a ticket at the entrance — bring your passport. No ticket, no entry.",
+    "Don't confuse this museum with the adjacent Yunnan Nationalities Village (云南民族村) — they're separate attractions with separate entrances. The village costs ¥90 and is an outdoor theme park; the museum is free and indoor.",
+    "Payment for audio guides and the adjacent village may require WeChat/Alipay. Bring cash as backup. If you are having trouble with payments anywhere in Kunming, message us and we can help sort it out or make purchases on your behalf.",
+    "The area around the museum has limited food options. Eat before coming or bring snacks for a full-day visit combining museum and village."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Museum is closed (Monday or holiday)",
+      "what_to_do": "Check the schedule before visiting — closed every Monday. If you arrive on a closure day, the Nationalities Village next door is open daily.",
+      "plan_b": "Visit the nearby Dianchi Lake waterfront instead, or take a cable car up the Western Hills (西山) for panoramic lake views."
+    },
+    {
+      "problem": "Specific halls closed for renovation",
+      "what_to_do": "Ask at the front desk which halls are currently open and adjust your route. With 11 halls, there's always plenty to see.",
+      "plan_b": "Spend more time in the open halls and head to the Nationalities Village for the outdoor cultural experience."
+    },
+    {
+      "problem": "Can't get a taxi/ride back to the city",
+      "what_to_do": "Use DiDi (China's Uber) — the app works well in Kunming. The museum entrance is a known pickup point. Or message our concierge and we can dispatch a car to pick you up at the museum entrance.",
+      "plan_b": "Walk to the nearby Yunnan Nationalities Village entrance where taxis queue. Or take public bus routes that connect to the city center."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — the museum is large and you'll be on your feet for 2-4 hours. Indoor and climate-controlled, so dress for Kunming's mild weather rather than museum conditions.",
+    "what_to_bring": "Passport (required for free entry ticket). Phone for photos and QR code scanning. Portable charger. Cash for audio guide rental.",
+    "what_not_to_bring": "No restrictions on bags or cameras. Flash photography may be restricted in certain halls — watch for signs."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Flat, indoor museum with elevators between floors. Fully accessible for wheelchairs and strollers. Air-conditioned throughout. Benches available in most halls.",
+    "age_notes": "Suitable for all ages. Children may find the costume and mask halls particularly engaging. The interactive elements are limited, so very young children may lose interest.",
+    "health_warnings": "None — comfortable indoor environment year-round."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Arrange transportation to/from the museum (9 km from city center)",
+      "platform": "DiDi, hotel concierge, or tour package",
+      "value_to_user": "The museum's location near Dianchi Lake makes it inconvenient by public transport. A round-trip taxi arrangement saves hassle, especially if combining with the Nationalities Village."
+    },
+    {
+      "action": "Book Yunnan Nationalities Village combo visit",
+      "platform": "Trip.com, Klook",
+      "value_to_user": "Some packages include both museum guide and village entry at a slight discount, plus transportation from city center."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Yúnnán Mínzú Bówùguǎn",
+      "chinese": "云南民族博物馆",
+      "english": "Yunnan Nationalities Museum"
+    },
+    {
+      "pinyin": "Mínzú Cūn",
+      "chinese": "民族村",
+      "english": "Nationalities Village (adjacent attraction)"
+    },
+    {
+      "pinyin": "Yǔ dǎo lǎn qì",
+      "chinese": "语导览器",
+      "english": "Audio guide"
+    },
+    {
+      "pinyin": "Miǎnfèi",
+      "chinese": "免费",
+      "english": "Free (admission)"
+    },
+    {
+      "pinyin": "Mínzú fúshì",
+      "chinese": "民族服饰",
+      "english": "Ethnic costumes"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Yunnan Nationalities Village (云南民族村)",
+      "why": "Right next door — an outdoor park with recreated architecture and cultural performances from Yunnan's ethnic groups. The museum gives you context; the village brings it to life.",
+      "travel_time": "5-minute walk (adjacent)"
+    },
+    {
+      "suggestion": "Dianchi Lake (滇池)",
+      "why": "A short walk from the museum to the lakeside promenade. Kunming's largest lake with mountain views, especially beautiful at sunset. In winter, thousands of red-billed gulls migrate here.",
+      "travel_time": "10-minute walk to the waterfront"
+    },
+    {
+      "suggestion": "Western Hills (西山)",
+      "why": "Take the cable car across Dianchi Lake for panoramic views and ancient cliff-side temples. A dramatic half-day add-on to the museum visit.",
+      "travel_time": "20-minute drive or cable car from Dianchi Lake area"
+    }
+  ],
+  "cultural_context": "Yunnan is China's most ethnically diverse province — home to 26 of the country's 56 recognized ethnic groups, more than any other region. Each group maintains distinct languages, costumes, festivals, and spiritual practices. This museum exists because China's approach to ethnic minorities is complex: officially celebrating diversity while promoting national unity. For foreign visitors, it's a rare opportunity to see just how many distinct ethnic groups China actually has in one place — from the matrilineal Mosuo 'walking marriages' to the Dongba pictographic script of the Naxi people, traditions that are genuinely unique and, in many cases, under pressure from modernization.",
+  "photo_spots": [
+    {
+      "location": "Ethnic Costume Hall — silver headdress displays",
+      "tip": "The glass cases reflect overhead lighting — angle your phone slightly to avoid glare. The Miao silver headdresses are the most photogenic.",
+      "why": "The intricate silver work against dark display backgrounds creates stunning detail shots. These are some of the most visually striking artifacts in the museum."
+    },
+    {
+      "location": "Mask Hall — ceremonial mask wall",
+      "tip": "Shoot from below for a dramatic perspective. The variety of expressions creates a powerful grid composition.",
+      "why": "A wall of carved faces spanning playful to terrifying — one of the most visually impactful displays in the museum."
+    },
+    {
+      "location": "Museum exterior with Dianchi Lake backdrop",
+      "tip": "From the museum entrance plaza, you can frame the traditional-style museum building with the lake and Western Hills in the background.",
+      "why": "Captures the setting — a cultural institution nestled between lake and mountains, quintessentially Kunming."
+    }
+  ],
+  "card_name": "Yunnan Nationalities Museum",
+  "card_type": "ETHNIC CULTURE MUSEUM",
+  "card_hook": "Twenty-six peoples, one museum, zero entrance fee.",
+  "best_for": [
+    "culture-curious-travelers",
+    "yunnan-trip-context",
+    "rainy-day-activity",
+    "free-attraction",
+    "families-with-kids"
+  ]
+}

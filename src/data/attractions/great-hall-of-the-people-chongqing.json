@@ -1,0 +1,240 @@
+{
+  "attraction_name_cn": "人民大礼堂",
+  "attraction_name_en": "Great Hall of the People (Chongqing)",
+  "address_cn": "重庆市渝中区人民路173号",
+  "experience_type": "sightseeing",
+  "hook": "A stunning 1950s architectural marvel modeled after Beijing's Temple of Heaven — Chongqing's most recognizable landmark with a massive public square where elderly locals dance every evening and the Three Gorges Museum sits right across the street.",
+  "honest_description": "The Great Hall of the People is Chongqing's signature building — a grand circular auditorium completed in 1954 that blends traditional Chinese imperial architecture with Soviet-era scale. The exterior is genuinely impressive: a green-tiled dome, red columns, and a sweeping design inspired by the Temple of Heaven. The interior is an enormous 4,000-seat auditorium, but many visitors find it anticlimactic — it's basically an empty theater when no performances are on. The real draw is the building's exterior, the lively People's Square in front, and the excellent (free) Three Gorges Museum directly opposite. Best experienced as a quick architectural photo stop combined with a proper visit to the museum across the square. Evening visits offer a different charm: the building is beautifully lit, and locals gather in the square for communal dancing and badminton.",
+  "foreigner_top_questions": [
+    {
+      "question": "Should I go inside or just see it from outside?",
+      "answer": "Honestly, most foreign visitors say the exterior is better than the interior. The ¥8 entry fee gets you into a large empty auditorium — impressive in scale (4,000 seats) but there's little to see when no events are on. The old photos displayed on the 3rd floor veranda are worth a look if you do go in. The exterior architecture and People's Square in front are free and more photogenic. Save your energy for the Three Gorges Museum across the street."
+    },
+    {
+      "question": "Is it worth making a special trip here?",
+      "answer": "As a standalone destination, probably not — it's a 15-20 minute photo stop unless you go inside. But combined with the Three Gorges Museum (free, excellent, 2-3 hours), the evening square atmosphere, and a walk to nearby Hongyadong, it becomes a solid half-day itinerary. The square is also a great place to see everyday Chongqing life — locals exercising, dancing, and socializing."
+    }
+  ],
+  "experience_format_note": "Quick exterior visit — no preparation needed. The building faces a large public square (People's Square/人民广场). Walk around the exterior, take photos, optionally pay ¥8 to enter the auditorium. Pair with the Three Gorges Museum directly across the square (free, allow 2 hours). Evening visits offer illuminated architecture and lively local scene.",
+  "vibe": "Grandly Soviet-Chinese, unexpectedly lively in the evenings — the imposing government architecture contrasted with grandmas dancing in the square creates a quintessentially Chinese moment.",
+  "time_needed": {
+    "quick_visit": "20-30 minutes (exterior photos and square, skip interior)",
+    "recommended": "2-3 hours (exterior, optional interior visit, plus Three Gorges Museum across the square)",
+    "deep_dive": "4 hours (add evening square atmosphere, lit-up night views, and nearby Hongyadong walk)"
+  },
+  "best_time": {
+    "best_time_of_day": "Late afternoon into evening — catch the building in daylight for photos, watch the sunset light hit the dome, then stay for the illuminated night views and evening square dancing.",
+    "worst_time": "Midday in summer — Chongqing's heat is brutal and the square offers no shade. Avoid if the building is hosting a government event (closed to public without notice).",
+    "seasonal_notes": "Spring and autumn offer the most comfortable temperatures for the outdoor square experience. Winter is mild by northern standards. Summer (June-August) is Chongqing's notorious 'furnace' season — visit in the cool of early morning or evening only.",
+    "pro_tip": "Come at dusk to catch the flag-lowering ceremony, then stay for the night illumination. The building transforms from impressive to magical when lit up against the dark sky."
+  },
+  "getting_in": {
+    "opening_hours": "Exterior and square: 24 hours. Interior: approximately 9:00 AM–5:00 PM daily (may close without notice for government events). Three Gorges Museum across the street: 9:00 AM–5:00 PM, closed Mondays.",
+    "price_rmb": "Exterior/square: Free. Interior: ¥8.",
+    "price_usd": "Interior: ~$1.10",
+    "price_breakdown": [
+      {
+        "item": "People's Square and exterior viewing",
+        "price": "Free",
+        "highlight": "The best part — see the full architectural grandeur from the square"
+      },
+      {
+        "item": "Interior auditorium entry",
+        "price": "¥8",
+        "highlight": "A large empty theater — impressive scale but not much to see"
+      },
+      {
+        "item": "Three Gorges Museum (directly opposite)",
+        "price": "Free",
+        "highlight": "Excellent museum covering the Yangtze, Three Gorges Dam, and Chongqing history"
+      }
+    ],
+    "booking_required": "No — walk up and buy ticket at the door for interior entry. No booking needed for exterior or square.",
+    "booking_method": "Walk-up tickets at the entrance. No advance booking available or needed.",
+    "passport_accepted": "Yes — foreigners can enter with passport. The Three Gorges Museum also accepts passport for free entry.",
+    "what_to_bring": "Camera (the building is extremely photogenic). Portable charger. Water in summer. Umbrella for sun or rain.",
+    "queue_situation": "Almost no queues for the Great Hall itself. The Three Gorges Museum may have short security lines on weekends.",
+    "language_barrier_rating": "minimal-chinese-needed — This is primarily an exterior photo spot. Buying the ¥8 ticket requires minimal interaction. The Three Gorges Museum has bilingual signage."
+  },
+  "highlights": [
+    {
+      "name": "The Building Exterior and Dome",
+      "description": "The 1954 structure is a masterpiece of Communist-era Chinese architecture — a green-tiled dome inspired by the Temple of Heaven, red columns, and a grand gate that echoes Tiananmen. It's one of China's most photographed government buildings and Chongqing's most recognizable landmark.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The architectural fusion is fascinating — imperial Chinese design language repurposed for a Communist-era auditorium. The Temple of Heaven influence is unmistakable if you've been to Beijing.",
+      "tip": "Stand in the center of the square across the street for the classic symmetrical photo. In the evening, the lit-up version is even more dramatic.",
+      "image": "人民大礼堂外观和穹顶.png"
+    },
+    {
+      "name": "People's Square Evening Scene",
+      "description": "Every evening, the square transforms into a vibrant community space — hundreds of locals gather for group dancing, badminton, tai chi, and socializing. The atmosphere is joyful and completely authentic.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is real Chinese community life, not performed for tourists. The contrast between the imposing government architecture and the playful, energetic crowd is uniquely Chinese and deeply charming.",
+      "tip": "Come around 7-8 PM in summer (earlier in winter) when the dancing groups are in full swing. Locals are generally welcoming if you want to join in.",
+      "image": "人民广场夜景.jpg"
+    },
+    {
+      "name": "Three Gorges Museum (重庆中国三峡博物馆)",
+      "description": "Directly across the square, this free museum covers the Yangtze River, Three Gorges region, Chongqing's wartime history, and southwest Chinese culture. Four floors of well-curated exhibitions with excellent English signage.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The WWII section covering Chongqing as China's wartime capital (1937-1945) is particularly compelling for international visitors. The Three Gorges exhibition explains the controversial dam project with impressive multimedia.",
+      "tip": "Allow at least 2 hours. The 4th floor has rotating exhibitions that are often surprisingly good. Free entry with passport.",
+      "image": "重庆中国三峡博物馆.jpg"
+    },
+    {
+      "name": "Interior Auditorium (optional)",
+      "description": "A cavernous 4,000-seat circular auditorium with Soviet-Chinese architectural details. The scale is impressive — one of the largest theater spaces in China when built. Historical photos on the 3rd floor veranda show construction progress and early use.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The architecture tells a story of 1950s ambition — built by the same architects who designed major Beijing landmarks, it was meant to project Communist authority in western China.",
+      "tip": "Only go inside if you're genuinely interested in architecture or Cold War history. Most visitors find the exterior more rewarding. The old photos on the 3rd floor are the most interesting part inside.",
+      "image": "人民大礼堂内景.png"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The flag-lowering ceremony at dusk",
+      "why": "A brief but photogenic military ceremony in front of the building that most tourists miss because they visit during the day. It adds a layer of formality and ritual to the experience."
+    },
+    {
+      "what": "The walk from People's Square to Hongyadong",
+      "why": "The Great Hall and Hongyadong are only 15 minutes apart on foot — combining them makes a natural half-day route, but many visitors treat them as separate trips."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Metro to Zengjiayan station → Three Gorges Museum (free, 2 hours) → cross the square to photograph the Great Hall exterior → optional ¥8 interior visit → wait for dusk flag ceremony if timing works → enjoy the evening square scene with dancing locals → walk 15 minutes to Hongyadong for illuminated cliff-side architecture.",
+    "what_to_skip": "The interior is skippable for most visitors — the ¥8 is cheap but the empty auditorium is anticlimactic. Focus on the exterior, square, and museum.",
+    "pro_tips": "The Three Gorges Museum is the real star here — budget most of your time there. The Great Hall exterior is a 15-minute photo stop that happens to be paired with an excellent free museum. Evening visits to the square are more memorable than daytime."
+  },
+  "heads_up": [
+    {
+      "warning": "The interior can be closed without notice for government events",
+      "advice": "Don't plan your entire visit around going inside. The exterior and square experience is equally good and always accessible."
+    },
+    {
+      "warning": "Chongqing summers are extremely hot",
+      "advice": "The square has zero shade. Visit early morning or evening in summer (June-August). The museum across the street is air-conditioned — use it as a heat refuge. If the heat is getting to you, message our team — we can recommend nearby air-conditioned spots or arrange cold drinks delivered to the square area."
+    },
+    {
+      "warning": "Police presence is constant",
+      "advice": "The area around government buildings has visible security. This is normal in China and means the area is very safe. Don't be alarmed by police patrols."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The building may close to visitors without notice during government events — check with your hotel before making a special trip just for the interior. Our concierge team can call ahead and check whether the interior is open on your visit day, saving you the uncertainty.",
+    "Payment for the ¥8 interior ticket may require WeChat/Alipay. Bring small cash as backup. If you are having trouble with mobile payments in Chongqing, message us and we can help troubleshoot or find alternatives.",
+    "The Three Gorges Museum across the square is free but requires passport — don't forget to bring yours even though the Great Hall itself doesn't require one for exterior viewing.",
+    "This is not the same as the Great Hall of the People in Beijing (which is rarely open to public). This Chongqing version is more accessible and architecturally similar but serves a different function."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Great Hall interior is closed for events",
+      "what_to_do": "Enjoy the exterior — it's arguably better anyway. Cross to the Three Gorges Museum for a full cultural experience.",
+      "plan_b": "The exterior is always visible and the square is always open. Come back in the evening for the illuminated version and dancing scene."
+    },
+    {
+      "problem": "Three Gorges Museum is closed (Monday)",
+      "what_to_do": "Focus on the Great Hall exterior, interior visit, and square atmosphere. Plan to return for the museum on another day if possible.",
+      "plan_b": "Walk 15 minutes to Hongyadong or Jiefangbei pedestrian street for alternative Chongqing experiences."
+    },
+    {
+      "problem": "Extreme heat making outdoor viewing miserable",
+      "what_to_do": "Duck into the air-conditioned Three Gorges Museum. Return to the square at dusk when temperatures drop. Our concierge can also book a nearby restaurant with AC or arrange a taxi to your next destination so you are not walking in the heat.",
+      "plan_b": "Take a quick exterior photo and retreat to any nearby air-conditioned mall or restaurant. The night view is better anyway."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable shoes for walking the square and nearby areas. Sun protection essential in summer — hat, umbrella, sunscreen. Light layers in spring/autumn.",
+    "what_to_bring": "Camera (essential for the architecture). Passport (needed for Three Gorges Museum). Portable charger. Water bottle. Small cash for interior ticket.",
+    "what_not_to_bring": "No restrictions for the Great Hall or square. The Three Gorges Museum has standard museum security — no large bags or liquids."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "The square is flat and fully accessible. The Great Hall interior has some stairs but is generally accessible. The Three Gorges Museum has elevators between all floors. Minimal walking required for the core experience.",
+    "age_notes": "Suitable for all ages. The evening dancing scene is particularly entertaining for children. The Three Gorges Museum has engaging displays for older children.",
+    "health_warnings": "Summer heat is the main concern — Chongqing regularly exceeds 40°C. Bring water and seek shade/AC frequently."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Check if the Great Hall interior is open today",
+      "platform": "Hotel concierge or local tourism hotline",
+      "value_to_user": "Avoids a wasted trip for interior access, since closures for government events happen without public notice."
+    },
+    {
+      "action": "Book a Chongqing highlights tour including Great Hall, museum, and Hongyadong",
+      "platform": "Trip.com, Klook, GetYourGuide",
+      "value_to_user": "A guided tour connects the dots between Chongqing's scattered landmarks and provides historical context that makes the Great Hall more meaningful."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Rénmín Dà Lǐtáng",
+      "chinese": "人民大礼堂",
+      "english": "Great Hall of the People"
+    },
+    {
+      "pinyin": "Rénmín Guǎngchǎng",
+      "chinese": "人民广场",
+      "english": "People's Square"
+    },
+    {
+      "pinyin": "Sānxiá Bówùguǎn",
+      "chinese": "三峡博物馆",
+      "english": "Three Gorges Museum"
+    },
+    {
+      "pinyin": "Ménpiào",
+      "chinese": "门票",
+      "english": "Admission ticket"
+    },
+    {
+      "pinyin": "Miǎnfèi",
+      "chinese": "免费",
+      "english": "Free (admission)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Three Gorges Museum (三峡博物馆)",
+      "why": "Directly across the square — a natural pairing. The museum is free, excellent, and provides 2-3 hours of cultural content that complements the Great Hall's architectural photo stop.",
+      "travel_time": "2-minute walk across the square"
+    },
+    {
+      "suggestion": "Hongyadong (洪崖洞)",
+      "why": "Chongqing's famous cliff-side stilt-house complex, stunning when illuminated at night. Makes a natural evening extension after the Great Hall's sunset views and square dancing.",
+      "travel_time": "15-minute walk downhill"
+    },
+    {
+      "suggestion": "Jiefangbei Pedestrian Street (解放碑步行街)",
+      "why": "Chongqing's bustling commercial heart with shopping, street food, and the Liberation Monument. A different energy from the Great Hall's stately atmosphere.",
+      "travel_time": "10-minute walk"
+    }
+  ],
+  "cultural_context": "The Great Hall was completed in 1954, just five years after the People's Republic was founded, and represents the architectural ambitions of the new communist state in western China. Its architect, Zhang Jiade, deliberately blended the imperial grandeur of the Temple of Heaven with the scale of Soviet public buildings — a visual statement that the new China could match both its imperial past and its Soviet ally. The building could seat 4,000 people in an era when such gathering spaces projected political power. Today it's Chongqing's most recognizable symbol, appearing on city promotional materials alongside the Yangtze River. The evening square-dancing scene in front represents something equally significant — the Chinese tradition of communal public exercise and socializing that happens in every city square across the country.",
+  "photo_spots": [
+    {
+      "location": "Center of People's Square facing the Great Hall",
+      "tip": "Stand on the central axis for perfect symmetry. The dome and columns frame beautifully. Best in late afternoon golden light or at night when illuminated.",
+      "why": "The classic postcard shot of Chongqing — the full building facade with the green dome centered. The square provides enough distance for a complete frame even with a phone camera."
+    },
+    {
+      "location": "Three Gorges Museum steps looking across at the Great Hall",
+      "tip": "The elevated museum entrance provides a slightly raised perspective. Frame the Great Hall through the museum's columns for a layered composition.",
+      "why": "An elevated angle that captures both the Great Hall and the bustling square between — shows the building in its urban context."
+    },
+    {
+      "location": "Night illumination from the square",
+      "tip": "Arrive 20-30 minutes after sunset for the best balance of blue sky and building lights. Use night mode on your phone for sharp detail.",
+      "why": "The illuminated Great Hall against a deep blue evening sky is arguably Chongqing's most beautiful night scene — dramatic, colorful, and uniquely photogenic."
+    }
+  ],
+  "card_name": "Great Hall of the People",
+  "card_type": "ARCHITECTURAL LANDMARK",
+  "card_hook": "Temple of Heaven meets Soviet grandeur, with dancing grandmas out front.",
+  "best_for": [
+    "architecture-enthusiasts",
+    "photographers",
+    "quick-stop-landmark",
+    "pair-with-museum",
+    "evening-atmosphere"
+  ]
+}

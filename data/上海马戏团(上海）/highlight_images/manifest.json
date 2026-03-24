@@ -1,0 +1,33 @@
+{
+  "attractionName": "上海马戏团",
+  "cityName": "上海",
+  "inputPath": "data/上海马戏团(上海）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T19:53:03.162Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Motorcycle Globe of Death (摩托车球)",
+      "query": "摩托车球 上海马戏团 上海",
+      "outputPath": "data/上海马戏团(上海）/highlight_images/01-摩托车球/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Trapeze and Pigeon Aerial Act (飞鸽秋千)",
+      "query": "飞鸽秋千 上海马戏团 上海",
+      "outputPath": "data/上海马戏团(上海）/highlight_images/02-飞鸽秋千/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Water Trapeze Combination",
+      "query": "Water Trapeze Combination 上海马戏团 上海",
+      "outputPath": "data/上海马戏团(上海）/highlight_images/03-Water_Trapeze_Combination/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "BMX and Roller-Skating Acrobatics",
+      "query": "BMX and Roller-Skating Acrobatics 上海马戏团 上海",
+      "outputPath": "data/上海马戏团(上海）/highlight_images/04-BMX_and_Roller-Skating_Acrobatics/raw/baidu_images.json"
+    }
+  ]
+}

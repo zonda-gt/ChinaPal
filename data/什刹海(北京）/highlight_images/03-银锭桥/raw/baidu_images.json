@@ -1,0 +1,71 @@
+{
+  "query": "银锭桥 什刹海 北京",
+  "searchUrl": "https://image.baidu.com/search/index?tn=baiduimage&ie=utf-8&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC",
+  "collectedAt": "2026-03-23T19:53:21.822Z",
+  "totalObserved": 30,
+  "count": 5,
+  "photos": [
+    {
+      "index": 1,
+      "title": "",
+      "url": "https://q4.itc.cn/q_70/images01/20250528/684e30c1f5494e8e9d617baaebecc76c.jpeg",
+      "thumbnailUrl": "https://img1.baidu.com/it/u=888919754,733796176&fm=253&fmt=auto&app=138&f=JPEG?w=652&h=500",
+      "sourcePageUrl": "http://www.sohu.com/a/899562041_122355045",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=8401221051988936616&bdtype=0&commodity=&copyright=&cs=4004115906,3925637546&di=7609719975837696001&fr=click-pic&fromurl=http://www.sohu.com/a/899562041_122355045&gsm=1e&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://q4.itc.cn/q_70/images01/20250528/684e30c1f5494e8e9d617baaebecc76c.jpeg&os=3362403750,3927030962&pd=image_content&pi=0&pn=0&rn=1&simid=4004115906,3925637546&tn=baiduimagedetail&width=0&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC&z=",
+      "simid": "4004115906,3925637546",
+      "fileName": "baidu_image_01.webp",
+      "filePath": "data/什刹海(北京）/highlight_images/03-银锭桥/image/baidu_image_01.webp",
+      "downloadSource": "original"
+    },
+    {
+      "index": 2,
+      "title": "",
+      "url": "https://qcloud.dpfile.com/pc/Hokl0_H4762KoWwVqWEcSYhHNzNFEQEtpa3s3o9KeVDjdgdpp4QVbOE1cYpmkFqU.jpg",
+      "thumbnailUrl": "https://img1.baidu.com/it/u=1634071619,2531113974&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+      "sourcePageUrl": "http://m.dianping.com/ugcdetail/290792014?sceneType=0&bizType=29&msource=baiduappugc",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=8401221051988936616&bdtype=0&commodity=&copyright=&cs=540480849,4268928917&di=7609719975837696001&fr=click-pic&fromurl=http://m.dianping.com/ugcdetail/290792014?sceneType=0&bizType=29&msource=baiduappugc&gsm=1e&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://qcloud.dpfile.com/pc/Hokl0_H4762KoWwVqWEcSYhHNzNFEQEtpa3s3o9KeVDjdgdpp4QVbOE1cYpmkFqU.jpg&os=1696058414,2812230754&pd=image_content&pi=0&pn=1&rn=1&simid=540480849,4268928917&tn=baiduimagedetail&width=0&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC&z=",
+      "simid": "540480849,4268928917",
+      "fileName": "baidu_image_02.jpg",
+      "filePath": "data/什刹海(北京）/highlight_images/03-银锭桥/image/baidu_image_02.jpg",
+      "downloadSource": "original"
+    },
+    {
+      "index": 3,
+      "title": "",
+      "url": "https://q2.itc.cn/q_70/images01/20250528/8e45106fec03476e97ac420aba91d4ba.jpeg",
+      "thumbnailUrl": "https://img1.baidu.com/it/u=4044942223,1564411669&fm=253&fmt=auto&app=138&f=JPEG?w=528&h=500",
+      "sourcePageUrl": "http://www.sohu.com/a/899562041_122355045",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=8401221051988936616&bdtype=0&commodity=&copyright=&cs=4117935818,344425555&di=7609719975837696001&fr=click-pic&fromurl=http://www.sohu.com/a/899562041_122355045&gsm=1e&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://q2.itc.cn/q_70/images01/20250528/8e45106fec03476e97ac420aba91d4ba.jpeg&os=3594892902,3176374246&pd=image_content&pi=0&pn=2&rn=1&simid=4117935818,344425555&tn=baiduimagedetail&width=0&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC&z=",
+      "simid": "4117935818,344425555",
+      "fileName": "baidu_image_03.webp",
+      "filePath": "data/什刹海(北京）/highlight_images/03-银锭桥/image/baidu_image_03.webp",
+      "downloadSource": "original"
+    },
+    {
+      "index": 4,
+      "title": "",
+      "url": "https://q2.itc.cn/q_70/images01/20250528/72279c6c346a414aadebe019e3cbd237.jpeg",
+      "thumbnailUrl": "https://img2.baidu.com/it/u=1974541930,115158591&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=648",
+      "sourcePageUrl": "http://www.sohu.com/a/899562041_122355045",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=8401221051988936616&bdtype=0&commodity=&copyright=&cs=1750809767,1550630920&di=7609719975837696001&fr=click-pic&fromurl=http://www.sohu.com/a/899562041_122355045&gsm=1e&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://q2.itc.cn/q_70/images01/20250528/72279c6c346a414aadebe019e3cbd237.jpeg&os=3885889074,2802263860&pd=image_content&pi=0&pn=3&rn=1&simid=1750809767,1550630920&tn=baiduimagedetail&width=0&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC&z=",
+      "simid": "1750809767,1550630920",
+      "fileName": "baidu_image_04.webp",
+      "filePath": "data/什刹海(北京）/highlight_images/03-银锭桥/image/baidu_image_04.webp",
+      "downloadSource": "original"
+    },
+    {
+      "index": 5,
+      "title": "",
+      "url": "https://q8.itc.cn/q_70/images01/20250528/dfc9b2763dda4b32a5ac36d9106bf24c.jpeg",
+      "thumbnailUrl": "https://img1.baidu.com/it/u=2541359423,1432732053&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=667",
+      "sourcePageUrl": "http://www.sohu.com/a/899562041_122355045",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=8401221051988936616&bdtype=0&commodity=&copyright=&cs=3992283255,2580349010&di=7609719975837696001&fr=click-pic&fromurl=http://www.sohu.com/a/899562041_122355045&gsm=1e&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://q8.itc.cn/q_70/images01/20250528/dfc9b2763dda4b32a5ac36d9106bf24c.jpeg&os=830074909,2694691678&pd=image_content&pi=0&pn=4&rn=1&simid=3992283255,2580349010&tn=baiduimagedetail&width=0&word=%E9%93%B6%E9%94%AD%E6%A1%A5%20%E4%BB%80%E5%88%B9%E6%B5%B7%20%E5%8C%97%E4%BA%AC&z=",
+      "simid": "3992283255,2580349010",
+      "fileName": "baidu_image_05.webp",
+      "filePath": "data/什刹海(北京）/highlight_images/03-银锭桥/image/baidu_image_05.webp",
+      "downloadSource": "original"
+    }
+  ],
+  "imageDirectory": "data/什刹海(北京）/highlight_images/03-银锭桥/image",
+  "downloadedCount": 5
+}

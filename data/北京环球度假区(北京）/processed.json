@@ -1,0 +1,307 @@
+{
+  "attraction_name_cn": "北京环球度假区",
+  "attraction_name_en": "Universal Beijing Resort",
+  "address_cn": "北京市通州区京哈高速与东六环路交汇处西北角",
+  "experience_type": "theme-park",
+  "hook": "The world's largest Universal Studios park — home to the globe's only Kung Fu Panda land, a face-melting Decepticoaster, and a Hogwarts so meticulously recreated that even Osaka veterans do a double take.",
+  "honest_description": "Universal Beijing Resort is the newest and largest Universal Studios in the world, opened in 2021, with seven themed zones spanning an enormous footprint. The standout areas are the Wizarding World of Harry Potter (nearly identical layout to Osaka but with newer tech and a stunning castle light show), Transformers Metrobase (home to the Decepticoaster — the park's best thrill ride), and Kung Fu Panda Land of Awesomeness (a Beijing exclusive, entirely indoors, beautifully lit with Chinese cultural motifs). The Jurassic World Adventure dark ride is genuinely impressive with cutting-edge 4D effects. The WaterWorld stunt show is universally praised as spectacular. The downsides are real: queues are brutal — 60-150 minutes for popular rides on weekends and holidays, and the Express Pass system is expensive and confusing. Food is overpriced and average (80 RMB for a turkey leg, 108+ RMB for a basic meal). Almost everything — ride narration, shows, staff communication — is in Mandarin with minimal English accommodation. Staff friendliness varies; some visitors report rudeness at security. The park rewards weekday visits enormously: Tuesday-Thursday outside holidays, queues drop to 15-30 minutes and you can ride everything without an Express Pass. Best for movie fans, families, and thrill-seekers willing to commit a full day.",
+  "foreigner_top_questions": [
+    {
+      "question": "Can I buy tickets and enter with a foreign passport?",
+      "answer": "Yes — foreigners can buy tickets on Trip.com or Klook (recommended over the official app, which has payment issues with foreign cards). You enter using your physical passport with facial recognition scanning at the gate. Your passport must match the name on the booking. The official app requires a Chinese phone number for WiFi and some features, but Trip.com/Klook QR codes work fine for entry. Book at least a few days in advance for weekends and holidays."
+    },
+    {
+      "question": "Is the Express Pass worth it and how does it work?",
+      "answer": "On weekends and holidays, absolutely yes — without it, expect 90-150 minute waits for popular rides and you will only manage 4-5 attractions in a full day. Three tiers: 3-ride (390 RMB), 5-ride (560 RMB), and 14-ride (900 RMB). Each pass gives one skip per selected attraction. You must enroll facial recognition to use it. On weekday visits (Tuesday-Thursday, non-holiday), you can skip the Express Pass entirely — waits drop to 15-30 minutes. The 3-ride pass is the best value if you only care about Harry Potter Forbidden Journey, Decepticoaster, and Jurassic World Adventure."
+    }
+  ],
+  "experience_format_note": "Full-day theme park experience across seven themed zones. You will walk 15,000-25,000 steps across the massive park. Two security checkpoints before entry (bag check is manual and slow — 30-60 minutes on busy days). The official app shows real-time queue times and is essential for planning, but requires a Chinese phone number for WiFi access. You CAN bring pre-packaged snacks, sealed drinks (no glass bottles), and refillable water bottles — free drinking water stations are throughout the park. One day is tight for all major rides; two days (1.5-day or 2-day ticket available) is ideal for seeing everything.",
+  "vibe": "A sprawling Hollywood dreamscape with unmistakable Chinese energy — the crowds are intense, the Kung Fu Panda zone is gloriously Chinese, and the Hogwarts light show makes you forget you are in suburban Beijing.",
+  "time_needed": {
+    "quick_visit": "4-5 hours (you will hit maybe 3-4 rides and miss the evening shows — not recommended)",
+    "recommended": "10-12 hours, full day from park opening to evening light show (covers 6-8 major rides plus shows and parade)",
+    "deep_dive": "2 full days with a 1.5-day or 2-day ticket (the only way to ride everything, see all shows, take photos, and enjoy meals without rushing)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at least 30-60 minutes before gates open (typically 8:30-9:00 AM). The first 90 minutes have the shortest queues — head directly to Harry Potter Forbidden Journey or Transformers. Alternatively, after the evening parade/light show, queues for major rides drop dramatically for the last hour before closing.",
+    "worst_time": "Weekends (especially Saturday), Chinese public holidays (National Day Oct 1-7, May Day, Chinese New Year), school breaks (July-August, January-February). Queues for popular rides exceed 2 hours. Even Mondays can be crowded because many Beijing museums close on Mondays, pushing tourists to the park.",
+    "seasonal_notes": "Autumn (late September to November) is the best season — comfortable weather, manageable crowds. The Halloween event (late October) adds haunted houses and themed decorations worth experiencing. Winter brings snow which makes the Harry Potter area magical, but the Decepticoaster and some outdoor rides close in extreme cold. Summer is brutally hot with limited shade. Spring (April-May) is pleasant but May Day holiday brings massive crowds.",
+    "pro_tip": "Visit on a Tuesday or Wednesday in mid-November — you can ride everything multiple times with near-zero waits. The 6 PM strategy also works in summer: arrive late afternoon when crowds thin and enjoy cooler evening temperatures plus the light show."
+  },
+  "getting_in": {
+    "opening_hours": "Tuesday-Friday: 10:00-20:00. Saturday-Monday: 09:00-21:00. Hours vary by season — summer extends to 22:00, winter may close earlier. Check the official app for exact hours on your visit date.",
+    "price_rmb": "Low season: 418 RMB/adult. Mid-season: 528 RMB. High season: 638 RMB. Special season: 748 RMB. Children (3-11) and seniors (65+) get approximately 25% discount.",
+    "price_usd": "Low season: ~$58. Mid-season: ~$73. High season: ~$88. Special season: ~$103.",
+    "price_breakdown": [
+      {
+        "item": "1-Day Low Season Adult Ticket",
+        "price": "418 RMB",
+        "highlight": "Cheapest option — weekday non-holiday periods"
+      },
+      {
+        "item": "1-Day High Season Adult Ticket",
+        "price": "638 RMB",
+        "highlight": "Weekends and regular holidays"
+      },
+      {
+        "item": "1.5-Day Ticket",
+        "price": "585-660 RMB",
+        "highlight": "Enter afternoon Day 1 + full Day 2 — good value"
+      },
+      {
+        "item": "2-Day Ticket",
+        "price": "660-835 RMB",
+        "highlight": "Best value for seeing everything without rushing"
+      },
+      {
+        "item": "Express Pass (3 rides)",
+        "price": "390 RMB",
+        "highlight": "Best value Express option — skip lines for your top 3 rides"
+      },
+      {
+        "item": "Express Pass (5 rides)",
+        "price": "560 RMB",
+        "highlight": "Good middle ground for weekend visits"
+      },
+      {
+        "item": "Express Pass (14 rides)",
+        "price": "900 RMB",
+        "highlight": "Skip all lines — transforms the entire day on peak dates"
+      },
+      {
+        "item": "Parking (regular)",
+        "price": "25-100 RMB depending on entry time",
+        "highlight": "After 6 PM only 25 RMB — metro is cheaper and faster"
+      }
+    ],
+    "booking_required": "Yes — advance online booking strongly recommended. Tickets can technically be bought at the gate but availability is not guaranteed on peak days. Book through Trip.com or Klook for the smoothest foreign payment experience.",
+    "booking_method": "Trip.com or Klook (recommended for foreigners — accepts international credit cards and provides QR codes). The official Beijing Universal Resort app works but has payment issues with foreign Visa/Mastercard. WeChat mini-program also available for those with Chinese payment methods.",
+    "passport_accepted": "Yes — foreigners enter with their physical passport. Facial recognition is enrolled at entry and used for Express Pass, lockers, and re-entry. Your passport is mandatory — no entry without it.",
+    "what_to_bring": "Physical passport (mandatory). Portable power bank (critical — no rental chargers available for foreigners without Chinese phone numbers). Refillable water bottle (free drinking water stations throughout). Comfortable walking shoes. Pre-packaged snacks to save money. Rain poncho for WaterWorld show front rows. The Universal app downloaded (for queue times). Translation earphones if you want to understand ride narration.",
+    "queue_situation": "Entry security takes 30-60 minutes on peak days — going bag-free or with a small bag speeds this up. Inside the park, popular rides average 45-90 minutes on regular days, 90-150+ minutes on peak days. The app shows real-time queue times (generally accurate, though some visitors report times being understated by 20 minutes).",
+    "language_barrier_rating": "challenging — Almost all ride narration, shows, and staff communication is in Mandarin. Park signage is bilingual (Chinese/English). The app has an English interface. Very few staff speak English, and some visitors report staff being unhelpful when language barriers arise. Translation earphones (like Soundcore) are recommended. Payment is overwhelmingly Alipay/WeChat Pay — some shops accept foreign credit cards and cash."
+  },
+  "highlights": [
+    {
+      "name": "Decepticoaster (霸天虎过山车)",
+      "description": "The park's most thrilling ride — a launched roller coaster in the Transformers Metrobase zone that reaches high speeds with multiple inversions. Riders must store all belongings in free facial-recognition lockers before boarding. The coaster is outdoors, making the views of the park part of the experience.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This roller coaster is unique to Beijing — no other Universal park has it. It fills the gap that many visitors note: Beijing's Universal is more family-friendly overall, but this ride delivers genuine thrills.",
+      "tip": "Ride this early morning when queues are shortest (often under 20 minutes in the first hour). The single-rider line can cut wait times by 50%. Note: it closes during extreme cold or weather events in winter."
+    },
+    {
+      "name": "Harry Potter and the Forbidden Journey (哈利·波特与禁忌之旅)",
+      "description": "The signature dark ride through Hogwarts Castle — dynamic seats move through physical sets and 3D projection screens as you fly alongside Harry, dodge dragons, and face dementors. The queue through the castle is an attraction in itself with talking portraits and Dumbledore's office.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Nearly identical to the Osaka version in layout and ride experience. The castle and Hogsmeade village are meticulously recreated. Butterbeer is available hot or cold (hot recommended in winter).",
+      "tip": "This consistently has the park's longest queue — 90-150 minutes on weekends. Rush here first thing in the morning or ride during the evening parade when queues drop. The Express Pass is most valuable for this ride."
+    },
+    {
+      "name": "Jurassic World Adventure (侏罗纪世界大冒险)",
+      "description": "A boat-based dark ride using trackless vehicle technology with massive screens and animatronic dinosaurs. The 4D effects — sudden movements, water spray, wind — make the dinosaur encounters feel genuinely real. Multiple reviewers call it one of the best dark rides in any theme park.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "While the narration is in Mandarin, the visual spectacle needs no translation. The technology here is cutting-edge and impresses even visitors who have been to other Universal parks.",
+      "tip": "The front row gives the most immersive visual experience; the back row has more intense physical movement. Queue times are moderate compared to Harry Potter — often 45-60 minutes."
+    },
+    {
+      "name": "Kung Fu Panda Land of Awesomeness (功夫熊猫盖世之地)",
+      "description": "The world's only Kung Fu Panda themed zone — entirely indoors with climate control, elaborate Chinese-style lighting, and a dreamy atmosphere that recreates the Valley of Peace. The main ride is a gentle boat ride through the film's story. The entire zone features traditional Chinese architectural motifs and is the park's most culturally distinctive area.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This zone exists nowhere else in the world and is the most distinctly Chinese part of the park. The indoor environment makes it perfect for escaping summer heat or winter cold. Rides are family-friendly — no height restrictions.",
+      "tip": "Come here during peak afternoon heat or rain — the indoor climate control makes it a comfortable refuge. The food at Madam Panda's Noodle House (平先生面馆) is among the best in the park."
+    },
+    {
+      "name": "WaterWorld (未来水世界)",
+      "description": "A live-action stunt show featuring high dives, jet ski stunts, pyrotechnic explosions, and a real airplane crash landing into the water. Performers interact with the audience throughout. The production quality is consistently praised as one of the park's best experiences.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The show is mostly visual action with minimal dialogue — the language barrier is not an issue. It is essentially the same show as at other Universal parks worldwide.",
+      "tip": "Front rows will get soaked — bring a rain poncho or embrace the water. Shows run multiple times daily (check the app for times). The show area is weather-dependent and closes during extreme cold in winter."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Untrainable (不可驯服) — How to Train Your Dragon live show",
+      "why": "A spectacular indoor live show with a life-sized flying Toothless dragon, aerial performers, and stunning light effects. Most visitors focus on rides and skip this, but reviewers who see it consistently rank it among the park's top 3 experiences. The emotional moment when Toothless flies over the audience gives genuine chills. Choose middle-back seating for the best visual perspective."
+    },
+    {
+      "what": "Riding popular attractions during the afternoon parade",
+      "why": "The daily parade draws huge crowds to the Hollywood Boulevard area. During this 30-40 minute window, queue times for Decepticoaster, Forbidden Journey, and other rides drop significantly. Savvy visitors use parade time to knock out 1-2 major rides with minimal waiting."
+    },
+    {
+      "what": "CityWalk (环球城市大道) — free entry, no park ticket needed",
+      "why": "The dining and shopping boulevard outside the park gates is free to enter and stays open after park closing time. It has more diverse and reasonably priced restaurants than inside the park. You can exit for lunch here and re-enter with your ticket."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter the park and head immediately to Harry Potter for Forbidden Journey (shortest queue in the first 30 minutes). Then cross to Transformers for Decepticoaster and Battle for the AllSpark. Hit Jurassic World Adventure next. Afternoon: watch the WaterWorld stunt show and the Untrainable dragon show. Visit Kung Fu Panda for a cool indoor break and lunch at the noodle house. Evening: catch the parade on Hollywood Boulevard, then re-ride favorites during the Hogwarts Castle light show when queues drop. Final rides with near-zero wait after 8 PM.",
+    "what_to_skip": "Flight of the Hippogriff is a very mild ride with surprisingly long queues — skip unless you have small children. The Minions rides are cute but low-thrill and better for young kids. Lights, Camera, Action! is interesting once but not worth a long wait. Do not spend time queuing at the Universal Globe photo spot at entry — come back at night when it is empty and beautifully lit.",
+    "pro_tips": "Download the app BEFORE arriving for real-time queue tracking. The single-rider line on Decepticoaster and some other rides cuts wait by 50%. If visiting on a weekend, the 3-ride Express Pass for Forbidden Journey + Decepticoaster + Jurassic Adventure is the best value upgrade. Bring an empty water bottle — free hot and cold drinking water stations are everywhere. The Child Switch system lets parents take turns riding without both waiting in line."
+  },
+  "heads_up": [
+    {
+      "warning": "Queue times are the #1 complaint — popular rides regularly exceed 90-150 minutes on weekends",
+      "advice": "Either buy an Express Pass, visit Tuesday-Thursday outside holidays, or use the morning-rush and evening-parade strategies. Without any queue-skipping on a weekend, expect to ride only 3-5 major attractions in a full day."
+    },
+    {
+      "warning": "Almost everything is in Mandarin with minimal English support",
+      "advice": "Ride narration, show dialogue, and most staff communication is in Chinese only. This does not ruin the visual spectacle of rides, but shows with plot (like Lights, Camera, Action!) lose most of their meaning. Consider buying translation earphones before your visit. The app has an English interface for navigation."
+    },
+    {
+      "warning": "The official app is difficult for foreigners to use fully",
+      "advice": "The app requires a Chinese phone number for WiFi and some features. Download it anyway for the real-time queue time map, which works without logging in. Buy tickets through Trip.com or Klook instead of the app. Google Maps shows the wrong name/location — use Baidu Maps or Apple Maps for navigation."
+    },
+    {
+      "warning": "Food is expensive and portions are modest",
+      "advice": "A basic meal is 90-110 RMB ($12-15). You CAN bring pre-packaged snacks and sealed drinks (no glass). Free drinking water stations are everywhere. For a proper meal, exit to CityWalk where restaurants are more varied and slightly cheaper. Three Broomsticks in the Harry Potter area is the most popular restaurant but has 30-90 minute waits during lunch — eat at 11 AM or after 2 PM."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You MUST carry your physical passport — it is scanned with facial recognition at entry. No passport, no entry. Digital copies are not accepted.",
+    "Payment is overwhelmingly Alipay/WeChat Pay. Some shops accept foreign credit cards but many do not. ATMs accepting international cards are in Minion Land and Kung Fu Panda zones. Bring 200-300 RMB cash as backup.",
+    "The official app has poor foreign card support — buy tickets on Trip.com or Klook instead. The app is still useful for real-time queue tracking (works without purchasing through it).",
+    "Foreigners cannot easily use the park WiFi (requires Chinese phone number). Rely on your mobile data plan.",
+    "VIP guided tours sold through third-party platforms (like Trip.com) have mixed quality — some guides speak no English and may try to end the tour early. Book only through reputable platforms with English-language guarantees."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Tickets sold out for your desired date",
+      "what_to_do": "Check Trip.com or Klook — they sometimes have inventory when the official site shows sold out. Weekday tickets rarely sell out. Consider the 1.5-day ticket starting the afternoon before your target date.",
+      "plan_b": "CityWalk is free to enter and has themed shops, restaurants, and the Universal Globe for photos. The area outside the park still has a fun atmosphere."
+    },
+    {
+      "problem": "A major ride you wanted is closed for weather or maintenance",
+      "what_to_do": "Check the app before your visit — it shows closures in advance. The Decepticoaster closes during extreme cold/wind in winter. WaterWorld closes in winter. Staff at ride entrances can tell you if it will reopen.",
+      "plan_b": "Redirect to indoor rides: Forbidden Journey, Jurassic World Adventure, Kung Fu Panda rides, and Minions are all indoor and operate regardless of weather."
+    },
+    {
+      "problem": "Phone died inside the park",
+      "what_to_do": "The lockers throughout the park use facial recognition, not your phone, so your belongings are safe. Head to Guest Services near the entrance for help. Some CityWalk restaurants have charging outlets.",
+      "plan_b": "Your passport is your backup proof of entry. Show it at any checkpoint. Without the app, ask staff about current queue times — they have displays at major ride entrances."
+    },
+    {
+      "problem": "Rainy day",
+      "what_to_do": "Many top attractions are indoor: Forbidden Journey, Jurassic World Adventure, Battle for the AllSpark, Kung Fu Panda rides, Minions rides. Rain actually reduces crowds significantly.",
+      "plan_b": "Bring a rain poncho (cheaper bought outside the park). Rainy days are secretly excellent days to visit — fewer people and most rides operate normally. The Decepticoaster may close temporarily in heavy rain."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes are absolutely essential — you will walk 15,000-25,000 steps on hard pavement. In summer, wear light breathable clothes, a hat, and apply sunscreen (no aerosol sprays allowed). In winter, dress in warm layers — outdoor areas and queues have limited heating. Avoid loose items on the Decepticoaster (everything must go in lockers). Harry Potter fans: rent a wizard robe before arriving (~100 RMB from shops near the metro) rather than buying inside the park (400+ RMB).",
+    "what_to_bring": "Physical passport (mandatory). Portable power bank (critical). Refillable water bottle. Pre-packaged snacks. The Universal app pre-installed. Rain poncho for WaterWorld. Sunscreen in non-aerosol form. Translation earphones if you want to understand shows.",
+    "what_not_to_bring": "Selfie sticks and tripods (confiscated at security — you may be fined). Glass bottles. Aerosol sprays. Large bags or suitcases (slow down security and must be stored). Oversized bags exceeding 56x36x23cm cannot enter the park."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "high",
+    "physical_details": "Expect 15,000-25,000 steps across the massive park over a full day. The park is mostly flat with accessible pathways. Wheelchair and stroller rental available at the entrance (deposit required). Many rides have height restrictions: Decepticoaster (132cm), Flight of the Hippogriff (102cm). Lockers use facial recognition and are free for 30 minutes.",
+    "age_notes": "Suitable for all ages with different experiences. Children under 3 enter free. Kung Fu Panda and Minion zones are excellent for young children (no height restrictions on most rides). Thrill rides require minimum heights of 102-132cm. The Untrainable show and WaterWorld are enjoyable regardless of age.",
+    "health_warnings": "Heat exhaustion is a serious risk in summer — limited shade in queue lines, intense sun. Bring water and take breaks in the Kung Fu Panda indoor zone. The Decepticoaster and Forbidden Journey cause motion sickness in sensitive individuals — avoid doing 3D/4D rides back-to-back. Multiple rides have warnings for heart conditions, back problems, and pregnancy."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book park tickets",
+      "platform": "Trip.com or Klook (recommended for foreigners over official app)",
+      "value_to_user": "Required for entry. Trip.com and Klook accept international credit cards and provide QR codes that work seamlessly at the gate with your passport."
+    },
+    {
+      "action": "Purchase Express Pass",
+      "platform": "Official app, Trip.com, or at-park purchase",
+      "value_to_user": "Skip the line for 3, 5, or 14 attractions. The 3-ride pass (390 RMB) is the best value — use it for the three longest-wait rides. Essential on weekends and holidays."
+    },
+    {
+      "action": "Book Universal Studios Grand Hotel for Early Park Admission",
+      "platform": "Trip.com, Klook, or hotel direct booking",
+      "value_to_user": "Hotel guests get 1 hour early park access — ride Harry Potter Forbidden Journey with near-zero queue before general admission. The hotel connects directly to the park entrance."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Huánqiú Yǐngchéng",
+      "chinese": "环球影城",
+      "english": "Universal Studios (what locals call it)"
+    },
+    {
+      "pinyin": "Hālì Bōtè",
+      "chinese": "哈利·波特",
+      "english": "Harry Potter"
+    },
+    {
+      "pinyin": "Bàtiānhǔ Guòshānchē",
+      "chinese": "霸天虎过山车",
+      "english": "Decepticoaster"
+    },
+    {
+      "pinyin": "Yōusùtōng",
+      "chinese": "优速通",
+      "english": "Express Pass"
+    },
+    {
+      "pinyin": "Pái duì duōjiǔ?",
+      "chinese": "排队多久？",
+      "english": "How long is the queue?"
+    },
+    {
+      "pinyin": "Nǎlǐ kěyǐ chōngdiàn?",
+      "chinese": "哪里可以充电？",
+      "english": "Where can I charge my phone?"
+    },
+    {
+      "pinyin": "Huángyóu Píjiǔ",
+      "chinese": "黄油啤酒",
+      "english": "Butterbeer"
+    },
+    {
+      "pinyin": "Gōngfu Xióngmāo",
+      "chinese": "功夫熊猫",
+      "english": "Kung Fu Panda"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "CityWalk (环球城市大道)",
+      "why": "Free-entry dining and shopping district right outside the park gates with themed restaurants and better food options. Stays open after park closing. Your park ticket allows same-day re-entry.",
+      "travel_time": "0 minutes — immediately outside the park gates"
+    },
+    {
+      "suggestion": "The Forbidden City (故宫)",
+      "why": "From Hollywood fantasy to imperial Chinese reality — the cultural contrast is fascinating. The Forbidden City is Beijing's most iconic historical site and provides a completely different kind of immersive experience.",
+      "travel_time": "60-75 minutes by Metro Line 7 + transfer to Line 1"
+    },
+    {
+      "suggestion": "The Great Wall at Badaling or Mutianyu",
+      "why": "Pair a day of movie magic with a day of ancient wonder. Most visitors to Beijing do both, typically on separate days.",
+      "travel_time": "2-3 hours by car/bus depending on which section"
+    }
+  ],
+  "cultural_context": "Universal Beijing Resort opened on September 20, 2021, after two decades of planning dating back to a 2001 cooperation agreement. It is China's only Universal Studios park, the fifth globally, and the largest in the world. The park deliberately incorporates Chinese cultural elements — the Kung Fu Panda Land of Awesomeness is a Beijing exclusive featuring traditional Chinese architecture, lanterns, and design motifs that reference Tang Dynasty aesthetics. In 2025, a Genshin Impact themed restaurant was introduced, reflecting the park's strategy of blending Western IP with elements popular in China. Phase 2 construction began in 2023 on an adjacent 165-hectare plot, with plans to introduce Chinese cultural IP including Sun Wukong (the Monkey King). The park achieved 100% green electricity operations in 2024 and has LEED Gold certification. It represents a significant cultural negotiation: Western entertainment franchises adapted for Chinese audiences, with local food, local holidays, and the reality that most visitors are domestic Chinese tourists rather than international travelers.",
+  "photo_spots": [
+    {
+      "location": "Universal Globe (环球标志球) — park entrance",
+      "tip": "Skip this at arrival when everyone stops for photos. Return at night when it is beautifully lit and nearly empty. The globe looks dramatically better after dark.",
+      "why": "The iconic Universal globe is the park's most recognizable photo — and it photographs far better at night than during the day."
+    },
+    {
+      "location": "Hogwarts Castle (霍格沃茨城堡) — dusk and evening",
+      "tip": "The castle looks most magical during the 'blue hour' at dusk and during the nighttime light show projection. Position yourself on the bridge facing the castle for the best angle.",
+      "why": "The Hogwarts Castle is one of the most photogenic structures in any Universal park, especially when snow falls in winter."
+    },
+    {
+      "location": "Kung Fu Panda Land — indoor lighting",
+      "tip": "The elaborate lantern lighting and Chinese architectural details create stunning photos. The zone is beautifully lit regardless of time of day since it is entirely indoors.",
+      "why": "Unique to Beijing — these photos cannot be taken at any other Universal park in the world."
+    },
+    {
+      "location": "Transformers Metrobase — Megatron interaction area",
+      "tip": "Even if you do not queue for a photo with Megatron, watch him roast guests from a distance — the interactions are hilarious and make for great video content.",
+      "why": "Megatron is widely considered the park's best character interaction, with witty and unique responses to each guest."
+    }
+  ],
+  "card_name": "Universal Beijing Resort",
+  "card_type": "THEME PARK",
+  "card_hook": "The world's largest Universal Studios with the only Kung Fu Panda land on Earth.",
+  "best_for": [
+    "family-friendly",
+    "full-day-commitment",
+    "iconic-must-see",
+    "thrill-seekers",
+    "rainy-day-friendly"
+  ]
+}

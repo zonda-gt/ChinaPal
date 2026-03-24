@@ -1,0 +1,226 @@
+{
+  "attraction_name_cn": "古北水镇",
+  "attraction_name_en": "Gubei Water Town",
+  "address_cn": "北京市密云区古北口镇司马台村",
+  "experience_type": "resort-town",
+  "hook": "A meticulously recreated northern water town at the foot of the Simatai Great Wall — where Jiangnan canal charm meets Great Wall grandeur, hot spring soaks, and one of Beijing's most spectacular night scenes.",
+  "honest_description": "Gubei Water Town is a modern recreation of a traditional southern Chinese water town, built on the site of five former villages in Miyun District, about 120 km northeast of central Beijing. Opened around 2014, it was modeled after Wuzhen in Zhejiang Province and offers a curated experience of traditional architecture, canal-side walks, artisan workshops, and hotels — all set against the dramatic backdrop of the Simatai Great Wall. The 9-square-kilometer resort features Ming and Qing dynasty-style buildings, boat rides on canals, hot spring baths, craft demonstrations (tie-dye, paper-cutting, shadow puppetry), and dozens of restaurants and guesthouses. The night scene is genuinely spectacular — the illuminated town reflected in waterways with the lit-up Great Wall snaking across the mountains above is unforgettable. Honest downsides: this is NOT a real ancient town. Everything was built within the last 15 years, and some visitors feel it lacks authenticity compared to genuine water towns. The entrance fee (140 RMB) is steep for what is essentially a themed resort. Food and accommodation inside are overpriced. The journey from central Beijing takes 2-2.5 hours each way, making a day trip exhausting. On weekdays, the town can feel eerily empty; on holidays, it is overcrowded. But as a weekend getaway combining Great Wall access, hot springs, beautiful architecture, and stunning night photography, it delivers an experience unavailable anywhere else near Beijing.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is this a real ancient town or a theme park?",
+      "answer": "It is a modern recreation, built starting around 2010 on the site of former villages. None of the buildings are historically authentic — they are newly constructed in Ming/Qing style. Think of it as an extremely well-executed architectural theme park rather than a preserved heritage site. If authenticity matters to you, this may disappoint. If you enjoy beautiful settings, photography, and a relaxing atmosphere with Great Wall views, it delivers."
+    },
+    {
+      "question": "Can I combine this with climbing the Simatai Great Wall?",
+      "answer": "Yes — Simatai Great Wall is directly adjacent, and Gubei Water Town is the mandatory access point. You must enter through the water town to reach the Great Wall. Buy a combined ticket or add the 40 RMB Great Wall ticket separately. The Great Wall requires advance online booking (at least one day ahead) with limited daily capacity. An overnight stay is ideal to do both the town and a Great Wall day/night tour comfortably."
+    }
+  ],
+  "experience_format_note": "Large-scale resort town covering 9 square kilometers. Best experienced as an overnight trip (1-2 days) rather than a rushed day trip. Includes canal boat rides, hot springs, cultural workshops, restaurants, and direct access to Simatai Great Wall. Free shuttle buses operate within the resort. The town has its own hotels and guesthouses (booking through the official website gets discounted entry tickets at 80 RMB instead of 140 RMB).",
+  "vibe": "A cinematic northern water town where lantern-lit canals wind between gray-brick courtyard buildings, and the Great Wall glows on the mountainside above — simultaneously artificial and genuinely beautiful.",
+  "time_needed": {
+    "quick_visit": "4-5 hours (rush through the main water street, see key buildings, skip the Great Wall — not recommended given the 2.5-hour journey each way)",
+    "recommended": "1.5 days / overnight stay (explore the town in the afternoon, see the night scene, climb the Great Wall the next morning)",
+    "deep_dive": "2 days / 2 nights (town exploration, Great Wall day and night tours, hot spring, craft workshops, boat rides)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive by early afternoon to explore the town in daylight, then experience the magical transition as lanterns and lights turn on at dusk. The night scene between 7-10 PM is the absolute highlight.",
+    "worst_time": "Major Chinese holidays (National Day Golden Week, May Day) when the town is overcrowded and hotel prices triple. Weekday visits can feel too empty. Summer afternoons are hot.",
+    "seasonal_notes": "Autumn (September-November) is the best season — comfortable temperatures, autumn foliage on the mountains, clear skies for Great Wall views. Winter has a stark beauty (occasional snow on the Great Wall is stunning) and hot springs are most enjoyable, but it is very cold. Spring is pleasant. Summer is hot and humid with occasional heavy rain.",
+    "pro_tip": "Visit on a Friday night through Saturday — you get the night scene without the Sunday checkout rush. Book a hotel inside the town for the 80 RMB discounted ticket and unlimited re-entry."
+  },
+  "getting_in": {
+    "opening_hours": "Sun-Thu: 09:00-22:30 (last entry 21:00). Fri-Sat: 09:00-23:00 (last entry 21:00). Hours vary slightly by season.",
+    "price_rmb": "140 RMB per person (standard). 80 RMB for overnight hotel guests. Children under 1.2m free. Seniors 60+ half price.",
+    "price_usd": "~$19 standard, ~$11 for hotel guests.",
+    "price_breakdown": [
+      {
+        "item": "Standard admission",
+        "price": "140 RMB",
+        "highlight": "Day visitors without hotel booking"
+      },
+      {
+        "item": "Hotel guest admission",
+        "price": "80 RMB",
+        "highlight": "Book accommodation through the official site for this discount plus unlimited re-entry"
+      },
+      {
+        "item": "Simatai Great Wall add-on",
+        "price": "40 RMB",
+        "highlight": "Separate ticket required; must be booked online in advance"
+      },
+      {
+        "item": "Direct bus from Dongzhimen",
+        "price": "48 RMB one-way",
+        "highlight": "Departs 9:00 AM, returns at set times. About 2 hours."
+      }
+    ],
+    "booking_required": "No advance booking needed for the water town itself, but highly recommended for weekends. Simatai Great Wall requires advance online booking.",
+    "booking_method": "Official website (gubeiwater town.com) for accommodation + discounted tickets. Trip.com or Klook for day tickets. Simatai Great Wall tickets must be booked at least one day in advance via the official WeChat mini-program.",
+    "passport_accepted": "Yes — foreigners can purchase tickets at the gate or online.",
+    "what_to_bring": "Comfortable walking shoes. Camera for night photography. Swimsuit for hot springs. Warm layers in autumn/winter (mountain area is colder than Beijing city). Portable charger.",
+    "queue_situation": "Entry queues can be long on weekends and holidays. Inside the town, individual attractions rarely have long waits.",
+    "language_barrier_rating": "moderate — Staff at hotels speak limited English. Restaurant menus are mostly Chinese-only. The town layout is intuitive and maps are available in English. Payment via Alipay/WeChat Pay is standard."
+  },
+  "highlights": [
+    {
+      "name": "The Night Scene",
+      "description": "After dark, the entire water town is illuminated with lanterns, string lights, and architectural lighting. The canals reflect the glowing buildings, and the Simatai Great Wall is lit up on the mountainside above. The effect is magical — one of the most photogenic night scenes in the Beijing area.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The combination of illuminated water town and Great Wall backdrop is genuinely unique. This is Instagram gold.",
+      "tip": "Walk to the Wangjing Tower area or the canal bridges for the best vantage points combining town lights and Great Wall views. Bring a tripod for long-exposure shots."
+    },
+    {
+      "name": "Simatai Great Wall Access",
+      "description": "The only unrestored section of the Great Wall near Beijing, and the only section open for night tours. The wall is directly accessible from the water town via shuttle bus and cable car.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "If you want to see the Great Wall without the Badaling crowds and with original, unrestored Ming Dynasty character, Simatai is the best option — and the night tour is unique in all of China.",
+      "tip": "Book the Great Wall ticket at least one day in advance. Take the cable car up to save energy, then walk back down for the views."
+    },
+    {
+      "name": "Hot Springs",
+      "description": "Several hot spring facilities within the town offer natural mineral springs, including some hotels with private hot spring pools. Soaking in hot springs while looking at the mountain and Great Wall backdrop is a quintessential Gubei experience.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The hot springs are especially enjoyable in autumn and winter. Bring your own swimsuit — rental options are limited.",
+      "tip": "The town's outdoor hot spring pools offer the best views. Book a hotel with private hot spring access for the most relaxing experience."
+    },
+    {
+      "name": "Water Street & Cultural Workshops",
+      "description": "The main canal-side street features traditional craft workshops where you can watch and try tie-dye, paper cutting, shadow puppetry, kite making, and other traditional crafts. The Yongshun Dye Works and Zhengyuan Escort Agency are popular stops.",
+      "foreigner_appeal": "🟡 CULTURAL DEPTH",
+      "foreigner_note": "These are demonstration workshops designed for tourists, not living traditions. But they are well-executed and give a hands-on introduction to Chinese folk crafts.",
+      "tip": "Visit the Yongshun Dye Works early before tour groups arrive. The hanging indigo-dyed fabrics make for excellent photos."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The Fire Performance (打铁花 / Dǎ Tiě Huā)",
+      "why": "Traditional molten iron sparks performance held on select evenings. Performers throw molten iron into the air creating spectacular showers of sparks. Check the schedule at the visitor center."
+    },
+    {
+      "what": "The quieter back streets and hilltop temples",
+      "why": "Most visitors stick to the main Water Street. The side alleys, Yuantong Temple, and hilltop paths offer peaceful escapes with different perspectives of the town and mountains."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take the Dongzhimen direct bus (9 AM, 48 RMB) or drive to arrive by noon. Check into your hotel (pre-booked for 80 RMB entry discount). Spend the afternoon exploring Water Street, craft workshops, and temples. Watch the sunset from the Wangjing Tower area. Photograph the night scene from the canal bridges. Soak in hot springs before bed. Next morning, take the 10 AM shuttle to Simatai Great Wall, hike for 2-3 hours, return to the town for lunch, then depart.",
+    "what_to_skip": "The expensive restaurants on the main Water Street — eat at smaller eateries on side streets for better value. Skip the boat rides if you are short on time — they cover a short distance at a premium price.",
+    "pro_tips": "Stay overnight — the night scene alone justifies it, and you get the discounted 80 RMB entry. Book accommodation directly through the Gubei Water Town official site for the best packages. Arrive on Friday afternoon for a weekend trip to avoid Saturday traffic."
+  },
+  "heads_up": [
+    {
+      "warning": "The 2.5-hour journey each way makes day trips exhausting",
+      "advice": "Stay overnight if at all possible. A day trip means spending 5 hours in transit for a few hours on-site, and you will miss the best part — the night scene."
+    },
+    {
+      "warning": "Everything inside is expensive — food, souvenirs, activities",
+      "advice": "Budget approximately 300-500 RMB per person per day for meals inside the town. Bring snacks. Hotel prices range from 800-3000 RMB per night depending on season and room type."
+    },
+    {
+      "warning": "It is NOT a real ancient town",
+      "advice": "Set expectations accordingly. If you want authentic heritage, this is not it. If you want a beautiful, well-maintained setting for relaxation and photography with Great Wall access, it delivers."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The Dongzhimen direct bus only accepts specific payment methods: Yitongxing app, Beijing Transit card, or cash (no change given). No international cards.",
+    "Google Maps does not work in China — use Baidu Maps or Amap (Gaode).",
+    "The Great Wall night tour requires separate advance booking and is not included in the water town ticket.",
+    "Most restaurants and shops inside only accept Alipay/WeChat Pay. Bring cash as backup for the few places that accept it."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Miss the last return bus to Beijing",
+      "what_to_do": "Book a hotel for the night — walk-in availability exists on weekdays. On weekends, prices will be high but rooms are usually available.",
+      "plan_b": "Take a taxi/Didi back to Miyun town (about 30 minutes), then take a regular bus or train back to Beijing."
+    },
+    {
+      "problem": "Simatai Great Wall tickets sold out",
+      "what_to_do": "Book at least 2-3 days in advance during peak seasons. Daily capacity is strictly limited.",
+      "plan_b": "Enjoy the water town instead — the Great Wall is visible and photogenic from the town, even without climbing it."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes with good grip (cobblestone streets). Layers — mountain area temperatures can be 5-10°C cooler than Beijing city. Bring a swimsuit for hot springs.",
+    "what_to_bring": "Camera with tripod for night photography. Portable charger. Cash as backup for payment. Warm clothing in autumn/winter. Mosquito repellent in summer.",
+    "what_not_to_bring": "Heavy luggage — the town involves a lot of walking on uneven surfaces. Pack light for an overnight stay."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "The water town itself is mostly flat along the canals, but some areas have steps and uneven cobblestones. The Simatai Great Wall is strenuous (steep climbs, no handrails in places). A cable car is available for the Great Wall. Free shuttle buses operate within the resort.",
+    "age_notes": "The water town is suitable for all ages. The Great Wall climb is challenging for young children and elderly visitors — the cable car helps but the wall itself is steep.",
+    "health_warnings": "The Great Wall sections are genuinely steep and can be slippery. Mountain temperatures drop quickly after sunset — hypothermia risk in winter if underdressed."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book accommodation + discounted tickets",
+      "platform": "Official Gubei Water Town website or WeChat mini-program",
+      "value_to_user": "Hotel booking gets entry ticket discounted to 80 RMB (saves 60 RMB per person) plus unlimited re-entry."
+    },
+    {
+      "action": "Book Simatai Great Wall tickets",
+      "platform": "Official WeChat mini-program, Trip.com, or Klook",
+      "value_to_user": "Must be booked at least one day in advance. Limited daily capacity — essential for weekend visits."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Gǔběi Shuǐzhèn",
+      "chinese": "古北水镇",
+      "english": "Gubei Water Town"
+    },
+    {
+      "pinyin": "Sīmǎtái Chángchéng",
+      "chinese": "司马台长城",
+      "english": "Simatai Great Wall"
+    },
+    {
+      "pinyin": "Wēnquán",
+      "chinese": "温泉",
+      "english": "Hot spring"
+    },
+    {
+      "pinyin": "Yèjǐng",
+      "chinese": "夜景",
+      "english": "Night view/nightscape"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Simatai Great Wall (司马台长城)",
+      "why": "Directly adjacent and accessible only through the water town. The only Great Wall section open for night tours. A combined visit is the whole point of coming here.",
+      "travel_time": "10 minutes by free shuttle bus + cable car from within the water town"
+    },
+    {
+      "suggestion": "Jinshanling Great Wall (金山岭长城)",
+      "why": "Another scenic, less-crowded Great Wall section about 25 km away. Popular with serious hikers and photographers for its dramatic watchtowers.",
+      "travel_time": "30-40 minutes by car"
+    }
+  ],
+  "cultural_context": "Gubei Water Town occupies an area of deep military history — Gubeikou Pass was one of the most important northern defensive gates for Beijing for over a thousand years, dating back to the Northern Qi dynasty. The 1933 Battle of the Great Wall, where Chinese forces resisted Japanese invasion, was fought here. The modern water town was designed by Chen Xianghong, the same developer behind Wuzhen Water Town in Zhejiang Province, and opened in phases from 2014. It represents a modern Chinese approach to tourism: recreating idealized traditional environments for domestic tourists seeking beauty, relaxation, and nostalgia. While it lacks historical authenticity, the quality of construction and the integration with the genuine Simatai Great Wall create an experience that is uniquely compelling.",
+  "photo_spots": [
+    {
+      "location": "Canal bridges at night — looking toward the illuminated Great Wall",
+      "tip": "Use a tripod and long exposure to capture the reflection of lights in the canal water with the Great Wall glowing above.",
+      "why": "The definitive Gubei Water Town photo — combining water reflections, traditional architecture, and the Great Wall in one frame."
+    },
+    {
+      "location": "Wangjing Tower lookout",
+      "tip": "Climb to this elevated viewpoint in the northern part of the town for a panoramic view over the entire resort and the Great Wall beyond.",
+      "why": "The best overall view of the town layout with mountains behind."
+    },
+    {
+      "location": "Yongshun Dye Works — hanging indigo fabrics",
+      "tip": "Visit in the morning when light filters through the hanging dyed cloths. The blue fabrics against gray brick walls are striking.",
+      "why": "One of the most iconic and photogenic spots in the town."
+    }
+  ],
+  "card_name": "Gubei Water Town",
+  "card_type": "RESORT TOWN",
+  "card_hook": "A recreated water town at the foot of the Simatai Great Wall — stunning night views, hot springs, and Great Wall access.",
+  "best_for": [
+    "photography",
+    "nightlife-evening",
+    "romantic",
+    "weekend-getaway",
+    "pair-with-nearby"
+  ]
+}

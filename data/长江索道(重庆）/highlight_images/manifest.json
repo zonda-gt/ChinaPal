@@ -1,0 +1,27 @@
+{
+  "attractionName": "长江索道",
+  "cityName": "重庆",
+  "inputPath": "data/长江索道(重庆）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:58:52.574Z",
+  "count": 3,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "The Aerial River Crossing",
+      "query": "The Aerial River Crossing 长江索道 重庆",
+      "outputPath": "data/长江索道(重庆）/highlight_images/01-The_Aerial_River_Crossing/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Sunset / Night Ride",
+      "query": "Sunset / Night Ride 长江索道 重庆",
+      "outputPath": "data/长江索道(重庆）/highlight_images/02-Sunset_Night_Ride/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Retro 1987 Heritage",
+      "query": "Retro 1987 Heritage 长江索道 重庆",
+      "outputPath": "data/长江索道(重庆）/highlight_images/03-Retro_1987_Heritage/raw/baidu_images.json"
+    }
+  ]
+}

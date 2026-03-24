@@ -1,0 +1,207 @@
+{
+  "attraction_name_cn": "李子坝轻轨站",
+  "attraction_name_en": "Liziba Monorail Station",
+  "address_cn": "重庆市渝中区李子坝正街39号",
+  "experience_type": "landmark",
+  "hook": "A monorail train disappears into the 6th floor of an apartment building every seven minutes — Chongqing's most viral architectural oddity, where residents live above an active subway station and nobody seems to think it's weird.",
+  "honest_description": "Liziba Station is exactly what it sounds like: a monorail that passes through a 19-story residential building. The train tracks occupy floors 6-7, the platform is on floor 8, and people live in apartments above. It's a genuine engineering marvel born from Chongqing's insane topography, not a gimmick built for tourists. That said, the actual experience is brief — you watch a train enter a building, you take a photo, you're done in 20-30 minutes. The viewing platform is well-built and spacious (fits 5,000 people), but gets extremely crowded with tourists all waiting for the same shot. Some visitors find it underwhelming after seeing it online ('it's just a train going into a building'). The real value is riding Line 2 itself — the route along the Jialing River between Liziba and Niujiaotuo stations offers some of the most scenic urban rail views in the world. Best as a quick stop combined with other Chongqing attractions, not a destination in itself.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth visiting or is it just internet hype?",
+      "answer": "It depends on your expectations. If you're expecting a spectacular show, you'll be disappointed — it's a train going into a building, full stop. If you appreciate creative urban engineering and want a quintessentially 'Chongqing' experience, it's a fun 20-30 minute stop. The real spectacle is Chongqing's insane multi-level urban landscape, which the station symbolizes. Many visitors say the monorail ride along the river (Line 2) is actually more impressive than watching the building from outside."
+    },
+    {
+      "question": "What's the best way to experience it?",
+      "answer": "Do both: first ride Line 2 to Liziba Station (sit in the first car for the best view of the train entering the building), then exit the station (Exit A), cross the street, and take the escalator down to the viewing platform to watch from below. Trains come every 7 minutes so you won't wait long. The whole experience takes 30-45 minutes including the ride."
+    }
+  ],
+  "experience_format_note": "No tickets, no booking, no structured visit. Just show up at the viewing platform (free) or ride the metro through (¥2-6 ticket). The viewing platform is a large open terrace across the street from the station, with Jialing River views as a bonus. Trains pass through approximately every 7 minutes.",
+  "vibe": "Peak Chongqing chaos — a cyberpunk slice of urban life where a monorail casually pierces through an apartment building, surrounded by vertical streets, river mist, and 10,000 tourists all photographing the same thing.",
+  "time_needed": {
+    "quick_visit": "15-20 minutes (watch one or two trains from the platform, take photos)",
+    "recommended": "30-45 minutes (ride Line 2 through the station first, then watch from the viewing platform)",
+    "deep_dive": "1-2 hours (explore the surrounding neighborhood, the defense tunnel underneath, and ride the full scenic Line 2 route along the river)"
+  },
+  "best_time": {
+    "best_time_of_day": "Morning (9:00-11:00 AM) or late afternoon for softer lighting. Midday sun creates harsh shadows that make photos flat. Evening offers city lights but the train-in-building shot is harder to capture.",
+    "worst_time": "Weekends and Chinese holidays when the viewing platform is packed. Rush hour (7-9 AM, 5-7 PM) when the trains are too crowded to get a window position for photos from inside.",
+    "seasonal_notes": "Year-round attraction. Summer is hot with no shade on the platform. Autumn and spring offer the most comfortable weather. Overcast days can add to the cyberpunk atmosphere.",
+    "pro_tip": "For the best video of the train entering the building, ride Line 2 and stand in the first car looking forward through the front window. The dramatic approach into the building is far more impressive from inside the train than from the viewing platform below."
+  },
+  "getting_in": {
+    "opening_hours": "Viewing platform: open 24/7 (best during daylight). Metro Line 2: Mon-Fri 06:30-23:16, Sat-Sun 06:37-23:17.",
+    "price_rmb": "Free (viewing platform). Metro ride: ¥2-6 depending on distance.",
+    "price_usd": "Free (viewing); ~$0.30-0.80 (metro)",
+    "price_breakdown": [
+      {
+        "item": "Viewing platform",
+        "price": "Free",
+        "highlight": "No ticket needed — just walk up"
+      },
+      {
+        "item": "Metro Line 2 ride to/from Liziba",
+        "price": "¥2-6",
+        "highlight": "The scenic route along the Jialing River is half the experience"
+      }
+    ],
+    "booking_required": "No — completely walk-in for the viewing platform. Metro tickets purchased at any station.",
+    "booking_method": "No booking needed. Buy metro tickets from machines at any station (Alipay/WeChat accepted).",
+    "passport_accepted": "N/A — no ticket counter. Metro ticket machines work without ID.",
+    "what_to_bring": "Camera/phone. Sunscreen and hat (no shade on viewing platform). Water in summer.",
+    "queue_situation": "No queue to access the viewing platform. Crowds can be dense on the platform itself on weekends, but it's large enough (1,367 sqm) to accommodate everyone.",
+    "language_barrier_rating": "minimal — No interaction required. Metro signage is bilingual. Just watch and photograph."
+  },
+  "highlights": [
+    {
+      "name": "The Train-Through-Building Spectacle",
+      "description": "Every 7 minutes, a monorail train smoothly enters and exits the 6th-8th floors of a 19-story residential/commercial building. The engineering uses a 'bridge-station separation' design that prevents vibration from reaching the residential floors above.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This wasn't built as a tourist attraction — it was a practical solution to Chongqing's mountainous terrain. The building was there first, and rather than demolish it, engineers threaded the rail line through it. Residents report hearing nothing when trains pass.",
+      "tip": "Watch 2-3 trains to get the perfect shot. The train approaches from the east (left side of the platform) and the entry moment is the money shot. Video captures the experience better than photos."
+    },
+    {
+      "name": "Riding Line 2 Along the Jialing River",
+      "description": "The monorail route between Liziba and Niujiaotuo stations runs along the Jialing River bank, offering cinematic views of the river, bridges, and Chongqing's layered hillside cityscape through the train windows.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Many visitors rate this scenic rail ride as more impressive than the building spectacle itself. It's a ¥2-3 ride that feels like a theme park attraction.",
+      "tip": "Board at Jiaochangkou or Zengjayan station heading toward Liziba. Sit in the first car on the right side for river views, or stand at the very front for the most dramatic perspective of the train entering the building."
+    },
+    {
+      "name": "The Viewing Platform and River Panorama",
+      "description": "A purpose-built 1,367 sqm viewing platform across from the station, positioned at the scientifically optimal 33-degree angle for photography. Also offers panoramic views of the Jialing River and Chongqing's multi-level cityscape.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The platform has restrooms, and the area below contains a defense tunnel (old air-raid shelter) that's been converted into a cultural space worth a quick look.",
+      "tip": "Don't just look at the building — turn around for impressive Jialing River views and the multi-layered city landscape that makes Chongqing unique."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The defense tunnel (防空洞) below the viewing platform",
+      "why": "A converted WWII-era air-raid tunnel beneath the station area that now houses exhibits and a small cultural space. Free to enter and refreshingly cool in summer."
+    },
+    {
+      "what": "The commercial and library floors inside the building",
+      "why": "The building isn't just residential — the lower floors contain shops, a folk art exhibition, and a small library. You can actually enter the building and experience it from inside."
+    },
+    {
+      "what": "The view from Eling Park (鹅岭公园)",
+      "why": "A short walk uphill from Liziba, this free park offers a bird's-eye view looking DOWN at the train entering the building — a completely different and arguably better perspective. Best at night."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take metro Line 2 from Jiaochangkou (较场口) → ride in the first car, right side → watch the approach into Liziba Station from inside → exit at Liziba (Exit A) → cross the street → take escalator down to viewing platform → watch 2-3 trains → walk uphill to Eling Park (鹅岭公园) for the aerial view → continue to Eling Second Factory (鹅岭二厂) for cafes and creative spaces.",
+    "what_to_skip": "The souvenir vendors on the platform selling toys and trinkets — overpriced tourist fare. Don't spend more than 30-45 minutes here unless you're exploring the neighborhood.",
+    "pro_tips": "From Jiefangbei (解放碑), take Line 2 directly — it's only a few stops and the cheapest, most scenic transport. Don't take a taxi — traffic near Liziba is notoriously congested, especially in the evening. For time-lapse photography, bring a small tripod — the platform railing is wide enough to rest a phone."
+  },
+  "heads_up": [
+    {
+      "warning": "It may feel underwhelming after seeing it online",
+      "advice": "Manage expectations — the train passes through in about 10 seconds. The experience is quick and simple. Its value is as one stop on a Chongqing sightseeing day, not as a standalone destination."
+    },
+    {
+      "warning": "No shade on the viewing platform",
+      "advice": "In Chongqing's brutal summer heat (35-40°C), the exposed platform can be miserable. Visit in the morning or bring an umbrella for sun protection. If the heat gets to you, message us and we can recommend a nearby air-conditioned cafe or arrange a cold drink delivery to the platform area."
+    },
+    {
+      "warning": "Crowded with tourists and aggressive souvenir sellers",
+      "advice": "Keep your belongings secure in the crowd. Politely decline souvenir sellers. The crowd thins significantly on weekday mornings."
+    }
+  ],
+  "foreigners_watch_out": [
+    "This is a free attraction requiring zero planning — just show up. No tickets, no booking, no passport needed.",
+    "Metro ticket machines accept Alipay and WeChat Pay. Cash may also work. No foreign cards accepted on metro machines — load a travel card or use mobile payment. If you're stuck at a metro ticket machine without working payment, message us — we can walk you through the options or arrange alternative transport.",
+    "The area around the station has good local restaurants — ask any local for '附近有什么好吃的?' (fùjìn yǒu shénme hǎochī de?) for food recommendations. Or just message our team with your location — we can send you our top picks for lunch nearby and even help you order if the menu is Chinese-only."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Platform too crowded for photos",
+      "what_to_do": "Walk slightly away from the center of the platform toward the edges — less crowded and still good angles. Or walk uphill to Eling Park for the overhead view.",
+      "plan_b": "Ride Line 2 and photograph from inside the train instead — the first-car view is arguably better anyway."
+    },
+    {
+      "problem": "Rainy weather",
+      "what_to_do": "The train still runs in rain, and misty/rainy Chongqing actually adds atmosphere to the photos. Bring an umbrella.",
+      "plan_b": "The defense tunnel below and the building's interior commercial floors are rain-proof alternatives."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes. Hat and sunscreen in summer. The area involves some uphill walking if heading to Eling Park.",
+    "what_to_bring": "Camera/phone. Portable charger. Water. Metro card or phone with Alipay/WeChat for metro payment.",
+    "what_not_to_bring": "Nothing specific to avoid."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "The viewing platform itself is flat and accessible via escalator from street level. The metro station has elevators. Walking to Eling Park involves uphill climbing. Total time on feet: 20-30 minutes.",
+    "age_notes": "Suitable for all ages. Children find the train spectacle exciting. Stroller accessible on the platform.",
+    "health_warnings": "Summer heat is the main concern — Chongqing is one of China's 'four furnaces.' Bring water and sun protection."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Include in a Chongqing highlights day tour",
+      "platform": "Klook, Trip.com",
+      "value_to_user": "Combines Liziba with Hongyadong, Ciqikou, and other Chongqing icons efficiently. Solo visit requires minimal planning. We can put together a custom Chongqing day route for you that strings together Liziba, Hongyadong, the Cable Car, and hotpot — with transport figured out between each stop."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Lǐzibà",
+      "chinese": "李子坝",
+      "english": "Liziba (the station name)"
+    },
+    {
+      "pinyin": "Qīngguǐ chuān lóu",
+      "chinese": "轻轨穿楼",
+      "english": "Light rail through the building (what locals call it)"
+    },
+    {
+      "pinyin": "Guānǐng píngtái",
+      "chinese": "观景平台",
+      "english": "Viewing platform"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Eling Park / Eling Second Factory (鹅岭公园/鹅岭二厂)",
+      "why": "A short uphill walk from Liziba — the park offers an overhead view of the train entering the building, and the Second Factory is a converted industrial complex with cafes and creative spaces.",
+      "travel_time": "10-15 minute walk uphill"
+    },
+    {
+      "suggestion": "Hongyadong (洪崖洞)",
+      "why": "Chongqing's other viral landmark — a cliff-side stilted building complex that looks like a Spirited Away set piece at night. Take Line 2 a few stops east.",
+      "travel_time": "10 minutes by metro (Line 2)"
+    },
+    {
+      "suggestion": "Jiefangbei / Ciqikou",
+      "why": "Chongqing's main commercial district and ancient town — easy to combine with Liziba on a full Chongqing day.",
+      "travel_time": "5-15 minutes by metro"
+    }
+  ],
+  "cultural_context": "Liziba Station exists because of Chongqing's extraordinary geography — a mountain city built on steep hillsides at the confluence of the Yangtze and Jialing rivers. Where other cities build around obstacles, Chongqing builds through them. This station wasn't designed as a spectacle; it was a practical solution that became famous when social media (especially Douyin/TikTok) turned it into a symbol of Chongqing's 'cyberpunk' reputation. The city's 3D urban landscape — where a building's ground floor on one side is the 10th floor on another — creates experiences impossible anywhere else in China.",
+  "photo_spots": [
+    {
+      "location": "Viewing platform — center position",
+      "tip": "Stand at the center railing for the classic head-on shot of the train entering the building. Video mode with slow motion captures the moment best.",
+      "why": "The purpose-built platform is engineered at the exact angle to frame the train and building together — this is the shot everyone shares on social media."
+    },
+    {
+      "location": "Inside Line 2 — first car front window",
+      "tip": "Stand at the very front of the first car as the train approaches Liziba. The moment the tunnel of the building swallows the train is dramatic on video.",
+      "why": "An insider perspective that most tourists miss — experiencing the building from the train's point of view."
+    },
+    {
+      "location": "Eling Park — overhead view",
+      "tip": "Walk uphill to the park and look down at the station area. Night time with city lights is spectacular.",
+      "why": "A rare bird's-eye perspective of the multi-level cityscape with the monorail line, river, and vertical city layers all visible."
+    }
+  ],
+  "card_name": "Liziba Station",
+  "card_type": "URBAN ODDITY",
+  "card_hook": "A train that casually goes through a building, every seven minutes.",
+  "best_for": [
+    "quick-stop",
+    "instagram-worthy",
+    "free-attraction",
+    "engineering-marvel",
+    "chongqing-essential"
+  ]
+}

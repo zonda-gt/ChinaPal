@@ -1,0 +1,230 @@
+{
+  "attraction_name_cn": "景山公园",
+  "attraction_name_en": "Jingshan Park (Prospect Hill)",
+  "address_cn": "北京市西城区景山西街44号",
+  "experience_type": "sightseeing",
+  "hook": "The single best view of the Forbidden City exists right here — a 10-minute climb up a man-made hill built from the earth excavated for the palace moat, and suddenly 980 buildings and 72 hectares of golden roofs unfold beneath you in perfect symmetry.",
+  "honest_description": "Jingshan Park is Beijing's best-kept secret hiding in plain sight — for ¥2 (about $0.30), you get a panoramic view of the Forbidden City that no photograph or drone shot can replicate. The climb takes 10-15 minutes up well-maintained stone stairs to Wanchun Pavilion, and then the entire imperial palace spreads out below you in a way that finally makes you grasp its staggering scale. Beyond the view, the park is a living window into Beijing local life: elderly residents practicing tai chi, fan dancing, opera singing, and calligraphy every morning. The Shouhuangdian Hall complex at the north end is a hidden gem with Forbidden City-level architecture and almost no tourists. The downside: the viewing platform at the top is small and gets extremely crowded at sunset, with fierce competition for photo spots. On hazy days, the view suffers significantly. Best paired with a Forbidden City visit — exit the north gate, cross the street, and you're at Jingshan's south entrance.",
+  "foreigner_top_questions": [
+    {
+      "question": "Do I need to book tickets in advance?",
+      "answer": "For Chinese citizens, no advance booking is needed — just buy at the gate for ¥2. However, foreign visitors reportedly need to reserve at least one day ahead by calling (010) 66055431 (9:00-16:00 daily) with name, nationality, and ID details. In practice, many foreigners report buying tickets on the spot without issues, but the official policy exists. The 'Beijing Parks' WeChat mini-program is the easiest way to purchase digitally. Cash may not be accepted at all gates — have WeChat Pay or Alipay ready. If you're having trouble with the phone reservation (it's Chinese-only), message our team and we can make the call for you and confirm your entry."
+    },
+    {
+      "question": "When is the Forbidden City lit up at night for photos from Jingshan?",
+      "answer": "The Forbidden City's Shenwumen (north gate) is illuminated in the evening, but the full lighting display reportedly only happens on Fridays, Saturdays, and public holidays. The park stays open until 9:00 PM in peak season (8:00 PM off-season), so evening visits are possible. The illuminated gate against the dark sky is particularly photogenic from 6:30-7:30 PM."
+    }
+  ],
+  "experience_format_note": "Simple open park — no guided tour or structured route needed. Enter, climb the hill, enjoy the view, come down, explore the grounds. The park has four entrance gates (south, north, east, west). The south gate is most convenient when coming from the Forbidden City — there's an underground pedestrian passage connecting the Forbidden City's north gate area directly to Jingshan's south entrance.",
+  "vibe": "A peaceful hilltop garden that still feels like old Beijing — morning tai chi practitioners, afternoon tourists hunting for the perfect Forbidden City photo, and sunset painters all sharing the same ancient hill.",
+  "time_needed": {
+    "quick_visit": "30-45 minutes (climb to Wanchun Pavilion, take photos, come down)",
+    "recommended": "1.5-2 hours (climb to summit, explore all five pavilions, visit Shouhuangdian Hall, enjoy the park grounds)",
+    "deep_dive": "3+ hours (full park exploration plus lingering for golden hour/sunset photography and morning cultural activities)"
+  },
+  "best_time": {
+    "best_time_of_day": "Late afternoon (4:00-5:30 PM) for golden hour light on the Forbidden City's golden roofs, or early morning (7:30-9:30 AM) to experience locals doing tai chi, singing, and dancing. Sunset is the most popular time and most crowded.",
+    "worst_time": "Chinese public holidays (National Day, May Day) and summer weekends when the small summit platform becomes dangerously overcrowded. Hazy days with poor air quality ruin the view entirely — check Beijing's AQI before visiting.",
+    "seasonal_notes": "Spring (late March-April): peony festival with 20,000+ peonies and 500 varieties — entrance fee rises to ¥10 during the festival. Autumn (September-October): golden ginkgo trees line the paths — stunning photography. Winter (December-February): snow on the Forbidden City viewed from the summit is an iconic Beijing image, and crowds are minimal.",
+    "pro_tip": "Visit on a clear winter weekday morning after snowfall — the snow-covered Forbidden City viewed from Wanchun Pavilion is one of Beijing's most iconic photographs, and you might have the summit nearly to yourself."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (Apr 1-Oct 31): 06:00-21:00, last entry 20:30. Off-season (Nov 1-Mar 31): 06:30-20:00, last entry 19:30. Wanchun Pavilion area closes earlier: 18:00 (peak) / 17:00 (off-season). Shouhuangdian Hall: 08:00-18:00 (peak), 08:30-17:00 (off-season), closed Mondays.",
+    "price_rmb": "¥2/person (regular); ¥10 during peony festival and summer events (mid-July to mid-August)",
+    "price_usd": "~$0.30 (regular); ~$1.40 (during events)",
+    "price_breakdown": [
+      {
+        "item": "Regular admission",
+        "price": "¥2",
+        "highlight": "One of the cheapest attractions in Beijing"
+      },
+      {
+        "item": "Peony festival / summer event admission",
+        "price": "¥10",
+        "highlight": "Applies during spring peony season and July-August"
+      },
+      {
+        "item": "Student admission",
+        "price": "¥1",
+        "highlight": "With valid student ID"
+      }
+    ],
+    "booking_required": "No for Chinese visitors — buy at the gate. Foreign visitors officially should reserve one day ahead by calling (010) 66055431, though many report buying tickets on the spot without issues.",
+    "booking_method": "Purchase at gate ticket windows, or via 'Beijing Parks' WeChat mini-program. QR code scanning at gates also available.",
+    "passport_accepted": "Yes — present passport at ticket window. Foreign visitors may be asked for advance reservation confirmation.",
+    "what_to_bring": "Camera with zoom lens for Forbidden City detail shots. Water bottle. Comfortable shoes for stair climbing. Portable charger. Cash backup (though digital payment is preferred).",
+    "queue_situation": "Minimal queuing for ticket purchase — usually under 5 minutes. The real 'queue' is at the summit platform where visitors jostle for prime photo positions. On busy days, expect 10-20 minutes of waiting and maneuvering for a clear photo spot at the top.",
+    "language_barrier_rating": "minimal — Basic bilingual signage throughout. Staff interaction is minimal (just ticket purchase). The park is self-explanatory — climb up, look at view."
+  },
+  "highlights": [
+    {
+      "name": "Wanchun Pavilion (万春亭) — Summit Viewpoint",
+      "description": "The central and highest of five hilltop pavilions, offering a 360-degree panorama of Beijing. The south-facing view of the entire Forbidden City in perfect symmetry is the park's main draw. You can also see the Bell and Drum Towers to the north, Beihai Park's White Dagoba to the west, and the modern Beijing skyline beyond.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This viewpoint is on the exact center of Beijing's north-south Central Axis — a UNESCO World Heritage site since 2024. You're literally standing at the geographic heart of imperial Beijing.",
+      "tip": "For the best Forbidden City photo, arrive 30-45 minutes before sunset. The golden hour light on the yellow roofs is magical. If it's too crowded at the center railing, the pavilions on either side offer nearly-as-good views with far fewer people."
+    },
+    {
+      "name": "Shouhuangdian Hall (寿皇殿)",
+      "description": "A grand imperial hall complex at the park's north end where Qing emperors stored ancestor portraits. Features the same red walls and yellow tiles as the Forbidden City but with almost no tourists. Recently opened as an exhibition space.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "If you couldn't get Forbidden City tickets, this hall complex gives you a taste of imperial architecture with none of the crowds. The building style is nearly identical.",
+      "tip": "Walk to the north end of the park after descending the hill — most tourists leave immediately after the summit view and miss this entirely. Also popular for traditional costume photoshoots, which are fun to watch."
+    },
+    {
+      "name": "Morning Cultural Activities",
+      "description": "Every morning from roughly 7:30-9:30 AM, elderly Beijing residents fill the park with tai chi, fan dancing, opera singing, traditional instrument playing, and calligraphy practice. This is the most authentic glimpse of everyday Beijing life you'll find at any tourist site.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is genuinely spontaneous — not a performance for tourists. The singers and dancers are retired locals enjoying their morning routine. It's perfectly fine to watch and take photos, and they're usually happy if you join in.",
+      "tip": "Come between 7:30-9:00 AM on any day. The east side of the park near the bottom of the hill tends to have the most activity groups. Weekdays are best — weekends draw more tourists."
+    },
+    {
+      "name": "Site of the Last Ming Emperor's Death",
+      "description": "A commemorative stone tablet on the eastern slope marks where Emperor Chongzhen, the last Ming Dynasty ruler, allegedly hanged himself from a locust tree in 1644 as rebel forces breached Beijing's walls. The original tree is gone but a replacement stands nearby.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "This is one of the most dramatic moments in Chinese history — the fall of a 276-year dynasty. A placard explains the story in Chinese; there may be limited English signage.",
+      "tip": "Located on the east side of the hill, about halfway up. Easy to miss if you beeline for the summit — look for the stone tablet and the small fence around the tree area."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The other four hilltop pavilions",
+      "why": "Everyone crowds into Wanchun Pavilion at the center, but the four flanking pavilions (Guanmiao, Zhouchang, Jifang, Fulan) offer excellent views with almost no competition for space. The western pavilions provide a stunning view of Beihai Park's White Dagoba."
+    },
+    {
+      "what": "The north side view at sunset",
+      "why": "While everyone fights for the south-facing Forbidden City view, turning around reveals a gorgeous sunset view over Beihai Park's white dagoba and the Beijing skyline. Often the more photogenic shot."
+    },
+    {
+      "what": "The peony garden in spring",
+      "why": "Over 20,000 peonies from 500+ varieties bloom in April-May — one of Beijing's largest peony collections. Most visitors come for the view and ignore the gardens entirely."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Exit the Forbidden City's north gate (Shenwumen) → cross the street via the underground passage → enter Jingshan through the south gate → climb directly to Wanchun Pavilion for the view → explore the western pavilions for Beihai Park views → descend the east side past the Ming Emperor's tree → walk north to Shouhuangdian Hall → exit through the north gate toward Shichahai/Houhai if continuing your day.",
+    "what_to_skip": "Don't bother with the small gift shop — standard tourist souvenirs. If air quality is poor (AQI > 150), the view from the summit will be disappointing — check before climbing.",
+    "pro_tips": "The underground passage from the Forbidden City's north gate area leads directly to Jingshan's south entrance — you don't need to cross the busy street at ground level. If the summit is too crowded for photos, wait 15-20 minutes — the crowd ebbs and flows as tour groups come and go in waves."
+  },
+  "heads_up": [
+    {
+      "warning": "The summit viewing platform is very small and gets intensely crowded",
+      "advice": "At peak times (sunset on weekends/holidays), expect aggressive jostling for photo positions. Some visitors with tripods occupy significant space. Be patient, keep your belongings secure, and consider the side pavilions as alternatives."
+    },
+    {
+      "warning": "Air quality dramatically affects the experience",
+      "advice": "On hazy days (common in Beijing), the view is murky and disappointing. Check Beijing's AQI before your visit — clear days with AQI under 50 are ideal. Winter after wind or rain tends to have the clearest skies. Message our team in the morning and we can check the AQI and visibility for you, then suggest whether today is a good Jingshan day or if you should swap in a different activity."
+    },
+    {
+      "warning": "Wanchun Pavilion area closes earlier than the park",
+      "advice": "The summit area closes at 18:00 in peak season and 17:00 in off-season, even though the park itself stays open later. Plan your sunset timing carefully — during peak season, sunset often falls within the window, but off-season sunset may be after closure."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Foreign visitors officially need to reserve one day ahead by phone at (010) 66055431 — though this rule is inconsistently enforced and many foreigners buy tickets on the spot. Call to be safe.",
+    "Cash may not be accepted at all ticket windows — have WeChat Pay or Alipay set up. The ¥2 fee is too small for most card machines.",
+    "Google Maps doesn't work in China — use Baidu Maps or Amap (Gaode) for navigation. The park is directly behind (north of) the Forbidden City's north gate. If you're struggling with Chinese map apps, send us your location and where you want to go — we can send you step-by-step walking directions or arrange a car.",
+    "The Forbidden City north gate illumination for photography only happens on Fridays, Saturdays, and public holidays — don't plan an evening visit specifically for this on a weekday."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Too hazy to see the Forbidden City clearly",
+      "what_to_do": "Check if conditions might improve — wind can clear haze quickly in Beijing. The park grounds and Shouhuangdian Hall are still worth exploring regardless of visibility.",
+      "plan_b": "Visit Beihai Park instead (adjacent, to the west) — the lake and White Dagoba are beautiful even on hazy days since they're much closer. Return to Jingshan on a clear day."
+    },
+    {
+      "problem": "Summit too crowded for photos",
+      "what_to_do": "Wait 15-20 minutes for the current wave of tour groups to leave. Alternatively, the eastern and western pavilions offer nearly identical views with far fewer people.",
+      "plan_b": "Visit early morning (before 8 AM) or on a weekday to avoid the worst crowds. The view is equally beautiful in morning light."
+    },
+    {
+      "problem": "Arrived after Wanchun Pavilion area closure (18:00/17:00)",
+      "what_to_do": "The lower park grounds remain open until 21:00/20:00. Explore Shouhuangdian Hall and the gardens, or enjoy the evening atmosphere with locals.",
+      "plan_b": "Return the next morning — at ¥2 entry, it's essentially free to revisit."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes for the stone stair climb. No special gear needed — the hill is modest. Dress for Beijing's weather: very hot and humid in summer, bitterly cold in winter.",
+    "what_to_bring": "Camera with zoom lens (for Forbidden City architectural details from the summit). Water bottle. Sunscreen in summer. Phone with WeChat Pay or Alipay for ticket purchase.",
+    "what_not_to_bring": "Tripods may cause friction with other visitors at the crowded summit. Drones are prohibited."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy-moderate",
+    "physical_details": "The climb to Wanchun Pavilion takes 10-15 minutes up well-maintained stone stairs — roughly 200 steps. The lower park is completely flat. No wheelchair access to the summit. The park grounds at the base are stroller-friendly.",
+    "age_notes": "Suitable for most ages and fitness levels. Very young children and elderly visitors may find the stairs tiring but can rest at benches along the way. The base-level park is fully accessible.",
+    "health_warnings": "Summer heat can make the climb uncomfortable — bring water. The stairs can be slippery when wet."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Pair with Forbidden City visit for a complete day",
+      "platform": "Book Forbidden City tickets via bookingticket.dpm.org.cn, then walk to Jingshan after",
+      "value_to_user": "The natural conclusion to a Forbidden City visit — see the palace from inside, then see it from above. No separate booking needed for Jingshan. If you need help securing Forbidden City tickets (which sell out fast), our team can help with booking and pair it with a Jingshan visit timed for sunset."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Jǐngshān Gōngyuán",
+      "chinese": "景山公园",
+      "english": "Jingshan Park"
+    },
+    {
+      "pinyin": "Wànchūn Tíng",
+      "chinese": "万春亭",
+      "english": "Wanchun Pavilion (summit viewpoint)"
+    },
+    {
+      "pinyin": "Shòuhuáng Diàn",
+      "chinese": "寿皇殿",
+      "english": "Shouhuangdian Hall"
+    },
+    {
+      "pinyin": "Gùgōng zài nǎ biān?",
+      "chinese": "故宫在哪边？",
+      "english": "Which direction is the Forbidden City?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Forbidden City (故宫)",
+      "why": "The obvious pairing — exit the Forbidden City's north gate and walk directly into Jingshan's south entrance. See the palace from inside, then from above.",
+      "travel_time": "2-minute walk across the street via underground passage"
+    },
+    {
+      "suggestion": "Beihai Park (北海公园)",
+      "why": "Beijing's oldest imperial garden with a beautiful lake and the iconic White Dagoba — visible from Jingshan's western pavilions. Together they make a perfect half-day of imperial gardens.",
+      "travel_time": "5-minute walk west from Jingshan's west gate"
+    },
+    {
+      "suggestion": "Shichahai / Houhai Area",
+      "why": "Historic lakeside hutong neighborhood with bars, restaurants, and boat rides. Walk north from Jingshan for a completely different Beijing vibe — modern nightlife meets traditional architecture.",
+      "travel_time": "10-minute walk north from Jingshan's north gate"
+    }
+  ],
+  "cultural_context": "Jingshan Hill was purpose-built during the Ming Dynasty (1420) using earth excavated from the Forbidden City's moat — creating the 'mountain behind the palace' that Feng Shui principles require for an auspicious imperial residence. For 500 years, this was an exclusive imperial garden; ordinary citizens were forbidden from entering. Its most dramatic historical moment came in 1644 when Emperor Chongzhen, the last Ming ruler, hanged himself from a tree here as Li Zicheng's rebel army breached Beijing's walls — ending a 276-year dynasty. In 2024, Jingshan Park was inscribed as a UNESCO World Heritage site as part of Beijing's Central Axis, recognizing its role as the highest point on the 7.8-kilometer line that defines the city's layout.",
+  "photo_spots": [
+    {
+      "location": "Wanchun Pavilion — south-facing view",
+      "tip": "Arrive 30-45 minutes before sunset for golden hour. Use a zoom lens to capture architectural details of the Forbidden City's Hall of Supreme Harmony.",
+      "why": "The single most iconic aerial view of the Forbidden City — golden roofs stretching in perfect symmetry to the horizon. The definitive Beijing photograph."
+    },
+    {
+      "location": "Western pavilions — view of Beihai Park White Dagoba",
+      "tip": "Sunset light paints the White Dagoba golden. Far fewer people than the central pavilion.",
+      "why": "A different perspective of Beijing's imperial landscape — the dagoba rising above Beihai Lake with the city skyline behind."
+    },
+    {
+      "location": "Shouhuangdian Hall — red walls and yellow tiles",
+      "tip": "Morning light is best. The architectural style mirrors the Forbidden City without the crowds, making it ideal for traditional costume photoshoots.",
+      "why": "Imperial architecture at its finest with virtually no tourists in frame — the kind of clean shot that's impossible inside the actual Forbidden City."
+    }
+  ],
+  "card_name": "Jingshan Park",
+  "card_type": "IMPERIAL VIEWPOINT",
+  "card_hook": "The best view of the Forbidden City, for thirty cents.",
+  "best_for": [
+    "photographers-paradise",
+    "forbidden-city-companion",
+    "budget-friendly",
+    "quick-visit",
+    "local-culture-experience"
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "attraction_name_cn": "慕田峪长城",
+  "attraction_name_en": "Mutianyu Great Wall",
+  "address_cn": "北京市怀柔区渤海镇慕田峪村",
+  "experience_type": "sightseeing",
+  "hook": "The Great Wall section that foreign visitors consistently prefer over Badaling — fewer crowds, better scenery, authentic Ming dynasty watchtowers, and a toboggan ride back down.",
+  "honest_description": "Mutianyu is widely considered the best Great Wall section for international visitors and for good reason. It offers 5.4 km of beautifully restored Ming dynasty wall with 23 watchtowers winding through forested mountains, far less crowded than Badaling but with excellent infrastructure including cable cars, a chairlift, and the famous toboggan slide. The wall itself is genuinely impressive — unique double-sided crenellations (designed for fighting enemies on both sides), granite construction standing 7-8 meters tall, and densely packed watchtowers. The mountain scenery changes dramatically by season: lush green in summer, spectacular foliage in autumn, and hauntingly beautiful under snow in winter. The downsides: it's a 1.5-2 hour drive from central Beijing (a full half-day commitment), the cable car queues can be long during peak season, and the steeper sections near towers 19-20 are genuinely challenging. The toboggan ride down is fun but often has long waits and slow riders ahead. Almost no English is spoken by staff. Best for anyone visiting Beijing who wants an authentic, manageable, and photogenic Great Wall experience.",
+  "foreigner_top_questions": [
+    {
+      "question": "Mutianyu or Badaling — which should I choose?",
+      "answer": "Mutianyu, unless you specifically want the most famous/touristy section. Mutianyu has significantly fewer crowds (especially on weekdays), better scenery with forested mountains, and a more authentic feel. Badaling is more accessible (closer, direct bus/train) and more heavily restored, but can be unbearably crowded. Mutianyu's cable car, chairlift, and toboggan make it equally accessible. For a wilder, unrestored experience, consider Jinshanling (further away, fewer facilities)."
+    },
+    {
+      "question": "How do I get there from Beijing without a tour?",
+      "answer": "Option 1: Mubus (mutianyugreatwall.com) — direct bus from Dongzhimen, includes ticket and buffet lunch, most convenient for foreigners. Option 2: Public bus 916 Express from Dongzhimen to Huairou bus station, then transfer to H23/H35/H36 bus to Mutianyu roundabout (budget option, 2+ hours total). Option 3: DiDi/taxi (¥200-300 each way, 1.5 hours). Most foreign visitors book a private day tour through Klook or Trip.com for convenience. Important: DiDi drivers are not permitted to pick up from the wall parking area — arrange return transport in advance."
+    }
+  ],
+  "experience_format_note": "Outdoor hiking along a restored section of the Great Wall. The tourist area centers around Tower 14 (cable car arrival point). From there, you can walk east (toward Tower 6, gentler slope, toboggan exit) or west (toward Tower 20, steeper climb, best views). Most visitors walk both directions and descend via toboggan or cable car. The wall is on a mountain ridge at altitude — expect wind, temperature drops, and uneven stone steps. There are almost no facilities on the wall itself — eat, drink, and use restrooms at the base before ascending.",
+  "vibe": "Epic and humbling — standing on an ancient military marvel snaking along forested mountain ridges, with the scale of human ambition stretching to the horizon in both directions.",
+  "time_needed": {
+    "quick_visit": "2-3 hours on the wall (cable car up, walk one direction, cable car or toboggan down)",
+    "recommended": "3-4 hours on the wall (walk both east and west from Tower 14, toboggan down) plus 3-4 hours for round-trip transport from Beijing — a full half-day trip",
+    "deep_dive": "5-6 hours (hike from the base without cable car, walk the full length from Tower 1 to Tower 23, explore the steeper western sections)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at 7:30 AM when gates open — the wall is nearly empty in the first hour. By 10:00-10:30 AM, tour buses start arriving and viewpoints get crowded. Late afternoon (3-4 PM) is also good as day-trippers leave.",
+    "worst_time": "Chinese National Day (October 1-7), May Day, and summer weekends. Cable car queues can exceed 1 hour. The wall gets packed and the toboggan line becomes very long. Avoid rainy days — the stone steps become dangerously slippery.",
+    "seasonal_notes": "Autumn (late October-November) is spectacular — the surrounding mountains blaze with red and gold foliage against the grey wall, creating the most photographed Great Wall images. Spring (April-May) offers cherry blossoms and green mountains. Summer is hot and humid but lush. Winter brings snow (magical but slippery — cable cars and toboggan may close in icy conditions).",
+    "pro_tip": "Visit on a weekday in late October or early November for peak autumn colors with manageable crowds. The afternoon light (3-5 PM) creates the best photography conditions with golden light hitting the wall and warm foliage colors."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (Mar 16–Nov 15): Weekdays 07:30–18:00, Weekends 07:30–18:30. Off-season (Nov 16–Mar 15): 08:00–17:30. Last ticket sales and entry 30 minutes before closing.",
+    "price_rmb": "Wall admission: ¥40/person. Cable car: ¥100 one-way, ¥140 round-trip. Toboggan/chairlift: ¥100 one-way, ¥140 round-trip (chairlift up + toboggan down).",
+    "price_usd": "Wall: ~$5.50. Cable car round-trip: ~$19. Toboggan combo: ~$19.",
+    "price_breakdown": [
+      {
+        "item": "Wall admission",
+        "price": "¥40",
+        "highlight": "Access to the wall — does not include transport up/down"
+      },
+      {
+        "item": "Cable car (one way)",
+        "price": "¥100",
+        "highlight": "Enclosed cable car to Tower 14 — 6 minutes, 723 meters"
+      },
+      {
+        "item": "Cable car (round-trip)",
+        "price": "¥140",
+        "highlight": "Best value if not taking the toboggan"
+      },
+      {
+        "item": "Chairlift up + toboggan down",
+        "price": "¥140",
+        "highlight": "Open-air chairlift to Tower 6 + fun toboggan slide down"
+      },
+      {
+        "item": "Toboggan only (down)",
+        "price": "¥100",
+        "highlight": "The highlight for many visitors — 5-minute slide from Tower 6"
+      }
+    ],
+    "booking_required": "Not strictly required but recommended during peak season. Walk-up tickets available at the gate. Online booking through Trip.com or Klook recommended for guaranteed entry and to skip ticket queues.",
+    "booking_method": "Buy tickets at the gate (passport required) or book online through Trip.com/Klook. The Mubus package (mutianyugreatwall.com) includes transport, entry, and lunch — most convenient for solo foreign travelers. Your hotel can also arrange private car + tickets.",
+    "passport_accepted": "Yes — bring your physical passport for entry. Required for ticket purchase at the gate.",
+    "what_to_bring": "Physical passport. Comfortable hiking shoes with grip (stone steps are uneven and can be slippery). Water (1-2 bottles — limited options on the wall). Snacks. Sun protection (hat, sunscreen — no shade on the wall). Layers (mountain ridge is windy and cooler than the city). Power bank for phone. Cash for small vendors on the wall.",
+    "queue_situation": "Weekday mornings: minimal wait. Weekend mornings: 15-30 minutes for cable car. Peak season weekends/holidays: 30-60+ minutes for cable car. The toboggan always has a queue (15-30 minutes minimum) because slow riders create bottlenecks.",
+    "language_barrier_rating": "some-chinese-helps — The visitor center has staff who speak basic English. Signage on the wall is bilingual. However, most vendors, bus drivers, and cable car staff speak no English. Navigation is straightforward enough to manage without Chinese."
+  },
+  "highlights": [
+    {
+      "name": "Walking the Wall — Tower 14 to Tower 20 (West Route)",
+      "description": "The most scenic and challenging section. The wall climbs steeply through forested mountains with increasingly dramatic views at each watchtower. Towers 19-20 (the 'Hero Slope') feature near-vertical stairs that test your limits but reward with the most expansive panoramic views of the wall snaking into the distance.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Tower 20 is called the 'Hero Slope' because reaching it is genuinely difficult. The view from the top — the wall stretching endlessly across mountain ridges — is the iconic Great Wall image you've seen in every photograph.",
+      "tip": "Go west first (toward Tower 20) while your legs are fresh. The steps get progressively steeper. Don't rush — take breaks at each watchtower. The section between towers 14 and 20 takes about 40-60 minutes one way."
+    },
+    {
+      "name": "Toboggan Slide",
+      "description": "A steel track toboggan that winds down the mountain from near Tower 6 — essentially a gravity-powered sled on rails through the forest. It's a fun, unique way to descend and hugely popular with visitors of all ages.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is unique to Mutianyu among major Great Wall sections. Children under 10 must ride with an adult. You control your own speed with a hand brake. The ride takes about 5 minutes.",
+      "tip": "The main frustration is slow riders ahead of you — you can't pass. Go early in the morning for a faster ride. The queue is shorter right when it opens and after 3 PM."
+    },
+    {
+      "name": "Double-sided Crenellations",
+      "description": "Mutianyu is one of the only Great Wall sections with battlements on both sides of the wall, meaning soldiers could fight enemies attacking from either direction. This reflects its critical strategic importance as a defense between two military commands.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Most Great Wall sections have crenellations only on the outer (northern) side. The double design here is unique and tells you this location was considered especially vulnerable to attack from multiple directions.",
+      "tip": "Look for the arrow slits and drainage holes in the walls — these functional details reveal the sophisticated military engineering behind what looks like a simple wall."
+    },
+    {
+      "name": "Autumn Foliage Views",
+      "description": "In late October through mid-November, the mountains surrounding Mutianyu erupt in brilliant red, orange, and gold foliage. The contrast of autumn colors against the grey stone wall and blue sky creates some of the most photographed landscapes in China.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is genuinely world-class autumn scenery — comparable to New England or Kyoto. The cable car ride through autumn canopy is an experience in itself.",
+      "tip": "Peak foliage is typically the last week of October through the first week of November. Morning light (8-10 AM) hits the eastern-facing slopes beautifully."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Hiking up instead of taking the cable car",
+      "why": "The 1-2 hour hike from the base to the wall passes through forest with far fewer tourists. You arrive at the wall feeling like you earned it, and the gradual reveal of the wall above you is dramatic. Most visitors skip this because they want to save energy for the wall itself — but the hike is the most immersive part."
+    },
+    {
+      "what": "The quieter eastern sections beyond Tower 1",
+      "why": "Most visitors stay between Towers 6 and 20. Walking east past Tower 6 toward Tower 1 leads to less-restored, quieter sections where you can have the wall nearly to yourself. The views are different — more wild and atmospheric."
+    },
+    {
+      "what": "The village of Mutianyu below the wall",
+      "why": "The small village at the base has local restaurants serving better food than the tourist complex, and the approach through chestnut orchards in autumn is lovely. Most visitors rush straight to the cable car without exploring."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Arrive at 7:30 AM → buy tickets at the gate → take the cable car to Tower 14 → walk west to Tower 20 (Hero Slope) first while legs are fresh (45-60 min) → return to Tower 14 → walk east to Tower 6 (30-40 min, gentler) → ride the toboggan down from Tower 6 → lunch at the base village. Total wall time: 3-4 hours.",
+    "what_to_skip": "The gift shops at the base — overpriced tourist souvenirs. Don't buy the 'I Climbed the Great Wall' certificates (you can get them free at some counters). Skip the chairlift up if you're taking the toboggan down — the cable car to Tower 14 gives you a better starting point for the best views.",
+    "pro_tips": "Take the cable car UP (to Tower 14, the best views) and the toboggan DOWN (from Tower 6, the fun exit). This lets you walk the full scenic stretch between towers. Bring your own water and snacks — wall vendors charge 3-4x normal prices. If visiting in winter, check whether the toboggan and cable cars are operating before going."
+  },
+  "heads_up": [
+    {
+      "warning": "The wall is a 1.5-2 hour drive from central Beijing",
+      "advice": "Plan this as a half-day trip minimum. Leave Beijing by 6:30-7:00 AM to arrive at opening. Book return transport in advance — DiDi drivers cannot pick up from the wall parking area, and getting a taxi back can be difficult."
+    },
+    {
+      "warning": "Steps on the wall are steep, uneven, and can be slippery",
+      "advice": "Wear proper hiking shoes with grip — not sandals, dress shoes, or smooth-soled sneakers. The steps vary wildly in height and width. After rain or snow, they become genuinely dangerous. Use the handrails where available. The section near towers 19-20 is near-vertical."
+    },
+    {
+      "warning": "Almost no facilities on the wall itself",
+      "advice": "Use the restroom at the base before ascending. There are basic restrooms at the cable car top station near Tower 14, but nothing else. Bring water, snacks, and toilet paper. Small vendors on the wall sell water at inflated prices (¥10-15 per bottle)."
+    },
+    {
+      "warning": "The toboggan can be frustratingly slow",
+      "advice": "You're stuck behind whoever is in front of you — slow riders (especially those stopping to take photos) create long chains of waiting. There's no way to pass. Go early morning for the fastest ride. Don't ride the toboggan in rainy or icy conditions."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Bring your physical passport — required for entry and ticket purchase.",
+    "Getting to Mutianyu independently on public transport is doable but takes 2+ hours with a bus transfer. Most foreigners book a private car or the Mubus service (direct bus from Dongzhimen with English support). Don't take the regular 916 bus — only the 916 Express (916快车) goes to the right station.",
+    "Return transport is the biggest challenge — DiDi drivers are not permitted to enter the parking area, and taxis are scarce. Book round-trip transport or a tour that includes return. Some visitors get stranded at closing time.",
+    "Payment at vendors on the wall may be cash-only. Bring small bills (¥10-20 notes) for water and snacks.",
+    "The wall has no shade — bring sun protection in summer. In winter, the wind chill on the exposed ridge makes it feel 5-10 degrees colder than Beijing city."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Cable car/toboggan closed (maintenance or weather)",
+      "what_to_do": "Hike up from the base — the walk takes about 60-90 minutes via stone steps. It's a genuine workout but perfectly doable for reasonably fit visitors. This is actually how most visitors reached the wall before modern facilities were built.",
+      "plan_b": "Check the Mutianyu official website or call before departing Beijing. In winter, closures due to ice are common — have a backup plan like visiting Juyongguan Pass (closer to Beijing, no cable car needed)."
+    },
+    {
+      "problem": "Can't get transport back to Beijing",
+      "what_to_do": "Ask at the visitor center — they can help call a taxi. Walk to the main road (Mutianyu roundabout, 1 km from parking area) where DiDi drivers can reach you. The last public bus H23/H35 to Huairou runs around 5-6 PM.",
+      "plan_b": "If stranded, the Mutianyu Great Wall Hotel and nearby guesthouses offer rooms. Stay overnight and return to Beijing the next morning."
+    },
+    {
+      "problem": "Too physically challenging — can't handle the steep steps",
+      "what_to_do": "Stay in the gentler section between Towers 10-14 near the cable car station — the views are excellent without the extreme stairs. Take your time and rest in the watchtowers.",
+      "plan_b": "The cable car ride itself offers stunning views. If you can't walk far on the wall, even standing at Tower 14 for 30 minutes is worth the trip."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Hiking shoes with good grip (non-negotiable — the stone steps are uneven and often slippery). Dress in layers — the mountain ridge is windy and cooler than Beijing by 5-10°C. In summer, breathable clothing plus sun protection. In winter, serious warm layers including windproof jacket, gloves, and hat.",
+    "what_to_bring": "Physical passport. Water (1-2 liters). Snacks. Sunscreen and hat. Layers for wind/cold. Power bank. Cash (small bills) for wall vendors. Toilet paper.",
+    "what_not_to_bring": "Heavy luggage (no storage, lots of climbing). Umbrellas (too windy on the wall — use a rain jacket instead). Drones (restricted in the scenic area)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "challenging",
+    "physical_details": "The wall is on a mountain ridge — reaching it requires either a cable car/chairlift or a 60-90 minute uphill hike. On the wall, expect steep stone steps of varying heights, with the steepest section near towers 19-20 approaching near-vertical. The gentler section (towers 10-14) is manageable for most fitness levels. Total walking on the wall: 3-5 km with significant elevation changes. Cable car eliminates the hardest part of getting up.",
+    "age_notes": "Cable car makes the wall accessible to seniors and families with children who can walk on the wall itself. The toboggan requires riders over 1.2m tall; children under 10 must ride with an adult. Not wheelchair accessible on the wall. The gentler eastern section (toward Tower 6) is more suitable for less mobile visitors.",
+    "health_warnings": "Heart and knee stress from steep climbing. Heat exhaustion in summer (no shade on the wall). Hypothermia risk in winter (wind exposure on the ridge). Vertigo/height anxiety on steep sections. Stone steps are a significant slip-and-fall hazard when wet."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book day tour with transport from Beijing",
+      "platform": "Klook, Trip.com, GetYourGuide, or Mubus (mutianyugreatwall.com)",
+      "value_to_user": "Solves the biggest challenge — getting there and back. Includes round-trip transport, entry ticket, and often a guide and lunch. Mubus is the most popular option for solo travelers. Private tours offer more flexibility."
+    },
+    {
+      "action": "Book cable car and toboggan tickets in advance",
+      "platform": "Trip.com or Klook",
+      "value_to_user": "Skips the ticket queue at the gate — saves 15-30 minutes during peak times. Combo packages (wall entry + cable car + toboggan) are often discounted."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Mùtiányù Chángchéng",
+      "chinese": "慕田峪长城",
+      "english": "Mutianyu Great Wall"
+    },
+    {
+      "pinyin": "Lǎnchē",
+      "chinese": "缆车",
+      "english": "Cable car"
+    },
+    {
+      "pinyin": "Huáchē",
+      "chinese": "滑车",
+      "english": "Toboggan/luge"
+    },
+    {
+      "pinyin": "Dí Lóu",
+      "chinese": "敌楼",
+      "english": "Watchtower"
+    },
+    {
+      "pinyin": "Wǒ yào mǎi piào",
+      "chinese": "我要买票",
+      "english": "I want to buy tickets"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Gubei Water Town + Simatai Great Wall",
+      "why": "A completely different Great Wall experience — Simatai is the only section open for night visits, and Gubei Water Town is a charming (if artificial) canal village at its base. Makes a great overnight trip from Beijing.",
+      "travel_time": "2-hour drive from Mutianyu; 2.5 hours from Beijing"
+    },
+    {
+      "suggestion": "Hongluo Temple (红螺寺)",
+      "why": "A peaceful Buddhist temple just 10 km from Mutianyu, surrounded by ancient ginkgo trees. Perfect for a tranquil contrast after the Great Wall's intensity. Spectacular in autumn.",
+      "travel_time": "15-minute drive from Mutianyu"
+    }
+  ],
+  "cultural_context": "The Great Wall is not one continuous structure but a series of walls and fortifications built over 2,000+ years by successive dynasties. The Mutianyu section was first built during the Northern Qi Dynasty (6th century) and substantially rebuilt in 1569 by the legendary anti-piracy general Qi Jiguang. The name translates to 'admiring the sky valley.' Mutianyu's double-sided crenellations are rare — they indicate this section defended the junction between two military commands (Jizhen and Changzhen), making it vulnerable to attack from both sides. The densely packed watchtowers (25 in just 3,000 meters) further demonstrate its critical strategic importance. Understanding the wall as a living military system rather than a decorative monument makes the visit far more meaningful.",
+  "photo_spots": [
+    {
+      "location": "Tower 20 (Hero Slope) looking back along the wall",
+      "tip": "The most dramatic panoramic view. Best in morning light (8-10 AM). Bring a wide-angle lens to capture the wall snaking across multiple ridges.",
+      "why": "The classic Great Wall image — the wall stretching endlessly across mountain peaks. The achievement of reaching this steep point makes the photo even more meaningful."
+    },
+    {
+      "location": "Cable car ascending through autumn foliage (late October)",
+      "tip": "Sit on the right side for the best mountain views. Have your camera ready — the ride is only 6 minutes.",
+      "why": "The contrast of brilliant autumn colors with the grey wall above creates world-class landscape photography."
+    },
+    {
+      "location": "The serpentine curves between Towers 14-17",
+      "tip": "Walk slightly ahead of the main crowd and turn around to photograph the wall curving through forested ridges. Afternoon golden hour light is ideal.",
+      "why": "The winding wall through green (or autumn-colored) mountains is Mutianyu's signature view, distinguishing it from the more barren Badaling section."
+    }
+  ],
+  "card_name": "Mutianyu Great Wall",
+  "card_type": "GREAT WALL SECTION",
+  "card_hook": "The Great Wall with fewer crowds and a toboggan ride.",
+  "best_for": [
+    "first-time-in-China-essential",
+    "bucket-list-wonder",
+    "photographers-paradise",
+    "active-travelers",
+    "half-day-from-Beijing"
+  ]
+}

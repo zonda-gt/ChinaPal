@@ -1,0 +1,207 @@
+{
+  "attraction_name_cn": "文殊院",
+  "attraction_name_en": "Wenshu Monastery",
+  "address_cn": "四川省成都市青羊区文殊院街66号",
+  "experience_type": "cultural-immersion",
+  "hook": "A 1,400-year-old Buddhist monastery where monks still chant at dawn, incense spirals through ancient courtyards, and the vegetarian restaurant serves some of the best meatless food in Chengdu — all for free admission.",
+  "honest_description": "Wenshu Monastery is Chengdu's best-preserved Buddhist temple and a genuinely active place of worship — not a museum piece. Founded in the Sui Dynasty (7th century) and rebuilt during the Qing, it houses over 300 Buddha statues, rare relics including alleged fragments of Xuanzang's skull, and a peaceful garden that feels worlds away from the city outside. The atmosphere is authentic: monks chant in the mornings, locals burn incense and pray, and the tea garden inside is a beloved neighborhood hangout. Free incense sticks and hot tea are offered at the entrance. The surrounding Wenshufang pedestrian street adds restaurants, tea houses, and shops to the experience. The downsides: photography is restricted or forbidden inside many halls (volunteers can be overly aggressive about enforcement), there's almost no English signage, and the vegetarian restaurant has received mixed reports (some say it's been outsourced and quality has dropped). The monastery is compact — you can see everything in 1-2 hours. Best for anyone seeking a peaceful, spiritual counterpoint to Chengdu's bustling food-and-nightlife scene.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth visiting if I'm not Buddhist?",
+      "answer": "Absolutely. The monastery is beautiful regardless of your beliefs — the architecture, gardens, and atmosphere are compelling on their own. Watching monks chant (arrive by 8 AM), smelling incense in quiet courtyards, and sitting in the tea garden are all universally enjoyable experiences. The Wenshufang street around it adds shops and restaurants. Budget 1.5-2 hours."
+    },
+    {
+      "question": "Is there anything in English?",
+      "answer": "Very little. The temple signs and exhibit descriptions are Chinese-only. There's no audio guide available. You can enjoy the visual and atmospheric experience without understanding Chinese, but you'll miss the historical and religious context. A guide or a pre-visit read about the monastery's history adds significant value."
+    }
+  ],
+  "experience_format_note": "Active Buddhist monastery — free admission, no tickets needed. The complex follows a central axis from south to north with six main halls. Gardens and side buildings surround the halls. Photography rules vary by building — some allow exterior shots only, others prohibit all photography. Dress modestly (cover shoulders and knees). Free incense sticks available at the entrance. The adjacent Wenshufang pedestrian street is a separate area with shops and restaurants. Metro Line 1 stops directly at Wenshu Monastery station.",
+  "vibe": "Tranquil and grounding — ancient wood and incense and chanting in the middle of a modern city, with just enough local life (tea drinkers, praying grandmothers, wandering cats) to feel alive rather than preserved.",
+  "time_needed": {
+    "quick_visit": "45 minutes (walk the central axis, see the main halls)",
+    "recommended": "1.5-2 hours (all halls, garden, tea garden rest, Wenshufang street)",
+    "deep_dive": "3-4 hours (attend morning chanting at 8 AM, explore all buildings, vegetarian lunch, browse Wenshufang shops)"
+  },
+  "best_time": {
+    "best_time_of_day": "Early morning (before 9 AM) for morning chanting and peaceful atmosphere. The monastery is quietest before tour groups arrive around 10 AM.",
+    "worst_time": "Chinese New Year and major Buddhist holidays — the monastery is packed with worshippers and incense smoke is overwhelming. Weekday afternoons are generally calm.",
+    "seasonal_notes": "Year-round destination — the monastery's indoor halls and covered corridors make it comfortable in any weather. The annual Laba Festival (腊八节) porridge distribution in January is a beloved tradition dating back 300 years.",
+    "pro_tip": "Arrive at 8 AM to hear the monks' morning chanting — it's a hauntingly beautiful experience that most tourists miss. After the monastery, walk through Wenshufang street for breakfast or tea."
+  },
+  "getting_in": {
+    "opening_hours": "Daily 08:00–17:00. Year-round.",
+    "price_rmb": "Free admission.",
+    "price_usd": "Free.",
+    "price_breakdown": [
+      {
+        "item": "Monastery admission",
+        "price": "Free",
+        "highlight": "Free incense sticks and hot tea provided at entrance"
+      },
+      {
+        "item": "Vegetarian restaurant (inside monastery)",
+        "price": "¥15-40/meal",
+        "highlight": "Buddhist vegetarian cuisine — quality varies"
+      },
+      {
+        "item": "Tea garden (inside monastery)",
+        "price": "¥10-30",
+        "highlight": "Peaceful outdoor tea under ancient trees"
+      }
+    ],
+    "booking_required": "No — walk in anytime during opening hours.",
+    "booking_method": "No booking needed.",
+    "passport_accepted": "Not applicable — free entry, no ID needed.",
+    "what_to_bring": "Modest clothing (cover shoulders and knees). Camera (but respect no-photography signs inside halls). Small cash for tea garden or vegetarian restaurant.",
+    "queue_situation": "No queues except during major holidays (Chinese New Year, Buddhist festivals).",
+    "language_barrier_rating": "significant-barrier — Almost everything is in Chinese only. No English signage on buildings or exhibits. Free Chinese-speaking volunteer guides occasionally available. The experience is primarily visual and atmospheric."
+  },
+  "highlights": [
+    {
+      "name": "Morning Chanting (早课)",
+      "description": "Monks gather at 8 AM for morning chanting in the main halls — a deeply atmospheric ritual with rhythmic Sichuan-style Buddhist chanting (川腔梵呗) that has been designated an intangible cultural heritage. The sound echoes through incense-filled halls.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "You don't need to be Buddhist to appreciate this. The chanting has a musical quality that transcends religion. Stand quietly at the back of the hall and observe.",
+      "tip": "Arrive by 7:50 AM and head to the main hall. The chanting lasts about 30-45 minutes. Stand or sit quietly at the side or back — don't walk through the middle or take photos during the ceremony."
+    },
+    {
+      "name": "The Six Main Halls (Central Axis)",
+      "description": "Six halls along the north-south axis: Heavenly Kings Hall, Three Great Beings Hall, Great Hero Hall (main shrine with bronze Shakyamuni Buddha), Dharma Teaching Hall, Sutra Library, and Wenshu Pavilion. All wood construction with elaborate carvings and painted ceilings.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The architectural progression from south to north represents increasing spiritual significance. The Great Hero Hall (大雄宝殿) is the spiritual center with the largest Buddha statue.",
+      "tip": "Look up at the ceiling paintings in each hall — they're exquisitely detailed and different in every building. The Sutra Library houses calligraphy from Emperor Kangxi."
+    },
+    {
+      "name": "Monastery Gardens",
+      "description": "Quiet gardens with ancient trees, rock formations, and peaceful paths surrounding the main halls. The tea garden (香园) offers gaiwan tea under old trees, popular with local residents who come daily.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The gardens provide a genuine oasis of calm in central Chengdu. The tea garden atmosphere is similar to People's Park's Heming Teahouse but more intimate and spiritual.",
+      "tip": "After touring the halls, find a seat in the tea garden and order the simplest tea. Spend at least 20 minutes just sitting — the stillness is the point."
+    },
+    {
+      "name": "Wenshufang Pedestrian Street (文殊坊)",
+      "description": "The streets surrounding the monastery are lined with traditional-style buildings housing tea houses, restaurants, souvenir shops, and local eateries. Less touristy than Kuanzhai Alley, with better food and more authentic atmosphere.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This neighborhood feels more genuine than the heavily commercial tourist streets elsewhere in Chengdu. The restaurants serve real local food at reasonable prices.",
+      "tip": "Walk the full loop around the monastery exterior — the outside walls are photogenic with traditional architecture. The food stalls on the north side have good Sichuan snacks."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The rare relics in the Sutra Library (宸经楼)",
+      "why": "The monastery houses two sacred Buddhist relics: fragments attributed to the historical Buddha and to Xuanzang (the famous Tang dynasty monk who traveled to India). Most visitors walk right past the building."
+    },
+    {
+      "what": "The 'Instagrammable' exterior walls",
+      "why": "The orange/red monastery walls with traditional architectural details create stunning photo compositions, especially in morning or late afternoon light. Most visitors only photograph inside the complex."
+    },
+    {
+      "what": "Free guided tours from monastery volunteers",
+      "why": "Chinese-speaking volunteer guides sometimes offer free tours — look for organized groups forming near the entrance. The guided experience adds enormous context, though tours are in Chinese only."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Arrive at 7:50 AM → attend morning chanting in the Great Hero Hall → walk the central axis through all six halls → explore the gardens and tea garden → exit through the south gate → browse Wenshufang street for breakfast or shopping → Metro Line 1 to your next destination.",
+    "what_to_skip": "The vegetarian restaurant has received mixed recent reviews — some visitors report the quality has declined since it was outsourced to a private operator. The souvenir shops on Wenshufang street sell mostly generic tourist items.",
+    "pro_tips": "Accept the free incense sticks at the entrance and light them at the main incense burner — it's part of the experience regardless of your beliefs. Be aware that some enthusiastic 'fortune tellers' outside the temple entrance are scammers — ignore them politely."
+  },
+  "heads_up": [
+    {
+      "warning": "Photography is restricted or forbidden inside many halls",
+      "advice": "Check for signs before photographing inside any building. Volunteer temple guardians can be strict about enforcement — some visitors report being physically stopped. Exterior photography is generally fine. When in doubt, don't photograph."
+    },
+    {
+      "warning": "Scammers outside the entrance",
+      "advice": "People outside the temple gate may offer 'fortune telling' or 'blessing' services for money — these are not affiliated with the monastery. Politely decline and walk in. The monastery itself is free and does not charge for any religious services."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Dress modestly — cover shoulders and knees. This is an active place of worship, not a museum.",
+    "Photography rules vary by building. When in doubt, don't photograph inside the halls. Exterior shots are generally fine.",
+    "No English signage anywhere. Pre-read about the monastery's history or bring a guide to get the most from the visit.",
+    "Beware of 'fortune tellers' and 'blessing' sellers outside the entrance gate — they are scammers unaffiliated with the monastery.",
+    "The monastery is free. If anyone asks you to pay for 'blessings' or 'special access,' it's a scam."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Arrived too late for morning chanting",
+      "what_to_do": "The monastery is still beautiful and atmospheric throughout the day. The chanting happens daily — come back tomorrow morning if your schedule allows.",
+      "plan_b": "Visit the tea garden and Wenshufang street instead. The afternoon atmosphere is calmer and the garden is at its most peaceful."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Modest clothing covering shoulders and knees. Comfortable shoes for walking.",
+    "what_to_bring": "Small cash for tea or food. Camera (but respect photography restrictions). Quiet, respectful demeanor.",
+    "what_not_to_bring": "Nothing specific to avoid."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Flat, paved paths throughout the monastery complex. Some doorway thresholds to step over. Compact area — total walking distance under 1 km. Wheelchair accessible on main paths though some halls have steps at entrances.",
+    "age_notes": "Suitable for all ages. Quiet atmosphere may not hold young children's attention for long. Stroller accessible on main paths.",
+    "health_warnings": "Incense smoke may bother visitors with respiratory sensitivities, especially during busy worship days."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a Chengdu cultural walking tour including the monastery",
+      "platform": "Klook, GetYourGuide",
+      "value_to_user": "A guide adds crucial context — explaining the Buddhist iconography, architecture, and the monastery's remarkable 1,400-year history."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Wénshū Yuàn",
+      "chinese": "文殊院",
+      "english": "Wenshu Monastery"
+    },
+    {
+      "pinyin": "Dà Xióng Bǎo Diàn",
+      "chinese": "大雄宝殿",
+      "english": "Great Hero Hall (main shrine)"
+    },
+    {
+      "pinyin": "Sù Shí",
+      "chinese": "素食",
+      "english": "Vegetarian food"
+    },
+    {
+      "pinyin": "Xiāng",
+      "chinese": "香",
+      "english": "Incense"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "People's Park (人民公园)",
+      "why": "15-minute walk or one metro stop south. The park's tea culture and matchmaking corner complement the monastery's spiritual calm — two very different Chengdu experiences in one morning.",
+      "travel_time": "15-minute walk or 5 minutes by metro (Line 1)"
+    },
+    {
+      "suggestion": "Kuanzhai Alley (宽窄巷子)",
+      "why": "A 15-minute walk west. The commercial alley makes an interesting contrast to the authentic monastery neighborhood. Best visited after the monastery for a change of pace.",
+      "travel_time": "15-minute walk"
+    }
+  ],
+  "cultural_context": "Wenshu Monastery is named after Manjushri (文殊菩萨), the Bodhisattva of Wisdom in Buddhism — which is why many visitors come to pray for academic success and career advancement. The monastery's Sichuan-style Buddhist chanting (川腔梵呗) is a distinct regional tradition that blends Han Chinese Buddhist liturgy with local Sichuan musical elements, recognized as an intangible cultural heritage. The temple represents 1,400 years of continuous Buddhist practice in Chengdu, surviving wars, revolutions, and the Cultural Revolution. It remains one of China's most important Han Buddhist monasteries and a genuine center of learning and practice, not merely a tourist site.",
+  "photo_spots": [
+    {
+      "location": "Monastery exterior walls with traditional architecture",
+      "tip": "Morning light creates warm tones on the orange/red walls. Frame with overhanging tree branches for depth.",
+      "why": "The colored walls with traditional roof details against green trees are classic Chinese temple photography."
+    },
+    {
+      "location": "Incense smoke spiraling through courtyard trees",
+      "tip": "Position yourself downwind from the incense burners. Use slow shutter or let natural light create atmospheric effects.",
+      "why": "Incense smoke adds a spiritual, ethereal quality to courtyard photos — quintessentially Chinese temple atmosphere."
+    }
+  ],
+  "card_name": "Wenshu Monastery",
+  "card_type": "BUDDHIST TEMPLE",
+  "card_hook": "Fourteen hundred years of incense, chanting, and calm.",
+  "best_for": [
+    "free-attraction",
+    "cultural-immersion",
+    "peaceful-escape",
+    "morning-activity",
+    "spiritual-experience"
+  ]
+}

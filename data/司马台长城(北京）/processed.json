@@ -1,0 +1,219 @@
+{
+  "attraction_name_cn": "司马台长城",
+  "attraction_name_en": "Simatai Great Wall",
+  "address_cn": "北京市密云区古北口镇司马台村北",
+  "experience_type": "historic-site",
+  "hook": "The only unrestored Ming Dynasty Great Wall section near Beijing — and the only one you can walk at night, with original 600-year-old watchtowers, vertiginous climbs, and a night tour that makes the wall glow like a dragon across the mountains.",
+  "honest_description": "Simatai Great Wall is widely considered the most authentic and dramatic Great Wall section accessible from Beijing. Stretching 5.4 kilometers with 35 original watchtowers, it was designated by UNESCO as the 'Original Great Wall' because it has never been restored — the weathered stone, crumbling battlements, and wild terrain are exactly as time left them. The wall is famous for five characteristics: xian (precipitous), mi (dense watchtowers), qi (unusual), qiao (ingenious construction), and quan (complete variety of architectural forms). The eastern section features the terrifying 'Heavenly Staircase' at an 85-degree incline, and the Wangjing Tower at 986 meters is the highest point on the entire Great Wall. Simatai is also the only Great Wall section open for night tours, with dramatic lighting that illuminates the wall against the dark mountains. Honest downsides: access is controlled through Gubei Water Town, meaning you must pay the water town entrance fee or stay at a water town hotel to reach the wall. Only 10 of the 35 watchtowers are open to visitors. The wall is genuinely steep and physically demanding — this is not a casual stroll. Advance online booking is mandatory with limited daily capacity. The 2.5-hour drive from Beijing makes it a full-day commitment. But for those seeking the real, raw Great Wall experience without the Badaling tourist circus, Simatai is unmatched.",
+  "foreigner_top_questions": [
+    {
+      "question": "How is this different from Badaling or Mutianyu?",
+      "answer": "Simatai is unrestored — the walls and watchtowers show their original Ming Dynasty construction with 600 years of weathering. Badaling and Mutianyu have been heavily rebuilt with modern handrails, smooth surfaces, and tourist infrastructure. Simatai feels like discovering the Great Wall as explorers did centuries ago. It is also the only section open at night. The trade-off: it is steeper, rougher, more remote, and harder to access."
+    },
+    {
+      "question": "Do I need to go through Gubei Water Town to reach the wall?",
+      "answer": "Yes — Simatai Great Wall is only accessible through Gubei Water Town. You must enter the water town first, then take a free shuttle bus to the Great Wall entrance. This means paying the water town admission (140 RMB, or 80 RMB if staying overnight) in addition to the 40 RMB Great Wall ticket. There is no separate entrance to the wall."
+    }
+  ],
+  "experience_format_note": "Outdoor Great Wall hiking experience. Access via Gubei Water Town shuttle bus + cable car or hiking trail. Day tour hours: 09:00-17:00 (last entry 15:00). Night tour hours vary by season (May-Oct: 18:00-22:40; Nov-Apr: 17:30-20:40). Advance online booking required at least one day ahead. Three daily entry batches: 10:00, 12:00, 14:00. Cable car available (130 RMB one-way, 200 RMB round-trip). Only eastern section towers 2-10 are open. Night tour limited to towers 5-6 via cable car.",
+  "vibe": "Raw, ancient, and genuinely awe-inspiring — scrambling over 600-year-old stone on a precipitous mountain ridge, feeling the weight of history in every weathered brick, with nothing but wild mountains and empty sky in every direction.",
+  "time_needed": {
+    "quick_visit": "2-3 hours (cable car up, walk towers 5-10, cable car down — covers the highlights but feels rushed)",
+    "recommended": "4-5 hours (cable car up, hike along the wall, walk down on foot for different perspectives, allow time for photography)",
+    "deep_dive": "Full day or overnight (day hike + evening night tour, combined with Gubei Water Town exploration)"
+  },
+  "best_time": {
+    "best_time_of_day": "For day visits, arrive by 10 AM for the best morning light on the wall and smaller crowds. For night tours, the illuminated wall is most dramatic after full darkness (around 8-9 PM). The absolute best experience: arrive in the afternoon, see the sunset from the wall, descend, then return for the night tour.",
+    "worst_time": "Midday in summer (extremely hot with no shade on the wall). Major holidays when daily quotas fill up quickly. Rainy or icy days when the unrestored wall becomes dangerously slippery.",
+    "seasonal_notes": "Autumn (September-November) is ideal — clear skies, comfortable hiking temperatures, and stunning foliage on the surrounding mountains. Spring is pleasant with wildflowers. Summer is very hot. Winter offers dramatic snow-covered wall photos but extreme cold and icy conditions make the steep sections dangerous.",
+    "pro_tip": "The autumn red leaves against the gray stone of the unrestored wall make for the most spectacular photography. Book tickets 3-4 days in advance during October."
+  },
+  "getting_in": {
+    "opening_hours": "Day: 09:00-17:00 (last entry 15:00). Night (May-Oct): 18:00-22:40. Night (Nov-Apr weekdays): 17:30-20:10. Night (Nov-Apr weekends): 17:30-20:40.",
+    "price_rmb": "40 RMB (Great Wall ticket). Cable car: 130 RMB one-way / 200 RMB round-trip. Note: Gubei Water Town admission (140 RMB or 80 RMB for hotel guests) is required in addition.",
+    "price_usd": "Wall ticket ~$5.50. Cable car round-trip ~$28. Total with water town entry ~$25-47.",
+    "price_breakdown": [
+      {
+        "item": "Simatai Great Wall ticket",
+        "price": "40 RMB",
+        "highlight": "Must be booked online at least one day in advance"
+      },
+      {
+        "item": "Cable car one-way",
+        "price": "130 RMB",
+        "highlight": "Recommended going up; walk down for views and exercise"
+      },
+      {
+        "item": "Cable car round-trip",
+        "price": "200 RMB",
+        "highlight": "Best for those with limited mobility or energy"
+      },
+      {
+        "item": "Gubei Water Town admission (required)",
+        "price": "140 RMB (80 RMB for hotel guests)",
+        "highlight": "Mandatory — the Great Wall is only accessible through the water town"
+      }
+    ],
+    "booking_required": "Yes — mandatory online booking at least one day in advance. Limited daily capacity strictly enforced.",
+    "booking_method": "Official Gubei Water Town WeChat mini-program, Trip.com, or Klook. Select your preferred entry batch time (10:00, 12:00, or 14:00 for day tours).",
+    "passport_accepted": "Yes — foreigners can book online using passport numbers and enter with their physical passport.",
+    "what_to_bring": "Sturdy hiking shoes with good grip (essential — the wall surface is rough and uneven). Water (at least 1 liter — no shops on the wall). Sun protection. Camera. Light jacket for wind at the top. Headlamp if doing the night tour.",
+    "queue_situation": "Entry is controlled by time slots, so there is no significant queuing. The cable car can have 15-30 minute waits during peak times.",
+    "language_barrier_rating": "moderate — Ticket booking is available in English on Trip.com/Klook. On-site signage is bilingual. Staff speak limited English. The experience is straightforward — walk up, walk along, walk down."
+  },
+  "highlights": [
+    {
+      "name": "The Unrestored Wall Experience",
+      "description": "Walking on Simatai's original Ming Dynasty wall surface is a visceral connection to history. The weathered stone, crumbling battlements, wild vegetation growing through cracks, and absence of modern additions create an atmosphere of authentic antiquity that restored sections cannot match.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the Great Wall experience that history enthusiasts and photographers dream of — raw, real, and untouched. The contrast with the over-restored Badaling is striking.",
+      "tip": "Take your time examining the watchtower interiors. Each has a unique architectural design — domed ceilings, arrow slits, drainage systems — visible here because restoration has not covered them with modern materials."
+    },
+    {
+      "name": "The Night Tour",
+      "description": "Simatai is the only Great Wall section in China open at night. The wall is dramatically lit, creating the illusion of a glowing dragon crawling across the dark mountains. The experience of walking on the ancient wall under stars with illuminated towers stretching into the distance is genuinely unique.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The night tour is limited to the area between towers 5 and 6 (accessed by cable car), so you are not hiking far. But the visual spectacle and the exclusivity of the experience make it worthwhile.",
+      "tip": "The night tour requires a separate booking. If staying at Gubei Water Town, hotel guests can get a package deal (around 120 RMB) including cable car."
+    },
+    {
+      "name": "Wangjing Tower (望京楼)",
+      "description": "At 986 meters, Wangjing Tower is the highest point on the entire Great Wall. On clear days, Beijing is reportedly visible in the distance (hence the name 'Watching Beijing Tower'). The climb to reach it is extremely steep.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Note: Wangjing Tower is currently in the closed section beyond tower 10. You can see it from the open section but cannot climb to it. The open towers (2-10) still offer spectacular views.",
+      "tip": "The highest accessible point (around tower 10) still provides dramatic panoramic views of the wall snaking across mountain ridges."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Walking down instead of taking the cable car",
+      "why": "The descent trail offers completely different views of the wall and surrounding mountains. It takes about 45-60 minutes and is not strenuous going downhill. Most visitors take the cable car both ways and miss these perspectives."
+    },
+    {
+      "what": "The Yuanyang Lake (Mandarin Duck Lake) at the base",
+      "why": "The reservoir at the foot of the wall where the eastern and western sections meet is beautiful and serene. Few visitors explore this area, which offers unique upward views of the wall reflected in the water."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Book tickets online 2-3 days in advance. Choose the 10:00 AM entry batch. Enter Gubei Water Town, take the free shuttle bus to the Great Wall entrance. Take the cable car up (130 RMB). Walk from tower 5 eastward to tower 10 (the steep section), then back to tower 5. Walk down on foot instead of taking the cable car for different views. Total time on the wall: 3-4 hours. Return to the water town for the night scene.",
+    "what_to_skip": "Do not attempt to climb beyond the open section (past tower 10) — it is closed for safety reasons and the terrain is genuinely dangerous. Skip the cable car down if you are reasonably fit — the walk down is scenic and easy.",
+    "pro_tips": "Bring more water than you think you need — there is nowhere to buy anything once on the wall. Take the 14:00 entry batch if you want to combine a late afternoon hike with watching the sunset from the wall, then the night tour after descending."
+  },
+  "heads_up": [
+    {
+      "warning": "The wall is genuinely steep and physically demanding",
+      "advice": "This is NOT a casual tourist walkway like Badaling. Some sections have 70-85 degree inclines. Wear proper hiking shoes with grip. Do not attempt in rain, snow, or ice. People with fear of heights should be cautious."
+    },
+    {
+      "warning": "Advance booking is mandatory — you cannot buy tickets on the day",
+      "advice": "Book at least one day ahead. During peak seasons (autumn, holidays), book 3-5 days in advance. Daily visitor numbers are strictly capped."
+    },
+    {
+      "warning": "You must go through Gubei Water Town",
+      "advice": "There is no separate entrance to Simatai Great Wall. Budget for the water town admission (140 RMB or 80 RMB) on top of the wall ticket (40 RMB). The total cost can add up quickly with the cable car."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You MUST book online in advance — no walk-up tickets available. Use Trip.com or Klook for English-language booking.",
+    "The wall surface is rough and uneven — ankle injuries are common. Wear proper hiking shoes, not sandals or dress shoes.",
+    "There are no facilities (toilets, shops, water) on the wall itself. Use facilities at the base before ascending.",
+    "The cable car closes at set times — check the schedule to avoid being stranded on the wall."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Weather turns bad while on the wall",
+      "what_to_do": "Descend immediately — the unrestored wall becomes very slippery when wet. Head to the nearest watchtower for temporary shelter, then make your way down carefully.",
+      "plan_b": "The cable car continues operating in light rain. In severe weather, staff will direct evacuation procedures."
+    },
+    {
+      "problem": "Physical exhaustion on the steep sections",
+      "what_to_do": "Rest in any watchtower — they provide shade and wind shelter. Take your time. There is no requirement to reach the highest tower.",
+      "plan_b": "Return the way you came to the cable car station. If you took the cable car up, you can ride it back down."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Sturdy hiking shoes with good ankle support and grip — non-negotiable. Layers appropriate to the season. Hat and sunscreen in summer. Windproof jacket — the wall is exposed and windy.",
+    "what_to_bring": "At least 1 liter of water per person. Snacks. Camera. Sunscreen. Hiking poles if you have them (helpful on steep sections). Cash for cable car if Alipay/WeChat issues arise.",
+    "what_not_to_bring": "High heels, sandals, or slippery-soled shoes. Large backpacks. Umbrellas (too windy)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "high",
+    "physical_details": "The wall features extremely steep sections with 70-85 degree inclines at the 'Heavenly Staircase.' The cable car eliminates the initial climb, but walking along the wall itself requires good fitness, balance, and comfort with heights. Narrow sections, no handrails in most areas, and uneven stone surfaces.",
+    "age_notes": "Not recommended for young children (under 8), elderly visitors with mobility issues, or anyone with heart/knee problems. The cable car makes the night tour (towers 5-6 only) more accessible.",
+    "health_warnings": "The steep climbs are cardiovascularly demanding. Heat exhaustion risk in summer (no shade on the wall). Hypothermia risk in winter. Ankle and knee injuries are common on the rough terrain."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Great Wall tickets + cable car",
+      "platform": "Trip.com, Klook, or official WeChat mini-program",
+      "value_to_user": "Essential — tickets must be booked in advance. Packages with cable car can save versus buying separately."
+    },
+    {
+      "action": "Book overnight at Gubei Water Town + wall ticket combo",
+      "platform": "Official Gubei Water Town website",
+      "value_to_user": "Hotel guests get discounted water town entry (80 RMB vs 140 RMB) and can book special night tour packages (around 120 RMB including cable car)."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Sīmǎtái Chángchéng",
+      "chinese": "司马台长城",
+      "english": "Simatai Great Wall"
+    },
+    {
+      "pinyin": "Suǒdào",
+      "chinese": "索道",
+      "english": "Cable car"
+    },
+    {
+      "pinyin": "Dílóu",
+      "chinese": "敌楼",
+      "english": "Watchtower"
+    },
+    {
+      "pinyin": "Yè chǎng",
+      "chinese": "夜场",
+      "english": "Night tour"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Gubei Water Town (古北水镇)",
+      "why": "Directly adjacent — you must pass through the water town to reach the wall. The combination of Great Wall hiking and water town night scene makes for an ideal overnight trip.",
+      "travel_time": "10 minutes by shuttle bus from the water town to the wall entrance"
+    },
+    {
+      "suggestion": "Jinshanling Great Wall (金山岭长城)",
+      "why": "Another scenic, semi-wild Great Wall section about 25 km west. Popular for the classic sunrise photography with dense watchtowers stretching to the horizon.",
+      "travel_time": "30-40 minutes by car"
+    }
+  ],
+  "cultural_context": "Simatai Great Wall was built during the Ming Dynasty (1373) on the foundations of earlier Northern Qi fortifications. General Qi Jiguang, the legendary military commander, renovated the wall and its watchtowers in the late 16th century. The wall served as a critical defensive position guarding the Gubeikou Pass, one of the primary invasion routes to Beijing from the north. The 1933 Battle of the Great Wall saw Chinese troops making a heroic stand against Japanese forces at this very location. In 1987, UNESCO designated Simatai as a World Heritage Site and specifically noted it as the 'Original Great Wall' due to its unrestored condition. The British Times newspaper ranked it as number one on its list of 25 must-visit global destinations in 2012. The wall's five famous characteristics — precipitous, dense, unusual, ingenious, and complete — make it an architectural encyclopedia of Ming Dynasty military construction.",
+  "photo_spots": [
+    {
+      "location": "Between towers 5 and 8 — looking east along the wall ridge",
+      "tip": "The classic Great Wall photograph — the wall snaking across mountain ridges with watchtowers at regular intervals. Morning light (before noon) illuminates the eastern face beautifully.",
+      "why": "This angle captures the wall's dramatic terrain and the density of watchtowers that make Simatai unique."
+    },
+    {
+      "location": "Night tour cable car — descending with lit wall behind",
+      "tip": "As the cable car descends, turn around to photograph the illuminated wall stretching across the dark mountains. The moving cable car requires a steady hand or high ISO.",
+      "why": "A unique perspective only possible at Simatai — the glowing Great Wall floating in darkness."
+    },
+    {
+      "location": "Yuanyang Lake — wall reflected in water",
+      "tip": "Early morning or late afternoon light creates the best reflections. The reservoir at the base of the wall offers an unusual downward perspective of the wall on the ridge above.",
+      "why": "A rare angle showing the Great Wall reflected in still water."
+    }
+  ],
+  "card_name": "Simatai Great Wall",
+  "card_type": "HISTORIC SITE",
+  "card_hook": "The only unrestored Ming Dynasty Great Wall section — raw, steep, and open for night tours.",
+  "best_for": [
+    "history-heritage",
+    "photography",
+    "hiking-adventure",
+    "nightlife-evening",
+    "iconic-must-see"
+  ]
+}

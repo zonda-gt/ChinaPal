@@ -1,0 +1,308 @@
+{
+  "attraction_name_cn": "龙脊梯田",
+  "attraction_name_en": "Longji Rice Terraces / Dragon's Backbone Rice Terraces",
+  "address_cn": "桂林市龙胜各族自治县和平乡平安村",
+  "experience_type": "sightseeing",
+  "hook": "Seven hundred years of farming carved into mountainsides — layer upon layer of rice terraces climbing from 380m to 1,180m, changing from mirror-like pools in spring to golden waves in autumn, built by Zhuang and Yao minorities who still live among them.",
+  "honest_description": "The Longji Rice Terraces are genuinely jaw-dropping in scale — 66 square kilometers of terraced fields sculpted into steep mountainsides over 700+ years by Zhuang and Yao ethnic minorities. The terraces look different every season: flooded mirror pools in spring, lush green in summer, golden at harvest in autumn, and occasionally snow-dusted in winter. There are three main areas: Ping'an (most accessible, best for day trips), Jinkeng/Dazhai (largest, most dramatic, has a cable car), and Ancient Zhuang Village (smallest, least touristy). The hiking is the main activity — paved stone paths wind through terraces and villages, with viewpoints at the top offering panoramic views. However, getting here is a 2-2.5 hour drive from Guilin on winding mountain roads, the last stretch on narrow switchbacks that can cause car sickness. Stairs are steep and numerous — this is genuinely not suitable for people with mobility issues. An overnight stay is strongly recommended (and pretty much required to catch sunrise/sunset). Village guesthouses are basic but atmospheric, and the food (bamboo rice, bamboo chicken, smoked pork) is excellent. Weather is unpredictable — fog can completely block the views. Come during the right season and with clear weather, and this is world-class scenery. Come on a foggy day or in the dead of winter, and you'll wonder why you made the long journey.",
+  "foreigner_top_questions": [
+    {
+      "question": "Should I visit Ping'an or Jinkeng (Dazhai), and can I see both?",
+      "answer": "For a day trip, choose Ping'an — it's closer to the entrance, has well-paved paths, and its viewpoints (Seven Stars Accompany the Moon, Nine Dragons and Five Tigers) are the most iconic. For the largest and most dramatic terraces, choose Jinkeng/Dazhai — it has a cable car and the Golden Buddha Peak viewpoint. Seeing both in one day is extremely difficult without a car; with a car or overnight stay, you can do both comfortably. Most seasoned visitors say Ping'an has prettier scenery while Jinkeng is grander in scale."
+    },
+    {
+      "question": "When is the absolute best time to visit for photography?",
+      "answer": "Late May to early June (flooded fields reflecting sky like mirrors) and late September to mid-October (golden harvest before rice cutting) are the two peak photography windows. The terraces flood each field from water diverted down the mountainside, creating a cascade of reflecting pools — this is the most iconic image. Golden harvest is slightly more popular. Avoid late November through February unless you want to gamble on snow (rare but stunning). The rice is harvested around October 15-20 — after that, fields are brown stubs."
+    }
+  ],
+  "experience_format_note": "Outdoor hiking/walking experience across mountainside terraces. No formal tour route — you navigate between viewpoints on paved stone paths and stairways. Steep stairs are unavoidable. Parking lots are outside the villages; you must walk (or take cable car/shuttle) to reach accommodations and viewpoints. Do NOT bring wheeled luggage — porters are available to carry bags uphill for a fee. The scenic area is open 24 hours but ticket gates operate 9:00 AM to 6:00 PM.",
+  "vibe": "Awe-inspiring, remote, and grounding — like discovering that an entire mountainside is a work of art made by human hands over centuries, with wisps of cloud drifting through rice paddies and roosters crowing from wooden stilt houses.",
+  "time_needed": {
+    "quick_visit": "3-4 hours (drive up, cable car to one viewpoint, drive back — but you'll feel rushed and miss the magic)",
+    "recommended": "1 night / 2 days (arrive afternoon, hike to sunset viewpoint, overnight in village guesthouse, sunrise hike, explore second area, depart after lunch)",
+    "deep_dive": "2-3 nights (explore both Ping'an and Jinkeng, hike the 5-hour trail between them, experience village life, catch sunrise and sunset from different viewpoints)"
+  },
+  "best_time": {
+    "best_time_of_day": "Sunrise (from a hilltop viewpoint) and golden hour before sunset. Mid-morning after fog burns off also produces excellent light. Nighttime brings illuminated terraces in some areas — a magical experience for those staying overnight.",
+    "worst_time": "Rainy days with heavy fog — you may see literally nothing from the viewpoints. National Day holiday (October 1-7) creates massive traffic jams on the single mountain road, with some visitors waiting 2+ hours for shuttle buses. The road itself can back up for hours.",
+    "seasonal_notes": "Late May-early June: flooded paddy 'mirror' effect — the most photographed season. June-September: lush green terraces, but hot and rainy. Late September-mid October: golden harvest — the most popular season. Late October-February: brown/empty fields; occasional snow is stunning but rare. April-May: plowing and early planting, fields being filled with water.",
+    "pro_tip": "The rice harvest typically begins around October 15-20. After that, the golden color disappears rapidly. If you're coming for the gold, arrive before October 15. For the flooded mirror effect, late May is ideal. Check recent visitor photos online before booking your trip — conditions change week by week."
+  },
+  "getting_in": {
+    "opening_hours": "Scenic area: open all day, year-round. Ticket gates: approximately 9:00 AM - 6:00 PM. Cable car (Jinkeng only): operates during daylight hours.",
+    "price_rmb": "¥80 per person (valid for 3 days, covers all areas). Cable car: ¥60 one-way, ¥110 round trip.",
+    "price_usd": "~$11 entry. Cable car: ~$8 one-way, ~$15 return.",
+    "price_breakdown": [
+      {
+        "item": "Scenic area admission (covers all villages)",
+        "price": "¥80",
+        "highlight": "Valid for 3 days — covers Ping'an, Jinkeng/Dazhai, and Ancient Zhuang Village"
+      },
+      {
+        "item": "Cable car (Jinkeng area only) — one way",
+        "price": "¥60",
+        "highlight": "From Dazhai parking lot to Golden Buddha Peak — saves a steep 30-45 minute climb"
+      },
+      {
+        "item": "Cable car — round trip",
+        "price": "¥110",
+        "highlight": "Small 4-person gondola, about 15-20 minutes each way"
+      },
+      {
+        "item": "Electric shuttle/golf cart (Ping'an area)",
+        "price": "¥30 one way, ¥55 round trip",
+        "highlight": "From Ping'an parking lot to Nine Dragons and Five Tigers viewpoint"
+      },
+      {
+        "item": "Children 1.2-1.4m / Seniors 60-64",
+        "price": "¥40 (half price)",
+        "highlight": "With valid ID"
+      },
+      {
+        "item": "Seniors 65+ / Children under 1.2m",
+        "price": "Free (¥10 insurance/cleaning fee required)",
+        "highlight": "With valid ID"
+      }
+    ],
+    "booking_required": "No — tickets can be purchased at the gate. But buying through your accommodation or a tour operator often includes direct transport to your guesthouse, which is significantly more convenient.",
+    "booking_method": "Walk-up at ticket gates, or through Trip.com/Klook for packages with transport from Guilin. Many guesthouse owners will arrange tickets and transport if you book accommodation through them. If you'd rather not juggle bookings across multiple platforms, our concierge team can arrange the full package — tickets, transport from Guilin, and guesthouse coordination — in a single message.",
+    "passport_accepted": "Foreigners can purchase tickets with passport at the gate. Some ticket machines are ID-card-only — use the staffed windows.",
+    "what_to_bring": "Backpack (NO wheeled luggage — stairs only, no roads to guesthouses). Comfortable hiking shoes with grip. Rain jacket or poncho. Mosquito repellent. Warm layers (mountain temperatures drop significantly at night and in the morning). Flashlight/headlamp for after-dark walks. Cash (some village shops don't have mobile payment). Portable charger.",
+    "queue_situation": "During National Day (Oct 1-7) and peak weekends, shuttle bus queues inside the scenic area can exceed 1-2 hours. Cable car queues of 30-60 minutes are common in peak season. Off-peak, there are virtually no queues anywhere.",
+    "language_barrier_rating": "some-chinese-helps — Basic English understood at some guesthouses catering to foreigners. Ticket gates and transport staff speak Mandarin only. Viewpoint signage has some English. Village locals speak their own ethnic languages plus Mandarin."
+  },
+  "highlights": [
+    {
+      "name": "Seven Stars Accompany the Moon (七星伴月) — Ping'an",
+      "description": "The most iconic viewpoint in the entire terraces: seven small round rice paddies surrounding one larger paddy, creating a pattern that looks like seven stars around a moon. The curved lines of the terraces radiate outward in every direction.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the image you've seen in every guidebook and travel poster. In flooded season (May-June), the pools reflect the sky. In harvest season (September-October), it's a golden mosaic.",
+      "tip": "Walk from Nine Dragons and Five Tigers viewpoint to Seven Stars — it's a flat 20-minute walk with great views the whole way. Arrive for sunset light on the terraces.",
+      "image": "七星伴月.png"
+    },
+    {
+      "name": "Nine Dragons and Five Tigers (九龙五虎) — Ping'an",
+      "description": "A viewpoint where nine mountain ridges resemble dragons and five hilltops look like crouching tigers. The terraces cascade down the ridges in sweeping curves, creating one of the most dramatic panoramas in southern China.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Electric shuttle vehicles run from the Ping'an parking lot directly to this viewpoint (¥30), making it accessible even for those who can't handle the full hike.",
+      "tip": "Best in clear weather — on foggy days you'll see almost nothing. Morning light after fog burns off can create spectacular cloud-sea effects below the viewpoint.",
+      "image": "九龙五虎.jpg"
+    },
+    {
+      "name": "Golden Buddha Peak (金佛顶) — Jinkeng/Dazhai",
+      "description": "The highest viewpoint in the Jinkeng area, accessible by cable car. From 1,180m elevation, you look down on the largest continuous section of terraces, with the full scale of the Dragon's Backbone visible — terraces stretching from valley floor to mountaintop.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The cable car makes this accessible to visitors who can't handle the steep hiking. Multiple international reviewers specifically recommend it for the panoramic views.",
+      "tip": "Take the cable car up (saves 30-45 minutes of steep stairs) and walk down through the terraces and Dazhai village — the walk down is manageable and lets you see the terraces up close.",
+      "image": "金佛顶.jpg"
+    },
+    {
+      "name": "Ethnic Minority Village Life",
+      "description": "The Zhuang people inhabit the lower villages (Ping'an, Ancient Zhuang Village) and the Red Yao people live higher up (Dazhai/Jinkeng). Traditional stilt houses, wind-and-rain bridges, and the Yao women's famous floor-length hair (Guinness record holders) are living cultural experiences, not museum displays.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The Huangluo Yao Village has a cultural performance (¥80) featuring traditional songs, dances, and the famous long-hair washing demonstration. Some reviewers find it commercialized; others call it memorable.",
+      "tip": "Stay in a village guesthouse to experience village life after the day-trippers leave. Evening meals at guesthouses with bamboo rice, local vegetables, and rice wine are highlights. Free-roaming chickens, stone-path lanes, and morning rooster calls complete the picture.",
+      "image": "民族村寨生活.png"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Walking through the terraces themselves (not just viewing from above)",
+      "why": "Most visitors go straight to viewpoints and cable cars. But the narrow stone paths between flooded paddies, with the sound of water cascading from tier to tier and the smell of fresh earth, is a completely different and more intimate experience than the panoramic overlooks."
+    },
+    {
+      "what": "Nighttime illuminated terraces",
+      "why": "Some areas light up the terraces at night — walking among the glowing fields with only a flashlight is magical and almost tourist-free. Only overnight visitors experience this."
+    },
+    {
+      "what": "The food — especially bamboo chicken and bamboo rice",
+      "why": "Bamboo chicken (竹筒鸡) and bamboo rice (竹筒饭) are local specialties cooked inside fresh bamboo tubes over an open flame. The bamboo imparts a distinctive aroma. Most day-trippers rush through without eating. Multiple reviewers across all platforms rave about these dishes."
+    },
+    {
+      "what": "Ancient Zhuang Village (龙脊古壮寨)",
+      "why": "The smallest and least visited of the three areas, with the most authentic Zhuang stilt houses and an Ethnic Minority Museum. Almost no foreign tourists come here. It's the closest to the park entrance (1.5 hours from Guilin)."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Day 1: Drive from Guilin (2-2.5 hours) → check in at a guesthouse in Ping'an or Dazhai (田头寨) → afternoon hike to nearest viewpoint for sunset photos → dinner at guesthouse (order bamboo chicken in advance) → walk the illuminated terraces at night. Day 2: Wake early for sunrise from a viewpoint → breakfast → hike to second area or take cable car → explore village → lunch → depart for Guilin by early afternoon to avoid traffic.",
+    "what_to_skip": "Skip the Huangluo Long Hair Village performance (¥80) if you're short on time — it's increasingly commercialized and the best views are of the terraces, not stage shows. Skip trying to visit both Ping'an and Jinkeng in a single day trip from Guilin — you'll spend more time in a car than at the terraces.",
+    "pro_tips": "Stay in Dazhai/田头寨 (Tiantou Village) for the most convenient access to multiple Jinkeng viewpoints without using the cable car. Book your guesthouse first and ask the owner to arrange transport from Guilin — they often have partnerships with drivers and can get you door-to-door service. Bring a drone if you have one — the aerial perspective is extraordinary and several viewpoints are far from crowds. Arrive by early afternoon to beat traffic and catch sunset; depart by noon the next day."
+  },
+  "heads_up": [
+    {
+      "warning": "The mountain road is narrow, winding, and can cause severe car sickness",
+      "advice": "The last 27km from the scenic area entrance to the villages is all switchback mountain road. Take motion sickness medicine if you're prone to it. The shuttle buses drive aggressively on these roads. Driving yourself requires confidence on mountain roads. Our concierge can pre-book a private driver who knows the mountain roads well and drives at a pace that won't leave you green — just message us with your date and pickup location in Guilin."
+    },
+    {
+      "warning": "Fog and rain can completely block the views",
+      "advice": "Mountain weather is unpredictable. You might arrive to find the terraces completely hidden in fog. Staying overnight doubles your chances of catching a clear window. Some visitors report the fog parting for just 10 minutes — stay patient and ready with your camera."
+    },
+    {
+      "warning": "Steep stairs everywhere — no wheeled access to villages or viewpoints",
+      "advice": "There are hundreds of stone steps between parking lots and accommodations. Do NOT bring wheeled luggage — use a backpack only. Porters with bamboo poles will carry your bags for a fee (negotiate beforehand). The cable car only serves one area (Jinkeng to Golden Buddha Peak)."
+    },
+    {
+      "warning": "National Day holiday (Oct 1-7) creates gridlock on the single access road",
+      "advice": "The mountain road has only one lane each way. During peak holidays, traffic jams of 2-10 hours have been reported. Private cars may be banned during peak times, forcing you onto overcrowded shuttle buses. Visit just before or after the holiday."
+    },
+    {
+      "warning": "Village guesthouses are basic and conditions may surprise you",
+      "advice": "Expect simple rooms, possibly weak hot water, mountain-temperature nights requiring warm blankets, and occasional insects. The trade-off is waking up to a terrace view from your window that no five-star hotel can match. Li An Lodge in Ping'an is the upscale exception (~$200/night)."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Ticket machines at the entrance may only accept Chinese ID cards. Use the staffed ticket windows and present your passport. You need your ticket for multiple checkpoints inside the scenic area — keep it safe.",
+    "Cell phone signal is weak in parts of the mountain area. Download offline maps and share your location with someone before heading up. Don't rely on Didi for getting around once inside the scenic area. If you do get stuck without signal, our team can call local drivers and guesthouse owners on your behalf once you're back in range — just drop us a message with where you are.",
+    "The cable car is small (4 people) with no air conditioning, and can feel unstable in wind. One reviewer compared it unfavorably to better systems elsewhere. If you have fear of heights, be prepared.",
+    "Some ethnic minority cultural shows include audience participation segments (like mock 'weddings') that can feel awkward if you don't understand what's happening. Having some Mandarin or a guide helps.",
+    "The altitude difference (380m to 1,180m) combined with mountain weather means significant temperature drops — bring warm layers even in summer. Night temperatures can surprise visitors who packed for Guilin's tropical heat."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Arrived and it's completely fogged over — can't see anything",
+      "what_to_do": "Mountain fog often comes and goes. Find a tea house near a viewpoint, order local tea or rice wine, and wait. Multiple reviewers report the fog parting briefly — be ready. If staying overnight, conditions often clear by sunrise.",
+      "plan_b": "Explore the villages instead — the architecture, food, and cultural experiences are rewarding regardless of weather. The wooden stilt houses, wind-and-rain bridges, and village lanes are atmospheric in fog."
+    },
+    {
+      "problem": "Stuck in traffic on the mountain road and can't reach the terraces",
+      "what_to_do": "During National Day or peak weekends, traffic can back up for hours. There's no alternative road. Be patient, bring snacks and water, and accept the delay.",
+      "plan_b": "If you're driving yourself, arrive very early (before 8 AM) or very late afternoon to avoid the worst congestion. Alternatively, stay at a guesthouse and let the owner arrange your transport — they know the traffic patterns. If you're stuck and need to rearrange your plans, message our team — we can call ahead to your guesthouse, rebook onward transport, or adjust your next day's schedule on the fly."
+    },
+    {
+      "problem": "Too exhausted to hike to the viewpoints",
+      "what_to_do": "In Jinkeng: take the cable car to Golden Buddha Peak (¥60 one way). In Ping'an: take the electric shuttle to Nine Dragons and Five Tigers (¥30). Both viewpoints are accessible without the full hike.",
+      "plan_b": "Many guesthouses in Dazhai/田头寨 have terrace views directly from their balconies or rooftop terraces. You can enjoy the scenery without climbing to a formal viewpoint. Ask your guesthouse owner for the nearest easy viewpoint. If the hike has taken it out of you, message us when you're back in Guilin — we can book a massage or spa session so you recover before your next adventure."
+    },
+    {
+      "problem": "Got lost on the hiking trails between villages",
+      "what_to_do": "The trails have signposts at major intersections, but smaller paths branch off into farm areas. Head downhill — you'll eventually reach a village or road. Ask any local: '平安寨怎么走？' (Píng'ān zhài zěnme zǒu?) or '大寨怎么走？' (Dàzhài zěnme zǒu?).",
+      "plan_b": "Cell signal works in most village areas. If you can get signal, use maps or call your guesthouse for directions. The villages are spread along valleys — following any water stream downhill will lead to habitation."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Sturdy hiking shoes with good grip (wet stone steps are very slippery — one reviewer saw someone fall into a lower terrace). Layers for temperature changes between valley and summit. Rain jacket or poncho. Hat for sun protection. Long pants recommended for hiking through tall grass between terraces.",
+    "what_to_bring": "Backpack only — NO wheeled luggage. Rain gear (mountain weather changes fast). Warm layer even in summer (evenings are cool at elevation). Flashlight/headlamp for nighttime walks. Mosquito repellent. Portable charger. Cash for small purchases. Camera with zoom lens. Motion sickness medication for the mountain road.",
+    "what_not_to_bring": "Roller suitcases (impossible on the stairs). Tripods are fine but add weight on the hike. Drones require caution near the cable car."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "hard",
+    "physical_details": "Getting from parking lots to villages and viewpoints requires climbing hundreds of steep stone steps — there is no flat alternative route. The hike from Ping'an to Ancient Zhuang Village is 5km, 2 hours, and rated easy. The Dazhai to Ping'an hike is 17km, 5 hours, and rated moderate. The cable car eliminates the hardest climb in Jinkeng, but you still need to walk significant stairs to reach it. Elevation ranges from 380m to 1,180m.",
+    "age_notes": "Multiple reviewers explicitly warn this is not suitable for elderly visitors with knee problems. The electric shuttle at Ping'an helps, and the cable car at Jinkeng helps, but significant stairs remain unavoidable. Children are fine if fit and supervised on narrow paths. Strollers are impossible.",
+    "health_warnings": "Knee and ankle strain from prolonged stair climbing is the primary risk. Heat exhaustion possible in summer. Slippery wet stone paths cause falls — one reviewer witnessed someone tumbling to a lower terrace. Altitude differences cause rapid temperature changes — hypothermia risk in winter without adequate clothing."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a 2-day/1-night guided tour from Guilin with transport and accommodation",
+      "platform": "Klook, Trip.com, GetYourGuide",
+      "value_to_user": "Eliminates the single biggest hassle — transport logistics on the mountain road. Package typically includes hotel pickup, scenic area tickets, guesthouse accommodation, and an English-speaking guide. Usually ¥400-800 per person. Highly recommended for first-time visitors."
+    },
+    {
+      "action": "Book accommodation through guesthouse directly for pickup service",
+      "platform": "Trip.com, Booking.com, or contact guesthouse via WeChat",
+      "value_to_user": "Guesthouse owners often arrange direct van transport from Guilin train stations or airport, avoiding the public bus system. They know the roads, carry your bags, and can cook dinner for you on arrival."
+    },
+    {
+      "action": "Book a day-trip package from Guilin",
+      "platform": "Klook, Trip.com",
+      "value_to_user": "If you can't stay overnight, a guided day trip handles transport and timing efficiently. Usually visits one terrace area only. ¥200-400 per person. Be aware you'll miss sunrise/sunset."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Lóngjǐ Tītián",
+      "chinese": "龙脊梯田",
+      "english": "Longji Rice Terraces (Dragon's Backbone)"
+    },
+    {
+      "pinyin": "Píng'ān Zhài",
+      "chinese": "平安寨",
+      "english": "Ping'an Village"
+    },
+    {
+      "pinyin": "Jīnkēng Dàzhài",
+      "chinese": "金坑大寨",
+      "english": "Jinkeng / Dazhai Village"
+    },
+    {
+      "pinyin": "Qī Xīng Bàn Yuè",
+      "chinese": "七星伴月",
+      "english": "Seven Stars Accompany the Moon (viewpoint)"
+    },
+    {
+      "pinyin": "Jiǔ Lóng Wǔ Hǔ",
+      "chinese": "九龙五虎",
+      "english": "Nine Dragons and Five Tigers (viewpoint)"
+    },
+    {
+      "pinyin": "Jīn Fó Dǐng",
+      "chinese": "金佛顶",
+      "english": "Golden Buddha Peak (viewpoint)"
+    },
+    {
+      "pinyin": "Suǒdào",
+      "chinese": "索道",
+      "english": "Cable car"
+    },
+    {
+      "pinyin": "Zhútǒng fàn",
+      "chinese": "竹筒饭",
+      "english": "Bamboo rice (must-try local dish)"
+    },
+    {
+      "pinyin": "Zhútǒng jī",
+      "chinese": "竹筒鸡",
+      "english": "Bamboo chicken (must-try local dish)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Guilin city attractions (Elephant Trunk Hill, Sun and Moon Pagodas)",
+      "why": "Most visitors base themselves in Guilin before or after the terraces. The city's karst landscape landmarks are a natural complement and don't require significant additional travel.",
+      "travel_time": "2-2.5 hours by car from the terraces"
+    },
+    {
+      "suggestion": "Huangluo Yao Village (黄洛瑶寨)",
+      "why": "At the foot of the Ping'an terraces, this Red Yao village is famous for its women's extraordinarily long hair (Guinness record: longest group hair). Cultural performances daily. It's on the way — no detour needed.",
+      "travel_time": "At the entrance to the scenic area — you pass through it"
+    },
+    {
+      "suggestion": "Yangshuo and Li River",
+      "why": "If you're exploring Guilin's region, combining the terraces with a Li River cruise to Yangshuo creates a comprehensive Guangxi nature trip. Note: Yangshuo is 4+ hours from the terraces, so plan separate days.",
+      "travel_time": "4+ hours by car (better done as separate multi-day trips)"
+    }
+  ],
+  "cultural_context": "The Longji Rice Terraces were first carved during the Yuan Dynasty (700+ years ago) by Zhuang and Yao ethnic minorities who had no flat land to farm. Using only hand tools and fire-clearing techniques over centuries, they transformed entire mountainsides into productive farmland — the terraces eventually reaching their current scale during the Ming and Qing Dynasties. The irrigation system is ingenious: water diverted from mountain springs cascades from the highest terrace to the lowest, feeding each paddy in turn. In 2018, the terraces were recognized as a Globally Important Agricultural Heritage System. The two main ethnic groups maintain distinct cultures: the Zhuang people live in lower villages with distinctive stilt houses, while the Red Yao people live higher up — the Yao women are famous for never cutting their hair, which can exceed 1.8 meters in length. The terraces are still actively farmed, though increasingly for tourism aesthetics (one crop per year for visual impact) rather than purely for food production.",
+  "photo_spots": [
+    {
+      "location": "Seven Stars Accompany the Moon viewpoint (Ping'an)",
+      "tip": "Late afternoon golden hour light is ideal. In May-June, the flooded fields create mirror reflections. In September-October, golden rice creates the postcard shot. A telephoto lens isolates the 'seven stars and moon' pattern.",
+      "why": "The single most iconic and widely photographed viewpoint in all of Longji — the geometric pattern of round paddies is unique and instantly recognizable."
+    },
+    {
+      "location": "Golden Buddha Peak (Jinkeng) at sunrise",
+      "tip": "Wake before dawn and hike or take the first cable car up. Bring a tripod for low-light shots. Cloud seas below the summit are common in spring and autumn mornings — magical when they part to reveal the terraces below.",
+      "why": "The highest viewpoint offers the most expansive panoramic view — layers of terraces stretching in every direction, often with dramatic cloud formations."
+    },
+    {
+      "location": "Walking through the terraces at close range",
+      "tip": "Leave the main viewpoints and walk the narrow paths between paddy fields. In flooded season, the reflections and water-cascade sounds create intimate, meditative compositions. A wide-angle lens captures the depth of the terraces from inside.",
+      "why": "Ground-level shots among the terraces provide human-scale perspective that distant viewpoint photos cannot — you feel the texture of ancient stone walls and hear the water moving from tier to tier."
+    },
+    {
+      "location": "Village stilt houses with terraces behind",
+      "tip": "Dazhai/田头寨 village has several spots where traditional wooden houses frame the terraces behind them. Overcast or misty conditions create an ethereal, painterly quality. Morning cooking smoke adds atmosphere.",
+      "why": "Combining architecture and landscape tells the story of humans living within this extraordinary landscape — the best images show both the terraces and the people who made them."
+    }
+  ],
+  "card_name": "Longji Rice Terraces",
+  "card_type": "RICE TERRACES",
+  "card_hook": "Seven centuries of farming carved into the Dragon's Backbone.",
+  "best_for": [
+    "nature-lovers",
+    "photographers-paradise",
+    "hiking-enthusiasts",
+    "off-the-beaten-path",
+    "overnight-adventure",
+    "cultural-immersion"
+  ]
+}

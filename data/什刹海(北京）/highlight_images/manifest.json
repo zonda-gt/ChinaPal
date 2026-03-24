@@ -1,0 +1,33 @@
+{
+  "attractionName": "什刹海",
+  "cityName": "北京",
+  "inputPath": "data/什刹海(北京）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T19:53:03.162Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Houhai Bar Street and Lakeside",
+      "query": "Houhai Bar Street and Lakeside 什刹海 北京",
+      "outputPath": "data/什刹海(北京）/highlight_images/01-Houhai_Bar_Street_and_Lakeside/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Hutong Alleys (胡同)",
+      "query": "胡同 什刹海 北京",
+      "outputPath": "data/什刹海(北京）/highlight_images/02-胡同/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Silver Ingot Bridge (银锭桥)",
+      "query": "银锭桥 什刹海 北京",
+      "outputPath": "data/什刹海(北京）/highlight_images/03-银锭桥/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Xihai (West Lake) — The Quiet One",
+      "query": "West Lake 什刹海 北京",
+      "outputPath": "data/什刹海(北京）/highlight_images/04-West_Lake/raw/baidu_images.json"
+    }
+  ]
+}

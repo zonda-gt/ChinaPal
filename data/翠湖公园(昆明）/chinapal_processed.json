@@ -1,0 +1,235 @@
+{
+  "attraction_name_cn": "翠湖公园",
+  "attraction_name_en": "Green Lake Park (Cuihu Park)",
+  "address_cn": "昆明市五华区翠湖南路67号",
+  "experience_type": "sightseeing",
+  "hook": "A free urban park that transforms into a living postcard every winter, when tens of thousands of Siberian red-billed gulls descend on the lake and eat straight from visitors' hands — the most charming wildlife encounter in any Chinese city center.",
+  "honest_description": "Green Lake Park is Kunming's most beloved urban green space — a 21-hectare oasis of willow-lined causeways, lotus-filled lakes, Qing Dynasty pavilions, and constant human activity. It's not a must-visit tourist attraction in the traditional sense; it's a window into local Kunming life. On any given morning, you'll find retirees doing tai chi, sword dancers, amateur opera singers, calligraphers practicing on the pavement, and chess players arguing under the trees. The real magic happens from November through March, when thousands of migratory red-billed gulls arrive from Siberia, turning the lake into a spectacular bird-watching scene where you can feed the gulls from your hand. The park is free, centrally located next to Yunnan University, and surrounded by excellent food streets, coffee shops, and historical sites like the Yunnan Military Academy. It's not going to blow your mind with dramatic scenery, but it will give you one of those rare, genuine moments of connection with local Chinese life. Best for travelers who appreciate slow travel, local culture, and don't need every hour to be a highlight-reel moment.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth visiting if I'm not there during gull season (November-March)?",
+      "answer": "Yes, but the experience is quite different. Summer has big lotus blooms everywhere, spring has a tulip festival, and autumn offers golden foliage. Year-round, locals use the park constantly — tai chi, dancing, music, calligraphy — so there's always something going on. But the winter gull experience is truly unique and should be prioritized if possible. Without the gulls, budget 1 hour; with the gulls, you'll easily spend 2 hours."
+    },
+    {
+      "question": "How does this compare to other city parks — is it really worth my time?",
+      "answer": "If you only have one day in Kunming, this may not be the best use of your limited time compared to the Stone Forest or Western Hills. But if you have a half-day or want a relaxing morning activity, Green Lake is perfect. It's free, easy to reach, and uniquely Kunming. The surrounding streets (Wenlin Street, Huanggong East Street, Qianju Street) are packed with interesting cafes, local snacks, and photography spots, making it easy to combine into a 2-3 hour neighborhood walk."
+    }
+  ],
+  "experience_format_note": "Free-entry urban park open from 6 AM to midnight. No tickets, no queues, no reservations needed. Just walk in through any gate. The park has multiple entrances (south, north, east, west gates). Inside you'll find paved walking paths, traditional pavilions, bridges, boat rental docks, snack shops, and clean public toilets. During winter gull season, vendors sell bags of gull food (about 5 RMB) at the entrances. The park is flat and fully paved — accessible for wheelchairs and strollers.",
+  "vibe": "A living room for the whole city — where grandparents feed gulls alongside college students in cosplay, sword dancers share space with street musicians, and ancient pavilions glow behind curtains of willow branches.",
+  "time_needed": {
+    "quick_visit": "45 minutes - 1 hour (loop around the lake, take some photos)",
+    "recommended": "1.5-2 hours (explore all sections, feed the gulls in winter, watch local activities, grab a snack)",
+    "deep_dive": "3-4 hours (combine with Yunnan Military Academy, Wenlin Street food crawl, Yunnan University campus walk)"
+  },
+  "best_time": {
+    "best_time_of_day": "Morning 9:00-11:00 AM for the best local atmosphere — tai chi groups, bird feeders, and soft light. During gull season, 10:00 AM - 3:00 PM offers the best light for photography and the most active gull feeding.",
+    "worst_time": "Late at night after 10 PM — the park empties and there's little to see. Midday in summer can be hot, though Kunming's climate is mild.",
+    "seasonal_notes": "November to March is peak season for the iconic gull experience — tens of thousands of red-billed gulls migrate from Siberia. Late February to April features the annual tulip festival. Summer (June-August) brings lotus blooms. Autumn has golden ginkgo leaves, especially along Wenlin Street nearby.",
+    "pro_tip": "Visit in December or January for the peak gull population, then walk to Wenlin Street for a coffee or meal afterward. The combination of gulls + Wenlin Street + Yunnan University campus is the quintessential Kunming morning."
+  },
+  "getting_in": {
+    "opening_hours": "Year-round. April-November: 6:00 AM - midnight. December-March: 6:00 AM - 11:00 PM.",
+    "price_rmb": "Free",
+    "price_usd": "Free",
+    "price_breakdown": [
+      {
+        "item": "Park entry",
+        "price": "Free",
+        "highlight": "No ticket needed"
+      },
+      {
+        "item": "Pedal boat rental",
+        "price": "~¥30/hour",
+        "highlight": "Fun way to get on the lake"
+      },
+      {
+        "item": "Gull food (winter only)",
+        "price": "¥5/bag",
+        "highlight": "Sold by vendors at park entrances"
+      }
+    ],
+    "booking_required": "No — just walk in.",
+    "booking_method": "Not applicable.",
+    "passport_accepted": "Not applicable — no tickets required.",
+    "what_to_bring": "Light clothing (Kunming weather is mild year-round). Camera. Mosquito repellent in summer. In winter, bring bread or buy gull food at the entrance for feeding.",
+    "queue_situation": "No queues ever. The park is open-access.",
+    "language_barrier_rating": "moderate — Most park signage is in Chinese only. Few locals speak English, but interactions are simple (buying gull food, renting boats). The surrounding area near Yunnan University has more English-friendly cafes."
+  },
+  "highlights": [
+    {
+      "name": "Winter gull feeding (红嘴鸥)",
+      "description": "Every winter from November to March, tens of thousands of red-billed gulls migrate from Siberia to Green Lake. Visitors can feed them by hand or toss food into the air, creating spectacular scenes of swooping, diving birds against the blue Kunming sky. The gulls are remarkably tame and will land on your arms.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is genuinely one of the most accessible and magical wildlife encounters you'll find in any Chinese city. No other urban park offers anything like it. The scene of thousands of white birds against the blue lake is extraordinary.",
+      "tip": "Buy gull food (鸥粮) at the park entrance rather than bread — it's healthier for the birds and they respond more enthusiastically. The best feeding spots are along the causeways and near the Nine-curved Bridge."
+    },
+    {
+      "name": "Local life and cultural activities",
+      "description": "Green Lake is where Kunming's residents come to live their lives — morning tai chi, group dancing in colorful ethnic costumes, amateur Dian opera performances, calligraphy practice with water brushes on the pavement, card games, and spirited chess matches. This is authentic, unperformed daily life.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "For foreign visitors tired of staged cultural performances, Green Lake's spontaneous displays of local life are refreshingly real. You might see a 70-year-old doing sword dance next to a group of college kids in cosplay. It's wonderful.",
+      "tip": "The most activity happens between 7-10 AM. The southwest island area near the Nie Er statue tends to have the most music and dance groups."
+    },
+    {
+      "name": "Qing Dynasty pavilions and causeways",
+      "description": "Two historic causeways (Ruan Causeway from 1835 and Tang Causeway from 1919) crisscross the lake, dividing it into five sections and connecting islands with traditional pavilions. The Haixin Pavilion dates to 1692 and features classic Qing Dynasty architecture with upturned eaves and yellow glazed tiles.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The architecture is pleasant but not remarkable compared to major Chinese historical sites. The real value is the atmosphere — traditional buildings set against willow trees and shimmering water. Good for photography but not a destination in itself.",
+      "tip": "The Nine-curved Bridge (九曲桥) in the southern area offers the best panoramic views and is one of the most photogenic spots in the park."
+    },
+    {
+      "name": "Surrounding neighborhood (Wenlin Street, Huanggong East Street)",
+      "description": "The streets surrounding Green Lake — Wenlin Street, Huanggong East Street, Qianju Street, and Culture Lane — form one of Kunming's most charming neighborhoods, packed with specialty coffee shops, Yunnan snack restaurants, vintage bookstores, and photogenic yellow-walled alleyways.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This neighborhood has more character and variety than most tourist areas in Kunming. You'll find excellent coffee, Yunnan specialties like mushroom hotpot and crossing-the-bridge noodles, and a bohemian atmosphere thanks to nearby Yunnan University.",
+      "tip": "Huanggong East Street has yellow walls and green trees that are very photogenic. Wenlin Street in December has golden ginkgo leaves lining the road."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Yunnan Military Academy (陆军讲武堂) — directly adjacent to the park's west gate",
+      "why": "This beautifully preserved yellow building trained some of China's most important 20th-century military leaders including Zhu De and Ye Jianying. Free entry, excellent exhibits, and striking architecture. Most foreign tourists walk right past it without realizing it's there."
+    },
+    {
+      "what": "The Nine Dragons Pond and old waterworks museum inside the park",
+      "why": "In the northeast corner of the park, this small museum tells the story of Kunming's first waterworks (1918). A quirky piece of local history that most visitors skip in favor of the main lake areas."
+    },
+    {
+      "what": "Evening atmosphere after dark",
+      "why": "Most tourists visit during the day, but the park has a different charm at night — lit pavilions, couples strolling, and a quieter, more romantic atmosphere. The park stays open until midnight in summer."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter from the South Gate (closest to bus stops and metro) → Walk along the Ruan Causeway to the central Haixin Pavilion → Continue to the Nine-curved Bridge area for photos → In winter, find a good gull-feeding spot along the western causeways → Exit from the West Gate and visit the Yunnan Military Academy → Walk to Wenlin Street or Huanggong East Street for food and coffee.",
+    "what_to_skip": "The children's amusement rides and commercial boat tours inside the park — they're overpriced and not worth the time. The souvenir shops inside the park sell generic items; better souvenirs can be found on the surrounding streets.",
+    "pro_tips": "Combine Green Lake with these nearby attractions for a perfect Kunming morning: Green Lake → Military Academy → Yunnan University campus (beautiful architecture) → Wenlin Street for lunch. This 3-4 hour route captures the essence of Kunming's culture and costs almost nothing."
+  },
+  "heads_up": [
+    {
+      "warning": "It's a city park, not a major tourist attraction",
+      "advice": "Manage your expectations. This is not a dramatic scenic spot — it's a pleasant urban park where you experience local life. If you're only in Kunming for one day, prioritize the Stone Forest or Western Hills for scenery, and use Green Lake as a pleasant morning warm-up."
+    },
+    {
+      "warning": "Very crowded on weekends and holidays",
+      "advice": "The park draws huge local crowds, especially on weekends and during gull season. Weekday mornings are significantly more peaceful. If you want good gull photos without masses of people, arrive early on a weekday."
+    },
+    {
+      "warning": "Mosquitoes in summer",
+      "advice": "The lake and vegetation attract mosquitoes during warm months. Bring repellent if visiting June through September."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The park is free and open-access — no tickets, no reservations, no barriers. Just walk in through any gate.",
+    "Gull food (鸥粮) costs about 5 RMB per bag at park entrances. Don't feed the gulls bread — it's unhealthy for them and park regulations discourage it.",
+    "The surrounding neighborhood has excellent food but menus are entirely in Chinese. Use a translation app or point-and-order. Try mushroom hotpot (菌火锅), crossing-the-bridge noodles (过桥米线), and fresh flower cakes (鲜花饼). If you want help ordering, send us a photo of the menu and we’ll translate it and suggest the best dishes.",
+    "Mobile payment (WeChat/Alipay) dominates. Some small vendors may not accept cash. Have your phone payment set up. If you’re having trouble setting up WeChat Pay or Alipay, message our team and we can walk you through it step by step."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Arrived outside gull season and the park feels ordinary",
+      "what_to_do": "Focus on the local life aspect — watch the tai chi, dancing, and cultural activities. Walk to the Yunnan Military Academy and Yunnan University campus for more substance. The surrounding food streets are excellent regardless of season.",
+      "plan_b": "Take a taxi or metro to the Western Hills (西山) for dramatic Dianchi Lake views and the Dragon Gate grottoes — a much more visually impressive half-day trip. Message us and we can arrange transport to the Western Hills and recommend the best route up based on your fitness level."
+    },
+    {
+      "problem": "Too crowded to enjoy",
+      "what_to_do": "Head to the northeast Bamboo Forest Island section, which is usually quieter. Or exit to the surrounding streets where the crowds thin out significantly.",
+      "plan_b": "Visit early the next morning (before 8 AM) when the park is peaceful and you can enjoy the tai chi practitioners and early bird feeders without the tourist crush."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Casual, comfortable clothes. Kunming's weather is famously mild (15-25°C year-round, earning it the nickname 'Spring City'). Light layers are ideal. Wear light-colored clothes for better gull photos in winter.",
+    "what_to_bring": "Camera, sunscreen (Kunming's UV is strong at altitude), water bottle, mosquito repellent in summer. In winter, bring a light jacket and money for gull food.",
+    "what_not_to_bring": "No special equipment needed. Don't bring bulky bags — the park is compact and casual."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "light",
+    "physical_details": "Completely flat terrain with paved paths throughout. No stairs, no hills. The full park loop is about 2-3 km. Wheelchair and stroller accessible on all main paths. Multiple benches and rest areas throughout.",
+    "age_notes": "Suitable for all ages including elderly and very young children. The park is popular with local families and retirees. Children enjoy feeding the gulls and riding the pedal boats.",
+    "health_warnings": "Kunming sits at 1,890 meters elevation — visitors from sea level may notice mild altitude effects (slight breathlessness). Drink extra water. UV is strong due to altitude and latitude — wear sunscreen even on cloudy days."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Arrange a combined Green Lake + Yunnan University + Wenlin Street walking tour",
+      "platform": "Local English-speaking guide via Klook or GetYourGuide",
+      "value_to_user": "A guide can decode the cultural activities happening in the park, explain the historical significance, and navigate the local food scene on surrounding streets."
+    },
+    {
+      "action": "Book a mushroom hotpot dinner near Green Lake",
+      "platform": "Hotel concierge or Dianping app",
+      "value_to_user": "Kunming's wild mushroom hotpot is a unique regional experience. Several excellent restaurants are within walking distance of the park — Xilou (熙楼) on the west side is popular. Our concierge can make the reservation for you, recommend the best mushroom varieties to order, and even call the restaurant on your behalf if you have dietary requirements."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Cuì Hú Gōngyuán",
+      "chinese": "翠湖公园",
+      "english": "Green Lake Park (what to tell taxi drivers)"
+    },
+    {
+      "pinyin": "Hóngzuǐ ōu",
+      "chinese": "红嘴鸥",
+      "english": "Red-billed gull"
+    },
+    {
+      "pinyin": "Ōu liáng",
+      "chinese": "鸥粮",
+      "english": "Gull food"
+    },
+    {
+      "pinyin": "Guòqiáo mǐxiàn",
+      "chinese": "过桥米线",
+      "english": "Crossing-the-bridge rice noodles (must-try dish)"
+    },
+    {
+      "pinyin": "Xiānhuā bǐng",
+      "chinese": "鲜花饼",
+      "english": "Flower cake (Yunnan specialty)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Yunnan Military Academy (云南陆军讲武堂)",
+      "why": "Free museum in a stunning yellow building directly adjacent to the park's west gate. One of China's most important early 20th-century military academies with excellent historical exhibits.",
+      "travel_time": "2-minute walk from Green Lake's west gate"
+    },
+    {
+      "suggestion": "Western Hills & Dragon Gate (西山龙门)",
+      "why": "For the dramatic scenic experience that Green Lake doesn't provide — cliff-carved Taoist grottoes with panoramic views over Dianchi Lake. Perfect afternoon complement to a Green Lake morning.",
+      "travel_time": "30-40 minutes by taxi or Metro Line 3"
+    },
+    {
+      "suggestion": "Stone Forest (石林)",
+      "why": "Kunming's most famous natural attraction — towering limestone formations. A full day trip that pairs well with Green Lake for travelers spending 2+ days in Kunming.",
+      "travel_time": "1.5-hour drive or tourist bus from city center"
+    }
+  ],
+  "cultural_context": "Green Lake has been Kunming's heart since the Ming Dynasty, when it was part of Dianchi Lake before water levels dropped. The two causeways — Ruan Causeway (1835, named after the scholar-official Ruan Yuan who modeled it after Hangzhou's Su Causeway) and Tang Causeway (1919, built by warlord Tang Jiyao) — reflect the park's evolution from imperial retreat to public space. The gull phenomenon began in 1985 and has become Kunming's most beloved annual event, symbolizing the city's identity as the 'Spring City' where nature and urban life coexist harmoniously. For Kunming residents, Green Lake isn't just a park — it's their community living room, a place that embodies the city's famously relaxed, livable character.",
+  "photo_spots": [
+    {
+      "location": "Along the causeways during gull feeding",
+      "tip": "Stand on the Ruan Causeway or Tang Causeway and toss gull food upward — the gulls swooping down with the lake and pavilions behind creates stunning shots. Use burst mode on your camera.",
+      "why": "Thousands of white gulls in flight against blue lake and traditional pavilions — this is the iconic Kunming image that you can only capture here."
+    },
+    {
+      "location": "Nine-curved Bridge (九曲桥)",
+      "tip": "Go during golden hour (late afternoon) for warm light on the water. The zigzag shape of the bridge creates interesting leading lines in photos.",
+      "why": "The bridge offers panoramic views of the park and creates a classic Chinese garden composition with water, willows, and pavilions."
+    },
+    {
+      "location": "Huanggong East Street (黄公东街) — outside the park's east gate",
+      "tip": "The yellow walls with green trees create a distinctive backdrop. Visit in December when golden ginkgo leaves carpet the ground.",
+      "why": "Instagram-worthy street scene that captures Kunming's unique character — colonial-era yellow walls against lush greenery."
+    }
+  ],
+  "card_name": "Green Lake Park",
+  "card_type": "URBAN PARK",
+  "card_hook": "Kunming's living room — where Siberian gulls eat from your hand.",
+  "best_for": [
+    "local-life-immersion",
+    "wildlife-encounters",
+    "morning-stroll",
+    "free-attraction",
+    "photography"
+  ]
+}

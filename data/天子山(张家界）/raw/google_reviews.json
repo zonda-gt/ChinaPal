@@ -1,0 +1,320 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/Tianzishan+Nature+Reserve/@29.379323,110.463655,17z/data=!3m1!4b1!4m6!3m5!1s0x369b0430f39cb1c1:0x88363117a8b154fa!8m2!3d29.379323!4d110.463655!16s%2Fg%2F1tdy2r6d",
+  "collectedAt": "2026-03-23T07:52:21.939Z",
+  "scrapeMethod": "rpc",
+  "sort": "Most relevant",
+  "minLength": 80,
+  "longReviewCount": 14,
+  "shortReviewCountCollected": 20,
+  "shortReviewCountUsed": 20,
+  "backfilledWithShortReviews": true,
+  "count": 34,
+  "reviews": [
+    {
+      "reviewId": "ChdDSUhNMG9nS0VPblRnY09uM2JPRnJnRRAB",
+      "authorName": "Riccardo",
+      "starRating": 5,
+      "reviewDate": "10 months ago",
+      "localGuideInfo": "Local Guide · 290 reviews",
+      "text": "You can get to the top of the mountain by cableway( really stunning) or with different hikes. We do both, we started the hike from 10 miles galleries and in the beginning there are lot of monkey (do not feed them because they could become aggressive). The hike takes around 2 hour, many stair, I suggest to do it only if you are well trained, otherwise use the cableway.",
+      "scrapedAt": "2026-03-23T07:52:20.136Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUNqdG9uclFnEAE",
+      "authorName": "B Przystawski",
+      "starRating": 5,
+      "reviewDate": "a year ago",
+      "localGuideInfo": "Local Guide · 178 reviews",
+      "text": "Tianzishan National Park stands as a testament to the awe-inspiring beauty of nature, offering visitors an unforgettable experience with its stunning vistas and exhilarating hiking trails. Nestled amidst the majestic peaks of the Zhangjiajie region, the park enchants visitors with its surreal landscapes and breathtaking views. One of the highlights of Tianzishan is undoubtedly its panoramic viewpoints, which offer sweeping vistas of the surrounding mountains and valleys. From the iconic \"Avatar Hallelujah Mountain\" to the ethereal sea of clouds that often blankets the peaks, every turn presents a new and mesmerizing sight. The park's hiking trails wind their way through forests of ancient trees and across precipitous cliffs, providing adventurers with a thrilling journey through some of China's most dramatic scenery. Whether embarking on a leisurely stroll or tackling a more challenging ascent, hikers are rewarded with unparalleled views and a sense of exhilaration that comes from being immersed in nature's grandeur. In addition to its natural wonders, Tianzishan is also home to cultural landmarks such as the Tianzi Pavilion, which offers insight into the region's rich history and heritage. These sites add depth and significance to the visitor experience, further enriching an already unforgettable journey. In summary, Tianzishan National Park is a must-visit destination for anyone seeking to be inspired by the beauty of the natural world. With its amazing views and exhilarating hiking trails, it offers an experience that is both enchanting and invigorating.",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tWc2FWVk9VWFEyUlZjNFVrSndVM0ZOTjNCWFJuYxAB",
+      "authorName": "Rahul Sharma",
+      "starRating": 5,
+      "reviewDate": "4 months ago",
+      "localGuideInfo": "Local Guide · 25 reviews",
+      "text": "One of the most unique places on earth. If you are Avatar movie fan like me, you’ll love this place",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUNnc2Ffd1dBEAE",
+      "authorName": "Anuwat Rojpitipongsakorn",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 5 reviews",
+      "text": "Shouldn’t hiking up, it would take 2.5-3 hour. Take cable car and walk down is better choice (walking down 90 mins)",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSURBd0xuQlpREAE",
+      "authorName": "Wei Li Ng",
+      "starRating": 5,
+      "reviewDate": "9 years ago",
+      "localGuideInfo": "Local Guide · 226 reviews",
+      "text": "Very scenic, but do prepare for rain as on average this region rain for more than 200 days per year",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSURMd2EtZkhnEAE",
+      "authorName": "J G",
+      "starRating": 5,
+      "reviewDate": "a year ago",
+      "localGuideInfo": "Local Guide · 130 reviews",
+      "text": "it’s a beautiful place, a pity it’s in China.. the experience is totally ruined by what seemed like never ending flocks of crows just relentlessly smashing into your face. the smell and the noise… god bless.",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2t4SFpreFNOek40WXpneVRUbHBVVmxKYkRCNFozYxAB",
+      "authorName": "J J",
+      "starRating": 5,
+      "reviewDate": "5 months ago",
+      "localGuideInfo": "Local Guide · 418 reviews",
+      "text": "來的時候都是霧茫茫 欣賞不了美景 路途艱辛 也沒有勇氣再來一次了 位於張家界國家森林公園的北部，東臨索溪峪景區，因其原始的自然風光而聞名。 天子山有各種造型奇異的地質景觀和奇形山峰，如御筆峰、仙女獻花、點將台等。雨過初晴的天子山雲霧十分壯觀，奔湧的雲霧形態多樣，波瀾壯闊。",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2sweVRUSjJOVUZzTlhnMk5tZHRVRkJaWmxKR04yYxAB",
+      "authorName": "Twiz",
+      "starRating": 5,
+      "reviewDate": "8 months ago",
+      "localGuideInfo": "Local Guide · 2.4K reviews",
+      "text": "（2025/3/27） 由袁家界搭乘環保車到天子山之後，下山往東門方向通常是選擇花費¥72搭乘索道纜車，我感覺體力與時間充足而選擇徒步下山，但一路上沒看到我以外的徒步下山觀光客，可說是我在張家界景區內難得完全聽不到人聲的區域。 雖說我走的是下坡，但也不是完全下坡，而是上坡與下坡混雜，通常這路線的步行時長是90分到120分鐘，個人花70分鐘完成應該已經算腳程快，仍感相當辛苦。",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnTURvNExtbkxnEAE",
+      "authorName": "Michael Fritschi",
+      "starRating": 5,
+      "reviewDate": "11 months ago",
+      "localGuideInfo": "Local Guide · 20 reviews",
+      "text": "Sehr imposante Landschaft, die man nicht am Wochenende unde in den Ferien besuchen sollte. Wir hatten 30000 Besucher, die Guides waren mit Lautsprecher unterwegs und es war sehr laut und extrem unangenehm.",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VKVExoc3Z1NUsyV0Z3EAE",
+      "authorName": "Cong Thao Pham",
+      "starRating": 5,
+      "reviewDate": "10 months ago",
+      "localGuideInfo": "Local Guide · 80 reviews",
+      "text": "Núi Thiên tử sơn nằm trong quần thể rừng quốc gia Trương gia giới với các ngọn núi đá như ngọn trông chọc lên trời giữa thung lũng rừng xanh khá ấn tượng và độc đáo. Đi thang máy cao tốc lên đỉnh núi Vũ Lăng Nguyên, sau đó di chuyển trên đỉnh núi để quan sát.",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURWcGNPeS1RRRAB",
+      "authorName": "长脸张少侠",
+      "starRating": 5,
+      "reviewDate": "2 years ago",
+      "localGuideInfo": "Local Guide · 770 reviews",
+      "text": "【天子山】 天子山因明初土家族领袖向大坤自号“向王天子”，而得名。天子山东临索溪峪，南接张家界，北依桑植县，是武陵源区四大风景之一。 天子山位于“金三角”的最高处，素有“扩大的盆景，缩小的仙境”的美誉。天子山海拔最高1262.5米（昆仑峰），最低534米（狮兰峪）。景区总面积67平方公里，环山游览线有45公里。 天子山的风光，用一名话来概括，就是“原始风光自然美”。她的景观、景点都是天造地设，全无人工雕琢痕迹。这里不但有奇山秀水，还有淳朴的民情，奇特的民俗、独具风味的民族食品正等待着各位游客光临。 难怪有人评价说：“谁人识得天子面，归来不看天下山”，“不游天子山，枉到武陵源”。",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURsMHBxMWpRRRAB",
+      "authorName": "paganic",
+      "starRating": 5,
+      "reviewDate": "2 years ago",
+      "localGuideInfo": "Local Guide · 210 reviews",
+      "text": "장가계의 백미인 천자산 구역이다. 기암 절벽으로 이루어져 보는 이로금 장관을 느끼게 해준다. 신선계로 들어왔다고 할까.. 시간여유가 있으면 천천히 걸어 내려오는 것을 추천한다.",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURjMGZtcGlBRRAB",
+      "authorName": "상춘(흰머리 소년)",
+      "starRating": 5,
+      "reviewDate": "5 years ago",
+      "localGuideInfo": "Local Guide · 771 reviews",
+      "text": "빽빽하게 늘어선 천길 낭떨어지와 기묘한 봉군들의 웅장한 모습에 숨이 막힐 지경이며 특히 운도, 월휘, 하일, 동설의 4대 명관을 지녀 변화 무쌍 하답니다. 해발 1,300m에 달하는 톈즈 산을 걸어서 올라가려면 3시간 정도 소요된다. 그래서 대부분의 관광객은 15분 만에 정상에 도달하는 빠르고 편안한 케이블 카를 탑승한다. 수많은 기암 괴봉이 쭈빗 쭈빗하게 솟아 있는 모습은 위협적으로 보이기도 하고 신비로워 보이기도 한다. 이곳을 바라보는 이의 숨이 멎는 듯 한 장관이다 수려한 산세를 지그시 바라 보면 이내 가슴이 탁 트이고 머릿속의 모든 잡념이 모두 다 사라진다. 구름과 안개가 낀 신비로운 풍경, 달만이 홀로 밝은 칠흑 같은 밤, 노을이 빨갛게 물드는 석양 무렵, 온통 눈으로 뒤덮인 겨울 풍경이 가장 멋지다고 한다. 천자산에서 꼭 보아야 할 장소는 위비펑(御笔峰)이다. 전쟁에서 지고 돌아온 황제가 화가 나 집어던진 붓이 꽂혀서 지금의 바위가 되었다는 황당무계하고 의아한 전설이 쓰여 있다. 위비펑은 위에서 내려다보기보다는 아래서 올려다보는 것이 더 멋진데, 조금 낮은 곳에 있는 뎬장타이(点将台)가 최고의 전망대로 꼽힌다.",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT21sMGFGRlBYM05CWW5FM2NGRlpMV05oWDBWSlRWRRAB",
+      "authorName": "Maria Jesus Santos Bonillo",
+      "starRating": 5,
+      "reviewDate": "6 months ago",
+      "localGuideInfo": "Local Guide · 59 reviews",
+      "text": "Es precioso y con menos gente que en las zonas más turísticas del parque Nosotros subimos en teleférico y luego íbamos seleccionado los miradores, cambiando de uno a otro en los autobuses que circulan por el parque",
+      "scrapedAt": "2026-03-23T07:52:20.945Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pGTmRtRlJVRWhhTkVzM1drMUJlbVpNTTBSVllYYxAB",
+      "authorName": "Paloma",
+      "starRating": 5,
+      "reviewDate": "6 months ago",
+      "localGuideInfo": "Local Guide · 20 reviews",
+      "text": "The cable ride was great.",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSURRblB1UEpnEAE",
+      "authorName": "La Jola",
+      "starRating": 5,
+      "reviewDate": "8 years ago",
+      "localGuideInfo": "Local Guide · 490 reviews",
+      "text": "great nature",
+      "scrapedAt": "2026-03-23T07:52:20.138Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2tOdWVVaDBTRWx2WVhsRGRtRTVZVTFwUjNSclEzYxAB",
+      "authorName": "至方羅",
+      "starRating": 5,
+      "reviewDate": "8 months ago",
+      "localGuideInfo": "Local Guide · 256 reviews",
+      "text": "張家界景區成為馳名中外每次都要等很久 這次淡季 人也很多 不用排隊很久",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25adFYwZHBPSGRqUm1wTFRIVjNPV0ZwU1hoVWMwRRAB",
+      "authorName": "斌斌",
+      "starRating": 5,
+      "reviewDate": "5 months ago",
+      "localGuideInfo": "Local Guide · 377 reviews",
+      "text": "空氣及景觀挺好，雲霧繚繞，9月天氣涼爽",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURfcnJHYW13RRAB",
+      "authorName": "謝俊界",
+      "starRating": 5,
+      "reviewDate": "a year ago",
+      "localGuideInfo": "Local Guide · 311 reviews",
+      "text": "天子山國家公園是令人驚嘆的景公園坐落在張家界地區雄偉的山峰之中",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnTURvLXRqSzR3RRAB",
+      "authorName": "Vale Di Ni",
+      "starRating": 5,
+      "reviewDate": "10 months ago",
+      "localGuideInfo": "Local Guide · 357 reviews",
+      "text": "Stunning!! Sara una giornata full di emozioni e di fotografie.",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNBcTlxdF9nRRAB",
+      "authorName": "Vivian Chen",
+      "starRating": 5,
+      "reviewDate": "Edited 8 years ago",
+      "localGuideInfo": "Local Guide · 1.4K reviews",
+      "text": "天子山名稱的由來，是因宋代土家族領袖向大坤在此率眾起義，自稱天王，後亦殉難於此。",
+      "scrapedAt": "2026-03-23T07:52:20.516Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNva3VHeWpnRRAB",
+      "authorName": "zhao zi-yi",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 230 reviews",
+      "text": "天子山上有神奇，无心只当是画廊。",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURBNGNUUm53RRAB",
+      "authorName": "Dinosaur刻鍊（恐龙）",
+      "starRating": 5,
+      "reviewDate": "8 years ago",
+      "localGuideInfo": "Local Guide · 562 reviews",
+      "text": "天门山上更精彩奇山万峭多险峻",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUNRejg3aVNnEAE",
+      "authorName": "jacky chan",
+      "starRating": 5,
+      "reviewDate": "9 years ago",
+      "localGuideInfo": "Local Guide · 219 reviews",
+      "text": "獨特的山景👏配上藍天白雲，令整體感覺昇華 ✌",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUN3djR5MF93RRAB",
+      "authorName": "Zhou Wan",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 1.8K reviews",
+      "text": "感觉还ok，没有太有特色的地方。",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2pOemREWjZRVU50UjFaZlRXODNUbEpST1dWNlNHYxAB",
+      "authorName": "Chen Gary (GodTao)",
+      "starRating": 5,
+      "reviewDate": "7 months ago",
+      "localGuideInfo": "Local Guide · 105 reviews",
+      "text": "非常漂亮",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnTUR3djZ2M0hnEAE",
+      "authorName": "ali arifin",
+      "starRating": 5,
+      "reviewDate": "11 months ago",
+      "localGuideInfo": "Local Guide · 36 reviews",
+      "text": "Mantap",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSURZaUsyZGJBEAE",
+      "authorName": "tyuyo",
+      "starRating": 5,
+      "reviewDate": "6 years ago",
+      "localGuideInfo": "Local Guide · 199 reviews",
+      "text": "天候が悪く、霧の中をさ迷う感じでしたけど人の多さに驚きました。",
+      "scrapedAt": "2026-03-23T07:52:20.946Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNBby1leTRnRRAB",
+      "authorName": "Jaden Chen",
+      "starRating": 5,
+      "reviewDate": "14 years ago",
+      "localGuideInfo": "5 reviews",
+      "text": "山势险峻，感受自然魅力！",
+      "scrapedAt": "2026-03-23T07:52:21.254Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURndHFPcnF3RRAB",
+      "authorName": "Stephen oo",
+      "starRating": 5,
+      "reviewDate": "8 years ago",
+      "localGuideInfo": "Local Guide · 205 reviews",
+      "text": "奇美",
+      "scrapedAt": "2026-03-23T07:52:21.254Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNnanZUa2hBRRAB",
+      "authorName": "알사탕",
+      "starRating": 5,
+      "reviewDate": "8 years ago",
+      "localGuideInfo": "Local Guide · 699 reviews",
+      "text": "환상적인 동양화",
+      "scrapedAt": "2026-03-23T07:52:21.255Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNna0tYSXhnRRAB",
+      "authorName": "Britishgarden",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 308 reviews",
+      "text": "이것이야말로 예술.",
+      "scrapedAt": "2026-03-23T07:52:21.255Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURVLXBTbHNBRRAB",
+      "authorName": "도재규",
+      "starRating": 5,
+      "reviewDate": "6 years ago",
+      "localGuideInfo": "Local Guide · 204 reviews",
+      "text": "천자산, 멋집니다.",
+      "scrapedAt": "2026-03-23T07:52:21.646Z"
+    },
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT25KNFRtOHhTa3hvZDJOSU5XRkdkbDgxTXpKcFUyYxAB",
+      "authorName": "Hong John",
+      "starRating": 5,
+      "reviewDate": "3 days ago",
+      "localGuideInfo": "Local Guide · 32 reviews",
+      "text": "去的時候雲霧繚繞",
+      "scrapedAt": "2026-03-23T07:52:21.646Z"
+    }
+  ]
+}

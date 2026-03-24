@@ -1,0 +1,242 @@
+{
+  "attraction_name_cn": "长江索道",
+  "attraction_name_en": "Yangtze River Cableway / Chongqing Ropeway",
+  "address_cn": "重庆市渝中区新华路151号",
+  "experience_type": "transport-experience",
+  "hook": "The world's only cross-river urban passenger cableway — a 4-minute, 1,166-meter glide across the Yangtze in a retro orange cabin that gives you Chongqing's 3D skyline from an angle no bridge or road can match.",
+  "honest_description": "The Yangtze River Cableway is one of those experiences that sounds underwhelming on paper (it's a 4-minute cable car ride) but delivers in person — especially at sunset or night when Chongqing's layered skyline of skyscrapers, mountains, and rivers lights up around you. The cabin holds about 50-65 people, so you're sharing the view with a crowd, and the windows can get fogged or smudged. The biggest honest downside is the queue: during holidays and weekends, you can wait 1-2 hours for a 4-minute ride. On weekdays or at non-peak times, though, the wait drops to 10-20 minutes and the experience-to-time ratio is excellent. Take it one way (not round trip) — ride from North Station to South Station, then explore the Nan'an side or take the metro back. The 'Thousand Faces of Chongqing' immersive cinema at the station is a surprisingly good bonus.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth the wait, or should I skip it?",
+      "answer": "If the queue is under 30 minutes, absolutely yes — the aerial view of the Yangtze with Chongqing's skyscrapers on both banks is genuinely special. If the queue is over an hour (common during holidays), the 4-minute ride may feel anticlimactic. Strategy: go on a weekday, arrive at the North Station before 10 AM or after 8 PM, or start from the South Station (shorter queues). One-way only — don't waste time queuing twice for the return trip."
+    },
+    {
+      "question": "How do I buy tickets as a foreigner?",
+      "answer": "Tickets are ¥20 one-way or ¥30 round-trip. You can buy at the station window with passport and cash, or use the ticket machines (some accept international cards). The easiest method is buying through Trip.com or Meituan in advance — scan the QR code at the gate. WeChat/Alipay also work at the machines. Bring your passport as ID. If the booking process feels overwhelming, message our concierge team and we can purchase your e-tickets and send you the QR code directly."
+    }
+  ],
+  "experience_format_note": "Transportation-style experience. Buy ticket → enter waiting area → wait for your numbered batch to be called → board the cabin with ~50 other passengers → 4-minute ride across the Yangtze → exit at the other station. The cabin has panoramic windows on all sides. Position yourself near the downstream (east-facing) windows for the best cityscape views. There's an observation deck at the South Station exit. The 'Thousand Faces of Chongqing' immersive cinema is in the station complex — some tickets include it.",
+  "vibe": "A nostalgic, slightly thrilling glide above the churning Yangtze — part transportation relic, part sky-high city tour, with a retro charm that makes Chongqing feel like nowhere else on earth.",
+  "time_needed": {
+    "quick_visit": "30-45 minutes (including queue and one-way ride on a non-peak day)",
+    "recommended": "1-1.5 hours (queue time + ride + observation deck + photos at the other station)",
+    "deep_dive": "2-3 hours (ride + Thousand Faces cinema + exploring Nan'an District / Longmenhao Old Street area after exiting South Station)"
+  },
+  "best_time": {
+    "best_time_of_day": "Sunset (4-6 PM) is the golden window — you ride as the sky changes color and the city lights start flickering on. Night rides (after 8 PM) give you the full neon-lit Chongqing experience. Avoid midday — harsh light and the longest queues.",
+    "worst_time": "National Day (Oct 1-7), May Day, and Chinese New Year — waits of 1-2+ hours are common. Weekend afternoons are also busy. The queue snakes through multiple waiting areas that make progress feel slow.",
+    "seasonal_notes": "Autumn (Sep-Nov) has the clearest skies and best visibility across the river. Summer is hot and humid but the evening rides are comfortable. Winter fog can obscure the views — check visibility before queuing. Spring is pleasant.",
+    "pro_tip": "Board from the South Station (南岸/Nan'an side) — the queue is consistently shorter because most tourists start from the North Station near Jiefangbei. Take the metro Line 6 to Shangxin Street Station to reach the South Station."
+  },
+  "getting_in": {
+    "opening_hours": "Year-round: 08:00-22:00 (last entry 21:00). Public holidays: 07:30-22:30. Hours may extend in summer.",
+    "price_rmb": "¥20 one-way. ¥30 round-trip.",
+    "price_usd": "~$3 one-way. ~$4 round-trip.",
+    "price_breakdown": [
+      {
+        "item": "One-way ticket",
+        "price": "¥20",
+        "highlight": "Recommended — ride one way and take metro/taxi back"
+      },
+      {
+        "item": "Round-trip ticket",
+        "price": "¥30",
+        "highlight": "Only if you want the experience twice — requires queuing again for the return"
+      },
+      {
+        "item": "Thousand Faces of Chongqing cinema",
+        "price": "Included with some ticket packages or spend ¥88 for combo deals",
+        "highlight": "18K immersive 1,000sqm panoramic film about Chongqing — surprisingly impressive"
+      }
+    ],
+    "booking_required": "Not strictly required but strongly recommended during peak periods. Walk-up tickets available but the queue for ticket purchase adds to the wait.",
+    "booking_method": "Trip.com, Meituan, or Alipay mini-program. E-tickets generate a QR code to scan at the gate. Ticket windows at both stations accept cash and passport.",
+    "passport_accepted": "Yes — foreigners can buy tickets at the window with passport. One reviewer specifically noted bringing a passport is recommended.",
+    "what_to_bring": "Camera or phone (the views are the whole point). Portable charger. Cash as backup for tickets.",
+    "queue_situation": "Weekdays: 10-20 minutes. Weekday evenings: 20-40 minutes. Weekends: 30-60 minutes. Holidays: 1-2+ hours. The North Station (渝中区) has consistently longer waits than the South Station (南岸区). If you want to check current queue times before heading over, drop us a message and we can look it up on the Chinese-language apps for you.",
+    "language_barrier_rating": "minimal — Ticket machines have English options. The process is intuitive (buy ticket → wait → board → ride). Staff guide you with gestures. Bilingual signage at stations."
+  },
+  "highlights": [
+    {
+      "name": "The Aerial River Crossing",
+      "description": "The 4-minute, 1,166-meter glide across the Yangtze at up to 50 meters above the water surface. The panoramic cabin windows reveal Chongqing's dramatic skyline — skyscrapers stacked on mountains, bridges spanning the river, and the two-river confluence in the distance.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the world's only remaining urban cross-river passenger cableway. The experience is unique globally — there's literally nowhere else you can do this.",
+      "tip": "Position yourself on the east-facing (downstream) side of the cabin for the best city views. If boarding from North Station, that's the right side as you enter."
+    },
+    {
+      "name": "Sunset / Night Ride",
+      "description": "At dusk, Chongqing's famous night skyline begins to emerge — neon signs, building-top LEDs, and the illuminated bridges create a cyberpunk-like panorama. The transition from golden hour to city lights mid-ride is the peak cableway experience.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Chongqing's night skyline is regularly compared to Hong Kong and Shanghai — but from a moving cable car 50 meters above the Yangtze, it feels more dramatic than either.",
+      "tip": "Time your ride for 30 minutes before official sunset. The queue will be longer but the payoff is immense. Check the weather for clear skies."
+    },
+    {
+      "name": "Retro 1987 Heritage",
+      "description": "The cableway opened in 1987 as actual public transportation — local commuters used it daily to cross the river before Chongqing's bridges were built. The orange cabins retain their vintage character, and the mechanical infrastructure is a piece of living industrial history.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Older Chongqing residents remember paying ¥0.18 to commute across the river on this cable car daily. The price has gone from ¥1.80 in the 1990s to ¥20 today as it transitioned from transport to tourism — a metaphor for China's transformation.",
+      "tip": "The station buildings themselves have been renovated but look for the original mechanical equipment still visible through viewing windows — the engineering is impressive for 1987 Chinese manufacturing."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "South Station observation deck and Longmenhao Old Street",
+      "why": "After exiting the South Station, most tourists immediately queue to ride back. Instead, walk to the observation deck for photos, then explore Longmenhao Old Street (龙门浩老街) — a beautifully restored hillside neighborhood with cafés, views, and far fewer tourists."
+    },
+    {
+      "what": "Thousand Faces of Chongqing immersive cinema",
+      "why": "The 1,000sqm 18K panoramic cinema in the station complex is a genuinely impressive immersive experience — but most visitors don't know it exists or assume it's a tourist trap. Reviews consistently say it's surprisingly good."
+    },
+    {
+      "what": "Boarding from the South Station for a shorter queue",
+      "why": "The South Station (Nan'an side) has 30-50% shorter waits because nearly all tourists start from the North Station near Jiefangbei. Take metro Line 6 to Shangxin Street Station — you ride toward the more dramatic Yuzhong skyline view."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take Metro Line 6 to Shangxin Street Station → walk to the South Station (shorter queue) → buy one-way ticket → ride northward across the Yangtze toward the Yuzhong skyline → exit at North Station → walk 10 minutes to Jiefangbei pedestrian square and Hongyadong for dinner and evening sightseeing.",
+    "what_to_skip": "The round-trip ticket — it's not worth queuing twice for the same 4-minute experience in the other direction. Take the metro or a taxi back instead. Skip the overpriced food stalls in the station complex.",
+    "pro_tips": "One-way only, always. Board from South Station for shorter queues and the better view direction (toward the dramatic Yuzhong skyline). Time it for sunset. If the queue is over 45 minutes, grab a coffee nearby and come back later — the evening crowd thins after 9 PM."
+  },
+  "heads_up": [
+    {
+      "warning": "The ride is only 4 minutes — manage expectations",
+      "advice": "After a long queue, 4 minutes can feel abrupt. Maximize it by having your camera ready before boarding, knowing which side has the best view, and savoring the experience rather than scrambling for photos."
+    },
+    {
+      "warning": "The cabin holds 50-65 people — it's crowded inside",
+      "advice": "You're sharing the cabin with dozens of other passengers. Window positions are first-come, best-served — enter quickly and claim a window spot. People in the middle see very little. The cabin sways slightly, which can be unsettling for some."
+    },
+    {
+      "warning": "Holiday queues can exceed 2 hours",
+      "advice": "Check live queue times on Meituan or Dianping before heading over. If it's over an hour, consider coming back at a different time or day. The ride doesn't change — only your patience does."
+    },
+    {
+      "warning": "Fog and smog can ruin visibility",
+      "advice": "Chongqing is famously foggy, especially in winter and spring. On a foggy day, the dramatic skyline views disappear entirely. Check weather and visibility before committing to the queue. Clear autumn days are best."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The ticket machines accept WeChat/Alipay primarily. If you don't have either, go to the staffed ticket window with your passport and cash. Some machines accept UnionPay cards but foreign Visa/Mastercard support is inconsistent.",
+    "The numbered batch system means you'll wait in a holding area even after buying tickets. Your batch number is called (in Chinese) — watch the electronic display board for your number. Staff will gesture if you look confused. If you are worried about missing your boarding call, message us your location and we can call the station to confirm timing on your behalf.",
+    "After exiting the South Station, you're in Nan'an District — a completely different area from the main tourist zone. Don't panic. The metro (Line 6, Shangxin Street Station) is nearby, or take a Didi back to Yuzhong.",
+    "Window positions in the cabin are contested. Chinese tourists will push to the front — if you want a window view, enter quickly and don't hesitate. Standing in the center of the cabin means seeing mostly other people's backs."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Queue is impossibly long (1+ hours)",
+      "what_to_do": "Check if the South Station has a shorter queue (usually yes). Alternatively, come back after 9 PM when the queue drops dramatically — the night views are actually better anyway.",
+      "plan_b": "Walk to the nearby Yangtze River Bridge pedestrian path or go to Nanshan Yike Shu (南山一棵树) observation deck for an even better aerial view of Chongqing's skyline — arguably more impressive than the cableway and no queue."
+    },
+    {
+      "problem": "Cableway is closed for maintenance",
+      "what_to_do": "Check the official WeChat account or Trip.com listing for maintenance schedules before visiting. Closures are usually announced in advance.",
+      "plan_b": "Take a ferry across the Yangtze instead (much cheaper, different but still atmospheric experience), or visit the Nanshan Yike Shu observation deck for the best nighttime skyline view in Chongqing."
+    },
+    {
+      "problem": "Foggy day with no visibility",
+      "what_to_do": "Postpone your ride if possible. The cableway operates in fog but you'll see nothing — it's not worth the queue. Message our team for a real-time visibility check before you commit to the queue — we can tell you if it is worth going today.",
+      "plan_b": "Explore Jiefangbei pedestrian street, Hongyadong, or the Eighteen Steps area instead. Come back on a clear day or evening."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "No special requirements. Comfortable shoes. The cabin is enclosed so weather doesn't affect the ride itself, but you'll be walking and queuing outdoors.",
+    "what_to_bring": "Camera/phone with charged battery (you'll want to film the crossing). Portable charger for the wait. Cash as backup for tickets. Patience for the queue.",
+    "what_not_to_bring": "No restrictions. Keep belongings secure in the crowded cabin."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "The ride itself requires no physical effort — you stand in a cabin for 4 minutes. The main physical demand is standing in the queue (potentially 30-90 minutes). The stations are accessible but involve some stairs; elevator access is available at both stations.",
+    "age_notes": "Suitable for all ages. Children enjoy the floating sensation. Elderly visitors should be comfortable standing for the queue duration. The cabin sway is mild but may unsettle those prone to motion sickness.",
+    "health_warnings": "Mild motion sensitivity possible from the cabin sway. Acrophobia (fear of heights) may be triggered — you're 50 meters above the Yangtze. If you're uncomfortable with heights, this may not be enjoyable."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Pre-book e-tickets to skip the ticket queue",
+      "platform": "Trip.com or Meituan",
+      "value_to_user": "Saves 10-20 minutes vs buying at the window. You still wait in the boarding queue, but eliminating the ticket purchase queue helps."
+    },
+    {
+      "action": "Book Nanshan Yike Shu observation deck for the same evening",
+      "platform": "Didi taxi or pre-arranged driver",
+      "value_to_user": "After riding the cableway to the South Station, continue to Nanshan for the panoramic night view — this combo is the ultimate Chongqing skyline experience."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Chángjiāng Suǒdào",
+      "chinese": "长江索道",
+      "english": "Yangtze River Cableway"
+    },
+    {
+      "pinyin": "Dān chéng",
+      "chinese": "单程",
+      "english": "One-way (ticket)"
+    },
+    {
+      "pinyin": "Wǎng fǎn",
+      "chinese": "往返",
+      "english": "Round-trip"
+    },
+    {
+      "pinyin": "Běi zhàn",
+      "chinese": "北站",
+      "english": "North Station (Yuzhong side)"
+    },
+    {
+      "pinyin": "Nán zhàn",
+      "chinese": "南站",
+      "english": "South Station (Nan'an side)"
+    },
+    {
+      "pinyin": "Pái duì duō jiǔ?",
+      "chinese": "排队多久？",
+      "english": "How long is the queue?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Jiefangbei Pedestrian Street (解放碑步行街)",
+      "why": "The North Station is a 10-minute walk from Jiefangbei — ride the cableway first, then explore Chongqing's main commercial and dining district.",
+      "travel_time": "10-minute walk from North Station"
+    },
+    {
+      "suggestion": "Hongyadong (洪崖洞)",
+      "why": "The stilt-house complex that looks like Spirited Away is 15 minutes from the North Station — visit after your cableway ride for the night illumination.",
+      "travel_time": "15-minute walk from North Station"
+    },
+    {
+      "suggestion": "Nanshan Yike Shu Observation Deck (南山一棵树)",
+      "why": "After exiting the South Station, continue to Nanshan for the ultimate Chongqing night panorama from the mountain — it's the city's best viewpoint. Our concierge can pre-book a taxi from the South Station to the Nanshan viewpoint so you are not scrambling for a ride after dark.",
+      "travel_time": "20-minute taxi from South Station"
+    }
+  ],
+  "cultural_context": "The Yangtze River Cableway represents Chongqing's unique identity as a 'mountain city' (山城) where conventional transport solutions don't work. Built in 1987 when Chongqing had few bridges, it was genuine public transit — commuters paid ¥0.18 to cross the river daily. As bridges multiplied, the cableway became obsolete as transport but found new life as a tourist icon. It's now recognized as a cultural heritage site and the last surviving urban cross-river cableway in the world. For older Chongqing residents, it triggers deep nostalgia — many grew up riding it to school or work. The transition from ¥1.80 commuter fare to ¥20 tourist ticket mirrors Chongqing's transformation from an industrial backwater to a megacity of 30 million people.",
+  "photo_spots": [
+    {
+      "location": "Inside the cabin, east-facing windows",
+      "tip": "Film a continuous video rather than photos — the moving cityscape is more dramatic in motion. Hold your phone landscape. At sunset, the golden light on the water is spectacular.",
+      "why": "The only place in the world you can capture a major city skyline from a moving cross-river cable car."
+    },
+    {
+      "location": "South Station observation deck",
+      "tip": "After exiting, walk to the observation area for a static shot of the cableway cabin against the Yuzhong skyline. Use a telephoto lens to compress the cabin and buildings together.",
+      "why": "The classic postcard shot of the Chongqing cableway — the orange cabin suspended over the Yangtze with skyscrapers behind."
+    },
+    {
+      "location": "From the Yangtze River bank near the North Station",
+      "tip": "Walk down to the riverbank path and look up at the cableway passing overhead. Best at night when the cabin's lights create a moving streak against the dark sky.",
+      "why": "An unusual angle that shows the dramatic scale — the tiny cabin against the massive river and towering city."
+    }
+  ],
+  "card_name": "Yangtze River Cableway",
+  "card_type": "ICONIC TRANSPORT",
+  "card_hook": "Four minutes floating above the Yangtze, eye-level with a cyberpunk skyline.",
+  "best_for": [
+    "unique-transport-experience",
+    "skyline-photography",
+    "sunset-activity",
+    "chongqing-must-do",
+    "quick-thrill"
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "attraction_name_cn": "磁器口古镇",
+  "attraction_name_en": "Ciqikou Ancient Town",
+  "address_cn": "重庆市沙坪坝区磁南街1号",
+  "experience_type": "cultural",
+  "hook": "A thousand-year-old porcelain trading port on the Jialing River where Chongqing's fiery soul is distilled into one cobblestone labyrinth — stilt houses cling to hillsides, Sichuan opera echoes from teahouses, and the air itself tastes of chili oil and freshly fried mahua.",
+  "honest_description": "Ciqikou is Chongqing's living time capsule — a Song Dynasty river port turned AAAA scenic area that locals call 'Little Chongqing.' The ancient town sprawls across 325,000 square meters of hillside above the Jialing River, with 12 streets and 42 branching alleyways built in a tree-like pattern along three mountains. Founded around 998-1003 AD as Baiyanchang, it later became a porcelain distribution hub (hence 'Porcelain Port') and a bustling commercial center where 300+ cargo ships docked daily during the Republic era. The Ming and Qing dynasty architecture is genuine in places — Zhong Family Courtyard and Baolun Temple date back centuries — but much of what you see has been renovated or rebuilt in traditional style. Let's be honest: the main street is heavily commercialized. You'll pass dozens of shops selling identical fire pot base, twisted dough strips (mahua), and spicy snacks, with amplified sales pitches competing for attention. But this is also what gives the place its raucous, unapologetic energy. The trick is knowing where to look: duck into the side alleys to find genuine old teahouses with Sichuan opera performances, climb to Baolun Temple for panoramic views and genuine serenity, and walk down to the old dock at Yinglong Gate for riverside atmosphere. Evening transforms the town — red lanterns glow, small bars with live singers open their windows to the cobblestone streets, and the commercial edges soften into something genuinely atmospheric. Come expecting a massive, loud, spicy Chinese market town built on ancient bones rather than a preserved museum piece, and you'll have a great time.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it just another commercialized ancient town?",
+      "answer": "Yes and no. The main drag is absolutely commercial — identical shops selling mahua, chili oil, and hotpot base as far as the eye can see. But Ciqikou has something most fake ancient towns don't: actual topography. Because it's built on a mountainside above a real river, the vertical maze of staircases and alleyways creates a genuine sense of discovery that flat commercial streets can't replicate. The stilt houses (diaojiao lou) perched on hillsides, the thousand-year-old Baolun Temple on the hilltop, the riverside dock area, and the small bars tucked into upper floors all offer experiences beyond shopping. Go beyond the T-shaped main street — the back alleys and hilltop areas are where Ciqikou reveals its character."
+    },
+    {
+      "question": "Can I eat here without speaking Chinese?",
+      "answer": "Mostly yes, but with effort. Street food stalls use point-and-pay — prices are displayed and most items are visible. Almost all shops offer free samples, so you can taste before buying. However, sit-down restaurants rarely have English menus, and ordering specific dishes requires Chinese or a translation app. Mobile payment (WeChat/Alipay) is universal; cash works at most places too. The language barrier is real but manageable for snacking and browsing — just don't expect English signage."
+    }
+  ],
+  "experience_format_note": "Open-air pedestrian ancient town built on a hillside. No tickets required — walk in freely from multiple entrances. The layout is roughly T-shaped: a main street (zheng jie) runs from the hilltop metro entrance down to the river, crossed by a horizontal street (heng jie). Forty-two side alleys branch off vertically. Shops generally operate 9:00 AM to 10:00 PM. The town is fully outdoors with significant elevation changes — expect stairs. Escalators have been installed in some sections for accessibility. Allow 2-4 hours for a thorough visit.",
+  "vibe": "Organized chaos with ancient bones — imagine a massive open-air food market built into a mountainside, wrapped in Ming Dynasty architecture, and powered by chili-fueled energy. The main streets throb with vendor shouts and speaker systems, but turn any corner and you might find a quiet tea master, a cat cafe, or a solitary stairway down to the river.",
+  "time_needed": {
+    "quick_visit": "1-1.5 hours (walk the main T-shaped street, sample some mahua and snacks, take photos)",
+    "recommended": "2-3 hours (explore main streets plus side alleys, visit Baolun Temple, sit in a teahouse, walk down to the riverside dock)",
+    "deep_dive": "Half day to full day (deep exploration of all 42 alleys, teahouse with Sichuan opera, bar street in the evening, boat trip connection to Hongyadong)"
+  },
+  "best_time": {
+    "best_time_of_day": "Early morning (before 10:00 AM) for peaceful cobblestone streets and uncrowded photography, or evening (after 5:00 PM) when red lanterns light up, bar singers open their windows, and the commercial intensity gives way to atmospheric charm.",
+    "worst_time": "Weekend afternoons and any national holiday — the narrow streets become literally shoulder-to-shoulder, with reports of being unable to stop walking because the crowd pushes you forward. Golden Week and Spring Festival are the most extreme.",
+    "seasonal_notes": "Spring and autumn are most comfortable. Summer in Chongqing is brutally hot (40°C+) — multiple reviewers describe midday Ciqikou as 'a desert' in summer. Winter is mild but damp. Rainy days thin the crowds but make the stone steps slippery.",
+    "pro_tip": "The best strategy is to arrive around 8:00 AM when the streets are nearly empty, explore the quiet alleys and temple, then leave before the crowds peak. Alternatively, come in the evening for the bar and music atmosphere — a completely different experience from daytime."
+  },
+  "getting_in": {
+    "opening_hours": "Open 24 hours, year-round. Most shops operate approximately 9:00 AM to 10:00 PM. Bars and music venues stay open later.",
+    "price_rmb": "Free admission (no ticket required)",
+    "price_usd": "Free",
+    "price_breakdown": [
+      {
+        "item": "Ancient town entry",
+        "price": "Free",
+        "highlight": "No ticket needed — open access from all entrances"
+      },
+      {
+        "item": "Baolun Temple",
+        "price": "Free",
+        "highlight": "Thousand-year-old temple on the hilltop with panoramic views"
+      },
+      {
+        "item": "Sichuan opera / teahouse performance",
+        "price": "~¥18-40",
+        "highlight": "Entry fee as low as ¥18 plus tea purchase (¥38-98) for intimate face-changing shows"
+      }
+    ],
+    "booking_required": "No booking needed for the town itself. During peak holidays, advance online reservation via the official Ciqikou WeChat account may be required for crowd control. Reserving takes only a few minutes.",
+    "booking_method": "Walk in freely on normal days. During holidays, scan QR code at entrance or book via the official Ciqikou WeChat mini-program. On-site reservation is also possible.",
+    "passport_accepted": "Not applicable — no ticket purchase needed.",
+    "what_to_bring": "Comfortable walking shoes (essential — cobblestone streets are uneven and there are many stairs). Phone with WeChat/Alipay for payments. Cash as backup. Water bottle in summer.",
+    "queue_situation": "No queues for entry on normal days. During major holidays, a brief wait (15 minutes) may occur at the entrance for crowd management. Individual shops like Chen Mahua can have 20-30 minute queues.",
+    "language_barrier_rating": "survivable-without-chinese — Point-and-pay works for street food and shopping. Free samples are everywhere. Sit-down restaurants and teahouses are challenging without Chinese. Signage is almost entirely in Chinese with minimal English."
+  },
+  "highlights": [
+    {
+      "name": "Baolun Temple (宝轮寺)",
+      "description": "A thousand-year-old Buddhist temple perched on the hilltop of the ancient town, originally built in the early Tang Dynasty. Legend holds that the Jianwen Emperor hid here after being deposed, leading to the town's former name 'Longyin' (Dragon Hidden). The temple offers panoramic views over the ancient town rooftops and down to the Jialing River.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "One of the few genuinely ancient structures in Ciqikou. The hilltop position provides the best overview of the town's layout and river setting. Free entry, no crowds, and an oasis of calm above the commercial frenzy below.",
+      "tip": "Visit at sunset for the best views. The temple's ancient ginkgo tree is spectacular in autumn. Multiple reviewers say the fortune deity here is 'very effective' — take that as you will."
+    },
+    {
+      "name": "Side Alleys and Back Streets (小巷深处)",
+      "description": "The 42 branching alleyways that extend off the main commercial streets, where the real character of Ciqikou lives. Here you'll find old residents going about daily life, hidden teahouses, cat cafes, independent coffee shops, and genuine traditional architecture untouched by commercial renovation.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is where Ciqikou transforms from a tourist trap into something special. The vertical maze of staircases cutting between buildings, opening onto unexpected river views or quiet courtyards, is uniquely Chongqing. The sense of getting lost and discovering something around every corner is the real attraction.",
+      "tip": "When the main street feels overwhelming, turn into any side alley and walk uphill or downhill. Within 30 seconds you'll be in a different world — quiet, atmospheric, and genuinely old."
+    },
+    {
+      "name": "Yinglong Gate and Riverside Dock (迎龙门/码头)",
+      "description": "The historic riverside dock area at the bottom of the town, where cargo ships once loaded porcelain for transport along the Jialing River. Features distinctive stilt houses (diaojiao lou) built out over the hillside, and views across the river.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The dock area gives context to why this town existed — it was a working river port for a thousand years. The stilt houses are architecturally unique to the Chongqing region and photograph beautifully. You can sometimes catch a ferry from here to Hongyadong, combining two major attractions by river.",
+      "tip": "At night, the dock area features a 'lantern waterfall' and sometimes drone light shows and fire pot performances. The evening atmosphere here is dramatically different from daytime."
+    },
+    {
+      "name": "Teahouse Culture and Sichuan Opera (茶馆/川剧变脸)",
+      "description": "Traditional teahouses scattered throughout the town offer covered-bowl tea (gaiwan cha) and live performances including Sichuan opera face-changing (bianlian), Sichuan qingyin singing, and traditional storytelling. Some venues are intimate rooms seating 30-50 people.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The face-changing performance — where a masked performer swaps elaborate painted masks in split-second movements — is genuinely impressive regardless of cultural background. At ¥18-40 for entry, it's one of the cheapest live performance experiences in China. Small venues mean actors interact directly with the audience.",
+      "tip": "Look for Baoshangong (宝善宫) tea hall for the most atmospheric setting. Performances run from midday onwards at multiple locations. The tea is an additional purchase but it's how the venues sustain themselves — expect ¥30-98 for a pot."
+    },
+    {
+      "name": "Street Food Trail (小吃一条街)",
+      "description": "Ciqikou's main streets are effectively a kilometer-long open-air food market specializing in Chongqing's signature flavors: mahua (twisted fried dough strips), maoxuewang (duck blood in chili sauce), chicken giblets, spicy noodles, handmade sticky rice cakes (ciba), sour-and-hot rice noodles, stinky tofu, and dozens of varieties of fire pot base being cooked in massive open woks.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Nearly every shop offers free samples — you can practically eat lunch through tastings alone. The 'three treasures' of Ciqikou are mahua, strange-flavor beans, and hotpot base. Chen Mahua (陈麻花) is the most famous brand with perpetual queues, but reviewers confirm that less crowded competitors taste identical.",
+      "tip": "Skip the long queue at the original Chen Mahua (陈昌银) — buy from any of the smaller mahua shops for the same taste without the wait. For hotpot base, supermarkets in the city sell the same products cheaper. The food is best value at the eastern entrance area, roughly 30% cheaper than the center."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Mahjong Museum (麻将博物馆)",
+      "why": "A small museum inside the ancient town showing early forms of mahjong tiles and the history of the game. Free or low-cost entry. Multiple visitors mention it as a pleasant surprise — especially given that mahjong is one of China's most iconic cultural exports."
+    },
+    {
+      "what": "The Ciqikou Back Street (磁器口后街)",
+      "why": "A newly developed extension of the ancient town on Ma'an Mountain, blending traditional and modern elements with creative shops, boutique hotels, and 24-hour venues. Less crowded and more contemporary in feel than the old town — a good complement."
+    },
+    {
+      "what": "Zhong Family Courtyard (钟家院)",
+      "why": "One of the best-preserved Qing Dynasty (Guangxu era) quadrangle residences in Ciqikou. Typical Sichuan-style mountain courtyard architecture. Overlooked by most visitors rushing through the commercial streets — it's a genuine piece of history."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Metro Line 1 to Ciqikou Station, Exit 1 → enter via the back (hilltop) entrance → walk through the quiet back alleys first → visit Baolun Temple for hilltop panorama → descend through the main street (zheng jie), sampling food along the way → turn right at the T-junction onto the horizontal street (heng jie) → continue down to Yinglong Gate and the riverside dock → exit via the main gate (Huangjueping Archway). This top-down route uses gravity in your favor and saves the commercial main street for last when you're ready for the energy.",
+    "what_to_skip": "Don't queue 30 minutes for the 'original' Chen Mahua — identical mahua is available at dozens of shops with no wait. Skip the main-street fire pot base shops — supermarkets like Yonghui sell the same brands for half the price. Avoid buying fruit from street carts (reports of inflated prices and dyed coloring).",
+    "pro_tips": "The escalators installed inside the town are a godsend for tired legs — use them. If you're short on time, the back alleys and Baolun Temple offer more authentic experiences per minute than the main commercial street. For evening atmosphere, the bar street on the second floors has live singers performing in windows — grab a drink and people-watch. A river ferry to Hongyadong departs from the Ciqikou dock (check current schedules, ends around 4 PM) — an excellent way to combine two major attractions while seeing the city from the water."
+  },
+  "heads_up": [
+    {
+      "warning": "Aggressive sales tactics in some tea shops",
+      "advice": "Multiple reviewers report being invited into tea tasting shops for 'free samples,' then pressured with bills of several hundred yuan. Never enter a private tea shop alone. If pressured, calmly take out your phone and say you'll record the conversation — this usually resolves the situation. Stick to the open-front teahouses with visible pricing."
+    },
+    {
+      "warning": "Extremely crowded on weekends and holidays",
+      "advice": "This is not an exaggeration — the narrow streets become a human river where you cannot stop walking or change direction. If you have claustrophobia or are traveling with small children or elderly family, visit on a weekday morning. During Golden Week, the town implements crowd control and reservation requirements."
+    },
+    {
+      "warning": "Significant stair climbing required",
+      "advice": "Ciqikou is built on a mountainside with constant elevation changes. Cobblestone paths are beautiful but uneven. High heels are impractical. People with knee problems should enter from the main gate (bottom) and stick to the flat main street rather than climbing to the temple. Escalators are available in some sections."
+    },
+    {
+      "warning": "Toilets are scarce and often dirty",
+      "advice": "Public restrooms exist but are limited, hard to find, and frequently unpleasant. Some require climbing stairs to reach. Many private businesses offer paid toilet access (¥1-2). Use restrooms at the metro station before entering, or at restaurants/teahouses during your visit."
+    }
+  ],
+  "foreigners_watch_out": [
+    "No passport needed — free entry with no ticket. During peak holidays, scan QR code for reservation (WeChat required).",
+    "Metro Line 1 to Ciqikou Station is the easiest access. Exit 1 drops you at the back/hilltop entrance (recommended); the main gate is a 10-minute walk from the station.",
+    "Wear comfortable flat shoes — cobblestones and stairs are unavoidable. Flip-flops and heels are a bad idea.",
+    "WeChat Pay or Alipay is nearly universal. Cash works at most places but having mobile payment makes life much easier.",
+    "The 'spicy' here is real Chongqing spicy — even items labeled 'mildly spicy' (微辣) can be very hot for unaccustomed palates. The famous weixin liangfen (slightly spicy cold noodles) has made visitors cry.",
+    "Buying fire pot base and mahua as souvenirs is very common — some shops offer shipping services so you don't have to carry heavy packages."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "The crowds are overwhelming",
+      "what_to_do": "Immediately turn into any side alley and head uphill toward Baolun Temple. The back streets and hilltop area have a fraction of the main-street traffic. The park area behind the temple is genuinely peaceful.",
+      "plan_b": "Leave and return in the evening (after 6 PM) when the atmosphere shifts to lanterns, live music, and a more relaxed vibe with fewer tour groups."
+    },
+    {
+      "problem": "Can't find anything to eat without extreme spice",
+      "what_to_do": "Look for sweet mahua (honey or brown sugar flavor), handmade sticky rice cakes (ciba), yogurt drinks, fruit tea, or the various bakery items. Indian roti is reportedly available at one stall for those avoiding Chinese spice entirely.",
+      "plan_b": "The newer back street (hou jie) area has Western-style coffee shops and less aggressively spicy food options."
+    },
+    {
+      "problem": "Got pressured into an expensive tea tasting",
+      "what_to_do": "Stay calm and do not pay inflated prices. Take out your phone and say you'll report to the tourist complaint hotline (12301). Security guards and police are stationed at regular intervals throughout the town — find one if needed.",
+      "plan_b": "Travel with a companion and avoid entering any shop that uses high-pressure invitation tactics from the doorway."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable flat walking shoes with good grip (essential for cobblestones and wet stone stairs). Casual clothing. In summer, light and breathable fabrics — Chongqing heat is intense. Rain jacket or umbrella in spring/autumn.",
+    "what_to_bring": "Phone with WeChat/Alipay set up. Portable water bottle (critical in summer). Small backpack for souvenirs. Cash as backup. Tissues/wet wipes (useful after sampling spicy street food).",
+    "what_not_to_bring": "Large suitcases (cobblestones make rolling bags impossible — leave luggage at hotel or in station lockers). High heels. Anything white if you plan to eat maoxuewang."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "The ancient town is built on a mountainside with constant stair climbing between levels. The main street is relatively flat but narrow. Side alleys involve steep stairs. Total walking distance for a full visit is 3-5 km with significant elevation changes. Escalators have been installed in some sections. The flat main street from the bottom entrance to the T-junction is the most accessible route.",
+    "age_notes": "The main commercial street is manageable for elderly visitors entering from the bottom gate. The hilltop temple and side alleys require good mobility. Children enjoy the food and energy but the crowds can be stressful for very young ones. Strollers are impractical due to stairs and cobblestones.",
+    "health_warnings": "Summer heat in Chongqing regularly exceeds 40°C — heat exhaustion is a real risk. Stay hydrated. Multiple reviewers report the spice level causing digestive issues for unaccustomed visitors. The steep stairs can be hazardous when wet."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a Jialing River ferry from Ciqikou to Hongyadong",
+      "platform": "Check at the Ciqikou dock or via local travel apps",
+      "value_to_user": "Combines two major Chongqing attractions by river, avoiding traffic. Passes by the famous Li Ziba metro-through-building scene. Check schedules as the last boat is typically around 4 PM."
+    },
+    {
+      "action": "Arrange a combined Ciqikou + Gele Mountain (Zhazidong/Baigongguan) day trip",
+      "platform": "Trip.com, local tour operators",
+      "value_to_user": "The revolutionary sites at Zhazidong and Baigongguan are nearby. A half-day morning at the mountain sites followed by afternoon/evening at Ciqikou makes an efficient full-day itinerary."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Cíqìkǒu",
+      "chinese": "磁器口",
+      "english": "Ciqikou (Porcelain Port)"
+    },
+    {
+      "pinyin": "máhuā",
+      "chinese": "麻花",
+      "english": "Twisted fried dough strips — Ciqikou's signature snack"
+    },
+    {
+      "pinyin": "máo xuě wàng",
+      "chinese": "毛血旺",
+      "english": "Duck blood in chili sauce — a Chongqing classic"
+    },
+    {
+      "pinyin": "huǒguō dǐliào",
+      "chinese": "火锅底料",
+      "english": "Hotpot base/seasoning — popular souvenir"
+    },
+    {
+      "pinyin": "gàiwǎn chá",
+      "chinese": "盖碗茶",
+      "english": "Covered-bowl tea — traditional Sichuan teahouse style"
+    },
+    {
+      "pinyin": "biàn liǎn",
+      "chinese": "变脸",
+      "english": "Face-changing — the signature Sichuan opera skill"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Hongyadong (洪崖洞)",
+      "why": "Chongqing's other iconic ancient-meets-modern site — a stilt house complex lit up spectacularly at night. Can be reached by river ferry directly from Ciqikou dock for a scenic connection.",
+      "travel_time": "30-40 minutes by metro, or ~1 hour by river ferry (scenic route)"
+    },
+    {
+      "suggestion": "Zhazidong & Baigongguan Revolutionary Sites (渣滓洞/白公馆)",
+      "why": "Famous Red Rock revolutionary sites on nearby Gele Mountain, closely associated with Ciqikou historically. Combine for a morning of history followed by an afternoon of food and atmosphere.",
+      "travel_time": "20-30 minutes by bus or taxi"
+    },
+    {
+      "suggestion": "Shapingba Three Gorges Square Area (三峡广场)",
+      "why": "Nearby commercial district for a modern contrast. Good fallback if Ciqikou crowds are extreme — come here first, then return to Ciqikou in the evening.",
+      "travel_time": "10 minutes by metro (Line 1)"
+    }
+  ],
+  "cultural_context": "Ciqikou's history reads like a compressed version of Chongqing's own story. Founded in the Song Dynasty (998-1003 AD) as Baiyanchang, it was renamed Longyin ('Dragon Hidden') after the deposed Jianwen Emperor supposedly hid in its temple. When porcelain manufacturing boomed in the early Qing Dynasty (with over 70 kilns operating at peak), the town became known as 'Porcelain Port' — later written as Ciqikou. During the Republic era and WWII, when Chongqing served as China's wartime capital, Ciqikou was a crucial commercial hub where 300+ cargo ships docked daily and cultural luminaries like Guo Moruo, Xu Beihong, and Ba Jin gathered. The famous novel 'Red Crag' (红岩) brought Ciqikou national attention through its depiction of revolutionary martyrs. The town's decline came with the shift from water to road transport after 1958, but tourism revival in the late 20th century gave it new life. Today it represents a living tension between preservation and commercialization that defines Chinese heritage tourism — authentic bones wrapped in commercial skin, with genuine culture hiding in the spaces between the shops.",
+  "photo_spots": [
+    {
+      "location": "Hilltop view from Baolun Temple",
+      "tip": "Late afternoon golden light illuminates the layered rooftops below. Wide angle captures the full sweep of traditional roofs descending to the river.",
+      "why": "The only elevated vantage point showing the town's dramatic hillside-to-river topography — conveys the 'mountain city' character that flat street photos miss."
+    },
+    {
+      "location": "Red lantern alleys at dusk",
+      "tip": "The side alleys between the main streets are strung with red lanterns that glow beautifully at dusk. Visit during the blue hour (30 minutes after sunset) for the best balance of natural and lantern light.",
+      "why": "The combination of ancient stone steps, wooden buildings, and glowing red lanterns is quintessential Chinese atmosphere. Early morning also works when alleys are empty."
+    },
+    {
+      "location": "Diaojiao Building Square (吊脚楼广场)",
+      "tip": "The stilt houses extending out over the hillside photograph best from below or from across the river. Include the Jialing River in the frame for context.",
+      "why": "Stilt house architecture is unique to the Chongqing-Sichuan region and represents a building tradition adapted to extreme terrain — visually dramatic and culturally distinctive."
+    },
+    {
+      "location": "Bar street windows at night",
+      "tip": "The upper-floor bars have singers performing in open windows above the cobblestone streets. Photograph from below looking up for a uniquely cinematic composition — warm interior light, performer silhouette, ancient architecture framing.",
+      "why": "Captures the fusion of traditional architecture and contemporary culture that defines modern Ciqikou."
+    }
+  ],
+  "card_name": "Ciqikou Ancient Town",
+  "card_type": "ANCIENT RIVER PORT TOWN",
+  "card_hook": "Chongqing's thousand-year porcelain port — where cobblestone alleys climb from the Jialing River through clouds of chili smoke.",
+  "best_for": [
+    "street-food-lovers",
+    "chongqing-essential",
+    "photography",
+    "evening-atmosphere",
+    "cultural-immersion",
+    "budget-friendly"
+  ]
+}

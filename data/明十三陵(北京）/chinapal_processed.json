@@ -1,0 +1,214 @@
+{
+  "attraction_name_cn": "明十三陵",
+  "attraction_name_en": "Ming Tombs",
+  "address_cn": "北京市昌平区十三陵镇昌赤路",
+  "experience_type": "sightseeing",
+  "hook": "Thirteen Ming dynasty emperors buried under the mountains northwest of Beijing — vast tombs, an 800-meter avenue of stone animals, and the only excavated imperial underground palace in China, all in a feng shui landscape that took 230 years to build.",
+  "honest_description": "The Ming Tombs are a UNESCO World Heritage Site comprising 13 imperial mausoleums spread across 40+ square kilometers in Beijing's Changping District. Only three tombs and the Sacred Way are open to visitors. Changling is the largest and best-preserved, with a magnificent hall supported by 60 golden nanmu wood columns. Dingling is the only tomb with an excavated underground palace — descend 27 meters to see the stone burial chambers of Emperor Wanli and his two empresses. Zhaoling is the smallest and least compelling of the three. The Sacred Way is the highlight for many visitors — an 800-meter processional path lined with 24 stone animals and 12 stone human figures from the 15th century, genuinely impressive in scale and artistry. The downsides: the site is 50 km from central Beijing (1-1.5 hours by car), the tombs are spread far apart with limited public transport between them, and the experience requires significant time investment. Many visitors find the individual tombs repetitive if visiting all three. The underground palace at Dingling is atmospheric but the original treasures have been moved to museums. There's almost no food service in the area — bring provisions. Best for history enthusiasts and anyone who wants to understand the scale of Ming dynasty imperial power beyond the Forbidden City.",
+  "foreigner_top_questions": [
+    {
+      "question": "Which tombs should I visit if I only have a few hours?",
+      "answer": "If you have 2-3 hours, visit the Sacred Way and Changling — the Sacred Way for the iconic stone animal statues, and Changling for the magnificent nanmu wood hall (one of the largest surviving ancient wooden buildings in China). If you have more time, add Dingling for the underground palace experience — it's the only excavated imperial tomb in China. Skip Zhaoling unless you're a completist; it's similar to Changling but less impressive."
+    },
+    {
+      "question": "How do I get between the different tombs?",
+      "answer": "The tombs are 2-8 km apart with no shuttle bus connecting them. Options: hire a car/driver for the day (most practical, around ¥400-600), take local bus 314 which stops at several tombs, or use DiDi between sites (¥15-20 per ride). Walking between tombs is impractical. Many visitors combine the Ming Tombs with a Great Wall visit on the same day using a hired car — the Mutianyu section is about 1 hour away. Our team can arrange a car and English-speaking driver for the day to cover both the Ming Tombs and the Great Wall — they'll handle the routing so you don't waste time figuring out logistics between sites."
+    }
+  ],
+  "experience_format_note": "Outdoor heritage site spread across a large valley. Four separate ticketed areas: Sacred Way, Changling, Dingling, and Zhaoling — each requires its own ticket or a combined ticket. The Sacred Way is a flat 800-meter walk. Changling is ground-level (unexcavated). Dingling involves descending stairs to the underground palace (no elevator — equivalent to a 5-story climb back up). Located 50 km northwest of Beijing in Changping District. Metro Line 8 goes to Ming Tombs station, but you still need a bus or taxi from there.",
+  "vibe": "Solemn and expansive — ancient stone guardians lining a processional path through quiet mountains, with the weight of 600 years of imperial history pressing down from the surrounding peaks.",
+  "time_needed": {
+    "quick_visit": "2-3 hours (Sacred Way + Changling or Dingling only)",
+    "recommended": "4-5 hours (Sacred Way + Changling + Dingling, with transport time between sites)",
+    "deep_dive": "Full day (all three tombs + Sacred Way, combined with a Great Wall visit)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive by 8:30 AM opening time. Morning light is best for photography on the Sacred Way, and you'll beat tour groups that typically arrive after 10 AM.",
+    "worst_time": "Chinese national holidays (especially Golden Week in October and Spring Festival) bring overwhelming crowds. Midday summer heat makes the exposed walking paths uncomfortable.",
+    "seasonal_notes": "Autumn (October-November) is ideal — golden leaves along the Sacred Way, especially ginkgo trees, create stunning photography. Spring (April-May) is pleasant. Winter is cold but atmospheric and very quiet. Summer is hot with limited shade.",
+    "pro_tip": "Visit on a weekday morning for an almost private experience. The Sacred Way in autumn with golden ginkgo leaves and morning mist is one of Beijing's most photogenic scenes."
+  },
+  "getting_in": {
+    "opening_hours": "Daily 08:30-17:00 (summer until 18:00). Last entry 30 minutes before closing.",
+    "price_rmb": "Sacred Way: ¥20. Changling: ¥30. Dingling: ¥40. Zhaoling: ¥20. Combined tickets available for savings.",
+    "price_usd": "Sacred Way: ~$2.75. Changling: ~$4. Dingling: ~$5.50. Zhaoling: ~$2.75.",
+    "price_breakdown": [
+      {
+        "item": "Sacred Way (神路)",
+        "price": "¥20",
+        "highlight": "800-meter avenue of stone animal and human statues — many visitors' favorite part"
+      },
+      {
+        "item": "Changling (长陵)",
+        "price": "¥30",
+        "highlight": "Largest tomb with magnificent golden nanmu wood hall"
+      },
+      {
+        "item": "Dingling (定陵)",
+        "price": "¥40",
+        "highlight": "Only excavated underground palace — descend 27 meters into burial chambers"
+      },
+      {
+        "item": "Zhaoling (昭陵)",
+        "price": "¥20",
+        "highlight": "Smallest open tomb, recently restored"
+      }
+    ],
+    "booking_required": "Reservations recommended — book via the '昌平文旅集团' WeChat mini-program at least 1 day ahead. Walk-up tickets may be available on quiet days.",
+    "booking_method": "WeChat mini-program '昌平文旅集团' or purchase at each site's ticket window. Combined tickets available at Sacred Way and Changling ticket offices. If the WeChat booking system is giving you trouble (it's Chinese-only), message us and we can handle the reservation for you.",
+    "passport_accepted": "Yes — foreign passports accepted at ticket windows. Online booking via WeChat may require a Chinese phone number.",
+    "what_to_bring": "Water and snacks (no restaurants inside the scenic area). Sun protection in summer. Comfortable walking shoes. Camera.",
+    "queue_situation": "Generally no significant queues except during national holidays. The underground palace at Dingling can get crowded on weekends.",
+    "language_barrier_rating": "some-chinese-helps — Basic bilingual signage at major sites. No English audio guides. The historical context is primarily in Chinese. A guide or pre-reading significantly enhances the experience."
+  },
+  "highlights": [
+    {
+      "name": "Sacred Way (神路/神道)",
+      "description": "An 800-meter processional avenue lined with 24 stone animals (lions, camels, elephants, qilin, horses, xiezhi) and 12 stone human figures (military officers, civil officials, meritorious ministers), carved in the 15th century. The stone figures stand and kneel in alternating pairs, representing an eternal imperial honor guard.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the most visually impressive and atmospheric part of the Ming Tombs for most foreign visitors. The stone sculptures are genuinely magnificent — centuries old, remarkably well-preserved, and powerful in their silent grandeur. No historical knowledge needed to appreciate them.",
+      "tip": "Walk the full path slowly from south to north, starting at the stone archway. Morning light (before 10 AM) creates the best shadows on the sculptures. In autumn, golden ginkgo leaves framing the stone animals is one of Beijing's best photo opportunities."
+    },
+    {
+      "name": "Dingling Underground Palace (定陵地下宫殿)",
+      "description": "The only excavated imperial tomb in the Ming Tombs complex. Descend 27 meters underground through a series of stone chambers to reach the burial vault of Emperor Wanli (reigned 1572-1620) and his two empresses. The underground palace covers 1,195 square meters with vaulted stone ceilings and the original stone thrones and replica coffins.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Walking into a real 400-year-old imperial tomb is a unique experience — the scale of the underground chambers is genuinely impressive. Note: the original 3,000+ burial treasures (gold crowns, phoenix crowns, silk robes) were removed during excavation and are displayed in museums. What you see are replicas and empty chambers.",
+      "tip": "There are no elevators — the descent and climb back up are equivalent to about 5 stories. The underground chambers are cool even in summer. Allow 45-60 minutes for the full Dingling visit."
+    },
+    {
+      "name": "Changling Hall of Eminent Favor (长陵祾恩殿)",
+      "description": "The largest and best-preserved tomb, built for Emperor Yongle (the emperor who built the Forbidden City). The Hall of Eminent Favor is one of China's largest surviving ancient wooden buildings, supported by 60 massive golden nanmu wood columns — some so large that two people cannot encircle them with outstretched arms.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The golden nanmu wood hall is architecturally comparable to the Hall of Supreme Harmony in the Forbidden City. Nanmu wood is now extinct-grade precious — these columns are irreplaceable national treasures. The museum inside displays artifacts from the Ming dynasty.",
+      "tip": "Look up at the ceiling and study the wooden column construction — the craftsmanship is extraordinary. The tomb itself has not been excavated, so there's no underground palace to enter. The exhibition hall has English captions on key pieces."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The stone archway (石牌坊) at the Sacred Way entrance",
+      "why": "Built in 1540, it's one of China's oldest and most elaborate stone archways — five openings, six pillars, eleven roofs, spanning nearly 29 meters. Many tour groups rush past it, but the carved details reward close inspection."
+    },
+    {
+      "what": "The feng shui landscape design",
+      "why": "The entire 40 km² valley was chosen according to feng shui principles — Tianshou Mountain as the 'backrest,' flanking hills as 'armrests,' and the Wenyu River flowing past. Understanding this transforms the visit from 'looking at old buildings' to appreciating one of history's grandest landscape design projects."
+    },
+    {
+      "what": "Autumn ginkgo season on the Sacred Way",
+      "why": "In late October to mid-November, the ginkgo trees along the Sacred Way turn brilliant gold, carpeting the path around the stone sculptures. It's one of Beijing's most photogenic autumn scenes, yet most visitors come in summer."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Hire a car/driver for the day or arrange transport in advance. Start at the Sacred Way (arrive by 8:30 AM for the best light and fewest people) → drive to Changling for the nanmu wood hall → drive to Dingling for the underground palace → head back to Beijing or continue to the Great Wall. Total: 4-5 hours including driving between sites.",
+    "what_to_skip": "Zhaoling is the least essential of the three tombs — similar in style to Changling but smaller and with fewer exhibits. If time is limited, skip it. The souvenir shops near the tombs sell generic tourist items at inflated prices.",
+    "pro_tips": "Combine with a Great Wall visit (Mutianyu is ~1 hour from the Ming Tombs by car). Visit the Great Wall in the morning, then the Ming Tombs in the afternoon — or vice versa. Bring your own food and water; there are essentially no quality restaurants in the scenic area. A knowledgeable guide transforms this from a 'nice walk among old buildings' into one of the most fascinating historical experiences in China."
+  },
+  "heads_up": [
+    {
+      "warning": "The tombs are far apart with poor inter-site transport",
+      "advice": "Don't plan to walk between tombs — they're 2-8 km apart. Arrange a car, use bus 314, or take DiDi between sites. Budget at least 30 minutes of travel time between each tomb."
+    },
+    {
+      "warning": "No food or limited services inside the scenic area",
+      "advice": "Bring water, snacks, and any food you'll need. The few vendors near the tombs sell overpriced snacks and drinks. There are no proper restaurants within the scenic area. If you forget provisions, drop us a message — we can arrange food or drink delivery to meet you at one of the tomb parking areas."
+    },
+    {
+      "warning": "Dingling underground palace requires climbing",
+      "advice": "The descent and ascent at Dingling is equivalent to about 5 flights of stairs. There are no elevators or escalators. Not suitable for visitors with significant mobility issues. Changling is fully ground-level and wheelchair accessible."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The Ming Tombs are 50 km from central Beijing — budget 1-1.5 hours each way by car, longer by public transport. This is a half-day or full-day trip.",
+    "Online ticket booking via WeChat may require a Chinese phone number. Buy tickets at the window with your passport if online booking doesn't work.",
+    "A guide is highly recommended — the historical context is complex (Ming dynasty politics, imperial funeral customs, feng shui) and almost no English signage exists on site.",
+    "Vendors outside the tombs may aggressively sell souvenirs — politely decline and walk on. Prices are inflated.",
+    "The 'Ming Tombs' metro station (Line 8) is NOT at the tombs — it's still several kilometers away. You'll need a bus or taxi from the metro station."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Running out of time — can't visit all sites",
+      "what_to_do": "Prioritize: Sacred Way first (most visually impressive), then Dingling (most unique — underground palace), then Changling if time allows.",
+      "plan_b": "Even just the Sacred Way alone is worth the trip. It's the most photogenic and atmospheric part of the entire complex, and can be completed in under an hour."
+    },
+    {
+      "problem": "Can't find transport between tombs",
+      "what_to_do": "Bus 314 connects several tomb sites. DiDi works in the area but may have longer wait times. Ask at ticket windows for transport advice.",
+      "plan_b": "Focus on the Sacred Way and one tomb (Changling and Sacred Way are closest together). Skip trying to visit all three if transport is problematic."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes essential — you'll walk several kilometers across uneven ground. Sun protection in summer. Warm layers in winter (the valley is exposed and can be windy).",
+    "what_to_bring": "Water and food (no restaurants on site). Camera. Sun protection. Comfortable shoes. Cash for tickets if online booking fails.",
+    "what_not_to_bring": "Nothing specific to avoid."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "The Sacred Way is a flat 800-meter walk. Changling is mostly flat and wheelchair accessible. Dingling requires descending and climbing back up the equivalent of 5 stories — no elevator available. Total walking at each site: 1-2 km. The distance between tomb sites (2-8 km) requires vehicle transport.",
+    "age_notes": "Children may find the tombs less engaging than other Beijing attractions (Great Wall, Forbidden City). The Sacred Way's stone animals appeal to all ages. The underground palace at Dingling can be exciting for older children but tiring for young ones.",
+    "health_warnings": "Dingling's underground palace stairs are steep and can be slippery. The site is largely exposed to sun — heat exhaustion risk in summer. Limited medical facilities in the area."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a combined Ming Tombs + Great Wall day tour with private car and guide",
+      "platform": "Hotel concierge, Klook, GetYourGuide, or Trip.com",
+      "value_to_user": "Solves the biggest challenge (transport between sites) and adds essential historical context. A knowledgeable English-speaking guide transforms this from a confusing spread-out site into a compelling narrative about Ming dynasty power and mortality. We can arrange a private car, driver, and vetted English-speaking guide for the full day — just tell us your hotel and preferred date."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Míng Shísān Líng",
+      "chinese": "明十三陵",
+      "english": "Ming Thirteen Tombs"
+    },
+    {
+      "pinyin": "Shén Dào",
+      "chinese": "神道",
+      "english": "Sacred Way (Spirit Way)"
+    },
+    {
+      "pinyin": "Dìng Líng Dì Gōng",
+      "chinese": "定陵地宫",
+      "english": "Dingling Underground Palace"
+    },
+    {
+      "pinyin": "Cháng Líng",
+      "chinese": "长陵",
+      "english": "Changling Tomb"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Mutianyu Great Wall (慕田峪长城)",
+      "why": "The most popular day-trip combination in Beijing. Visit the Great Wall in the morning, the Ming Tombs in the afternoon (or vice versa). Both are northwest of Beijing and about 1 hour apart by car.",
+      "travel_time": "1 hour by car"
+    },
+    {
+      "suggestion": "Forbidden City (故宫)",
+      "why": "Emperor Yongle built both the Forbidden City and Changling tomb — seeing both reveals the full scope of his ambition. The architectural parallels between the living palace and the burial palace are fascinating.",
+      "travel_time": "1-1.5 hours by car to central Beijing"
+    }
+  ],
+  "cultural_context": "The Ming Tombs represent the most complete surviving imperial burial complex in China, embodying the principle of 'serving the dead as if they were alive' (事死如事生). Emperor Yongle chose this valley based on feng shui principles in 1409, and over the next 230 years, 12 more emperors followed him here. The site's troubled modern history includes damage by Li Zicheng's rebel army, restoration by the Qing Emperor Qianlong (who repaired the Ming tombs to win Han Chinese loyalty), and the controversial 1956 excavation of Dingling — the first and last imperial tomb excavation in China. The excavation caused irreversible damage to silk textiles and other artifacts, leading to a permanent government ban on further tomb excavations. This is why Changling and all other imperial tombs remain sealed to this day.",
+  "photo_spots": [
+    {
+      "location": "Sacred Way stone animal avenue",
+      "tip": "Morning light (before 10 AM) creates dramatic shadows on the stone sculptures. In autumn (late October), the golden ginkgo leaves framing the stone elephants and camels is one of Beijing's most iconic shots.",
+      "why": "The stone animal statues standing sentinel along the ancient processional path are the most photogenic element of the entire complex."
+    },
+    {
+      "location": "Stone archway (石牌坊) at Sacred Way entrance",
+      "tip": "Photograph from directly in front for the full symmetrical effect. Early morning or late afternoon light is best.",
+      "why": "This 1540 marble archway is one of the finest surviving examples of Ming dynasty stone carving — five openings wide and elaborately decorated."
+    }
+  ],
+  "card_name": "Ming Tombs",
+  "card_type": "UNESCO HERITAGE",
+  "card_hook": "Thirteen emperors, one sacred valley, six hundred years of silence.",
+  "best_for": [
+    "history-enthusiasts",
+    "photography",
+    "half-day-trip",
+    "great-wall-combo",
+    "unesco-heritage"
+  ]
+}

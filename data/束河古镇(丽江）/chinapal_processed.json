@@ -1,0 +1,220 @@
+{
+  "attraction_name_cn": "束河古镇",
+  "attraction_name_en": "Shuhe Ancient Town",
+  "address_cn": "云南省丽江市古城区束河路束河古镇牌坊内",
+  "experience_type": "ancient-town",
+  "hook": "Lijiang's quieter, older sibling — a Naxi village at the foot of Jade Dragon Snow Mountain where crystal-clear spring water still flows through cobblestone streets and the Tea Horse Road hasn't been completely paved over with souvenir shops.",
+  "honest_description": "Shuhe Ancient Town is what Lijiang Old Town used to be before it got famous. As the earliest Naxi settlement in the Lijiang basin and a key stop on the ancient Tea Horse Road, it carries genuine historical weight — UNESCO World Heritage status included. The town is visibly less crowded and commercialized than Lijiang proper, with cleaner water running through its canals, more local Naxi residents still living in traditional houses, and a slower, more livable pace. Nine Dragon Pool (九鼎龙潭) at the north end has spring water so clear it reflects Jade Dragon Snow Mountain. The Tea Horse Road Museum is small but fascinating. That said, commercialization has arrived — the main streets are increasingly lined with the same generic souvenir shops, costume rental places, and bars that plague every Chinese ancient town. The magic is in the back streets and residential areas where daily Naxi life continues. Best as a base for exploring the Lijiang region rather than a standalone day trip.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is there an entrance fee?",
+      "answer": "Technically there's a ¥30 entrance fee at the main gate, but this is loosely enforced. Many visitors enter through side streets or the back of town without encountering a ticket check. Some reviewers report the fee is no longer collected at all. If you enter through the main archway entrance, you may be asked to register but not necessarily pay. The paid attractions inside (Kezhi Garden equivalent) are separate small fees."
+    },
+    {
+      "question": "Should I stay in Shuhe or Lijiang Old Town?",
+      "answer": "Shuhe if you want quiet, atmosphere, and better value accommodation. Lijiang if you want nightlife, more restaurant options, and proximity to services. Many travelers prefer Shuhe as a base — it's only 15-20 minutes by taxi/bus from Lijiang Old Town, has fewer tourists, and the guesthouses are calmer. The trade-off is fewer food and entertainment options after dark."
+    }
+  ],
+  "experience_format_note": "Open ancient town — wander freely at your own pace. No structured tour or timed entry. The town is compact enough to walk end-to-end in 20 minutes, but exploring the back streets and waterways takes longer. Open 24 hours. The main commercial area centers on Sifang Street (the town square), with quieter residential areas to the north and east.",
+  "vibe": "A water-fed Naxi village caught between preservation and tourism — still quiet enough to hear birdsong and running water in the back streets, but the main drag is slowly turning into Lijiang 2.0.",
+  "time_needed": {
+    "quick_visit": "2-3 hours (walk the main streets, visit the Tea Horse Road Museum, see Nine Dragon Pool)",
+    "recommended": "Half day (full exploration including back streets, tea houses, and a leisurely lunch by the canal)",
+    "deep_dive": "Overnight stay (experience the evening atmosphere after day-trippers leave, morning mist over the pools, and use Shuhe as a base for surrounding attractions)"
+  },
+  "best_time": {
+    "best_time_of_day": "Early morning (before 10 AM) when the light is soft, shops haven't opened, and the residential areas feel authentically lived-in. Late afternoon (5-7 PM) when day-trippers leave and the sunset light hits the cobblestones.",
+    "worst_time": "Peak holiday periods (National Day, Chinese New Year, summer weekends) when the town fills with tour groups. Rainy season (July-August) means slippery cobblestones and clouded mountain views.",
+    "seasonal_notes": "Spring (March-May): flowers everywhere, clear skies, snow still visible on Jade Dragon Snow Mountain. Autumn (September-November): golden light, comfortable temperatures, clear mountain views. Winter: quiet and cold but atmospheric, with possible snow. Summer: lush and green but rainy.",
+    "pro_tip": "Stay overnight in one of the canal-side guesthouses. After 6 PM, the town empties dramatically and transforms into a peaceful village. Dawn at Nine Dragon Pool with Jade Dragon Snow Mountain reflected in the spring water is unforgettable."
+  },
+  "getting_in": {
+    "opening_hours": "Open 24 hours. Internal attractions (museums, temples) generally open 08:30-17:30.",
+    "price_rmb": "¥30 (main gate, loosely enforced); ¥0 via side entrances",
+    "price_usd": "~$4 or free",
+    "price_breakdown": [
+      {
+        "item": "Main gate entrance",
+        "price": "¥30",
+        "highlight": "Inconsistently enforced — many visitors enter free via side streets"
+      },
+      {
+        "item": "Tea Horse Road Museum",
+        "price": "Free",
+        "highlight": "Inside the town — no separate ticket needed"
+      }
+    ],
+    "booking_required": "No — completely walk-in.",
+    "booking_method": "No booking needed. If the main gate collects a fee, pay on the spot.",
+    "passport_accepted": "Yes for any ticket purchases.",
+    "what_to_bring": "Camera. Comfortable walking shoes for cobblestone streets. Layers (Shuhe is at 2,440m altitude — mornings and evenings can be cool). Sunscreen (UV is strong at altitude).",
+    "queue_situation": "No queues to enter. The town rarely feels overcrowded compared to Lijiang.",
+    "language_barrier_rating": "minimal — Basic bilingual signage. Most guesthouse and cafe owners dealing with tourists speak some English. Street navigation is intuitive."
+  },
+  "highlights": [
+    {
+      "name": "Nine Dragon Pool (九鼎龙潭)",
+      "description": "A natural spring pool at the north end of town fed by snowmelt from Jade Dragon Snow Mountain. The water is crystal clear with visible aquatic plants swaying beneath the surface. On clear days, the snow mountain reflects in the pool.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The pool is the source of all the water flowing through Shuhe's canals — the Naxi people consider it sacred. The surrounding ancient trees and small temple create a serene atmosphere.",
+      "tip": "Visit at dawn when the pool is mirror-still and Jade Dragon Snow Mountain is reflected in the water. Bring a wide-angle lens."
+    },
+    {
+      "name": "Tea Horse Road Museum (茶马古道博物馆)",
+      "description": "China's first museum dedicated to the ancient Tea Horse Road trade route, housed in the historic Dajue Palace. Displays 800+ artifacts from the tea-for-horses trade that connected Yunnan to Tibet, including saddles, tea bricks, maps, and murals.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The Tea Horse Road was China's equivalent of the Silk Road but through the mountains — tea from Yunnan was traded for Tibetan horses along treacherous mountain paths. Shuhe was a major trading post.",
+      "tip": "Don't miss the Ming Dynasty murals inside the Dajue Palace — they blend Buddhist, Taoist, and Naxi religious imagery in a style found nowhere else in China."
+    },
+    {
+      "name": "Qinglong Bridge (青龙桥)",
+      "description": "A 400-year-old stone bridge from the Ming Dynasty — the most iconic structure in Shuhe and a former essential crossing point on the Tea Horse Road. The worn stone surface shows centuries of foot and hoof traffic.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Built during the peak of the Mu family's rule (the Naxi chieftains), this bridge represents the height of Shuhe's commercial prosperity as a Tea Horse Road hub.",
+      "tip": "The bridge is most photogenic in the late afternoon when the low sun lights up the worn stone and the canal water shimmers."
+    },
+    {
+      "name": "The Residential Back Streets",
+      "description": "Away from the commercial center, the eastern and northern residential areas retain genuine Naxi village character — traditional courtyard houses with carved wooden doors, small vegetable gardens, locals going about daily life, and dogs sleeping in the sun.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is where you'll see how Naxi people actually live — not a museum, not a performance, just daily life in a beautiful setting.",
+      "tip": "Walk away from Sifang Street in any direction and within 5 minutes you'll find yourself in a genuinely quiet, authentic Naxi neighborhood."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The canal water clarity",
+      "why": "Shuhe's canals are fed by mountain springs and are remarkably clear — you can see green water plants waving in the current. Most visitors don't look down to notice this detail that makes Shuhe different from other ancient towns."
+    },
+    {
+      "what": "Sifang Street evening performances",
+      "why": "The central square sometimes hosts traditional Naxi music and dance performances in the evening, including bonfire gatherings. Free to watch and a rare opportunity to see Naxi cultural traditions."
+    },
+    {
+      "what": "The leather craft heritage",
+      "why": "Shuhe was historically known for its leather workers who supplied saddles and goods to Tea Horse Road traders. A few traditional leather shops still operate, making handcrafted goods."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter from the main gate → walk through to Sifang Street to get oriented → head north to Nine Dragon Pool first (most peaceful in the morning) → visit Tea Horse Road Museum on the way back → cross Qinglong Bridge → explore the eastern residential back streets → return to the commercial center for lunch by the canal → wander the western side streets.",
+    "what_to_skip": "The generic souvenir shops selling identical 'ethnic' jewelry and scarves — same items at every Chinese ancient town. The costume rental shops are fine if you enjoy hanfu photography, but not unique to Shuhe. If you're looking for authentic Naxi handicrafts or the remaining traditional leather workshops, ask our concierge — we can point you to the real artisan shops that most tourists walk right past.",
+    "pro_tips": "Many visitors combine Shuhe with Lijiang Old Town in one day — consider doing Shuhe in the morning (calmer) and Lijiang in the afternoon/evening (livelier). From Shuhe, take bus #6 or #11 or a ¥15-40 taxi to Lijiang. For dining, the canal-side restaurants are overpriced — walk one street back for better value local Naxi food. If you want local Naxi restaurant recommendations that tourists rarely find, message our team — we can point you to places where the food is authentic and reasonably priced."
+  },
+  "heads_up": [
+    {
+      "warning": "Increasing commercialization",
+      "advice": "The main streets are becoming more touristy each year. Seek out the back streets and residential areas for the authentic experience. Visit now before it fully becomes 'Lijiang 2.0.'"
+    },
+    {
+      "warning": "Altitude of 2,440 meters",
+      "advice": "Less extreme than Shangri-La but still high enough to cause mild altitude effects. Stay hydrated, avoid alcohol on your first day, and don't rush uphill."
+    },
+    {
+      "warning": "Cobblestone streets are uneven and slippery when wet",
+      "advice": "Wear flat, grippy shoes. The polished cobblestones become very slick after rain. Heels are impractical."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The ¥30 entrance fee is confusingly enforced — some gates charge, some don't. Don't feel cheated if you paid when others didn't, or vice versa.",
+    "The 'ancient Lijiang maintenance fee' (丽江古城维护费, ¥50) that used to apply to all Lijiang-area old towns has been largely abolished, but some tour guides may still try to charge it.",
+    "Accommodation in Shuhe is significantly cheaper than Lijiang Old Town for similar quality. Canal-side guesthouses offer great atmosphere for ¥100-300/night. If you need help finding a good guesthouse in Shuhe, message our team — we can recommend places based on your budget and preferences, and book on your behalf in Chinese to get the best rate.",
+    "The town is at 2,440m — UV is significantly stronger than at sea level. Sunscreen is essential even on overcast days."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Too similar to Lijiang Old Town to feel worthwhile",
+      "what_to_do": "Head to the north end (Nine Dragon Pool area) and the eastern residential streets — these sections are distinctly different from Lijiang and much more peaceful.",
+      "plan_b": "If you want an even less commercialized alternative, visit Baisha Ancient Town (白沙古镇) — smaller, quieter, and 10 minutes further from Lijiang."
+    },
+    {
+      "problem": "Difficulty getting transport back to Lijiang in the evening",
+      "what_to_do": "Didi works in Shuhe. Taxis are available near the main gate. Agree on the price before getting in (¥15-40 to Lijiang Old Town).",
+      "plan_b": "Bus #6 and #11 run until approximately 8-9 PM between Shuhe and Lijiang. If you're stuck late, message us and we can arrange a car — Didi availability drops off after dark in Shuhe."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Layers — mornings can be cool at 2,440m even in summer. Comfortable flat shoes for cobblestones. Sun protection (hat, sunglasses).",
+    "what_to_bring": "Camera. Sunscreen (essential at altitude). Water bottle. Cash for small vendors.",
+    "what_not_to_bring": "Heels (cobblestones). Heavy luggage if day-tripping (leave at your hotel)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Flat terrain with cobblestone streets. No significant hills within the town itself. Total walking area is compact — maybe 2-3km for a full exploration. Some uneven surfaces on older stone paths.",
+    "age_notes": "Suitable for all ages. Strollers manageable on main streets but difficult on narrow back lanes. Elderly visitors will find the flat terrain comfortable.",
+    "health_warnings": "Mild altitude effects possible at 2,440m. Strong UV at altitude — sunburn risk. Cold evenings even in summer."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book accommodation in Shuhe as a Lijiang base",
+      "platform": "Booking.com, Ctrip, Airbnb",
+      "value_to_user": "Better value and calmer atmosphere than Lijiang Old Town, with easy access to all Lijiang-area attractions. Canal-side guesthouses from ¥100-300/night."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Shùhé Gǔzhèn",
+      "chinese": "束河古镇",
+      "english": "Shuhe Ancient Town"
+    },
+    {
+      "pinyin": "Jiǔ Dǐng Lóng Tán",
+      "chinese": "九鼎龙潭",
+      "english": "Nine Dragon Pool"
+    },
+    {
+      "pinyin": "Chámǎ Gǔdào",
+      "chinese": "茶马古道",
+      "english": "Tea Horse Road"
+    },
+    {
+      "pinyin": "Nàxī zú",
+      "chinese": "纳西族",
+      "english": "Naxi ethnic group"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Lijiang Old Town (丽江古城)",
+      "why": "The larger, livelier counterpart — do Shuhe for morning tranquility and Lijiang for afternoon buzz and evening nightlife.",
+      "travel_time": "15-20 minutes by taxi or bus"
+    },
+    {
+      "suggestion": "Baisha Ancient Town (白沙古镇)",
+      "why": "Even quieter and less commercialized than Shuhe — the most 'authentic' of Lijiang's three ancient towns, with famous Baisha murals.",
+      "travel_time": "10-15 minutes by taxi north of Shuhe"
+    },
+    {
+      "suggestion": "Jade Dragon Snow Mountain (玉龙雪山)",
+      "why": "The dramatic snow-capped mountain visible from Shuhe — a full-day excursion to the glacier at 4,680m.",
+      "travel_time": "30-40 minutes by car"
+    }
+  ],
+  "cultural_context": "Shuhe was the first Naxi settlement in the Lijiang basin, predating Lijiang Old Town by centuries. Its name in Naxi language means 'village at the foot of a peak.' The town's prosperity came from the Tea Horse Road — the ancient trade network that transported Yunnan tea to Tibet in exchange for horses, passing through treacherous mountain terrain. Shuhe's position made it a critical rest stop and trading post, and the leather workers here supplied saddles and gear to the caravan traders. The Naxi people have their own writing system (Dongba script), religious traditions, and matrilineal customs that make their culture distinct from Han Chinese. Shuhe, as the oldest Naxi settlement, represents the transition from nomadic to agricultural to commercial life — a living archaeological record of Naxi cultural evolution.",
+  "photo_spots": [
+    {
+      "location": "Nine Dragon Pool at dawn",
+      "tip": "Arrive before 8 AM for mirror-still water reflecting Jade Dragon Snow Mountain. Wide-angle lens captures pool, trees, and mountain in one frame.",
+      "why": "The sacred spring pool with snow mountain reflection is Shuhe's most stunning image — only achievable in early morning calm."
+    },
+    {
+      "location": "Qinglong Bridge over the canal",
+      "tip": "Late afternoon light on the worn stone surface with canal reflections below. Frame with overhanging willows.",
+      "why": "A 400-year-old bridge that embodies the Tea Horse Road history — photogenic from every angle."
+    },
+    {
+      "location": "Residential back streets with flowers and water channels",
+      "tip": "Look for doorways with potted flowers, laundry drying, and cats sleeping — the details of daily Naxi life make the most authentic photos.",
+      "why": "These quiet lanes look like what every Chinese ancient town wishes it still was — genuine, lived-in, and beautiful without trying."
+    }
+  ],
+  "card_name": "Shuhe Ancient Town",
+  "card_type": "NAXI VILLAGE",
+  "card_hook": "The quieter, older original — Lijiang before the crowds.",
+  "best_for": [
+    "escape-the-crowds",
+    "overnight-stay-base",
+    "water-town-atmosphere",
+    "cultural-immersion",
+    "photographers-paradise"
+  ]
+}

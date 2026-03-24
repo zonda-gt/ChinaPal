@@ -1,0 +1,248 @@
+{
+  "attraction_name_cn": "象鼻山",
+  "attraction_name_en": "Elephant Trunk Hill",
+  "address_cn": "广西壮族自治区桂林市象山区民主路1号",
+  "experience_type": "sightseeing",
+  "hook": "A 360-million-year-old karst hill shaped exactly like an elephant drinking from the Li River — Guilin's city emblem and the image on the 20 RMB banknote.",
+  "honest_description": "Elephant Trunk Hill is Guilin's most iconic landmark — a natural karst formation that genuinely looks like a giant elephant dipping its trunk into the Li River. The 'Water Moon Cave' formed between the trunk and legs creates a stunning circular opening where river water flows through, producing the famous 'moon floating on water' effect, especially magical at night. The park itself is compact and can be walked in under an hour. You can climb to the summit (about 20 minutes up steep stone steps) for panoramic views of Guilin and visit the Ming Dynasty Puxian Pagoda at the top. Since becoming free in 2024, it's much more crowded than before, but the formation is genuinely impressive and worth seeing. It's best as a quick stop rather than a half-day destination — combine it with the Two Rivers and Four Lakes circuit for a complete Guilin experience.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth going inside the park, or can I see the elephant shape from outside?",
+      "answer": "You can see the elephant shape from outside the park along the riverside, and some visitors do exactly that. But going inside (now free) lets you get much closer, walk through the Water Moon Cave, climb to the summit for city views, and visit the Sanhua wine cellar inside the hill. The park is small enough that you won't spend more than 1-2 hours even exploring thoroughly, so it's worth entering."
+    },
+    {
+      "question": "Do I need to book in advance as a foreigner?",
+      "answer": "The park is free since March 2024. Chinese visitors need to pre-register via WeChat, but multiple foreign reviewers report that foreigners can enter free with just a passport — no WeChat booking required. Simply show your passport at the gate. If asked, the staff at Gate 1 are generally helpful with foreign visitors."
+    }
+  ],
+  "experience_format_note": "Open park with walking paths. Three gates: Gate 1 (north, main entrance — enter and exit), Gate 2 (south, exit only before 19:00), Gate 3 (east, enter only before 19:00, then enter/exit after 19:00). The park is compact — you can walk the entire perimeter and climb the hill in 1-2 hours. No guided tour required.",
+  "vibe": "A charming city park wrapped around a geological marvel — peaceful in the early morning, tourist-packed by midday, and romantically lit at night.",
+  "time_needed": {
+    "quick_visit": "30-45 minutes (walk to the viewing platform, take the classic photo, and leave)",
+    "recommended": "1-2 hours (explore the full park, climb to the summit, visit the wine cellar)",
+    "deep_dive": "2-3 hours (take a bamboo raft ride for the water perspective, spend time photographing from multiple angles, explore Love Island)"
+  },
+  "best_time": {
+    "best_time_of_day": "Early morning (7:00-9:00 AM) for soft light, fewer crowds, and a chance to see locals doing tai chi. Late afternoon (5:00-6:30 PM) for sunset light on the hill. Night visits offer the illuminated 'Water Moon' effect.",
+    "worst_time": "Midday (10:00 AM - 3:00 PM) when tour groups flood the park and the photo spots are packed. National holidays are extremely crowded.",
+    "seasonal_notes": "Autumn (September-November) has the best weather — cool, comfortable, and ideal for climbing. March brings atmospheric misty rain that makes the hill look like a traditional Chinese ink painting. Summer is hot and humid but the river is full. Winter is mild but can be grey.",
+    "pro_tip": "Visit at dusk and stay into the evening — the transition from daylight to illuminated night creates the most dramatic photography opportunities, and crowds thin significantly after sunset."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (Apr-Nov): 6:30 AM - 9:30 PM. Off-season (Dec-Mar): 7:00 AM - 9:30 PM. Last entry 9:00 PM.",
+    "price_rmb": "Free (since March 2024)",
+    "price_usd": "Free",
+    "price_breakdown": [
+      {
+        "item": "Park admission",
+        "price": "Free",
+        "highlight": "Free since March 2024. Previously ¥55-75."
+      },
+      {
+        "item": "Bamboo raft ride",
+        "price": "~¥50/person",
+        "highlight": "20-minute ride on the Li River passing through the Water Moon Cave — optional but gives a unique water-level perspective"
+      },
+      {
+        "item": "Professional photo service",
+        "price": "¥30/photo",
+        "highlight": "Staff photographers at scenic spots — photos come in a nice silver frame"
+      }
+    ],
+    "booking_required": "Chinese visitors need WeChat pre-registration. Foreigners can enter with passport only — no advance booking needed. Same-day registration at the gate works.",
+    "booking_method": "Show passport at Gate 1. No app or online booking required for foreign visitors.",
+    "passport_accepted": "Yes — foreigners enter with physical passport. No WeChat registration needed.",
+    "what_to_bring": "Passport (for free entry). Comfortable walking shoes (stone steps to the summit are steep). Water bottle. Camera with zoom lens for the classic elephant shot from across the river.",
+    "queue_situation": "Minimal queues at the entrance since it became free. The main bottleneck is the photo spot at the Moon-in-the-Water viewing platform — expect a short wait to get an unobstructed shot during peak hours.",
+    "language_barrier_rating": "mandarin-only — Signage has some English but staff speak limited English. The park is simple to navigate without language help."
+  },
+  "highlights": [
+    {
+      "name": "Water Moon Cave (水月洞)",
+      "description": "The natural arch formed between the elephant's 'trunk' and 'legs' where Li River water flows through. The circular opening creates a moon-like reflection on the water surface — the famous 'Elephant Mountain Water Moon' effect. The cave walls bear over 50 inscriptions from Tang and Song Dynasty poets spanning over 1,000 years.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the iconic image of Guilin. The stone inscriptions inside are among the oldest tourist graffiti in the world — literary visitors have been carving their impressions here for over a millennium.",
+      "tip": "For the classic reflection photo, visit on a calm day when the river surface is still. Night visits with illumination create the most dramatic moon-on-water effect.",
+      "image": "水月洞.webp"
+    },
+    {
+      "name": "Summit and Puxian Pagoda (普贤塔)",
+      "description": "A Ming Dynasty (14th century) Tibetan-style Buddhist pagoda standing 13.6 meters tall at the summit. The climb takes about 20 minutes via steep stone steps and rewards you with a 360-degree panoramic view of Guilin city, the Li River, and surrounding karst peaks.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The panoramic view from the top gives you the definitive 'Guilin landscape' vista — karst peaks rising from flat plains in every direction. This is the view that made Guilin famous.",
+      "tip": "The stone steps are steep and uneven — take your time and wear proper shoes. The summit is much less crowded than the base, and the views are the real highlight of the visit.",
+      "image": "普贤塔.jpg"
+    },
+    {
+      "name": "Sanhua Wine Cellar (三花酒窖)",
+      "description": "A natural cave inside the hill used as a wine cellar for Guilin's famous Sanhua (Three Flower) rice wine. The constant cool temperature and humidity create ideal aging conditions. You can tour the cellar and learn about local brewing traditions.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Sanhua rice wine is Guilin's signature spirit — storing it inside a mountain is a fascinating example of using natural geography for practical purposes.",
+      "tip": "Quick visit — interesting novelty but don't spend too much time here at the expense of the outdoor scenery.",
+      "image": "三花酒窖.webp"
+    },
+    {
+      "name": "Love Island (爱情岛)",
+      "description": "A small island on the north side of the park, directly across from Elephant Trunk Hill, offering what many consider the best viewing angle of the elephant formation. Popular spot for wedding photos.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is where you get the postcard-perfect shot of the full elephant shape reflected in the river. Bring a zoom lens.",
+      "tip": "The viewing platform here is less crowded than the main Moon-in-the-Water platform and arguably offers a better angle.",
+      "image": "爱情岛.png"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Elephant's Eye Cave (象眼岩)",
+      "why": "A natural rock tunnel halfway up the hill representing the elephant's eyes. Contains historical inscriptions including poetry by Lu You, a famous Southern Song Dynasty poet (12th century). Most visitors rush straight to the summit and walk right past it."
+    },
+    {
+      "what": "The view from Guilin Jolie Vue Hotel rooftop",
+      "why": "A nearby boutique hotel has a rooftop cafe offering an elevated panoramic view of Elephant Trunk Hill from above — a unique angle that most ground-level tourists never see. You can visit just for coffee without being a hotel guest."
+    },
+    {
+      "what": "The connection to the 20 RMB banknote",
+      "why": "The scenery on China's 20 yuan note depicts the Li River and karst landscape that includes Elephant Trunk Hill. Most foreign visitors don't realize they're looking at the view printed on Chinese currency."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter via Gate 1 (north) → Walk the riverside path to the Moon-in-the-Water viewing platform for the classic photo → Enter Water Moon Cave to see the ancient inscriptions → Climb to the summit and Puxian Pagoda for panoramic views → Descend to Love Island for the best full-elephant photo angle → Quick stop at the Sanhua wine cellar → Exit via Gate 2 (south) or return to Gate 1.",
+    "what_to_skip": "The souvenir shops near the gates are overpriced tourist fare. The professional photo service (¥30/photo) is skippable if you have a decent phone camera. The bamboo raft ride is pleasant but not essential — you get similar views from the shore.",
+    "pro_tips": "The most iconic 'elephant drinking water' photo is actually best taken from outside the park — the opposite riverbank or from a nearby bridge gives the widest angle. Inside the park, you're too close for the full shape. Combine with a walk along the Two Rivers and Four Lakes circuit for a complete half-day experience."
+  },
+  "heads_up": [
+    {
+      "warning": "The hill is much smaller than expected",
+      "advice": "Elephant Trunk Hill is only 55 meters tall — don't expect a mountain. It's a compact city park, not a wilderness hike. Adjust expectations accordingly and enjoy it for what it is: a unique geological formation in a pleasant park setting."
+    },
+    {
+      "warning": "Very crowded since becoming free",
+      "advice": "Since admission became free in 2024, visitor numbers have surged. The photo spots have queues during peak hours. Visit early morning or evening to avoid the worst crowds."
+    },
+    {
+      "warning": "Steep stone steps to the summit",
+      "advice": "The climb is short (20 minutes) but the steps are steep and uneven. Not recommended for those with mobility issues. Wear proper shoes, not sandals or heels."
+    },
+    {
+      "warning": "Mosquitoes can be aggressive",
+      "advice": "The riverside park environment attracts mosquitoes, especially in warmer months. Bring insect repellent."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Entry is free but Chinese visitors must pre-register via WeChat. Foreigners can bypass this by showing their passport at the gate — staff are accustomed to this.",
+    "Tour groups with loudspeaker-wielding guides are everywhere and can be jarring. The noise level at popular viewing spots can be intense.",
+    "The bamboo raft operators may try to charge inflated prices to foreigners. Confirm the price before boarding — it should be around ¥50/person. If you're worried about being overcharged, message us and we can confirm the current price or book the raft for you.",
+    "Limited English signage inside the park. The paths are intuitive enough to navigate without language help, but historical plaques about the inscriptions and caves are mostly Chinese-only."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Can't get in without WeChat registration",
+      "what_to_do": "Show your foreign passport at Gate 1 and explain you're a tourist. Staff typically wave foreigners through without WeChat registration. If that fails, ask a Chinese tourist nearby to help you register.",
+      "plan_b": "You can see the elephant shape from outside the park — walk along the riverside path south of Gate 1 or view it from across the river for the classic angle. If you're running into entry issues, message our team — we can call the park on your behalf and sort it out quickly."
+    },
+    {
+      "problem": "Photo spots are too crowded to get a clean shot",
+      "what_to_do": "Skip the main Moon-in-the-Water platform and go to Love Island on the north side — fewer people and arguably a better angle. Alternatively, climb to the summit where crowds thin significantly.",
+      "plan_b": "Cross to the opposite bank of the Li River for the widest, most classic angle of the elephant formation. No crowds and better perspective."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes with good grip for the stone steps. Casual clothing. Layers in spring/autumn as mornings can be cool by the river.",
+    "what_to_bring": "Passport (for free entry). Camera with zoom lens. Insect repellent. Water bottle. Sunscreen in summer.",
+    "what_not_to_bring": "High heels or sandals — the stone steps are steep and slippery when wet. Tripods are technically allowed but hard to use in crowded photo spots."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy-to-moderate",
+    "physical_details": "The flat riverside paths are easy walking suitable for all fitness levels. Climbing to the summit adds moderate difficulty — about 20 minutes of steep stone steps with roughly 55 meters of elevation gain. Wheelchair accessible on the lower paths but not to the summit.",
+    "age_notes": "Suitable for all ages at the base level. Children and elderly can enjoy the park without climbing. Families with children regularly climb to the summit on weekends. Stroller rental available at the visitor center (¥20/hour).",
+    "health_warnings": "Summer heat and humidity require hydration. Mosquitoes are common near the water. Steps can be slippery when wet — use caution in rain."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a Two Rivers and Four Lakes night cruise",
+      "platform": "Trip.com or Klook",
+      "value_to_user": "The night cruise passes Elephant Trunk Hill illuminated from the water — one of the most beautiful perspectives. The full circuit covers Guilin's downtown waterway system and is a highlight of any Guilin visit. We can book the cruise and secure good seats for you — just let us know your preferred evening."
+    },
+    {
+      "action": "Book a Guilin city day tour including Elephant Trunk Hill and Reed Flute Cave",
+      "platform": "Klook or GetYourGuide",
+      "value_to_user": "Combines Guilin's top city attractions efficiently with English-speaking guide and transport. Typically includes Elephant Trunk Hill, Reed Flute Cave, and Seven Star Park. Our concierge can put together a custom Guilin day itinerary based on your interests and arrange a guide who speaks your language."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Xiàng Bí Shān",
+      "chinese": "象鼻山",
+      "english": "Elephant Trunk Hill"
+    },
+    {
+      "pinyin": "Shuǐ Yuè Dòng",
+      "chinese": "水月洞",
+      "english": "Water Moon Cave"
+    },
+    {
+      "pinyin": "Pǔ Xián Tǎ",
+      "chinese": "普贤塔",
+      "english": "Puxian Pagoda (at the summit)"
+    },
+    {
+      "pinyin": "Zhú fá",
+      "chinese": "竹筏",
+      "english": "Bamboo raft"
+    },
+    {
+      "pinyin": "Miǎn fèi",
+      "chinese": "免费",
+      "english": "Free (admission)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Two Rivers and Four Lakes Night Cruise (两江四湖夜游)",
+      "why": "The night cruise passes Elephant Trunk Hill illuminated on the water — see it from a completely different perspective. The full circuit is Guilin's premier evening activity.",
+      "travel_time": "Boarding point is a 10-minute walk from the park"
+    },
+    {
+      "suggestion": "Sun and Moon Twin Pagodas (日月双塔)",
+      "why": "Just a short walk along the lake from Elephant Trunk Hill. The twin pagodas are beautifully illuminated at night and make a natural pairing for a Guilin city walk.",
+      "travel_time": "15-minute walk"
+    },
+    {
+      "suggestion": "Reed Flute Cave (芦笛岩)",
+      "why": "Guilin's other must-see attraction — a spectacular illuminated limestone cave with dramatic stalactite formations. Perfect contrast to the outdoor scenery of Elephant Trunk Hill.",
+      "travel_time": "20-minute taxi ride"
+    }
+  ],
+  "cultural_context": "Elephant Trunk Hill is 360 million years old — formed when this area was a seabed, then sculpted by erosion over millennia into its current elephant shape. The hill has been celebrated in Chinese literature since the Tang Dynasty (7th-10th century), when poets began carving their verses into the Water Moon Cave walls. Over 50 inscriptions survive, making it one of China's richest collections of landscape poetry carved in stone. The hill became Guilin's official city emblem in 1995 and appears on the Guilin city seal. Legend has it that the hill is actually a heavenly elephant that was left behind by the Jade Emperor when it fell ill during a journey — local people nursed it back to health, and it chose to stay, turning to stone to forever protect the city.",
+  "photo_spots": [
+    {
+      "location": "Moon-in-the-Water viewing platform (near Gate 2)",
+      "tip": "The classic angle showing the elephant's trunk meeting the water with the circular cave opening. Best in early morning light or at night with illumination.",
+      "why": "This is THE iconic Guilin photo — the image used on postcards, guidebooks, and the city emblem."
+    },
+    {
+      "location": "Love Island viewing platform (north side of park)",
+      "tip": "Use a zoom lens to compress the elephant shape against the river background. Less crowded than the main platform.",
+      "why": "Arguably the best full-body elephant shot showing the complete formation reflected in the water."
+    },
+    {
+      "location": "Summit near Puxian Pagoda",
+      "tip": "Shoot the panoramic view of Guilin's karst peaks stretching to the horizon. Late afternoon golden hour light is ideal.",
+      "why": "The definitive 'Guilin landscape' vista — karst towers rising from flat plains in every direction, with the Li River winding through."
+    },
+    {
+      "location": "Opposite riverbank (outside the park)",
+      "tip": "Cross the bridge to the east bank for the widest angle showing the complete elephant formation with city buildings behind it.",
+      "why": "The full context shot — elephant hill as a geological anomaly rising from the urban landscape."
+    }
+  ],
+  "card_name": "Elephant Trunk Hill",
+  "card_type": "NATURAL LANDMARK",
+  "card_hook": "Guilin's stone elephant, frozen mid-drink for 360 million years.",
+  "best_for": [
+    "first-time-in-guilin-essential",
+    "iconic-must-see",
+    "photographers-paradise",
+    "quick-stop",
+    "families"
+  ]
+}

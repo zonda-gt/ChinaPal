@@ -1,0 +1,238 @@
+{
+  "attraction_name_cn": "蓝月谷",
+  "attraction_name_en": "Blue Moon Valley",
+  "address_cn": "丽江市玉龙县玉龙雪山景区内",
+  "experience_type": "sightseeing",
+  "hook": "Glacier-fed turquoise lakes so impossibly blue they look digitally enhanced, cascading down white limestone terraces at the foot of Jade Dragon Snow Mountain — China's answer to Pamukkale, and arguably more photogenic.",
+  "honest_description": "Blue Moon Valley is a series of four turquoise lakes fed by glacial meltwater from Jade Dragon Snow Mountain, connected by white limestone terraces and small waterfalls. The water gets its striking blue-green color from dissolved copper ions and mineral-rich sediment. Located within the Jade Dragon Snow Mountain scenic area, it's usually visited as part of a snow mountain day trip. The scenery is genuinely spectacular on a sunny day — the combination of vivid turquoise water, white terraces, and snow-capped peaks behind creates postcard-perfect views that few places on earth can match. However, expectations need managing: some of the terraces have been enhanced by government engineering to look more dramatic, the area is extremely crowded with tour groups and wedding photo shoots, and on cloudy days the water loses its blue intensity. The experience is more 'Chinese scenic area' than 'untouched wilderness' — expect paved boardwalks, electric shuttles, souvenir shops, and crowd management systems. Despite the commercialization, the natural beauty is real and overwhelming. The blue of the water really is that intense on sunny days, and the mountain backdrop is genuinely awe-inspiring. Budget 1-1.5 hours and try to visit early to beat the crowds.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is the water really that blue or is it photo editing?",
+      "answer": "The water really is that blue — on a sunny day between 11 AM and 2 PM, the turquoise color is vivid and almost unbelievable. The color comes from copper ions dissolved in the glacial meltwater, enhanced by the white limestone riverbed. However, on cloudy or rainy days, the color is much less impressive — more grey-green than turquoise. Sunny weather is essential for the full experience. The photos you see online are generally accurate for sunny conditions, though some are saturated."
+    },
+    {
+      "question": "Do I need to buy a separate ticket for Blue Moon Valley?",
+      "answer": "No separate ticket is needed — Blue Moon Valley is included in the Jade Dragon Snow Mountain entrance fee (¥100 per person for the scenic area). You will also need to pay for the shuttle bus within the scenic area (¥20). The valley is typically the second or third stop on a snow mountain day trip. Some visitors come just for Blue Moon Valley without doing the glacier cable car — this is a valid and less tiring option."
+    }
+  ],
+  "experience_format_note": "Open-air scenic area within Jade Dragon Snow Mountain. You take a shuttle bus from the visitor center to the valley, then walk along paved boardwalk trails (about 3.5 km) past four lakes. An electric golf cart shuttle (¥20 or ¥70 for private cart) runs between viewpoints for those who prefer not to walk. The area is at 2,900 meters elevation — much lower than the glacier peak, so altitude sickness is minimal. No separate tickets needed beyond the snow mountain entrance fee.",
+  "vibe": "Instagram paradise meets wedding photo factory — impossibly blue lakes that draw gasps from every visitor, set against snow-capped peaks, with a non-stop parade of couples in wedding gowns posing at every viewpoint.",
+  "time_needed": {
+    "quick_visit": "45 minutes - 1 hour (shuttle to Yuye Lake, take photos, shuttle back)",
+    "recommended": "1-1.5 hours (walk between lakes, photography at multiple viewpoints, White Water Terraces)",
+    "deep_dive": "2-3 hours (walk the full trail, explore all four lakes, take your time at each viewpoint)"
+  },
+  "best_time": {
+    "best_time_of_day": "11:00 AM - 2:00 PM when sunlight is strongest and the water color is most vivid. The sun penetrates the mineral-rich water and creates the famous 'blue moon' effect at peak intensity.",
+    "worst_time": "Cloudy or rainy days — the water loses its blue magic and looks grey-green. Late afternoon when shadows from the mountains darken the valley. Chinese public holidays when crowds are suffocating.",
+    "seasonal_notes": "March-May and October-December offer the best combination of sunshine and less rainfall. Summer (June-August) has more rain and clouds. Winter (December-February) has clear skies but colder temperatures. October is particularly good — autumn colors, clear skies, and fewer crowds than summer.",
+    "pro_tip": "Check the weather forecast obsessively — Blue Moon Valley's beauty is 80% dependent on sunshine. If your planned day is cloudy, reschedule if possible. A sunny day here is magical; a cloudy day is disappointing."
+  },
+  "getting_in": {
+    "opening_hours": "7:00 AM - 6:00 PM (varies slightly by season). Last shuttle bus departure around 5:00 PM.",
+    "price_rmb": "¥100 (Jade Dragon Snow Mountain entrance) + ¥20 (shuttle bus). No separate Blue Moon Valley ticket.",
+    "price_usd": "$14 entrance + $3 shuttle",
+    "price_breakdown": [
+      {
+        "item": "Jade Dragon Snow Mountain entrance fee",
+        "price": "¥100",
+        "highlight": "Covers all areas including Blue Moon Valley — 50% off for seniors 60+"
+      },
+      {
+        "item": "Scenic area shuttle bus",
+        "price": "¥20",
+        "highlight": "Hop-on hop-off between valley viewpoints"
+      },
+      {
+        "item": "Private golf cart",
+        "price": "¥70",
+        "highlight": "Private cart for your group — stop wherever you want"
+      },
+      {
+        "item": "Glacier Park cable car (optional)",
+        "price": "¥140",
+        "highlight": "Separate from Blue Moon Valley — for snow mountain summit"
+      }
+    ],
+    "booking_required": "No booking required for Blue Moon Valley itself. However, Glacier Park cable car tickets MUST be booked in advance as they sell out, especially in peak season.",
+    "booking_method": "Tickets purchased at the Jade Dragon Snow Mountain visitor center or via WeChat mini-program. Glacier cable car tickets should be booked in advance on the official platform.",
+    "passport_accepted": "Yes — bring your passport, as entry is denied without ID.",
+    "what_to_bring": "Sunglasses, sunscreen, hat (strong UV at altitude). Camera. Light warm layers (2,900m elevation can be chilly). Water and snacks (overpriced inside). Passport is mandatory for entry.",
+    "queue_situation": "Shuttle bus queues can be very long in peak season, especially for the return trip in late afternoon. Budget extra time for waiting. Morning visits face shorter queues.",
+    "language_barrier_rating": "moderate — Ticket counters handle basic transactions. Signage has some English. Shuttle bus staff speak Chinese only. The scenic area is self-guided so language barriers are minimal."
+  },
+  "highlights": [
+    {
+      "name": "Yuye Lake (玉液湖) — the bluest lake",
+      "description": "The first and most famous lake, with the most intense turquoise color and the best views of Jade Dragon Snow Mountain reflected in the water. This is the money shot — the scene you see in every Yunnan travel brochure.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is genuinely one of the most photogenic natural scenes in China. The combination of impossible blue water, white terraces, and snow peaks behind is breathtaking even for seasoned travelers. On a clear day, it rivals any alpine lake in the world.",
+      "tip": "Exit the shuttle bus and walk a short distance to the main viewpoint. For less crowded angles, cross the footbridge to the opposite side of the lake — most visitors cluster around the main viewpoints."
+    },
+    {
+      "name": "White Water Terraces (白水台)",
+      "description": "Natural white limestone terraces where glacial water cascades down in shallow layers, creating formations reminiscent of Turkey's Pamukkale. The contrast of white rock, blue water, and green forest is stunning.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Visitors who have seen Pamukkale will find these terraces familiar but in a completely different setting — surrounded by mountains and forest rather than an open plateau. Some terraces have been enhanced artificially, but the overall effect is beautiful.",
+      "tip": "Wide-angle lenses capture the terraces best. The terraces are photogenic from both above and below — walk the full boardwalk for different perspectives."
+    },
+    {
+      "name": "Mountain backdrop views",
+      "description": "Throughout the valley, Jade Dragon Snow Mountain (5,596m) looms overhead with its glacier-covered peaks. The mountain provides a dramatic backdrop to every lake and viewpoint, and on lucky days, snow falls gently into the valley.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The mountain views are free and constant — you don't need to take the expensive glacier cable car to appreciate Jade Dragon Snow Mountain. Blue Moon Valley provides arguably better mountain views than the summit itself, since you can see the full mountain profile from below.",
+      "tip": "On clear winter days, fresh snow on the peaks contrasts brilliantly with the blue lakes below. Bring a telephoto lens for mountain detail shots."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Walking the full trail instead of taking the shuttle between stops",
+      "why": "Most visitors shuttle between the main viewpoints and miss the smaller cascades, quiet pools, and forest sections between the four lakes. The full 3.5 km boardwalk walk reveals hidden gems that the shuttle skips."
+    },
+    {
+      "what": "The opposite side of the lakes (across the footbridge)",
+      "why": "Most visitors cluster at the main viewpoints on one side. Crossing to the opposite shore provides uncrowded vantage points, unique reflections, and a more peaceful experience."
+    },
+    {
+      "what": "Spruce Meadow (云杉坪) as an alternative to the glacier",
+      "why": "Instead of the expensive and crowded glacier cable car, Spruce Meadow offers a peaceful alpine meadow experience at lower altitude with similar mountain views and far fewer tourists."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Arrive at Jade Dragon Snow Mountain visitor center by 8:00 AM → Take shuttle bus to Blue Moon Valley (get off at 'Shuiyue Pavilion' / 水月阁 stop, the second stop) → Walk the boardwalk south to north, visiting Tingtao Lake → Jingtan Lake → Blue Moon Lake → Yuye Lake → Take photos at the main Yuye Lake viewpoint → Cross the footbridge for uncrowded angles → Take shuttle back to visitor center. If doing the glacier cable car, do it FIRST (morning) then Blue Moon Valley (midday when light is best for water color).",
+    "what_to_skip": "The overpriced food and souvenir stalls inside the scenic area — bring your own snacks and water from Lijiang. The Naxi costume photo rental stations — fun but expensive (¥50-100) and every tourist does it. The yak photo ops (¥20-30) — the yaks are overworked tourist props. If you forgot to bring snacks, message us and we can arrange delivery of water and food to the scenic area entrance.",
+    "pro_tips": "Wear white or bright red clothing to contrast against the blue water for stunning photos — this is a pro tip from Chinese photographers. Bring your own water and snacks as food inside is 2-3x normal prices. If you're only interested in Blue Moon Valley and not the glacier, you can save money by skipping the cable car entirely."
+  },
+  "heads_up": [
+    {
+      "warning": "Weather makes or breaks this experience",
+      "advice": "Blue Moon Valley on a sunny day is magical; on a cloudy day it's disappointing. The water only achieves its famous blue color with direct sunlight. Check the weather forecast and be flexible with your schedule — prioritize this for your sunniest day in Lijiang."
+    },
+    {
+      "warning": "Some features are artificially enhanced",
+      "advice": "The Chinese government has done engineering work to enhance the terraces and water features. Some visitors who expect untouched wilderness are disappointed to learn that portions are man-made. Accept it as a managed scenic area rather than raw nature and you'll enjoy it more."
+    },
+    {
+      "warning": "Extremely crowded during peak season",
+      "advice": "Expect large tour groups, wedding photographers blocking viewpoints, and long shuttle bus queues. Early morning arrival (before 9 AM) is essential for a peaceful experience. By midday, the crowds can feel overwhelming."
+    },
+    {
+      "warning": "Altitude of 2,900 meters",
+      "advice": "While much lower than the glacier peak, the altitude can still cause mild symptoms in visitors from sea level — headaches, breathlessness. The valley is flat with abundant vegetation and relatively high oxygen levels, so most visitors are fine. Drink extra water and move at a relaxed pace."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Bring your passport — entry to the Jade Dragon Snow Mountain scenic area is denied without valid ID. This catches foreign visitors off guard.",
+    "Tickets for the scenic area can only be purchased via WeChat in some cases. Have WeChat set up with payment capability, or buy through Trip.com / your hotel in advance. If you’re stuck on the booking, message our concierge — we can purchase tickets on your behalf and send you the confirmation details.",
+    "The water contains copper ions and is NOT drinkable despite its crystal-clear appearance. Don't let children play in it.",
+    "UV radiation is extremely strong at 2,900 meters elevation. Wear SPF 50+ sunscreen, sunglasses, and a hat even on partially cloudy days.",
+    "The return shuttle bus queues in late afternoon (4:00-5:30 PM) can take 30-45 minutes. Plan to leave early or be patient. If you’d rather skip the queue, our team can arrange a private driver to meet you at the scenic area exit at a set time."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Cloudy weather — the water isn't blue",
+      "what_to_do": "The White Water Terraces and mountain views are still worth seeing even without peak water color. Focus on the natural landscape rather than the color. The valley has a different, moody beauty in overcast conditions.",
+      "plan_b": "If you have another day in Lijiang, postpone Blue Moon Valley for a sunny day. Instead, visit Lijiang Old Town, Shuhe Ancient Town, or Black Dragon Pool — attractions that don't depend on sunshine. Message us and we can help rearrange your itinerary on the fly, moving Blue Moon Valley to your sunniest day."
+    },
+    {
+      "problem": "Too crowded to enjoy the viewpoints",
+      "what_to_do": "Cross the footbridge to the opposite side of the lakes where 90% of tourists don't go. Walk the full boardwalk between stops rather than shuttling — the spaces between main viewpoints are much quieter. Visit early morning or time your arrival for after the main tour group wave.",
+      "plan_b": "Consider Lugu Lake (4-5 hours from Lijiang) for a less crowded, equally stunning water experience — though it requires more travel time."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Layers — the valley can be chilly in the morning and warm by midday. Comfortable walking shoes for the boardwalk. Bright colored clothing (white, red) photographs beautifully against the blue water. Sunglasses are essential for the glare off the water.",
+    "what_to_bring": "Sunscreen (SPF 50+), sunglasses, hat. Camera with wide-angle capability. Water and snacks (save money vs. buying inside). Passport (mandatory for entry). Light warm jacket.",
+    "what_not_to_bring": "Heavy hiking gear (the trails are flat boardwalks). Umbrella (hope for sunshine). Oxygen canisters (altitude is manageable at 2,900m — save these for the glacier if going)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "light",
+    "physical_details": "Flat boardwalk trails with occasional gentle slopes. Total walking distance is about 3.5 km if you walk the full trail, but the shuttle bus can reduce this to just short walks at each viewpoint (200-300 meters per stop). No significant stairs. The boardwalk is well-maintained and suitable for most visitors.",
+    "age_notes": "Suitable for all ages. Children enjoy the blue water and mountain scenery. Elderly visitors can use the shuttle bus to minimize walking. Strollers work on the boardwalk but can be cumbersome in crowded sections.",
+    "health_warnings": "At 2,900 meters elevation, visitors from sea level may experience mild altitude symptoms. The flat terrain and abundant vegetation minimize altitude effects. Stay hydrated and don't rush. Carry an oxygen canister if you're sensitive to altitude."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a private driver for the Jade Dragon Snow Mountain day trip",
+      "platform": "Hotel concierge or Didi/local driver arranged in advance",
+      "value_to_user": "Eliminates the complexity of navigating public transport and the crowded minivan 7 system. A private driver waits while you explore and gets you home efficiently. Our team can arrange a reliable local driver who knows the scenic area well, with flexible timing so you’re not rushed."
+    },
+    {
+      "action": "Arrange a combined Spruce Meadow + Blue Moon Valley half-day trip",
+      "platform": "Hotel concierge or local tour operators",
+      "value_to_user": "The best-value snow mountain experience — avoids the expensive and crowded glacier cable car while still providing spectacular mountain views and the iconic blue lakes."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Lán Yuè Gǔ",
+      "chinese": "蓝月谷",
+      "english": "Blue Moon Valley"
+    },
+    {
+      "pinyin": "Yùlóng Xuěshān",
+      "chinese": "玉龙雪山",
+      "english": "Jade Dragon Snow Mountain"
+    },
+    {
+      "pinyin": "Yùyè Hú",
+      "chinese": "玉液湖",
+      "english": "Yuye Lake (the bluest lake)"
+    },
+    {
+      "pinyin": "Báishuǐ Tái",
+      "chinese": "白水台",
+      "english": "White Water Terraces"
+    },
+    {
+      "pinyin": "Diàn píng chē",
+      "chinese": "电瓶车",
+      "english": "Electric shuttle cart"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Spruce Meadow (云杉坪)",
+      "why": "A peaceful alpine meadow within the same scenic area — the half-day combo of Spruce Meadow + Blue Moon Valley is the best-value Jade Dragon Snow Mountain experience.",
+      "travel_time": "15-minute shuttle bus ride within the scenic area"
+    },
+    {
+      "suggestion": "Lijiang Old Town (丽江古城)",
+      "why": "The natural complement — spend the morning at the mountain and the evening wandering the ancient town's cobblestone streets and canal-side restaurants.",
+      "travel_time": "1-hour drive back to Lijiang"
+    },
+    {
+      "suggestion": "Impression Lijiang show",
+      "why": "A massive outdoor performance directed by Zhang Yimou, performed at the foot of Jade Dragon Snow Mountain with the mountain as backdrop. Perfect if you're already at the scenic area.",
+      "travel_time": "10 minutes within the scenic area"
+    }
+  ],
+  "cultural_context": "Blue Moon Valley was originally called White Water River (白水河) because the white marble and limestone riverbed made the water appear white. It was renamed after the valley's crescent shape and blue water reminded visitors of the fictional Blue Moon Valley in James Hilton's 1933 novel 'Lost Horizon,' which described a hidden paradise called Shangri-La in the mountains of Yunnan. For the local Naxi people, the river holds deep spiritual significance — tradition says the glacial water was used by gods to reach the valley, and suitors would prove their love by standing barefoot in the freezing water under the sacred snow mountain. The valley sits within a AAAAA-rated scenic area (China's highest designation) and has been developed since 2006 with boardwalks, shuttle systems, and landscape engineering to accommodate the millions of annual visitors.",
+  "photo_spots": [
+    {
+      "location": "Yuye Lake main viewpoint",
+      "tip": "Arrive between 11 AM - 1 PM for the most vivid blue color. Use a polarizing filter to reduce water surface glare and intensify the blue. Wear white or red for maximum contrast against the turquoise water.",
+      "why": "The iconic Blue Moon Valley shot — turquoise lake with snow-capped Jade Dragon Mountain reflected in the water. This is the image on every Yunnan travel poster."
+    },
+    {
+      "location": "White Water Terraces (白水台)",
+      "tip": "Use wide-angle to capture the cascade effect of the terraces. Shoot from both above and below for different perspectives. Early morning light creates beautiful shadows across the white limestone.",
+      "why": "The Pamukkale-style terraces are uniquely photogenic — white limestone against blue water creates a striking natural palette."
+    },
+    {
+      "location": "The road bridge across Yuye Lake",
+      "tip": "Stand on the bridge for symmetrical shots with water on both sides and the mountain ahead. This angle captures the full scope of the valley. Cloudy reflection days can actually produce stunning moody shots from this position.",
+      "why": "A unique elevated perspective that shows the scale of the lake and the dramatic mountain backdrop — impossible to capture from the shore."
+    }
+  ],
+  "card_name": "Blue Moon Valley",
+  "card_type": "NATURAL WONDER",
+  "card_hook": "Glacier water so blue it looks like a glitch in the matrix.",
+  "best_for": [
+    "photographers-paradise",
+    "nature-lovers",
+    "romantic-getaway",
+    "instagram-worthy",
+    "half-day-trip"
+  ]
+}

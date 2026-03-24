@@ -1,0 +1,312 @@
+{
+  "attraction_name_cn": "东方明珠塔",
+  "attraction_name_en": "Oriental Pearl Tower",
+  "address_cn": "上海市浦东新区世纪大道1号",
+  "experience_type": "sightseeing",
+  "hook": "Shanghai's most iconic silhouette — an otherworldly TV tower where you walk on glass 259 meters above the city, dine in a revolving restaurant in the clouds, and then discover a surprisingly excellent museum of old Shanghai hidden at ground level.",
+  "honest_description": "The Oriental Pearl Tower is one of those landmarks that's more fun than you'd expect from a tourist tower. The views from the 263-meter observation deck are genuinely spectacular — the Bund on one side, the Pudong skyline on the other, and the Huangpu River curving between them. The 259-meter transparent glass skywalk is the real thrill: standing on clear glass with traffic far below is stomach-dropping even if you're not afraid of heights. The top sphere (351m Space Capsule) is skippable — it's a small room with limited windows dressed up as a space exhibit. The real hidden gem is the Shanghai Urban History Development Museum at ground level, which multiple reviewers call better than the views: life-size wax figures, recreated old Shanghai streets, and genuine historical artifacts that bring the city's transformation to life. The revolving restaurant at 267 meters is surprisingly good for a tourist venue. Queues are the main frustration — expect to wait for security, elevators, and especially on the way back down, as different lifts serve different levels. Come at night for the best experience; the city lights are spectacular and crowds thin after 7 PM.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is it worth going up, or should I just photograph it from the Bund?",
+      "answer": "Both, honestly. The tower is more photogenic from the outside (the Bund at night gives you the classic shot), but going up offers a unique perspective — especially the glass skywalk at 259 meters and the history museum at ground level. Many foreign visitors say the museum alone justified the ticket. If you only have time for one Shanghai tower, the Shanghai Tower (632m) has higher views, but the Oriental Pearl's glass floor and museum give it more variety."
+    },
+    {
+      "question": "Which ticket should I buy — two-sphere or three-sphere?",
+      "answer": "The two-sphere ticket (¥199) is the best value. It covers the 263-meter main observation deck, the 259-meter glass skywalk, the 90-meter outdoor platform, and the ground-level history museum. The three-sphere ticket (¥299) adds the 351-meter Space Capsule, which reviewers consistently describe as a small room with few windows and a space-themed gimmick — not worth the extra ¥100. Skip the top sphere unless you're traveling with kids who love space themes."
+    }
+  ],
+  "experience_format_note": "Standard observation tower format — buy tickets, go through security screening, take high-speed elevators to different levels. The visit is self-paced with no guided route. You'll move between observation decks via separate elevators, which means separate queues at each level. The ground-floor history museum is included in the ticket and accessed after descending. Free stroller rental near Gate 1 (¥200 deposit). Luggage storage available at the visitor center.",
+  "vibe": "Futuristic, dazzling, and unapologetically touristy — a retro-space-age tower that somehow delivers genuine thrills and unexpected cultural depth beneath all the glitz.",
+  "time_needed": {
+    "quick_visit": "1.5 hours (one observation deck plus glass skywalk — you'll skip the best part, the history museum)",
+    "recommended": "2.5-3 hours (observation deck, glass skywalk, history museum, and time to soak in views)",
+    "deep_dive": "4-5 hours (all levels, revolving restaurant lunch or dinner, history museum at leisure, VR roller coaster)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive around 4:00-5:00 PM to catch the transition from daylight city views to the spectacular night skyline. The lights come on around 6:00-6:30 PM depending on season. Alternatively, come after 7:00 PM when crowds thin significantly.",
+    "worst_time": "Weekend mornings (10 AM–2 PM) and any Chinese public holiday — queues for security, elevators, and descent can each exceed 30 minutes. National Day (October 1-7) and May Day (May 1-5) are the absolute worst.",
+    "seasonal_notes": "Night visits year-round are the most rewarding. Summer evenings offer extended daylight for the sunset-to-night transition. Winter offers the clearest skies for long-distance views but it's cold on the outdoor observation platform. Rainy or smoggy days significantly reduce visibility — check the weather before buying tickets.",
+    "pro_tip": "Go on a weekday evening around 6 PM — you catch the sunset transition, the night lights, and far fewer crowds. The light shows on the tower itself happen at 7:30 PM, 8:30 PM, and 9:30 PM, best viewed from the Bund or Binjiang Avenue after your visit."
+  },
+  "getting_in": {
+    "opening_hours": "Year-round: 09:00–21:00 (last entry 20:30). The revolving restaurant has separate lunch and dinner seatings.",
+    "price_rmb": "Two-sphere ticket: ¥199/adult. Three-sphere ticket: ¥299/adult.",
+    "price_usd": "Two-sphere: ~$27. Three-sphere: ~$41.",
+    "price_breakdown": [
+      {
+        "item": "Two-Sphere Observation Ticket (recommended)",
+        "price": "¥199",
+        "highlight": "Covers 263m observation deck, 259m glass skywalk, 90m outdoor platform, and ground-level history museum"
+      },
+      {
+        "item": "Three-Sphere Combined Ticket",
+        "price": "¥299",
+        "highlight": "Adds 351m Space Capsule — reviewers say it's skippable"
+      },
+      {
+        "item": "Children (under 6 or 1m–1.3m)",
+        "price": "¥99 (two-sphere) / ¥199 (three-sphere)",
+        "highlight": "Half price"
+      },
+      {
+        "item": "Seniors 70+ / Disabled",
+        "price": "Discounted",
+        "highlight": "With valid ID — excludes restaurant tickets"
+      },
+      {
+        "item": "Children under 1 meter",
+        "price": "Free",
+        "highlight": "Free admission"
+      },
+      {
+        "item": "Revolving Restaurant lunch buffet",
+        "price": "¥368",
+        "highlight": "267-meter altitude dining with 360° rotation every 2 hours"
+      },
+      {
+        "item": "Revolving Restaurant dinner buffet",
+        "price": "¥418",
+        "highlight": "Night views included — reservations recommended"
+      },
+      {
+        "item": "Coca-Cola Joyful Restaurant",
+        "price": "From ¥128",
+        "highlight": "More casual dining option inside the tower"
+      }
+    ],
+    "booking_required": "Not strictly required but strongly recommended — booking online in advance lets you skip the ticket queue. Walk-up tickets are available but add waiting time, especially on weekends.",
+    "booking_method": "Book via Trip.com (Ctrip), Klook, or the official WeChat mini-program. Online tickets are often bundled at a discount (e.g., observation + history museum combos). Scan your QR code at the entrance. If you want the revolving restaurant dinner — which includes tower access, making it a two-in-one deal — our concierge team can book a table for you and make sure you get a good seating time.",
+    "passport_accepted": "Yes — foreigners can enter with passport. Booking platforms accept passport numbers.",
+    "what_to_bring": "Phone with QR code ticket. Camera (the glass skywalk is incredibly photogenic). Light jacket for the outdoor observation platform at 90 meters. Wear light-colored clothing for better photos on the glass floor (dark clothes create reflections).",
+    "queue_situation": "Expect multiple queues: ticket/entry security (15-30 min), elevator up (10-20 min), and especially elevator down (20-40 min on busy days, as each level has separate lifts). The descent queues are the worst surprise — multiple reviewers describe this as 'awful' on weekends. Weekday evenings are the smoothest.",
+    "language_barrier_rating": "minimal — Signage is bilingual throughout. Elevator staff and ticket counters can handle basic English. The history museum has English descriptions. Audio guides available."
+  },
+  "highlights": [
+    {
+      "name": "259-Meter Transparent Glass Skywalk",
+      "description": "A fully transparent glass corridor where you walk on clear glass 259 meters above the ground, with cars looking like toys below. The entire floor is glass, and bolder visitors lie down for photos. It's genuinely thrilling even for those who aren't usually afraid of heights.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Wear light-colored clothing — dark clothes reflect in the glass and ruin photos. Sunglasses also help with reflections.",
+      "tip": "Go early or late to get clear photos without crowds blocking the glass. The glass has aged somewhat and can look hazy in spots — find the clearest panels for the best shots.",
+      "image": "259米透明玻璃栈道.webp"
+    },
+    {
+      "name": "263-Meter Main Observation Deck",
+      "description": "Floor-to-ceiling glass walls offering a 360-degree panorama of Shanghai — the Bund's colonial architecture on one side, Pudong's futuristic skyline on the other, and the Huangpu River winding between them. At night, the city lights are breathtaking.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "You can see the entire contrast between old and new Shanghai from this single vantage point — it's the best visual summary of the city's transformation.",
+      "tip": "The sunset-to-night transition is the most spectacular time. Bring a real camera — phone photos through glass at night tend to pick up reflections.",
+      "image": "263米主观光层.webp"
+    },
+    {
+      "name": "Shanghai Urban History Development Museum (Ground Level)",
+      "description": "A surprisingly comprehensive museum recreating old Shanghai with life-size wax figures, period street scenes, an old tram, and genuine artifacts. It covers Shanghai's evolution from fishing village to metropolis. Multiple reviewers call it the best part of the entire visit.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Even without reading Chinese, the visual recreations are compelling — old Shanghai streets, shopfronts, and daily life scenes are all self-explanatory. There's even a screening of the classic 'San Mao' cartoon.",
+      "tip": "Don't rush through this — most visitors treat it as an afterthought on their way out, but it deserves at least 45 minutes. The recreated stone-gate (shikumen) lane houses are particularly photogenic if you wear a qipao.",
+      "image": "地面层.jpg"
+    },
+    {
+      "name": "267-Meter Revolving Restaurant",
+      "description": "A rotating buffet restaurant that completes one full revolution every 2 hours, offering a meal with continuously changing panoramic views. The food quality genuinely surprises visitors — diverse seafood, international cuisine, and attentive service.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The dinner buffet (¥418) is the better value for the nighttime views. Lunch (¥368) offers clearer daytime visibility. Restaurant ticket includes tower observation access.",
+      "tip": "Book in advance — this is a popular special occasion venue. Window seats aren't fixed; the restaurant rotates, so every seat eventually gets every view.",
+      "image": "267米旋转餐厅.png"
+    },
+    {
+      "name": "95-Meter VR Roller Coaster",
+      "description": "A virtual reality roller coaster experience inside the tower that kids (and many adults) love. It combines motion simulation with VR headsets for a surprisingly intense ride.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "A fun add-on if you're traveling with children or want a break from sightseeing. Not worth a special trip but good as part of a full visit.",
+      "tip": "The queue is usually shorter than the observation decks. Go here while crowds are concentrated higher up.",
+      "image": "95米VR过山车.webp"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The history museum at ground level",
+      "why": "Most visitors rush through it on their way out, exhausted from the tower. But reviewers who take their time consistently rate it as the highlight — the recreated old Shanghai scenes are museum-quality and included in the standard ticket."
+    },
+    {
+      "what": "The 90-meter outdoor observation platform",
+      "why": "Sandwiched between the higher observation decks and the ground, many visitors skip it. But it's the only outdoor viewing area — you feel the wind and get unobstructed photos without glass reflections."
+    },
+    {
+      "what": "The tower's light show viewed from outside",
+      "why": "After visiting the inside, walk to the Bund or Binjiang Avenue to see the tower's exterior light shows at 7:30 PM, 8:30 PM, and 9:30 PM. The tower itself is more spectacular from outside than from within."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Arrive around 4:30 PM on a weekday → go directly to the 263-meter main observation deck for sunset views → walk the 259-meter glass skywalk while natural light is still good → take the elevator down to the 90-meter outdoor platform for unobstructed photos → descend to the ground-level history museum and spend a proper 45-60 minutes → exit and walk along Binjiang Avenue to see the tower lit up from outside.",
+    "what_to_skip": "The 351-meter Space Capsule (top sphere) is consistently described as disappointing — a small room with few windows and a gimmicky space theme, not worth the extra ¥100. The gift shops inside the tower are overpriced — buy souvenirs elsewhere. Don't buy the single-sphere ticket; the two-sphere combo is much better value.",
+    "pro_tips": "Buy the combined observation + history museum ticket online for about 30% less than buying separately at the door. The descent elevator queues are the worst part of the visit — time your departure to avoid peak exit times (around 8:30-9:00 PM on weekends). There are free lockers inside the tower for luggage storage, which is convenient if you're traveling with bags."
+  },
+  "heads_up": [
+    {
+      "warning": "The descent is painful — multiple separate elevator queues to get back down",
+      "advice": "Each observation level has its own elevator, meaning you queue separately for each descent. On busy days, getting down can take 30-40 minutes of pure queuing. Plan your exit strategy and don't wait until closing time when everyone leaves at once."
+    },
+    {
+      "warning": "The glass skywalk glass has aged and can look hazy in some sections",
+      "advice": "Some reviewers note the glass has deteriorated over the years, making photos look blurry. Find the clearest panels for the best shots. The experience is still thrilling even through slightly aged glass."
+    },
+    {
+      "warning": "Weather dramatically affects the experience",
+      "advice": "On smoggy or rainy days, visibility from the observation decks drops significantly. Check the weather and air quality before buying tickets — if visibility is poor, save your visit for a clear day. Night visits are less affected by haze."
+    },
+    {
+      "warning": "The tower is loud and crowded inside on weekends",
+      "advice": "The observation decks are packed on weekends and holidays. If you want a peaceful experience, go on a weekday evening. The glass skywalk in particular becomes a bottleneck with people stopping to lie down for photos."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The Oriental Pearl is genuinely fun but not essential if you're short on time — photographing it from the Bund at night may be more satisfying than being inside it. If you only do one Shanghai tower, weigh this against the taller Shanghai Tower (632m).",
+    "Payment inside is mostly mobile (WeChat/Alipay). Bring cash as a backup for the restaurant and gift shops — not all counters accept foreign cards.",
+    "The underground pedestrian tunnel from the metro station to the tower area is well-signed but long — follow signs for Lujiazui and the Oriental Pearl. It connects to an underground mall if you need to kill time.",
+    "Some staff at the entrance have been described as a bit brusque — don't take it personally, it's the volume of tourists they deal with. Staff at individual attractions inside tend to be friendlier.",
+    "The area around the tower (Lujiazui) is very walkable and connects to the Bund via a pedestrian tunnel under the river or the Bund Sightseeing Tunnel (a kitschy light show tunnel, not really worth it). If you'd rather skip the walk and have a taxi waiting for you after your visit, our concierge can arrange a pickup at the tower exit."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Weather is bad and visibility is poor",
+      "what_to_do": "If you've already bought tickets, the history museum at ground level is excellent regardless of weather. The glass skywalk is also interesting in rain (watching rain on glass 259m up is a unique experience).",
+      "plan_b": "Skip the tower and walk the Bund instead — the colonial architecture is beautiful in any weather. Or visit the nearby Shanghai Tower observation deck, which has indoor viewing on a clearer day."
+    },
+    {
+      "problem": "Queues are impossibly long",
+      "what_to_do": "If the security/entry queue exceeds 30 minutes, consider coming back later in the evening (after 7 PM, crowds drop significantly). The tower is open until 9 PM.",
+      "plan_b": "Walk to nearby Lujiazui Central Green Space for free photos of the tower from below, or head to the Binjiang Avenue waterfront for views of both the tower and the Bund. The Oriental Pearl Plaza at ground level is free to enter."
+    },
+    {
+      "problem": "Phone battery dying (needed for QR ticket and photos)",
+      "what_to_do": "There are charging points in some of the restaurants and rest areas inside the tower. Ask staff: '哪里可以充电？' (nǎlǐ kěyǐ chōngdiàn).",
+      "plan_b": "Your ticket confirmation email or screenshot can work at most checkpoints. If all else fails, explain your situation to staff — they can usually verify your booking. Drop us a message from any Wi-Fi connection and we can help confirm your ticket details with the venue."
+    },
+    {
+      "problem": "Feeling dizzy or scared on the glass skywalk",
+      "what_to_do": "Hold onto the railings and walk slowly along the edge — you don't have to walk across the center. Many visitors (especially children) who were initially scared ended up enjoying it.",
+      "plan_b": "Skip the glass floor and enjoy the regular observation deck one level up at 263 meters, which has solid floors and glass walls."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Light-colored clothing photographs better on the glass skywalk (dark clothes create reflections). Bring a light jacket for the 90-meter outdoor observation platform, which can be windy. Comfortable shoes for standing and queuing.",
+    "what_to_bring": "Phone with QR ticket. Camera with good low-light capability for night shots. Portable charger. Sunglasses (reduce glass reflections for photos). Light jacket.",
+    "what_not_to_bring": "Tripods (not allowed through security). Large luggage (use the free lockers inside). Food and drinks from outside (there are restaurants at multiple levels)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Fully elevator-serviced with no mandatory walking between floors. The main effort is standing and queuing. Total walking distance is minimal — perhaps 2-3 km including the museum. Wheelchair accessible throughout the main observation levels.",
+    "age_notes": "Suitable for all ages. Children under 1 meter enter free. Free stroller rental at Gate 1 (¥200 refundable deposit). Kids particularly enjoy the VR roller coaster and the glass skywalk.",
+    "health_warnings": "Those with severe fear of heights should be aware of the glass skywalk — it's avoidable but the main observation deck also has floor-to-ceiling glass. The high-speed elevator may cause mild ear pressure. No significant physical exertion required."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book discounted combo tickets online",
+      "platform": "Trip.com (Ctrip), Klook, or official WeChat mini-program",
+      "value_to_user": "Online combo tickets (observation + museum) are typically 20-30% cheaper than separate tickets at the door, and you skip the ticket queue."
+    },
+    {
+      "action": "Reserve revolving restaurant dinner",
+      "platform": "Trip.com, official website, or hotel concierge",
+      "value_to_user": "The 267-meter revolving restaurant dinner (¥418) includes tower observation access — effectively a free tower visit with your meal. Book ahead as it fills up, especially for window-side timing. We can handle the restaurant reservation for you and make sure you get a good time slot."
+    },
+    {
+      "action": "Book Huangpu River night cruise to complement the tower visit",
+      "platform": "Klook, Trip.com",
+      "value_to_user": "After visiting the tower, a river cruise lets you see the illuminated tower from the water — the complete Shanghai skyline experience. Cruises depart from nearby piers."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Dōngfāng Míngzhū Tǎ",
+      "chinese": "东方明珠塔",
+      "english": "Oriental Pearl Tower"
+    },
+    {
+      "pinyin": "Bōlí Zhàndào",
+      "chinese": "玻璃栈道",
+      "english": "Glass skywalk"
+    },
+    {
+      "pinyin": "Guānguāng Céng",
+      "chinese": "观光层",
+      "english": "Observation deck"
+    },
+    {
+      "pinyin": "Xuánzhuǎn Cāntīng",
+      "chinese": "旋转餐厅",
+      "english": "Revolving restaurant"
+    },
+    {
+      "pinyin": "Lìshǐ Chénliè Guǎn",
+      "chinese": "历史陈列馆",
+      "english": "History museum (ground level)"
+    },
+    {
+      "pinyin": "Lùjiāzuǐ",
+      "chinese": "陆家嘴",
+      "english": "Lujiazui (the district where the tower is located)"
+    },
+    {
+      "pinyin": "Nǎlǐ kěyǐ chōngdiàn?",
+      "chinese": "哪里可以充电？",
+      "english": "Where can I charge my phone?"
+    },
+    {
+      "pinyin": "Diàntī zài nǎlǐ?",
+      "chinese": "电梯在哪里？",
+      "english": "Where is the elevator?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "The Bund (外滩)",
+      "why": "The classic pairing — after seeing the city from the tower, cross the river to the Bund for the best ground-level view of the tower lit up at night. The colonial architecture on the Bund side contrasts perfectly with the futuristic Pudong skyline.",
+      "travel_time": "15-minute walk through the Bund Sightseeing Tunnel, or 5 minutes by metro (Line 2, one stop)"
+    },
+    {
+      "suggestion": "Huangpu River Night Cruise (黄浦江游船)",
+      "why": "Seeing the illuminated Oriental Pearl Tower from the river is magical — the entire Pudong skyline reflected in the water. Best combined as an evening after your tower visit.",
+      "travel_time": "5-minute walk to the nearby cruise piers"
+    },
+    {
+      "suggestion": "Shanghai Tower Observation Deck",
+      "why": "If you want even higher views, the Shanghai Tower (632m) is right next door. Its 118th-floor observation deck at 546 meters dwarfs the Oriental Pearl. Different experiences — the Pearl has the glass skywalk and museum, the Shanghai Tower has raw altitude.",
+      "travel_time": "5-minute walk"
+    }
+  ],
+  "cultural_context": "The Oriental Pearl Tower was completed in 1994 and instantly became the symbol of China's economic reform era — a futuristic exclamation mark planted in what was once farmland across the river from old Shanghai. Its design references the Tang dynasty poem 'Pipa Song' with the line 'large and small pearls falling on a jade plate,' which is why the spheres are called 'pearls.' For Chinese visitors, the tower represents Shanghai's transformation from a treaty port into a global financial capital. The ground-level history museum makes this narrative explicit, tracing the city from fishing village to metropolis. Even the tower's location in Pudong is symbolic — in the 1980s, there was a saying 'better a bed in Puxi than a room in Pudong,' and now Pudong's skyline is among the world's most recognizable.",
+  "photo_spots": [
+    {
+      "location": "Lujiazui Circular Pedestrian Bridge (陆家嘴环岛天桥)",
+      "tip": "Shoot from below with a wide-angle lens, leaving lots of sky. The curved bridge frames the tower beautifully. Best in the afternoon when light hits the spheres.",
+      "why": "The most iconic ground-level angle of the tower, with the spheres perfectly aligned against the sky."
+    },
+    {
+      "location": "The Bund, Chen Yi Square (外滩陈毅广场)",
+      "tip": "Wait for lights to come on (around 6-6:30 PM). Use portrait mode with the tower's bokeh lights as background. The light shows at 7:30, 8:30, and 9:30 PM are the best moments.",
+      "why": "The classic across-the-river shot capturing the full Pudong skyline with the Oriental Pearl as the centerpiece."
+    },
+    {
+      "location": "259-meter Glass Skywalk (inside the tower)",
+      "tip": "Wear light-colored clothing. Lie flat on the glass for the most dramatic shot. Bring sunglasses to reduce reflections. Morning light gives the clearest glass photos.",
+      "why": "A glass-floor selfie 259 meters up is the ultimate Shanghai thrill photo — cars and streets visible directly below your feet."
+    },
+    {
+      "location": "Binjiang Avenue Waterfront Promenade (滨江大道)",
+      "tip": "Low angle looking up to capture the full tower with the river in the foreground. Works best at sunset or blue hour.",
+      "why": "A cinematic angle that includes the tower base, river, and sky — feels like a movie poster shot."
+    }
+  ],
+  "card_name": "Oriental Pearl Tower",
+  "card_type": "OBSERVATION TOWER",
+  "card_hook": "Glass floors at 259 meters, a hidden museum, and Shanghai's most iconic skyline — all in one tower.",
+  "best_for": [
+    "first-time-in-Shanghai-essential",
+    "iconic-must-see",
+    "family-friendly",
+    "photographers-paradise",
+    "night-views"
+  ]
+}

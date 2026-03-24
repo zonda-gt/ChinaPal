@@ -1,0 +1,33 @@
+{
+  "attractionName": "黑龙潭公园",
+  "cityName": "丽江",
+  "inputPath": "data/黑龙潭公园(丽江）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:59:08.298Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "The Jade Dragon Snow Mountain reflection",
+      "query": "The Jade Dragon Snow Mountain reflection 黑龙潭公园 丽江",
+      "outputPath": "data/黑龙潭公园(丽江）/highlight_images/01-The_Jade_Dragon_Snow_Mountain_reflection/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Dongba Culture Museum (东巴文化博物馆)",
+      "query": "东巴文化博物馆 黑龙潭公园 丽江",
+      "outputPath": "data/黑龙潭公园(丽江）/highlight_images/02-东巴文化博物馆/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Five Phoenix Tower (五凤楼) and classical architecture",
+      "query": "五凤楼 黑龙潭公园 丽江",
+      "outputPath": "data/黑龙潭公园(丽江）/highlight_images/03-五凤楼/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Elephant Mountain viewpoint (象山)",
+      "query": "象山 黑龙潭公园 丽江",
+      "outputPath": "data/黑龙潭公园(丽江）/highlight_images/04-象山/raw/baidu_images.json"
+    }
+  ]
+}

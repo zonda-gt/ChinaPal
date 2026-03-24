@@ -1,0 +1,307 @@
+{
+  "attraction_name_cn": "上海迪士尼乐园",
+  "attraction_name_en": "Shanghai Disneyland",
+  "address_cn": "上海市浦东新区川沙新镇黄赵路310号",
+  "experience_type": "theme-park",
+  "hook": "China's first Disney theme park — home to the world's largest Disney castle, the globe's only Zootopia land, and a TRON coaster that makes every other Disney ride feel quaint.",
+  "honest_description": "Shanghai Disneyland delivers the full Disney magic with a distinctly Chinese twist — the castle has golden peonies and magnolia motifs, and Chinese New Year celebrations rival Orlando's. The top rides (TRON Lightcycle Power Run, Pirates of the Caribbean: Battle for the Sunken Treasure, Soaring Over the Horizon) are genuinely world-class and use technology that outpaces older Disney parks. The Zootopia land, exclusive to Shanghai, is a standout with its Hot Pursuit ride. The nighttime ILLUMINATE! fireworks show on the castle is spectacular and alone worth staying for. The downside: queues are brutal — 60-120 minutes for popular rides on weekends, and Chinese holidays are absolute mayhem. Food is expensive and mediocre (fire turkey leg aside). Staff friendliness can be hit-or-miss compared to Tokyo or Orlando Disney. The park rewards strategic planning: download the app, buy Premier Access for top rides, and arrive early. Best for families, Disney fans, and anyone who wants a full-day immersive experience; skip it if you have only a few hours or hate crowds.",
+  "foreigner_top_questions": [
+    {
+      "question": "Can I buy tickets as a foreigner and do I need my passport?",
+      "answer": "Yes — foreigners can buy tickets on the official Shanghai Disney Resort app, the official website, or through Trip.com/Klook using passport numbers. Chinese residents use national ID cards, but foreigners enter with their physical passport. Your passport IS your ticket — they scan it at the gate. Book at least a few days in advance, especially for weekends and holidays. Same-day ticket purchases at the gate are no longer available."
+    },
+    {
+      "question": "How do I skip the long queues without spending a fortune?",
+      "answer": "Three strategies: (1) Buy an Early Park Entry pass (about 170 RMB) to enter one hour before general opening — this lets you ride TRON and Zootopia with minimal wait. (2) Use the free Standby Pass system on the app to reserve time slots for popular rides. (3) If budget allows, buy Disney Premier Access (140-180 RMB per attraction, or bundled packages 435-2530 RMB). Alternatively, visit on a Tuesday-Thursday outside of school holidays — queues drop dramatically."
+    }
+  ],
+  "experience_format_note": "Full-day theme park experience. Eight themed zones covering 1.16 square kilometers — you will walk 15,000-25,000 steps. Two security checkpoints before entry (bag check is manual, not scanned — slow). One-day visit is tight for all major rides; two days is ideal. The official Shanghai Disney Resort app is essential for real-time queue times, show schedules, and Premier Access purchases. You CAN bring outside food and water (no glass bottles). Free WiFi available throughout the park.",
+  "vibe": "Unapologetically magical and relentlessly crowded — a sensory overload of childhood nostalgia, Chinese cultural flourishes, and cutting-edge ride technology that somehow all works together.",
+  "time_needed": {
+    "quick_visit": "4-5 hours (you'll hit maybe 3-4 rides and miss the fireworks — not recommended)",
+    "recommended": "10-12 hours, full day from park opening to fireworks (covers 6-8 major rides plus shows and parades)",
+    "deep_dive": "2 full days (the only way to ride everything, see all shows, take photos, and actually enjoy meals without rushing)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at least 1 hour before gates open (typically 7:30 AM for an 8:30 opening). The first 90 minutes have the shortest queues — hit TRON or Zootopia immediately. Alternatively, after the 8-9 PM fireworks show, queues for major rides drop dramatically for the last hour.",
+    "worst_time": "Weekends (especially Friday-Saturday), Chinese public holidays (National Day Oct 1-7, May Day, Chinese New Year), school breaks (January-February, July-September). Queues for popular rides exceed 2 hours.",
+    "seasonal_notes": "Autumn (late September to November) is the best season — comfortable weather, fewer crowds, cheaper tickets. Spring (April-May) is pleasant but coincides with May Day holiday. Summer is brutally hot with almost no shade and peak crowds. Winter is cold but has beautiful Christmas/New Year decorations and shorter queues (except Chinese New Year).",
+    "pro_tip": "Visit on a Tuesday or Wednesday in mid-November — you can ride everything with minimal waits. The park sometimes opens 15-30 minutes before the official time, so arriving early gives you a head start."
+  },
+  "getting_in": {
+    "opening_hours": "Regular season: 08:30-20:30 or 21:30 (varies by date). Peak season: 08:30-22:00. Check the official app for exact hours on your visit date. Fireworks show is typically 15-30 minutes before closing.",
+    "price_rmb": "Regular day: 475 RMB/adult. Special regular day: 599 RMB. Peak day: 719 RMB. Super peak day: 799 RMB. Children (1.0-1.4m height) and seniors (60+) get discounts. Under 1.0m free.",
+    "price_usd": "Regular: ~$65. Peak: ~$100. Super peak: ~$110.",
+    "price_breakdown": [
+      {
+        "item": "1-Day Regular Adult Ticket",
+        "price": "475 RMB",
+        "highlight": "Cheapest option — weekday non-holiday"
+      },
+      {
+        "item": "1-Day Peak Adult Ticket",
+        "price": "719 RMB",
+        "highlight": "Weekends and regular holidays"
+      },
+      {
+        "item": "2-Day Regular Adult Ticket",
+        "price": "854-966 RMB",
+        "highlight": "Better value if you want to see everything"
+      },
+      {
+        "item": "Early Bird Ticket (10+ days advance)",
+        "price": "425 RMB",
+        "highlight": "Save ~50 RMB by booking early"
+      },
+      {
+        "item": "Early Park Entry Pass",
+        "price": "170 RMB",
+        "highlight": "Enter 1 hour early — crucial for hitting top rides with no queue"
+      },
+      {
+        "item": "Disney Premier Access (individual)",
+        "price": "140-180 RMB per attraction",
+        "highlight": "Skip the line for one specific ride"
+      },
+      {
+        "item": "Disney Premier Access (bundle of 8)",
+        "price": "~1,500-2,530 RMB",
+        "highlight": "Skip lines for 8 top rides — expensive but transforms the experience"
+      },
+      {
+        "item": "Stroller rental",
+        "price": "90 RMB/day",
+        "highlight": "Available at park entrance — essential for families with young kids"
+      }
+    ],
+    "booking_required": "Yes — mandatory online pre-booking. No same-day ticket windows. Book through the official Shanghai Disney Resort app, the official website, or Trip.com/Klook. Peak dates sell out days in advance.",
+    "booking_method": "Official Shanghai Disney Resort app (supports passport numbers for foreigners). The app is also essential in-park for queue times, Premier Access, and show schedules. Alternatively, book via Trip.com or Klook — slightly more expensive but simpler for foreigners. If you're finding the booking process confusing or tickets appear sold out, message our concierge team — we can often find availability and handle the purchase for you.",
+    "passport_accepted": "Yes — foreigners enter with their physical passport. The booking system accepts passport numbers. Your passport is scanned at the gate with facial recognition.",
+    "what_to_bring": "Physical passport (mandatory). Portable charger (no rental chargers inside the park — this is critical). Refillable water bottle (free drinking water stations throughout). Comfortable shoes (15,000-25,000 steps). Disposable rain poncho and shoe covers (for Roaring Rapids — much cheaper if bought outside). Sunscreen (no aerosol sprays allowed). The Disney app downloaded and tickets linked.",
+    "queue_situation": "Two sequential security checkpoints before entry — 15-45 minutes on regular days, 60+ minutes on peak days. Going bag-free lets you use the express no-bag lane and saves significant time. Inside the park, popular rides average 45-90 minutes on regular days, 90-150 minutes on peak days.",
+    "language_barrier_rating": "manageable — Park signage is bilingual (Chinese/English). The app has an English interface. Most ride narration is in Mandarin with some English elements. Staff English ability varies — some are fluent, others limited. Payment is overwhelmingly Alipay/WeChat Pay, though some locations accept foreign credit cards and cash."
+  },
+  "highlights": [
+    {
+      "name": "TRON Lightcycle Power Run (创极速光轮)",
+      "description": "The park's signature thrill ride — you lean forward on a light-cycle motorcycle and blast through a neon-lit indoor/outdoor track reaching 100 km/h. The launch is sudden and the speed is exhilarating. Consistently rated the best ride in the park by both thrill-seekers and casual visitors.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the original TRON coaster — the one at Walt Disney World was modeled after this Shanghai version. If you've ridden both, this one is nearly identical but came first.",
+      "tip": "Ride this FIRST thing in the morning or during the fireworks show when queues drop to under 15 minutes. Store your belongings in the free lockers at the entrance — nothing can be carried on the ride."
+    },
+    {
+      "name": "Pirates of the Caribbean: Battle for the Sunken Treasure (加勒比海盗——沉落宝藏之战)",
+      "description": "Not your typical Pirates ride — this Shanghai-exclusive version uses massive screens, cutting-edge animatronics, and a boat system that rotates and moves laterally to create a genuinely immersive undersea battle. Multiple reviewers call it the single best ride in any Disney park worldwide.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is completely different from the Pirates rides at other Disney parks. The technology here is a generation ahead. Even Disney veterans are blown away.",
+      "tip": "Queue times are surprisingly short (often 15-30 minutes) compared to other major rides. Ride it during lunch hour for near-zero wait. The adjacent pirate stunt show 'Eye of the Storm' is also excellent."
+    },
+    {
+      "name": "Soaring Over the Horizon (翱翔·飞越地平线)",
+      "description": "A 5D flying theater that suspends you in front of a massive dome screen while you 'fly' over world landmarks — the Eiffel Tower, Great Wall, African savanna, and more. Wind, mist, and scent effects make it feel genuinely real. Consistently the park's longest queue.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Similar to Soarin' at other Disney parks but with a different film reel featuring more international landmarks. The experience is essentially the same quality.",
+      "tip": "This has the park's longest wait — often 90-150 minutes. Use Premier Access or ride it as your very first attraction with an Early Entry pass. Alternatively, queue drops significantly after 7 PM."
+    },
+    {
+      "name": "Zootopia: Hot Pursuit (疯狂动物城：热力追踪)",
+      "description": "The world's only Zootopia-themed land, exclusive to Shanghai. The Hot Pursuit ride uses trackless vehicle technology with stunning 1:1 scale environments recreating the movie's city. The entire land is photo-worthy — every detail from the oversized benches to the tiny rodent doors is perfectly scaled.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This land exists nowhere else in the world. Even if you've been to every other Disney park, this is completely unique to Shanghai.",
+      "tip": "The land itself has crowd control measures — you may need to queue just to enter the zone. Visit early morning or late evening. The ride is best experienced from the SECOND car (the two cars swap order mid-ride, so second car gets the better angle for the finale)."
+    },
+    {
+      "name": "ILLUMINATE! A Nighttime Celebration (奇梦之光幻影秀)",
+      "description": "The nightly fireworks, laser, projection, and drone show on the Enchanted Storybook Castle — the world's largest Disney castle. Combines 3D castle projections, water fountains, pyrotechnics, and 200+ drones. Features Marvel, Frozen, and classic Disney sequences. Universally described as the emotional highlight of any visit.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The castle is significantly larger than any other Disney castle worldwide, making the projection canvas and overall spectacle more impressive than comparable shows at other parks.",
+      "tip": "Secure a spot in Enchanted Gardens (center, facing the castle) at least 30-50 minutes before showtime. The best photos come from slightly to the right of center where you can capture both castle and fireworks. After the show, immediately head to rides — queues drop dramatically."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Eye of the Storm: Captain Jack's Stunt Spectacular (风暴来临)",
+      "why": "A live-action stunt show with sword fights, aerial acrobatics, explosions, and Captain Jack swinging from the rigging. Most visitors skip it because they're focused on rides, but reviewers who see it say it's one of the best things in the park. Free with admission, no extra queue."
+    },
+    {
+      "what": "Riding popular attractions during the fireworks show",
+      "why": "While 90% of visitors crowd the castle area for fireworks, queue times for TRON, Seven Dwarfs Mine Train, and other rides drop to under 15 minutes. Savvy repeat visitors watch the fireworks from the ride queues and knock out 2-3 major rides in the final hour."
+    },
+    {
+      "what": "Disney Town (迪士尼小镇) — free entry, no park ticket needed",
+      "why": "The shopping and dining district outside the park gates is free to enter. It has a Cheesecake Factory, Starbucks, and other restaurants at more reasonable prices than in-park dining. Also houses the Walt Disney Grand Theatre with full-length musicals. You can exit the park for lunch here and re-enter."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter the park and turn RIGHT toward Tomorrowland for TRON (shortest queue in the first 30 minutes). Then head to Zootopia for Hot Pursuit. Cross to Adventure Isle for Soaring Over the Horizon. Hit Pirates of the Caribbean at Treasure Cove (often short queues). Afternoon: catch the parade, see Frozen Sing-Along or Captain Jack stunt show. Evening: Seven Dwarfs Mine Train during fireworks, then watch the second half of the fireworks from Fantasyland. Final ride: re-ride TRON or Pirates with near-zero wait after 9 PM.",
+    "what_to_skip": "Dumbo, Honey Pot Spin, and Buzz Lightyear are low-thrill rides with surprisingly long queues — skip them unless you have young children. Wandering Alice's Wonderland Maze is pretty but takes valuable time. Don't waste time on in-park restaurants during peak lunch hours (12-1 PM) — eat early at 11 AM or late at 2-3 PM, or exit to Disney Town.",
+    "pro_tips": "Download the app BEFORE arriving and link your ticket immediately upon entry — this unlocks the free Standby Pass system. The single-rider lane on TRON and some other rides can cut your wait by 50%. If visiting on a weekend, the Premier Access bundle for 6-8 rides is expensive but transforms a frustrating experience into a smooth one. Bring an empty water bottle — free drinking fountains are everywhere."
+  },
+  "heads_up": [
+    {
+      "warning": "Queue times are the #1 complaint — popular rides regularly exceed 90 minutes",
+      "advice": "Either buy Premier Access, come on a weekday, or use the early-entry strategy. Without any queue-skipping method on a weekend, expect to ride only 4-5 major attractions in a full day. The app's real-time queue display is accurate and essential for planning."
+    },
+    {
+      "warning": "No portable charger rental inside the park",
+      "advice": "Your phone is your ticket, your map, your queue tracker, and your camera. If it dies, you lose all of that. Bring your own power bank — this is the single most important item after your passport. There are some charging points in Disney Town restaurants but none reliably inside the park. If you forgot yours, message our team before you enter and we can arrange delivery of a power bank to the park entrance."
+    },
+    {
+      "warning": "Food is expensive and portions are small",
+      "advice": "A basic meal combo is 108-158 RMB ($15-22). The famous turkey leg is 80 RMB. You CAN bring outside food and a refillable water bottle — free drinking water stations are everywhere. For a proper meal, exit to Disney Town (your ticket allows re-entry) where prices are more reasonable."
+    },
+    {
+      "warning": "Line-cutting (插队) happens and can be frustrating",
+      "advice": "This is a common complaint from both Chinese and foreign visitors. The park has improved enforcement, but it still occurs in crowded queues. Stand firm in your position and politely but firmly hold your ground. Staff will intervene if you flag them."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You MUST carry your physical passport — it is scanned at the gate with facial recognition. No passport, no entry. Digital copies are not accepted.",
+    "Payment is overwhelmingly Alipay/WeChat Pay. Some food stalls and shops accept foreign credit cards, but many do not. Bring cash (100-200 RMB) as backup. The in-park ATMs accept international cards.",
+    "The official app is essential but can be confusing — make sure to download 'Shanghai Disney Resort' (not just 'Disney'), create an account, and link your ticket BEFORE arriving. The English interface works but some features default to Chinese.",
+    "Foreigners cannot rent portable chargers (require Chinese phone number for deposit). Bring your own power bank — this cannot be overstated.",
+    "The bag check at security is manual and slow. Going bag-free (just passport, phone, charger in pockets) lets you use the express no-bag lane, saving 20-40 minutes on busy days."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Tickets sold out for your desired date",
+      "what_to_do": "Check Trip.com or Klook — they sometimes have inventory when the official site shows sold out. Early bird tickets (10+ days advance) also sell out slower.",
+      "plan_b": "Disney Town is free to enter and has shops, restaurants, and the Grand Theatre. Star Wish Park outside the gates offers lakeside walks with views of the castle. You can enjoy the Disney atmosphere without entering the park."
+    },
+    {
+      "problem": "Phone died inside the park",
+      "what_to_do": "Head to Guest Services near the main entrance — they can help verify your entry. Some restaurants in Disney Town have charging outlets. Ask staff: '哪里可以充电？' (nǎlǐ kěyǐ chōngdiàn — Where can I charge?).",
+      "plan_b": "Your passport is your backup proof of entry. Show it at any checkpoint. For ride queues, you can still enter without the app — just join the regular standby line. If you're stuck, message our team from any borrowed phone or Wi-Fi connection and we can help troubleshoot."
+    },
+    {
+      "problem": "Major ride you wanted is closed for maintenance",
+      "what_to_do": "Check the app before your visit — it shows closures several days in advance. On the day, staff at the ride entrance can tell you if it will reopen.",
+      "plan_b": "With 8 themed zones and dozens of attractions, there's always something open. Redirect your time to shows (Frozen Sing-Along, Captain Jack stunt show) which are consistently excellent and rarely close."
+    },
+    {
+      "problem": "Rainy day ruined outdoor plans",
+      "what_to_do": "Many top attractions are indoor: Pirates of the Caribbean, TRON, Soaring, Zootopia Hot Pursuit, Buzz Lightyear, Frozen show. Rain actually reduces crowds significantly — queue times can drop by 50%.",
+      "plan_b": "Bring a rain poncho (cheaper than buying in-park). Rainy days are secretly the best days to visit — fewer people, shorter queues, and most rides operate normally."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes are absolutely essential — you will walk 15,000-25,000 steps on hard pavement. Avoid heels, sandals, or new shoes. In summer, wear light breathable clothes, a sun hat, and apply sunscreen (no aerosol sprays allowed). In winter, dress in warm layers — there are very few heated indoor rest areas. Avoid loose skirts on TRON (you lean forward on a motorcycle).",
+    "what_to_bring": "Physical passport (mandatory). Portable power bank (critical — no rental available). Refillable water bottle (free water stations everywhere). The Disney app pre-installed. Disposable rain poncho and shoe covers for Roaring Rapids (buy outside — 2-3 RMB vs 30+ RMB inside). Snacks if you want to save money. Small foldable cushion for sitting on the ground during parade/fireworks waits.",
+    "what_not_to_bring": "Selfie sticks and tripods (confiscated at security). Glass bottles. Aerosol spray sunscreen. Large suitcases (use the luggage storage outside the main entrance). Heavy backpacks slow you down and add time to security screening — go as light as possible."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "high",
+    "physical_details": "Expect 15,000-25,000 steps across 1.16 square kilometers over a full day. The park is mostly flat with accessible pathways. Free wheelchairs available at Guest Services (deposit required). Stroller rental 90 RMB/day at the entrance. Many rides have height restrictions: TRON (122cm), Roaring Rapids (107cm), Seven Dwarfs Mine Train (97cm).",
+    "age_notes": "Suitable for all ages but with different experiences. Children under 1.0m enter free. Most gentle rides suitable from age 3+. Thrill rides require minimum heights of 97-122cm. Many shows, parades, and character meet-and-greets are enjoyable regardless of age.",
+    "health_warnings": "Heat exhaustion is a serious risk in summer — limited shade, intense sun, massive walking distances. Bring water and take breaks. TRON and some rides cause motion sickness in sensitive individuals. Multiple rides have warnings for heart conditions, back problems, and pregnancy."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book park tickets with Early Entry pass",
+      "platform": "Official Shanghai Disney Resort app, Trip.com, or Klook",
+      "value_to_user": "Required for entry. The Early Entry pass (170 RMB extra) is the single best value upgrade — one hour of near-empty park lets you ride 2-3 major attractions with zero queue."
+    },
+    {
+      "action": "Purchase Disney Premier Access bundle",
+      "platform": "Official Disney app (in-park purchase)",
+      "value_to_user": "Skip the line for 3, 6, 8, or 14 attractions. Expensive (435-2,530 RMB) but transforms a frustrating day of 2-hour queues into a smooth experience. Best value on peak days."
+    },
+    {
+      "action": "Book a private Disney guide/concierge",
+      "platform": "Available through the park or local tour operators",
+      "value_to_user": "About 150-200 RMB/person for a full-day guide who plans your route, helps navigate queues, and handles logistics. First-time visitors consistently say this was worth every yuan. We can match you with an English-speaking guide who knows the park inside out — just send us your visit date and group size."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Díshìní Lèyuán",
+      "chinese": "迪士尼乐园",
+      "english": "Disneyland (what locals call it)"
+    },
+    {
+      "pinyin": "Chuàng Jí Sù Guāng Lún",
+      "chinese": "创极速光轮",
+      "english": "TRON Lightcycle Power Run"
+    },
+    {
+      "pinyin": "Fēiyuè Dìpíngxiàn",
+      "chinese": "飞越地平线",
+      "english": "Soaring Over the Horizon"
+    },
+    {
+      "pinyin": "Jiālèbǐ Hǎidào",
+      "chinese": "加勒比海盗",
+      "english": "Pirates of the Caribbean"
+    },
+    {
+      "pinyin": "Fēngkuáng Dòngwù Chéng",
+      "chinese": "疯狂动物城",
+      "english": "Zootopia land"
+    },
+    {
+      "pinyin": "Pái duì duōjiǔ?",
+      "chinese": "排队多久？",
+      "english": "How long is the queue?"
+    },
+    {
+      "pinyin": "Nǎlǐ kěyǐ chōngdiàn?",
+      "chinese": "哪里可以充电？",
+      "english": "Where can I charge my phone?"
+    },
+    {
+      "pinyin": "Yānhuā jǐ diǎn kāishǐ?",
+      "chinese": "烟花几点开始？",
+      "english": "What time do the fireworks start?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Disney Town (迪士尼小镇)",
+      "why": "Free-entry shopping and dining district right outside the park gates. Better food options and more reasonable prices than in-park restaurants. Your park ticket allows same-day re-entry.",
+      "travel_time": "0 minutes — immediately outside the park gates"
+    },
+    {
+      "suggestion": "The Bund (外滩) and Pudong Skyline",
+      "why": "Shanghai's most iconic waterfront view is a completely different experience from Disney. Perfect for the evening before or after your Disney day to see the 'real' Shanghai.",
+      "travel_time": "45-60 minutes by Metro Line 11 + transfer"
+    },
+    {
+      "suggestion": "Yu Garden (豫园) and Old Town",
+      "why": "A traditional Chinese garden and bazaar that provides a cultural counterbalance to Disney's fantasy world. Good for a half-day before or after your park visit.",
+      "travel_time": "50-60 minutes by Metro"
+    }
+  ],
+  "cultural_context": "Shanghai Disneyland was designed with the motto 'Authentically Disney, Distinctly Chinese.' The Enchanted Storybook Castle incorporates golden peonies (China's national flower), magnolia blossoms (Shanghai's city flower), and auspicious cloud motifs. The Fantasia Carousel was hand-crafted by Chinese artisans. During Chinese New Year, the park transforms with dragon dances, zodiac characters, and themed fireworks. The park opened in 2016 and broke even within its first year — an unprecedented feat for a Disney park — by attracting over 11 million visitors. By 2025, cumulative attendance exceeded 100 million. One-third of visitors come from outside Shanghai, making it one of China's most important tourism anchors. The park represents a significant cultural negotiation: Western entertainment IP adapted for Chinese tastes, with local food, local holidays, and local queuing culture all part of the experience.",
+  "photo_spots": [
+    {
+      "location": "Enchanted Storybook Castle — front gardens (奇幻童话城堡正面)",
+      "tip": "Arrive before 9 AM or during the afternoon parade when most people line the parade route, leaving the castle area relatively empty. Night photos during the fireworks show are stunning but require a tripod or steady hands.",
+      "why": "The world's largest Disney castle is the park's most iconic photo — it looks completely different by day (fairytale) versus night (dramatic projections and fireworks)."
+    },
+    {
+      "location": "Zootopia Land — oversized props area",
+      "tip": "The entire land is designed at 1:1 movie scale, meaning everything is photo-ready. The giant benches, miniature rodent doors, and Judy's police car are the most popular spots. Visit during the golden hour before sunset.",
+      "why": "Exists nowhere else in the world — these photos are uniquely Shanghai Disneyland."
+    },
+    {
+      "location": "TRON Lightcycle Power Run — exterior at night",
+      "tip": "The glowing blue track visible from outside the ride is spectacular after dark. Stand near the Tomorrowland entrance for the best angle of riders racing by.",
+      "why": "The neon-lit exterior is one of the most futuristic-looking structures in any Disney park — photos look like a cyberpunk movie set."
+    },
+    {
+      "location": "Alice in Wonderland Maze (爱丽丝梦游仙境迷宫)",
+      "tip": "Go during late afternoon for warm golden light on the colorful hedges and sculptures. The Queen of Hearts' throne is the most popular photo spot inside.",
+      "why": "A free-roaming area with whimsical sculptures and vibrant colors — one of the best spots for portrait photography in the park."
+    }
+  ],
+  "card_name": "Shanghai Disneyland",
+  "card_type": "THEME PARK",
+  "card_hook": "The world's largest Disney castle and China's most magical day out.",
+  "best_for": [
+    "family-friendly",
+    "full-day-commitment",
+    "iconic-must-see",
+    "thrill-seekers",
+    "rainy-day-friendly"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "attractionName": "上海迪士尼乐园",
+  "cityName": "上海",
+  "inputPath": "data/上海迪士尼乐园(上海）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:54:47.958Z",
+  "count": 5,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "TRON Lightcycle Power Run (创极速光轮)",
+      "query": "创极速光轮 上海迪士尼乐园 上海",
+      "outputPath": "data/上海迪士尼乐园(上海）/highlight_images/01-创极速光轮/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Pirates of the Caribbean: Battle for the Sunken Treasure (加勒比海盗——沉落宝藏之战)",
+      "query": "加勒比海盗 上海迪士尼乐园 上海",
+      "outputPath": "data/上海迪士尼乐园(上海）/highlight_images/02-加勒比海盗/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Soaring Over the Horizon (翱翔·飞越地平线)",
+      "query": "翱翔·飞越地平线 上海迪士尼乐园 上海",
+      "outputPath": "data/上海迪士尼乐园(上海）/highlight_images/03-翱翔·飞越地平线/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Zootopia: Hot Pursuit (疯狂动物城：热力追踪)",
+      "query": "疯狂动物城 上海迪士尼乐园 上海",
+      "outputPath": "data/上海迪士尼乐园(上海）/highlight_images/04-疯狂动物城/raw/baidu_images.json"
+    },
+    {
+      "index": 5,
+      "name": "ILLUMINATE! A Nighttime Celebration (奇梦之光幻影秀)",
+      "query": "奇梦之光幻影秀 上海迪士尼乐园 上海",
+      "outputPath": "data/上海迪士尼乐园(上海）/highlight_images/05-奇梦之光幻影秀/raw/baidu_images.json"
+    }
+  ]
+}

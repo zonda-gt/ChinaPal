@@ -1,0 +1,33 @@
+{
+  "attractionName": "朱家角古镇",
+  "cityName": "上海",
+  "inputPath": "data/朱家角古镇(上海）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:57:21.109Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Fangsheng Bridge (放生桥)",
+      "query": "放生桥 朱家角古镇 上海",
+      "outputPath": "data/朱家角古镇(上海）/highlight_images/01-放生桥/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "North Street (北大街)",
+      "query": "北大街 朱家角古镇 上海",
+      "outputPath": "data/朱家角古镇(上海）/highlight_images/02-北大街/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Kezhi Garden (课植园)",
+      "query": "课植园 朱家角古镇 上海",
+      "outputPath": "data/朱家角古镇(上海）/highlight_images/03-课植园/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Canal boat ride",
+      "query": "Canal boat ride 朱家角古镇 上海",
+      "outputPath": "data/朱家角古镇(上海）/highlight_images/04-Canal_boat_ride/raw/baidu_images.json"
+    }
+  ]
+}

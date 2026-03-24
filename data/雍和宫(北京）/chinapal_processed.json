@@ -1,0 +1,267 @@
+{
+  "attraction_name_cn": "雍和宫",
+  "attraction_name_en": "Lama Temple (Yonghe Temple)",
+  "address_cn": "北京市东城区雍和宫大街12号",
+  "experience_type": "sightseeing",
+  "hook": "A Qing Dynasty prince's palace turned into Beijing's most magnificent Tibetan Buddhist monastery -- still an active place of worship with monks in residence, imperial-grade architecture rivaling the Forbidden City, and a 26-meter Buddha carved from a single sandalwood tree that holds a Guinness World Record.",
+  "honest_description": "The Lama Temple is Beijing's largest and most important Tibetan Buddhist monastery, and it's genuinely special. Originally built in 1694 as the residence of Prince Yong (later Emperor Yongzheng), it was converted into a lamasery in 1744 by Emperor Qianlong -- who himself was born here. This 'dragon's lair' heritage means the temple has imperial-grade yellow roof tiles matching the Forbidden City. The complex blends Han Chinese, Tibetan, Mongolian, and Manchu architectural styles across five progressively grander halls connected by peaceful courtyards. The finale is breathtaking: a 26-meter Maitreya Buddha carved from a single white sandalwood trunk, a gift from the 7th Dalai Lama that holds a Guinness World Record. Unlike many historical sites in Beijing, this is a living, functioning monastery -- you'll see monks in robes going about their day, hear chanting, and smell incense everywhere. The temple is enormously popular with young Chinese visitors who come to pray for career success, relationships, and health, making it vibrant but crowded. The atmosphere is a fascinating blend of genuine spirituality and Instagram-era tourism. For foreign visitors, it's one of Beijing's most accessible and rewarding sites: easy to reach by subway, reasonably priced, well-signed in English, and requiring only 1-2 hours. The main downside is weekend and holiday crowds, which can diminish the spiritual atmosphere considerably.",
+  "foreigner_top_questions": [
+    {
+      "question": "Do I need to book tickets in advance?",
+      "answer": "No -- this is one of Beijing's easiest attractions to visit. You can buy tickets (25 RMB) at the ticket window right at the entrance with your passport. Lines are usually short for ticket purchase (the long lines you see are for the souvenir/blessing shop, not entry). You can also pre-book through the museum's WeChat official account or Trip.com, but walk-up purchase works fine. Just bring your passport."
+    },
+    {
+      "question": "Is it appropriate for non-Buddhists to visit? Can I participate in the incense rituals?",
+      "answer": "Absolutely. The temple warmly welcomes all visitors regardless of faith. After entering, you receive a free bundle of eco-friendly incense sticks. The tradition is to light three sticks at each of the incense burners in front of the main halls, holding them above your head and bowing three times. You're welcome to participate or simply observe -- there's no pressure either way. Just be respectful: dress modestly (cover shoulders and knees), speak quietly, remove hats when entering halls, and don't photograph the Buddha statues inside the halls."
+    }
+  ],
+  "experience_format_note": "A linear temple complex with five main halls arranged south to north along a central axis, connected by courtyards. You walk in one direction -- south entrance to north exit -- and cannot backtrack easily. Each hall contains different Buddha statues and has different prayer purposes (peace, career, health, love, etc.). Free incense is distributed near the entrance. Photography is allowed in outdoor courtyards but prohibited inside the halls (especially of Buddha statues). The entire complex is about 500 meters long. Active monks live and worship here -- this is a functioning monastery, not just a museum.",
+  "vibe": "Golden roofs, thick sandalwood incense, monks chanting in one courtyard while millennials take selfies in the next -- it's a functioning Qing Dynasty monastery that somehow also doubles as Beijing's most popular prayer spot for twenty-somethings asking for career luck.",
+  "time_needed": {
+    "quick_visit": "45 minutes - 1 hour (walk through all five halls, light incense, basic photos)",
+    "recommended": "1.5-2 hours (explore all halls and side buildings, read English signage, browse the small museum exhibits, soak in the atmosphere)",
+    "deep_dive": "3-4 hours (attend morning chanting at 9 AM, explore every side hall and exhibit, browse the souvenir and blessing shops, visit nearby Confucius Temple and Guozijian)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at opening (9:00 AM) for the thinnest crowds and the chance to witness monks' morning chanting (typically 9:00-10:30 AM). Weekday afternoons after 2 PM are also quiet. The light filtering through the ancient trees is particularly beautiful in the morning.",
+    "worst_time": "Chinese New Year (especially the first day, when locals queue for hours to burn the 'first incense' of the year). Weekend mornings year-round. The 1st and 15th days of each lunar month, when Buddhist observances bring extra worshippers. National holidays in October.",
+    "seasonal_notes": "Spring (April-May) is ideal -- ginkgo and cherry trees are beautiful, weather is pleasant. Autumn (September-October) brings stunning golden ginkgo foliage along the approach path. Summer is hot and crowded. Winter is cold but atmospheric, with fewer tourists and the incense smoke particularly evocative against grey skies.",
+    "pro_tip": "Visit on a weekday morning in spring or autumn. Walk the approach path from the subway along the red-walled lane -- it's lined with beautiful trees and Buddhist shops and sets the mood perfectly. After the temple, walk 5 minutes to the Confucius Temple and Imperial Academy (Guozijian) next door for a much quieter cultural experience."
+  },
+  "getting_in": {
+    "opening_hours": "Daily. April-October: 9:00 AM - 5:00 PM (last entry 4:30 PM). November-March: 9:00 AM - 4:30 PM (last entry 4:00 PM). Open every day including holidays (even busier on holidays).",
+    "price_rmb": "25 RMB per adult. Half price (12 RMB) for students and seniors 60+. Free for children under 1.2m or under 6 years old.",
+    "price_usd": "~$3.50 per adult.",
+    "price_breakdown": [
+      {
+        "item": "Adult admission",
+        "price": "25 RMB (~$3.50)",
+        "highlight": "Includes free eco-friendly incense bundle"
+      },
+      {
+        "item": "Student / Senior (60+)",
+        "price": "12 RMB (~$1.70)",
+        "highlight": "Valid student ID or passport showing age required"
+      },
+      {
+        "item": "Audio guide",
+        "price": "~50 RMB",
+        "highlight": "Available at ticket booth; English available"
+      },
+      {
+        "item": "English-speaking guide",
+        "price": "Varies (check at visitor service center)",
+        "highlight": "Available at visitor center east of Yonghe Gate; Chinese, English, and German offered"
+      }
+    ],
+    "booking_required": "No. Walk-up ticket purchase works perfectly well. You can also pre-book through the temple's WeChat official account ('雍和宫游客信众服务') or through Trip.com/Ctrip, but it's not necessary.",
+    "booking_method": "Buy tickets at the entrance ticket window. Bring your passport. Scan your ID to enter. Some visitors report being able to use digital ISIC student cards for discounts.",
+    "passport_accepted": "Yes -- passport is accepted for ticket purchase. You'll need to scan your passport at the security checkpoint when entering.",
+    "what_to_bring": "Passport (required for entry). Water (no dining facilities inside the temple complex). Modest clothing covering shoulders and knees. Camera for outdoor photos only.",
+    "queue_situation": "Ticket purchase queues are usually short (5-10 minutes). The long queues you may see are for the souvenir/blessing shop or the monk-blessing service, not for entry. On Chinese New Year's Day, the queue to enter can stretch for hundreds of meters and take hours.",
+    "language_barrier_rating": "foreigner-friendly -- English signage throughout the complex explains the history and significance of each hall. Visitor service center offers English and German guide services. Ticket purchase is straightforward. One of Beijing's most accessible temples for non-Chinese speakers."
+  },
+  "highlights": [
+    {
+      "name": "Pavilion of Ten Thousand Happinesses (万福阁) - Giant Maitreya Buddha",
+      "description": "The climactic final hall houses a jaw-dropping 26-meter-tall Maitreya Buddha statue carved from a single trunk of white sandalwood. The visible portion rises 18 meters above ground, with 8 meters buried underground for support. It was a gift from the 7th Dalai Lama to Emperor Qianlong and holds a Guinness World Record.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "This is one of the most impressive single statues you'll see anywhere in China. The sheer scale -- carved from ONE piece of wood transported thousands of kilometers from Tibet -- is mind-boggling. No photography allowed inside, so just stand and absorb it.",
+      "tip": "Stand as far back as possible in the hall to take in the full scale. Look at the three-story pavilion structure built around the statue -- the architects had to design the building around the existing sculpture."
+    },
+    {
+      "name": "Hall of the Wheel of Dharma (法轮殿)",
+      "description": "A cross-shaped hall featuring a 6.1-meter copper statue of Tsongkhapa, founder of the Gelug (Yellow Hat) school of Tibetan Buddhism. The hall has five golden pagodas on its roof in Tibetan style and houses the extraordinary 'Mountain of 500 Arhats' -- 500 tiny figures carved from sandalwood, gold, tin, bronze, and iron.",
+      "foreigner_appeal": "CULTURALLY INTERESTING",
+      "foreigner_note": "This hall has the most distinctly Tibetan architecture in the complex. The 500 Arhat mountain is one of the 'Three Artistic Masterpieces' of Yonghe Temple and is extraordinarily detailed -- try to spot individual figures in the miniature landscape.",
+      "tip": "Young Chinese visitors often pray here specifically for romantic relationships (求姻缘). The hall is considered the most architecturally significant, blending Chinese and Tibetan styles."
+    },
+    {
+      "name": "Yonghe Palace Hall (雍和宫殿)",
+      "description": "The main prayer hall, originally the prince's reception room, now housing three large bronze Buddha statues representing past, present, and future. The 18 Arhat statues along the walls are draped in golden fabric and mounted on white marble pedestals.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "The three-Buddha arrangement (past Dipamkara, present Shakyamuni, future Maitreya) is a core concept in Buddhist cosmology and appears throughout Asian Buddhism. The hall's transformation from prince's reception room to prayer hall perfectly encapsulates the temple's dual identity.",
+      "tip": "Chinese visitors pray here for career success and business prosperity. Arrive at 9 AM to possibly hear monks chanting in this hall."
+    },
+    {
+      "name": "The approach path and courtyards",
+      "description": "The 400-meter red-walled lane from the subway to the entrance, lined with ancient trees, Buddhist supply shops, and fortune-tellers, creates a memorable atmospheric transition from modern Beijing to imperial sacred space. The connecting courtyards between halls are peaceful, tree-shaded spaces.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "The ginkgo trees along the approach turn brilliant gold in autumn (October-November), creating one of Beijing's most photographed seasonal scenes. The red wall + golden leaves combination is iconic.",
+      "tip": "Exit the subway at Exit C or F and walk south to the main entrance -- this gives you the full atmospheric approach along the red wall."
+    },
+    {
+      "name": "Incense-burning ritual",
+      "description": "Every visitor receives a free bundle of eco-friendly incense sticks upon entry. You light three sticks at each incense burner, hold them above your head, bow three times, and place them in the large bronze urn. The clouds of fragrant smoke rising between the red columns and yellow tiles create an unforgettable sensory experience.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "Participating in the incense ritual is one of the most immersive cultural experiences available to tourists in Beijing. It's respectful, inclusive, and requires no Buddhist knowledge. Don't burn all your incense at the first burner -- save some for each hall.",
+      "tip": "Three sticks per hall is the tradition. Hold them above your head with both hands, face the hall entrance, and bow three times. Place them upright in the sand-filled urn. Watch locals for the correct technique."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The small museum exhibitions inside side halls",
+      "why": "Most visitors rush through the central axis halls and miss the side rooms that contain fascinating exhibits on Tibetan Buddhist art, thangka paintings, historical photographs, and the temple's role in Qing Dynasty politics. These rooms are usually empty and peaceful."
+    },
+    {
+      "what": "Confucius Temple and Imperial Academy (国子监) next door",
+      "why": "Just a 5-minute walk west, this UNESCO-adjacent site was China's highest educational institution for 700 years. It's far less crowded than the Lama Temple and offers a beautiful, scholarly atmosphere. Most tourists visit Yonghe Temple and never realize this gem is right next door."
+    },
+    {
+      "what": "Wudaoying Hutong (五道营胡同)",
+      "why": "A charming hutong (alley) running east from the temple area, lined with independent cafes, boutique shops, and creative restaurants. It's a much more authentic and relaxed version of Nanluoguxiang. Perfect for coffee or lunch after your temple visit."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Subway to Yonghe Gong station (Line 2 or 5) -> Exit C, walk south along the red wall -> Buy tickets at entrance -> Collect free incense after entering -> Walk north through all five halls in order (you can't go back) -> Take time in the courtyards between halls -> End at the giant Maitreya Buddha in Wanfu Pavilion -> Exit and walk west to Confucius Temple/Guozijian -> Finish with coffee in Wudaoying Hutong.",
+    "what_to_skip": "The expensive souvenir/blessing shop can consume an hour in queues -- unless you specifically want a blessed bracelet or item, skip it. The fortune-telling stalls outside the entrance are tourist traps. Don't spend too long at the first incense burner -- the best halls are further in.",
+    "pro_tips": "Don't use your incense all at the first burner -- save sticks for each hall along the way. The blessed bracelets (手串) sold inside are extremely popular with young Chinese visitors and make unique souvenirs, but expect long queues and prices ranging from modest to 320,000 RMB for rare amber pieces. The free incense is eco-friendly and provided by the temple -- you do NOT need to buy incense from the vendors outside."
+  },
+  "heads_up": [
+    {
+      "warning": "No photography of Buddha statues inside the halls",
+      "advice": "This is strictly enforced. Security guards will stop you. You can photograph the exterior architecture, courtyards, incense burners, and decorative details freely, but put your camera away when entering the halls."
+    },
+    {
+      "warning": "Crowded on weekends, lunar calendar dates, and holidays",
+      "advice": "Chinese New Year's Day is the absolute worst -- locals queue for hours to burn the 'first incense.' The 1st and 15th of each lunar month are also busy. Weekday visits are dramatically more peaceful."
+    },
+    {
+      "warning": "The souvenir shop queues are deceptively long",
+      "advice": "The long queues you'll see are for the blessed goods and souvenir shop, not for temple entry. If you want a blessed bracelet, budget 30-60 minutes of queuing. The items are genuine monastery goods, not tourist junk, but they're pricey."
+    },
+    {
+      "warning": "One-way flow through the temple",
+      "advice": "You walk south to north and cannot easily backtrack. Don't rush through the early halls thinking you'll come back -- take your time at each one."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Bring your passport -- required for security scanning at the entrance. No passport means no entry.",
+    "Dress modestly out of respect: cover shoulders and knees. This isn't strictly enforced but is appreciated. Remove hats and sunglasses when entering halls.",
+    "Google Maps does not work in China. Use Apple Maps, Baidu Maps, or Amap (Gaode) for navigation. The subway station is called 'Yonghegong Lama Temple' in English. If you get lost navigating to the temple, send us your location and we can guide you there step by step via chat.",
+    "The free incense sticks are provided by the temple after you enter -- do NOT buy incense from vendors outside the gate. Some vendors aggressively try to sell incense to tourists who don't know it's free inside. If a vendor outside is being pushy or you are unsure what is legitimate, message us and we can clarify what to expect before you enter.",
+    "Be mindful that this is an active place of worship. Monks and devout visitors are genuinely praying. Keep your voice down, step aside for worshippers, and don't treat the prayer halls as photo ops."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Temple is extremely crowded (holiday or weekend)",
+      "what_to_do": "Skip ahead to the later halls which tend to thin out (most people spend the longest at the first hall and gift shop). The side buildings and small museum rooms are usually empty even on busy days. Message our concierge and we can check the real-time crowd situation and suggest whether to come back later or head to the Confucius Temple next door first.",
+      "plan_b": "Walk next door to the Confucius Temple and Imperial Academy (国子监), which is rarely crowded. Come back to Yonghe Temple in the late afternoon when crowds thin."
+    },
+    {
+      "problem": "Arrived too late (after 4:00/4:30 PM last entry)",
+      "what_to_do": "The exterior red wall approach and the area around the temple are beautiful for photos even after closing. Walk through Wudaoying Hutong for cafes and dinner.",
+      "plan_b": "The Confucius Temple next door may have slightly later hours. Alternatively, head to nearby Nanluoguxiang hutong or Houhai Lake area for evening atmosphere. If you need dinner recommendations nearby, message us — we know the best spots in Wudaoying Hutong and can make a reservation in Chinese for you."
+    },
+    {
+      "problem": "Feel overwhelmed by incense smoke (allergies, asthma)",
+      "what_to_do": "Bring a mask. The outdoor courtyards have much less concentrated smoke than the enclosed incense burner areas. You can skip the incense ritual entirely and just observe.",
+      "plan_b": "Move quickly through the incense burner areas and spend time in the halls themselves, where smoke is less intense. The side halls and museum rooms have minimal incense."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Modest clothing covering shoulders and knees out of respect. Comfortable walking shoes. In winter, dress warmly -- the courtyards are open-air and Beijing winters are cold (-5 to -10C). In summer, lightweight but modest clothing.",
+    "what_to_bring": "Passport (required). Water and snacks (no food facilities inside). Camera for outdoor photos. Cash or mobile payment for tickets and souvenirs.",
+    "what_not_to_bring": "Your own incense (not allowed; free incense provided inside). Large bags or umbrellas that may need to be checked."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "light",
+    "physical_details": "Mostly flat walking along a paved central axis, approximately 500 meters from entrance to the final hall. Some steps at hall entrances. The entire complex is manageable in 1-2 hours. A few inclines but nothing strenuous. Wheelchair access is limited due to historic thresholds at hall entrances.",
+    "age_notes": "Suitable for all ages including young children. The colorful architecture, incense smoke, and large statues can be engaging for kids. Elderly visitors can take their time on the flat courtyard paths with plenty of benches.",
+    "health_warnings": "Heavy incense smoke may affect people with asthma or respiratory conditions -- consider wearing a mask. Summer visits can be hot in the unshaded courtyards. Winter visits require warm clothing for the outdoor sections."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Arrange a guided tour combining Lama Temple + Confucius Temple + Hutong walk",
+      "platform": "Klook, GetYourGuide, or hotel concierge",
+      "value_to_user": "A knowledgeable guide explains the fascinating interplay between Qing Dynasty politics, Tibetan Buddhism, and Confucian learning that makes this neighborhood unique. Without context, you're just looking at pretty buildings. We can arrange an English-speaking guide for this neighborhood and handle the booking so you just show up."
+    },
+    {
+      "action": "Book a morning visit timed for monk chanting (around 9:00-10:30 AM)",
+      "platform": "Self-arranged (just arrive at opening)",
+      "value_to_user": "Witnessing the monks' morning prayers adds an authentic spiritual dimension that afternoon visitors miss entirely."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Yōnghé Gōng",
+      "chinese": "雍和宫",
+      "english": "Lama Temple (for taxi drivers and subway)"
+    },
+    {
+      "pinyin": "Shāo xiāng",
+      "chinese": "烧香",
+      "english": "Burn incense"
+    },
+    {
+      "pinyin": "Qí fú",
+      "chinese": "祈福",
+      "english": "Pray for blessings"
+    },
+    {
+      "pinyin": "Kāi guāng",
+      "chinese": "开光",
+      "english": "Blessing/consecration (for items)"
+    },
+    {
+      "pinyin": "Shǒu chuàn",
+      "chinese": "手串",
+      "english": "Prayer bead bracelet"
+    },
+    {
+      "pinyin": "Fó xiàng",
+      "chinese": "佛像",
+      "english": "Buddha statue"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Confucius Temple and Imperial Academy (孔庙和国子监)",
+      "why": "Right next door -- China's second-largest Confucius temple and the ancient imperial university. Much quieter than Yonghe Temple, with beautiful cypress trees and scholarly atmosphere. The contrast between Buddhist and Confucian traditions in adjacent compounds is fascinating.",
+      "travel_time": "5-minute walk west"
+    },
+    {
+      "suggestion": "Wudaoying Hutong (五道营胡同)",
+      "why": "A charming, less-touristy hutong running east from the temple area. Independent cafes, creative shops, and artisan restaurants make it the perfect post-temple rest stop. Much calmer than the famous Nanluoguxiang.",
+      "travel_time": "5-minute walk east"
+    },
+    {
+      "suggestion": "Temple of Heaven (天坛)",
+      "why": "Pair the Tibetan Buddhist experience of Yonghe Temple with the Taoist/imperial ceremonial splendor of the Temple of Heaven for a comprehensive spiritual architecture day in Beijing.",
+      "travel_time": "30-minute subway ride south (Line 5)"
+    }
+  ],
+  "cultural_context": "Yonghe Temple's transformation from prince's mansion to imperial palace to Buddhist monastery mirrors the complex religious politics of the Qing Dynasty. The Manchu emperors, who were ethnically distinct from the Han Chinese majority, strategically used Tibetan Buddhism to build alliances with Mongolian and Tibetan peoples on their empire's frontiers. By making Yonghe Temple a center of lama administration, Emperor Qianlong gained influence over the selection of reincarnated lamas -- a political tool as much as a religious institution. The temple survived the Cultural Revolution reportedly because Premier Zhou Enlai personally intervened to protect it. Today, it serves a fascinating dual purpose: it's both a genuine functioning monastery with resident monks of the Gelug (Yellow Hat) school, and one of Beijing's most popular tourist attractions. The temple's extraordinary popularity with young Chinese visitors -- who flock here to pray for exam success, career advancement, and romantic partners -- reflects a broader revival of interest in traditional spirituality among China's urban millennials, even as the country remains officially secular.",
+  "photo_spots": [
+    {
+      "location": "Red wall approach path with ginkgo trees (autumn)",
+      "tip": "In October-November, the golden ginkgo leaves against the red wall create Beijing's most iconic autumn scene. Come in morning light for warm tones.",
+      "why": "The red wall + golden ginkgo combination has become a viral photo spot on Chinese social media and is genuinely stunning."
+    },
+    {
+      "location": "Incense smoke rising between the hall columns",
+      "tip": "Position yourself to capture incense smoke backlit by morning sun. The smoke creates beautiful ethereal effects against the painted wooden columns.",
+      "why": "The swirling incense smoke between the red and gold columns perfectly captures the temple's atmosphere of living devotion."
+    },
+    {
+      "location": "Courtyards between halls with ornate roofline details",
+      "tip": "Use a wide-angle lens to capture the progression of rooflines receding into the distance. The yellow tiles and ornate ridge decorations are spectacular against blue sky.",
+      "why": "The imperial yellow roof tiles mark this as a site of the highest status -- equivalent to the Forbidden City -- making the architecture uniquely photogenic."
+    },
+    {
+      "location": "Wanfu Pavilion exterior (the three-story building housing the giant Buddha)",
+      "tip": "Stand back in the courtyard to capture the full three-story facade. The ornate wooden balconies and connecting covered walkways create excellent architectural compositions.",
+      "why": "The tallest and most dramatic building in the complex -- its scale hints at the colossal statue hidden inside."
+    }
+  ],
+  "card_name": "Lama Temple",
+  "card_type": "TEMPLE",
+  "card_hook": "Imperial palace turned monastery -- where Qing Dynasty grandeur meets living Tibetan Buddhism.",
+  "best_for": [
+    "spiritual-experience",
+    "art-and-culture-lovers",
+    "easy-half-day",
+    "photographers-paradise",
+    "must-see-landmark"
+  ]
+}

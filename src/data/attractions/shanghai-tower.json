@@ -1,0 +1,301 @@
+{
+  "attraction_name_cn": "上海中心大厦",
+  "attraction_name_en": "Shanghai Tower",
+  "address_cn": "上海市浦东新区陆家嘴银城中路501号",
+  "experience_type": "sightseeing",
+  "hook": "China's tallest building and the world's third highest — a 632-meter spiraling giant with the world's fastest elevator, a 360-degree observation deck at 546 meters, and a 1,000-ton swinging damper you can actually watch in action.",
+  "honest_description": "Shanghai Tower delivers exactly what it promises: a breathtaking bird's-eye view of one of the world's most dramatic skylines. The 55-second elevator ride to the 118th floor is genuinely thrilling (your ears will pop), and stepping out to see the Oriental Pearl Tower, Jinmao Tower, and the 'Bottle Opener' all below you is a wow moment that doesn't get old. The 360-degree glass-walled observation deck is spacious and well-maintained, and the optional 126th-floor damper light show adds a fascinating engineering dimension. That said, it's fundamentally an observation deck — once you've walked the loop and taken your photos, there isn't much else to do up there (45-90 minutes is typical). The price (CNY 180) is on the higher side for China but reasonable by global skyscraper standards. The single biggest variable is weather: on a clear day, it's extraordinary; in fog or smog, you'll see nothing and regret the expense. Sunset is the magic hour — arrive around 4:30-5:00 PM to watch the city transform from golden daylight to neon-lit nightscape.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I buy tickets without WeChat or Alipay?",
+      "answer": "You can buy tickets at the on-site ticket office on the northwest side of the building (ground level). The ticket office accepts cash and some international payment methods, though credit cards are reportedly not accepted — bring Chinese yuan cash as backup. Alternatively, purchase through Trip.com or Klook online using international credit cards; you'll receive an e-ticket to scan at the self-service kiosks. Walk-up tickets are available on most days without pre-booking, except during major holidays when queues can be very long. If you'd rather not deal with the ticketing logistics, our concierge team can purchase tickets for you in advance and send you the QR code."
+    },
+    {
+      "question": "Is the 126th floor damper upgrade worth the extra cost?",
+      "answer": "It depends on your interests. The 126th floor houses the world's largest tuned mass damper — a 1,000-ton pendulum suspended at 583 meters that keeps the building stable in typhoons. The light show around it is visually impressive and the engineering is genuinely fascinating. At CNY 88 extra (total ~CNY 268 for both), it's worth it if you appreciate engineering or want the 'full experience.' If you're only after views, the 118th floor alone is sufficient."
+    }
+  ],
+  "experience_format_note": "Standard observation deck visit. Enter at ground level on the northwest side, descend to B1 for an exhibition hall about tall buildings worldwide, then continue to B2 for the elevator. The high-speed elevator takes 55 seconds to reach the 118th floor (546m). You can walk up stairs to the 119th floor (552m). The 126th floor damper requires a separate ticket and separate elevator. Exit is back down via elevator to ground level. No re-entry once you leave the observation deck.",
+  "vibe": "Awe-inspiring and futuristic — standing above the clouds looking down at skyscrapers that are themselves among the world's tallest, in a city that feels like it belongs in a science fiction film.",
+  "time_needed": {
+    "quick_visit": "45 minutes to 1 hour (elevator up, one loop around the 118th floor observation deck, photos, elevator down)",
+    "recommended": "1.5-2 hours (including B1 exhibition hall, 118th and 119th floors, souvenir shop, and time to watch the city transition from day to night)",
+    "deep_dive": "3-4 hours (arrive before sunset, watch the full day-to-night transition, visit 126th floor damper show, have coffee or dinner at the 119th floor café)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive between 4:30 PM and 5:30 PM (adjusted seasonally for sunset) to experience both daylight panoramas and the spectacular night view when the city lights up. Reviewers unanimously agree the sunset transition is the highlight.",
+    "worst_time": "Weekend evenings and Chinese public holidays — queues for the elevator can reach 90+ minutes and the observation deck gets packed. Also avoid foggy or heavily overcast days when visibility drops to near zero.",
+    "seasonal_notes": "Summer offers the longest daylight for sunset visits and the best visibility, though it can be very warm on the observation deck even with air conditioning. Winter has shorter days but clearer skies. Typhoon season (July-September) may cause temporary closures. Spring and autumn offer the best balance of weather and crowd levels.",
+    "pro_tip": "Check the weather forecast carefully before visiting — the ticket office displays current visibility conditions, but by then you've already traveled there. If it's foggy, the night view of city lights still works well. For the cheapest option with similar views, visit the Duoyun Bookstore on the 52nd floor for free (just buy a drink) — it's not as high but still impressive."
+  },
+  "getting_in": {
+    "opening_hours": "Daily: 8:30 AM - 10:00 PM (last entry 9:30 PM). Open year-round including holidays.",
+    "price_rmb": "Adult: CNY 180 (118th floor). Senior (60+): CNY 120. Child (1.0-1.4m): CNY 90. Under 1m or under 3 years: Free.",
+    "price_usd": "Adult: ~$25. Senior: ~$17. Child: ~$12.50.",
+    "price_breakdown": [
+      {
+        "item": "Standard admission (118th + 119th floor)",
+        "price": "CNY 180",
+        "highlight": "Access to the main observation deck at 546m — the core experience"
+      },
+      {
+        "item": "Premium admission (118th + 126th floor damper show)",
+        "price": "CNY 268",
+        "highlight": "Adds the 1,000-ton damper light show on the 126th floor — engineering fans love this"
+      },
+      {
+        "item": "Senior ticket (60+)",
+        "price": "CNY 120",
+        "highlight": "Requires passport or ID showing age"
+      },
+      {
+        "item": "Child ticket (1.0-1.4m height)",
+        "price": "CNY 90",
+        "highlight": "Measured at entrance"
+      },
+      {
+        "item": "126th floor upgrade (bought separately on-site)",
+        "price": "CNY 88",
+        "highlight": "Can be purchased at the 118th floor if you decide after arriving"
+      },
+      {
+        "item": "119th floor café drinks/food",
+        "price": "CNY 50-200",
+        "highlight": "Coffee and afternoon tea at 552 meters — weekends only for full café service"
+      }
+    ],
+    "booking_required": "No — walk-up tickets are available at the on-site ticket office on most days. However, pre-booking online saves queuing time and sometimes offers a CNY 10-20 discount. During major holidays (Chinese New Year, National Day), pre-booking is strongly recommended as queues can exceed 2 hours.",
+    "booking_method": "On-site: ticket office on the northwest side of the building at ground level. Online: Trip.com, Klook, or the official WeChat mini-program (requires Chinese phone number). Online tickets generate a QR code for self-service kiosk collection. The Trip.com app sometimes offers same-day discounts of 10-20%.",
+    "passport_accepted": "Yes — foreigners can purchase tickets with a passport. One reviewer noted showing a passport photo was accepted, though carrying the physical passport is always safer.",
+    "what_to_bring": "Physical passport for ticket purchase. Cash (CNY) as backup since credit cards are not accepted at ticket counters. Phone/camera for photos. Binoculars or a zoom lens (300mm+) if you're serious about photography — the views reward magnification.",
+    "queue_situation": "Weekday mornings: minimal queue (5-10 minutes). Weekday evenings: 10-20 minutes. Weekend sunset hours: 30-60 minutes. Major holidays: 90-150 minutes. The queue is mainly for the elevator, not ticket purchase. Pre-purchased tickets save only the ticket line, not the elevator wait.",
+    "language_barrier_rating": "minimal-barrier — Signage is bilingual (Chinese/English) throughout. The B1 exhibition has English descriptions. Ticket staff handle foreign visitors routinely. The observation deck is self-explanatory."
+  },
+  "highlights": [
+    {
+      "name": "118th Floor Observation Deck (上海之巅)",
+      "description": "The main attraction — a 1,000+ square meter annular platform at 546 meters offering unobstructed 360-degree views of Shanghai through floor-to-ceiling glass. You can see the Bund, Oriental Pearl Tower, Jinmao Tower, the 'Bottle Opener' (Shanghai World Financial Center), Huangpu River, and on clear days, the city stretching to the horizon.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the highest observation deck in China and one of the highest in the world. Looking DOWN at the 421-meter Jinmao Tower and 492-meter 'Bottle Opener' puts the scale in perspective — they look like toy buildings.",
+      "tip": "Walk the full 360-degree loop slowly. The Bund-facing side (west) is most popular; the east-facing side overlooking suburban Shanghai is usually much emptier and offers a different perspective.",
+      "image": "上海之巅.webp"
+    },
+    {
+      "name": "World's Fastest Elevator",
+      "description": "The Mitsubishi elevator reaches 18 meters per second (65 km/h), carrying you from B2 to the 118th floor in 55 seconds. The interior features a light show animation of Shanghai's development during the ascent. It held the Guinness World Record for fastest elevator.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The speed is genuinely thrilling — you'll feel a slight pressure change and your ears will pop (swallow or yawn to equalize). The descent is slower at 10m/s.",
+      "tip": "Swallow or do jaw movements during the ascent to prevent ear discomfort. The light show inside the elevator is worth watching rather than looking at your phone.",
+      "image": "世界最快电梯.png"
+    },
+    {
+      "name": "126th Floor Damper (上海慧眼)",
+      "description": "The world's first eddy current pendulum tuned mass damper — a 1,000-ton weight suspended from 25-meter steel cables at 583 meters height, designed to counteract wind-induced sway. A light show illuminates the massive pendulum, demonstrating how it stabilizes the building against typhoons.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Most skyscraper dampers are hidden — seeing this one exposed and dramatically lit is rare. On windy days, you can actually see it swaying, responding to forces in 0.01 seconds.",
+      "tip": "The light show runs approximately 10-15 minutes. Some visitors find it shorter than expected. Best appreciated if you have any interest in engineering or physics.",
+      "image": "上海慧眼.webp"
+    },
+    {
+      "name": "119th Floor Sky Café and Sky Post Office",
+      "description": "Accessible via stairs from the 118th floor, the 119th floor (552m) houses a café serving coffee and afternoon tea, plus the 'world's highest post office' where you can send postcards with a special stamp. A wishing tree installation lets you hang cards (CNY 18).",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Sending a postcard from the world's highest post office is a unique souvenir. The café prices are elevated (pun intended) but the experience of drinking coffee at 552 meters is memorable.",
+      "tip": "The full café service with afternoon tea sets operates mainly on weekends. Weekdays may have limited options. The 119th floor is only partially open — half is a restaurant requiring separate reservation.",
+      "image": "119层空中咖啡厅和空中邮局.png"
+    },
+    {
+      "name": "B1 Exhibition Hall (城市之巅展览)",
+      "description": "Before reaching the elevator, you pass through an exhibition showcasing the world's tallest buildings, Shanghai's skyline evolution from 1840 to present, and the engineering behind the tower's construction — including its spiraling wind-resistant design.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Don't rush through this — the animated film showing Shanghai's skyline growing from low-rise to mega-tall over 180 years is genuinely fascinating and sets up the observation deck experience.",
+      "tip": "Most people rush to the elevator. Spending 15-20 minutes here makes the view from the top more meaningful because you understand what you're looking at.",
+      "image": "城市之巅展览.webp"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Duoyun Bookstore on the 52nd floor (朵云书院)",
+      "why": "A stunning bookstore-café at 239 meters with panoramic views — and it's completely free to enter (just buy a drink for ~CNY 50 to access the viewing area). Many visitors don't know this exists and pay CNY 180 for the observation deck when this gives 60% of the view at a fraction of the cost."
+    },
+    {
+      "what": "The tower's exterior spiral design viewed from the Bund",
+      "why": "The building's twisting 120-degree spiral is best appreciated from across the Huangpu River. At night, the LED light shows on the facade are spectacular. Most visitors see it only from directly below, which doesn't reveal the spiral."
+    },
+    {
+      "what": "The B1 exhibition hall before the elevator",
+      "why": "In their rush to reach the top, most visitors blow through the ground-level exhibition about the tower's construction and Shanghai's architectural history. It includes scale models of the world's tallest buildings and an excellent animated film."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take Metro Line 2 to Lujiazui Station Exit 6 → follow the underground passage directly to the tower's B2 level → buy tickets or scan your pre-purchased QR code → explore the B1 exhibition hall → take the 55-second elevator to 118th floor → walk the full 360-degree loop → climb stairs to 119th floor for the café and sky post office → optionally take the separate elevator to the 126th floor damper → descend and exit → walk to the Bund waterfront for the best exterior photos of the tower at night.",
+    "what_to_skip": "The souvenir shop on the 118th floor is overpriced — standard tourist merchandise. The paid photo booth (green screen composited photos for CNY 200) catches visitors off guard with the cost. Also beware of jewelry sellers at the top — multiple reviewers report scam pricing.",
+    "pro_tips": "Buy tickets on Trip.com for a 10-20% discount over the counter price. Arrive 30 minutes before sunset for the best experience. The underground passage from Lujiazui Metro Exit 6 connects directly to the tower's B2 — no need to walk outside. If the main observation deck queue is too long, the 52nd floor Duoyun Bookstore is a free alternative with respectable views."
+  },
+  "heads_up": [
+    {
+      "warning": "Weather makes or breaks the experience",
+      "advice": "Check visibility before committing CNY 180. On foggy or smoggy days, you'll see white from 546 meters. The ticket office displays current visibility. If conditions are poor, visit at night instead — city lights are visible even through light haze. Or save the visit for a clear day."
+    },
+    {
+      "warning": "Your ears will pop in the elevator",
+      "advice": "The 18m/s ascent causes noticeable pressure changes. Swallow, yawn, or chew gum during the ride. Children and anyone with ear sensitivity should be prepared. The descent is slower and less intense."
+    },
+    {
+      "warning": "Evening sunset slots have the longest queues",
+      "advice": "Everyone wants the sunset view, so the 4:00-6:00 PM arrival window is the most crowded. On weekends, arrive by 3:30 PM or accept a 30-60 minute elevator wait. Alternatively, visit at 8:30 AM opening for uncrowded morning views."
+    },
+    {
+      "warning": "The observation deck gets warm even in winter",
+      "advice": "The glass-enclosed space traps heat from sunlight and body heat. In summer, it can be uncomfortably warm despite air conditioning. Dress in layers you can remove. Bring water — drinks upstairs are expensive."
+    },
+    {
+      "warning": "Window reflections interfere with photos at night",
+      "advice": "Interior lights from vending machines and displays reflect in the glass, creating glare in nighttime photos. Cup your hands around your phone lens against the glass, or bring a lens hood. The east-facing side has less interior lighting and better photo conditions."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Credit cards are NOT accepted at the ticket counter — bring Chinese yuan cash or buy tickets online through Trip.com/Klook using your international card. Our concierge can also purchase tickets for you and send the QR code, which saves the hassle entirely.",
+    "The WeChat ticket purchase option requires a Chinese phone number. Use Trip.com or the on-site ticket counter instead.",
+    "Beware of scammers selling jewelry and souvenirs at the observation deck — multiple reviewers report being overcharged by women in traditional dress. Buy only from the official shop.",
+    "Water and drinks on the 118th/119th floors are expensive (CNY 30-50+ for basic drinks). Bring your own water bottle — there are no restrictions on carrying water up.",
+    "The 'free photo' station at the entrance is not free — they take your photo for free, then charge CNY 200 for prints with Shanghai backgrounds. You can decline."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Visibility is terrible — fog or smog blocks the view",
+      "what_to_do": "If you haven't bought tickets yet, wait for nightfall — city lights are visible through moderate haze. The ticket office displays current visibility; ask before purchasing.",
+      "plan_b": "Visit the Duoyun Bookstore on the 52nd floor (free entry, buy a drink) for a lower but still impressive view. Or cross to the Bund waterfront for ground-level skyline views — the tower itself looks spectacular from across the river."
+    },
+    {
+      "problem": "Queue is too long (90+ minutes during holidays)",
+      "what_to_do": "The afternoon tea package at the 119th floor restaurant includes a dedicated fast-track elevator — bypasses the entire queue. It costs more than a standard ticket but saves hours of waiting.",
+      "plan_b": "Visit early the next morning at 8:30 AM opening when queues are minimal. Or go to the Jinmao Tower observation deck (88th floor, shorter queue, different angle) or the Oriental Pearl Tower as alternatives. If you want the fast-track afternoon tea option but aren't sure how to book it, message us and we can arrange it for you."
+    },
+    {
+      "problem": "Can't buy tickets — no cash, no WeChat, card rejected",
+      "what_to_do": "Download the Trip.com app and buy tickets online with your international credit card — e-tickets are delivered instantly and can be scanned at the self-service kiosks.",
+      "plan_b": "The Duoyun Bookstore on the 52nd floor is accessible for free — take the office building elevator. Buy a coffee (WeChat/Alipay or possibly cash at the café) and enjoy views from 239 meters."
+    },
+    {
+      "problem": "Feeling ear pressure or dizziness from the elevator",
+      "what_to_do": "Swallow repeatedly, yawn, or pinch your nose and blow gently (Valsalva maneuver). The sensation passes within minutes. Sit down at the café on the 119th floor if needed.",
+      "plan_b": "The descent elevator runs at 10m/s (slower than the ascent). If you're uncomfortable, head down whenever you're ready — there's no minimum stay requirement."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Dress in layers — the observation deck can be warm from greenhouse effect even in winter. In summer, wear light clothing. Comfortable shoes for walking and standing. No special dress code.",
+    "what_to_bring": "Cash (CNY) for ticket purchase. Phone/camera. Binoculars or zoom lens for photography enthusiasts. Water bottle (drinks are expensive upstairs). Chewing gum for ear pressure during the elevator ride.",
+    "what_not_to_bring": "Tripods are not necessary (handheld works fine against the glass). Large luggage (free storage available at the B2 underground corridor and first-floor ticket office)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Fully elevator-accessible from B2 to 118th floor. The observation deck is a flat loop with no stairs required. Stairs to the 119th floor are optional. Wheelchair accessible. Standing and slow walking for 30-90 minutes is the main physical requirement.",
+    "age_notes": "Suitable for all ages including elderly and young children. Children under 1m or under 3 years enter free. Strollers are permitted but elevator space is limited during peak hours. Mother-and-baby rooms available on B2 and 118th floors.",
+    "health_warnings": "The rapid elevator may cause temporary ear pressure — swallow to equalize. People with severe acrophobia (fear of heights) may find the glass-walled observation deck at 546 meters uncomfortable. No outdoor exposure — all viewing is through glass."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Pre-purchase observation deck tickets online",
+      "platform": "Trip.com, Klook, or official WeChat mini-program",
+      "value_to_user": "Saves 10-20% off the counter price and eliminates the ticket queue (though not the elevator queue). Same-day booking available on Trip.com."
+    },
+    {
+      "action": "Book 119th floor afternoon tea or dinner for fast-track access",
+      "platform": "Official WeChat or Trip.com restaurant booking",
+      "value_to_user": "The restaurant package includes a dedicated elevator that bypasses the main tourist queue entirely — invaluable during holidays when the regular queue exceeds 90 minutes. Our team can book this for you if the Chinese-language reservation system is a barrier."
+    },
+    {
+      "action": "Book J Hotel (101st-120th floor) for overnight stay with included access",
+      "platform": "Trip.com, Booking.com, or J Hotel directly",
+      "value_to_user": "Staying at the world's highest hotel includes observation deck access, sunrise/sunset views from your room, and the ultimate Shanghai flex. The sky pool on the 84th floor is exclusive to hotel guests."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Shànghǎi Zhōngxīn Dàshà",
+      "chinese": "上海中心大厦",
+      "english": "Shanghai Tower (full name)"
+    },
+    {
+      "pinyin": "Shànghǎi Zhī Diān",
+      "chinese": "上海之巅",
+      "english": "Top of Shanghai (observation deck name)"
+    },
+    {
+      "pinyin": "Guānguāng tīng",
+      "chinese": "观光厅",
+      "english": "Observation hall"
+    },
+    {
+      "pinyin": "Zǔní qì",
+      "chinese": "阻尼器",
+      "english": "Damper (the 126th floor attraction)"
+    },
+    {
+      "pinyin": "Diàntī",
+      "chinese": "电梯",
+      "english": "Elevator"
+    },
+    {
+      "pinyin": "Yī bǎi bā shí yuán",
+      "chinese": "一百八十元",
+      "english": "180 yuan (standard ticket price)"
+    },
+    {
+      "pinyin": "Kěyǐ yòng xiànjīn ma?",
+      "chinese": "可以用现金吗？",
+      "english": "Can I pay with cash?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "The Bund (外滩)",
+      "why": "Cross the Huangpu River to see the Shanghai Tower from its most photogenic angle. The Bund waterfront at night offers the iconic Shanghai skyline view with the tower as the centerpiece. Take the cheap CNY 2 ferry for the experience.",
+      "travel_time": "15 minutes by metro (Line 2 to East Nanjing Road) or 10 minutes by ferry"
+    },
+    {
+      "suggestion": "Lujiazui Skywalk and neighboring towers",
+      "why": "The elevated circular walkway connects the three Lujiazui supertalls — Shanghai Tower, Shanghai World Financial Center, and Jinmao Tower. Walk the loop for ground-level perspectives of all three giants.",
+      "travel_time": "0 minutes — immediately outside the tower"
+    },
+    {
+      "suggestion": "Huangpu River cruise",
+      "why": "A river cruise at night shows the full Pudong skyline including the illuminated Shanghai Tower from water level — a completely different perspective from looking down from the top.",
+      "travel_time": "15-minute walk to cruise terminals on the Bund side"
+    }
+  ],
+  "cultural_context": "Shanghai Tower's spiraling design isn't just aesthetic — it's inspired by the traditional Chinese jade cong (玉琮), an ancient ritual object with a square interior and circular exterior, representing the Taoist concept of 'heaven is round, earth is square' (天圆地方). The 120-degree twist reduces wind load by 24%, which isn't just clever engineering but a metaphor the designers embraced: traditional Chinese wisdom solving modern problems. The tower's nine vertical zones reference the number nine's significance in Chinese culture (associated with the emperor and completeness). Standing at its top, you're not just at the highest point in China's richest city — you're at the symbolic pinnacle of the country's modernization story.",
+  "photo_spots": [
+    {
+      "location": "The Bund waterfront (Puxi side) facing Pudong",
+      "tip": "Visit 30 minutes before sunset for golden hour shots, then stay for the night lighting. The best angle is between East Nanjing Road and the ferry terminal.",
+      "why": "The definitive Shanghai skyline photo — Shanghai Tower flanked by the 'Bottle Opener' and Jinmao Tower, reflected in the Huangpu River."
+    },
+    {
+      "location": "118th floor observation deck, west-facing window",
+      "tip": "Press your phone against the glass to eliminate reflections. The Bund's historic buildings create a stunning contrast with the modern skyscrapers. Best at sunset.",
+      "why": "Looking down at the Huangpu River snaking between the old Bund and modern Pudong is the signature view from the top."
+    },
+    {
+      "location": "118th floor, looking down at Jinmao Tower and SWFC",
+      "tip": "Shoot straight down to capture the 'looking down at skyscrapers' perspective. The rooftop pool of the Grand Hyatt in the Jinmao Tower is sometimes visible.",
+      "why": "The surreal experience of seeing 400-500 meter buildings appear as miniatures below you — this perspective is unique to Shanghai Tower."
+    },
+    {
+      "location": "Ground level looking up at the tower base",
+      "tip": "Use an ultra-wide lens and stand at the southwest corner where all three supertalls are visible together. Night lighting adds drama.",
+      "why": "The tower's spiraling glass facade and sheer verticality are most dramatic from directly below — the classic 'looking up at giants' shot."
+    }
+  ],
+  "card_name": "Shanghai Tower",
+  "card_type": "OBSERVATION DECK",
+  "card_hook": "Fifty-five seconds to the top of China.",
+  "best_for": [
+    "first-time-in-Shanghai-essential",
+    "iconic-must-see",
+    "photographers-paradise",
+    "engineering-enthusiasts",
+    "sunset-experience"
+  ]
+}

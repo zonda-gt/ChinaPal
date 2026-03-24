@@ -1,0 +1,49 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/西山风景区/@24.9824678,102.6187871,17z/data=!3m1!4b1!4m6!3m5!1s0x36d084d52b6b239f:0x2bbf86f441e87bd1!8m2!3d24.982463!4d102.621362!16s/g/1v82_dmj?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw==",
+  "collectedAt": "2026-03-23T07:19:57.350Z",
+  "sort": "Most relevant",
+  "minLength": 80,
+  "longReviewCount": 1,
+  "shortReviewCountCollected": 3,
+  "shortReviewCountUsed": 3,
+  "backfilledWithShortReviews": true,
+  "count": 4,
+  "reviews": [
+    {
+      "reviewId": "Ci9DQUlRQUNvZENodHljRjlvT2t4emRFNVFOVFZmWTB4SlVETlVPVjlzYldoNFNuYxAB",
+      "authorName": "Old Tiger",
+      "starRating": 5,
+      "reviewDate": "3 months ago",
+      "localGuideInfo": "Local Guide · 24 reviews",
+      "text": "(Translated by Google) The subway (Metro) will take you to the last station at XiShan Garden. From there, take a bus to the entrance to Longmen Scenic Area and the Tomb of Nie Er. (Original) The subway (Metro) would take you to the last station at XiShan Garden （西山公园). From there, get a bus to the entrance to LongMen （龙门景区） and Tomb of NieEr (聂耳墓）.",
+      "scrapedAt": "2026-03-23T07:19:57.347Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSURnb0tpN2VBEAE",
+      "authorName": "Loong Pi",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 250 reviews",
+      "text": "目前还算不错 基础设施和吃喝玩的一条街",
+      "scrapedAt": "2026-03-23T07:19:57.349Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUNRcnZmTllREAE",
+      "authorName": "雷明輝",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "3 reviews",
+      "text": "風景優美，氣氛寧靜",
+      "scrapedAt": "2026-03-23T07:19:57.349Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUNRc05qdy1nRRAB",
+      "authorName": "T",
+      "starRating": 5,
+      "reviewDate": "9 years ago",
+      "localGuideInfo": "Local Guide · 98 reviews",
+      "text": "站在山顶，俯瞰整个昆明城，分毫毕现",
+      "scrapedAt": "2026-03-23T07:19:57.349Z"
+    }
+  ]
+}

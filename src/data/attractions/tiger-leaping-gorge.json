@@ -1,0 +1,241 @@
+{
+  "attraction_name_cn": "虎跳峡",
+  "attraction_name_en": "Tiger Leaping Gorge",
+  "address_cn": "云南省迪庆藏族自治州香格里拉市虎跳峡镇",
+  "experience_type": "adventure",
+  "hook": "One of the world's deepest gorges — twice as deep as the Grand Canyon — where the Yangtze River rages through a gap narrow enough for a tiger to leap across, flanked by snow-capped mountains reaching nearly 4,000 meters above the water.",
+  "honest_description": "Tiger Leaping Gorge is a 23-kilometer canyon where the Jinsha River (upper Yangtze) forces through a narrow gap between Jade Dragon Snow Mountain (5,596m) and Haba Snow Mountain (5,396m), creating one of the world's deepest and most dramatic gorges at 3,790 meters deep. There are two ways to experience it: the easy tourist visit (escalators down to viewing platforms at the Upper Gorge scenic spot, 1-2 hours) or the legendary multi-day trek along the High Trail (one of the world's top ten classic hiking routes). The tourist visit is accessible to anyone — escalators and paved walkways bring you face-to-face with the thundering rapids. The hike is moderately challenging but spectacularly rewarding, featuring the infamous 28 Bends, cliff-edge trails with jaw-dropping views, the Sky Ladder (168 metal steps up a cliff), and guesthouse accommodation with million-dollar mountain views. The gorge is technically in Shangri-La county but is accessible from both Lijiang (1.5-2 hours) and Shangri-La (3 hours). As of 2025-2026, some sections of the middle gorge (including Tiger Leaping Stone and the Sky Ladder) have been periodically closed due to safety concerns. Check current conditions before planning a trek.",
+  "foreigner_top_questions": [
+    {
+      "question": "Should I do the tourist visit or the multi-day trek?",
+      "answer": "If you have 1-3 hours: Do the Upper Gorge tourist visit with the escalator access. You'll see the gorge's power and drama from viewing platforms. If you have 2 days: Do the High Trail trek from Naxi Guesthouse to Halfway Guesthouse (Day 1) and on to Tina's Guesthouse (Day 2). This is one of China's most spectacular hikes and is surprisingly beginner-friendly despite its reputation. If you're an experienced hiker expecting Patagonia-level wilderness: manage expectations — the trail is well-trodden, guesthouse accommodation is basic, and the experience is more 'dramatic scenery walk' than 'backcountry adventure.'"
+    },
+    {
+      "question": "How difficult is the trek? Do I need to be very fit?",
+      "answer": "The trek is moderately challenging — the hardest part is the 28 Bends ascent on Day 1 (about 2 hours of steep uphill from 2,200m to 2,670m). After that, the trail is mostly flat or gently undulating with spectacular views. Most reasonably fit people can complete it. The biggest challenges are altitude (2,200-2,670m), unpredictable weather, and some exposed cliff-edge sections. The Sky Ladder (168 metal steps up a cliff) sounds terrifying but is actually secure if you go slowly. Bring good hiking shoes, rain gear, and plenty of water."
+    }
+  ],
+  "experience_format_note": "Two distinct experiences: (1) TOURIST VISIT: Drive to the Upper Gorge scenic spot, pay entrance fee, take escalators down to viewing platforms overlooking the rapids, then escalator back up. Total: 1-2 hours. (2) MULTI-DAY TREK: Start from Naxi Family Guesthouse (accessible by shared car from Qiaotou), hike the High Trail over 1-2 days, staying at guesthouses along the way, ending at Tina's or Teacher Zhang's Guesthouse. Total: 1-3 days. The gorge is located between Lijiang and Shangri-La — a natural stopover if traveling between the two cities.",
+  "vibe": "Raw, untamed nature at its most powerful — standing at the edge of a kilometer-deep abyss watching a major river squeeze through a gap barely 30 meters wide, with snow-capped peaks towering on both sides, your whole body vibrating from the force of the water below.",
+  "time_needed": {
+    "quick_visit": "1.5-2 hours (Upper Gorge scenic spot with escalator access)",
+    "recommended": "2 days / 1 night (High Trail trek from Naxi Guesthouse to Tina's Guesthouse with overnight at Halfway Guesthouse)",
+    "deep_dive": "3 days / 2 nights (full trek including middle gorge descent to the river and Tiger Leaping Stone)"
+  },
+  "best_time": {
+    "best_time_of_day": "For the tourist visit: morning for less crowds. For the trek: start early (7-8 AM) to avoid afternoon heat and catch the best mountain light.",
+    "worst_time": "June-August rainy season — landslides can close trails and visibility is reduced. The trail is dangerous when wet. Chinese holiday weeks bring massive tourist crowds to the scenic spot.",
+    "seasonal_notes": "September-October is ideal — comfortable temperatures (12-25°C), high river flow from post-monsoon runoff, and colorful autumn foliage. November-March is dry with clear snow-capped mountain views but cold (3-20°C). April-May offers flowers and pleasant temperatures. June-August is rainy with landslide risk.",
+    "pro_tip": "Late September to mid-October is the sweet spot — warm enough for comfortable hiking, the river is at its most powerful from monsoon runoff, autumn colors dot the mountainsides, and crowds are manageable."
+  },
+  "getting_in": {
+    "opening_hours": "8:30 AM - 5:30 PM for the Upper Gorge scenic spot. The hiking trail has no official hours — guesthouse check-in is flexible.",
+    "price_rmb": "¥45 entrance (Upper Gorge); ¥22.5 student. Escalator: ¥70 round-trip (optional — you can walk stairs instead). Middle gorge sections: ¥15-30 per descent point.",
+    "price_usd": "$6.25 entrance, $10 escalator",
+    "price_breakdown": [
+      {
+        "item": "Upper Gorge scenic spot entrance",
+        "price": "¥45",
+        "highlight": "Half-price for students"
+      },
+      {
+        "item": "Escalator (up and down)",
+        "price": "¥70",
+        "highlight": "Saves ~800 stairs — worth it for those with knee issues"
+      },
+      {
+        "item": "Middle gorge descent (per trail)",
+        "price": "¥15-30",
+        "highlight": "Multiple access points, each charges separately"
+      },
+      {
+        "item": "Guesthouse accommodation (trek)",
+        "price": "¥50-150/night",
+        "highlight": "Simple but comfortable, meals available"
+      }
+    ],
+    "booking_required": "No booking needed for the scenic spot. For the trek, book Halfway Guesthouse in advance during peak season (September-October) as it's very popular and fills up.",
+    "booking_method": "Walk-in for the scenic spot. Guesthouse booking via phone, WeChat, or Booking.com. Bus tickets from Lijiang to Qiaotou available at the bus station or via WeChat.",
+    "passport_accepted": "Yes — bring your passport for ticket purchase.",
+    "what_to_bring": "Tourist visit: warm windproof jacket (extremely windy), comfortable shoes, camera. Trek: proper hiking shoes, rain gear, warm layers, water (2L minimum), snacks, headlamp, cash (guesthouses may not accept cards).",
+    "queue_situation": "Escalator queues can be 15-30 minutes during peak times. The scenic viewing platforms get crowded around midday. Trek trailheads have no queues.",
+    "language_barrier_rating": "moderate — The scenic spot has basic English signage. Guesthouse owners on the trek generally speak some English (it's a popular international hiking route). Bus drivers speak Chinese only."
+  },
+  "highlights": [
+    {
+      "name": "The Upper Gorge viewing platforms",
+      "description": "Paved walkways and glass-deck viewing platforms positioned directly above the narrowest section of the gorge, where the Jinsha River thunders through rapids with incredible force. The roar of the water and the spray are visceral — you feel the power in your chest.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Even if you don't hike, this is genuinely impressive. The scale is hard to comprehend until you're standing there — mountains rising nearly 4,000 meters on both sides of a river squeezing through a 30-meter gap. The glass deck platforms add a thrill factor.",
+      "tip": "Buy the escalator ticket to save energy for the viewing platforms. Hold onto your phone tightly near the railings — the wind is fierce and several phones have been lost to the abyss.",
+      "image": "上虎跳峡观景台.jpg"
+    },
+    {
+      "name": "The 28 Bends (二十八拐)",
+      "description": "The most challenging section of the High Trail trek — a steep zigzag ascent that gains significant elevation through 28 switchbacks. Grueling but rewarding, with increasingly spectacular views at each turn.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the make-or-break moment of the trek. It's about 2 hours of steep uphill. Take it slowly, drink water frequently, and know that the rest of the trail is much easier once you're past this section. The sense of accomplishment at the top is immense.",
+      "tip": "Start the 28 Bends section early in the morning when it's cooler. Bring at least 1 liter of water for this section alone. Take photos at each bend — they make a great progression series.",
+      "image": "二十八拐.jpg"
+    },
+    {
+      "name": "Halfway Guesthouse area views",
+      "description": "The most popular overnight stop on the trek, perched on a cliff edge with panoramic views of the gorge, the river far below, and Jade Dragon Snow Mountain across the canyon. The sunset and sunrise views from here are legendary.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Multiple reviewers say the bathroom at one guesthouse near here has 'the best view of any bathroom in the world' — looking straight out over the gorge. The guesthouse accommodation is basic but the setting is extraordinary.",
+      "tip": "Book Halfway Guesthouse in advance during peak season. If it's full, Tea Horse Guesthouse nearby offers similar views. On clear nights, the stargazing is incredible — bring a headlamp for the outdoor facilities.",
+      "image": "半山客栈观景.jpg"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The 1-day hike option (Tea Horse to Halfway, 2 hours)",
+      "why": "Most people think the trek is only for 2+ days. But the section from Tea Horse Guesthouse to Halfway Guesthouse (5 km, 2 hours) offers the most stunning scenery on mostly flat terrain — perfect for those with limited time who still want the hiking experience."
+    },
+    {
+      "what": "The cafes with gorge views",
+      "why": "E Moment cafe at the Upper Gorge scenic area and various guesthouse terraces along the trek offer stunning coffee-with-a-view experiences that many rushed visitors skip."
+    },
+    {
+      "what": "Using the gorge as a transit between Lijiang and Shangri-La",
+      "why": "The gorge sits perfectly between these two popular destinations. Instead of a boring bus transfer, stop at the gorge for a few hours (or a night) to break the journey with one of China's most spectacular natural sights."
+    }
+  ],
+  "strategy": {
+    "smart_route": "FOR TOURIST VISIT: Drive from Lijiang (1.5 hours) → Park at Upper Gorge scenic spot → Buy escalator tickets (¥70) → Take escalator down → Walk viewing platforms and glass decks → Escalator back up → Drive to Shangri-La or return to Lijiang. FOR 2-DAY TREK: Bus from Lijiang to ticket office → Shared car to Naxi Family Guesthouse → Hike to Halfway Guesthouse (Day 1, 5-6 hours) → Hike to Tina's Guesthouse (Day 2, 4-5 hours) → Bus to Shangri-La or Lijiang from Tina's.",
+    "what_to_skip": "The Lower Gorge section — plain scenery and overgrown trails. The 'extra packages' that bus drivers try to sell at the scenic spot. The souvenir shops at the exit of the scenic area. If you're a serious hiker, skip the Upper Gorge tourist spot entirely and go straight to the High Trail trailhead.",
+    "pro_tips": "For the trek: arrange luggage transport from your starting guesthouse to your ending guesthouse so you can hike with just a daypack. Bring cash — guesthouses along the trail may not have reliable card/mobile payment. Keep your entrance ticket — you need to scan it again for the escalator return trip."
+  },
+  "heads_up": [
+    {
+      "warning": "Trail closures and safety changes",
+      "advice": "As of 2025-2026, the side hike to Tiger Leaping Stone has been closed, and Middle Tiger Leaping Gorge access rules continue to change. Check current conditions with your guesthouse or local tour operators before committing to a specific route. Message our team before you go — we can check current trail conditions with the local guesthouses and give you an up-to-date status report."
+    },
+    {
+      "warning": "The road to the gorge can be dangerous",
+      "advice": "The mountain road from Lijiang features sharp curves and steep drops. Multiple reviewers strongly advise against self-driving, especially for visitors unfamiliar with mountain roads. Take a bus or hire an experienced local driver. Our concierge can arrange an experienced local driver who knows these mountain roads well and can adjust timing based on weather conditions."
+    },
+    {
+      "warning": "Extreme wind at the viewing platforms",
+      "advice": "The gorge funnels wind to alarming speeds at the viewing platforms. Secure loose items, hold children's hands, and grip your phone tightly when taking photos near the railings. The wind chill can make it feel much colder than the ambient temperature."
+    },
+    {
+      "warning": "Altitude and weather unpredictability",
+      "advice": "The gorge ranges from 1,800m to 2,670m on the High Trail. Weather changes rapidly — sunshine can turn to rain within minutes. Pack layers and rain gear regardless of the forecast. The saying here is 'one mountain has four seasons, ten miles have different weather.'"
+    }
+  ],
+  "foreigners_watch_out": [
+    "Bring your passport — required for ticket purchase and guesthouse check-in along the trek.",
+    "The toilets at the scenic spot and along the trekking route are basic squat-style and often not well maintained. Multiple reviewers note the strong smell. Bring your own tissue paper.",
+    "Bus tickets from Lijiang may require WeChat booking. Have your hotel help you book, or arrive at the bus station early to buy in person. Buses run from Lijiang Bus Station starting at 7:30 AM. If you need help booking bus tickets, our concierge can handle it for you and send the confirmation.",
+    "Phone signal can be spotty along the trek. Download offline maps (Baidu Maps) and bring cash in case mobile payment doesn't work.",
+    "The trek is a popular route for international hikers, so you'll likely meet other English-speaking travelers at the guesthouses — it's a social experience."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Trails are closed due to landslides or safety concerns",
+      "what_to_do": "The Upper Gorge scenic spot with escalator access is usually open even when hiking trails are closed. You can still experience the gorge's power from the viewing platforms.",
+      "plan_b": "Drive to the opposite (Shangri-La) side of the gorge for different viewing angles, or adjust your itinerary to spend more time in Shangri-La or Lijiang instead."
+    },
+    {
+      "problem": "Can't handle the 28 Bends or altitude on the trek",
+      "what_to_do": "Go slowly, rest frequently, and drink water. You can always turn back — the trail is an out-and-back until you commit to going forward past certain points. Some trekkers arrange a car pick-up at an intermediate point.",
+      "plan_b": "Take a car from Lijiang directly to Tea Horse Guesthouse or Halfway Guesthouse — you can enjoy the spectacular views and guesthouse experience without hiking the difficult sections. Our team can arrange a car to pick you up at an intermediate point and take you directly to a guesthouse with the views, no hiking required."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Tourist visit: warm windproof jacket, comfortable shoes with good grip, layers. Trek: proper hiking boots/shoes with ankle support, moisture-wicking layers, rain jacket, sun protection. The temperature range in a single day can be 5-25°C.",
+    "what_to_bring": "Tourist visit: camera, warm jacket, water. Trek: 2L water, rain gear, snacks, headlamp, cash, phone charger, basic first aid, sun protection. Hiking poles helpful but not essential.",
+    "what_not_to_bring": "Heavy luggage on the trek — arrange luggage transport between guesthouses. High heels or sandals (serious safety risk on wet surfaces)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "varies: light (scenic spot with escalator) to strenuous (full trek with 28 Bends)",
+    "physical_details": "Tourist visit: escalator access available, but still involves 200+ stairs between platforms. Without escalator: 800+ stairs each way. Trek Day 1: 15 km with significant elevation gain (the 28 Bends section is steep). Trek Day 2: 5 km, mostly downhill. Total trek elevation range: 2,200m to 2,670m.",
+    "age_notes": "Tourist visit suitable for most ages — the escalator helps significantly. Children and elderly can enjoy the viewing platforms. The trek is suitable for reasonably fit adults and teenagers. Not recommended for very young children or anyone with serious mobility issues.",
+    "health_warnings": "Altitude ranges from 1,800m (river level) to 2,670m (High Trail). Mild altitude effects possible. The trail has exposed cliff-edge sections — not suitable for those with severe vertigo. Landslide risk during and after rain — check trail conditions before hiking."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Arrange a private car with driver from Lijiang to Tiger Leaping Gorge",
+      "platform": "Hotel concierge or DiDi",
+      "value_to_user": "Eliminates the dangerous self-drive element and the inflexible bus schedule. Driver can wait while you explore the scenic spot or drop you at the trailhead and pick up at the other end."
+    },
+    {
+      "action": "Book Halfway Guesthouse in advance for the trek",
+      "platform": "Phone, WeChat, or Booking.com",
+      "value_to_user": "The most popular guesthouse fills up quickly during peak season. Securing a booking ensures you have a bed and can plan your hiking pace accordingly. We can book Halfway Guesthouse and arrange luggage transport between stops, so you only carry a daypack on the trail."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Hǔ Tiào Xiá",
+      "chinese": "虎跳峡",
+      "english": "Tiger Leaping Gorge"
+    },
+    {
+      "pinyin": "Shàng Hǔ Tiào",
+      "chinese": "上虎跳",
+      "english": "Upper Tiger Leaping Gorge (tourist area)"
+    },
+    {
+      "pinyin": "Zhōng Hǔ Tiào",
+      "chinese": "中虎跳",
+      "english": "Middle Tiger Leaping Gorge (hiking)"
+    },
+    {
+      "pinyin": "Zhōngtú Kèzhàn",
+      "chinese": "中途客栈",
+      "english": "Halfway Guesthouse"
+    },
+    {
+      "pinyin": "Èr shí bā guǎi",
+      "chinese": "二十八拐",
+      "english": "The 28 Bends (steep hiking section)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Shangri-La (香格里拉)",
+      "why": "Tiger Leaping Gorge sits between Lijiang and Shangri-La — a natural waypoint. Continue north to experience Tibetan culture, Songzanlin Monastery, and the Pudacuo National Park.",
+      "travel_time": "3-hour drive north from the gorge"
+    },
+    {
+      "suggestion": "Blue Moon Valley / Jade Dragon Snow Mountain (蓝月谷/玉龙雪山)",
+      "why": "See the same Jade Dragon Snow Mountain from a completely different perspective — the turquoise glacier lakes at its base versus the thundering gorge on its flank.",
+      "travel_time": "1.5-2 hours back to Lijiang, then 1 hour to the mountain"
+    },
+    {
+      "suggestion": "Lijiang Old Town (丽江古城)",
+      "why": "The cultural counterpart to the gorge's natural drama. Recover from the trek with cobblestone streets, Naxi music, and cold beer.",
+      "travel_time": "1.5-2 hour drive south"
+    }
+  ],
+  "cultural_context": "The gorge gets its name from a legend: a tiger, pursued by hunters, leaped across the narrowest point of the river using a rock in the middle as a stepping stone. The gorge has been a natural barrier and geographic marvel for millennia, separating the Naxi people of Lijiang from the Tibetan communities of Shangri-La. The ancient Tea Horse Road (茶马古道) — China's equivalent of the Silk Road — passed through this region, with traders navigating treacherous mountain paths to exchange Yunnan tea for Tibetan horses. The High Trail follows portions of these ancient trading routes. The gorge was designated a AAAA scenic area in 2009, and the hiking trail has been ranked among the world's ten classic treks. The gorge embodies Yunnan's identity as a land where geography creates dramatic natural barriers and incredible biodiversity — the surrounding region is called the 'Earth Gene Library' with thousands of plant and animal species.",
+  "photo_spots": [
+    {
+      "location": "Upper Gorge glass viewing platform",
+      "tip": "The glass deck extends over the gorge edge for a vertigo-inducing perspective. Visit in the morning for the best light and fewer people blocking your shot. The river spray creates rainbow effects in morning sun.",
+      "why": "The most dramatic perspective on the gorge's power — looking straight down at the thundering rapids from a glass platform cantilevered over the void."
+    },
+    {
+      "location": "Between Tea Horse and Halfway Guesthouse",
+      "tip": "This section of the High Trail offers the most iconic panoramic views of the gorge. Late afternoon golden light illuminates the opposite mountain walls beautifully.",
+      "why": "The widest, most sweeping views of the gorge with both snow mountains visible — the quintessential Tiger Leaping Gorge panorama."
+    },
+    {
+      "location": "Guesthouse terraces at sunrise/sunset",
+      "tip": "Wake up early for sunrise over Jade Dragon Snow Mountain from any of the guesthouses along the High Trail. The alpenglow on the snow peaks is spectacular.",
+      "why": "The combination of foreground gorge, middle-ground valley, and snow-peaked background at golden hour creates multilayered landscape photography at its finest."
+    }
+  ],
+  "card_name": "Tiger Leaping Gorge",
+  "card_type": "GORGE / TREK",
+  "card_hook": "The Yangtze squeezed into a gap a tiger could jump across.",
+  "best_for": [
+    "hikers-and-trekkers",
+    "nature-lovers",
+    "adventure-seekers",
+    "photographers-paradise",
+    "bucket-list-experience"
+  ]
+}

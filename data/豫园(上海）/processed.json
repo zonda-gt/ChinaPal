@@ -1,0 +1,269 @@
+{
+  "attraction_name_cn": "豫园",
+  "attraction_name_en": "Yu Garden / Yuyuan Garden",
+  "address_cn": "上海市黄浦区福佑路168号",
+  "experience_type": "sightseeing",
+  "hook": "A 450-year-old Ming Dynasty private garden tucked inside Shanghai's most frenetic tourist bazaar — step through the gate and the modern city vanishes into pavilions, koi ponds, and rockeries.",
+  "honest_description": "Yu Garden is one of China's finest surviving classical gardens — a compact but exquisitely designed Ming Dynasty landscape of pavilions, zigzag bridges, rockeries, and lotus ponds built in 1559 by a wealthy official as a retirement gift for his father. The garden itself is genuinely beautiful and worth the entry fee, especially the Grand Rockery, the Exquisite Jade Rock, and the intricate Dragon Walls. It's small (30 acres) and can feel cramped when crowded, which is most of the time. The surrounding Yuyuan Bazaar area is a separate free zone of traditional-style buildings packed with souvenir shops, restaurants, and the famous Nine-Bend Bridge and Huxinting Teahouse — these are iconic but extremely tourist-oriented with inflated prices. The garden itself is the real attraction; the bazaar is skippable unless you enjoy the atmosphere. New evening light show programs ('Yu Xiang Shan Lin') have added a separate nighttime dimension. Best for architecture and garden enthusiasts; skip it if you can't tolerate crowds.",
+  "foreigner_top_questions": [
+    {
+      "question": "What's the difference between 'Yu Garden' the garden and 'Yuyuan' the bazaar area?",
+      "answer": "This confuses everyone. Yu Garden (豫园) is the ticketed classical garden — a walled Ming Dynasty garden with pavilions, ponds, and rockeries (¥30-40 entry). 'Yuyuan' also refers to the entire surrounding bazaar district of traditional-style buildings with shops, restaurants, and the Nine-Bend Bridge — this area is free and open. Most of what you see in tourist photos (lit-up buildings, the zigzag bridge, Huxinting Teahouse) is actually the free bazaar area, not the ticketed garden."
+    },
+    {
+      "question": "Is it worth paying to enter the actual garden, or can I just enjoy the free bazaar?",
+      "answer": "Yes, the garden is worth it. The bazaar is atmospheric but commercial and crowded. The garden itself is a genuine 450-year-old masterpiece of landscape design — peaceful pathways, ancient rockeries, and architectural details you won't see anywhere else in Shanghai. At ¥30-40, it's one of Shanghai's best cultural values. Plan about 1-1.5 hours inside."
+    }
+  ],
+  "experience_format_note": "The ticketed Yu Garden is a walled classical garden — enter, follow winding paths through pavilions and rockeries, and exit. One-way flow is loosely enforced but paths are winding and exploratory. The surrounding Yuyuan Bazaar is a free open-air shopping/dining district. Evening light shows (Yu Xiang Shan Lin) require a separate ticket and schedule. Closed every Monday except public holidays.",
+  "vibe": "A miniature world of refined tranquility surrounded by utter commercial chaos — the garden whispers while the bazaar shouts.",
+  "time_needed": {
+    "quick_visit": "45 minutes (speed walk through the garden highlights)",
+    "recommended": "1.5-2 hours (garden tour plus bazaar stroll and Nine-Bend Bridge photos)",
+    "deep_dive": "3-4 hours (morning garden visit, lunch at a traditional restaurant, return for evening light show)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive when the garden opens (9:00 AM) for the most peaceful experience — crowds build significantly by 11:00 AM. The evening light shows (starting 18:30) offer a completely different, magical atmosphere.",
+    "worst_time": "Weekend afternoons and any Chinese public holiday — the garden paths become a slow shuffle. Chinese New Year Lantern Festival period is spectacular but impossibly crowded.",
+    "seasonal_notes": "Spring (March-May) brings magnolias, cherry blossoms, and plum blossoms against traditional architecture — the most photogenic season. Autumn (September-November) has the best weather and fall foliage. The Chinese New Year Lantern Festival (January-March) transforms the bazaar into a stunning light display but attracts massive crowds. Summer is hot and humid.",
+    "pro_tip": "Visit the garden on a Tuesday or Wednesday morning right at opening for the best experience. Then return in the evening for the bazaar's light show — the traditional buildings illuminated at night are genuinely spectacular and worth seeing as a separate experience."
+  },
+  "getting_in": {
+    "opening_hours": "Daytime garden: 9:00 AM - 4:30 PM (last entry 4:00 PM), Tuesday-Sunday. Closed Mondays (except public holidays). Evening shows (Yu Xiang Shan Lin): Summer (May-Oct) Tue/Wed/Fri/Sat/Sun 18:30-21:50; Winter (Nov-Apr) Fri/Sat/Sun 18:00-21:20.",
+    "price_rmb": "Peak season (Apr-Jun, Sep-Nov): ¥40/adult. Off-peak (Jul-Aug, Dec-Mar): ¥30/adult.",
+    "price_usd": "Peak: ~$5.50. Off-peak: ~$4.",
+    "price_breakdown": [
+      {
+        "item": "Daytime admission (peak season: Apr-Jun, Sep-Nov)",
+        "price": "¥40",
+        "highlight": "Standard adult entry to the classical garden"
+      },
+      {
+        "item": "Daytime admission (off-peak: Jul-Aug, Dec-Mar)",
+        "price": "¥30",
+        "highlight": "Standard adult entry"
+      },
+      {
+        "item": "Students / Seniors (60+)",
+        "price": "Half price",
+        "highlight": "With valid ID or passport showing age"
+      },
+      {
+        "item": "Children under 1.3m or under 6 years",
+        "price": "Free",
+        "highlight": "One adult may bring up to 3 children free"
+      },
+      {
+        "item": "Evening light show (Yu Xiang Shan Lin)",
+        "price": "Separate ticket required",
+        "highlight": "Immersive nighttime garden experience with lighting and performances"
+      }
+    ],
+    "booking_required": "Not strictly required — you can buy tickets at the gate. However, buying online via Trip.com saves time and avoids the ticket window queue.",
+    "booking_method": "Buy online via Trip.com or at the ticket window with passport. Scan and enter.",
+    "passport_accepted": "Yes — foreigners can purchase tickets and enter with passport.",
+    "what_to_bring": "Passport or ID for ticket purchase. Comfortable shoes (paths are narrow and winding). Camera. Cash or mobile payment for food in the bazaar. Umbrella in spring/summer (sudden rain). Consider wearing or renting Hanfu for a fun photo experience.",
+    "queue_situation": "Ticket window queues are short on weekdays, 15-30 minutes on weekends. Online pre-purchase eliminates the wait. Inside the garden, narrow paths create bottlenecks at popular spots.",
+    "language_barrier_rating": "some-chinese-helps — Major signs have English translations. The garden layout is intuitive. Staff at the ticket counter can handle basic English. Food vendors in the bazaar area are mostly Chinese-only."
+  },
+  "highlights": [
+    {
+      "name": "Grand Rockery (大假山)",
+      "description": "A massive artificial mountain made from thousands of tons of yellow stone, designed by the legendary Ming Dynasty rock artist Zhang Nanyang. At 14 meters tall, it's the largest and oldest surviving yellow stone rockery in southern China. You can climb through its caves and tunnels to the summit.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Rockeries (artificial mountains) are a central art form in Chinese garden design — they represent nature in miniature. This one is considered a masterpiece of the genre and has survived over 400 years.",
+      "tip": "Climb to the top for an elevated view of the garden. The tunnels and caves inside are fun to explore and less crowded than the main paths."
+    },
+    {
+      "name": "Exquisite Jade Rock (玉玲珑)",
+      "description": "A rare Taihu limestone stone prized for its natural perforations — water poured on top emerges from holes all over the surface, and incense burned at the base sends smoke drifting from every opening. It's one of the Three Famous Stones of Jiangnan and the garden's most treasured single object.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Scholar's rocks are judged by four qualities: wrinkled (皱), perforated (漏), transparent (透), and thin (瘦). This stone scores perfectly on all four — it's the rock equivalent of a flawless diamond in Chinese aesthetics.",
+      "tip": "Look for the information plaque explaining the four qualities. Understanding the criteria transforms this from 'a rock with holes' to an appreciable art object."
+    },
+    {
+      "name": "Nine-Bend Bridge and Huxinting Teahouse (九曲桥 & 湖心亭)",
+      "description": "The iconic zigzag bridge crossing the lotus pond to Shanghai's oldest teahouse. The bridge has nine turns — designed to prevent evil spirits (who can only travel in straight lines) from crossing. The teahouse has been serving tea since 1855 and is considered 'Shanghai's First Teahouse.'",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is actually outside the ticketed garden — it's free to walk across the bridge and admire the teahouse. Having tea inside is expensive but atmospheric. The bridge and teahouse are the most photographed spot in the entire Yuyuan area.",
+      "tip": "The teahouse is beautiful from outside but pricey inside. The bridge itself is the real photo op — go at night when it's illuminated for the most dramatic shots."
+    },
+    {
+      "name": "Dragon Walls (龙墙)",
+      "description": "Five decorative walls throughout the garden topped with undulating dragon sculptures that appear to swim along the wall crests. Each dragon is slightly different. These walls divide the garden into distinct scenic zones.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Imperial dragons had five claws; the dragons here have only three or four claws because the garden was built by a private citizen, not royalty. Using five-clawed dragons would have been a capital offense.",
+      "tip": "Count the claws — this small detail reveals a fascinating aspect of imperial-era social hierarchy."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The Inner Garden (内园)",
+      "why": "A smaller, quieter section at the southeast corner of the main garden. It has its own miniature rockeries, pavilions, and a beautiful Phoenix Pavilion — but most visitors are tired by the time they reach it and rush through."
+    },
+    {
+      "what": "Tang and Song Dynasty-era stone inscriptions",
+      "why": "The garden contains Yuan Dynasty iron lions and various historical inscriptions embedded in walls and rockeries. Most visitors walk past them without noticing — they're easy to miss without a guide or audio tour."
+    },
+    {
+      "what": "The free Chocolate Museum near the bazaar",
+      "why": "A small free museum in the Yuyuan Bazaar area that most visitors don't know about — a pleasant surprise, especially with children."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take Metro Line 10 to Yuyuan Station (Exit 1) → Walk through the bazaar to the Nine-Bend Bridge for photos (free) → Enter the ticketed garden at opening time (9:00 AM) → Follow the winding path from the Grand Rockery through pavilions to the Exquisite Jade Rock → Don't skip the Inner Garden at the end → Exit and explore the bazaar for lunch → Return in the evening for the illuminated Nine-Bend Bridge and bazaar night atmosphere.",
+    "what_to_skip": "Souvenir shops in the Yuyuan Bazaar are marked up 2-3x. The 'traditional snacks' at tourist-facing stalls are often mediocre and overpriced. The tea ceremony scam (strangers inviting foreigners for 'tea' nearby) is notorious — decline politely but firmly.",
+    "pro_tips": "Buy tickets online through Trip.com to skip the window queue. The garden is small enough that even on crowded days, patience and exploration of side paths yield quiet moments. For food, Nanxiang Steamed Bun Restaurant (南翔馒头店) is famous for xiaolongbao but always has a massive queue — the second floor sit-down service is faster than the ground-floor takeaway window. Consider wearing Hanfu (traditional Chinese clothing, available for rent nearby) — the garden is one of Shanghai's best Hanfu photography locations."
+  },
+  "heads_up": [
+    {
+      "warning": "Closed every Monday",
+      "advice": "Yu Garden is closed on Mondays except during public holidays. Plan accordingly — this catches many visitors off guard."
+    },
+    {
+      "warning": "The garden is much smaller than expected",
+      "advice": "At 30 acres, Yu Garden is compact. Some visitors expecting a sprawling estate are surprised by its size. The beauty is in the intricate details, not the scale — slow down and look closely at the carvings, rockeries, and architectural details."
+    },
+    {
+      "warning": "Tea ceremony scam targets foreigners",
+      "advice": "In the Yuyuan area, friendly young people may approach you speaking English, inviting you for a 'traditional tea ceremony.' This is a well-known scam that ends with a bill for hundreds of dollars. Decline firmly. Legitimate tea experiences don't start with strangers approaching you on the street."
+    },
+    {
+      "warning": "Paths are too narrow for strollers and wheelchairs",
+      "advice": "The garden's winding stone paths, high thresholds, and narrow corridors make strollers nearly impossible and wheelchairs extremely difficult. Use a baby carrier instead. The bazaar area outside is more accessible."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The tea ceremony scam is specifically targeted at foreigners in the Yuyuan area. If strangers approach you speaking English and suggest tea, it's almost certainly a scam. Real cultural experiences don't recruit participants off the street.",
+    "The Yuyuan Bazaar looks 'ancient' but most buildings are reconstructions — don't mistake the bazaar for a historic site. The ticketed garden is the genuine 450-year-old attraction.",
+    "Prices in the bazaar are significantly inflated (2-3x normal). Buy souvenirs and snacks elsewhere in Shanghai for better value.",
+    "The garden closes at 4:30 PM (last entry 4:00 PM) — don't arrive late thinking it's open into the evening. The evening light shows are a separate ticketed event on specific days."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Arrived on a Monday and the garden is closed",
+      "what_to_do": "The surrounding Yuyuan Bazaar is open daily. Walk the Nine-Bend Bridge, photograph the Huxinting Teahouse, explore the shops and food stalls — you can still enjoy much of the area without entering the garden.",
+      "plan_b": "Visit the nearby City God Temple (城隍庙, ¥10, closes 4:30 PM) for some traditional architecture, or head to The Bund (15-minute walk) for Shanghai's most famous waterfront promenade."
+    },
+    {
+      "problem": "Garden is too crowded to enjoy",
+      "what_to_do": "Head to the Inner Garden section (southeast corner) which is always less crowded. The Grand Rockery caves and upper levels also thin out. Side corridors and smaller pavilions away from the main path offer breathing room.",
+      "plan_b": "Exit the garden and return for the evening light show when the experience is completely different — fewer people in the garden itself, and the bazaar is magical at night."
+    },
+    {
+      "problem": "Fell for the tea ceremony scam",
+      "what_to_do": "If presented with an outrageous bill, firmly refuse to pay more than a reasonable amount (¥50-100 for tea). Call the police (110) if pressured. Document the location and report it.",
+      "plan_b": "Prevention is best — never accept unsolicited invitations from strangers in tourist areas. For legitimate tea experiences, visit a proper tea house or book through your hotel."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — paths are narrow, uneven stone. Hanfu (traditional Chinese clothing) is popular for photos and can be rented nearby. Dress for weather — limited shelter inside the garden.",
+    "what_to_bring": "Camera (the garden is extremely photogenic). Cash for bazaar snacks and souvenirs. Umbrella. Water bottle — limited vending inside the garden.",
+    "what_not_to_bring": "Strollers (paths too narrow). Tripods (awkward in tight spaces with crowds). Drones (prohibited)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Mostly flat walking on stone paths. The Grand Rockery climb is optional and short. Main challenge is narrow paths and high thresholds between sections — not wheelchair accessible. Total walking distance is short (the garden is compact).",
+    "age_notes": "Suitable for all ages who can walk. Not stroller-friendly — use baby carriers. High thresholds at doorways may challenge elderly visitors or those with mobility issues.",
+    "health_warnings": "Summer heat can be intense with limited shade in some sections. Stay hydrated. Mosquitoes possible near the lotus pond."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Yu Garden entry tickets",
+      "platform": "Trip.com",
+      "value_to_user": "Skip the ticket window queue. Simple scan-and-enter with passport."
+    },
+    {
+      "action": "Book Yu Xiang Shan Lin evening light show",
+      "platform": "Trip.com or official WeChat mini-program",
+      "value_to_user": "Separate ticketed evening garden experience with immersive lighting, Hanfu performances, and a completely different atmosphere from the daytime visit."
+    },
+    {
+      "action": "Book a Shanghai Old City walking tour including Yu Garden",
+      "platform": "Klook or GetYourGuide",
+      "value_to_user": "English-speaking guide provides historical context that transforms the garden visit. Typically includes the garden, City God Temple, and Old City streets."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Yù Yuán",
+      "chinese": "豫园",
+      "english": "Yu Garden"
+    },
+    {
+      "pinyin": "Jiǔ Qū Qiáo",
+      "chinese": "九曲桥",
+      "english": "Nine-Bend Bridge (the zigzag bridge)"
+    },
+    {
+      "pinyin": "Hú Xīn Tíng",
+      "chinese": "湖心亭",
+      "english": "Huxinting Teahouse (mid-lake pavilion)"
+    },
+    {
+      "pinyin": "Xiǎo Lóng Bāo",
+      "chinese": "小笼包",
+      "english": "Soup dumplings (famous local snack)"
+    },
+    {
+      "pinyin": "Chéng Huáng Miào",
+      "chinese": "城隍庙",
+      "english": "City God Temple (adjacent attraction)"
+    },
+    {
+      "pinyin": "Mén piào duōshao qián?",
+      "chinese": "门票多少钱？",
+      "english": "How much is the ticket?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "The Bund (外滩)",
+      "why": "Shanghai's iconic waterfront promenade is a 15-minute walk from Yuyuan. The contrast between the ancient garden and the colonial-era waterfront captures Shanghai's split personality perfectly.",
+      "travel_time": "15-minute walk"
+    },
+    {
+      "suggestion": "City God Temple (城隍庙)",
+      "why": "Adjacent to Yu Garden and shares the same traditional architectural area. A functioning Taoist temple that provides religious context to the garden's secular beauty. ¥10 entry.",
+      "travel_time": "2-minute walk"
+    },
+    {
+      "suggestion": "Nanjing Road Pedestrian Street (南京路步行街)",
+      "why": "Shanghai's main shopping street connects roughly to the Yuyuan area via The Bund. Walking from Yu Garden to Nanjing Road via the waterfront is a classic Shanghai half-day itinerary.",
+      "travel_time": "20-minute walk via The Bund"
+    }
+  ],
+  "cultural_context": "Yu Garden's name means 'Garden of Peace and Comfort' — it was built over 20 years (1559-1577) by Pan Yunduan, a wealthy Ming Dynasty official, as a gift to bring 'peace and joy' (豫) to his aging father, Pan En, who had served as Minister of Justice. The garden was designed as a microcosm of nature — every rockery, pond, and pavilion placement follows principles of Chinese landscape philosophy where architecture exists in harmony with, not opposition to, the natural world. After the Pan family declined, the garden changed hands repeatedly, was damaged in the Opium Wars and Taiping Rebellion, and was painstakingly restored after 1949. The garden's survival through 450 years of upheaval makes it not just a beautiful space, but a physical record of Shanghai's tumultuous history.",
+  "photo_spots": [
+    {
+      "location": "Nine-Bend Bridge at night (free area)",
+      "tip": "The illuminated bridge with the glowing Huxinting Teahouse in the background is the quintessential Yuyuan shot. Visit after 6:00 PM for the best lighting.",
+      "why": "The most iconic image of old Shanghai — the zigzag bridge reflected in the lotus pond with traditional buildings glowing in the background."
+    },
+    {
+      "location": "Grand Rockery summit (inside garden)",
+      "tip": "Climb to the top for an elevated view looking down over the garden with city skyscrapers peeking over the walls — the perfect Shanghai past-meets-present shot.",
+      "why": "The contrast between the 400-year-old garden and modern Shanghai skyline beyond the walls is uniquely photogenic."
+    },
+    {
+      "location": "Dragon Wall details",
+      "tip": "Use a telephoto lens to capture the dragon sculptures in detail. Morning light illuminates the eastern-facing walls best.",
+      "why": "The dragon carvings are intricate art — close-up shots reveal details invisible to the casual observer."
+    },
+    {
+      "location": "Lotus pond reflections (inside garden)",
+      "tip": "On a calm day, the pavilion reflections in the pond are stunning. Summer brings lotus blossoms for added color.",
+      "why": "Classic Chinese garden aesthetic — architecture reflected in still water, framed by lotus leaves."
+    }
+  ],
+  "card_name": "Yu Garden",
+  "card_type": "CLASSICAL GARDEN",
+  "card_hook": "Four hundred fifty years of curated tranquility amid Shanghai's bustle.",
+  "best_for": [
+    "first-time-in-shanghai-essential",
+    "culture-lovers",
+    "garden-architecture-enthusiasts",
+    "photographers-paradise",
+    "quick-visit"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "attractionName": "天子山",
+  "cityName": "张家界",
+  "inputPath": "data/天子山(张家界）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:56:35.772Z",
+  "count": 3,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Imperial Writing Brush Peaks (御笔峰)",
+      "query": "御笔峰 天子山 张家界",
+      "outputPath": "data/天子山(张家界）/highlight_images/01-御笔峰/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Western Sea Stone Forest (西海石林)",
+      "query": "西海石林 天子山 张家界",
+      "outputPath": "data/天子山(张家界）/highlight_images/02-西海石林/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Cable Car Ride",
+      "query": "Cable Car Ride 天子山 张家界",
+      "outputPath": "data/天子山(张家界）/highlight_images/03-Cable_Car_Ride/raw/baidu_images.json"
+    }
+  ]
+}

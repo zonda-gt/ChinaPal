@@ -1,0 +1,259 @@
+{
+  "attraction_name_cn": "青城山",
+  "attraction_name_en": "Mount Qingcheng",
+  "address_cn": "四川省成都市都江堰市青城山镇青城山路",
+  "experience_type": "outdoors",
+  "hook": "The birthplace of Taoism itself -- a UNESCO World Heritage mountain where ancient temples hide among misty bamboo forests, and Taoist priests have been climbing these same moss-covered stone steps for 2,000 years.",
+  "honest_description": "Mount Qingcheng is one of China's Four Sacred Taoist Mountains and a UNESCO World Heritage Site, located about 68 km west of Chengdu. The mountain is divided into Front Mountain (前山) and Back Mountain (后山). Front Mountain is the main attraction for most visitors -- a moderately challenging climb through dense forest past ancient Taoist temples, culminating at the Old Lord's Pavilion (老君阁) at 1,260 meters. The experience is genuinely atmospheric: the Chinese phrase 'Qingcheng tianxia you' ('Qingcheng is the most serene place under heaven') is well-earned. Dense canopy keeps the trails cool and shaded, misty clouds drift through the trees, and Taoist priests in traditional robes go about their meditative routines in ancient temples. However, honest caveats: the trails involve significant stair-climbing (expect 3-4 hours round trip on foot), it's humid year-round, steps can be slippery when wet, and it gets crowded on weekends and holidays. There's a cable car option that eliminates much of the climb. The Back Mountain is wilder, more physically demanding, and less visited -- better for experienced hikers. Some visitors find the Front Mountain overpriced (80 RMB) and over-commercialized compared to expectations. But for anyone interested in Taoism, Chinese sacred mountains, or a half-day escape from Chengdu into genuine mountain scenery, Qingcheng delivers.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I get here from Chengdu, and can I combine it with Dujiangyan?",
+      "answer": "The easiest way is taking the intercity train from Chengdu's Xipu Station (犀浦站, on Metro Line 2/6) to Qingchengshan Station -- it runs every 20-30 minutes, takes 30 minutes, and costs about 10 RMB. From the train station, take a shuttle bus or DiDi (20 RMB) to the scenic area entrance. Yes, combining with Dujiangyan Irrigation System is the classic day trip -- they're only 10 km apart. Visit Dujiangyan in the morning and Qingcheng in the afternoon, or vice versa. A full day trip from Chengdu is very doable."
+    },
+    {
+      "question": "Should I hike or take the cable car?",
+      "answer": "It depends on your fitness level and time. The full hike from the base to Old Lord's Pavilion takes about 2-3 hours up and 1.5-2 hours down, with lots of stone stairs. It's moderately strenuous but the trail passes through all the best temples and forest scenery. The cable car (60 RMB one-way) saves about 1 hour of climbing but misses some temples. A popular compromise: take the cable car up, then walk down at a leisurely pace. There's also a ferry boat (10 RMB) across Moon City Lake that's part of the experience."
+    }
+  ],
+  "experience_format_note": "Outdoor mountain hike through a UNESCO-listed Taoist sacred mountain. The Front Mountain (main area) involves climbing stone stairs through forests and visiting Taoist temples along the way. You walk from the gate up through Jianfu Temple, Tianshi Cave, Shangqing Palace, and finally to Old Lord's Pavilion at the summit. Cable car and ferry boat available as shortcuts. Back Mountain is a separate, wilder hiking area. Plan 3-5 hours for Front Mountain. Bring water and snacks -- food is available but overpriced on the mountain.",
+  "vibe": "A misty Taoist dreamscape -- ancient temples emerging from clouds of green bamboo, stone steps worn smooth by centuries of pilgrims, and the profound serenity that gave this mountain its name as 'the most secluded place under heaven.'",
+  "time_needed": {
+    "quick_visit": "2-3 hours (cable car up, walk through summit temples, cable car down)",
+    "recommended": "4-5 hours (hike up through temples, explore summit, cable car or hike down)",
+    "deep_dive": "Full day (thorough exploration of Front Mountain on foot, or Front + Back Mountain over 2 days)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at opening (8:00-8:30 AM) for the coolest temperatures, thinnest crowds, and the best chance of atmospheric morning mist in the forest. By midday it gets humid and crowded.",
+    "worst_time": "Chinese public holidays (especially National Day and May Day) when the narrow trails become uncomfortably packed. Summer weekends in July-August are hot and humid.",
+    "seasonal_notes": "Spring (March-May) and autumn (September-November) are ideal -- comfortable temperatures, beautiful foliage, and manageable crowds. Summer is lush and green but hot and humid. Winter brings occasional snow at higher elevations and very few tourists -- atmospheric but cold.",
+    "pro_tip": "Visit on a misty day -- it sounds counterintuitive, but the light fog drifting through the ancient trees creates the exact ethereal atmosphere that has inspired Chinese poets and painters for millennia. This is when Qingcheng looks most like its reputation."
+  },
+  "getting_in": {
+    "opening_hours": "Daily. April 1 - October 31: 8:00 AM - 5:30 PM (last ticket 5:00 PM). November 1 - March 31: 8:30 AM - 5:00 PM (last ticket 4:30 PM).",
+    "price_rmb": "Front Mountain: 80 RMB. Back Mountain: 20 RMB. Cable car: 60 RMB one-way. Ferry: 10 RMB. Shuttle bus from station: 10-20 RMB.",
+    "price_usd": "Front Mountain: ~$11. Cable car: ~$8.",
+    "price_breakdown": [
+      {
+        "item": "Front Mountain entrance",
+        "price": "80 RMB (~$11)",
+        "highlight": "The main Taoist heritage area with temples and summit"
+      },
+      {
+        "item": "Back Mountain entrance",
+        "price": "20 RMB (~$2.75)",
+        "highlight": "Natural scenery, fewer crowds, longer hikes"
+      },
+      {
+        "item": "Cable car (one-way)",
+        "price": "60 RMB (~$8)",
+        "highlight": "Saves ~1 hour of climbing; scenic ride"
+      },
+      {
+        "item": "Moon City Lake ferry",
+        "price": "10 RMB (~$1.50)",
+        "highlight": "Short scenic boat ride across the lake"
+      },
+      {
+        "item": "Shuttle bus/golf cart",
+        "price": "10-35 RMB",
+        "highlight": "Various transport within the scenic area"
+      }
+    ],
+    "booking_required": "No -- walk-up ticket purchase at the entrance. Can also buy via Ctrip/Meituan for convenience. Just scan ID to enter.",
+    "booking_method": "Buy at entrance or online via Ctrip/Meituan. Scan Chinese ID or show passport to enter.",
+    "passport_accepted": "Yes -- foreigners can purchase tickets with passport.",
+    "what_to_bring": "Comfortable hiking shoes with good grip (trails can be slippery). Water (at least 1 liter). Snacks. Rain jacket or poncho (mountain weather changes quickly). Light jacket (5-8C cooler than Chengdu). Sunscreen. Portable charger.",
+    "queue_situation": "Ticket queues are usually short. Cable car queues can be 30-60 minutes on weekends and holidays. The trails themselves get crowded on peak days with bottlenecks at narrow sections.",
+    "language_barrier_rating": "manageable -- Temple signs have some English. Trail markers are visual. Ticket purchase is straightforward. Limited English-speaking staff, but the experience is largely self-guided hiking."
+  },
+  "highlights": [
+    {
+      "name": "Tianshi Cave (天师洞)",
+      "description": "The most important Taoist temple on the mountain, located midway up. This is where Zhang Daoling, the founder of Taoism, taught and practiced 2,000 years ago. The temple complex is built into the mountainside with courtyards shaded by ancient trees, including a famous 1,800-year-old ginkgo tree.",
+      "foreigner_appeal": "CULTURALLY INTERESTING",
+      "foreigner_note": "This is literally where Taoism began. Zhang Daoling established the Way of the Celestial Masters here in 142 AD, making this site one of the most significant in Chinese religious history. The ancient ginkgo tree is reportedly planted by Zhang Daoling himself.",
+      "tip": "Take time to sit in the courtyard and absorb the atmosphere. The Taoist priests here are real practitioners, not performers -- observe respectfully. The temple architecture blends beautifully with the natural rock formations.",
+      "image": "天师洞.webp"
+    },
+    {
+      "name": "Old Lord's Pavilion (老君阁) at the summit",
+      "description": "The peak of Front Mountain at 1,260 meters, featuring a multi-story pavilion dedicated to Laozi (the Old Lord), the legendary founder of Taoist philosophy. On clear days, you can see distant snow-capped mountains to the west.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "Standing at the summit of a sacred Taoist mountain, surrounded by peaks and mist, with a temple to the philosopher who wrote the Tao Te Ching -- this is an archetypal Chinese mountain experience. Even without spiritual inclination, the sense of accomplishment and the views reward the climb.",
+      "tip": "Arrive early for the best visibility. On clear days, you can see snow-capped peaks of the Qionglai Mountains in the distance -- a stunning surprise this close to Chengdu.",
+      "image": "老君阁.jpg"
+    },
+    {
+      "name": "The forest trail itself",
+      "description": "The hiking path winds through dense subtropical forest -- towering trees, thick bamboo groves, ferns, moss-covered rocks, and streams. The canopy keeps trails cool and shaded even in summer. The Chinese call this atmosphere 'you' (幽) -- profound serenity and seclusion.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "This is what earned Qingcheng its famous title 'the most serene place under heaven.' The forest is genuinely magical -- dense, ancient, and alive with the sound of running water and birdsong. Multiple scenes from the classic 1986 TV series Journey to the West were filmed here.",
+      "tip": "Slow down and listen. The beauty of Qingcheng is in the atmosphere, not specific viewpoints. The misty morning trail through bamboo forest is when the mountain lives up to its legendary reputation.",
+      "image": "林间步道.webp"
+    },
+    {
+      "name": "Shangqing Palace (上清宫)",
+      "description": "Near the summit, this Taoist temple dates to the Jin Dynasty (265-420 AD) with current buildings from the Qing Dynasty. It houses important Taoist statues and offers panoramic views. Taoist priests still live and practice here.",
+      "foreigner_appeal": "CULTURALLY INTERESTING",
+      "foreigner_note": "The name means 'Palace of Supreme Clarity,' referring to the highest of the three Taoist heavens. Seeing priests performing rituals in a temple that has hosted continuous worship for over 1,700 years is a powerful experience.",
+      "tip": "The tea served at the temple's teahouse is famous -- sit and drink Taoist tea while overlooking the mountain landscape.",
+      "image": "上清宫.jpg"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Combining with Dujiangyan Irrigation System",
+      "why": "Only 10 km away, this 2,300-year-old irrigation system is equally UNESCO-listed and equally impressive. The classic day trip from Chengdu covers both sites. Doing Qingcheng alone is only half the experience."
+    },
+    {
+      "what": "Back Mountain (后山) for serious hikers",
+      "why": "Most tourists only visit Front Mountain. Back Mountain has more dramatic natural scenery -- waterfalls, deep pools, suspension bridges, and original forest -- with a fraction of the crowds. Entrance is only 20 RMB. It's more physically demanding but far more rewarding for nature lovers."
+    },
+    {
+      "what": "Temple teahouses and Taoist cuisine",
+      "why": "Several temples serve simple vegetarian food and local tea in atmospheric settings. Most tourists rush past these -- sitting in a temple courtyard drinking tea while mist swirls through ancient trees is the quintessential Qingcheng experience."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take early train from Xipu Station to Qingchengshan Station -> Shuttle/DiDi to entrance -> Buy ticket -> Walk through Jianfu Temple -> Ferry across Moon City Lake (10 RMB) -> Hike through the forest trail to Tianshi Cave (spend time here) -> Continue to Shangqing Palace and Old Lord's Pavilion at the summit -> Take cable car down (60 RMB) to save your knees -> Shuttle to Dujiangyan for afternoon visit -> Train back to Chengdu.",
+    "what_to_skip": "The overpriced food stalls on the mountain (bring your own snacks and water). The sedan chair porters who aggressively solicit business near the start -- they're expensive (200+ RMB) and the hike is manageable for most fit adults. The souvenir shops at the base.",
+    "pro_tips": "Download offline maps before going -- cell reception is spotty on the mountain. Bring a rain poncho (cheap ones sold at the base) -- mountain weather is unpredictable. The traditional Sichuan-style bamboo sedan chairs (滑竿) are a cultural experience if you want to try them, but negotiate the price firmly before starting. Train from Xipu runs frequently -- book tickets via the 12306 app or buy at the station."
+  },
+  "heads_up": [
+    {
+      "warning": "Significant physical exertion required",
+      "advice": "The hike involves 2-3 hours of continuous stair-climbing. While not technically difficult, it's tiring, especially in humid conditions. People who don't exercise regularly will find it challenging. The cable car eliminates most of the difficulty -- no shame in using it."
+    },
+    {
+      "warning": "Trails can be slippery when wet",
+      "advice": "The stone steps get very slick in rain, and rain is common on the mountain. Wear shoes with good traction. Bring a rain jacket. Hiking poles or a walking stick (available for purchase at the base) help significantly."
+    },
+    {
+      "warning": "Overpriced food and drinks on the mountain",
+      "advice": "Water that costs 2 RMB in the city costs 10-15 RMB on the mountain. Pack your own water and snacks. If you must buy on the mountain, prices increase with altitude. If you forgot to stock up, message us and we can arrange delivery of water and snacks to the mountain entrance area for when you descend."
+    },
+    {
+      "warning": "Taoist priests don't want to be photographed",
+      "advice": "Multiple visitors report that Taoist priests become upset when tourists photograph them without permission. Always ask before photographing a person. Some priests will delete photos from your phone if they catch you. Respect their privacy."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Buy your train ticket at Xipu Station (犀浦站), NOT Chengdu Station -- this is the correct departure point with frequent intercity trains. Search '犀浦 to 青城山' in the 12306 app or buy at the station. If you cannot figure out the 12306 app, message our concierge and we can book your round-trip train tickets for you — just tell us your travel date and preferred times.",
+    "The mountain is 5-8 degrees Celsius cooler than Chengdu -- bring a light jacket even in summer.",
+    "Cell phone reception and mobile data can be unreliable on the mountain. Download offline maps and have your return train info saved beforehand.",
+    "The mountain is a living Taoist site, not a theme park. Priests are real practitioners -- treat temples and sacred spaces with respect. Don't touch religious objects or sit on altars.",
+    "If it starts raining heavily, the trails become genuinely hazardous. Consider postponing the hike or using the cable car rather than risking slippery stone stairs. If conditions turn dangerous mid-hike, message our team and we can check the cable car status and help you find the safest route down."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Too tired to complete the hike to the summit",
+      "what_to_do": "Take the cable car from the midway point to the summit area. There are multiple rest stops and teahouses along the trail where you can recover. If you are feeling wrecked after the hike, message us and we can book a massage near the mountain base or arrange a comfortable ride back to Chengdu.",
+      "plan_b": "Turn back and spend time exploring the lower temples (Jianfu Temple and surroundings), which are beautiful in their own right. The Moon City Lake area is pleasant for a relaxed stroll."
+    },
+    {
+      "problem": "Heavy rain makes trails dangerous",
+      "what_to_do": "Use the cable car instead of hiking. The temples at the base (Jianfu Temple) are still accessible and atmospheric in rain.",
+      "plan_b": "Head to nearby Dujiangyan Irrigation System instead -- it's mostly flat walking and the covered museum areas provide shelter."
+    },
+    {
+      "problem": "Missed the last train back to Chengdu",
+      "what_to_do": "Take a DiDi/taxi from Qingchengshan Station to Chengdu -- it's about 1-1.5 hours and costs approximately 150-200 RMB. Our team can arrange this for you instantly — just send us a message and we will have a car dispatched to pick you up.",
+      "plan_b": "There are hotels and guesthouses near the mountain entrance and in Qingchengshan town. Mountain-side hotels offer a unique stay, though book in advance during peak season."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable hiking shoes with good traction (most important item). Light layers -- cool on the mountain even when Chengdu is hot. Quick-dry clothing in summer. Rain jacket or poncho.",
+    "what_to_bring": "At least 1 liter of water per person. Snacks/energy bars. Rain poncho. Light jacket. Portable charger. Cash for small purchases on the mountain. Sunscreen.",
+    "what_not_to_bring": "Heavy bags, high heels, flip-flops. Don't overpack -- you're carrying everything up the mountain."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate-strenuous",
+    "physical_details": "Front Mountain involves 2-3 hours of continuous stair-climbing on stone steps. Total elevation gain is approximately 800 meters. The cable car reduces this significantly but doesn't eliminate all walking. Trails are well-maintained but narrow and steep in places. Not wheelchair accessible beyond the base area.",
+    "age_notes": "Fit children 8+ can manage the hike with rest stops. Elderly visitors should use the cable car. The sedan chair service (滑竿) is available for those who cannot walk. The base area and Jianfu Temple are accessible without significant climbing.",
+    "health_warnings": "High humidity and physical exertion can cause heat exhaustion in summer -- bring plenty of water and rest frequently. Slippery trails in wet conditions pose a fall risk. People with knee problems should take the cable car rather than descending on stone stairs."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a Qingcheng Mountain + Dujiangyan day tour from Chengdu",
+      "platform": "Klook, GetYourGuide, Ctrip",
+      "value_to_user": "Eliminates all transport logistics. A guide explains the profound significance of Taoism and the mountain's role in Chinese spiritual history, transforming the hike from 'nice walk' to 'cultural pilgrimage.'"
+    },
+    {
+      "action": "Arrange round-trip DiDi from Chengdu",
+      "platform": "DiDi app",
+      "value_to_user": "More comfortable and flexible than the train, especially for groups. Takes about 45-60 minutes each way. The driver can wait while you hike."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Qīngchéng Shān",
+      "chinese": "青城山",
+      "english": "Mount Qingcheng"
+    },
+    {
+      "pinyin": "Qián shān",
+      "chinese": "前山",
+      "english": "Front Mountain (the main tourist area)"
+    },
+    {
+      "pinyin": "Hòu shān",
+      "chinese": "后山",
+      "english": "Back Mountain (for hikers)"
+    },
+    {
+      "pinyin": "Suǒdào",
+      "chinese": "索道",
+      "english": "Cable car"
+    },
+    {
+      "pinyin": "Dàojiào",
+      "chinese": "道教",
+      "english": "Taoism/Daoism"
+    },
+    {
+      "pinyin": "Lǎo Jūn Gé",
+      "chinese": "老君阁",
+      "english": "Old Lord's Pavilion (the summit)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Dujiangyan Irrigation System (都江堰)",
+      "why": "The classic pairing -- this 2,300-year-old UNESCO World Heritage irrigation system is only 10 km away. It's an engineering marvel that still functions today, controlling the Min River to irrigate the Chengdu Plain. Do both in one day trip from Chengdu.",
+      "travel_time": "20-minute drive or bus ride"
+    },
+    {
+      "suggestion": "Chengdu Panda Base (成都大熊猫繁育研究基地)",
+      "why": "If you have two days for Chengdu day trips, combine a morning panda visit (go early for active pandas) with an afternoon Qingcheng Mountain hike on different days.",
+      "travel_time": "Separate day trip from Chengdu"
+    }
+  ],
+  "cultural_context": "Mount Qingcheng holds a unique place in Chinese civilization as the birthplace of Taoism -- one of the three great philosophical/religious traditions of China alongside Confucianism and Buddhism. In 142 AD, Zhang Daoling came to this mountain and established the Way of the Celestial Masters, the first organized Taoist religious movement. For nearly 2,000 years since, the mountain has been continuously inhabited by Taoist priests and has served as a center of Taoist learning and practice. The mountain's famous epithet 'Qingcheng tianxia you' (Qingcheng is the most serene place under heaven) reflects the Taoist ideal of harmony between humans and nature -- the temples are built to complement rather than dominate the landscape, and the forested trails embody the Taoist principle of 'wu wei' (effortless action, going with nature's flow). The mountain also features in Chinese popular culture -- it appears in martial arts novels as the home of the 'Qingcheng School' of sword fighting, and the famous opening line of the TV drama New Legend of the White Snake ('Under Qingcheng Mountain, Bai Suzhen...') made it known to every Chinese household.",
+  "photo_spots": [
+    {
+      "location": "Misty forest trail with stone steps",
+      "tip": "Best in early morning when mist drifts through the trees. Shoot from a low angle looking up the stone stairs disappearing into fog.",
+      "why": "This is the iconic image of Qingcheng -- ancient stone steps vanishing into ethereal green mist, capturing the essence of 'tianxia you' (the most serene place under heaven)."
+    },
+    {
+      "location": "Tianshi Cave temple courtyards",
+      "tip": "The 1,800-year-old ginkgo tree in the courtyard is a magnificent subject, especially in autumn when it turns golden. Frame it against the temple architecture.",
+      "why": "An ancient tree planted (legendarily) by the founder of Taoism, framed by the temple that marks Taoism's birthplace -- deeply symbolic and visually stunning."
+    },
+    {
+      "location": "Old Lord's Pavilion summit panorama",
+      "tip": "On clear days, use a telephoto lens to capture the distant snow-capped peaks. The pavilion itself photographs well against mountain backdrop.",
+      "why": "The reward for the climb -- a panoramic view from the summit of a sacred mountain, with the possibility of distant Himalayan-range peaks on the horizon."
+    }
+  ],
+  "card_name": "Mount Qingcheng",
+  "card_type": "SACRED MOUNTAIN",
+  "card_hook": "Where Taoism was born -- 2,000 years of serenity on China's most mystical mountain.",
+  "best_for": [
+    "nature-lovers",
+    "spiritual-experience",
+    "active-adventure",
+    "escape-the-city",
+    "cultural-deep-dive"
+  ]
+}

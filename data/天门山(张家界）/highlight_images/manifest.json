@@ -1,0 +1,33 @@
+{
+  "attractionName": "天门山",
+  "cityName": "张家界",
+  "inputPath": "data/天门山(张家界）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T19:53:03.162Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Tianmen Mountain Cable Car (天门山索道)",
+      "query": "天门山索道 天门山 张家界",
+      "outputPath": "data/天门山(张家界）/highlight_images/01-天门山索道/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Tianmen Cave — Heaven's Gate (天门洞)",
+      "query": "天门洞 天门山 张家界",
+      "outputPath": "data/天门山(张家界）/highlight_images/02-天门洞/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Glass Skywalks (玻璃栈道)",
+      "query": "玻璃栈道 天门山 张家界",
+      "outputPath": "data/天门山(张家界）/highlight_images/03-玻璃栈道/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "99-Bend Tongtian Avenue (通天大道)",
+      "query": "通天大道 天门山 张家界",
+      "outputPath": "data/天门山(张家界）/highlight_images/04-通天大道/raw/baidu_images.json"
+    }
+  ]
+}

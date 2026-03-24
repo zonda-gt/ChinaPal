@@ -1,0 +1,272 @@
+{
+  "attraction_name_cn": "三峡博物馆",
+  "attraction_name_en": "Three Gorges Museum",
+  "address_cn": "重庆市渝中区人民路236号",
+  "experience_type": "sightseeing",
+  "hook": "A free, four-floor deep dive into 2 million years of Yangtze civilization — from Ba kingdom bronzes to the Three Gorges Dam — right across from Chongqing's iconic Great Hall of the People.",
+  "honest_description": "The Three Gorges Museum is much more than its name suggests. Yes, there's a spectacular ground-floor hall with a massive Three Gorges model, projection-mapped water, and a free 360-degree panoramic film, but the real depth is in the Ba-Yu ancient civilization galleries, the sobering WWII Chongqing wartime exhibits, and a surprisingly good ceramics and calligraphy collection upstairs. The museum is well-curated and genuinely engaging — reviewers consistently say they underestimated how much time they'd need. The biggest downside is that English translations are limited to major exhibits; most detailed descriptions are Chinese-only, so bring a translation app or rent an audio guide. It gets extremely crowded on weekends and holidays (some visitors report being unable to get in during Chinese New Year). Best for history lovers and anyone wanting to understand Chongqing beyond hotpot and nightlife; skip it if you need everything in English and won't use a guide.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I get in as a foreigner without a Chinese phone number?",
+      "answer": "The museum requires advance registration via WeChat, which normally needs a Chinese phone number. As a foreigner, go directly to the entrance and show your passport to the security staff — multiple foreign visitors report being let in this way after staff help them bypass the digital registration. Since October 2024, reservations are reportedly no longer mandatory and you can enter with just an ID/passport, though this may vary during peak periods. Arrive before 10 AM on weekdays to avoid any issues."
+    },
+    {
+      "question": "Is it worth visiting if I don't read Chinese?",
+      "answer": "Yes, but with preparation. The major exhibits have some English signage, and the visual displays (bronze artifacts, life-sized dioramas, the 360-degree Three Gorges film) speak for themselves. Rent the multilingual audio guide (CNY 20, available in English, Japanese, Korean) at the entrance. Alternatively, book an English-speaking guided tour (CNY 150-300, requires 48-hour advance booking). Without either, you'll miss significant context — bring a phone translation app as backup."
+    }
+  ],
+  "experience_format_note": "Standard museum visit — no special preparation needed. Four floors with both free permanent exhibitions and occasional paid temporary exhibitions. One-way flow is not enforced; you can explore freely. Airport-style security screening at entry with bag check. Photography allowed without flash. No food or drinks permitted inside exhibition halls. Free luggage storage lockers available at the entrance.",
+  "vibe": "Scholarly yet accessible — a modern, well-organized museum that takes its mission seriously, with moments of genuine awe (the Three Gorges hall) and quiet emotion (the wartime exhibits).",
+  "time_needed": {
+    "quick_visit": "1-2 hours (ground floor Three Gorges hall and one or two galleries — you'll get the highlights but miss the depth)",
+    "recommended": "3-4 hours (all four floors including the panoramic film and main permanent exhibitions)",
+    "deep_dive": "5-6 hours or a full day (every exhibition plus temporary shows, stamp collecting across all floors, and the gift shop)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at 9:00 AM when doors open — the museum is noticeably less crowded before 10:30 AM. Afternoon crowds build from around 1 PM, especially on weekends.",
+    "worst_time": "Weekends, Chinese public holidays (especially National Day week, Chinese New Year, and Labor Day) — reviewers describe 'seas of people' making it impossible to see exhibits properly. Some visitors during Spring Festival 2026 couldn't even get in.",
+    "seasonal_notes": "The museum is fully indoor and climate-controlled, making it an excellent escape from Chongqing's brutal summer heat (multiple reviewers specifically praise it as a cool retreat in August). Equally good on rainy days. Year-round destination with no seasonal advantage.",
+    "pro_tip": "Visit on a Tuesday or Wednesday morning for the emptiest experience. Combine with the People's Great Hall directly across the square, then walk to Zhongshan Si Road and Jiefangbei — a full Chongqing cultural morning."
+  },
+  "getting_in": {
+    "opening_hours": "Tuesday to Sunday: 9:00 AM - 5:00 PM (last entry 4:30 PM). Closed every Monday except public holidays. Open on public holidays including National Day, Spring Festival, Qingming, Labor Day, Dragon Boat Festival, and Mid-Autumn Festival.",
+    "price_rmb": "Free admission for all permanent exhibitions.",
+    "price_usd": "Free.",
+    "price_breakdown": [
+      {
+        "item": "General admission (permanent exhibitions)",
+        "price": "Free",
+        "highlight": "Includes all 10 permanent exhibition halls and the 360-degree panoramic film"
+      },
+      {
+        "item": "Temporary/special exhibitions",
+        "price": "Varies (some free, some paid)",
+        "highlight": "Rotating exhibitions like Dunhuang art or Dazu Rock Carvings reproductions may charge separately"
+      },
+      {
+        "item": "Audio guide (multilingual)",
+        "price": "CNY 20",
+        "highlight": "Available in Chinese, English, Japanese, Korean — strongly recommended for foreigners"
+      },
+      {
+        "item": "3D interactive audio guide",
+        "price": "CNY 30-50",
+        "highlight": "More engaging for children — uses AR/interactive elements"
+      },
+      {
+        "item": "English-speaking guided tour",
+        "price": "CNY 150-300",
+        "highlight": "Requires 48-hour advance booking — transforms the experience for non-Chinese speakers"
+      }
+    ],
+    "booking_required": "Officially, advance registration via the museum's WeChat public account is required (can book 1-7 days ahead). However, since late 2024, some visitors report that showing an ID/passport at the entrance is sufficient. During peak periods, advance booking is strongly recommended to guarantee entry.",
+    "booking_method": "Register via the museum's official WeChat mini-program (search '重庆中国三峡博物馆'). Foreigners without WeChat can try showing their passport directly at the entrance — staff have been accommodating. No third-party booking platform currently handles museum reservations.",
+    "passport_accepted": "Yes — foreigners can enter with a physical passport. Staff at the entrance will assist with registration if you cannot use the WeChat system.",
+    "what_to_bring": "Physical passport or ID for entry registration. Phone with translation app (most exhibit text is Chinese-only). Comfortable walking shoes. A notebook if you want to collect the museum's 46 free commemorative stamps scattered across all floors.",
+    "queue_situation": "Weekday mornings: minimal wait (5-10 minutes for security). Weekend afternoons: expect 20-30 minute security queues. Major holidays: queues can exceed 1 hour and the museum may reach capacity. Security screening includes bag check.",
+    "language_barrier_rating": "some-chinese-helps — Major exhibit titles and some key artifact labels are bilingual (Chinese/English). However, most detailed descriptions, temporary exhibition text, and staff communication are Chinese-only. Audio guides bridge the gap significantly."
+  },
+  "highlights": [
+    {
+      "name": "Magnificent Three Gorges Hall (壮丽三峡)",
+      "description": "The ground-floor showpiece — a massive hall with a life-sized Three Gorges landscape model, projection-mapped flowing water, relocated riverside dwellings from the dam reservoir area, and a free 360-degree panoramic film that recreates the gorges before the dam was built.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The 360-degree film is a genuine substitute for the expensive Yangtze River cruise — it shows the original Three Gorges landscape that no longer exists. Don't miss it.",
+      "tip": "Watch the panoramic film first thing in the morning when seats are available. Check the screening schedule at the entrance — shows run at fixed times."
+    },
+    {
+      "name": "Ancient Ba-Yu Civilization (远古巴渝)",
+      "description": "Second-floor gallery showcasing the mysterious Ba kingdom that predated modern Chongqing, with stunning bronze artifacts including the famous tiger-knob chunyu bell, weapons with undeciphered Ba script, and pottery from as far back as 2 million years (the Wushan Man jawbone fossil).",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The Ba civilization was contemporaneous with ancient Greece and Egypt but far less known internationally. The bronze masks rival those of Sanxingdui in their enigmatic beauty.",
+      "tip": "The Wushan Man fossil (巫山人下颌骨化石) is one of the museum's 'top ten treasures' — a 2.04-million-year-old jawbone fossil, among the earliest human remains found in China."
+    },
+    {
+      "name": "Anti-Japanese War Years (抗战岁月)",
+      "description": "Third-floor exhibition covering Chongqing's role as China's wartime capital during WWII, with original documents, yellowed family letters, weapons, and a powerful half-panoramic painting of the Chongqing Bombing — the sustained Japanese aerial bombardment that killed thousands.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "This is a part of WWII history rarely covered in Western education. Chongqing endured over 5 years of strategic bombing — understanding this context transforms how you see the city.",
+      "tip": "The wartime letters and personal items are more moving than the weapons — take your time in this hall."
+    },
+    {
+      "name": "Ceramics and Calligraphy Collections (历代瓷器 / 历代书画)",
+      "description": "Fourth-floor galleries housing a refined collection of ancient porcelain spanning Chinese dynasties and a calligraphy collection that includes the celebrated Jingyun Stele (景云碑) — a remarkably well-preserved Han Dynasty stone inscription.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Even without calligraphy knowledge, the Jingyun Stele is worth seeing — its carving quality exceeds what many visitors expect. Calligraphy enthusiasts specifically travel here for it.",
+      "tip": "The fourth floor is the least crowded — most visitors tire out before reaching it. The donated collections (Li Chuli, Robert van Gulik family) contain surprising international pieces."
+    },
+    {
+      "name": "Han Dynasty Sculpture Art (汉代雕塑艺术)",
+      "description": "Third-floor gallery featuring an exceptional collection of Han Dynasty stone carvings, tomb figurines, and the beloved bronze horse-leading figure (铜牵马俑) — one of the museum's signature pieces that visitors describe as 'adorable.'",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The Han Dynasty figurines are charming and surprisingly expressive — many visitors are delighted by their personality and humor, comparing them to modern cartoon characters.",
+      "tip": "Look for the nursing mother figurine (哺乳俑) — it's a tender, intimate piece that stands out among the more formal artifacts."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The 46 free commemorative stamps scattered across all floors",
+      "why": "The museum has stamp stations on every floor — collecting all 46 is a popular activity that gives structure to your visit and makes a unique free souvenir. Bring a notebook or buy the museum's stamp book at the gift shop."
+    },
+    {
+      "what": "The Southwest Ethnic Minorities exhibit (西南民族民俗风情)",
+      "why": "Tucked away on the third floor, this gallery covers the diverse ethnic cultures of China's southwest — costumes, rituals, and daily life of groups like the Miao, Tujia, and Yi people. Most tourists rush past it to the more famous halls."
+    },
+    {
+      "what": "The gift shop and antique store on the first floor",
+      "why": "Behind the main gift shop is an antique section where you can actually touch and purchase real antiques. The museum's creative merchandise (文创) is also well-regarded — better quality than typical tourist shop items."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Start on the ground floor with the Magnificent Three Gorges hall and catch the first screening of the 360-degree panoramic film. Work your way up: second floor for Ba-Yu civilization and city history, third floor for wartime exhibits and Han sculptures, fourth floor for ceramics, calligraphy, and donated collections. Collect stamps as you go. Finish at the first-floor gift shop.",
+    "what_to_skip": "The paid temporary exhibitions are hit-or-miss — check what's currently showing before paying. If short on time, the Historical Coins exhibit is the most skippable permanent gallery for casual visitors.",
+    "pro_tips": "Rent the audio guide at the entrance — it's only CNY 20 and makes Chinese-only exhibits accessible. The coffee shop near the entrance is surprisingly good and cheap. After visiting, walk directly across to the People's Great Hall for the iconic photo op."
+  },
+  "heads_up": [
+    {
+      "warning": "Most exhibit descriptions are in Chinese only",
+      "advice": "Rent the multilingual audio guide (CNY 20) or book an English-speaking guide in advance (CNY 150-300, 48-hour notice). At minimum, bring a phone with a translation app — camera-based translation works on exhibit text."
+    },
+    {
+      "warning": "Extremely crowded during holidays and weekends",
+      "advice": "Visit on a weekday morning if at all possible. During peak periods (National Day, Chinese New Year), the museum may reach capacity and turn people away. Some visitors during Spring Festival 2026 could not get in at all."
+    },
+    {
+      "warning": "WeChat registration can be a barrier for foreigners",
+      "advice": "If you can't register via WeChat, go directly to the entrance with your passport. Staff have consistently helped foreign visitors bypass the digital system. Arrive early to allow time for any registration issues."
+    },
+    {
+      "warning": "The museum is bigger than it looks — visitor fatigue is real",
+      "advice": "With 10 permanent exhibitions across four floors, many visitors report rushing through the later galleries out of exhaustion. Pace yourself, take breaks, and prioritize the halls that interest you most."
+    }
+  ],
+  "foreigners_watch_out": [
+    "WeChat registration officially requires a Chinese phone number. Show your passport at the entrance and ask staff for help — they've consistently assisted foreign visitors with manual entry or bypass.",
+    "English translations are sparse beyond major exhibit titles. Without an audio guide or translation app, you'll be looking at artifacts with minimal context. The CNY 20 audio guide is the single best investment for your visit.",
+    "No food or drinks are allowed inside exhibition halls — eat before you enter or use the first-floor café area.",
+    "Payment at the gift shop and for audio guides may require WeChat Pay or Alipay. Bring cash as a backup — some counters accept it.",
+    "The museum is closed every Monday (except when a public holiday falls on Monday). Don't make a special trip without checking the day."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Can't register via WeChat and worried about being turned away",
+      "what_to_do": "Go directly to the entrance with your physical passport. Explain to the security staff that you're a foreign tourist. Multiple reviewers confirm staff will help you register or let you in manually.",
+      "plan_b": "Walk across the square to the People's Great Hall (人民大礼堂) which is always accessible from outside and is an iconic Chongqing landmark. The surrounding People's Square park is free and pleasant."
+    },
+    {
+      "problem": "Museum is at capacity and not accepting more visitors",
+      "what_to_do": "This mainly happens during major holidays. Wait 30-60 minutes — capacity opens up as people leave. The queue moves, just slowly.",
+      "plan_b": "Visit the People's Great Hall across the square, walk down to Zhongshan Si Road (中山四路) for a historical tree-lined stroll, or head to nearby Jiefangbei (解放碑) pedestrian street — all within 15 minutes on foot."
+    },
+    {
+      "problem": "Arrived on a Monday and found it closed",
+      "what_to_do": "Check the museum's WeChat account for any holiday exceptions. During public holiday weeks, the museum may open on Monday and close on a different day instead.",
+      "plan_b": "Visit Hongyadong (洪崖洞), Ciqikou Ancient Town (磁器口), or the Chongqing Planning Exhibition Gallery — all open daily and within easy metro reach."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — the museum spans four large floors and you'll be on your feet for hours. Indoor climate-controlled environment, so dress comfortably. In summer, the museum is a welcome escape from Chongqing's extreme heat.",
+    "what_to_bring": "Physical passport for entry. Phone with translation app (Google Translate camera mode works well). Portable charger. A notebook for collecting the 46 commemorative stamps. Cash for audio guide and gift shop purchases.",
+    "what_not_to_bring": "Flash photography equipment (flash is prohibited). Food and drinks (not allowed in exhibition halls). Large bags (will slow you down at security)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "easy",
+    "physical_details": "Fully indoor museum with elevators between all four floors. Flat surfaces throughout with no stairs required. Wheelchair accessible. Climate-controlled. Expect to walk 5,000-8,000 steps over a full visit.",
+    "age_notes": "Suitable for all ages. Children enjoy the 3D interactive audio guide, the 360-degree film, and the interactive screens on several floors. Stroller-friendly throughout.",
+    "health_warnings": "No significant health concerns. The museum provides a cool, comfortable indoor environment year-round — particularly valuable during Chongqing's extreme summer heat."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book English-speaking guided tour (48-hour advance notice)",
+      "platform": "Museum directly (phone: 023-63171890) or via hotel concierge",
+      "value_to_user": "Transforms the experience for non-Chinese speakers — guides bring artifacts to life with historical context. CNY 150-300 for a private English tour is exceptional value for a museum of this quality."
+    },
+    {
+      "action": "Arrange WeChat registration assistance for foreigners",
+      "platform": "Hotel concierge or travel agent",
+      "value_to_user": "Eliminates the stress of potentially being turned away. Having registration sorted before arrival lets you walk straight in."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Sānxiá Bówùguǎn",
+      "chinese": "三峡博物馆",
+      "english": "Three Gorges Museum"
+    },
+    {
+      "pinyin": "Yǔ dǎo lǎn qì",
+      "chinese": "语音导览器",
+      "english": "Audio guide"
+    },
+    {
+      "pinyin": "Miǎnfèi",
+      "chinese": "免费",
+      "english": "Free (admission)"
+    },
+    {
+      "pinyin": "Huánmù diànyǐng",
+      "chinese": "环幕电影",
+      "english": "Panoramic film / 360-degree movie"
+    },
+    {
+      "pinyin": "Jìniàn zhāng",
+      "chinese": "纪念章",
+      "english": "Commemorative stamp"
+    },
+    {
+      "pinyin": "Wǒ shì wàiguó yóukè, méiyǒu Wēixìn",
+      "chinese": "我是外国游客，没有微信",
+      "english": "I'm a foreign tourist, I don't have WeChat"
+    },
+    {
+      "pinyin": "Kěyǐ yòng hùzhào jìnqù ma?",
+      "chinese": "可以用护照进去吗？",
+      "english": "Can I enter with a passport?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "People's Great Hall (人民大礼堂)",
+      "why": "Directly across the square — Chongqing's most iconic building, modeled after Beijing's Temple of Heaven. The museum and Great Hall together form the city's landmark cultural trio with People's Square.",
+      "travel_time": "5-minute walk across People's Square"
+    },
+    {
+      "suggestion": "Zhongshan Si Road (中山四路)",
+      "why": "A beautiful tree-lined historic street with Republican-era buildings, former embassies, and quiet cafes — the opposite mood from bustling Chongqing. Includes Zhou Enlai's former residence and the Dai Li Mansion.",
+      "travel_time": "10-minute walk north from the museum"
+    },
+    {
+      "suggestion": "Jiefangbei Pedestrian Street (解放碑步行街)",
+      "why": "Chongqing's main commercial district for shopping, street food, and people-watching. A natural post-museum lunch stop with endless restaurant options.",
+      "travel_time": "15-minute walk or one metro stop"
+    }
+  ],
+  "cultural_context": "The Three Gorges Museum tells a story most foreigners don't know: the Yangtze River's Three Gorges region was home to one of China's oldest civilizations — the Ba kingdom, which thrived for over a millennium before being absorbed by the Qin dynasty. When the Three Gorges Dam was built (completed 2006), hundreds of towns and villages were submerged, displacing over 1.3 million people and drowning irreplaceable archaeological sites. This museum was specifically created to preserve what could be saved — many artifacts were rescued from the rising waters. Understanding this gives the museum's mission a poignancy that goes beyond typical museum displays.",
+  "photo_spots": [
+    {
+      "location": "Museum entrance with the People's Great Hall in the background",
+      "tip": "Stand at the museum's front entrance facing south — the Great Hall's distinctive dome fills the background across People's Square.",
+      "why": "The iconic pairing of these two buildings is Chongqing's most recognizable cultural vista."
+    },
+    {
+      "location": "Magnificent Three Gorges Hall (ground floor)",
+      "tip": "The large-scale Three Gorges model with projection-mapped water creates dramatic wide-angle shots. Visit when the projections are running.",
+      "why": "The hall recreates a landscape that no longer exists — it's a unique visual that tells the story of what was lost to the dam."
+    },
+    {
+      "location": "Ba-Yu bronze artifacts display (second floor)",
+      "tip": "The tiger-knob chunyu bell (虎钮錞于) and bronze masks are the most photogenic artifacts. No flash allowed — use natural lighting.",
+      "why": "These mysterious bronze pieces rival better-known collections and photograph beautifully behind glass."
+    }
+  ],
+  "card_name": "Three Gorges Museum",
+  "card_type": "MUSEUM",
+  "card_hook": "Two million years of Yangtze history, rescued from the rising waters.",
+  "best_for": [
+    "history-lovers",
+    "rainy-day-option",
+    "free-attraction",
+    "family-friendly",
+    "escape-the-heat"
+  ]
+}

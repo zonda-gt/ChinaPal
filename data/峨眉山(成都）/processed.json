@@ -1,0 +1,224 @@
+{
+  "attraction_name_cn": "峨眉山",
+  "attraction_name_en": "Mount Emei",
+  "address_cn": "四川省乐山市峨眉山市黄湾镇",
+  "experience_type": "nature",
+  "hook": "One of China's Four Sacred Buddhist Mountains and a UNESCO World Heritage Site — a 3,079-meter ascent from subtropical forest to a golden summit above the clouds, where a 48-meter Puxian Bodhisattva statue gleams at the highest Buddhist temple in the world.",
+  "honest_description": "Mount Emei is genuinely one of China's most spectacular mountain experiences, combining world-class natural scenery with deep Buddhist heritage. The Golden Summit at 3,079 meters delivers on its promise — on a clear day, you stand above a sea of clouds with the massive golden Puxian Bodhisattva statue gleaming in sunlight, and the four famous natural phenomena (sunrise, sea of clouds, Buddha light, and sacred lamp) are real if conditions cooperate. The mountain is enormous — 48 km of trails with over 5,000 meters of cumulative elevation gain — so choosing between hiking and the bus-plus-cable-car route is an important decision. The wild Tibetan macaques are entertaining but can be aggressive (they snatch bags and food). The Buddhist temples along the way are authentic and atmospheric. However, weather is highly unpredictable — fog and rain occur 200+ days per year, and many visitors reach the summit only to see nothing but white mist. The logistics require planning: bus schedules, cable car queues, and accommodation on the mountain. Foreigners get half-price entry per official policy, which is a rare and welcome perk. Best as a 2-3 day trip from Chengdu, and absolutely worth the effort when the weather cooperates.",
+  "foreigner_top_questions": [
+    {
+      "question": "Should I hike the whole mountain or take the bus and cable car?",
+      "answer": "Most first-time visitors take the sightseeing bus from Baoguo to Leidongping (¥90 round-trip, 1.5 hours), then hike 1.5 km to the cable car station, and ride the Jinding cable car (¥65 up, ¥55 down) to the summit. This gets you to the Golden Summit in about 3 hours total. Full hiking takes 2-3 days with 48 km and 5,300+ meters of cumulative elevation — it's extraordinary but extremely demanding. A good compromise: bus up, explore the summit, then hike down a section through the monkey zone and temple areas."
+    },
+    {
+      "question": "Do foreigners really get half-price tickets?",
+      "answer": "Yes — Mount Emei's official policy grants half-price admission to holders of foreign passports, as well as Hong Kong, Macau, and Taiwan permanent residents. This means ¥80 in high season and ¥55 in low season instead of the full ¥160/¥110. You must present your physical passport at the ticket office. This discount does NOT apply to the sightseeing bus or cable car fees."
+    }
+  ],
+  "experience_format_note": "A mountain park experience requiring transport planning. Most visitors take the sightseeing bus (¥90 round-trip) from Baoguo village to Leidongping, then hike 1.5 km to the cable car, then ride to the Golden Summit. The ticket (¥160 high season, ¥110 low season) is valid for 4 consecutive days. Full hiking takes 2-3 days with temple accommodation available. The mountain has distinct climate zones — subtropical at the base, alpine at the summit.",
+  "vibe": "Sacred, immense, and otherworldly — mist-wrapped temples emerge from ancient forests as you ascend, until you break through the clouds at the summit to find a golden Buddha presiding over a sea of white.",
+  "time_needed": {
+    "quick_visit": "1 day (bus + cable car to Golden Summit, explore summit area, return — rushed but doable)",
+    "recommended": "2 days (Day 1: bus to summit, explore Golden Summit and nearby temples, stay overnight on mountain; Day 2: descend via hiking through monkey zone and Qingyin Pavilion)",
+    "deep_dive": "3-4 days (full hiking route from Baoguo to Golden Summit via temple stays, experiencing all climate zones and major temples)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at the summit before sunrise (stay overnight on the mountain) for the best chance of seeing the famous sunrise and sea of clouds. If day-tripping, arrive as early as possible — clouds typically build by midday.",
+    "worst_time": "July-August (rainy season with poor visibility) and Chinese National Day Golden Week (October 1-7) when queues for buses and cable cars can exceed 2 hours. Midday arrivals often find the summit completely fogged in.",
+    "seasonal_notes": "Spring (April-June) and autumn (September-November) offer the best weather and visibility. Winter (December-February) brings stunning snow scenery at the summit — the contrast of snow-covered peaks above green subtropical forest is magical, but trails can be icy and require crampons. Summer is hot at low elevations and very rainy.",
+    "pro_tip": "Check the weather forecast obsessively before going — a clear summit day is worth rearranging your schedule for. If the previous night had rain and the morning forecast shows clearing, go immediately — those are the best conditions for sea-of-clouds views."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (April 1 - October 31): 6:00 AM - 5:00 PM. Off-season (November 1 - March 31): 7:00 AM - 4:00 PM. Cable car opens 20 minutes before sunrise - 6:00 PM.",
+    "price_rmb": "¥160 high season (Jan 16 - Dec 14), ¥110 low season (Dec 15 - Jan 15). Foreigners: half price. Valid for 4 days.",
+    "price_usd": "Full price: ~$22 high / ~$15 low. Foreigners: ~$11 high / ~$8 low.",
+    "price_breakdown": [
+      {
+        "item": "Entrance ticket (high season)",
+        "price": "¥160 (foreigners ¥80)",
+        "highlight": "Valid for 4 consecutive days — plan multi-day visits"
+      },
+      {
+        "item": "Entrance ticket (low season)",
+        "price": "¥110 (foreigners ¥55)",
+        "highlight": "Dec 15 - Jan 15 only"
+      },
+      {
+        "item": "Sightseeing bus (round-trip)",
+        "price": "¥90",
+        "highlight": "Baoguo to Leidongping — essential unless hiking the full trail"
+      },
+      {
+        "item": "Jinding (Golden Summit) cable car",
+        "price": "¥65 up / ¥55 down",
+        "highlight": "6-minute ride from near Leidongping to the summit"
+      },
+      {
+        "item": "Wannian Temple cable car",
+        "price": "¥65 up / ¥45 down",
+        "highlight": "Alternative mid-mountain cable car to Wannian Temple area"
+      }
+    ],
+    "booking_required": "Recommended during peak season and holidays — tickets can sell out. Book online via the official WeChat mini-program or Trip.com.",
+    "booking_method": "Official WeChat mini-program, Trip.com, or Klook. Passport number required for online booking. Walk-up tickets available at the Baoguo visitor center but may sell out during holidays.",
+    "passport_accepted": "Yes — foreigners purchase tickets with passport and receive the official half-price discount. Physical passport required at entry.",
+    "what_to_bring": "Warm layers (summit is 10-15°C cooler than base, often near freezing). Rain jacket (essential). Comfortable hiking shoes. Water and snacks (mountain vendors charge 3-5x normal prices). Sunscreen for summit. Walking stick (available for purchase at the base). Crampons in winter (rentable at Leidongping for ¥5-10).",
+    "queue_situation": "Sightseeing bus: minimal waits off-peak, 30-60 minutes during holidays. Cable car: 15-30 minutes normally, up to 2+ hours during Golden Week and Spring Festival. The 1.5 km hike from Leidongping to the cable car station has no queue but is uphill and takes 30-40 minutes.",
+    "language_barrier_rating": "chinese-essential — Almost no English signage on the mountain. Bus drivers and cable car staff speak Chinese only. Temple names and trail markers are in Chinese. Having a translation app or basic Chinese phrases is important for navigation and buying tickets."
+  },
+  "highlights": [
+    {
+      "name": "Golden Summit (金顶)",
+      "description": "The crown of Mount Emei at 3,079 meters — a dramatic summit platform featuring the 48-meter gilded bronze Puxian Bodhisattva statue (the world's tallest golden Buddha), the Golden Temple, Silver Temple, and Bronze Temple. On clear days, the panoramic view extends to the snowy peaks of western Sichuan.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The four famous natural phenomena occur here: sunrise, sea of clouds (most common), Buddha light (rainbow halo around your shadow — rare), and sacred lamps (mysterious lights at night — extremely rare). The sea of clouds alone is worth the trip.",
+      "tip": "Stay overnight at one of the summit hotels to catch sunrise. The best sunrise viewing is from the Sheshen Cliff (舍身崖) platform. Arrive 30 minutes before sunrise for a good spot."
+    },
+    {
+      "name": "Wild Tibetan Macaques (生态猴区)",
+      "description": "A section of trail between Qingyin Pavilion and Hongchunping where wild Tibetan macaques roam freely. These monkeys are famous for their boldness — they approach visitors, pose for photos, and steal food and shiny objects.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "These are wild animals, not zoo exhibits. They can be aggressive. Park staff carry slingshots to manage them. Do NOT hold food in your hands, carry plastic bags visibly, or show them shiny objects (phones, jewelry). Monkeys have scratched and bitten visitors.",
+      "tip": "Keep bags zipped and hold nothing in your hands when walking through. If a monkey approaches, stay calm and don't make eye contact. Staff-guided feeding is the safest way to interact."
+    },
+    {
+      "name": "Wannian Temple (万年寺)",
+      "description": "A 1,000-year-old temple at 1,020 meters housing a Song Dynasty bronze Puxian Bodhisattva statue riding a six-tusked white elephant — one of China's most important Buddhist artifacts, cast in 980 AD. The temple is an active worship site surrounded by ancient trees.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The bronze statue survived a fire that destroyed the rest of the temple in 1945. It weighs 62 tons and is over 1,000 years old. Even without Buddhist knowledge, the craftsmanship and age of this statue are remarkable.",
+      "tip": "Accessible via the Wannian cable car (¥65 up) or a 2-hour hike from Qingyin Pavilion. The cable car saves significant energy for the summit climb."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Qingyin Pavilion (清音阁) and the 'Two Bridges of Clear Sound'",
+      "why": "Most bus-and-cable-car visitors skip this mid-mountain area, but it's one of the most atmospheric spots on the mountain — two streams converge at a heart-shaped stone with twin bridges overhead, surrounded by ancient forest. The sound of water echoing off cliffs is the 'clear sound' the name refers to."
+    },
+    {
+      "what": "Temple overnight stays",
+      "why": "Several temples along the hiking route offer simple accommodation (¥40-150 per night) with vegetarian meals. Sleeping in a 1,000-year-old Buddhist temple, waking to morning chanting, and having the misty mountain trails to yourself at dawn is an experience most tourists skip by taking the bus."
+    },
+    {
+      "what": "The hot springs at the mountain base",
+      "why": "Natural hot springs near Baoguo village offer a restorative soak after days of mountain hiking. The Lingxiu Hot Spring and Hongzhushan Hot Spring are well-regarded and surprisingly affordable."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Day 1: High-speed train from Chengdu (1 hour) → bus/taxi to Baoguo village → sightseeing bus to Leidongping (1.5 hours) → hike 1.5 km to cable car station → cable car to Golden Summit → explore summit temples and viewpoints → stay overnight at summit hotel. Day 2: Watch sunrise → cable car down → sightseeing bus to Wannian Temple cable car → ride down → hike through monkey zone and Qingyin Pavilion → bus back to Baoguo → train to Chengdu.",
+    "what_to_skip": "The 'Only Emei Mountain' stage show at the base is divisive — some love it, some find it overpriced. The souvenir shops at every stop sell identical goods. The sedan chair carriers on the summit steps charge ¥300-800 and are not worth it for able-bodied visitors.",
+    "pro_tips": "Buy all bus and cable car tickets together at the Baoguo visitor center to avoid separate queues on the mountain. Bring your own food — mountain restaurants charge 3-5x normal prices. The left-flank hiking trail (via Xianfeng Temple) is far less crowded than the right-flank trail and has better scenery including waterfalls."
+  },
+  "heads_up": [
+    {
+      "warning": "Weather at the summit is extremely unpredictable",
+      "advice": "The summit is frequently fogged in, even when the base is clear. Rain occurs 200+ days per year. If your first summit visit is foggy, your 4-day ticket lets you try again. Check webcams and weather apps before each attempt."
+    },
+    {
+      "warning": "The monkeys can be dangerous",
+      "advice": "Tibetan macaques are wild animals and can bite or scratch. Keep all bags closed, don't carry food in view, hide shiny objects. If a monkey climbs on you, stay still and let park staff handle it. Don't make eye contact or show teeth (they interpret it as a threat)."
+    },
+    {
+      "warning": "Altitude can affect some visitors",
+      "advice": "The summit is at 3,079 meters. While not extreme altitude, visitors coming directly from sea-level Chengdu may feel shortness of breath, especially when climbing stairs. Take it slow on the summit, stay hydrated, and don't overexert on the steep final stairs."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Foreigners get half-price entry (¥80 high season) — present your physical passport at the ticket office. This is official policy, not a scam.",
+    "Almost no English is spoken or written anywhere on the mountain. Download offline maps and a translation app before ascending.",
+    "Temple accommodation requires basic Chinese to book and check in. Conditions are simple — no heating, shared bathrooms, vegetarian-only meals.",
+    "The 1.5 km hike from Leidongping bus terminus to the cable car station is uphill at 2,400 meters altitude — it's harder than it sounds. Allow 30-40 minutes.",
+    "In winter, crampons (冰爪) are essential above Leidongping. Rent them for ¥5-10 at vendors near the bus stop. The trails become dangerously icy."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "The summit is completely fogged in and you can't see anything",
+      "what_to_do": "Wait 1-2 hours at the summit — mountain weather changes rapidly. Visit the Golden Temple and Silver Temple interiors while waiting. The sea of clouds often appears briefly between fog banks.",
+      "plan_b": "Use another day on your 4-day ticket to return. Spend today exploring mid-mountain temples like Wannian Temple and the monkey zone, which are beautiful in misty conditions."
+    },
+    {
+      "problem": "Cable car is closed due to high winds or ice",
+      "what_to_do": "Hike the final section from Jieyin Temple to the summit (about 6 km, 2-3 hours, very steep with 1,500+ steps). In winter, crampons are mandatory for this section.",
+      "plan_b": "Explore the Leidongping and Jieyin Temple area, which has its own mountain scenery. Or descend to the Wannian Temple and Qingyin Pavilion area for a different experience."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Dress in layers — the base can be 30°C in summer while the summit is 10°C. Waterproof jacket is essential year-round. Sturdy hiking shoes with good grip. In winter, bring thermal layers, gloves, and a hat — summit temperatures drop below -10°C.",
+    "what_to_bring": "Rain jacket (non-negotiable). Warm layers for the summit. Water (2+ liters for hiking). High-energy snacks. Sunscreen and sunglasses for the summit. Walking stick (purchasable at the base for ¥10-20). Portable charger. Offline maps. Cash (some mountain vendors don't accept mobile payment).",
+    "what_not_to_bring": "Plastic bags (monkeys target them). Flashy jewelry (monkeys grab shiny objects). Heavy luggage (leave at Baoguo village hotel). Drones (prohibited in the scenic area)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "strenuous",
+    "physical_details": "Full hiking: 48 km with 5,300+ meters of cumulative elevation gain over 2-3 days — extremely demanding. Bus + cable car route: physically easy except for the 1.5 km uphill walk from Leidongping to the cable car (30-40 minutes at 2,400m altitude) and stairs at the summit. The summit area itself involves moderate stair climbing between viewpoints.",
+    "age_notes": "The bus + cable car route is manageable for reasonably fit elderly visitors and families with older children. Not recommended for very young children on hiking routes. Sedan chairs are available for hire at steep sections (expensive).",
+    "health_warnings": "Summit altitude (3,079m) may cause mild altitude symptoms for some visitors. The combination of altitude, steep stairs, and cold temperatures can be dangerous for those with heart or respiratory conditions. Stay hydrated and ascend slowly."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a 2-day Mount Emei tour from Chengdu",
+      "platform": "Trip.com, Klook, or Chengdu-based tour agencies",
+      "value_to_user": "Handles all logistics — transport, bus tickets, cable car, and mountain accommodation booking. English-speaking guides explain Buddhist history and help navigate the Chinese-only environment. ¥500-1,500 per person depending on accommodation level."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Éméi Shān",
+      "chinese": "峨眉山",
+      "english": "Mount Emei"
+    },
+    {
+      "pinyin": "Jīn Dǐng",
+      "chinese": "金顶",
+      "english": "Golden Summit"
+    },
+    {
+      "pinyin": "Guānguāng Chē",
+      "chinese": "观光车",
+      "english": "Sightseeing bus"
+    },
+    {
+      "pinyin": "Suǒdào",
+      "chinese": "索道",
+      "english": "Cable car"
+    },
+    {
+      "pinyin": "Hóuzi",
+      "chinese": "猴子",
+      "english": "Monkey"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Leshan Giant Buddha (乐山大佛)",
+      "why": "Just 30 km from Mount Emei — the world's largest stone Buddha (71 meters tall) carved into a cliff face. Most visitors combine these two UNESCO sites in a 3-4 day trip from Chengdu.",
+      "travel_time": "30-40 minutes by bus or taxi"
+    },
+    {
+      "suggestion": "Chengdu (成都)",
+      "why": "Mount Emei is a natural day-trip or overnight extension from Chengdu. Combine with the Giant Panda Breeding Center, Sichuan cuisine, and Jinli Street for a complete Sichuan experience.",
+      "travel_time": "1 hour by high-speed train"
+    }
+  ],
+  "cultural_context": "Mount Emei is one of China's Four Sacred Buddhist Mountains, dedicated to Puxian (Samantabhadra) Bodhisattva — the patron of Buddhist practice and meditation. The mountain has been a pilgrimage site for over 2,000 years, with the first temple built in the 1st century AD. The 48-meter golden Puxian statue at the summit, completed in 2006, depicts the bodhisattva riding a six-tusked white elephant, a unique iconographic feature. The mountain also appears in Chinese martial arts fiction — Jin Yong's novels feature the Emei Sect, making the mountain famous in pop culture across the Chinese-speaking world. In 1996, UNESCO inscribed Mount Emei as both a Cultural and Natural World Heritage Site, recognizing its exceptional biodiversity (over 3,200 plant species) alongside its religious significance.",
+  "photo_spots": [
+    {
+      "location": "Golden Summit sunrise viewpoint (Sheshen Cliff)",
+      "tip": "Arrive 30 minutes before sunrise. Shoot east toward the rising sun with the sea of clouds below. The golden Puxian statue is behind you — turn around after sunrise for golden-hour light on the statue.",
+      "why": "The combination of sunrise, sea of clouds, and the massive golden statue silhouetted against the sky is Mount Emei's most iconic and dramatic image."
+    },
+    {
+      "location": "Looking up at the Puxian Bodhisattva statue from the base platform",
+      "tip": "Late afternoon light gives the golden statue a warm glow. Shoot with a wide-angle lens to capture the full 48-meter height. Clear sky days are essential — fog ruins this shot.",
+      "why": "The statue rising against a blue sky or sea of clouds is the defining image of modern Mount Emei — it appears on virtually every guidebook cover."
+    }
+  ],
+  "card_name": "Mount Emei",
+  "card_type": "SACRED MOUNTAIN",
+  "card_hook": "A golden Buddha above the clouds on China's highest Buddhist peak.",
+  "best_for": [
+    "buddhist-pilgrimage",
+    "hiking-enthusiasts",
+    "nature-lovers",
+    "photography",
+    "multi-day-adventure"
+  ]
+}

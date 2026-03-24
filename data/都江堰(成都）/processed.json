@@ -1,0 +1,259 @@
+{
+  "attraction_name_cn": "都江堰",
+  "attraction_name_en": "Dujiangyan Irrigation System",
+  "address_cn": "成都市都江堰市公园路",
+  "experience_type": "sightseeing",
+  "hook": "A 2,280-year-old irrigation system that still works — no dam, no modern technology, just ancient genius that turned flood-prone plains into China's breadbasket.",
+  "honest_description": "Dujiangyan is the world's oldest surviving no-dam irrigation system, built in 256 BC by governor Li Bing and his son to tame the flood-prone Min River. The engineering is genuinely brilliant — three interlocking components (Fish Mouth divider, Flying Sand Weir, and Bottle Neck Channel) split, filter, and regulate the river using nothing but natural principles. Two thousand years later, it still irrigates over 11 million acres of farmland across the Chengdu Plain. The scenic area is large and includes the water engineering works, the Anlan Suspension Bridge (one of China's five famous ancient bridges), Erwang Temple with panoramic views, and forested mountain paths. You need 3-4 hours minimum, and a guide is strongly recommended — without one, you're looking at water flowing past rocks with no understanding of the engineering marvel beneath. The nearby Guanxian Ancient Town and the illuminated South Bridge at night add evening appeal. Best for history and engineering enthusiasts; skip if you need visual spectacle over intellectual substance.",
+  "foreigner_top_questions": [
+    {
+      "question": "Do I really need a guide, or can I understand it on my own?",
+      "answer": "A guide is strongly recommended. Multiple reviewers — including experienced travelers — say they wouldn't have understood what they were looking at without one. The genius of Dujiangyan is invisible to the eye: how the Fish Mouth splits water 60/40 in winter and reverses to 40/60 during floods, how the Flying Sand Weir automatically ejects sediment. Without explanation, it just looks like a river next to some rocks. Hire a guide at the entrance (¥100-200) or book an English-speaking guide through Trip.com."
+    },
+    {
+      "question": "Can I combine this with the Chengdu Panda Base in one day?",
+      "answer": "The Dujiangyan Panda Base is nearby (separate from the main Chengdu Panda Base), so you could combine Dujiangyan irrigation + Dujiangyan pandas in one day trip. Combining with the Chengdu city Panda Base would make for a very rushed day — they're in opposite directions from Chengdu center. Better to dedicate a full day to Dujiangyan (irrigation system + ancient town + South Bridge night view)."
+    }
+  ],
+  "experience_format_note": "Large outdoor scenic area with multiple entrances (Gate 1/Lidui Park in the south, Gate 5/6 near Erwang Temple in the north). The area includes riverside walkways, mountain paths, temples, and the water engineering structures. There are two main approaches: enter from the south and walk uphill to the north (more climbing), or enter from the north and walk downhill to the south (easier). Many visitors take a shuttle bus to Gate 5/6 and walk downhill.",
+  "vibe": "Intellectually fascinating and naturally beautiful — the satisfying feeling of understanding something genuinely ingenious, set against rushing turquoise water and forested mountains.",
+  "time_needed": {
+    "quick_visit": "2-2.5 hours (main engineering structures only — rushed)",
+    "recommended": "3-4 hours (full scenic area including Erwang Temple, Anlan Bridge, and all three engineering components)",
+    "deep_dive": "Full day (scenic area morning, Guanxian Ancient Town afternoon, South Bridge 'blue tears' evening)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at opening (8:00 AM) to avoid tour groups that flood in by 10:00 AM. Stay into the late afternoon, then walk to the South Bridge for the illuminated evening view.",
+    "worst_time": "National holidays and summer weekends — the paths become very crowded. Avoid August for extreme heat.",
+    "seasonal_notes": "Spring and autumn (March-May, September-November) have the best weather. Summer (June-August) shows the system at its most dramatic with high flood waters, but the heat is punishing. Winter is mild but the water flow is lower and less impressive.",
+    "pro_tip": "After finishing the scenic area, don't rush back to Chengdu. Walk to the South Bridge (南桥) at dusk — the illuminated traditional bridge over turquoise rushing water has become a viral sensation (nicknamed 'blue tears'). The evening atmosphere in Guanxian Ancient Town is wonderful."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (Mar 2-Oct 31): 8:00 AM - 6:00 PM. Off-season (Nov 1-Mar 1): 8:00 AM - 5:30 PM.",
+    "price_rmb": "¥80/adult",
+    "price_usd": "~$11",
+    "price_breakdown": [
+      {
+        "item": "Adult admission",
+        "price": "¥80",
+        "highlight": "Standard entry to the full scenic area"
+      },
+      {
+        "item": "Students / Children 6-18",
+        "price": "¥40",
+        "highlight": "Half price with valid ID"
+      },
+      {
+        "item": "Children under 6 or under 1.3m",
+        "price": "Free",
+        "highlight": "Including foreign children"
+      },
+      {
+        "item": "English-speaking guide",
+        "price": "¥100-300",
+        "highlight": "Strongly recommended — book via Trip.com or hire at entrance"
+      },
+      {
+        "item": "Shuttle bus (scenic area to gates)",
+        "price": "¥10-15",
+        "highlight": "Optional — saves walking between gates"
+      }
+    ],
+    "booking_required": "Not strictly required — tickets available at the gate with passport. Online purchase via Trip.com saves time.",
+    "booking_method": "Trip.com or at the gate with passport/ID. Scan and enter.",
+    "passport_accepted": "Yes — foreigners enter with passport. Required for train tickets to Dujiangyan as well.",
+    "what_to_bring": "Passport (mandatory for train and park entry). Comfortable hiking shoes (uneven paths and stairs). Water and snacks (limited food inside). Sunscreen and hat in summer. Rain jacket (mountain weather is changeable).",
+    "queue_situation": "Ticket queues are manageable except during major holidays. The Anlan Suspension Bridge can have queues to cross during peak times.",
+    "language_barrier_rating": "some-chinese-helps — Major signs have English translations. Hiring an English-speaking guide transforms the experience. Without a guide, you'll miss most of the engineering significance."
+  },
+  "highlights": [
+    {
+      "name": "Fish Mouth Divider (鱼嘴分水堤)",
+      "description": "The heart of the system — a man-made island that splits the Min River into an inner channel (for irrigation) and an outer channel (for flood drainage). In normal flow, 60% goes to irrigation; during floods, the proportions automatically reverse to 40% irrigation / 60% drainage. No moving parts, no human intervention — pure hydraulic engineering genius.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This automatic flow-reversal mechanism is what makes Dujiangyan extraordinary. It was solving problems that modern dams solve — 2,200 years before modern dams existed. A guide will explain the physics that makes this work.",
+      "tip": "Stand at the tip of the Fish Mouth and watch the river physically split in front of you. This is the moment that gives you chills when you understand what's happening."
+    },
+    {
+      "name": "Anlan Suspension Bridge (安澜索桥)",
+      "description": "A historic suspension bridge spanning the roaring Min River, originally built with bamboo cables. Known as one of China's five famous ancient bridges and nicknamed the 'Husband and Wife Bridge.' The current bridge sways dramatically as you cross — thrilling views of the rushing water below.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The bridge sways noticeably — it's safe but exhilarating, especially with the turquoise water roaring underneath. Great photos looking down through the wooden slats.",
+      "tip": "Cross the bridge to reach the Fish Mouth on the opposite bank. The bridge provides the best overhead perspective of the water splitting."
+    },
+    {
+      "name": "Erwang Temple (二王庙)",
+      "description": "An ancient temple complex built into the mountainside, dedicated to Li Bing and his son who designed the system. Multi-tiered wooden buildings with sweeping views of the entire irrigation system below. Contains inscriptions of Li Bing's six-character water management motto that guided maintenance for 2,000+ years.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "Li Bing's engineering principles were so effective they were enshrined as a state religion — emperors for 2,000 years sent officials to perform annual rituals at this temple and maintain the system using his original guidelines.",
+      "tip": "Climb to the highest terrace for the panoramic view of the entire irrigation system spread out below — this perspective makes the engineering plan click visually."
+    },
+    {
+      "name": "Bottle Neck Channel (宝瓶口)",
+      "description": "A narrow channel carved through solid rock mountain to control water flow into the Chengdu Plain. Li Bing's workers spent years chiseling through the mountain using fire-and-water cracking techniques. The narrow opening acts as a natural flow regulator — excess water is diverted away during floods.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Imagine cutting through a mountain with no explosives, no machinery — just fire, water, and human labor. The channel has been in continuous use for 2,280 years.",
+      "tip": "Visit the Fulong Temple (伏龙观) at the top of Bottle Neck Channel for the best view down into the narrow channel with water rushing through."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The South Bridge (南桥) night view",
+      "why": "Most day-trippers rush back to Chengdu after the scenic area. The illuminated South Bridge with turquoise water rushing beneath it has become one of Chengdu's most viral photo spots ('blue tears'). It's free and just outside the main exit."
+    },
+    {
+      "what": "The six-character motto (深淘滩，低作堰)",
+      "why": "Li Bing's maintenance instructions — 'dredge deep, build weirs low' — guided maintenance for over 2,000 years. These simple principles, inscribed in the Erwang Temple, are the reason the system still works today. Most visitors walk past them without understanding their significance."
+    },
+    {
+      "what": "Guanxian Ancient Town (灌县古城)",
+      "why": "Just outside the scenic area exit, this atmospheric old town has traditional architecture, local food, and a pleasant evening stroll. Most tourists skip it entirely."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Take the high-speed train from Chengdu to Lidui Park Station (NOT Dujiangyan Station — critical!) → Enter via Gate 1 (Lidui Park) → See Bottle Neck Channel and Fulong Temple → Cross Anlan Suspension Bridge → Walk to Fish Mouth → Climb to Erwang Temple for panoramic view → Exit via Gate 5/6 → Shuttle bus or walk to Guanxian Ancient Town → South Bridge at sunset/evening.",
+    "what_to_skip": "The Yulei Pavilion (玉垒阁) climb is long and steep with limited additional value if you've already seen the view from Erwang Temple. The souvenir shops at the entrance are standard tourist fare.",
+    "pro_tips": "Book train tickets to 离堆公园站 (Lidui Park Station), NOT 都江堰站 (Dujiangyan Station) — the latter is much farther from the scenic area. Hire a guide — this is one of the few attractions in China where a guide isn't just nice-to-have but essential for understanding what you're seeing. The ¥80 entrance fee is exceptional value for a UNESCO World Heritage Site."
+  },
+  "heads_up": [
+    {
+      "warning": "Without a guide, you won't understand the engineering",
+      "advice": "Dujiangyan's genius is invisible — it looks like a river flowing past some rocks. Hire a guide (¥100-300) or at minimum use a detailed audio guide app. This single decision determines whether you'll find the experience fascinating or underwhelming."
+    },
+    {
+      "warning": "The scenic area is much larger than expected",
+      "advice": "Plan 3-4 hours minimum. The area involves significant walking with stairs and uneven paths. Wear proper hiking shoes, not sandals. There's limited food inside — bring snacks and water."
+    },
+    {
+      "warning": "Train station confusion",
+      "advice": "Book tickets to 离堆公园站 (Lidui Park Station), NOT 都江堰站 (Dujiangyan Station). This is the most common mistake visitors make — the wrong station adds 30+ minutes and a taxi ride."
+    },
+    {
+      "warning": "Summer heat is extreme",
+      "advice": "Avoid visiting in August if possible. The climbing portions have limited shade. Bring plenty of water and sun protection."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You need your passport for both the train to Dujiangyan AND park entry. Don't forget it.",
+    "Most discount policies (seniors, military, etc.) explicitly state they apply only to Chinese citizens. Foreign children under 6 and students with valid ID do qualify for discounts.",
+    "English signage exists but is limited. The engineering explanations on plaques are mostly in Chinese. A guide or audio guide in English is essential.",
+    "The high-speed train from Chengdu requires real-name booking with passport — buy in advance through Trip.com or at the station with passport."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Arrived at the wrong train station (Dujiangyan Station instead of Lidui Park)",
+      "what_to_do": "Take a taxi from Dujiangyan Station to the scenic area entrance — about 15 minutes and ¥20-30. Or take the local bus.",
+      "plan_b": "For the return trip, make sure to go to the correct station. Lidui Park Station is right next to the scenic area south exit."
+    },
+    {
+      "problem": "Too exhausted to complete the full circuit",
+      "what_to_do": "Prioritize the Bottle Neck Channel and Fish Mouth — these are the two essential engineering structures. Skip the Erwang Temple climb and Yulei Pavilion. Take the shuttle bus between gates.",
+      "plan_b": "The South Bridge (free) outside the south exit gives you a beautiful view of the rushing water without any climbing."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable hiking shoes with good grip (uneven stone paths and stairs). Layers — the mountain area can be cooler than Chengdu city. Sun protection in summer.",
+    "what_to_bring": "Passport (mandatory). Water and snacks. Comfortable backpack. Rain jacket (mountain weather is unpredictable). Camera. Cash for guide and shuttle bus.",
+    "what_not_to_bring": "High heels or sandals. Heavy luggage — leave it at your Chengdu hotel."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "Significant walking on uneven paths and stone stairs. The full circuit involves climbing to Erwang Temple and potentially Yulei Pavilion. The lower riverside paths are relatively flat. Total walking can exceed 10km for the full circuit. Shuttle buses available between some sections.",
+    "age_notes": "Suitable for moderately fit visitors. The lower paths (Bottle Neck Channel, Fish Mouth, Anlan Bridge) are manageable for most ages. The temple and pavilion climbs are steep and may challenge elderly visitors or young children.",
+    "health_warnings": "Summer heat combined with climbing can cause heat exhaustion. Stay hydrated. The Anlan Bridge sways — not recommended for those with severe vertigo."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book a Dujiangyan day tour with English-speaking guide from Chengdu",
+      "platform": "Klook or Trip.com",
+      "value_to_user": "Includes transport, guide, and tickets — eliminates the train station confusion and ensures you understand the engineering. Often combined with Qingcheng Mountain for a full day."
+    },
+    {
+      "action": "Book high-speed train tickets (Chengdu to Lidui Park Station)",
+      "platform": "Trip.com",
+      "value_to_user": "30-minute ride, ¥10. Book in advance to guarantee seats. Remember: Lidui Park Station, not Dujiangyan Station."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Dū Jiāng Yàn",
+      "chinese": "都江堰",
+      "english": "Dujiangyan"
+    },
+    {
+      "pinyin": "Yú Zuǐ",
+      "chinese": "鱼嘴",
+      "english": "Fish Mouth (the river divider)"
+    },
+    {
+      "pinyin": "Fēi Shā Yàn",
+      "chinese": "飞沙堰",
+      "english": "Flying Sand Weir"
+    },
+    {
+      "pinyin": "Bǎo Píng Kǒu",
+      "chinese": "宝瓶口",
+      "english": "Bottle Neck Channel"
+    },
+    {
+      "pinyin": "Lí Duī Gōng Yuán Zhàn",
+      "chinese": "离堆公园站",
+      "english": "Lidui Park Station (correct train station!)"
+    },
+    {
+      "pinyin": "Nán Qiáo",
+      "chinese": "南桥",
+      "english": "South Bridge (evening photo spot)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "South Bridge Night View (南桥夜景)",
+      "why": "The illuminated traditional bridge with turquoise water rushing beneath it is one of Sichuan's most photogenic evening scenes. Free and right outside the scenic area — don't miss it.",
+      "travel_time": "5-minute walk from south exit"
+    },
+    {
+      "suggestion": "Qingcheng Mountain (青城山)",
+      "why": "The birthplace of Taoism, just 15km from Dujiangyan. The saying goes: '拜水都江堰，问道青城山' (Pay respects to water at Dujiangyan, seek the Tao at Qingcheng Mountain). A natural pairing for a full day trip.",
+      "travel_time": "20-minute drive"
+    },
+    {
+      "suggestion": "Dujiangyan Panda Base",
+      "why": "A less crowded alternative to Chengdu's main Panda Base, located near Dujiangyan. Can be combined for a full day of pandas + ancient engineering.",
+      "travel_time": "20-minute drive"
+    }
+  ],
+  "cultural_context": "Dujiangyan was built in 256 BC by Li Bing, governor of Shu (ancient Sichuan), and his son. Before the system, the Min River caused devastating floods during summer and droughts during winter, making the Chengdu Plain nearly uninhabitable. Li Bing's solution was revolutionary: instead of fighting the river with a dam, he worked with the river's natural flow, creating a system that automatically adjusts water distribution based on seasonal flow changes. The six-character maintenance motto he left — '深淘滩，低作堰' (dredge the riverbed deep, keep weirs low) — has guided annual maintenance for 2,280 years. The system transformed the flood-prone Chengdu Plain into the 'Land of Abundance' (天府之国), directly enabling the rise of Sichuan as one of China's wealthiest regions. Li Bing is still worshipped as a local deity at the Erwang Temple. UNESCO inscribed Dujiangyan as a World Heritage Site in 2000.",
+  "photo_spots": [
+    {
+      "location": "Fish Mouth tip with river splitting behind",
+      "tip": "Stand at the very point of the Fish Mouth divider and photograph the two channels diverging. Wide-angle lens captures the full scope.",
+      "why": "The visual representation of the system's core principle — one river becoming two."
+    },
+    {
+      "location": "Anlan Suspension Bridge",
+      "tip": "Photograph looking down through the bridge slats at the turquoise rushing water. Or shoot from the riverbank with the bridge and mountains as backdrop.",
+      "why": "The swaying bridge over turquoise rapids is one of the most dramatic shots in the scenic area."
+    },
+    {
+      "location": "South Bridge (南桥) at night",
+      "tip": "Visit at dusk to capture the transition from daylight to illumination. Shoot from the riverside walkway below the bridge for the best angle with water in the foreground.",
+      "why": "The 'blue tears' viral photo — illuminated traditional bridge architecture reflected in rushing turquoise water."
+    },
+    {
+      "location": "Erwang Temple overlook",
+      "tip": "Climb to the highest terrace for a panoramic view showing the entire irrigation system layout — Fish Mouth, channels, and surrounding mountains.",
+      "why": "The only vantage point that lets you visually comprehend the full engineering plan at once."
+    }
+  ],
+  "card_name": "Dujiangyan",
+  "card_type": "UNESCO HERITAGE SITE",
+  "card_hook": "Two thousand years, zero dams, still watering ten million acres.",
+  "best_for": [
+    "history-engineering-lovers",
+    "unesco-world-heritage",
+    "day-trip-from-chengdu",
+    "educational",
+    "half-day-commitment"
+  ]
+}

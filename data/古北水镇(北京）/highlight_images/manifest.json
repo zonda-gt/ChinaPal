@@ -1,0 +1,33 @@
+{
+  "attractionName": "古北水镇",
+  "cityName": "北京",
+  "inputPath": "data/古北水镇(北京）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T19:53:03.162Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "The Night Scene",
+      "query": "The Night Scene 古北水镇 北京",
+      "outputPath": "data/古北水镇(北京）/highlight_images/01-The_Night_Scene/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Simatai Great Wall Access",
+      "query": "Simatai Great Wall Access 古北水镇 北京",
+      "outputPath": "data/古北水镇(北京）/highlight_images/02-Simatai_Great_Wall_Access/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Hot Springs",
+      "query": "Hot Springs 古北水镇 北京",
+      "outputPath": "data/古北水镇(北京）/highlight_images/03-Hot_Springs/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Water Street & Cultural Workshops",
+      "query": "Water Street & Cultural Workshops 古北水镇 北京",
+      "outputPath": "data/古北水镇(北京）/highlight_images/04-Water_Street_&_Cultural_Workshops/raw/baidu_images.json"
+    }
+  ]
+}

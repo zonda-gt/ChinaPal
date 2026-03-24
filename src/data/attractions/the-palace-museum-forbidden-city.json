@@ -1,0 +1,286 @@
+{
+  "attraction_name_cn": "故宫博物院",
+  "attraction_name_en": "The Palace Museum (Forbidden City)",
+  "address_cn": "北京市东城区景山前街4号",
+  "experience_type": "sightseeing",
+  "hook": "The world's largest palace complex — 980 buildings across 72 hectares where 24 emperors ruled China for nearly 500 years — a UNESCO World Heritage masterpiece of imperial architecture, symbolism, and power that took a million workers to build and now draws 40,000+ visitors daily.",
+  "honest_description": "The Forbidden City is genuinely magnificent and earns its status as one of the world's great historical sites. The sheer scale hits you the moment you pass through the Meridian Gate — vast courtyards flanked by golden-roofed halls that seem to extend endlessly. The architecture is stunning, with every color, number, and ornament carrying cosmological meaning. The Hall of Supreme Harmony is breathtaking, the Nine Dragon Screen is exquisite, and the Imperial Garden offers a serene finish. The Treasure Gallery and Clock Gallery are world-class museums within the complex. However, there are genuine frustrations: you cannot enter most buildings (you peer through doors or windows from behind barriers), which disappoints many visitors expecting to walk through imperial rooms. The central axis — which is what 90% of visitors see — consists of similar-looking grand halls separated by massive courtyards, and without a guide, it can feel repetitive. Crowds are enormous even on weekdays, and the pushing/shoving at popular viewpoints is relentless. Ticket booking is notoriously difficult (sells out within minutes 7 days in advance). Despite all this, the Forbidden City is an essential Beijing experience — the combination of scale, history, and architectural beauty is unmatched. A guide transforms the visit from 'pretty buildings' to 'profound understanding,' and exploring the quieter side courtyards and eastern/western palaces reveals a far more intimate and rewarding experience than the crowded central axis alone.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I get tickets as a foreigner?",
+      "answer": "Tickets are released 7 days in advance at 8:00 PM Beijing time on the official website (bookingticket.dpm.org.cn — English version available). They sell out within minutes for peak dates. You need your passport number to book. Alternative for foreigners: send an email to the Palace Museum's official email address (found on the English website) with your name, passport number, and preferred date — they will confirm via email and you show your passport + email at the ticket booth. Many visitors report being able to buy same-day tickets at the Meridian Gate ticket office on the right side by showing their passport — especially during off-peak season. Trip.com and Klook guided tours include ticket procurement and are the most reliable option for foreigners. If the booking system is giving you trouble, message our concierge team — we know the system inside out and can help secure tickets, even for dates that appear sold out."
+    },
+    {
+      "question": "Can I enter the buildings or just look from outside?",
+      "answer": "You cannot enter most buildings. The main halls along the central axis can only be viewed through doors/windows from behind barriers, often from several meters away. The side courtyards and eastern/western palaces have some rooms you can look into more closely. The Treasure Gallery (¥10 extra) and Clock Gallery (¥10 extra) are the main indoor exhibition spaces where you can actually enter rooms and see artifacts up close. This is the biggest source of disappointment for first-time visitors — manage your expectations accordingly and budget time for the paid exhibitions."
+    }
+  ],
+  "experience_format_note": "Massive outdoor imperial palace complex — one-way south-to-north route only. Enter through Meridian Gate (south), exit through Gate of Divine Prowess (north) or East Flowery Gate (east). You cannot re-enter or exit from the south. The complex has a central axis of grand ceremonial halls plus quieter eastern and western sections with smaller palaces, galleries, and gardens. Self-guided with audio guide, or with hired guide. Two separately ticketed exhibition areas (Treasure Gallery, Clock Gallery) inside the complex.",
+  "vibe": "Imperial grandeur on an almost incomprehensible scale — golden roofs stretching to the horizon, crimson walls enclosing centuries of power and intrigue. The central axis feels like a procession through Chinese cosmology itself. The side courtyards offer unexpected intimacy and quiet amid the crowds.",
+  "time_needed": {
+    "quick_visit": "2-3 hours (central axis only: Meridian Gate → Three Great Halls → Inner Court → Imperial Garden → north exit)",
+    "recommended": "4-5 hours (central axis + Treasure Gallery + Clock Gallery + eastern or western side palaces)",
+    "deep_dive": "Full day or 2 visits (all areas including both side palace complexes, all exhibitions, wall walk, gift shops, and Jingshan Park for the panoramic view after exiting)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive at 8:00-8:30 AM when gates open to explore the central axis before tour groups flood in after 10 AM. Alternatively, enter with an afternoon ticket (after 12 PM) and stay until closing — the last 1-2 hours have dramatically fewer visitors and beautiful golden-hour light on the buildings.",
+    "worst_time": "10 AM - 2 PM when tour groups are at maximum density. Chinese public holidays (Golden Week, Spring Festival, Labor Day). Mondays — the museum is closed every Monday (except during public holidays). Summer weekends when heat, crowds, and smog combine for the worst experience.",
+    "seasonal_notes": "Autumn (September-October) offers the best combination of clear blue skies, comfortable temperatures, and autumn colors in the Imperial Garden. Spring (April-May) brings blooming flowers. Winter (December-February) is cold but dramatically less crowded, and snow on the golden roofs is spectacularly photogenic — locals consider 'Forbidden City in snow' a bucket-list sight. Summer is hot, humid, and the most crowded.",
+    "pro_tip": "If you see snow in the Beijing weather forecast, drop everything and go to the Forbidden City. Snow on the golden roofs and crimson walls is one of the most photogenic scenes in all of China, and locals rush there too — arrive at opening. After exiting the north gate, walk directly into Jingshan Park (¥2 entry) and climb to the pavilion for the iconic panoramic view of the entire Forbidden City — best in late afternoon golden light."
+  },
+  "getting_in": {
+    "opening_hours": "April 1 - October 31: 8:30 AM - 5:00 PM (last entry 4:10 PM, halls close 5:00 PM). November 1 - March 31: 8:30 AM - 4:30 PM (last entry 3:40 PM, halls close 4:30 PM). Closed every Monday (except during public holidays when Monday is open and the next weekday closes instead).",
+    "price_rmb": "Peak season (April 1 - October 31): ¥60. Off-peak (November 1 - March 31): ¥40. Treasure Gallery: +¥10. Clock Gallery: +¥10.",
+    "price_usd": "Peak: ~$8.50. Off-peak: ~$5.50. Total with both galleries: ~$11.50 peak.",
+    "price_breakdown": [
+      {
+        "item": "Standard admission (peak season)",
+        "price": "¥60",
+        "highlight": "Access to all outdoor areas, central axis, side palaces, Imperial Garden"
+      },
+      {
+        "item": "Standard admission (off-peak)",
+        "price": "¥40",
+        "highlight": "Same access, lower price November through March"
+      },
+      {
+        "item": "Treasure Gallery (珍宝馆)",
+        "price": "+¥10",
+        "highlight": "East side — jade, gold, jewels, Nine Dragon Wall. Highly recommended"
+      },
+      {
+        "item": "Clock Gallery (钟表馆)",
+        "price": "+¥10",
+        "highlight": "West side — impressive collection of European and Chinese mechanical clocks"
+      },
+      {
+        "item": "Audio guide",
+        "price": "¥20 (Chinese) / ¥40 (foreign languages)",
+        "highlight": "Auto-activates by location, includes map on the back. Available at Meridian Gate entrance in 20+ languages"
+      },
+      {
+        "item": "Seniors 60+",
+        "price": "Half price",
+        "highlight": "With valid passport/ID"
+      },
+      {
+        "item": "Students with valid ID",
+        "price": "¥20",
+        "highlight": "Undergraduate and below with valid student ID"
+      }
+    ],
+    "booking_required": "Yes — mandatory advance booking. Tickets released 7 days before at 8:00 PM Beijing time. Peak dates sell out within minutes. Off-peak weekdays are easier. Daily visitor cap is approximately 40,000-80,000 depending on season. Divided into morning and afternoon time slots.",
+    "booking_method": "Official website: bookingticket.dpm.org.cn (English version available for foreigners — book with passport number and email). WeChat mini-program '故宫博物院' (requires Chinese phone number). For foreigners who cannot book online: email the Palace Museum (address on English website), or book through Trip.com/Klook. IMPORTANT: Many visitors successfully buy same-day tickets at the Meridian Gate ticket office (right side) by showing their foreign passport — this is an unofficial but widely reported option, especially off-peak.",
+    "passport_accepted": "Yes — physical passport is mandatory for entry. Your passport number IS your ticket — no paper ticket issued. Passport is checked at security and again at the gate. Photos of passport are NOT accepted.",
+    "what_to_bring": "Physical passport (mandatory). Comfortable walking shoes (4-6 km of walking on stone/brick surfaces). Water and snacks (limited food inside, though there are a couple of restaurants). Sun protection in summer. Warm layers and gloves in winter (the palace is very windy and cold). Audio guide deposit (mobile payment or cash). Telephoto lens for photographing building interiors through doors/windows.",
+    "queue_situation": "Security screening at Tiananmen Square can take 15-30 minutes. The walk from the metro station through Tiananmen to the Meridian Gate takes 15-20 minutes. At the Meridian Gate, ticket verification is relatively fast with passport (5-10 minutes). Inside, the central axis flows well but individual viewing points (throne rooms, Nine Dragon Screen) get very congested. The Treasure Gallery and Clock Gallery have their own queues. Total time from metro to being inside the Forbidden City: 30-60 minutes.",
+    "language_barrier_rating": "manageable-in-english — Audio guides available in 20+ languages. Signage is bilingual (Chinese/English). The official website has an English booking option. Staff at the foreign ticket window speak basic English. However, navigating the security at Tiananmen and the booking system can be confusing. A guide greatly enhances the experience."
+  },
+  "highlights": [
+    {
+      "name": "Hall of Supreme Harmony (太和殿)",
+      "description": "The largest and most important hall in the Forbidden City — where emperors held grand ceremonies, received officials, and celebrated the New Year. It sits atop a three-tiered white marble terrace and is the only building in all of China to have 10 mythical roof figures (all others have 9 or fewer), signifying supreme imperial authority.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The 10 roof figures (走兽) are unique in China — every other building maxes out at 9. Look for them on the roof ridge corners. The golden dragon throne inside can be glimpsed through the central doors. The enormous courtyard in front could hold 100,000 people for imperial ceremonies. The bronze tortoises and cranes flanking the entrance symbolize longevity.",
+      "tip": "Most visitors rush through. Stop in the center of the courtyard, turn around, and look back at the Meridian Gate behind you — the sense of imperial procession is powerful. Then look forward at the hall. This is where the emperor commanded the universe.",
+      "image": "太和殿.jpg"
+    },
+    {
+      "name": "Treasure Gallery / Nine Dragon Screen (珍宝馆 / 九龙壁)",
+      "description": "A separately ticketed exhibition area on the east side housing jade collections, gold Buddhist artifacts, imperial jewelry, and the spectacular Nine Dragon Screen — a 30-meter-long glazed-tile wall featuring nine writhing dragons in vivid colors, one of only three such screens surviving in China.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The Nine Dragon Screen is one of the most photographed objects in the Forbidden City. Look for the 'repaired' dragon — legend says a craftsman accidentally broke a tile and secretly replaced it with a wooden replica painted to match. The Treasure Gallery lets you see imperial luxury up close in ways the main halls cannot — gold Buddhas, jade mountains, jeweled crowns.",
+      "tip": "The ¥10 extra is absolutely worth it. This area is less crowded than the central axis and offers the most satisfying indoor exhibition experience. Enter early before tour groups arrive.",
+      "image": "珍宝馆.jpg"
+    },
+    {
+      "name": "Imperial Garden (御花园)",
+      "description": "A compact but exquisite garden at the northern end of the complex, featuring ancient cypress trees, rockeries, pavilions, and bronze sculptures. This was the private retreat of emperors and empresses. The oldest trees are 400+ years old with dramatically twisted trunks.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "After the grand open courtyards, the intimate scale of the Imperial Garden is a welcome contrast. The largest souvenir shop in the complex is here — beautifully designed Forbidden City-branded items that make excellent gifts. There is a small cafe near the north exit.",
+      "tip": "This is the last major section before the north exit. Many visitors are exhausted by this point and rush through. Take your time — the garden is genuinely beautiful and the souvenir shop has uniquely designed products not found elsewhere.",
+      "image": "御花园.jpg"
+    },
+    {
+      "name": "Western and Eastern Six Palaces (西六宫 / 东六宫)",
+      "description": "The residential quarters of the empress, concubines, and imperial family — twelve smaller palace compounds arranged symmetrically on either side of the central axis. These intimate courtyards with flowering trees and smaller halls feel worlds apart from the grand ceremonial axis. Some have been converted into exhibition spaces.",
+      "foreigner_appeal": "🟡 NICHE APPEAL",
+      "foreigner_note": "This is where the 'real life' of the Forbidden City happened — the intrigues, rivalries, and daily existence of the imperial household. If you have watched any Chinese historical dramas (like 'Story of Yanxi Palace'), these are the actual locations. The courtyards are far less crowded than the central axis and offer better photography opportunities.",
+      "tip": "Most tour groups skip these entirely and march straight up the central axis. Diverting into the western or eastern palaces gives you breathing room and a more personal experience of the Forbidden City.",
+      "image": "西六宫.jpg"
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The Meridian Gate wall walk and corner tower exhibitions",
+      "why": "After passing through the Meridian Gate, you can climb stairs on either side to walk along the top of the palace walls. Each corner tower houses a small exhibition. The elevated view over the courtyards is stunning and the walkway is nearly empty compared to the ground level."
+    },
+    {
+      "what": "Jingshan Park panoramic view after exiting",
+      "why": "Directly across the street from the north exit, Jingshan Park has a hilltop pavilion offering the iconic bird's-eye view of the entire Forbidden City — golden roofs stretching to the southern horizon. Only ¥2 entry. Best in late afternoon golden light. Many visitors walk right past it."
+    },
+    {
+      "what": "The moat and corner towers from outside",
+      "why": "After exiting, walk along the north or east moat for spectacular reflections of the corner towers in the water — one of the most photographed scenes in Beijing, especially at sunset or with autumn foliage. The corner towers are architectural masterpieces with 72 ridge lines."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter via Meridian Gate (south) → climb the wall on either side for the elevated view (most people miss this) → descend and walk the central axis: Gate of Supreme Harmony → Hall of Supreme Harmony → Hall of Central Harmony → Hall of Preserving Harmony → cross into the Inner Court → detour east to the Treasure Gallery and Nine Dragon Screen (¥10, worth it) → return to central axis → Palace of Heavenly Purity → detour west to the Clock Gallery (¥10) → continue north through the Western Six Palaces (far less crowded) → Imperial Garden → exit through Gate of Divine Prowess (north) → cross the street to Jingshan Park → climb to the summit pavilion for the panoramic view. Total: 4-5 hours.",
+    "what_to_skip": "If pressed for time, the Clock Gallery is lower priority than the Treasure Gallery. The very center of the central axis (where crowds are worst) can be walked quickly — the real treasures are in the side areas. Skip any 'guide' who approaches you outside the complex at Tiananmen — hire official guides at the Meridian Gate or book through a reputable platform.",
+    "pro_tips": "The east side entrance (Donghua Gate / 东华门) avoids the Tiananmen Square security queue and walk — take the metro to Tiananmen East and walk north along the moat to Donghua Gate, then walk south inside the walls to reach the Meridian Gate ticket office. This saves 15-20 minutes. For the best empty-palace photos, visit in the last hour before closing when crowds thin dramatically. Young Chinese visitors rent traditional imperial costumes (汉服/旗袍) from shops near the east gate and take photos inside — you can too for a uniquely immersive experience."
+  },
+  "heads_up": [
+    {
+      "warning": "Tickets sell out extremely fast for peak dates",
+      "advice": "Tickets release at 8:00 PM Beijing time, exactly 7 days before the visit date. For weekends and holidays, they sell out within minutes. Be online at exactly 8:00 PM ready to book. If it shows 'sold out,' keep refreshing — tickets are released in batches. Alternatively, book through Trip.com/Klook or email the Palace Museum's English booking address. Off-peak weekdays are much easier to secure."
+    },
+    {
+      "warning": "The exit is 1+ km from the entrance — you cannot go back",
+      "advice": "The Forbidden City enforces a strict south-to-north one-way flow. You enter at Meridian Gate (south) and exit at the Gate of Divine Prowess (north) or East Flowery Gate (east). You CANNOT exit from the south or re-enter. Plan your next activity from the north side of the complex. Getting a taxi from the north exit requires a 15-minute walk — use the metro or Didi. Our team can pre-arrange a car to meet you at the north exit at a time you specify, so you're not stranded trying to hail a ride in a no-taxi zone."
+    },
+    {
+      "warning": "Most buildings cannot be entered — manage expectations",
+      "advice": "You view the grand halls through doors and windows from behind barriers, often from several meters away. This is the most common disappointment for first-time visitors. The Treasure Gallery and Clock Gallery (¥10 each) offer the only real 'indoor museum' experience. A telephoto lens helps see interior details."
+    },
+    {
+      "warning": "The walk from metro to the entrance is longer than expected",
+      "advice": "From Tiananmen East metro station, you pass through Tiananmen Square security, walk under Mao's portrait, through several more gates, and across multiple courtyards before reaching the Meridian Gate entrance. Budget 20-30 minutes for this approach. The east side approach via Donghua Gate is shorter and less congested."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Bring your PHYSICAL passport — it serves as your ticket. No passport, no entry. Phone photos of your passport will NOT be accepted.",
+    "Monday closure catches many tourists off guard. The Forbidden City is CLOSED every Monday except during public holidays (when the following Tuesday closes instead). Check the calendar before planning.",
+    "Security screening entering Tiananmen Square is airport-style: bag x-ray, metal detector, passport check. Prohibited items include lighters, knives, and some selfie sticks. Allow extra time.",
+    "You cannot buy food/drink easily inside. There are a couple of restaurants and vending points, but they are spread across the vast complex. Bring water and snacks, especially in summer.",
+    "Getting a taxi after exiting from the north gate is difficult — there is no nearby taxi stand and you must walk ~15 minutes to reach a road where taxis or Didi can pick you up. The metro (Shichahai station on Line 8) is the most reliable option from the north exit.",
+    "The Forbidden City cafe (near the north exit) serves surprisingly good coffee and has a famous lychee drink said to be inspired by the empress's recipes — worth a stop before leaving.",
+    "Many young Chinese visitors dress in traditional imperial costumes for photos. Costume rental shops are located near the east gate — foreigners are welcome to participate."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Cannot get tickets through the official website",
+      "what_to_do": "Try booking through Trip.com or Klook, which have separate ticket allocations and accept international cards. Alternatively, email the Palace Museum's English booking address (found on the English version of their official website) with your name, passport number, and preferred date.",
+      "plan_b": "Show up at the Meridian Gate ticket office (right side, labeled for foreigners) with your passport. Multiple visitors report successfully buying same-day tickets this way, especially during off-peak season. The ticket clerk will register your passport number and charge ¥60/40 (cash or card). This is not guaranteed but works frequently for foreign passport holders."
+    },
+    {
+      "problem": "Arrived on Monday and it's closed",
+      "what_to_do": "Walk along the moat around the outside of the Forbidden City — the corner towers reflected in the water are stunning and free to enjoy. Visit Jingshan Park (¥2, open daily) for the panoramic rooftop view.",
+      "plan_b": "Visit the Temple of Heaven, Summer Palace, or National Museum of China instead (all open on Mondays or have different closure schedules). Return to the Forbidden City another day with pre-booked tickets."
+    },
+    {
+      "problem": "Overwhelmed by crowds and can't see anything",
+      "what_to_do": "Immediately leave the central axis and walk into the western or eastern side palaces — these are dramatically less crowded and often empty. The small courtyards, flowering trees, and intimate scale offer a completely different experience of the Forbidden City.",
+      "plan_b": "Visit the Treasure Gallery (east side, ¥10) or Clock Gallery (west side, ¥10) — these indoor exhibitions have controlled flow and are far more satisfying than fighting crowds at the main halls. Alternatively, climb the Meridian Gate walls for an elevated, uncrowded perspective."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes (4-6 km on stone/brick, with steps and uneven paving). Light breathable clothing in summer with sun protection (minimal shade in the vast courtyards). Very warm layers, insulated shoes, and gloves in winter (the open courtyards channel biting wind). Traditional Chinese costume (汉服) if you want to participate in the popular photo trend — rentals available nearby.",
+    "what_to_bring": "Physical passport (mandatory). Water bottle and snacks. Sun protection (umbrella works for both sun and rain). Audio guide deposit. Telephoto lens for interior photography through windows. Portable battery charger. Stamp collection booklet if interested (free stamp stations throughout).",
+    "what_not_to_bring": "Tripods (prohibited inside the complex — they will be confiscated at security and held at the exit for collection). Drones (strictly prohibited). Large luggage (storage not convenient). Flash photography equipment (flash prohibited in all exhibition halls)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "Extensive walking (4-6 km) on stone and brick surfaces with some uneven cobblestones. The central axis is mostly flat with gentle ramps. Side courtyards have higher thresholds and steps that present wheelchair challenges. Free wheelchair rental available at the Meridian Gate visitor center (¥500 refundable deposit). The central axis is wheelchair accessible with ramps; eastern and western side areas are more difficult.",
+    "age_notes": "Suitable for all ages but young children may tire of the repetitive hall-courtyard-hall pattern after 1-2 hours. Strollers work on the central axis but are difficult in side areas. Elderly visitors should pace themselves and consider doing only the central axis plus one gallery. The entire complex has clean, modern restrooms — a pleasant surprise.",
+    "health_warnings": "Summer heat (35°C+) with almost no shade in the vast courtyards — heat exhaustion is a real risk. Winter cold (-5 to -10°C with wind chill) in the exposed courtyards. Stay hydrated. The crowds and pushing can be stressful for those with anxiety. Air quality in Beijing varies — check the AQI forecast. If the heat or cold gets to you during the visit, drop us a message — we can have water, snacks, or warm drinks delivered to the north exit for when you finish, or arrange a car to pick you up right away."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book English-speaking guided tour with guaranteed ticket",
+      "platform": "Trip.com, Klook, GetYourGuide",
+      "value_to_user": "Solves the two biggest problems: ticket procurement (they have reserved allocations) and understanding what you are seeing. A knowledgeable guide transforms the experience from 'similar-looking buildings' to 'a profound journey through Chinese imperial cosmology.' Tours run ¥200-500 per person including entry and guide. Universally recommended by visitors. We can also arrange a vetted English-speaking guide matched to your interests and group size — message us with your preferred date and we'll handle the rest."
+    },
+    {
+      "action": "Book combo tour: Forbidden City + Jingshan Park + Tiananmen Square",
+      "platform": "Trip.com, Klook",
+      "value_to_user": "A natural half-day to full-day itinerary that covers the core Beijing imperial experience. Walking through Tiananmen Square, entering the Forbidden City, exiting north to Jingshan Park for the panoramic view — all in one seamless route."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Gùgōng",
+      "chinese": "故宫",
+      "english": "Forbidden City (what locals call it — use this in taxis)"
+    },
+    {
+      "pinyin": "Gùgōng Bówùyuàn",
+      "chinese": "故宫博物院",
+      "english": "The Palace Museum (official name)"
+    },
+    {
+      "pinyin": "Wǔ Mén",
+      "chinese": "午门",
+      "english": "Meridian Gate (the entrance)"
+    },
+    {
+      "pinyin": "Shénwǔ Mén",
+      "chinese": "神武门",
+      "english": "Gate of Divine Prowess (the north exit)"
+    },
+    {
+      "pinyin": "Tàihé Diàn",
+      "chinese": "太和殿",
+      "english": "Hall of Supreme Harmony (the biggest hall)"
+    },
+    {
+      "pinyin": "Zhēnbǎo Guǎn",
+      "chinese": "珍宝馆",
+      "english": "Treasure Gallery"
+    },
+    {
+      "pinyin": "Zhōngbiǎo Guǎn",
+      "chinese": "钟表馆",
+      "english": "Clock Gallery"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Jingshan Park (景山公园) for the panoramic view",
+      "why": "Directly across the street from the north exit. A 5-minute climb to the summit pavilion gives you THE iconic aerial view of the entire Forbidden City — golden roofs stretching south to infinity. Only ¥2 entry. The single best photo opportunity in Beijing. Stunning at sunset.",
+      "travel_time": "2-minute walk from the north exit"
+    },
+    {
+      "suggestion": "Temple of Heaven (天坛)",
+      "why": "The other essential Beijing imperial site — where emperors prayed for good harvests. Visit the Temple of Heaven in the morning (catch the local morning exercise culture), then the Forbidden City in the afternoon. Together they give a complete picture of imperial Beijing.",
+      "travel_time": "20 minutes by metro or taxi"
+    },
+    {
+      "suggestion": "Tiananmen Square and National Museum of China",
+      "why": "You walk through Tiananmen Square to reach the Forbidden City entrance, so it is a natural pairing. The National Museum of China (free, on the east side of the square) has world-class exhibits on Chinese history and civilization. Visit before or after the Forbidden City.",
+      "travel_time": "Adjacent — you walk through Tiananmen to reach the Forbidden City"
+    }
+  ],
+  "cultural_context": "The Forbidden City was designed as the literal center of the universe according to Chinese cosmology. Everything is encoded with meaning: the yellow glazed roof tiles represent the emperor (yellow = earth = center = imperial); the crimson walls represent happiness and vitality; the number nine appears obsessively (nine rows of nine door studs, nine roof figures on most halls) as the supreme yang number. The complex is divided into the Outer Court (for state ceremonies — public, masculine, yang) and Inner Court (for private life — domestic, feminine, yin). Only the emperor could walk through the central doorway of any gate. The single exception: the empress on her wedding day, and the top three scholars of the imperial examination on the day they received their ranking. For 500 years, ordinary citizens could not even see inside the walls — hence 'Forbidden City' (紫禁城, literally 'Purple Forbidden City,' where 'purple' refers to the North Star, believed to be the celestial emperor's palace). Understanding that every architectural choice serves a philosophical purpose transforms the visit from sightseeing to revelation.",
+  "photo_spots": [
+    {
+      "location": "Jingshan Park summit pavilion (after exiting north gate)",
+      "tip": "Late afternoon golden light is ideal. The panoramic view of the entire Forbidden City stretching south is THE iconic Beijing photograph. Clear-sky autumn days produce the best results. Arrive 30-60 minutes before sunset.",
+      "why": "The definitive Forbidden City photograph — the only place to see the full scale of the 72-hectare complex from above."
+    },
+    {
+      "location": "Center of the courtyard in front of the Hall of Supreme Harmony",
+      "tip": "Stand in the center, shoot wide to capture the enormity of the courtyard with the hall as backdrop. Then use telephoto to capture the 10 roof figures. Morning light is best with the sun behind you.",
+      "why": "Captures the overwhelming scale and symmetry of the greatest ceremonial space in imperial China."
+    },
+    {
+      "location": "Corner tower reflections in the moat (outside, after exiting)",
+      "tip": "Walk along the north or east moat after exiting. The corner towers reflected in still water, especially with autumn leaves or snow, create one of Beijing's most photographed compositions. Golden hour and blue hour are both stunning.",
+      "why": "The architectural perfection of the corner towers (72 ridge lines each) combined with water reflections is endlessly photogenic."
+    },
+    {
+      "location": "Red walls and yellow tiles in the western side palaces",
+      "tip": "Far fewer crowds than the central axis. The narrow corridors between crimson walls with golden roof tiles above create striking geometric compositions. Chinese visitors in traditional costume make beautiful candid subjects.",
+      "why": "Intimate, atmospheric shots that capture the textures and colors of the Forbidden City without crowds."
+    }
+  ],
+  "card_name": "The Forbidden City",
+  "card_type": "IMPERIAL PALACE",
+  "card_hook": "The center of the universe for 500 years — where 24 emperors lived behind walls no ordinary person could cross.",
+  "best_for": [
+    "history-lovers",
+    "architecture-lovers",
+    "bucket-list",
+    "photographers",
+    "cultural-depth"
+  ]
+}

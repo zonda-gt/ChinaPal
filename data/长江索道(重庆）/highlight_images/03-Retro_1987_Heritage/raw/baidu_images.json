@@ -1,0 +1,23 @@
+{
+  "query": "Retro 1987 Heritage 长江索道 重庆",
+  "searchUrl": "https://image.baidu.com/search/index?tn=baiduimage&ie=utf-8&word=Retro%201987%20Heritage%20%E9%95%BF%E6%B1%9F%E7%B4%A2%E9%81%93%20%E9%87%8D%E5%BA%86",
+  "collectedAt": "2026-03-23T18:59:07.843Z",
+  "totalObserved": 1,
+  "count": 1,
+  "photos": [
+    {
+      "index": 1,
+      "title": "",
+      "url": "https://image.redbull.com/rbcom/052/2018-12-25/af9594a5-9516-4608-b3b6-4a5185666f01/0100/0/1/the-single-longest-straight-road-on-the-island.jpg",
+      "thumbnailUrl": "https://img0.baidu.com/it/u=3139103381,1799699583&fm=253&fmt=auto&app=138&f=JPEG?w=750&h=500",
+      "sourcePageUrl": "http://amp.redbull.com/cn-zh/island-hopping-dougie-lampkin-at-rkandholhudhoo",
+      "detailUrl": "https://image.baidu.com/search/detail?adpicid=0&b_applid=9198826656175240744&bdtype=0&commodity=&copyright=&cs=2910975047,1773476789&di=7609719975837696001&fr=click-pic&fromurl=http://amp.redbull.com/cn-zh/island-hopping-dougie-lampkin-at-rkandholhudhoo&gsm=1&hd=&height=0&hot=&ic=&ie=utf-8&imgformat=&imgratio=&imgspn=0&is=0,0&isImgSet=&latest=&lid=&lm=&objurl=https://image.redbull.com/rbcom/052/2018-12-25/af9594a5-9516-4608-b3b6-4a5185666f01/0100/0/1/the-single-longest-straight-road-on-the-island.jpg&os=2929493409,1221803880&pd=image_content&pi=0&pn=0&rn=1&simid=3458567609,190116571&tn=baiduimagedetail&width=0&word=Retro%201987%20Heritage%20%E9%95%BF%E6%B1%9F%E7%B4%A2%E9%81%93%20%E9%87%8D%E5%BA%86&z=",
+      "simid": "3458567609,190116571",
+      "fileName": "baidu_image_01.webp",
+      "filePath": "data/长江索道(重庆）/highlight_images/03-Retro_1987_Heritage/image/baidu_image_01.webp",
+      "downloadSource": "thumbnail"
+    }
+  ],
+  "imageDirectory": "data/长江索道(重庆）/highlight_images/03-Retro_1987_Heritage/image",
+  "downloadedCount": 1
+}

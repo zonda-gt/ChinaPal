@@ -1,0 +1,311 @@
+{
+  "attraction_name_cn": "中国国家博物馆",
+  "attraction_name_en": "National Museum of China",
+  "address_cn": "北京市东城区东长安街16号",
+  "experience_type": "museum",
+  "hook": "Asia's largest museum with over one million artifacts — from 3,000-year-old oracle bones to a ¥1.3 billion phoenix crown — housed right on Tiananmen Square, and it's completely free.",
+  "honest_description": "The National Museum of China is staggering in scope — it holds practically every major artifact you studied in Chinese history class, and seeing them in person genuinely hits different. The Ancient China permanent exhibition in the basement is the crown jewel: a chronological walk through 8,000 years of civilization with bronzes, jade, ceramics, calligraphy, and imperial treasures that would each be the centerpiece of a lesser museum. The undisputed star is the Empress Xiaoduan's Nine Dragon Nine Phoenix Crown (valued at ¥1.3 billion), which is the only exhibit with a permanent queue. The Simuwu Ding, Four-Ram Bronze Vessel, Hongshan Jade Dragon, and painted Yan Fish Copper Lamp are all here. The building is enormous — you cannot see everything in one day, and trying will leave you exhausted and overwhelmed. Reviewers consistently say to focus on Ancient China plus one or two temporary exhibitions. The main frustrations: tickets are extremely hard to get (it's like booking a concert), security queues are brutal on weekends, the building's sheer size is tiring, and some galleries are Chinese-only. But for anyone with even passing interest in history, this is one of the most important museums in the world, and the price (free) makes it almost irresponsible to skip.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I actually get tickets as a foreigner? I keep seeing 'sold out.'",
+      "answer": "Tickets are free but must be pre-booked online and sell out fast. Foreigners should use the official English website (en.chnmuseum.cn) or the WeChat mini-program. Tickets release several days in advance — set an alarm and book immediately when they drop. If free tickets are sold out, a workaround that many visitors use is buying a ticket to any paid temporary exhibition (¥30-198), which includes free museum entry and lets you skip the general admission queue entirely. Trip.com and Klook also sell guided tour packages that include guaranteed entry. If you're struggling with the booking system, our concierge team can handle the reservation for you — just send us your passport details and preferred date."
+    },
+    {
+      "question": "How long do I really need, and what should I prioritize?",
+      "answer": "The Ancient China exhibition alone takes 2-3 hours if you read the descriptions. A focused visit hitting Ancient China plus one temporary exhibition takes 3-4 hours. Trying to see everything takes 6-8 hours and most people physically can't manage it. Prioritize: Ancient China (basement) → Nine Dragon Nine Phoenix Crown → Four-Ram Bronze Vessel → Hongshan Jade Dragon → whatever temporary exhibition interests you. Get a guide or audio guide — the artifacts are far more meaningful with context."
+    }
+  ],
+  "experience_format_note": "Standard museum format — free entry with mandatory advance booking, airport-style security screening, and self-guided exploration. The museum is laid out across multiple floors with both permanent and rotating temporary exhibitions. No fixed route — you choose which galleries to visit. Some temporary exhibitions charge separate fees (¥30-198). Luggage larger than 40cm must be checked at the paid luggage storage. No food or drinks allowed in exhibition halls. Photography is permitted in most galleries (no flash).",
+  "vibe": "Monumental, awe-inspiring, and deeply educational — like walking through a 3D history textbook the size of an airport terminal, surrounded by priceless national treasures.",
+  "time_needed": {
+    "quick_visit": "2 hours (Ancient China highlights only — you'll see the major treasures but miss the depth)",
+    "recommended": "4-5 hours (Ancient China thoroughly plus one temporary exhibition and the gift shop)",
+    "deep_dive": "6-8 hours or multiple visits (reviewers consistently say one day isn't enough; the annual pass approach works for Beijing residents)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive right at 9:00 AM opening to beat the crowds. The first hour is the quietest. Alternatively, enter after 3:00 PM when morning visitors have left — but you'll only have 2 hours before closing (last entry 4:00 PM).",
+    "worst_time": "Weekend mornings (10 AM–2 PM) and any Chinese public holiday — one reviewer described the entrance queue as '30,000 people in a mosh pit.' Summer holidays (July-August) are also extremely crowded. Monday is closed.",
+    "seasonal_notes": "Summer (June-October) has extended hours until 5:30 PM. Winter hours end at 5:00 PM. Air conditioning inside makes it a great summer escape from Beijing's heat. Spring and autumn have the best weather for combining with Tiananmen Square and nearby sights.",
+    "pro_tip": "Visit on a Tuesday or Wednesday morning in a non-holiday period for the thinnest crowds. If you can't get free tickets, buy a paid temporary exhibition ticket — it guarantees entry at your chosen time and you can still see all the free permanent galleries."
+  },
+  "getting_in": {
+    "opening_hours": "Summer (Jun 1–Oct 31): 09:00–17:30, last entry 16:30. Winter (Nov 1–May 31): 09:00–17:00, last entry 16:00. Closed Mondays (except national holidays). Special holiday dates may vary.",
+    "price_rmb": "Free admission (advance booking required). Paid temporary exhibitions: ¥30-198 depending on exhibition.",
+    "price_usd": "Free. Temporary exhibitions: ~$4-27.",
+    "price_breakdown": [
+      {
+        "item": "General admission (permanent exhibitions)",
+        "price": "Free",
+        "highlight": "Includes Ancient China, Revolution history, and other permanent galleries"
+      },
+      {
+        "item": "Temporary/special exhibitions",
+        "price": "¥30-198",
+        "highlight": "Varies by exhibition — buying any paid ticket also grants access to all free galleries and bypasses the general admission queue"
+      },
+      {
+        "item": "Audio guide",
+        "price": "Varies",
+        "highlight": "Available in multiple languages — check availability at the information desk"
+      },
+      {
+        "item": "Guided tours (via platforms)",
+        "price": "¥100-300",
+        "highlight": "Chinese-language guides available through Ctrip; English guides through Klook/GetYourGuide"
+      },
+      {
+        "item": "Luggage storage (30cm and under)",
+        "price": "¥2",
+        "highlight": "Per item per deposit"
+      },
+      {
+        "item": "Luggage storage (30-60cm)",
+        "price": "¥5",
+        "highlight": "Per item per deposit"
+      },
+      {
+        "item": "Luggage storage (60cm+)",
+        "price": "¥10",
+        "highlight": "Large suitcases — must retrieve by 5 PM"
+      }
+    ],
+    "booking_required": "Yes — mandatory online pre-booking with real-name registration. Daily capacity capped at 8,000 visitors. Tickets sell out very quickly, especially for weekends and holidays.",
+    "booking_method": "Official English website: en.chnmuseum.cn. Also available via WeChat mini-program (requires Chinese phone number). Select date and time slot, provide passport/ID details, receive QR code confirmation. If free tickets are sold out, buying any paid exhibition ticket through Trip.com or the official site bypasses the general queue. Our concierge can also book tickets on your behalf — we know the release schedule and can grab slots the moment they open.",
+    "passport_accepted": "Yes — foreigners enter with physical passport. The booking system accepts passport numbers. Real-name registration is mandatory. Bring your physical passport — it's checked at security.",
+    "what_to_bring": "Physical passport (mandatory). Comfortable shoes (you'll walk extensively on hard floors). Water bottle (limited water fountains inside). Portable charger. Cash for luggage storage and café. A light snack if visiting for 4+ hours.",
+    "queue_situation": "Expect 20-60 minutes in the security/entry queue, longer on weekends and holidays. The Nine Dragon Nine Phoenix Crown has its own permanent queue (30-60 minutes). Other galleries rarely have queues inside. Buying a paid exhibition ticket often lets you enter through a faster line.",
+    "language_barrier_rating": "some-chinese-helps — Major permanent exhibitions have English descriptions alongside Chinese. Temporary exhibitions are often Chinese-only. Staff speak limited English. The official English website works for booking. A guide or audio guide in English greatly enhances the experience."
+  },
+  "highlights": [
+    {
+      "name": "Ancient China Exhibition (古代中国)",
+      "description": "The museum's masterpiece — a chronological journey through 8,000 years of Chinese civilization across the basement level. Bronze ritual vessels, jade carvings, Tang dynasty pottery, Song ceramics, Ming porcelain, and imperial treasures are displayed in context. This single exhibition would justify a standalone museum.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Most major exhibits have English descriptions. This is the single best crash course in Chinese history and material culture — everything from oracle bones to imperial seals, arranged so the story unfolds as you walk.",
+      "tip": "Start here first while you have energy — it takes 2-3 hours to do properly. The earlier dynasties (Shang, Zhou) have the most spectacular bronzes. Don't rush the ceramics section — Song dynasty pieces are considered the pinnacle."
+    },
+    {
+      "name": "Empress Xiaoduan's Nine Dragon Nine Phoenix Crown (九龙九凤冠)",
+      "description": "The museum's most popular single artifact — a Ming dynasty imperial crown valued at an estimated ¥1.3 billion, encrusted with 115 rubies, 4,414 pearls, and elaborate gold filigree work featuring nine dragons and nine phoenixes. It weighs over 2.3 kilograms and represents the pinnacle of imperial craftsmanship.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the only exhibit in the museum with a permanent queue — young visitors take selfies through the glass as if meeting a celebrity. The craftsmanship is genuinely jaw-dropping up close, using techniques (cloisonne, kingfisher feather inlay, filigree) that are nearly impossible to replicate today.",
+      "tip": "The queue can take 30-60 minutes. Go first thing in the morning or late afternoon to minimize the wait. You can also photograph it from the side without queuing — only the front-and-center spot has a line."
+    },
+    {
+      "name": "Four-Ram Bronze Vessel (四羊方尊)",
+      "description": "A Shang dynasty bronze ritual vessel (c. 1300 BCE) featuring four rams at the corners, considered the finest example of ancient Chinese bronze casting. The level of detail — the rams' curling horns, the dragon patterns on the shoulders — is astonishing for a 3,300-year-old piece.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The four rams represent auspiciousness and peace in all four directions. The vessel was made using an advanced piece-mold casting technique that was unique to ancient China — the multiple separate sections were cast and joined seamlessly.",
+      "tip": "Look closely at where the ram bodies meet the vessel body — the join is nearly invisible, demonstrating the extraordinary skill of Shang dynasty metalworkers."
+    },
+    {
+      "name": "Painted Yan Fish Bronze Lamp (彩绘雁鱼青铜釭灯)",
+      "description": "A Western Han dynasty bronze lamp in the shape of a goose holding a fish, which doubles as an ingenious ancient air purifier — the smoke from the lamp oil travels through the goose's neck into a water-filled body that filters it. A 2,000-year-old example of functional environmental design.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This artifact often surprises foreigners — a 2,000-year-old lamp that also purifies air is not what you expect from ancient China. It's an excellent conversation piece about Han dynasty ingenuity.",
+      "tip": "It's in the Ancient China exhibition. Look for the explanatory diagram showing how the smoke filtration system works — the design principles are remarkably modern."
+    },
+    {
+      "name": "Hongshan Jade Dragon (红山玉龙)",
+      "description": "A 5,000-year-old C-shaped jade dragon from the Neolithic Hongshan culture, considered one of the earliest dragon artifacts in Chinese civilization. It's small (about 26cm) but carries enormous cultural weight as evidence of dragon worship predating written history.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The dragon is the most important mythological symbol in Chinese culture. This jade piece proves the dragon motif is at least 5,000 years old — predating the pyramids. It was reportedly once used as a child's toy before its significance was recognized.",
+      "tip": "It's easy to walk past because it's small. Look for it specifically in the Neolithic section of the Ancient China exhibition."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The ceramics and jade galleries in the basement",
+      "why": "Visitors often exhaust themselves on the Ancient China main hall and skip the specialized ceramics and jade galleries nearby. The porcelain collection spans Chinese pottery history and rivals dedicated ceramics museums — visually stunning even without expertise."
+    },
+    {
+      "what": "The museum building itself as a historical artifact",
+      "why": "The building's facade dates to 1959 and features Greco-Roman columns topped with traditional Chinese glazed tile roofing — a deliberate fusion of East and West. The original facade is preserved as a cultural relic. Most visitors walk right past it."
+    },
+    {
+      "what": "The creative merchandise and ice cream at the café",
+      "why": "The museum's gift shop has surprisingly high-quality cultural merchandise — 'One Black Horse' IP products, bronze-themed fridge magnets, and museum-exclusive items. The café on the first floor sells photogenic museum-branded ice cream. Both are at the north end of the ground floor."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter and go directly to the basement for the Ancient China exhibition (start with the earliest dynasties) → work chronologically forward through 2-3 hours → come up and queue for the Nine Dragon Nine Phoenix Crown (if the line is short) → browse one temporary exhibition that interests you → visit the gift shop and café on the ground floor → exit south toward Tiananmen Square for the flag-lowering ceremony if timing aligns.",
+    "what_to_skip": "Don't try to see everything — this is the most common mistake. The Revolution and Modern China galleries are primarily text-heavy and Chinese-language, making them less accessible to foreigners. The smaller paid temporary exhibitions are hit-or-miss — check what's currently showing before buying. Some reviewers felt certain paid shows (like immersive light experiences) were overpriced for the content.",
+    "pro_tips": "If free tickets are sold out, buy any paid temporary exhibition ticket — it includes general museum access and often has a faster entry line. Hire a guide through Ctrip or Klook; reviewers consistently say guides transform the experience from 'looking at old stuff' to 'understanding civilization.' The museum is enormous — download the floor map from the official website before visiting. Our concierge team can also arrange an English-speaking guide matched to your interests and schedule."
+  },
+  "heads_up": [
+    {
+      "warning": "Getting tickets is genuinely difficult — treat it like booking a concert",
+      "advice": "Free tickets sell out within minutes for popular dates. Set an alarm for the release time and book immediately. If free tickets are gone, buy a paid exhibition ticket (¥30-198) for guaranteed entry. Using Ctrip's platform sometimes gives access even when the official site shows sold out."
+    },
+    {
+      "warning": "The museum is exhaustingly large — your feet will hurt",
+      "advice": "Wear your most comfortable shoes. The museum is comparable to walking a small airport terminal. Benches and rest areas are limited and always occupied. Bring a water bottle and snacks. Most reviewers who attempted to see everything regretted it by hour 4."
+    },
+    {
+      "warning": "Portable chargers (power banks) are not allowed in exhibition halls",
+      "advice": "Charge your phone fully before entering. If your phone dies, rest areas outside the exhibition halls may have charging points, but they're scarce. This is a unique rule that catches many visitors off guard."
+    },
+    {
+      "warning": "The security queue can be extreme on weekends",
+      "advice": "One foreign reviewer described a Saturday morning as '30,000 people in a mosh pit.' Arrive before 9 AM on weekdays for the smoothest entry. If you're there on a weekend, the paid exhibition entrance may have a shorter line."
+    },
+    {
+      "warning": "Taking a taxi to/from the museum is very difficult",
+      "advice": "The area around Tiananmen has extensive traffic restrictions and no-stopping zones. Multiple reviewers report taxis adding 30+ minutes due to restricted routes. Take the subway (Line 1, Tiananmen Dong Station) — it's direct and painless."
+    }
+  ],
+  "foreigners_watch_out": [
+    "You MUST carry your physical passport — it's checked at security with real-name verification. No passport, no entry, no exceptions. Digital copies and photocopies are not accepted.",
+    "Ticket booking is a genuine obstacle for foreigners. The official English website (en.chnmuseum.cn) works but tickets sell out fast. The WeChat mini-program is harder without a Chinese phone number. If the official site fails, use Trip.com or Klook for guided tours that include guaranteed entry. You can also message our concierge team — we can navigate the Chinese booking system and secure your slot.",
+    "The Revolution and Modern China galleries contain politically sensitive content presented from the Chinese government perspective. Foreign visitors should approach these sections with cultural awareness.",
+    "Payment for luggage storage, café, and gift shop may require WeChat/Alipay. Bring cash (small bills) as backup — not all counters accept foreign cards.",
+    "The museum is directly on Tiananmen Square, which requires a separate security screening to access. If approaching from the square side, factor in extra time for the square's security checkpoint before reaching the museum entrance."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Free tickets sold out for your desired date",
+      "what_to_do": "Buy any paid temporary exhibition ticket (¥30-198) through the official site, Trip.com, or Klook — this includes access to all free permanent galleries. Some reviewers specifically recommend this approach as it often includes a faster entry line.",
+      "plan_b": "Visit the nearby Forbidden City (also requires advance booking), Tiananmen Square (free, separate booking), or explore Wangfujing Street shopping area — all within walking distance."
+    },
+    {
+      "problem": "Arrived without passport or passport rejected",
+      "what_to_do": "There is no workaround — return to your hotel for your passport. Staff cannot make exceptions for the real-name verification system.",
+      "plan_b": "Tiananmen Square is directly adjacent and visible from the museum steps. Walk south along Chang'an Avenue, explore the Qianmen area, or visit Wangfujing Street — all are nearby and don't require passport entry."
+    },
+    {
+      "problem": "Phone died and you can't show your QR code",
+      "what_to_do": "Go to the information desk near the entrance and explain your situation with your passport. Staff may be able to verify your booking in the system. Ask: '我的手机没电了' (wǒ de shǒujī méi diàn le — my phone is dead).",
+      "plan_b": "If you printed your confirmation email or have a screenshot on another device, that may work. The museum has some charging facilities in rest areas outside the exhibition halls. If you're stuck, drop us a message on WhatsApp — our team can pull up your booking confirmation and talk you through the situation with staff."
+    },
+    {
+      "problem": "Overwhelmed by the size — don't know where to start",
+      "what_to_do": "Go straight to the Ancient China exhibition in the basement. This is the single most important gallery and gives you the best overview. If you only see this one thing, your visit is worthwhile.",
+      "plan_b": "Download the museum map from the official website, or ask at the information desk for a floor plan. Focus on one or two galleries rather than trying to cover everything."
+    },
+    {
+      "problem": "Too crowded to enjoy the exhibits",
+      "what_to_do": "The Ancient China exhibition is the most crowded section (especially the Nine Dragon Phoenix Crown). Move to temporary exhibitions or upper-floor galleries, which are typically much less crowded. The ceramics and jade specialized galleries in the basement are often peaceful.",
+      "plan_b": "Return on a weekday. Tuesday and Wednesday mornings are the quietest. If you only have one shot, arrive right at 9 AM opening and head straight to your priority exhibits before the 10 AM crowd surge."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes are essential — you'll walk on hard floors for hours. The museum is air-conditioned, so bring a light layer in summer. In winter, you'll want to shed layers once inside as it's well heated. No dress code.",
+    "what_to_bring": "Physical passport (mandatory). Fully charged phone with QR ticket. Water bottle. Snacks for visits over 3 hours (limited and overpriced food options inside). Camera (photography allowed, no flash). Cash for luggage storage and café.",
+    "what_not_to_bring": "Portable chargers / power banks (not allowed in exhibition halls — a unique and frustrating rule). Bags over 40cm (must be checked at paid storage). Lighters. Food and drinks are not allowed in exhibition halls."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "Flat walking throughout on polished stone floors — no stairs required as elevators and escalators connect all levels. However, the sheer size means you'll easily walk 10,000-15,000 steps over a full visit. Benches are limited and often occupied. Wheelchair accessible throughout.",
+    "age_notes": "Suitable for all ages. Children's exploration areas are available with interactive experiences. However, young children may find the chronological exhibits less engaging — the temporary exhibitions with multimedia elements are more kid-friendly.",
+    "health_warnings": "Fatigue is the primary concern — the museum is enormous and rest areas are inadequate. Bring water and snacks. Air quality inside is good (climate controlled). No significant physical demands beyond sustained walking and standing."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book timed entry tickets (mandatory)",
+      "platform": "Official English website (en.chnmuseum.cn), Trip.com, or Klook",
+      "value_to_user": "Required for entry — without advance booking you'll be turned away. Third-party platforms sometimes have availability when the official site is sold out. Our concierge team can also handle the booking if you're having trouble with the Chinese reservation system."
+    },
+    {
+      "action": "Book guided tour with professional historian",
+      "platform": "Klook, Trip.com, or GetYourGuide",
+      "value_to_user": "Transforms the experience from looking at objects to understanding civilization. Chinese-language guides on Ctrip are as low as ¥50-100. English-language guides cost more but are universally recommended by foreign reviewers."
+    },
+    {
+      "action": "Purchase paid temporary exhibition tickets as entry backup",
+      "platform": "Official website or Trip.com",
+      "value_to_user": "If free general admission is sold out, buying any paid exhibition ticket (¥30-198) grants access to the entire museum including all permanent galleries — an effective workaround."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Guójiā Bówùguǎn",
+      "chinese": "国家博物馆",
+      "english": "National Museum (what locals call it — often shortened to 国博 Guóbó)"
+    },
+    {
+      "pinyin": "Gǔdài Zhōngguó",
+      "chinese": "古代中国",
+      "english": "Ancient China (the main permanent exhibition)"
+    },
+    {
+      "pinyin": "Fèngguān",
+      "chinese": "凤冠",
+      "english": "Phoenix crown (the museum's most popular artifact)"
+    },
+    {
+      "pinyin": "Qīngtóngqì",
+      "chinese": "青铜器",
+      "english": "Bronze vessels (the core of the ancient collections)"
+    },
+    {
+      "pinyin": "Jiǎngjié",
+      "chinese": "讲解",
+      "english": "Guided tour / explanation"
+    },
+    {
+      "pinyin": "Cúnbāo Chù",
+      "chinese": "存包处",
+      "english": "Luggage storage"
+    },
+    {
+      "pinyin": "Wǒ de shǒujī méi diàn le",
+      "chinese": "我的手机没电了",
+      "english": "My phone battery is dead"
+    },
+    {
+      "pinyin": "Tiān'ānmén Dōng Zhàn",
+      "chinese": "天安门东站",
+      "english": "Tiananmen East Station (nearest subway)"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Tiananmen Square (天安门广场)",
+      "why": "Directly adjacent — you'll walk through or past it to reach the museum. Time your museum exit to catch the flag-lowering ceremony at sunset. The square requires a separate security booking but is free.",
+      "travel_time": "0 minutes — immediately outside the museum entrance"
+    },
+    {
+      "suggestion": "Forbidden City (故宫博物院)",
+      "why": "Just north across Chang'an Avenue. After seeing artifacts in the museum, walking through the palace where many of them were used creates a powerful connection. Book tickets separately — both sell out fast.",
+      "travel_time": "10-minute walk north"
+    },
+    {
+      "suggestion": "Wangfujing Street or Qianmen Street",
+      "why": "After hours of museum walking, you'll need food and a change of pace. Wangfujing offers modern shopping and street food. Qianmen has a more traditional hutong atmosphere with restaurants.",
+      "travel_time": "10-15 minute walk east (Wangfujing) or south (Qianmen)"
+    }
+  ],
+  "cultural_context": "The National Museum of China sits on the east side of Tiananmen Square, directly facing the Great Hall of the People — a deliberate architectural statement placing China's cultural heritage across from its political power. The museum was created in 2003 by merging two institutions: the Museum of Chinese History and the Museum of the Chinese Revolution. Its collection of over one million artifacts represents the official narrative of Chinese civilization — from Neolithic origins through imperial dynasties to the modern era. For Chinese visitors, this museum is deeply patriotic: seeing the Simuwu Ding or the Four-Ram Vessel in person is like an American seeing the Constitution. The recent ticket scarcity has actually increased its cultural cachet — 'I got into Guóbó' has become a social media badge of honor, and the Nine Dragon Phoenix Crown queue has its own fandom culture, with visitors posing with crown-themed merchandise.",
+  "photo_spots": [
+    {
+      "location": "In front of the Nine Dragon Nine Phoenix Crown display case",
+      "tip": "Queue early (before 10 AM) or late (after 4 PM) for the front-and-center position. You can photograph from the side without queuing, but the direct front view is the most impressive.",
+      "why": "The crown's detail is extraordinary — the gold dragons, pearl-studded phoenixes, and ruby inlays photograph beautifully even through glass. The most Instagrammed artifact in the museum."
+    },
+    {
+      "location": "The museum's main entrance colonnade",
+      "tip": "Stand at the base of the massive columns and shoot upward for a dramatic architectural perspective. Early morning light is best.",
+      "why": "The Greco-Roman columns topped with Chinese glazed tiles create a unique architectural fusion — a visual metaphor for the museum's mission of bridging East and West."
+    },
+    {
+      "location": "The Ancient China exhibition hall entrance",
+      "tip": "The hall is dramatically lit with spotlighted bronze vessels against dark backgrounds. Use your phone's night mode without flash for atmospheric shots.",
+      "why": "The dark museum lighting creates a dramatic, almost cinematic atmosphere that makes bronze vessels glow with an otherworldly beauty."
+    },
+    {
+      "location": "The museum exterior with Tiananmen Square",
+      "tip": "Cross to the center of Tiananmen Square and shoot back toward the museum to capture its full facade with the Chinese flag in the foreground.",
+      "why": "The museum's scale is only apparent from a distance — it stretches the entire east side of Tiananmen Square. This shot captures its monumental presence in China's most symbolic public space."
+    }
+  ],
+  "card_name": "National Museum of China",
+  "card_type": "HISTORY MUSEUM",
+  "card_hook": "One million artifacts, 8,000 years of history, zero admission fee.",
+  "best_for": [
+    "first-time-in-Beijing-essential",
+    "history-lovers",
+    "culture-lovers",
+    "rainy-day-option",
+    "half-day-commitment"
+  ]
+}

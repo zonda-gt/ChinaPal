@@ -1,0 +1,27 @@
+{
+  "attractionName": "洱海公园",
+  "cityName": "大理",
+  "inputPath": "data/洱海公园(大理）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:57:35.353Z",
+  "count": 3,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Tuanshan Hill viewpoint (望海楼)",
+      "query": "望海楼 洱海公园 大理",
+      "outputPath": "data/洱海公园(大理）/highlight_images/01-望海楼/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Lakefront boardwalk and waterfront area",
+      "query": "Lakefront boardwalk and waterfront area 洱海公园 大理",
+      "outputPath": "data/洱海公园(大理）/highlight_images/02-Lakefront_boardwalk_and_waterfront_area/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Winter seagull watching (November-March)",
+      "query": "Winter seagull watching (November-March) 洱海公园 大理",
+      "outputPath": "data/洱海公园(大理）/highlight_images/03-Winter_seagull_watching_(November-March)/raw/baidu_images.json"
+    }
+  ]
+}

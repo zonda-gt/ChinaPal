@@ -1,0 +1,49 @@
+{
+  "sourceUrl": "https://www.google.com/maps/place/Jinghangda+Yunhe+Hangzhou+Tourist+Service+Center/@30.2977524,120.1438213,16z/data=!3m1!4b1!4m6!3m5!1s0x344b62121074ac6b:0x646173ce9446827a!8m2!3d30.2977478!4d120.1463962!16s/g/12vr1w7k9?entry=ttu&g_ep=EgoyMDI2MDMxOC4xIKXMDSoASAFQAw==",
+  "collectedAt": "2026-03-23T07:09:19.551Z",
+  "sort": "Most relevant",
+  "minLength": 80,
+  "longReviewCount": 0,
+  "shortReviewCountCollected": 4,
+  "shortReviewCountUsed": 4,
+  "backfilledWithShortReviews": true,
+  "count": 4,
+  "reviews": [
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSUMwcDh1dXVnRRAB",
+      "authorName": "Lin Ryan",
+      "starRating": 5,
+      "reviewDate": "6 years ago",
+      "localGuideInfo": "Local Guide · 678 reviews",
+      "text": "千年人工運河，值得探訪",
+      "scrapedAt": "2026-03-23T07:09:19.550Z"
+    },
+    {
+      "reviewId": "ChdDSUhNMG9nS0VJQ0FnSURRcTh5NnlRRRAB",
+      "authorName": "Wong Jerry",
+      "starRating": 5,
+      "reviewDate": "9 years ago",
+      "localGuideInfo": "Local Guide · 835 reviews",
+      "text": "坐船遊京杭大運河，是不錯的選擇！",
+      "scrapedAt": "2026-03-23T07:09:19.551Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUNvaExISll3EAE",
+      "authorName": "Mars Chang",
+      "starRating": 5,
+      "reviewDate": "7 years ago",
+      "localGuideInfo": "Local Guide · 284 reviews",
+      "text": "沒有人的時候逛街很愜意",
+      "scrapedAt": "2026-03-23T07:09:19.551Z"
+    },
+    {
+      "reviewId": "ChZDSUhNMG9nS0VJQ0FnSUMwZzUtZFBREAE",
+      "authorName": "Janus Chang",
+      "starRating": 5,
+      "reviewDate": "6 years ago",
+      "localGuideInfo": "Local Guide · 26 reviews",
+      "text": "古色古香",
+      "scrapedAt": "2026-03-23T07:09:19.551Z"
+    }
+  ]
+}

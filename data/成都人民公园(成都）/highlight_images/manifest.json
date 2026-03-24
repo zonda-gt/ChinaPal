@@ -1,0 +1,33 @@
+{
+  "attractionName": "成都人民公园",
+  "cityName": "成都",
+  "inputPath": "data/成都人民公园(成都）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:56:54.196Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Heming Teahouse (鹤鸣茶社)",
+      "query": "鹤鸣茶社 成都人民公园 成都",
+      "outputPath": "data/成都人民公园(成都）/highlight_images/01-鹤鸣茶社/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Matchmaking Corner (相亲角)",
+      "query": "相亲角 成都人民公园 成都",
+      "outputPath": "data/成都人民公园(成都）/highlight_images/02-相亲角/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Morning Activities (Tai Chi, Dancing, Calligraphy)",
+      "query": "Morning Activities (Tai Chi, Dancing, Calligraphy) 成都人民公园 成都",
+      "outputPath": "data/成都人民公园(成都）/highlight_images/03-Morning_Activities_(Tai_Chi,_Dancing,_Calligraphy)/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Railway Protection Movement Monument (辛亥秋保路死事纪念碑)",
+      "query": "辛亥秋保路死事纪念碑 成都人民公园 成都",
+      "outputPath": "data/成都人民公园(成都）/highlight_images/04-辛亥秋保路死事纪念碑/raw/baidu_images.json"
+    }
+  ]
+}

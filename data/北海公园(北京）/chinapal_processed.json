@@ -1,0 +1,268 @@
+{
+  "attraction_name_cn": "北海公园",
+  "attraction_name_en": "Beihai Park",
+  "address_cn": "北京市西城区文津街1号",
+  "experience_type": "park-garden",
+  "hook": "China's oldest surviving imperial garden — a thousand-year-old lakeside paradise where the White Dagoba rises above lotus-covered waters, just steps from the Forbidden City.",
+  "honest_description": "Beihai Park is Beijing's most beautiful and historically significant imperial garden, with origins dating back to the 11th century Liao Dynasty. The 68-hectare park is built around a massive lake that takes up more than half its area, with the iconic White Dagoba perched atop Jade Island at the center. The park successfully blends grand imperial architecture (temples, pavilions, dragon walls) with serene natural beauty (ancient trees, lotus ponds, willow-lined shores). The White Dagoba viewpoint offers panoramic views of the lake, the Forbidden City's corner towers, and Jingshan Park. The Nine-Dragon Wall is one of only three surviving ancient dragon walls in China — and the only double-sided one. The Quiet Heart Studio (Jingxinzhai) is a stunning garden-within-a-garden. Boating on the lake in summer and ice skating in winter are beloved local traditions. The park is remarkably uncrowded compared to the Forbidden City next door, making it a genuine oasis of calm. Downsides: the scenic spots within the park (temples, Dagoba) require separate tickets and close on Mondays. The park is large enough that walking the full loop around the lake takes 3-5 hours. Food options inside are limited. Best for history lovers, garden enthusiasts, photographers, and anyone needing a peaceful break from Beijing's intensity.",
+  "foreigner_top_questions": [
+    {
+      "question": "Do I need to reserve in advance as a foreigner?",
+      "answer": "Yes — foreign visitors are officially required to call (010) 64037972 at least one day in advance to make a reservation (office hours 9:00-16:00). Tickets will not be sold on-site to foreigners without a reservation. In practice, this rule is inconsistently enforced — some foreigners report buying tickets at the gate without issues — but calling ahead is strongly recommended to avoid being turned away. Have a Chinese-speaking friend help if needed, or book through Trip.com."
+    },
+    {
+      "question": "What is the difference between the regular ticket and the combined ticket?",
+      "answer": "The regular ticket (10 RMB peak/5 RMB off-season) only gets you into the park grounds. The combined ticket (20 RMB peak/15 RMB off-season) includes entry to the Jade Island scenic area (White Dagoba and Yong'an Temple) and the Circular City (Tuancheng). The combined ticket is strongly recommended — the White Dagoba viewpoint is the park's highlight and you cannot access it without it."
+    }
+  ],
+  "experience_format_note": "Open-air imperial garden spread across 68 hectares. More than half the park is lake. Four entrance gates (south, north, east, west) — choose based on your itinerary. The south gate is closest to the Forbidden City; the north gate is nearest to the metro (Line 6, Beihai North). Scenic spots within the park (temples, Dagoba, studios) have separate opening hours and close on Mondays. Free WiFi available (network: MyBeijing, no password). Bring your own toilet paper for restrooms.",
+  "vibe": "Genuinely peaceful for something this close to the Forbidden City — ancient pavilions reflected in still water, elderly locals practicing tai chi at dawn, and the White Dagoba visible from almost everywhere in the park.",
+  "time_needed": {
+    "quick_visit": "1-1.5 hours (climb to the White Dagoba for the view, walk back — you will miss most of the park)",
+    "recommended": "3-4 hours (Dagoba, Nine-Dragon Wall, Five-Dragon Pavilion, Quiet Heart Studio, and a lakeside walk)",
+    "deep_dive": "5-6 hours (full loop around the entire lake, all scenic spots, boat ride in summer or ice skating in winter, tea at Fangshan Restaurant)"
+  },
+  "best_time": {
+    "best_time_of_day": "Early morning (6:00-8:00 AM) is magical — locals practice tai chi and dance by the lake, the light is soft, and tourist crowds have not arrived. Late afternoon into evening is also beautiful — the park illuminates the White Dagoba, Yong'an Bridge, and Five-Dragon Pavilions after 8 PM, creating a stunning nighttime atmosphere.",
+    "worst_time": "Midday on weekends in peak season (April-October) when tour groups arrive. National holidays (Oct 1-7, May Day) are very crowded. Monday is a bad day to visit — all interior scenic spots (except Tuancheng) are closed.",
+    "seasonal_notes": "Each season offers something different. Spring: lotus flowers begin blooming. Summer (June-August): full lotus coverage on the lake, boat rentals available (electric, pedal, rowboat). Autumn (October-November): ginkgo trees turn brilliant yellow — one of Beijing's best autumn color spots. Winter (late December-February): the lake freezes and becomes an ice rink with skating, ice bicycles, and ice carts — a uniquely Beijing experience.",
+    "pro_tip": "Visit on a sunny winter day when the lake is frozen — the sight of hundreds of people ice skating against the backdrop of the White Dagoba is extraordinary and quintessentially Beijing."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (April 1-October 31): 6:00-21:00, last entry 20:30. Off-season (November 1-March 31): 6:30-20:00, last entry 19:30. Interior scenic spots: 8:30-17:00 (off-season) or 8:00-18:00 (peak season), closed Mondays except holidays.",
+    "price_rmb": "Park entry: 10 RMB (peak season), 5 RMB (off-season). Combined ticket: 20 RMB (peak), 15 RMB (off-season). Boat rental: varies by type.",
+    "price_usd": "Park entry: ~$1.50. Combined ticket: ~$3. One of Beijing's best-value attractions.",
+    "price_breakdown": [
+      {
+        "item": "Park Entry (peak season)",
+        "price": "10 RMB",
+        "highlight": "Gets you into the grounds only — not the Dagoba or temples"
+      },
+      {
+        "item": "Combined Ticket (peak season)",
+        "price": "20 RMB",
+        "highlight": "Includes Dagoba, Yong'an Temple, and Circular City — highly recommended"
+      },
+      {
+        "item": "Combined Ticket (off-season)",
+        "price": "15 RMB",
+        "highlight": "Same inclusions, lower price Nov-March"
+      },
+      {
+        "item": "Boat Rental (summer)",
+        "price": "40-100 RMB/hour depending on boat type",
+        "highlight": "Electric boats, pedal boats, rowboats, and traditional-style boats available"
+      },
+      {
+        "item": "Ice Activities (winter)",
+        "price": "20-50 RMB",
+        "highlight": "Ice skating, ice bicycles, ice carts on the frozen lake"
+      }
+    ],
+    "booking_required": "Foreign visitors are officially required to call (010) 64037972 at least one day in advance (9:00-16:00) to reserve. Enforcement varies, but calling ahead is recommended. Chinese visitors can buy tickets at the gate directly. Our concierge team can make the phone reservation on your behalf — just message us with your preferred date and we will call and confirm everything in Chinese.",
+    "booking_method": "Phone reservation for foreigners: (010) 64037972. Alternatively, try Trip.com or Klook. Chinese visitors can use WeChat mini-program or buy at the gate. Cash accepted at ticket windows.",
+    "passport_accepted": "Yes — foreigners can enter with their passport. Show it at the ticket window if you have a phone reservation.",
+    "what_to_bring": "Passport or ID. Cash (ticket windows accept cash — helpful since some may not take foreign cards). Comfortable walking shoes. Toilet paper (public restrooms may not provide it). Water bottle. Camera — the scenery is exceptionally photogenic.",
+    "queue_situation": "Minimal queues even in peak season — this park is far less crowded than the Forbidden City or Great Wall. Ticket purchase takes under 5 minutes. No security screening required.",
+    "language_barrier_rating": "manageable — Signage is bilingual (Chinese/English) at major attractions. Staff speak limited English but are generally helpful. The park layout is intuitive and easy to navigate without language skills. Payment at ticket windows accepts cash."
+  },
+  "highlights": [
+    {
+      "name": "White Dagoba (白塔)",
+      "description": "A 35.9-meter Tibetan-style white stupa built in 1651 atop Jade Island, housing Buddhist relics. It is the park's defining landmark and one of Beijing's most recognizable structures. The climb up takes about 30 minutes via stone steps (easier on the east side), and the panoramic view from the top reveals the lake, the Forbidden City's golden roofs, Jingshan Park, and the modern city beyond.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The view from the top is one of the best vantage points in central Beijing. On a clear day you can see the Forbidden City corner towers, making it an excellent complement to a Forbidden City visit.",
+      "tip": "Go early morning for the best light and fewest people. The east-side steps are less steep. Requires the combined ticket (20 RMB) to access."
+    },
+    {
+      "name": "Nine-Dragon Wall (九龙壁)",
+      "description": "A stunning 27-meter glazed-tile wall from 1756 featuring nine large dragons on each side — the only double-sided Nine-Dragon Wall among China's three surviving examples. The entire structure contains 635 dragons in total if you count all the decorative carvings.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "One of only three ancient Nine-Dragon Walls in China (the others are in the Forbidden City and Datong). This is the only one that is double-sided, making it architecturally unique.",
+      "tip": "Located on the north shore. Try counting the 635 dragons — it is a fun challenge. The wall is most vivid in afternoon light."
+    },
+    {
+      "name": "Five-Dragon Pavilion (五龙亭)",
+      "description": "Five interconnected Ming Dynasty pavilions forming a graceful S-shape extending over the water on the northwest shore. The pavilions were originally built for the emperor to enjoy the lake view, fish, and watch fireworks.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The pavilions are especially beautiful when illuminated at night after 8 PM. The combination of water reflections and traditional architecture makes for stunning photographs.",
+      "tip": "Best photographed from across the water. Evening illumination transforms the scene."
+    },
+    {
+      "name": "Quiet Heart Studio (静心斋)",
+      "description": "An exquisite 'garden within a garden' originally built in the Qing Dynasty as a private study for the emperor. Features miniature ponds, rockeries, pavilions, and covered corridors in a refined, intimate scale that contrasts with the park's grander architecture.",
+      "foreigner_appeal": "🟡 CULTURAL DEPTH",
+      "foreigner_note": "This is a masterpiece of Chinese garden design — smaller and more intimate than the Summer Palace gardens. Architecture and garden enthusiasts will find this particularly rewarding.",
+      "tip": "Closes on Mondays. Located on the north shore near the Nine-Dragon Wall. Allow 30-45 minutes to explore properly."
+    },
+    {
+      "name": "Boating on Beihai Lake / Ice Skating in Winter",
+      "description": "In summer (roughly May-October), various boats are available for rent — electric, pedal, rowboat, and traditional-style. In winter (late December-February), the lake freezes solid and transforms into a massive natural ice rink where locals and visitors enjoy skating, ice bicycles, and ice carts.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "The winter ice activities are uniquely Beijing — seeing hundreds of people skating and riding ice bicycles against the backdrop of the White Dagoba is an unforgettable experience that most foreign visitors do not know about.",
+      "tip": "For boating, go late afternoon for golden hour light on the water. For winter ice, weekday mornings are least crowded. Rental equipment is available on-site."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Fangshan Restaurant (仿膳饭庄) — imperial court cuisine",
+      "why": "Located on Jade Island, this restaurant serves dishes recreated from Qing Dynasty imperial recipes in a classical setting with staff in traditional cheongsam dresses. It is one of Beijing's most unique dining experiences. Most visitors walk right past it. Reserve in advance, especially on holidays."
+    },
+    {
+      "what": "The park at night — illuminated landmarks after 8 PM",
+      "why": "Most visitors come during the day and leave before dark. After 8 PM, the White Dagoba, Yong'an Bridge, Five-Dragon Pavilions, and other structures are illuminated, creating a magical nighttime atmosphere that few tourists experience."
+    },
+    {
+      "what": "Circular City (团城) — the 'world's smallest castle'",
+      "why": "This small walled enclosure near the south gate contains the Chengguang Hall with a white jade Buddha and the massive Jade Urn (weighing 3,500 kg, from 1265). It is included in the combined ticket but many visitors walk past it without entering."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter from the south gate (closest to Forbidden City). Visit the Circular City (Tuancheng) first. Cross Yong'an Bridge to Jade Island and climb to the White Dagoba for panoramic views. Descend the north side of the island. Walk west along the north shore to see the Nine-Dragon Wall, Quiet Heart Studio, Five-Dragon Pavilion, and Little Western Heaven. If time permits, complete the full lake loop via the east shore. Exit from the north gate toward the metro.",
+    "what_to_skip": "The east shore (Huafangzhai and Xiancan Altar areas) are less impressive than the north shore — skip these if time is limited. The Arboretum area is pleasant but not essential.",
+    "pro_tips": "Buy the combined ticket — it is only 10 RMB more and unlocks the Dagoba and Circular City, which are the park's highlights. Avoid Mondays when interior scenic spots close. Combine with Jingshan Park (exit east gate, 5-minute walk) for the best view of the Forbidden City from above."
+  },
+  "heads_up": [
+    {
+      "warning": "Interior scenic spots close on Mondays",
+      "advice": "The White Dagoba/Yong'an Temple, Quiet Heart Studio, and other interior sites are closed every Monday (except national holidays). The park grounds remain open, but you lose access to the most important attractions. Visit Tuesday-Sunday."
+    },
+    {
+      "warning": "Foreign visitors officially need advance phone reservation",
+      "advice": "Call (010) 64037972 between 9:00-16:00 at least one day before your visit. This rule is inconsistently enforced but it is better to be safe. Have a Chinese speaker help you call, or book via Trip.com. If you do not have a Chinese-speaking friend to help, message our team and we will make the call for you and confirm your reservation."
+    },
+    {
+      "warning": "The park is larger than it looks — walking the full loop takes 3-5 hours",
+      "advice": "The lake circumference is about 3.5 km, and the park has many detours into scenic compounds. If you are already tired from the Forbidden City, focus on Jade Island and the north shore rather than attempting the full loop."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Foreign visitors officially need to call ahead to reserve (at least one day in advance). Without a reservation, you may be turned away at the ticket window.",
+    "Bring cash — ticket windows accept cash which is simplest for foreigners. Some may not accept foreign credit cards. If you are having trouble with payments at any Beijing attraction, drop us a message and we can help you find a solution.",
+    "Public restrooms are available throughout but often do not provide toilet paper — bring your own.",
+    "Free WiFi is available (network: MyBeijing, no password) throughout the park.",
+    "Seniors 60+ from outside Beijing can enter free with their passport — show it at the ticket window."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Turned away at the gate without a reservation",
+      "what_to_do": "Try calling the reservation number on the spot: (010) 64037972. Ask a Chinese-speaking person nearby to help. Some visitors report being able to buy tickets anyway by showing their passport. Or message our concierge right away — we can call the reservation line immediately and try to sort it out while you wait.",
+      "plan_b": "Jingshan Park is a 5-minute walk east and offers the best aerial view of the Forbidden City. Shichahai (Houhai) lake area is a 10-minute walk north and is free to visit."
+    },
+    {
+      "problem": "Visited on a Monday and interior scenic spots are closed",
+      "what_to_do": "You can still enjoy the park grounds, the lake, and the Circular City (Tuancheng, which stays open on Mondays). The lakeside walk and general scenery are beautiful even without entering the temples.",
+      "plan_b": "Head to Jingshan Park next door (open daily) or Shichahai area for hutong exploration and lakeside bars."
+    },
+    {
+      "problem": "Too tired to walk the full park",
+      "what_to_do": "Focus on just Jade Island — enter the south gate, cross Yong'an Bridge, climb to the Dagoba, and return. This takes only 1-1.5 hours and covers the park's single best attraction.",
+      "plan_b": "Rent a boat instead of walking — you can see much of the park from the water with far less effort. If your legs are done for the day, message us and we can arrange a taxi pickup from whichever gate is nearest to you."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — the park has stone paths and hill climbing to the Dagoba. In summer, sun protection is important as parts of the lakeside path have limited shade. In winter, dress warmly — the frozen lake area is windy and cold.",
+    "what_to_bring": "Passport (for entry). Cash (for tickets). Toilet paper. Water bottle. Camera. Sunscreen in summer.",
+    "what_not_to_bring": "No special restrictions. The park is relaxed and welcoming."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "The lakeside paths are flat and accessible. However, climbing to the White Dagoba involves about 70 steep stone steps. The full lake loop is approximately 3.5 km. Wheelchairs can navigate the flat paths but cannot reach the Dagoba. Many scenic spots involve steps and uneven stone surfaces.",
+    "age_notes": "Suitable for all ages. Young children enjoy the boats (summer) and ice activities (winter). The Dagoba climb may be challenging for elderly visitors or those with mobility issues — the east-side steps are less steep.",
+    "health_warnings": "The Dagoba climb is steep — take it slowly in summer heat. Winter ice activities carry slip risk — wear appropriate footwear."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Reserve park entry for foreigners",
+      "platform": "Phone: (010) 64037972, or Trip.com",
+      "value_to_user": "Required for foreign visitors. Call at least one day in advance during office hours (9:00-16:00)."
+    },
+    {
+      "action": "Book Fangshan Restaurant for imperial cuisine",
+      "platform": "Phone reservation or walk-in",
+      "value_to_user": "A unique dining experience with dishes recreated from Qing Dynasty imperial recipes. Reserve in advance for weekends and holidays."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Běihǎi Gōngyuán",
+      "chinese": "北海公园",
+      "english": "Beihai Park"
+    },
+    {
+      "pinyin": "Bái Tǎ",
+      "chinese": "白塔",
+      "english": "White Dagoba/Pagoda"
+    },
+    {
+      "pinyin": "Jiǔlóng Bì",
+      "chinese": "九龙壁",
+      "english": "Nine-Dragon Wall"
+    },
+    {
+      "pinyin": "Liántào",
+      "chinese": "联票",
+      "english": "Combined ticket"
+    },
+    {
+      "pinyin": "Zuò chuán",
+      "chinese": "坐船",
+      "english": "Take a boat"
+    },
+    {
+      "pinyin": "Huá bīng",
+      "chinese": "滑冰",
+      "english": "Ice skating"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Jingshan Park (景山公园)",
+      "why": "The hilltop in Jingshan offers the single best aerial view of the Forbidden City — a perfect complement to Beihai's lakeside perspective. The two parks are adjacent.",
+      "travel_time": "5-minute walk from Beihai's east gate"
+    },
+    {
+      "suggestion": "The Forbidden City (故宫)",
+      "why": "Beihai was the imperial family's private garden — visiting both gives the full picture of how emperors lived. The contrast between the formal palace and the relaxed garden is striking.",
+      "travel_time": "10-minute walk from Beihai's south gate"
+    },
+    {
+      "suggestion": "Shichahai / Houhai (什刹海/后海)",
+      "why": "The connected lake area north of Beihai offers hutong neighborhoods, lakeside bars, and rickshaw tours through old Beijing. A natural extension of the Beihai walk.",
+      "travel_time": "10-minute walk from Beihai's north gate"
+    }
+  ],
+  "cultural_context": "Beihai Park is China's oldest surviving imperial garden, with origins in the 11th century when the Liao Dynasty built a palace on the lake's island. The park's design embodies the ancient Chinese myth of 'one pool and three fairy mountains' — Penglai, Yingzhou, and Fangzhang — islands believed to be inhabited by immortals who held the secret to eternal life. Every subsequent dynasty expanded and refined the garden: the Jin Dynasty modeled it after the famous Genyue Garden, Kublai Khan made it the center of his Yuan Dynasty capital, and Emperor Qianlong's massive Qing Dynasty renovations established its current layout. The White Dagoba was built in 1651 to mark the first Dalai Lama's visit to Beijing, symbolizing the bond between Tibetan Buddhism and the Qing court. The park opened to the public in 1925 and became a protected national cultural site in 1961. In Chinese popular culture, Beihai is immortalized in the beloved children's song 'Let Us Row Our Oars' (让我们荡起双桨), which every Chinese person can sing from memory. In 2024, Beijing's Central Axis was inscribed as a UNESCO World Heritage Site, further cementing Beihai's significance.",
+  "photo_spots": [
+    {
+      "location": "Yong'an Bridge (永安桥) with White Dagoba behind",
+      "tip": "Shoot from the south shore looking north across the bridge toward the Dagoba. Early morning light (before 8 AM) creates the most dramatic shadows and reflections.",
+      "why": "This is the park's most iconic composition — the three-arched stone bridge leading the eye up to the gleaming white Dagoba."
+    },
+    {
+      "location": "White Dagoba summit — panoramic view",
+      "tip": "Go on a clear day for the best visibility. You can see the Forbidden City's golden roofs, Jingshan Park's hill, and the modern city skyline all in one sweeping view.",
+      "why": "One of the best vantage points in central Beijing — the view encompasses a thousand years of history."
+    },
+    {
+      "location": "Five-Dragon Pavilion (五龙亭) at night",
+      "tip": "After 8 PM when the illuminations turn on, the pavilions reflected in the dark water create an ethereal double image. Use a long exposure or night mode.",
+      "why": "The illuminated pavilions against the dark lake are among the most atmospheric nighttime scenes in Beijing."
+    },
+    {
+      "location": "Lotus-covered lake in summer",
+      "tip": "June through August brings peak lotus coverage. Photograph from the north shore looking toward the Dagoba with lotus flowers in the foreground.",
+      "why": "The combination of lotus, lake, and Dagoba is a classic Chinese landscape composition."
+    }
+  ],
+  "card_name": "Beihai Park",
+  "card_type": "IMPERIAL GARDEN",
+  "card_hook": "A thousand-year-old imperial garden with Beijing's most serene lake and iconic White Dagoba.",
+  "best_for": [
+    "history-culture",
+    "photography",
+    "relaxation",
+    "budget-friendly",
+    "pair-with-nearby"
+  ]
+}

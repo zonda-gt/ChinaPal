@@ -1,0 +1,285 @@
+{
+  "attraction_name_cn": "颐和园",
+  "attraction_name_en": "Summer Palace",
+  "address_cn": "北京市海淀区新建宫门路19号",
+  "experience_type": "sightseeing",
+  "hook": "The empress dowager who bankrupted China's navy to build herself the ultimate pleasure garden — 290 hectares of lake, mountain, and 14,000 hand-painted corridor panels that took an empire to create.",
+  "honest_description": "The Summer Palace is China's grandest surviving imperial garden, a UNESCO World Heritage site sprawling across 290 hectares — three-quarters of which is the magnificent Kunming Lake. Built in 1750 by Emperor Qianlong for his mother's birthday, destroyed by Anglo-French forces in 1860, then controversially rebuilt by Empress Dowager Cixi using funds earmarked for the navy, it's a masterpiece of Chinese landscape design that deliberately replicates the best views of West Lake in Hangzhou. The scale is genuinely staggering: a 728-meter Long Corridor with 14,000 painted scenes, a 60-meter hill crowned by the iconic Tower of Buddhist Incense (Foxiangge), a 17-arch bridge stretched across the lake, and the famously absurd Marble Boat that symbolizes Cixi's excesses. The beauty is real and overwhelming — reviewers consistently call it one of the most beautiful places in Beijing. The catch is its size: you cannot see everything in half a day, and most visitors underestimate the walking required (10-15 km if you try to circle the lake). Crowds are intense on weekends and holidays but the sheer scale means you can always find quiet corners. At just 20-30 RMB for entry, it's one of the best value attractions in all of China. Essential for any Beijing visit, but plan your route carefully or you'll exhaust yourself seeing a fraction of what's here.",
+  "foreigner_top_questions": [
+    {
+      "question": "How long do I really need here? Everyone says it's huge.",
+      "answer": "Minimum 3-4 hours to see the core highlights (Long Corridor, Tower of Buddhist Incense, Marble Boat, 17-Arch Bridge). A comfortable visit covering the main attractions takes a full half-day (5-6 hours). To walk around the entire Kunming Lake perimeter and explore the back mountain, budget a full day. Most foreigners who feel disappointed came for only 1-2 hours and saw just one section. The trick is: pick a route and commit to it rather than trying to see everything."
+    },
+    {
+      "question": "Which entrance should I use? There are multiple gates.",
+      "answer": "East Palace Gate (东宫门) is the 'main' entrance closest to the imperial living quarters — start here if you want the classic historical route. North Palace Gate (北宫门) is closest to the metro (Line 4) and starts you at the back mountain with less crowding. New Palace Gate (新建宫门) on the south side starts you near the 17-Arch Bridge and Bronze Ox. For the shortest, most efficient visit, enter from North Palace Gate and work your way south."
+    }
+  ],
+  "experience_format_note": "Massive imperial garden complex — buy a basic ticket (20-30 RMB) at any gate, or a comprehensive ticket (50-60 RMB) that includes interior halls like the Hall of Virtue and Harmony and the Tower of Buddhist Incense. The park is open-air and enormous — think of it as a half-day outdoor experience, not a quick museum visit. Boat rides across Kunming Lake are available (30-40 RMB per route) and are a great way to save energy while seeing the scenery. Audio guides are available at entrances. Bring water, snacks, and sunscreen — facilities inside are limited and spread far apart.",
+  "vibe": "A huge lake with ancient pavilions and misty hills reflected in it, a 728-meter corridor covered in 14,000 hand-painted scenes, and the golden Tower of Buddhist Incense visible from basically everywhere you stand.",
+  "time_needed": {
+    "quick_visit": "2-3 hours (enter North Palace Gate, see Four Great Continents, Tower of Buddhist Incense, Long Corridor, Marble Boat, exit North Palace Gate)",
+    "recommended": "4-6 hours (core route plus 17-Arch Bridge, Kunming Lake boat ride, Suzhou Street, and back mountain)",
+    "deep_dive": "Full day (circumnavigate Kunming Lake via the Western Causeway, explore all halls and gardens, visit Xiequ Garden, take a boat ride, catch sunset at the 17-Arch Bridge)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive right at opening (6:00-6:30 AM in summer, 6:30-7:00 AM in winter) to experience the gardens in morning light with minimal crowds. Late afternoon (3:00-4:00 PM) brings beautiful golden light on the lake and the famous sunset views from the 17-Arch Bridge area.",
+    "worst_time": "Weekend midday (10 AM - 3 PM) and Chinese public holidays — the main corridor and hilltop become uncomfortably crowded. Avoid Golden Week (Oct 1-7) and Chinese New Year unless you enjoy being in a river of humanity.",
+    "seasonal_notes": "Spring (late March-April) brings peach and apricot blossoms along the Western Causeway — peak beauty. Summer is lush and green with lotus flowers on the lake, but brutally hot and humid. Autumn (September-October) has the best weather and golden light. Winter is cold but magical when Kunming Lake freezes — locals skate and sled on the ice, and crowds are minimal. Around winter solstice, the famous 'golden light through the 17 arches' phenomenon draws photographers.",
+    "pro_tip": "Visit on a clear weekday in late October or early November: comfortable temperature, golden autumn light, thin crowds, and the lake still unfrozen. For photographers, the winter solstice golden-light-through-17-arches shot is legendary — arrive by 3 PM and stake out a position on the east bank."
+  },
+  "getting_in": {
+    "opening_hours": "April 1 - October 31: 6:00 AM - 7:00 PM (last entry 5:00 PM). November 1 - March 31: 6:30 AM - 5:00 PM (last entry 4:00 PM). Internal exhibition halls close 30-60 minutes before park closing.",
+    "price_rmb": "Peak season (Apr-Oct): ¥30 basic / ¥60 comprehensive. Off-season (Nov-Mar): ¥20 basic / ¥50 comprehensive. Boat rides: ¥30-40 per route.",
+    "price_usd": "Peak: $4.20 basic / $8.40 comprehensive. Off-season: $2.80 basic / $7 comprehensive.",
+    "price_breakdown": [
+      {
+        "item": "Basic ticket (大门票)",
+        "price": "¥20-30",
+        "highlight": "Gets you into the park and most outdoor areas"
+      },
+      {
+        "item": "Comprehensive ticket (联票)",
+        "price": "¥50-60",
+        "highlight": "Adds Tower of Buddhist Incense, Hall of Virtue & Harmony, Suzhou Street, and Wenchang Gallery"
+      },
+      {
+        "item": "Boat rides across Kunming Lake",
+        "price": "¥30-40 per route",
+        "highlight": "11 routes available — saves energy and gives unique lake perspectives"
+      },
+      {
+        "item": "Audio guide rental",
+        "price": "¥20-40",
+        "highlight": "Available at main entrances — English available, deposit required"
+      }
+    ],
+    "booking_required": "No advance booking required — buy tickets at any entrance gate. During peak holidays, crowds can be intense but tickets don't sell out since entry is not capacity-controlled for the general park.",
+    "booking_method": "Buy at the gate — scan QR code with Alipay or WeChat Pay, or use cash at ticket windows. Can also purchase via the Yiheyuan official WeChat mini-program.",
+    "passport_accepted": "Passport can be used for ticket purchase at the gate. No Chinese ID requirement.",
+    "what_to_bring": "Comfortable walking shoes (you'll walk 10-15 km). Water and snacks — there are shops inside but they're spread far apart. Sunscreen and hat in summer. Camera with wide-angle lens for the sweeping lake views. Portable charger. Layers in autumn/winter — the lakeside is windy.",
+    "queue_situation": "Weekday mornings: walk straight in. Weekend mornings: 5-15 minute queues at main gates. Holiday peak: 20-40 minute waits at East Palace Gate (the most popular entrance). North Palace Gate and New Palace Gate typically have shorter queues.",
+    "language_barrier_rating": "manageable — Most major signs have English translations. Audio guides available in English. The sheer popularity with international tourists means basic communication at ticket booths works. However, boat ticket sellers and small vendors speak little English. Hire a guide for the historical stories — without context, many buildings look similar."
+  },
+  "highlights": [
+    {
+      "name": "Tower of Buddhist Incense (佛香阁)",
+      "description": "The iconic 41-meter octagonal tower perched atop Longevity Hill — the visual centerpiece of the entire Summer Palace. Climbing to the top rewards you with a panoramic view over Kunming Lake, the Western Hills, and on clear days, the distant Beijing skyline. Visible from almost everywhere in the park, it serves as your constant landmark.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the must-do highlight. The climb is steep but manageable (about 60 meters elevation). The panoramic view from the top is the single best overview of the Summer Palace and one of the finest vistas in Beijing.",
+      "tip": "Requires the comprehensive ticket (联票). Go early morning for clearest views and thinnest crowds. The steep stone steps can be slippery — hold the railings. The view looking south over Kunming Lake toward the 17-Arch Bridge is the classic postcard shot."
+    },
+    {
+      "name": "Long Corridor (长廊)",
+      "description": "A 728-meter covered walkway connecting key areas of the palace, famous for its 14,000 individual paintings on the crossbeams depicting scenes from Chinese history, mythology, literature, and landscapes. It holds the Guinness record as the longest painted corridor in the world.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Even without knowing the stories, the sheer artistic achievement is staggering — 14,000 unique paintings spanning classical Chinese tales, landscapes, and folk stories. A guide who can explain the paintings transforms this from a pretty walkway into a living storybook.",
+      "tip": "The corridor gets extremely crowded midday. Walk it early morning or late afternoon. Pause to look at individual paintings — each one is hand-painted and unique. The corridor also frames beautiful lake views between its pillars."
+    },
+    {
+      "name": "17-Arch Bridge (十七孔桥)",
+      "description": "A graceful 150-meter stone bridge with 17 arches connecting the eastern shore to South Lake Island. Adorned with 544 carved stone lions, each one unique. Around the winter solstice, sunlight passes through all 17 arches simultaneously, creating the famous 'golden light' phenomenon.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Beautiful from any angle in any season. The winter solstice golden-light shot is a bucket-list photography moment — arrive hours early for a position. Even without the golden light, the bridge against the lake and hills is sublime.",
+      "tip": "Best photographed from the east bank near the Bronze Ox in late afternoon light. Walk across for a different perspective of Longevity Hill. The 544 lions are all different — a fun detail hunt."
+    },
+    {
+      "name": "Marble Boat (石舫)",
+      "description": "A 36-meter stone and marble boat permanently 'docked' at the lake shore, built by Emperor Qianlong and later enhanced by Empress Dowager Cixi with a Western-style upper deck. An extravagant folly that symbolizes the Qing dynasty's excesses — and the origin of the saying that Cixi 'sank the navy to build a stone boat.'",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The historical irony is the real draw: Cixi diverted naval defense funds to rebuild the Summer Palace, and this immovable stone boat became the perfect metaphor. Its Western-style addition reflects the late Qing's confused relationship with modernization.",
+      "tip": "From the Marble Boat, you can catch boat rides across Kunming Lake to South Lake Island — a great combination that saves walking energy."
+    },
+    {
+      "name": "Western Causeway (西堤)",
+      "description": "A 2.5-km willow-lined causeway crossing Kunming Lake, modeled after the famous Su Causeway of Hangzhou's West Lake. Features six uniquely designed bridges and stunning views in every direction. In spring, peach blossoms and weeping willows create a dreamlike scene.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the peaceful, crowd-free side of the Summer Palace that most rushed tourists miss. The walking is flat and easy, and the views across the lake toward Longevity Hill are the most painterly in the entire park.",
+      "tip": "Walk the causeway from south to north in the late afternoon for the best light on the hills. Spring (late March-early April) when the peach and cherry blossoms bloom is peak beauty. Budget 45-60 minutes for a leisurely walk."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "The Western Causeway (西堤) and its six bridges",
+      "why": "Most visitors cluster around the northern section (Long Corridor, Foxiangge, Marble Boat) and never cross to the quieter western side. The causeway offers the best panoramic views and the most peaceful experience in the entire park."
+    },
+    {
+      "what": "Xiequ Garden (谐趣园) — the garden within the garden",
+      "why": "Tucked away in the northeast corner, this miniature Jiangnan-style garden is an exquisite pocket of calm with lotus ponds, rockeries, and the famous 'Know Fish Bridge' (知鱼桥). Most visitors walk right past the entrance."
+    },
+    {
+      "what": "The back of Longevity Hill (后山)",
+      "why": "The north face of the hill features Tibetan Buddhist architecture including the Four Great Continents (四大部洲) complex — dramatically different in style from the Chinese architecture on the south face. Far fewer crowds and a completely different atmosphere."
+    },
+    {
+      "what": "The winter solstice golden-light phenomenon at 17-Arch Bridge",
+      "why": "Around December 21-22 each year, the setting sun aligns perfectly to illuminate all 17 arches simultaneously with golden light. This natural spectacle is famous among Chinese photographers but largely unknown to foreign visitors."
+    }
+  ],
+  "strategy": {
+    "smart_route": "North Palace Gate (closest to metro) → Suzhou Street (if time allows) → Four Great Continents (Tibetan temples, back mountain) → Tower of Buddhist Incense (climb for panoramic views) → Long Corridor (walk south along the painted corridor) → Marble Boat → take a boat across Kunming Lake to South Lake Island → walk across 17-Arch Bridge → Bronze Ox → exit via New Palace Gate. This route covers all major highlights in 4-5 hours with downhill walking and a boat ride to rest your legs.",
+    "what_to_skip": "If short on time, skip Suzhou Street (a reconstructed market street that feels artificial compared to the real thing) and the Hall of Virtue and Harmony theater (interesting historically but just an empty theater stage). The far southern and western shores are beautiful but add significant walking distance — save them for a second visit.",
+    "pro_tips": "Buy the comprehensive ticket (联票) — the Tower of Buddhist Incense alone justifies the extra cost. Take a boat across the lake instead of walking around it — saves 4-5 km of walking and gives you stunning on-water views. Enter from North Palace Gate to avoid the worst crowds at East Palace Gate. Download the Yiheyuan app for an interactive map. After 4 PM, the park empties significantly as tour groups leave — local Beijingers consider this the sweet spot."
+  },
+  "heads_up": [
+    {
+      "warning": "The park is far larger than expected — walking fatigue is the #1 complaint",
+      "advice": "Visitors consistently underestimate the scale. Plan 10,000-15,000+ steps. Use the boat rides to cross the lake (30-40 RMB) instead of walking around it. Wear your most comfortable shoes and bring water. Consider doing a half-circuit rather than trying to see everything. If you are already exhausted and need to get out, message our team and we can arrange a taxi pickup at whichever gate is closest to you."
+    },
+    {
+      "warning": "Getting a guide matters more here than at most attractions",
+      "advice": "Without historical context, the Summer Palace is 'just' a beautiful park. With a guide, every building becomes a story about Qianlong's love for his mother, Cixi's political machinations, or the burning by foreign armies. Audio guides (¥20-40) are available at entrances, or book a private English-speaking guide in advance. Our concierge can arrange a vetted English-speaking guide matched to your schedule and interests — just message us with your preferred date and group size."
+    },
+    {
+      "warning": "The audio guide experience can be hit-or-miss for foreigners",
+      "advice": "Some visitors report being told they 'cannot' rent the English audio guide and being charged extra. Be persistent and polite — English guides exist. Alternatively, pre-download a self-guided tour app. If you run into trouble renting the English audio guide, message us and we can call the park service desk to confirm availability and help sort it out."
+    },
+    {
+      "warning": "Food options inside are limited and overpriced",
+      "advice": "Bring snacks and a full water bottle. The few restaurants inside charge Beijing-tourist-premium prices for mediocre food. The famous Tingli Restaurant (听鹂馆) serves imperial-style cuisine at high prices — worth it for a special experience but not for a casual bite. If you are starving mid-visit, message us and we can arrange food delivery to whichever park exit you plan to use."
+    },
+    {
+      "warning": "Late afternoon arrivals often regret it",
+      "advice": "The park closes relatively early (5 PM in winter, 7 PM in summer) and staff actively usher people toward exits well before closing. If you arrive after 3 PM in winter, you'll be rushing and stressed. Morning arrival is strongly recommended."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The park is vast and poorly signed in some areas — download an offline map or use Baidu Maps/Amap for navigation within the grounds. Google Maps works for finding the gates but is less detailed inside.",
+    "Ticket types matter: the basic ticket (大门票) only gets you into the park and outdoor areas. The comprehensive ticket (联票) adds four key attractions including the Tower of Buddhist Incense. Buy the comprehensive ticket — it's worth the small premium.",
+    "Boat rides have multiple routes and docks — check which route goes where before paying. Staff at boat docks speak minimal English. Having the destination written in Chinese helps. Send us a message with where you are and where you want to go, and we can tell you exactly which boat route and dock to use.",
+    "The lakeside is significantly windier and colder than the sheltered corridors — bring layers, especially in autumn and winter. Many visitors are caught off guard by the temperature drop near the water.",
+    "Wheelchair and stroller accessibility is generally good on main paths, though the climb to the Tower of Buddhist Incense involves steep stone stairs with no ramp alternative."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Exhausted and still haven't seen the main highlights",
+      "what_to_do": "Take a boat across the lake to skip the walking. Focus on the three must-sees: Tower of Buddhist Incense (climb for the view), Long Corridor (walk even a portion), and the 17-Arch Bridge (photograph from the east shore). These three capture the essence of the Summer Palace.",
+      "plan_b": "If truly exhausted, find a bench along the Long Corridor — the painted ceiling art and lake views are a complete experience while sitting. Some of the best moments at the Summer Palace are just sitting and absorbing the scenery."
+    },
+    {
+      "problem": "Arrived too late in the day and running out of time",
+      "what_to_do": "Rush to the Tower of Buddhist Incense for the panoramic view (this is the single most important experience). Then walk downhill along the Long Corridor. Even 60-90 minutes covers these two highlights.",
+      "plan_b": "If the internal halls are already closed, the outdoor lakeside walks and the 17-Arch Bridge area are freely accessible until park closing. Sunset over Kunming Lake from the bridge area is actually one of the park's most beautiful moments."
+    },
+    {
+      "problem": "Crowds are overwhelming in the main areas",
+      "what_to_do": "Head to the Western Causeway or the back mountain — both are significantly less crowded at all times. The quiet beauty of the western shore may end up being your favorite part of the visit.",
+      "plan_b": "Come back another day in the early morning or after 4 PM when tour groups have left. The 20-30 RMB ticket makes a repeat visit highly affordable."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes are the single most important item — you'll walk 10-15 km on stone paths and steps. Dress in layers as the lakeside is windy. In summer: hat, sunscreen, light breathable clothing. In winter: warm coat, gloves, and scarf — the lake amplifies the cold.",
+    "what_to_bring": "Full water bottle (1L minimum). Snacks. Sunscreen and hat in summer. Camera with wide-angle lens. Portable charger. A printed map or offline map downloaded. Cash for boat rides. Umbrella for rain or sun.",
+    "what_not_to_bring": "Don't bring heavy bags — you'll be walking for hours and there are no lockers. Minimize what you carry. High heels or sandals are a terrible idea on the stone paths and stairs."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate-heavy",
+    "physical_details": "Expect 10,000-20,000 steps depending on your route. The climb to the Tower of Buddhist Incense involves steep stone stairways (about 60 meters elevation gain). The Kunming Lake circumference walk is 6-7 km on flat ground. Main pathways are paved stone. Boat rides reduce walking significantly. Wheelchair accessible on main paths but the hilltop is not accessible.",
+    "age_notes": "Families with strollers can manage the flat lakeside paths comfortably. The hill climb is not suitable for strollers and challenging for elderly visitors or those with mobility issues. For older visitors, enter from the lake level, enjoy the Long Corridor and boat rides, and skip the hill climb. Children enjoy the boat rides and the open spaces.",
+    "health_warnings": "Heat stroke risk in summer — the park has limited shade on many paths. Bring water and take breaks in shaded corridors. The hill climb is strenuous in hot weather. In winter, ice on paths can be slippery — wear shoes with good grip. The altitude of Longevity Hill is modest but the steep stairs are physically demanding."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book an English-speaking guide in advance",
+      "platform": "Klook, GetYourGuide, or through hotel concierge",
+      "value_to_user": "Transforms the visit from a pretty park walk into a riveting historical narrative about emperors, empresses, wars, and political intrigue. The stories behind each building are what make the Summer Palace extraordinary."
+    },
+    {
+      "action": "Plan the optimal route based on entrance gate and time available",
+      "platform": "Yiheyuan official WeChat mini-program or app",
+      "value_to_user": "The difference between a frustrating, exhausting visit and a magical one is entirely about route planning. Match your entrance gate, time budget, and physical ability to the right itinerary."
+    },
+    {
+      "action": "Check weather and seasonal events before visiting",
+      "platform": "Weather app + Xiaohongshu for current conditions",
+      "value_to_user": "The experience varies enormously by season — spring blossoms, summer lotus, autumn golden light, winter ice. Timing your visit to coincide with a seasonal highlight elevates the experience significantly."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Yíhéyuán",
+      "chinese": "颐和园",
+      "english": "Summer Palace (what to tell taxi drivers)"
+    },
+    {
+      "pinyin": "Liánpiào",
+      "chinese": "联票",
+      "english": "Comprehensive ticket (the one you want to buy)"
+    },
+    {
+      "pinyin": "Běi Gōng Mén",
+      "chinese": "北宫门",
+      "english": "North Palace Gate (recommended entrance near metro)"
+    },
+    {
+      "pinyin": "Fóxiāng Gé",
+      "chinese": "佛香阁",
+      "english": "Tower of Buddhist Incense (the main landmark)"
+    },
+    {
+      "pinyin": "Kūnmíng Hú",
+      "chinese": "昆明湖",
+      "english": "Kunming Lake"
+    },
+    {
+      "pinyin": "Chuán",
+      "chinese": "船",
+      "english": "Boat (for buying boat tickets)"
+    },
+    {
+      "pinyin": "Chūkǒu zài nǎlǐ?",
+      "chinese": "出口在哪里？",
+      "english": "Where is the exit?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Old Summer Palace / Yuanmingyuan (圆明园)",
+      "why": "The ruins of the original imperial garden, destroyed by Anglo-French forces in 1860. The haunting Western-style marble ruins are a powerful contrast to the rebuilt beauty of the Summer Palace. Together they tell the complete story of China's imperial garden culture and its destruction.",
+      "travel_time": "Adjacent — 10-minute walk east from the Summer Palace"
+    },
+    {
+      "suggestion": "Fragrant Hills Park (香山公园)",
+      "why": "The Western Hills that form the Summer Palace's scenic backdrop become the main attraction at Fragrant Hills, especially in autumn when the red maple leaves peak (mid-October to mid-November).",
+      "travel_time": "20-minute taxi ride west"
+    },
+    {
+      "suggestion": "Peking University campus (北京大学)",
+      "why": "China's most prestigious university sits adjacent to the Summer Palace, with its own beautiful lake (Weiming Lake) and traditional architecture. A quiet, free walk through academic history.",
+      "travel_time": "10-minute walk or one metro stop east"
+    }
+  ],
+  "cultural_context": "The Summer Palace embodies a turning point in Chinese history. Emperor Qianlong built the original Clear Ripples Garden in 1750 at the peak of Qing dynasty power, modeling it after the best scenery of southern China — a northern emperor's attempt to capture the beauty of Hangzhou's West Lake. When Anglo-French forces burned it in 1860 during the Second Opium War, the destruction became a scar on China's national consciousness that resonates to this day. Empress Dowager Cixi's decision to divert naval modernization funds to rebuild it as the Summer Palace in the 1880s is remembered as one of history's most consequential acts of vanity — China's failure to modernize its navy led directly to the devastating defeat in the 1894-95 Sino-Japanese War. The Marble Boat sitting permanently at the lakeshore has become the perfect symbol of this tragedy: a nation that built a stone boat instead of real ones. Yet the result is undeniably magnificent. The Summer Palace represents both the pinnacle of Chinese garden design and the hubris that contributed to an empire's fall — beauty and cautionary tale inseparably intertwined.",
+  "photo_spots": [
+    {
+      "location": "East bank of Kunming Lake near the Bronze Ox, looking at the 17-Arch Bridge",
+      "tip": "Late afternoon golden light makes the bridge glow. Around winter solstice (Dec 21-22), sunlight illuminates all 17 arches simultaneously — arrive by 3 PM for this legendary shot.",
+      "why": "The defining image of the Summer Palace: the graceful bridge spanning the lake with Longevity Hill and the Tower of Buddhist Incense rising in the background."
+    },
+    {
+      "location": "Top of the Tower of Buddhist Incense (佛香阁)",
+      "tip": "Go early morning for the clearest views and fewest people. Wide-angle lens captures the full sweep of Kunming Lake and the distant Western Hills.",
+      "why": "The highest accessible point in the Summer Palace — a 360-degree panorama encompassing the entire park, the Western Hills, and on clear days, the Beijing skyline."
+    },
+    {
+      "location": "Long Corridor (长廊) looking through the painted pillars toward the lake",
+      "tip": "Early morning or late afternoon light streaming through the corridor pillars creates beautiful light-and-shadow patterns. Frame the lake through the corridor for depth.",
+      "why": "The world's longest painted corridor with the lake glittering beyond — the combination of ornate art and natural beauty in a single frame."
+    },
+    {
+      "location": "Western Causeway (西堤) in spring",
+      "tip": "Visit in late March to early April when peach blossoms and weeping willows frame the water. Morning mist adds atmosphere. Face east toward Longevity Hill for the classic composition.",
+      "why": "A recreation of Hangzhou's famous Su Causeway — in spring bloom, it's one of the most painterly landscapes in northern China."
+    }
+  ],
+  "card_name": "Summer Palace",
+  "card_type": "IMPERIAL GARDEN",
+  "card_hook": "An empress bankrupted the navy to build paradise — and she succeeded.",
+  "best_for": [
+    "history-buffs",
+    "photography-lovers",
+    "nature-and-gardens",
+    "full-day-exploration",
+    "essential-beijing"
+  ]
+}

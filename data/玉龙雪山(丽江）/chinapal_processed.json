@@ -1,0 +1,311 @@
+{
+  "attraction_name_cn": "玉龙雪山",
+  "attraction_name_en": "Jade Dragon Snow Mountain",
+  "address_cn": "云南省丽江市玉龙纳西族自治县雪花村",
+  "experience_type": "sightseeing",
+  "hook": "The southernmost permanently snow-capped mountain in the Northern Hemisphere — ride a cable car to 4,506 meters, gasp for breath at the edge of a glacier, then descend to a turquoise valley so blue it looks painted.",
+  "honest_description": "Jade Dragon Snow Mountain is the crown jewel of Lijiang tourism and China's most accessible high-altitude glacier experience. A cable car whisks you from 3,356 meters to 4,506 meters in about 10 minutes, and from there you can climb wooden boardwalks to a 4,680-meter viewpoint — one of the highest publicly accessible points in any mountain park worldwide. The views on a clear day are genuinely spectacular: snow-capped peaks against impossibly blue skies, seas of clouds breaking across ridges, and the full sweep of thirteen interconnected summits stretching like a dragon's spine. The mountain is sacred to the Naxi people, who call it 'Oulu' (Heavenly Mountain), and it forms part of the UNESCO Three Parallel Rivers Protected Areas. Below the glacier, Blue Moon Valley offers a stunning contrast — glacial melt lakes in surreal shades of turquoise and jade green. The infrastructure is excellent but the crowds are punishing: expect 10,000 visitors daily, queues of 1-3 hours for cable cars in peak season, and every photo spot packed with tourists in rented ethnic costumes. Altitude sickness is real and hits many visitors hard — people vomiting, fainting, and being carted to oxygen rooms is a regular sight at the summit. The ticketing system is deliberately complicated, heavily favoring Chinese ID holders, and foreigners often find themselves shut out of glacier park cable car tickets unless they book through a tour operator. It is heavily commercialized with overpriced oxygen, jacket rentals, and tour operators who pad the experience with shopping stops. But none of that changes the fundamental fact: standing at 4,680 meters with the glacier right there, breathing thin air under a blazing sun, is a genuinely unforgettable experience.",
+  "foreigner_top_questions": [
+    {
+      "question": "Can I buy tickets independently as a foreigner, or do I need a tour?",
+      "answer": "This is the biggest frustration for independent foreign travelers. Cable car tickets to Glacier Park (the main summit experience) must be booked 7 days in advance through the official WeChat mini-program (search 丽江旅游集团), but the system requires a Chinese ID and WeChat Pay — which most foreigners don't have. Tickets sell out within minutes of release at 8pm the night before. Your realistic options: (1) Ask your hotel or a local travel agency to book using their ID — most Lijiang hotels offer this service for a fee. (2) Book a day-tour package through Ctrip/Trip.com, which bundles transport, cable car, oxygen, and jacket rental. (3) Go to the ticket counter with your passport and try for same-day tickets, but during peak season these are essentially unavailable. Many foreigners report that going with a local tour operator is the only reliable way to guarantee Glacier Park access. Our concierge team can book the Glacier Park cable car for you using the Chinese system — message us at least 8 days before your planned visit and we'll secure your slot."
+    },
+    {
+      "question": "How bad is the altitude sickness really? Do I need oxygen?",
+      "answer": "It varies wildly by individual and has nothing to do with fitness level. At 4,506 meters (cable car station), oxygen levels are roughly 60% of sea level. Many visitors experience headaches, dizziness, nausea, rapid heartbeat, and shortness of breath. Some people faint or vomit — this is visible on every visit. Practical advice: buy oxygen canisters in Lijiang city for 10-15 RMB each (they cost 40-100 RMB on the mountain and some sold by tour operators are reportedly diluted or fake — buy from pharmacies). Bring 1-2 cans per person. Move very slowly at the top — every step requires effort. Don't run, don't get excited. If you have heart or lung conditions, seriously consider staying at the lower-altitude areas (Blue Moon Valley at 2,800m or Spruce Meadow at 3,240m) which are beautiful without the altitude risk. Start breathing your oxygen before you feel symptoms — once altitude sickness sets in, it's hard to reverse quickly."
+    }
+  ],
+  "experience_format_note": "Multi-zone national park with separate ticketed areas connected by shuttle buses. The base entry ticket (100 RMB) gets you into the scenic area. From there, you choose one or more cable car routes (Glacier Park, Spruce Meadow, or Yak Meadow), each requiring separate tickets. Shuttle buses (20 RMB) connect all zones. The Glacier Park cable car is the headline experience, taking you to 4,506m with boardwalks up to 4,680m. Blue Moon Valley is included with your base ticket and shuttle bus. The entire experience requires significant time for queuing, bus transfers, and cable car rides. Expect a full-day commitment even for a focused visit.",
+  "vibe": "Bucket-list spectacle meets Chinese mass tourism — awe-inspiring natural grandeur experienced through an efficient but crowded conveyor belt of shuttle buses, cable cars, and wooden boardwalks, with ten thousand daily visitors all gasping for the same thin air.",
+  "time_needed": {
+    "quick_visit": "4-5 hours (Glacier Park cable car + Blue Moon Valley only, moving fast)",
+    "recommended": "6-8 hours (Glacier Park + Blue Moon Valley + Impression Lijiang show, or add Spruce Meadow)",
+    "deep_dive": "1.5-2 days (all three cable car routes + Blue Moon Valley + Impression Lijiang + sunrise viewing at Ganhaizi)"
+  },
+  "best_time": {
+    "best_time_of_day": "Arrive by 7:00 AM. The first cable car groups have the shortest queues, the best light on the peaks, and the calmest winds. Afternoon winds often force cable car shutdowns. If you can get an early morning slot, you may catch the magical 'Golden Mountain' sunrise effect where first light turns the peaks gold.",
+    "worst_time": "Chinese public holidays (Golden Week, Spring Festival, Labor Day) — the park hits its 10,000 daily visitor cap early and queues become 2-3 hours. Summer weekends are nearly as bad. Monday through Thursday in non-holiday periods are significantly better.",
+    "seasonal_notes": "November to April: Best for snow scenery — the snow line drops lower, peaks are dramatically white, and skies tend to be clearest (especially January-February). Summer (June-August): Rain season with frequent afternoon storms, clouds often obscure the peaks, minimal snow visible on the mountain. Spring (April-May) and autumn (September-October): Good compromise — moderate crowds, decent weather, some snow. October is considered optimal overall.",
+    "pro_tip": "The absolute best experience is a clear winter weekday morning — arrive at opening, be first up the cable car, and you'll have the snow-covered peaks against deep blue sky with manageable crowds. Check weather forecasts obsessively the night before. If clouds are forecast, consider postponing — the views in fog are not worth the effort and expense."
+  },
+  "getting_in": {
+    "opening_hours": "May-October: 6:00 AM - 6:00 PM. November-April: 6:30 AM - 6:00 PM. Ticket sales stop at 3:00 PM, last entry at 4:00 PM. Cable cars have separate operating windows and may close due to high winds.",
+    "price_rmb": "100-460 RMB depending on what you visit",
+    "price_usd": "$14-64 depending on what you visit",
+    "price_breakdown": [
+      {
+        "item": "Scenic area entrance ticket",
+        "price": "¥100",
+        "highlight": "Required for all visitors — covers base entry to the entire scenic area"
+      },
+      {
+        "item": "Glacier Park cable car + shuttle bus",
+        "price": "¥140 (cable car) + ¥20 (shuttle)",
+        "highlight": "The main event — takes you to 4,506m. MUST book 7 days in advance"
+      },
+      {
+        "item": "Spruce Meadow cable car + shuttle",
+        "price": "¥60",
+        "highlight": "Mid-altitude forest and mountain views at 3,240m"
+      },
+      {
+        "item": "Yak Meadow cable car + shuttle",
+        "price": "¥65",
+        "highlight": "Alpine meadow with yaks and panoramic views at 3,700m"
+      },
+      {
+        "item": "Blue Moon Valley shuttle",
+        "price": "¥20 (electric cart within valley, optional)",
+        "highlight": "The turquoise lakes — walkable without the cart"
+      },
+      {
+        "item": "Impression Lijiang show",
+        "price": "¥280 (regular) / ¥346 (VIP)",
+        "highlight": "Zhang Yimou-directed outdoor performance with the mountain as backdrop"
+      },
+      {
+        "item": "Oxygen canister",
+        "price": "¥10-15 in Lijiang / ¥40-100 on mountain",
+        "highlight": "Buy in the city from a pharmacy — much cheaper and more reliable"
+      },
+      {
+        "item": "Jacket rental",
+        "price": "¥50",
+        "highlight": "Available at the base — bring your own warm layers to save money"
+      }
+    ],
+    "booking_required": "Yes — absolutely critical for Glacier Park cable car. Tickets are released 7 days in advance via WeChat mini-program and sell out within minutes. Only 10,000 total park tickets per day. Without advance booking for the cable car, you will almost certainly not get to the glacier.",
+    "booking_method": "Official WeChat mini-program (search 丽江旅游集团) — requires Chinese ID and WeChat Pay. Foreigners should book through: (1) Hotel concierge or local Lijiang travel agency, (2) Ctrip/Trip.com tour packages, (3) Fliggy or Meituan. Some tour packages include transport, cable car, oxygen, jacket, and lunch in one price.",
+    "passport_accepted": "Passport is accepted at the physical ticket counter for the entrance ticket (100 RMB), but the cable car booking system is designed around Chinese ID. Foreigners must use alternative booking methods (hotel, agency, or Ctrip) for cable car access.",
+    "what_to_bring": "Warm layers (even in summer — summit temperatures can be near freezing), sunglasses, sunscreen (UV is intense at altitude), comfortable non-slip shoes, portable oxygen canisters (2 per person, bought from Lijiang pharmacies), water, chocolate or energy snacks, portable charger, camera. Optional: gloves and warm hat for winter visits.",
+    "queue_situation": "Brutal during peak season. Expect 1-3 hours for the Glacier Park cable car in summer and holidays. Multiple queues: shuttle bus queue, cable car queue, return cable car queue. Off-season weekdays are dramatically better — sometimes under 30 minutes total. Blue Moon Valley and other areas have shorter queues.",
+    "language_barrier_rating": "challenging — Signage within the park has some English, but staff rarely speak English. The ticketing system is entirely in Chinese. Tour scams and miscommunication about services are common complaints from foreigners. Google Translate is essential. Multiple reviewers note that without some Chinese ability or WeChat, navigating independently is very difficult."
+  },
+  "highlights": [
+    {
+      "name": "Glacier Park / Summit Viewpoint (冰川公园)",
+      "description": "The cable car takes you from 3,356m to 4,506m in about 10 minutes, with staggering views as you ascend through climate zones. From the station, wooden boardwalks climb to 4,680m — the highest point accessible to visitors. On clear days, you see the glacier, thirteen snow-capped peaks, seas of clouds, and can look down on Lijiang city far below.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is the once-in-a-lifetime experience most visitors come for. The altitude is comparable to Mont Blanc base camp, but you arrive by cable car in minutes. The combination of accessibility and extreme altitude is genuinely unique worldwide.",
+      "tip": "Start breathing oxygen before you exit the cable car. Move in slow motion at the top — even walking up stairs will leave you gasping. The climb from 4,506m to 4,680m takes 30-45 minutes due to the altitude, though the distance is short. Don't stay more than 1-1.5 hours at the summit — prolonged exposure increases altitude sickness risk."
+    },
+    {
+      "name": "Blue Moon Valley (蓝月谷)",
+      "description": "A crescent-shaped valley where glacial meltwater forms four distinct lakes — Jade Lake, Mirror Lake, Blue Moon Lake, and Listening Waves Lake. The water ranges from vivid turquoise to deep jade green due to dissolved minerals, with white limestone riverbeds creating stunning color contrasts. The snow mountain looms as a backdrop.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Many visitors rate Blue Moon Valley as equally or more beautiful than the summit — it's frequently compared to Jiuzhaigou's lakes. The colors are real and extraordinary on sunny days. No altitude concerns here at ~2,800m. Several reviewers call it their favorite part of the entire trip.",
+      "tip": "Walk between the lakes rather than taking the electric cart (20 RMB) — the walking path is flat and easy, and you'll catch better photo angles. Visit in the morning when sunlight hits the water for the most vivid colors. The valley gets crowded by midday with returning summit visitors."
+    },
+    {
+      "name": "Impression Lijiang Show (印象丽江)",
+      "description": "A massive outdoor live performance directed by Zhang Yimou (of Olympics fame), featuring hundreds of local performers from various ethnic groups. The stage uses the snow mountain itself as its backdrop. Songs, dances, and horsemanship depict the history, love stories, and culture of the Naxi and surrounding peoples.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The spectacle and scale are impressive regardless of language — hundreds of performers, the mountain backdrop, and powerful music create an emotional impact. However, the narrative is entirely in Chinese with limited explanation for non-speakers. Some foreigners find it moving; others find it too long in the midday sun without understanding the story.",
+      "tip": "Shows run at approximately 1:30 PM and 2:30 PM. Arrive early to get seats with the best sightlines — seating is unassigned. Bring a hat or umbrella for sun protection, as the outdoor theater has no shade and midday sun at this altitude is intense."
+    },
+    {
+      "name": "Spruce Meadow (云杉坪)",
+      "description": "A hidden meadow at 3,240m surrounded by ancient spruce forest, accessible via a smaller cable car. In Naxi mythology, this is the entrance to the 'Third Kingdom of Jade Dragon' — a paradise for lovers. The meadow offers direct views of the snow peaks through the forest frame, with a completely different atmosphere from the summit experience.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "For visitors who cannot or choose not to attempt the high-altitude Glacier Park, Spruce Meadow delivers beautiful mountain scenery at a manageable 3,240m with minimal altitude sickness risk. The ancient forest atmosphere is peaceful and the snow mountain views are excellent. Much fewer crowds than Glacier Park.",
+      "tip": "Best in spring when the meadow turns green and wildflowers bloom, or in winter when snow dusts the spruce trees. The circular walking path takes about 40 minutes. This is the best option for families with young children or elderly travelers."
+    },
+    {
+      "name": "Yak Meadow (牦牛坪)",
+      "description": "An alpine meadow at 3,700m with grazing yaks, a Tibetan Buddhist temple (Snow Flower Temple), and panoramic views of all thirteen peaks of the Jade Dragon range. The meadow offers hot yak milk, grilled yak meat skewers, and a more rustic, less crowded experience than other zones.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "This is the best spot to see the full Jade Dragon range — all thirteen peaks lined up like a dragon's spine. The Tibetan cultural elements (temple, prayer flags, yak herds) add cultural depth. Much less touristy than other areas. The 20-minute cable car ride itself offers excellent panoramic views.",
+      "tip": "Budget 2-3 hours to explore properly. Try the fresh yak milk (5 RMB per cup) and grilled yak meat skewers from the vendors — this is a unique high-altitude food experience. Best in summer and early autumn when the meadow is green."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Ganhaizi Meadow at sunrise — the 'Golden Mountain' effect",
+      "why": "Most visitors arrive after sunrise and head straight for the cable car. But the flat meadow at Ganhaizi (3,100m) offers unobstructed views of the entire snow mountain range, and at sunrise the peaks turn from white to gold in a breathtaking display. You need to arrive by 7:00 AM and the emergency parking lot faces directly toward the mountain. This is a free, no-queue, no-altitude-risk experience that most tourists sleep through."
+    },
+    {
+      "what": "Second-day re-entry for a different cable car route",
+      "why": "Most visitors try to cram everything into one exhausting day. But you can get a second-day re-entry pass at the visitor center, allowing you to return the next day with a fresh entrance ticket to visit a different cable car route (e.g., Glacier Park one day, Yak Meadow the next). This dramatically reduces fatigue and lets you enjoy each area without rushing."
+    },
+    {
+      "what": "Yuhu Village (玉湖村) at the mountain's foot",
+      "why": "This Naxi stone village sits right at the base of the mountain and has a fairy-tale lake with snow mountain reflections. It's far less crowded than the main scenic area, offers authentic Naxi architecture, cafes with mountain views, and horseback riding. Most tour groups skip it entirely."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Day strategy: Arrive at the park by 7:00 AM. Take shuttle bus to Glacier Park cable car station (your pre-booked time slot). Ride cable car to 4,506m, walk boardwalks up to 4,680m at a slow pace. Spend 45-60 minutes at the summit, then descend. Take shuttle to Blue Moon Valley — walk through all four lakes (1-1.5 hours). If you booked Impression Lijiang, time your valley exit for the 1:30 PM show. After the show, take shuttle back to visitor center. If energy remains, add Spruce Meadow in the late afternoon.",
+    "what_to_skip": "The electric cart in Blue Moon Valley (20 RMB) — walking is flat and easy, and the cart misses the best viewpoints. The 'herbal medicine' stops that tour guides push — unnecessary and overpriced. The '3D art museums' or paid photo experiences near the base. The on-mountain oxygen at inflated prices — buy in the city. If you're not doing Glacier Park, skip the jacket rental — lower altitudes don't require it in most seasons.",
+    "pro_tips": "Buy 2-3 oxygen canisters from a Lijiang pharmacy the day before (10-15 RMB each). Download WeChat and set it up before your trip — it's needed for almost everything. Bring chocolate and energy snacks — the summit has no food vendors and you burn energy fast at altitude. Wear layers you can add/remove — it can be freezing at the summit and warm at the base within the same morning. If your cable car gets cancelled due to wind, immediately pivot to Spruce Meadow or Yak Meadow rather than waiting — wind closures often last all day."
+  },
+  "heads_up": [
+    {
+      "warning": "Altitude sickness is serious and unpredictable",
+      "advice": "At 4,506-4,680m, you're higher than most European Alpine peaks. Symptoms hit many visitors: headache, nausea, dizziness, racing heart, vomiting. People with heart or respiratory conditions should avoid the Glacier Park cable car entirely. Start oxygen before symptoms appear. Move in extreme slow motion. If you feel faint, descend immediately — there's a first aid station near the cable car. Do not push through symptoms for a photo."
+    },
+    {
+      "warning": "Cable car tickets sell out instantly — plan weeks ahead",
+      "advice": "Glacier Park cable car tickets are released 7 days in advance and sell out within 1 minute. The system requires Chinese ID and WeChat Pay. As a foreigner, your most reliable option is booking a day-tour package through your hotel or Ctrip/Trip.com. Without a pre-booked cable car ticket, you will almost certainly not reach the glacier. Multiple travelers report arriving to find 'sold out' with no recourse. This is one of the most impactful things we can help with — message our team well in advance and we'll handle the Chinese-only booking system for you."
+    },
+    {
+      "warning": "Weather can ruin the experience entirely",
+      "advice": "Clouds and fog frequently obscure the peaks, especially in summer rainy season (June-August). Visitors who go on foggy days report seeing nothing but white mist at the summit and describe it as a waste of money. Check weather forecasts carefully and be willing to postpone. High winds also force cable car shutdowns — this is more common December to February. Even cable cars already booked may be cancelled, with no refunds in some cases."
+    },
+    {
+      "warning": "Tour operator scams are rampant",
+      "advice": "Lijiang tour operators routinely add mandatory shopping stops, overcharge for 'special government-approved' oxygen (it's identical to pharmacy oxygen at 10x the price), charge extra for services advertised as included, and rush through scenic spots while padding time at commission shops. Book through reputable platforms (Ctrip/Trip.com) or your hotel rather than street touts. If going with a tour, push back on shopping stops and don't buy anything from 'recommended' shops along the way. We can recommend vetted local operators or arrange a full-day package directly, cutting out the middlemen and their commission shops."
+    },
+    {
+      "warning": "The park is enormous and exhausting",
+      "advice": "Even with shuttle buses and cable cars, expect 15,000-20,000 steps and 6-8 hours of walking, waiting, and transferring. The altitude makes everything more tiring. Don't try to see all three cable car routes in one day — pick Glacier Park plus Blue Moon Valley for the most impactful experience. Bring plenty of water and food, as restaurant options inside the park are limited and overpriced."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The entire ticketing system is designed around Chinese ID cards and WeChat Pay. Foreigners are essentially second-class visitors — online booking systems don't accept passports, and the daily ticket allocation heavily favors domestic tour groups. Book through a local hotel, travel agency, or Ctrip/Trip.com well in advance. Our concierge team navigates this system daily on behalf of foreign visitors — message us and we'll handle the entire booking chain.",
+    "Oxygen canister quality varies wildly. Tour operators sell 'special' canisters for 60-100 RMB that are often identical (or worse) than pharmacy cans costing 10-15 RMB in Lijiang. Buy from a real pharmacy (药店) in Lijiang Old Town the day before. Avoid buying from vendors on the mountain or from tour guides.",
+    "The shuttle bus system and cable car queuing process are confusing even for Chinese visitors. Signs are mostly in Chinese. Follow the crowds and ask staff (use Google Translate). Download Baidu Maps — it has detailed indoor mapping of the scenic area that Google Maps does not.",
+    "Credit cards and cash are widely accepted at the ticket office, but many internal vendors, jacket rental, and small shops only accept WeChat Pay or Alipay. Bring enough cash as backup for oxygen, food, and incidentals.",
+    "If you're visiting independently without a Chinese-speaking companion, expect significant communication difficulties at every step — ticket counters, shuttle buses, equipment rental, cable car boarding. A basic phrasebook or translation app is essential."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Cable car shut down due to high winds (common in winter)",
+      "what_to_do": "Check with staff if it's a temporary or all-day closure. If temporary, wait at the base station — sometimes it reopens within an hour. If all-day, immediately pivot to Spruce Meadow or Yak Meadow cable cars, which are lower altitude and more sheltered.",
+      "plan_b": "Blue Moon Valley and Ganhaizi meadow don't require cable cars and are beautiful regardless of wind. The Impression Lijiang show runs regardless of cable car status. Consider these as your day's focus and rebook the Glacier Park cable car for another day using the re-entry option."
+    },
+    {
+      "problem": "Altitude sickness hits hard at the summit",
+      "what_to_do": "Stop climbing immediately. Sit down, breathe oxygen slowly and deeply. Do not continue upward under any circumstances. There is a first-aid station and oxygen room near the cable car station at 4,506m — staff will assist you. If symptoms worsen (severe headache, vomiting, confusion), descend via cable car immediately.",
+      "plan_b": "Descend to Blue Moon Valley (2,800m) where altitude sickness resolves quickly. The valley is arguably more beautiful than the summit and involves zero altitude risk. Don't feel like you've wasted your trip — many visitors say Blue Moon Valley was their highlight."
+    },
+    {
+      "problem": "Couldn't get Glacier Park cable car tickets",
+      "what_to_do": "Check with your hotel — many have last-minute connections to tour operators with reserved allocations. Try the physical ticket counter early morning with your passport. On quieter days (winter weekdays), same-day availability occasionally exists. Message our team — we have contacts with local operators who sometimes hold reserved allocations and may be able to find a slot for you.",
+      "plan_b": "Spruce Meadow and Yak Meadow cable cars are much easier to book and offer gorgeous snow mountain views without the extreme altitude. Combine either with Blue Moon Valley and you'll still have an amazing mountain day. Some reviewers even prefer Yak Meadow's panoramic views of all thirteen peaks to the close-up glacier view at Glacier Park."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Layered clothing is essential — temperatures can swing 20°C between the valley floor and summit. For Glacier Park: warm insulated jacket (or rent one for 50 RMB), thermal underlayer, warm hat, gloves (windproof, not knit), and sturdy non-slip shoes (boardwalks can be icy). Summer summit temperatures hover around 0-5°C even when it's 20°C at the base. For lower areas only (Blue Moon Valley, Spruce Meadow), normal outdoor clothing is fine in most seasons. Bring sunglasses — snow glare at altitude is intense.",
+    "what_to_bring": "2-3 portable oxygen canisters (buy from Lijiang pharmacy, 10-15 RMB each), sunscreen SPF 50+, sunglasses, water bottle, chocolate/energy bars, warm hat and gloves, camera with fully charged battery (cold drains batteries fast), portable charger, rain jacket (summer), tissue paper for bathrooms, WeChat installed with payment set up, Google Translate downloaded for offline use.",
+    "what_not_to_bring": "Heavy luggage (free luggage storage at Snow Kitchen Restaurant, 1st floor). Don't over-buy oxygen — 2-3 cans per person is sufficient for most. Don't bring expensive tripods — you won't have time to set up with the crowds pushing past."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "strenuous",
+    "physical_details": "The Glacier Park experience involves riding a cable car to 4,506m, then climbing wooden staircases to 4,680m — a 174-meter elevation gain that takes 30-45 minutes due to altitude. The thin air makes every step exhausting. The boardwalks have railings but can be icy and slippery. Blue Moon Valley is flat and easy walking. Spruce Meadow is a gentle 40-minute loop. Yak Meadow involves moderate walking on meadow paths. Total park navigation requires multiple shuttle bus rides and significant standing/walking time.",
+    "age_notes": "Glacier Park is not recommended for children under 10, adults over 65, or anyone with heart, lung, or blood pressure conditions. Spruce Meadow and Blue Moon Valley are suitable for all ages and fitness levels. Strollers work on Blue Moon Valley's paved paths but not on mountain boardwalks. Wheelchair users can access Blue Moon Valley via the electric cart but cannot access cable car upper stations.",
+    "health_warnings": "Altitude sickness is the primary health risk. At 4,506-4,680m, oxygen levels are about 60% of sea level. Symptoms include headache, nausea, vomiting, dizziness, rapid heartbeat, and shortness of breath. In severe cases: confusion, loss of consciousness. People with cardiovascular disease, respiratory conditions, high blood pressure, or who are pregnant should not attempt Glacier Park. UV radiation is extreme at altitude — sunburn can occur in minutes without protection. Hypothermia risk in winter if inadequately dressed."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Glacier Park cable car ticket 7 days in advance",
+      "platform": "Hotel concierge, local travel agency, or Ctrip/Trip.com",
+      "value_to_user": "This is make-or-break for the entire experience. Without a pre-booked cable car ticket, the summit is inaccessible. A concierge can navigate the Chinese booking system that foreigners cannot use directly."
+    },
+    {
+      "action": "Arrange round-trip transport from Lijiang",
+      "platform": "Hotel, DiDi app, or tour package",
+      "value_to_user": "The mountain is 30-40 minutes from Lijiang with no convenient direct public transport to the main gate. A pre-arranged car eliminates the stress of finding transport back — taxis are scarce at the park exit during peak hours."
+    },
+    {
+      "action": "Book a full-day guided tour package",
+      "platform": "Ctrip/Trip.com, Klook, GetYourGuide, or hotel concierge",
+      "value_to_user": "Handles the entire logistical chain: transport, tickets, cable car reservation, oxygen, jacket rental, and lunch. Removes every friction point that frustrates independent foreign visitors. Costs more but guarantees access and eliminates all the booking headaches."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Yùlóng Xuěshān",
+      "chinese": "玉龙雪山",
+      "english": "Jade Dragon Snow Mountain (what to tell taxi drivers)"
+    },
+    {
+      "pinyin": "Bīngchuān Gōngyuán",
+      "chinese": "冰川公园",
+      "english": "Glacier Park (the summit cable car area)"
+    },
+    {
+      "pinyin": "Dà suǒdào",
+      "chinese": "大索道",
+      "english": "Big cable car (the one to the summit)"
+    },
+    {
+      "pinyin": "Lányuè Gǔ",
+      "chinese": "蓝月谷",
+      "english": "Blue Moon Valley"
+    },
+    {
+      "pinyin": "Yǎngqì píng",
+      "chinese": "氧气瓶",
+      "english": "Oxygen canister"
+    },
+    {
+      "pinyin": "Wǒ yào mǎi yǎngqì",
+      "chinese": "我要买氧气",
+      "english": "I want to buy oxygen"
+    },
+    {
+      "pinyin": "Gāoyuán fǎnyìng",
+      "chinese": "高原反应",
+      "english": "Altitude sickness"
+    },
+    {
+      "pinyin": "Suǒdào piào",
+      "chinese": "索道票",
+      "english": "Cable car ticket"
+    },
+    {
+      "pinyin": "Wǒ shì wàiguó rén, yòng hùzhào",
+      "chinese": "我是外国人，用护照",
+      "english": "I'm a foreigner, using a passport"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Lijiang Old Town (丽江古城)",
+      "why": "The UNESCO World Heritage Naxi town is the natural base for visiting the mountain, just 30-40 minutes away. Evening strolling through the canal-lined streets, folk music in Sifang Square, and local Naxi cuisine provide the perfect cultural counterpoint to the day's mountain adventure.",
+      "travel_time": "30-40 minutes by car/bus"
+    },
+    {
+      "suggestion": "Tiger Leaping Gorge (虎跳峡)",
+      "why": "One of the world's deepest gorges sits between Jade Dragon Snow Mountain and Haba Snow Mountain. A 2-day hiking route offers dramatic canyon views and a completely different mountain experience — up close with raw geological power rather than viewed from a cable car platform.",
+      "travel_time": "2 hours by car to the gorge entrance"
+    },
+    {
+      "suggestion": "Shuhe Ancient Town (束河古镇)",
+      "why": "A quieter, less commercialized alternative to Lijiang Old Town with similar Naxi architecture, cobblestone streets, and mountain views. Makes a relaxing half-day after the intensity of the snow mountain experience.",
+      "travel_time": "20 minutes by car from Lijiang"
+    }
+  ],
+  "cultural_context": "Jade Dragon Snow Mountain is far more than scenery to the Naxi people — it is their most sacred mountain, the physical embodiment of their protector deity 'Sanduo' (三朵). In Naxi mythology, the mountain is 'Oulu' (Heavenly Mountain), and its thirteen peaks represent the eternal guardian dragon watching over the Naxi homeland. The Naxi developed the only surviving pictographic writing system in the world (Dongba script), and their spiritual leaders (Dongba priests) have conducted ceremonies on and around this mountain for over a thousand years. Spruce Meadow (Yunshan Ping) holds special cultural weight as the mythical 'Third Kingdom of Jade Dragon' — a paradise where lovers who were forbidden from being together in life could be united in death. This legend of lovers' suicide at the mountain reflects the historical tension between arranged marriages and romantic love in Naxi society. The mountain is also ecologically significant: it hosts the southernmost glacier in the Northern Hemisphere, contains seven distinct climate zones from subtropical to nival, supports over 3,800 plant species and endangered animals including Yunnan golden monkeys and snow leopards. The glacier has been retreating dramatically — from 19 glaciers in 1982 to 13 by 2009, a visible reminder of climate change that adds urgency to visiting while it lasts.",
+  "photo_spots": [
+    {
+      "location": "4,680m summit viewpoint stone marker",
+      "tip": "Queue forms for the iconic photo with the altitude marker stone and glacier behind you. Go early morning for shortest wait and best light. The marker reads 4680m — this is the trophy shot.",
+      "why": "The defining photo of the experience — you standing at one of the highest publicly accessible mountain points in the world with the glacier dramatically close behind."
+    },
+    {
+      "location": "Blue Moon Valley — Jade Lake (玉液湖) with mountain reflection",
+      "tip": "Best in morning before noon when the water is calmest and sunlight hits the water creating maximum color saturation. The first lake (Jade Lake) usually has the clearest reflections of the snow mountain.",
+      "why": "The turquoise water with snow mountain reflection is the single most photographed image of the entire Lijiang region — postcard-perfect and genuinely as stunning as it appears in photos."
+    },
+    {
+      "location": "Ganhaizi Meadow at sunrise — Golden Mountain",
+      "tip": "Arrive before 7:00 AM. The emergency parking lot faces the mountain range. The golden light hits the peaks for about 15-20 minutes as the sun rises behind you.",
+      "why": "The 'Golden Mountain' (日照金山) moment — when first sunlight turns the white peaks to glowing gold — is considered the ultimate Jade Dragon Snow Mountain photo. Free, no tickets required, and most tourists miss it entirely."
+    },
+    {
+      "location": "Cable car approaching 4,506m station — through the window",
+      "tip": "Sit facing the mountain side of the cable car. The dramatic transition from green forest to snow and ice during the 10-minute ascent is a stunning photo sequence. Keep your camera ready.",
+      "why": "The cable car view captures the astonishing climate zone transition — you literally ascend through seasons in minutes, from temperate forest to arctic glacier."
+    }
+  ],
+  "card_name": "Jade Dragon Snow Mountain",
+  "card_type": "MOUNTAIN",
+  "card_hook": "Cable car to a glacier at 4,506 meters — the world's most accessible extreme altitude experience.",
+  "best_for": [
+    "bucket-list-experience",
+    "nature-and-scenery",
+    "photographers-paradise",
+    "adventure-seekers",
+    "once-in-a-lifetime"
+  ]
+}

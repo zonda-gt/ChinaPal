@@ -1,0 +1,33 @@
+{
+  "attractionName": "西溪国家湿地公园",
+  "cityName": "杭州",
+  "inputPath": "data/西溪国家湿地公园(杭州）/chinapal_processed.json",
+  "collectedAt": "2026-03-23T18:58:29.373Z",
+  "count": 4,
+  "highlights": [
+    {
+      "index": 1,
+      "name": "Boat ride through the wetland canals",
+      "query": "Boat ride through the wetland canals 西溪国家湿地公园 杭州",
+      "outputPath": "data/西溪国家湿地公园(杭州）/highlight_images/01-Boat_ride_through_the_wetland_canals/raw/baidu_images.json"
+    },
+    {
+      "index": 2,
+      "name": "Autumn reed fields (秋芦飞雪)",
+      "query": "秋芦飞雪 西溪国家湿地公园 杭州",
+      "outputPath": "data/西溪国家湿地公园(杭州）/highlight_images/02-秋芦飞雪/raw/baidu_images.json"
+    },
+    {
+      "index": 3,
+      "name": "Plum blossom groves in spring",
+      "query": "Plum blossom groves in spring 西溪国家湿地公园 杭州",
+      "outputPath": "data/西溪国家湿地公园(杭州）/highlight_images/03-Plum_blossom_groves_in_spring/raw/baidu_images.json"
+    },
+    {
+      "index": 4,
+      "name": "Yanshui Fishing Village (烟水渔庄)",
+      "query": "烟水渔庄 西溪国家湿地公园 杭州",
+      "outputPath": "data/西溪国家湿地公园(杭州）/highlight_images/04-烟水渔庄/raw/baidu_images.json"
+    }
+  ]
+}

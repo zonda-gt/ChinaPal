@@ -1,0 +1,277 @@
+{
+  "attraction_name_cn": "九寨沟",
+  "attraction_name_en": "Jiuzhaigou Valley National Park",
+  "address_cn": "阿坝藏族羌族自治州九寨沟县漳扎镇301省道",
+  "experience_type": "sightseeing",
+  "hook": "A fairy-tale valley of 108 impossibly turquoise lakes, thundering waterfalls, and ancient forests on the Tibetan plateau — the place that made China's government invent the 5A rating system.",
+  "honest_description": "Jiuzhaigou is genuinely one of the most beautiful natural landscapes on Earth, and it lives up to the hype. The turquoise, emerald, and sapphire lakes are not Photoshopped — they really look like that, thanks to calcium carbonate deposits and algae that create colors so intense they seem artificial. The Y-shaped valley system covers three main areas (Shuzheng, Rize, and Zechawa), each with distinct lakes, waterfalls, and forest scenery. The park is extremely well-managed with excellent shuttle buses, boardwalks, and facilities. The downsides: it is far from Chengdu (6-9 hours by road, or 1-hour flight plus 1.5-hour transfer), crowded during peak autumn season (especially National Day week), and you genuinely need a full day minimum. The single restaurant inside is mediocre and overpriced. Altitude (2,000-3,100m) can affect some visitors. But none of these complaints diminish what is an extraordinary natural wonder. Best for nature lovers, photographers, and anyone who appreciates pristine wilderness; the journey to get here is the main barrier.",
+  "foreigner_top_questions": [
+    {
+      "question": "How do I get to Jiuzhaigou from Chengdu?",
+      "answer": "Three options: (1) High-speed train from Chengdu to Huanglongjiuzhai Station (~2.5 hours), then bus/taxi 1.5-2 hours to the park — this is the newest and best option. (2) Flight from Chengdu to Jiuhuang Airport (~1 hour), then 1.5-hour bus to the park. (3) Long-distance bus from Chengdu (6-9 hours through mountains). Most visitors stay overnight in Zhangzha Town near the park entrance. Book return transport at the same time — tickets sell out. A 2-day trip minimum from Chengdu is recommended."
+    },
+    {
+      "question": "One day or two days — how much time do I really need?",
+      "answer": "One full day (8+ hours) covers the main highlights if you start when the park opens and use the shuttle buses efficiently. Two days is significantly more comfortable and allows you to explore all three valleys at a relaxed pace with time for photography. Tickets are valid for one day only — you must repurchase for a second day. Two-day visitors often focus on Rize Valley (right branch) on day one and Zechawa Valley (left branch) plus Shuzheng Valley (main stem) on day two."
+    }
+  ],
+  "experience_format_note": "Massive national park spanning three valleys in a Y-shape. Free shuttle buses connect all major sites — you hop on and off at designated stops. Well-maintained boardwalks run along the lakes and waterfalls. One restaurant (Nuorilang Service Center) operates inside the park with buffet meals. No overnight stays inside the park are allowed. Tickets must be purchased online in advance — there is a daily visitor cap. The park is at altitude (2,000-3,100m), which may affect some visitors.",
+  "vibe": "Otherworldly and humbling — walking through pristine mountain valleys where every lake looks like it was painted by hand, surrounded by snow peaks, ancient forests, and the gentle presence of Tibetan culture.",
+  "time_needed": {
+    "quick_visit": "6-8 hours (main highlights of one or two valleys using shuttle buses — still a full day)",
+    "recommended": "1 full day starting at park opening (all three valleys, walking some boardwalk sections between bus stops for the best views)",
+    "deep_dive": "2 full days (explore each valley thoroughly with time for photography, walking the boardwalks, and visiting the Tibetan village areas)"
+  },
+  "best_time": {
+    "best_time_of_day": "Enter when the park opens (7:30 AM summer, 8:30 AM winter). Head directly to the farthest points first (Long Lake or Primeval Forest) and work your way back down — this puts you ahead of the crowd flow. Mirror Lake is best in the early morning when the water is perfectly still.",
+    "worst_time": "National Day week (October 1-7) is overwhelmingly crowded — the park hits its daily visitor cap and tickets sell out weeks in advance. Summer holidays (July-August) are also very busy. Avoid weekends during autumn foliage season.",
+    "seasonal_notes": "Autumn (late September to early November) is the undisputed best season — the valley explodes in red, orange, and gold foliage reflected in turquoise water. Peak foliage is late October to early November. Spring (April-May) offers flowers and fewer crowds at lower prices. Summer (June-August) is green and lush but rainy with peak crowds. Winter (December-March) reveals frozen waterfalls, ice-covered lakes, and snow-dusted forests with almost no crowds — a magical and underrated experience.",
+    "pro_tip": "Visit in the first week of November on a weekday — autumn foliage is still spectacular, but the National Day crowds have dissipated and ticket prices drop on November 16. For photographers, winter offers the most unique and least-photographed scenes."
+  },
+  "getting_in": {
+    "opening_hours": "Peak season (Apr 1-Nov 15): 07:30-18:00. Off-season (Nov 16-Mar 31): 08:30-18:00. Last ticket sale and entry: 14:00. Shuttle buses run continuously during operating hours.",
+    "price_rmb": "Peak season: ¥190 (entrance) + ¥90 (shuttle bus) = ¥280 total. Off-season: ¥80 (entrance) + ¥80 (shuttle bus) = ¥160 total.",
+    "price_usd": "Peak: ~$38 total. Off-season: ~$22 total.",
+    "price_breakdown": [
+      {
+        "item": "Entrance ticket (peak season, Apr-Nov)",
+        "price": "¥190",
+        "highlight": "Valid for one day only — must repurchase for a second day"
+      },
+      {
+        "item": "Entrance ticket (off-season, Nov-Mar)",
+        "price": "¥80",
+        "highlight": "More than 50% discount — winter is beautiful and uncrowded"
+      },
+      {
+        "item": "Shuttle bus (peak season)",
+        "price": "¥90",
+        "highlight": "Mandatory for getting around the park — covers unlimited rides all day"
+      },
+      {
+        "item": "Shuttle bus (off-season)",
+        "price": "¥80",
+        "highlight": "Unlimited rides on the park's internal bus system"
+      },
+      {
+        "item": "Private VIP minibus",
+        "price": "¥300-500/person",
+        "highlight": "Skip the shuttle bus queues and travel at your own pace — worth considering during peak season"
+      }
+    ],
+    "booking_required": "Yes — mandatory online advance booking. There is a strict daily visitor cap. During peak autumn season and holidays, tickets sell out days or weeks in advance. Book as early as possible. If you are struggling with the Chinese booking platforms, message our concierge team and we can secure your tickets using your passport details.",
+    "booking_method": "Official Jiuzhaigou WeChat mini-program, Trip.com, or the Aba Tourism Network (阿坝旅游网). Passport number required for booking. The official platform sometimes has availability when third-party sites show sold out.",
+    "passport_accepted": "Yes — foreigners book with passport number online and present the physical passport at the entrance. Student discounts available with valid ID for ages 7-22.",
+    "what_to_bring": "Warm layers (temperatures drop significantly at altitude, even in summer). Rain jacket or umbrella. Comfortable walking shoes with grip (boardwalks can be wet and slippery). Sunscreen and sunglasses (intense UV at altitude). Snacks and water (only one restaurant inside). Portable charger. Cash backup.",
+    "queue_situation": "The main queue is at the entrance gate in the morning — arrive 30 minutes before opening during peak season. Shuttle bus queues at popular stops (Nuorilang Center, Five Flower Lake) can be 15-30 minutes during peak times. Walking between stops along the boardwalks avoids bus queues entirely and offers the best scenery.",
+    "language_barrier_rating": "some-chinese-helps — Park signage is bilingual (Chinese/English). Shuttle bus announcements are in Chinese and English. Staff at the ticket office and visitor center have basic English. However, the surrounding town and transportation are Chinese-only. Our team can help arrange transfers from the train station or airport to your hotel in Zhangzha Town, and communicate with local drivers on your behalf."
+  },
+  "highlights": [
+    {
+      "name": "Five Flower Lake (五花海)",
+      "description": "The crown jewel of Jiuzhaigou — a lake whose waters display an impossible palette of turquoise, emerald, gold, and sapphire simultaneously, created by calcium carbonate deposits, algae, and submerged ancient tree trunks visible through crystal-clear water.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "This lake is consistently rated as the single most beautiful sight in Jiuzhaigou. The colors are not enhanced — they genuinely look like this, especially in autumn when red and gold foliage frames the impossible blue water.",
+      "tip": "Walk the boardwalk around the lake rather than just stopping at the main viewing platform. The elevated viewpoint at 'Tiger Stone' (老虎石) offers the best overhead perspective of the lake's color patterns."
+    },
+    {
+      "name": "Nuorilang Waterfall (诺日朗瀑布)",
+      "description": "China's widest highland calcium-deposit waterfall at 320 meters across and 25 meters high — a massive curtain of water that thunders year-round and freezes into spectacular ice formations in winter.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "This waterfall is wider than Niagara's Horseshoe Falls. In winter, the frozen waterfall creates an ice palace effect that is one of Jiuzhaigou's most unique sights.",
+      "tip": "Visit in the morning when the light hits the water spray and creates rainbows. The boardwalk below the falls gives the most dramatic perspective."
+    },
+    {
+      "name": "Five-Color Pool (五彩池)",
+      "description": "The smallest but most vibrantly colored lake in Jiuzhaigou — a tiny pool in Zechawa Valley that concentrates intense blues, greens, and yellows into a jewel-like basin. The pool is at 3,000m altitude at the end of the left valley branch.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "Despite being small, this pool has the most intensely saturated colors in the entire park — it is sometimes called 'the Eye of Jiuzhaigou.' The colors change with the angle of sunlight.",
+      "tip": "Visit in the early afternoon when direct sunlight hits the pool and the colors are most vivid. This is in the less-visited Zechawa Valley, so crowds are smaller."
+    },
+    {
+      "name": "Mirror Lake (镜海)",
+      "description": "A perfectly still lake that creates flawless reflections of the surrounding mountains, forests, and sky — so perfect that photographs are impossible to tell right-side-up from upside-down.",
+      "foreigner_appeal": "UNIVERSAL APPEAL",
+      "foreigner_note": "The reflection is only perfect in the early morning before any wind picks up. This is the lake that produces the most surreal, 'is this real?' photographs.",
+      "tip": "Visit before 9 AM for the mirror-still surface. Even a light breeze destroys the reflection. Morning light also creates the best contrast."
+    },
+    {
+      "name": "Pearl Shoal Waterfall (珍珠滩瀑布)",
+      "description": "A broad, cascading waterfall that drops 28 meters across a wide limestone shelf — famous as the filming location for the classic Chinese TV series 'Journey to the West.' Water drops scatter like pearls across the calcified surface above the falls.",
+      "foreigner_appeal": "CULTURALLY INTERESTING",
+      "foreigner_note": "If you have seen any Chinese media about Jiuzhaigou, this is likely the waterfall featured. The limestone shelf above the falls where water beads scatter is unique and worth walking across on the boardwalk.",
+      "tip": "Walk the boardwalk above the falls first to see the pearl-scattering effect on the limestone shelf, then descend to see the waterfall itself from below."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Walking the boardwalks between bus stops instead of riding the shuttle",
+      "why": "Most visitors ride the bus between every stop, missing the most beautiful sections — the quiet forest paths between lakes where you can hear birds, feel the mist from waterfalls, and see wildlife. The walk between Pearl Shoal and Five Flower Lake through pristine forest is arguably the best experience in the park."
+    },
+    {
+      "what": "The Tibetan villages inside the park (树正寨 etc.)",
+      "why": "The park is named after nine Tibetan villages, but most visitors rush past them to see lakes. The villages offer a glimpse into Tibetan highland life, with prayer flags, traditional houses, and occasionally local crafts for sale."
+    },
+    {
+      "what": "Visiting in winter",
+      "why": "Over 90% of visitors come in autumn, but winter Jiuzhaigou is magical — frozen waterfalls, ice-covered lakes with visible colors beneath, snow-covered forests, and almost no crowds. Tickets are less than half the peak price."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Enter at opening and take the shuttle bus directly to the farthest point: Primeval Forest or Long Lake (depending on which branch opens first). Work your way back down, getting off at each stop. The recommended flow: Bus to Long Lake (Zechawa) > walk to Five-Color Pool > bus back to Nuorilang Center > bus to Primeval Forest (Rize) > walk down through Panda Lake, Five Flower Lake, Pearl Shoal Waterfall > bus back to Nuorilang for lunch > walk the Shuzheng Valley boardwalk downhill back to the entrance, passing through the tree-lined lakes and Tibetan villages.",
+    "what_to_skip": "Do not try to see everything from the bus windows — the boardwalk walks are the real experience. Skip the expensive buffet if possible and bring your own food (instant noodles requiring hot water are prohibited, but sandwiches, fruit, and snacks are fine). The souvenir shops at Nuorilang Center are overpriced.",
+    "pro_tips": "Sit on the left side of the shuttle bus on the main stem (Shuzheng Valley), the left side going up the left branch (Zechawa), and the right side going up the right branch (Rize) — these sides have the best views through the windows. During peak season, consider the VIP private minibus (¥300-500) — it saves hours of shuttle queuing and lets you control your schedule."
+  },
+  "heads_up": [
+    {
+      "warning": "Altitude ranges from 2,000m to 3,100m — altitude sickness is possible",
+      "advice": "Stay hydrated, avoid alcohol the night before, and take the first day slowly. Most visitors acclimatize quickly at these moderate elevations, but those sensitive to altitude should carry medication. Long Lake (3,100m) is the highest point — assess how you feel before heading there."
+    },
+    {
+      "warning": "Only one restaurant inside the park, and it is mediocre and crowded",
+      "advice": "The Nuorilang Service Center buffet (¥50-80) is the only food option inside and becomes chaotic at lunchtime (10:30 AM-2 PM). Bring snacks, energy bars, and water. Instant noodles requiring hot water are not allowed, but sandwiches, fruit, and packaged food are fine. If you forget supplies, drop us a message and we can arrange food delivery to your hotel in Zhangzha Town for you to carry in the next morning."
+    },
+    {
+      "warning": "Tickets sell out during peak season — advance booking is mandatory",
+      "advice": "During autumn (especially October) and National Day week, tickets can sell out days or weeks in advance. Book the moment your dates are confirmed. Have backup dates ready. Check the official WeChat mini-program first as it sometimes has availability when third-party sites show sold out."
+    },
+    {
+      "warning": "The journey from Chengdu is long and sometimes dangerous",
+      "advice": "Mountain roads are subject to landslides and closures, especially in summer rainy season. The new high-speed train is the safest and most reliable option. If driving, check road conditions before departing. Do not attempt to day-trip from Chengdu — you need at least one night near the park. We can book your high-speed train tickets and arrange a reliable car transfer from the station to your hotel near the park."
+    }
+  ],
+  "foreigners_watch_out": [
+    "Ticket booking online requires a Chinese platform (WeChat mini-program or Aba Tourism Network). Trip.com is the most foreigner-friendly booking option. Book well in advance during peak season.",
+    "The park enforces a strict daily visitor cap — showing up without a pre-booked ticket means you cannot enter, period. There are no same-day walk-up tickets when the cap is reached.",
+    "Zhangzha Town (the gateway town) has very limited English — booking accommodation and transportation in advance is essential. Your hotel can often help arrange transport.",
+    "Mobile payment (WeChat/Alipay) is essentially the only payment method inside the park and in Zhangzha Town. Carry cash as emergency backup.",
+    "The shuttle bus announcements are in Chinese and basic English, but navigating the system requires some planning. Download the park map in advance and note the Chinese names of your target stops."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "Tickets sold out for your planned date",
+      "what_to_do": "Check the official booking platform repeatedly — cancellations happen and tickets are released in batches. Try different platforms (official WeChat mini-program, Trip.com, Aba Tourism Network). Some hotels near the park can assist with ticket procurement. Our concierge team knows the release schedule and can monitor availability for you — message us with your preferred dates and we will keep checking.",
+      "plan_b": "Visit nearby Huanglong Scenic Area instead (2-hour drive from Jiuzhaigou) — another UNESCO World Heritage Site with stunning calcified pools and often easier to get tickets for. Reschedule Jiuzhaigou for the next day if possible."
+    },
+    {
+      "problem": "Weather is rainy or overcast, dulling the lake colors",
+      "what_to_do": "The lakes still show color even in overcast conditions, though less vibrant than in sunshine. Focus on waterfalls (which are more dramatic in rain) and forest walks (which are atmospheric in mist). Five-Color Pool retains its colors even on cloudy days.",
+      "plan_b": "If you have a two-day ticket, use the rainy day for the less color-dependent experiences and hope for sun on day two. Mirror Lake's reflections actually work better on calm, overcast days."
+    },
+    {
+      "problem": "Altitude sickness symptoms (headache, nausea, breathlessness)",
+      "what_to_do": "Stay at lower elevations within the park (Shuzheng Valley is 2,000-2,400m). Avoid Long Lake (3,100m). Rest at Nuorilang Service Center which has medical facilities. Portable oxygen cans are available for purchase inside the park.",
+      "plan_b": "If symptoms are severe, exit the park and descend to Zhangzha Town. The medical clinic in town can provide oxygen therapy. Do not push through serious symptoms at altitude."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Layers are essential — temperatures can swing 15-20°C between morning shade and afternoon sun. A warm jacket or fleece even in summer. Waterproof rain jacket. Comfortable walking shoes with grip (boardwalks are wet). In winter, full cold-weather gear including thermal layers, gloves, and warm hat.",
+    "what_to_bring": "Food and snacks (limited options inside). Water bottle. Rain gear. Sunscreen and sunglasses (intense UV at altitude). Warm layers. Portable charger. Cash backup. Downloaded park map. Camera with charged batteries (cold drains batteries faster).",
+    "what_not_to_bring": "Instant noodles requiring hot water (prohibited). Drones (prohibited). Excessive luggage (leave at your hotel)."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "moderate",
+    "physical_details": "The shuttle bus system makes the park accessible without excessive walking. However, walking the boardwalk trails (the best way to experience the park) involves 10-20km of gentle paths with some elevation changes. All boardwalks are well-maintained with railings. The park is at 2,000-3,100m altitude, which adds a physical dimension to any exertion.",
+    "age_notes": "Suitable for all ages — elderly visitors and families with children can use the shuttle bus exclusively and walk only short boardwalk sections at each stop. Children under 6 or below 1.2m enter free (entrance and bus).",
+    "health_warnings": "Altitude (2,000-3,100m) may affect those with respiratory or cardiac conditions. UV radiation is intense — sunburn occurs quickly. Temperature drops rapidly in shade and at higher elevations."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Jiuzhaigou entrance tickets in advance",
+      "platform": "Trip.com or official WeChat mini-program",
+      "value_to_user": "Mandatory for entry — no walk-up tickets when the daily cap is reached. During peak season, tickets sell out weeks ahead. Trip.com is the most foreigner-friendly platform."
+    },
+    {
+      "action": "Book a multi-day Jiuzhaigou + Huanglong tour from Chengdu",
+      "platform": "Trip.com, Klook, or local Chengdu tour operators",
+      "value_to_user": "Eliminates the complex transportation logistics (train/bus/transfers), includes hotel in Zhangzha Town, and ensures tickets. English-speaking guides add context about the geology and Tibetan culture. Typically 3-4 day packages."
+    },
+    {
+      "action": "Book VIP private minibus inside the park",
+      "platform": "Available at the park entrance or through your hotel",
+      "value_to_user": "During peak season, saves hours of shuttle bus queuing and lets you set your own pace. Worth the ¥300-500 premium when the park is at capacity."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Jiǔzhàigōu",
+      "chinese": "九寨沟",
+      "english": "Jiuzhaigou Valley"
+    },
+    {
+      "pinyin": "Wǔ Huā Hǎi",
+      "chinese": "五花海",
+      "english": "Five Flower Lake (must-see)"
+    },
+    {
+      "pinyin": "Nuòrìlǎng",
+      "chinese": "诺日朗",
+      "english": "Nuorilang (central transfer station and waterfall)"
+    },
+    {
+      "pinyin": "Wǔ Cǎi Chí",
+      "chinese": "五彩池",
+      "english": "Five-Color Pool"
+    },
+    {
+      "pinyin": "Jìng Hǎi",
+      "chinese": "镜海",
+      "english": "Mirror Lake"
+    },
+    {
+      "pinyin": "Guānguāng chē",
+      "chinese": "观光车",
+      "english": "Shuttle bus / sightseeing bus"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Huanglong Scenic Area (黄龙)",
+      "why": "Another UNESCO World Heritage Site just 2 hours from Jiuzhaigou, famous for thousands of colorful calcified terraced pools cascading down a mountain valley. Often combined in a single trip.",
+      "travel_time": "2-hour drive from Jiuzhaigou"
+    },
+    {
+      "suggestion": "Songpan Ancient Town (松潘古城)",
+      "why": "A charming Tibetan-Qiang-Han frontier town with an intact ancient city wall, en route between the high-speed train station and Jiuzhaigou. Good for a lunch stop or overnight stay.",
+      "travel_time": "On the route between Huanglongjiuzhai Station and the park"
+    },
+    {
+      "suggestion": "Chengdu (for pandas and Sichuan food)",
+      "why": "Most visitors base their Jiuzhaigou trip from Chengdu, making it natural to combine with the Panda Base, Sichuan cuisine, and other Chengdu attractions.",
+      "travel_time": "2.5 hours by high-speed train + transfer"
+    }
+  ],
+  "cultural_context": "Jiuzhaigou means 'Valley of Nine Villages' — named for the nine Tibetan settlements whose residents have lived in these highlands for centuries. The Tibetan communities here descend from warriors of the ancient Qiang people who were stationed as frontier guards during the Tang Dynasty's conflicts with Tibet. According to local legend, the goddess Semo dropped a mirror given to her by the mountain god Dage, and it shattered into 108 pieces that became the valley's 108 lakes. The Tibetan inhabitants practice a unique blend of Bon (the pre-Buddhist indigenous religion) and Tibetan Buddhism, visible in the prayer flags, mani stones, and small temples throughout the park. The valley remained virtually unknown to the outside world until a 1970s forestry survey rediscovered it, and it opened to tourism in 1984. A devastating 7.0 earthquake in 2017 closed the park for four years, but remarkably, the lakes and waterfalls recovered their colors and beauty — nature's resilience became part of the valley's story.",
+  "photo_spots": [
+    {
+      "location": "Five Flower Lake from Tiger Stone (老虎石) elevated viewpoint",
+      "tip": "The elevated boardwalk offers a bird's-eye view of the entire lake's color palette. Mid-morning light brings out the best colors.",
+      "why": "The overhead perspective reveals the full range of turquoise, emerald, and gold colors simultaneously — the single most photographed view in all of Jiuzhaigou."
+    },
+    {
+      "location": "Mirror Lake (镜海) at dawn",
+      "tip": "Arrive before 9 AM when the water is perfectly still. No wind, no ripples, flawless reflections.",
+      "why": "Creates a perfectly symmetrical image where the reflection is indistinguishable from reality — the ultimate 'is this real?' photograph."
+    },
+    {
+      "location": "Nuorilang Waterfall in winter",
+      "tip": "Visit in January-February when the waterfall is partially or fully frozen into an ice curtain.",
+      "why": "A 320-meter-wide wall of ice and icicles — a rare and spectacular sight that few visitors experience since most come in autumn."
+    },
+    {
+      "location": "Shuzheng Lakes boardwalk with autumn foliage",
+      "tip": "Late October to early November, walk the boardwalk through the 19 cascading lakes with red and gold trees reflected in each.",
+      "why": "The combination of multi-colored autumn foliage, turquoise water, and cascading lake levels creates a scene that defines why Jiuzhaigou is called a fairy tale world."
+    }
+  ],
+  "card_name": "Jiuzhaigou Valley",
+  "card_type": "UNESCO NATIONAL PARK",
+  "card_hook": "One hundred and eight lakes, each a different shade of impossible.",
+  "best_for": [
+    "nature-lovers-paradise",
+    "once-in-a-lifetime",
+    "photographers-dream",
+    "autumn-foliage",
+    "multi-day-trip"
+  ]
+}

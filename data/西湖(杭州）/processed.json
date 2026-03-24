@@ -1,0 +1,287 @@
+{
+  "attraction_name_cn": "西湖",
+  "attraction_name_en": "West Lake",
+  "address_cn": "浙江省杭州市西湖区龙井路1号",
+  "experience_type": "sightseeing",
+  "hook": "China's most celebrated lake — a UNESCO World Heritage masterpiece of landscape design where poets, emperors, and lovers have wandered for a thousand years, and where the scenery on a misty morning can make you understand why.",
+  "honest_description": "West Lake (Xi Hu) is not just a lake — it's the defining symbol of Hangzhou and arguably the most storied natural landscape in Chinese culture. This UNESCO World Heritage Site has been carefully shaped by human hands for over a thousand years to embody the Chinese ideal of landscape beauty. Three causeways divide the lake into distinct sections, dotted with islands, pagodas, and weeping willows. The surrounding hills are draped in tea plantations, ancient temples, and gardens. The lake itself is free to visit and walkable around its 15 km perimeter, with countless parks, museums, and viewpoints along the way. Key attractions include Leifeng Pagoda (stunning sunset views), the Broken Bridge (famous from the White Snake Legend and magical when snow melts unevenly in winter), Three Pools Mirroring the Moon (the island featured on the 1 RMB banknote), and the causeways lined with willows and peach trees. Boat rides are the classic way to experience the lake — painted boats, private rowboats, and self-rowing options are all available. The tea culture is inseparable from the experience — Hangzhou is home to Longjing (Dragon Well) tea, and visiting the tea villages in the surrounding hills is a must. West Lake works on you slowly, through accumulation rather than spectacle. It's not dramatic the way mountains or waterfalls are — it's subtle, poetic, and deeply romantic. Some visitors find it underwhelming from the shore, especially on crowded weekends. But those who take a boat ride, walk a causeway at dawn, or sit by the lake as mist rises from the water discover why this place has inspired a thousand years of poetry.",
+  "foreigner_top_questions": [
+    {
+      "question": "Is West Lake overrated? Some people say there's nothing to see.",
+      "answer": "West Lake rewards those who slow down. From the shore on a crowded weekend, it can look like any city lake. But take a boat ride to the Three Pools island, walk Su Causeway early in the morning, or watch sunset from Leifeng Pagoda — and the magic appears. The beauty is in the composition: mist, willows, water, hills, and pagodas arranged in perfect harmony. It's a landscape painting you walk through, not a theme park. Budget at least a full day, arrive early, and approach it like a garden rather than a monument."
+    },
+    {
+      "question": "What's the best way to get around the lake?",
+      "answer": "The lake perimeter is about 15 km — too far to walk completely in a casual visit. Options: (1) Rent a bike and cycle the shore roads (bikes restricted on causeways during peak times/weekends), (2) Take the West Lake Loop Bus (lines 51/52) which circles the lake with stops at major sites, (3) Combine walking with boat rides to hop across the lake, (4) Take a painted boat tour (¥50-70) which includes a stop at Three Pools island. The smartest approach is to focus on one section per visit rather than trying to see everything."
+    }
+  ],
+  "experience_format_note": "Open-access lakeside scenic area — no entrance ticket needed for the lake itself. Individual attractions (Leifeng Pagoda, boat rides, temples) charge separate admission. The lake and its shores are freely accessible 24/7. The area is vast — over 60 square kilometers of scenic zone with 100+ parks and viewpoints. This is not a single attraction but an entire landscape to explore over one or two days. Walking, cycling, and boat rides are the primary modes of exploration.",
+  "vibe": "Living Chinese landscape painting — where mist-veiled willows trail into still water, pagodas glow at sunset, and the line between art and nature dissolves so completely that you understand why Chinese poets spent lifetimes trying to capture this place in words.",
+  "time_needed": {
+    "quick_visit": "3-4 hours (walk one causeway, boat ride to Three Pools island, Leifeng Pagoda sunset)",
+    "recommended": "Full day (two causeways, boat ride, Leifeng Pagoda, lakeside tea house, Longjing tea village)",
+    "deep_dive": "2 days (full lake exploration, tea village visit, Lingyin Temple, Impressions West Lake evening show, sunrise walk)"
+  },
+  "best_time": {
+    "best_time_of_day": "Sunrise to early morning (5:30-8:00 AM) is magical — mist on the water, almost no tourists, and the famous 'morning on the lake' atmosphere that poets wrote about. Late afternoon (4:00-6:00 PM) is ideal for Leifeng Pagoda sunset views.",
+    "worst_time": "Weekend afternoons and Chinese public holidays — the causeways and lakeside become shoulder-to-shoulder crowds. Summer midday is brutally hot and humid. Avoid the first week of October (National Day) when the lake area receives millions of visitors.",
+    "seasonal_notes": "Spring (March-May) is the classic season — peach blossoms and weeping willows create the iconic imagery. Summer has beautiful lotus flowers (July-August) but oppressive heat and humidity. Autumn (September-November) brings sweet osmanthus fragrance everywhere and comfortable temperatures. Winter has the rare chance of snow on the Broken Bridge — the most poetic scene in Chinese landscape.",
+    "pro_tip": "The absolute best West Lake experience: arrive at Broken Bridge at dawn on a misty spring morning, walk the Bai Causeway as the mist lifts, then have breakfast at a lakeside tea house. You'll understand in 90 minutes what takes some visitors an entire trip to discover."
+  },
+  "getting_in": {
+    "opening_hours": "The lake and shore areas are open 24/7 and free. Leifeng Pagoda: 8:00 AM - 8:00 PM (summer), until 5:30 PM (winter). Boat rides: 8:00 AM - 4:30/5:00 PM depending on season. Impressions West Lake show: seasonal evening performances.",
+    "price_rmb": "Lake access: Free. Leifeng Pagoda: ¥40. Boat ride (painted boat with island stop): ¥55. Hand-rowed private boat: ~¥150/hour.",
+    "price_usd": "Lake: Free. Pagoda: ~$6. Boat: ~$8.",
+    "price_breakdown": [
+      {
+        "item": "West Lake scenic area",
+        "price": "Free",
+        "highlight": "All causeways, shoreline parks, and walking paths are free"
+      },
+      {
+        "item": "Leifeng Pagoda",
+        "price": "¥40",
+        "highlight": "Best sunset viewpoint — elevator to top"
+      },
+      {
+        "item": "Painted boat (includes Three Pools island)",
+        "price": "¥55",
+        "highlight": "Classic lake experience; includes island featured on 1 RMB note"
+      },
+      {
+        "item": "Private hand-rowed boat",
+        "price": "~¥150/hour",
+        "highlight": "Intimate experience for up to 4-6 people"
+      },
+      {
+        "item": "Impressions West Lake show",
+        "price": "¥260-580",
+        "highlight": "Zhang Yimou-directed water performance — seasonal"
+      },
+      {
+        "item": "Jingci Temple",
+        "price": "¥10",
+        "highlight": "Buddhist temple with evening bell — one of the 'Ten Scenes'"
+      }
+    ],
+    "booking_required": "No reservation needed for the lake area or most attractions. Impressions West Lake should be booked in advance. Lingyin Temple requires online reservation. Some popular restaurants around the lake need reservations on weekends.",
+    "booking_method": "Walk-up for most attractions. Impressions West Lake via official website, Trip.com, or Damai. Lingyin Temple via 'Hangzhou West Lake' WeChat mini-program. Restaurant reservations via Dianping (大众点评).",
+    "passport_accepted": "Yes — passport accepted at all ticket windows. Lingyin Temple's online reservation system accepts passport numbers.",
+    "what_to_bring": "Comfortable walking shoes. Camera (every angle is a photo). Umbrella for unpredictable Hangzhou weather. Sunscreen in summer. Cash for small boat vendors (most places accept mobile payment). A book of Chinese poetry is the best companion here.",
+    "queue_situation": "Leifeng Pagoda can have 20-30 minute queues on weekends (mostly for the elevator). Boat rides may have short waits during peak afternoons. Three Pools island can feel crowded on weekends. Early morning visits avoid all queues.",
+    "language_barrier_rating": "manageable — Major attractions have English signage and audio guides. Boat operators speak limited English but the experience is visual. Restaurant menus increasingly have English or picture menus. The West Lake Loop Bus has English stop announcements."
+  },
+  "highlights": [
+    {
+      "name": "Su Causeway (苏堤) at dawn",
+      "description": "A 2.8 km tree-lined causeway built by the poet-governor Su Dongpo in the 11th century, crossing the entire lake. Lined with weeping willows and peach trees, it's the quintessential West Lake experience — especially magical in the early morning mist before crowds arrive.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Walking Su Causeway at dawn is one of those rare travel moments that lives up to every superlative. The combination of mist, willows, water, and silence creates an atmosphere that needs no cultural explanation — it's simply beautiful.",
+      "tip": "Come at 6:00 AM for the mist-on-water experience. By 9:00 AM on weekends, it's packed. The six bridges along the causeway each have different characters — the southern end is quieter. Bikes are restricted on weekends."
+    },
+    {
+      "name": "Three Pools Mirroring the Moon (三潭印月)",
+      "description": "The largest island in West Lake, reached by boat, featuring gardens, pavilions, and the three small stone pagodas that appear on China's 1 RMB banknote. During the Mid-Autumn Festival, candles are placed inside the pagodas creating 33 reflections of the moon on the water.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Standing next to the scene printed on Chinese currency is a fun, tangible moment that connects you to Chinese daily life. The island's gardens are also genuinely beautiful, with traditional pavilions and winding paths.",
+      "tip": "Bring a 1 RMB note for the comparison photo. The island has souvenir shops and is somewhat touristy — focus on the outer paths near the water for the best atmosphere. The boat ride to the island is half the experience."
+    },
+    {
+      "name": "Leifeng Pagoda (雷峰塔) at sunset",
+      "description": "A five-story pagoda on the southern shore, rebuilt in 2002 on the foundations of a 10th-century original. An elevator takes you to the top for the best panoramic views of the entire lake. The pagoda is central to the Legend of the White Snake, one of China's most beloved love stories.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "Even without knowing the White Snake legend, the sunset views from the top are worth the admission. The golden hour light on the lake with mountains in the background creates one of Hangzhou's most photographed scenes.",
+      "tip": "Time your visit for 45-60 minutes before sunset. Take the elevator up, walk down. The underground level preserves the original pagoda foundations. The west-facing side has the best sunset light."
+    },
+    {
+      "name": "Broken Bridge (断桥) in snow",
+      "description": "Located at the eastern end of Bai Causeway, this bridge becomes famous when snow melts unevenly, making it appear 'broken' — one of the most celebrated scenes in Chinese aesthetics. It's also where the White Snake and Xu Xian first met in Chinese legend.",
+      "foreigner_appeal": "🟡 CULTURALLY INTERESTING",
+      "foreigner_note": "The bridge itself is architecturally simple — its fame is entirely cultural and literary. In snow or at dawn with mist, the atmosphere is genuinely special. On a sunny afternoon with crowds, it's just a bridge. Understanding the White Snake legend transforms the visit.",
+      "tip": "For the 'broken bridge in snow' effect, you need to visit during Hangzhou's rare winter snowfall — follow local social media for real-time snow reports. At any time of year, dawn with mist creates a similar ethereal atmosphere."
+    },
+    {
+      "name": "Longjing Tea Village experience",
+      "description": "The surrounding hills are covered with terraced tea plantations producing China's most famous green tea — Longjing (Dragon Well). Visit Longjing Village or Meijiawu Tea Village to see tea processing, taste fresh tea, and buy directly from farmers.",
+      "foreigner_appeal": "🟢 UNIVERSAL APPEAL",
+      "foreigner_note": "This is one of the best tea experiences in China — tasting genuine Longjing tea in the hills where it's grown, served by the families who tend the plants. The scenic beauty of the terraced tea fields is an added bonus.",
+      "tip": "Spring (mid-March to April) is pre-Qingming harvest season — the most premium and expensive tea. Visit Meijiawu for a more authentic, less touristy experience than Longjing Village. Be cautious of scam pricing — genuine premium Longjing is expensive, but some vendors dramatically overcharge foreigners."
+    }
+  ],
+  "what_visitors_miss": [
+    {
+      "what": "Yangong Causeway (杨公堤) — the 'third causeway'",
+      "why": "Everyone walks Su Causeway and Bai Causeway, but the less-famous Yangong Causeway on the western side is equally beautiful, significantly less crowded, and lined with osmanthus trees that perfume the air in autumn. It passes through some of the lake's most tranquil sections."
+    },
+    {
+      "what": "Hand-rowed boats from Majiawan or Hangzhou Hotel docks",
+      "why": "The small, privately rowed boats offer an intimate, quiet experience compared to the crowded painted boats. Board from Majiawan dock to reach Wugui Tan (Turtle Pool), or from Hangzhou Hotel dock to Jinsha Gang — areas most tourists never see. In March, the Wugui Tan area has stunning cherry blossoms."
+    },
+    {
+      "what": "Taiziwan Park (太子湾公园) in spring",
+      "why": "Just south of the lake, this park explodes with tulips and cherry blossoms in March-April. It's free, less crowded than the lakeside, and offers some of the best spring flower photography in Hangzhou."
+    }
+  ],
+  "strategy": {
+    "smart_route": "Day 1: Broken Bridge at dawn → Walk Bai Causeway → Boat ride to Three Pools island → Disembark at Huagang (Flower Harbor) → Walk to Leifeng Pagoda for sunset → Dinner at a lakeside restaurant. Day 2: Longjing Tea Village morning visit → Cycle Yangong Causeway → Explore southern shore gardens → Evening Impressions West Lake show (seasonal). If only one day: Focus on the morning causeway walk + boat ride + Leifeng Pagoda sunset — this captures the three essential West Lake experiences.",
+    "what_to_skip": "The souvenir island shops on Three Pools island — overpriced and generic. Skip the expensive upper-deck tea service on painted boats (reportedly ¥2,500/person for tea and snacks — absurd). Don't try to circle the entire lake on foot in one day — it's 15 km and you'll be too exhausted to appreciate anything by the end.",
+    "pro_tips": "The West Lake Loop Bus (lines 51/52) is the smartest way to hop between distant points on the lake. Take it from Leifeng Pagoda to Broken Bridge (saves 30+ minutes of walking). The best Hangzhou food is not at the tourist restaurants right on the lake — walk one block inland for dramatically better prices and quality. Try Longjing Shrimp (龙井虾仁) and Dongpo Pork (东坡肉) at a local restaurant rather than a lakeside tourist trap."
+  },
+  "heads_up": [
+    {
+      "warning": "Crowds can be genuinely overwhelming",
+      "advice": "West Lake receives over 20 million visitors per year. Weekend afternoons and holidays transform the causeways into shoulder-to-shoulder crowds. The experience is completely different at dawn on a weekday vs. 2 PM on a Saturday. Plan your timing strategically."
+    },
+    {
+      "warning": "West Lake is much bigger than most visitors expect",
+      "advice": "The scenic area covers 60+ square kilometers. Don't try to see everything in one visit. Pick 3-4 highlights per day and enjoy them properly rather than rushing between checkpoints. The lake perimeter alone is 15 km."
+    },
+    {
+      "warning": "Scam pricing on tea and boats",
+      "advice": "Some hand-rowed boat operators quote inflated prices to foreigners. Agree on the price before boarding. In tea villages, vendors may pressure-sell premium Longjing at wildly inflated prices — real premium pre-Qingming Longjing costs ¥3,000-5,000/500g, but scam prices can be 10x higher. Buy from established shops if unsure."
+    },
+    {
+      "warning": "Hangzhou weather is unpredictable",
+      "advice": "Rain can appear suddenly, especially in spring. Carry an umbrella. However, West Lake in light rain is actually beautiful — 'rainy lake' is one of its celebrated aesthetic states. Don't cancel plans for light drizzle."
+    }
+  ],
+  "foreigners_watch_out": [
+    "The lake area is free but individual attractions charge separate admission. Budget ¥100-200 for a full day including boat ride, Leifeng Pagoda, and tea house. The costs add up.",
+    "Bikes are restricted on Su Causeway and Bai Causeway during peak hours and weekends. Check signs before cycling in — getting turned back is frustrating.",
+    "The 'Impressions West Lake' show by Zhang Yimou is spectacular but seasonal (typically March-November) and weather-dependent. It's performed on the water and canceled in heavy rain. Book tickets but check the weather.",
+    "Tea house culture is central to West Lake — locals spend hours drinking tea and chatting. Embrace this pace. Ordering tea at a lakeside tea house and just sitting for an hour is one of the most authentically Hangzhou things you can do.",
+    "Navigation around the lake can be confusing — many paths wind through parks and gardens without clear signage. Download Amap (高德地图) or Baidu Maps, which have detailed walking paths marked for the scenic area."
+  ],
+  "if_things_go_wrong": [
+    {
+      "problem": "It's raining and I can't enjoy the outdoor scenery",
+      "what_to_do": "West Lake in rain is actually one of its celebrated 'ten scenes' — embrace it. The Chinese saying 'rainy lake is also charming' exists for a reason. Take a covered boat ride, visit Leifeng Pagoda (indoor with views), or sit in a tea house watching rain on the water.",
+      "plan_b": "Visit nearby indoor attractions: the China National Silk Museum (free, excellent), Zhejiang Provincial Museum (free), or the China National Tea Museum. All are within the scenic area and world-class."
+    },
+    {
+      "problem": "Everything is too crowded to enjoy",
+      "what_to_do": "Escape to the western and southern shores — most crowds concentrate on the eastern shore near Broken Bridge and the northern end of Su Causeway. Yangong Causeway and the tea plantations behind Longjing Village are rarely crowded.",
+      "plan_b": "Leave the lake entirely and visit Lingyin Temple or the tea villages in the surrounding hills — they're close, beautiful, and typically less congested than the lakefront."
+    },
+    {
+      "problem": "Got scammed on a boat or tea purchase",
+      "what_to_do": "For boats: the standard painted boat fare is ¥55 including Three Pools island. Hand-rowed boats should be ¥150-180/hour. If charged significantly more, refuse to pay the excess and call the tourism complaint hotline: 0571-12345.",
+      "plan_b": "For tea: if pressured into buying overpriced tea, China's consumer protection law allows returns within 7 days. But prevention is better — buy from established shops in Longjing Village or Meijiawu rather than random vendors who approach you."
+    }
+  ],
+  "preparation": {
+    "what_to_wear": "Comfortable walking shoes — you'll cover a lot of ground on paved paths. Light layers for Hangzhou's variable weather. Summer requires sun protection and breathable clothing (hot and humid). Spring and autumn are mild. Winter needs a warm coat — temperatures drop to 0-5°C.",
+    "what_to_bring": "Umbrella (essential year-round in Hangzhou). Camera. Water bottle. Sunscreen in summer. A 1 RMB note for comparison photos at Three Pools. Portable charger. Cash for small boat operators. Translation app.",
+    "what_not_to_bring": "Don't bring a rigid itinerary — West Lake rewards wandering. No need for hiking gear (all paths are paved). Skip the heavy guidebook — use your phone."
+  },
+  "physical_accessibility": {
+    "physical_intensity": "light-moderate",
+    "physical_details": "The lakeside paths and causeways are flat, paved, and well-maintained — suitable for wheelchairs and strollers on the main routes. Leifeng Pagoda has an elevator. Boat boarding requires stepping down into the vessel. The surrounding hills (Longjing Village, tea plantations) involve moderate uphill walking. A full day of exploration easily exceeds 15,000 steps.",
+    "age_notes": "Suitable for all ages. The flat lakeside paths are excellent for elderly visitors and families with strollers. The West Lake Loop Bus makes the area accessible without extensive walking. Children enjoy the boat rides and feeding fish at Flower Harbor Park.",
+    "health_warnings": "Summer heat and humidity are intense — July and August temperatures regularly exceed 35°C with high humidity. Hydrate frequently and take breaks in shaded tea houses. Mosquitoes can be bothersome near the water in summer evenings."
+  },
+  "concierge_opportunities": [
+    {
+      "action": "Book Impressions West Lake tickets",
+      "platform": "Official website, Trip.com, or Damai.cn",
+      "value_to_user": "This Zhang Yimou-directed water spectacle sells out on popular dates — advance booking guarantees seats and allows choosing optimal viewing locations."
+    },
+    {
+      "action": "Arrange private boat tour with English-speaking guide",
+      "platform": "Klook, GetYourGuide, or hotel concierge",
+      "value_to_user": "A guide who knows the legends, poetry, and history transforms West Lake from a pretty lake into a living cultural text. Private boats avoid the crowded painted boat circuit."
+    },
+    {
+      "action": "Book Longjing tea plantation visit",
+      "platform": "Hotel concierge or local tea tour operators",
+      "value_to_user": "A guided tea visit with a knowledgeable host explains grading, processing, and tasting — and helps avoid overpriced tourist tea shops."
+    }
+  ],
+  "useful_chinese": [
+    {
+      "pinyin": "Xī Hú",
+      "chinese": "西湖",
+      "english": "West Lake"
+    },
+    {
+      "pinyin": "Sū Dī",
+      "chinese": "苏堤",
+      "english": "Su Causeway"
+    },
+    {
+      "pinyin": "Léi Fēng Tǎ",
+      "chinese": "雷峰塔",
+      "english": "Leifeng Pagoda"
+    },
+    {
+      "pinyin": "Duàn Qiáo",
+      "chinese": "断桥",
+      "english": "Broken Bridge"
+    },
+    {
+      "pinyin": "Sān Tán Yìn Yuè",
+      "chinese": "三潭印月",
+      "english": "Three Pools Mirroring the Moon"
+    },
+    {
+      "pinyin": "Lóng Jǐng Chá",
+      "chinese": "龙井茶",
+      "english": "Longjing (Dragon Well) tea"
+    },
+    {
+      "pinyin": "Yóu chuán duōshǎo qián?",
+      "chinese": "游船多少钱？",
+      "english": "How much is the boat ride?"
+    }
+  ],
+  "pair_with": [
+    {
+      "suggestion": "Lingyin Temple (灵隐寺)",
+      "why": "One of China's most important Buddhist temples, set in a forested valley behind the western hills. Ancient rock carvings, incense-filled halls, and a totally different atmosphere from the lake.",
+      "travel_time": "15-20 minutes by bus or taxi from the lake"
+    },
+    {
+      "suggestion": "Xixi National Wetland Park (西溪国家湿地公园)",
+      "why": "A natural wetland oasis just 5 km from the lake — the perfect nature contrast to West Lake's curated beauty. Boat rides through reed-lined channels offer a wilder, quieter experience.",
+      "travel_time": "20-minute taxi or Metro Line 3"
+    },
+    {
+      "suggestion": "Hefang Street (河坊街)",
+      "why": "A restored historical street south of the lake with traditional shops, street food, and local crafts. Good for evening browsing after a day on the lake.",
+      "travel_time": "10-minute walk from the lake's eastern shore"
+    }
+  ],
+  "cultural_context": "West Lake is not merely a scenic spot — it is the spiritual heart of Chinese landscape aesthetics. For over a thousand years, this lake has shaped how the Chinese think about beauty in nature. The 'Ten Scenes of West Lake,' codified in the Song Dynasty, established an aesthetic vocabulary that influenced garden design, painting, and poetry across East Asia. When the poet Su Dongpo served as Hangzhou's governor in the 11th century, he dredged the lake and built the causeway that bears his name, establishing the precedent that managing this landscape was the duty of civilized governance. The White Snake Legend — China's most beloved love story — is set at the Broken Bridge and Leifeng Pagoda, weaving myth into the physical landscape. Marco Polo reportedly called Hangzhou 'the finest and most splendid city in the world,' and West Lake was the primary reason. UNESCO recognized it as a World Heritage Site specifically for its cultural landscape — the fusion of natural beauty and human artistry that has set the standard for Chinese aesthetics for a millennium. When Chinese people say 'above there is heaven, below there are Suzhou and Hangzhou,' they are largely talking about this lake.",
+  "photo_spots": [
+    {
+      "location": "Su Causeway at dawn with mist",
+      "tip": "Arrive before 6:30 AM for the mist effect. Shoot long focal length down the causeway with willow branches framing the water. The bridges create natural leading lines.",
+      "why": "The misty causeway with weeping willows is the quintessential West Lake image — the scene that has inspired a thousand years of Chinese painting."
+    },
+    {
+      "location": "Leifeng Pagoda at sunset from the northern shore",
+      "tip": "The silhouette of the pagoda against a sunset sky, reflected in the lake, is best captured from the Bai Causeway area looking south. Golden hour in autumn is perfection.",
+      "why": "The pagoda's sunset silhouette is Hangzhou's most iconic image — atmospheric, romantic, and immediately recognizable."
+    },
+    {
+      "location": "Three Pools stone pagodas with a 1 RMB note",
+      "tip": "Hold up a 1 RMB note next to the real scene for the comparison shot. Mid-morning light works best. Zoom in from the island's southern shore.",
+      "why": "A fun, shareable photo that connects you to something every Chinese person recognizes — the scene printed on their most common banknote."
+    },
+    {
+      "location": "Xiling Bridge (西泠桥) in rain or mist",
+      "tip": "This lesser-known bridge on the northwest shore photographs beautifully in rain — the boats, umbrellas, and reflections create a scene straight from a Chinese watercolor.",
+      "why": "Multiple visitors call this their favorite unplanned discovery — a naturally cinematic composition that most tourists miss."
+    }
+  ],
+  "card_name": "West Lake",
+  "card_type": "UNESCO HERITAGE LAKE",
+  "card_hook": "A thousand years of poetry painted in water and willows.",
+  "best_for": [
+    "cultural-immersion",
+    "romantic-getaway",
+    "photographers-paradise",
+    "tea-lovers",
+    "iconic-china-experience"
+  ]
+}
