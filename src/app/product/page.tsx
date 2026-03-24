@@ -332,7 +332,7 @@ export default function Product() {
             {[
               { icon: Smartphone, title: "Pre-trip setup", desc: "Alipay, essential apps, transport basics, and practical prep before arrival." },
               { icon: MessageCircle, title: "In-trip troubleshooting", desc: "Get help when payments, transport, bookings, or local systems get confusing." },
-              { icon: Train, title: "Booking support", desc: "Guidance with trains, attractions, taxis, and key trip logistics." },
+              { icon: Train, title: "Booking & transport", desc: "Guidance with trains, attractions, taxis, and key trip logistics." },
               { icon: Utensils, title: "Local travel advice", desc: "Ask about places, timing, routes, food, neighborhoods, and what's worth doing." },
             ].map((item, i) => (
               <motion.div

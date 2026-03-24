@@ -105,7 +105,7 @@ export default function Navbar() {
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Link href="/product" className="btn-primary text-sm py-2 px-5">
-              Get ChinaPal — $49
+              Get ChinaPal
             </Link>
           </div>
 
@@ -158,7 +158,7 @@ export default function Navbar() {
           </div>
           <div className="pt-3">
             <Link href="/product" className="btn-primary w-full justify-center text-sm">
-              Get ChinaPal — $49
+              Get ChinaPal
             </Link>
           </div>
         </div>

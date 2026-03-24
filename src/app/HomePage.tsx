@@ -188,7 +188,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 custom={3}
               >
                 <Link href="/product" className="btn-primary text-base">
-                  Get ChinaPal — $49
+                  Get ChinaPal — from $29
                   <ArrowRight size={16} />
                 </Link>
                 <a
@@ -495,7 +495,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 custom={3}
               >
                 <Link href="/product" className="btn-primary">
-                  Get started for $49
+                  Chat with us
                   <ArrowRight size={16} />
                 </Link>
               </motion.div>
