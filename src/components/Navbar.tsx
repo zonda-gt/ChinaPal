@@ -104,9 +104,9 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Link href="/product" className="btn-primary text-sm py-2 px-5">
+            <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-sm py-2 px-5">
               Get ChinaPal
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -157,9 +157,9 @@ export default function Navbar() {
             </div>
           </div>
           <div className="pt-3">
-            <Link href="/product" className="btn-primary w-full justify-center text-sm">
+            <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary w-full justify-center text-sm">
               Get ChinaPal
-            </Link>
+            </a>
           </div>
         </div>
       )}

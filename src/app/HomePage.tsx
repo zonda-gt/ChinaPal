@@ -177,7 +177,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 custom={2}
               >
                 A local expert one text away — for setup, bookings, transport,
-                and every question China throws at you. $49 for 10 days.
+                and every question China throws at you.
               </motion.p>
 
               <motion.div
@@ -187,7 +187,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hey!%20%F0%9F%91%8B%20Welcome%20to%20ChinaPal%20%E2%80%94%20we%20help%20foreign%20travelers%20navigate%20China%20by%20text.%0AWhen%20are%20you%20heading%20to%20China%3F%20Tell%20us%20your%20dates%20and%20cities%20and%20we%27ll%20help%20you%20get%20sorted." target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
+                <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
                   Get ChinaPal
                   <ArrowRight size={16} />
                 </a>
@@ -494,7 +494,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hey!%20%F0%9F%91%8B%20Welcome%20to%20ChinaPal%20%E2%80%94%20we%20help%20foreign%20travelers%20navigate%20China%20by%20text.%0AWhen%20are%20you%20heading%20to%20China%3F%20Tell%20us%20your%20dates%20and%20cities%20and%20we%27ll%20help%20you%20get%20sorted." target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Chat with us
                   <ArrowRight size={16} />
                 </a>
@@ -774,7 +774,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
             <p className="font-body text-white/50 text-base mb-8 max-w-md mx-auto">
               $49 per trip. 10 days of human-based text support. Everything you need.
             </p>
-            <a href="https://wa.me/447549879026?text=Hey!%20%F0%9F%91%8B%20Welcome%20to%20ChinaPal%20%E2%80%94%20we%20help%20foreign%20travelers%20navigate%20China%20by%20text.%0AWhen%20are%20you%20heading%20to%20China%3F%20Tell%20us%20your%20dates%20and%20cities%20and%20we%27ll%20help%20you%20get%20sorted." target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
+            <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
               Get ChinaPal for my trip
               <ArrowRight size={16} />
             </a>
