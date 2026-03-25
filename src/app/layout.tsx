@@ -4,6 +4,7 @@ import { PostHogProvider } from "./providers";
 import { PostHogPageView } from "./PostHogPageView";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://chinapal.co"),
   title: {
     default: "ChinaPal — Your China Travel Concierge",
     template: "%s | ChinaPal",

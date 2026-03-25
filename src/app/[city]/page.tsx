@@ -25,6 +25,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   return {
     title: `${name} Travel Guide — Top Attractions`,
     description: `In-depth guides to ${name}'s best attractions. Written for foreign travelers, powered by local knowledge.`,
+    alternates: {
+      canonical: `https://chinapal.co/${city}`,
+    },
+    openGraph: {
+      title: `${name} Travel Guide — Top Attractions`,
+      description: `In-depth guides to ${name}'s best attractions. Written for foreign travelers, powered by local knowledge.`,
+      url: `https://chinapal.co/${city}`,
+      type: "website",
+    },
   };
 }
 
