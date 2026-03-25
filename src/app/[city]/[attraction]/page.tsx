@@ -30,15 +30,22 @@ export async function generateMetadata({
   const url = `https://chinapal.co/${city}/${slug}`;
   const imageUrl = `https://chinapal.co/images/${slug}/ctrip_photo_01.jpg`;
 
+  // Truncate hook to ~155 chars for meta description, breaking at last word boundary
+  const hook = data.hook;
+  const description =
+    hook.length <= 155
+      ? hook
+      : hook.slice(0, 155).replace(/\s+\S*$/, "") + "…";
+
   return {
     title: `${data.attraction_name_en} (${data.attraction_name_cn}) — ${cityName} Guide`,
-    description: data.hook,
+    description,
     alternates: {
       canonical: url,
     },
     openGraph: {
       title: `${data.attraction_name_en} — ${cityName} Travel Guide`,
-      description: data.hook,
+      description,
       type: "article",
       url,
       images: [

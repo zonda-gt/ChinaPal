@@ -22,6 +22,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { city } = await params;
   const name = getCityNameEn(city);
   if (!name || name === city) return { title: "Not Found" };
+
+  const attractions = getAttractionsByCity(city);
+  const firstSlug = attractions[0]?.slug;
+  const imageUrl = firstSlug
+    ? `https://chinapal.co/images/${firstSlug}/ctrip_photo_01.jpg`
+    : undefined;
+
   return {
     title: `${name} Travel Guide — Top Attractions`,
     description: `In-depth guides to ${name}'s best attractions. Written for foreign travelers, powered by local knowledge.`,
@@ -33,6 +40,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description: `In-depth guides to ${name}'s best attractions. Written for foreign travelers, powered by local knowledge.`,
       url: `https://chinapal.co/${city}`,
       type: "website",
+      ...(imageUrl && {
+        images: [{ url: imageUrl, width: 1200, height: 630, alt: `${name} travel guide` }],
+      }),
     },
   };
 }
