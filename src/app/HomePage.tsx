@@ -58,18 +58,18 @@ const marqueeItems = [
 const howItWorks = [
   {
     step: "01",
-    title: "Purchase your Trip Pass",
-    desc: "One flat fee of $49 unlocks 10 days of human-based text support. No subscriptions.",
+    title: "Tell us about your trip",
+    desc: "Share your dates, cities, and interests. We'll give you tailored travel consultation — setup advice, itinerary tips, and what to prepare before you fly.",
   },
   {
     step: "02",
     title: "Message us anytime",
-    desc: "Text on WhatsApp or WeChat — before your trip for setup, during for real-time help.",
+    desc: "Text on WhatsApp or WeChat — before your trip for setup, during for real-time help with bookings, transport, and local questions.",
   },
   {
     step: "03",
     title: "Travel with confidence",
-    desc: "We handle the friction so you can focus on the experience.",
+    desc: "We handle the friction so you can focus on the experience. One flat fee, no subscriptions.",
   },
 ];
 
@@ -188,7 +188,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 custom={3}
               >
                 <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
-                  Get ChinaPal
+                  Ask ChinaPal Free
                   <ArrowRight size={16} />
                 </a>
                 <a
@@ -495,7 +495,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 custom={3}
               >
                 <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
-                  Chat with us
+                  Start Asking Free
                   <ArrowRight size={16} />
                 </a>
               </motion.div>

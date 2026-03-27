@@ -50,6 +50,7 @@ const plans = [
     desc: "The most popular option for a standard China trip.",
     features: [
       "10 days of text support",
+      "Tailored travel consultation",
       "Pre-trip setup help",
       "Unlimited messages",
       "Train & attraction booking help",
@@ -57,7 +58,7 @@ const plans = [
       "Fast troubleshooting",
       "WhatsApp or WeChat",
     ],
-    cta: "Get ChinaPal for my trip",
+    cta: "Start Free Trial",
     highlight: true,
     tag: "Most popular",
   },
@@ -210,7 +211,7 @@ export default function Product() {
             <div className="flex gap-0.5">
               {[1,2,3,4,5].map(s => <Star key={s} size={12} className="fill-[#DC2626] text-[#DC2626]" />)}
             </div>
-            <span className="font-body text-xs text-[#78716C]">500+ travelers helped</span>
+            <span className="font-body text-xs text-[#78716C]">100+ travelers helped</span>
           </motion.div>
         </div>
       </section>
@@ -279,8 +280,9 @@ export default function Product() {
                   </div>
 
                   <a
-                    href="#"
-                    onClick={(e) => e.preventDefault()}
+                    href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
                       plan.highlight
                         ? "bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-[0_2px_12px_rgba(220,38,38,0.4)]"
@@ -330,6 +332,7 @@ export default function Product() {
 
           <div className="grid sm:grid-cols-2 gap-4">
             {[
+              { icon: Zap, title: "Tailored travel consultation", desc: "Share your trip details and get personalised advice on itinerary, timing, and what to prioritise for your cities." },
               { icon: Smartphone, title: "Pre-trip setup", desc: "Alipay, essential apps, transport basics, and practical prep before arrival." },
               { icon: MessageCircle, title: "In-trip troubleshooting", desc: "Get help when payments, transport, bookings, or local systems get confusing." },
               { icon: Train, title: "Booking & transport", desc: "Guidance with trains, attractions, taxis, and key trip logistics." },
@@ -511,11 +514,12 @@ export default function Product() {
               $49 per trip. 10 days of human-based text support.
             </p>
             <a
-              href="#"
-              onClick={(e) => e.preventDefault()}
+              href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-base px-8 py-3.5"
             >
-              Get ChinaPal for my trip
+              Start Free Trial
               <ArrowRight size={16} />
             </a>
             <p className="font-body text-xs text-[#A8A29E] mt-4">
