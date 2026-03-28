@@ -11,7 +11,6 @@ import {
   Smartphone,
   Train,
   Utensils,
-  X,
   Star,
   Zap,
 } from "lucide-react";
@@ -32,6 +31,7 @@ const plans = [
     name: "Essential",
     price: "$29",
     duration: "3 days",
+    anchor: "Less than a coffee per day",
     desc: "Short trip or just need help getting set up.",
     features: [
       "3 days of text support",
@@ -47,6 +47,7 @@ const plans = [
     name: "Trip Pass",
     price: "$49",
     duration: "10 days",
+    anchor: "Less than one taxi ride from the airport",
     desc: "The most popular option for a standard China trip.",
     features: [
       "10 days of text support",
@@ -66,6 +67,7 @@ const plans = [
     name: "Extended Trip",
     price: "$79",
     duration: "21 days",
+    anchor: "Less than $4 per day",
     desc: "Longer itinerary or multiple cities across China.",
     features: [
       "21 days of text support",
@@ -176,19 +178,19 @@ export default function Product() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08 }}
           >
-            Your China trip,
+            Never be stuck
             <br />
-            <span className="italic text-[#DC2626]">backed up.</span>
+            <span className="italic text-[#DC2626]">in China.</span>
           </motion.h1>
 
           <motion.p
-            className="font-body text-base text-[#78716C] leading-relaxed max-w-md mx-auto mb-8"
+            className="font-body text-base text-[#78716C] leading-relaxed max-w-lg mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.16 }}
           >
-            10 days of local help by text — for setup, bookings, transport, and
-            day-to-day questions. Travel independently, with backup.
+            Alipay fails. The ticket site is all Chinese. You&apos;re at the wrong
+            train station. That&apos;s when you text us — and we fix it in minutes.
           </motion.p>
 
           {/* Mini social proof */}
@@ -257,8 +259,11 @@ export default function Product() {
                         per trip
                       </span>
                     </div>
-                    <p className={`font-body text-xs mb-3 ${plan.highlight ? "text-white/40" : "text-[#A8A29E]"}`}>
+                    <p className={`font-body text-xs mb-1 ${plan.highlight ? "text-white/40" : "text-[#A8A29E]"}`}>
                       {plan.duration} of support
+                    </p>
+                    <p className={`font-body text-xs mb-3 ${plan.highlight ? "text-[#FCA5A5]" : "text-[#DC2626]"}`}>
+                      {plan.anchor}
                     </p>
                     <p className={`font-body text-sm leading-relaxed ${plan.highlight ? "text-white/60" : "text-[#78716C]"}`}>
                       {plan.desc}
@@ -280,7 +285,7 @@ export default function Product() {
                   </div>
 
                   <a
-                    href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
+                    href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
@@ -306,6 +311,31 @@ export default function Product() {
           >
             No subscription. No hidden fees. Pay once per trip.
           </motion.p>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          WHY $49 WORKS
+          ══════════════════════════════════════════ */}
+      <section className="py-16 bg-white">
+        <div className="cp-container max-w-2xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <h2 className="font-display text-3xl md:text-4xl text-[#111110] text-center mb-6">
+              Why <span className="italic text-[#DC2626]">$49</span> works.
+            </h2>
+            <p className="font-body text-base text-[#78716C] leading-relaxed text-center">
+              We&apos;re not a travel agency. We don&apos;t book your hotels. We don&apos;t arrange tours.
+              We don&apos;t meet you at the airport. You travel independently — we&apos;re the person
+              you text when things go sideways. No office, no vehicles, no staff on the ground.
+              Just someone who knows China, on WhatsApp, when you need them.
+              That&apos;s why it costs less than a single dinner in Shanghai.
+            </p>
+          </motion.div>
         </div>
       </section>
 
@@ -400,65 +430,34 @@ export default function Product() {
       </section>
 
       {/* ══════════════════════════════════════════
-          WHO IT'S FOR
+          BEST FOR
           ══════════════════════════════════════════ */}
       <section className="section bg-[#FAFAF9]">
-        <div className="cp-container max-w-3xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={0}
-            >
-              <div className="bg-white rounded-2xl border border-[#E7E5E4] p-7">
-                <h3 className="font-display text-xl text-[#111110] mb-5">Best for</h3>
-                <div className="space-y-3">
-                  {[
-                    "First-time travelers to China",
-                    "Independent travelers who want backup",
-                    "Anyone worried about payments & transport",
-                    "Couples, families, and solo travelers",
-                    "Anyone who wants local knowledge by text",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <CheckCircle2 size={14} className="text-[#DC2626] shrink-0" />
-                      <span className="font-body text-sm text-[#111110]">{item}</span>
-                    </div>
-                  ))}
-                </div>
+        <div className="cp-container max-w-2xl mx-auto">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <div className="bg-white rounded-2xl border border-[#E7E5E4] p-7">
+              <h3 className="font-display text-xl text-[#111110] mb-5 text-center">Best for</h3>
+              <div className="grid sm:grid-cols-2 gap-3">
+                {[
+                  "First-time travelers to China",
+                  "Independent travelers who want backup",
+                  "Anyone worried about payments & transport",
+                  "Couples, families, and solo travelers",
+                  "Anyone who wants local knowledge by text",
+                ].map((item) => (
+                  <div key={item} className="flex items-center gap-2.5">
+                    <CheckCircle2 size={14} className="text-[#DC2626] shrink-0" />
+                    <span className="font-body text-sm text-[#111110]">{item}</span>
+                  </div>
+                ))}
               </div>
-            </motion.div>
-
-            <motion.div
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              variants={fadeUp}
-              custom={1}
-            >
-              <div className="bg-white rounded-2xl border border-[#E7E5E4] p-7">
-                <h3 className="font-display text-xl text-[#111110] mb-5">
-                  What ChinaPal is <span className="italic">not</span>
-                </h3>
-                <div className="space-y-3">
-                  {[
-                    "Guided tours or in-person accompaniment",
-                    "Visa applications or immigration services",
-                    "24/7 emergency rescue services",
-                    "In-person translation",
-                    "Full luxury concierge services",
-                  ].map((item) => (
-                    <div key={item} className="flex items-center gap-2.5">
-                      <X size={14} className="text-[#A8A29E] shrink-0" />
-                      <span className="font-body text-sm text-[#78716C]">{item}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-          </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
@@ -506,15 +505,15 @@ export default function Product() {
             variants={fadeUp}
           >
             <h2 className="font-display text-4xl md:text-5xl text-[#111110] mb-4 leading-[1.05]">
-              Travel independently.
+              Don&apos;t figure out China
               <br />
-              <span className="italic text-[#DC2626]">With backup.</span>
+              <span className="italic text-[#DC2626]">alone.</span>
             </h2>
             <p className="font-body text-sm text-[#78716C] mb-8 leading-relaxed">
-              $49 per trip. 10 days of human-based text support.
+              Tell us where you&apos;re going. We&apos;ll make sure you&apos;re ready.
             </p>
             <a
-              href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
+              href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-base px-8 py-3.5"

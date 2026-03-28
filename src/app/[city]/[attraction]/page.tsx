@@ -5,6 +5,7 @@ import {
   getAttraction,
   getCityNameEn,
 } from "@/lib/attractions";
+import { CDN_BASE } from "@/lib/constants";
 import AttractionPage from "./AttractionPage";
 
 interface PageProps {
@@ -28,7 +29,7 @@ export async function generateMetadata({
 
   const cityName = getCityNameEn(city);
   const url = `https://chinapal.co/${city}/${slug}`;
-  const imageUrl = `https://chinapal.co/images/${slug}/ctrip_photo_01.jpg`;
+  const imageUrl = `${CDN_BASE}/images/${slug}/ctrip_photo_01.jpg`;
 
   // Truncate hook to ~155 chars for meta description, breaking at last word boundary
   const hook = data.hook;
@@ -71,7 +72,7 @@ function AttractionJsonLd({
 }) {
   const cityName = getCityNameEn(citySlug);
   const url = `https://chinapal.co/${citySlug}/${attractionSlug}`;
-  const imageUrl = `https://chinapal.co/images/${attractionSlug}/ctrip_photo_01.jpg`;
+  const imageUrl = `${CDN_BASE}/images/${attractionSlug}/ctrip_photo_01.jpg`;
 
   const attractionSchema = {
     "@context": "https://schema.org",

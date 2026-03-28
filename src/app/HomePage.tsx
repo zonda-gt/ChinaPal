@@ -77,19 +77,19 @@ const testimonials = [
   {
     name: "Sarah M.",
     location: "London → Shanghai",
-    text: "ChinaPal sorted my Alipay in 20 minutes. I'd been struggling for days.",
+    text: "I was standing outside a restaurant in Shanghai, couldn't read the menu, and starting to panic. I texted ChinaPal and 3 minutes later I knew exactly what to order. That peace of mind was worth 10x the price.",
     stars: 5,
   },
   {
     name: "James K.",
     location: "New York → Beijing",
-    text: "Booked all my train tickets through them. They knew exactly which class and platform.",
+    text: "My Alipay stopped working at a street market with a queue behind me. I texted ChinaPal, they walked me through the fix in real time, and I paid before the vendor even got impatient. Lifesaver.",
     stars: 5,
   },
   {
     name: "Lena H.",
     location: "Berlin → Chengdu",
-    text: "The restaurant recommendations alone were worth it. Every place was incredible.",
+    text: "I showed up at the wrong train station in Chengdu with 40 minutes until departure. ChinaPal told me exactly which metro to take and I made it with 5 minutes to spare. I would have missed my train without them.",
     stars: 5,
   },
 ];
@@ -162,11 +162,10 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={1}
               >
-                China travel,
+                Travel China like
                 <br />
-                <span className="italic text-[#FCA5A5]">without</span>
-                <br />
-                the friction.
+                you have a{" "}
+                <span className="italic text-[#FCA5A5]">local friend.</span>
               </motion.h1>
 
               <motion.p
@@ -176,8 +175,9 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={2}
               >
-                A local expert one text away — for setup, bookings, transport,
-                and every question China throws at you.
+                Payments don&apos;t work. Signs you can&apos;t read. Trains that sell out.
+                ChinaPal is the friend who knows the city and is one text away
+                when things get confusing.
               </motion.p>
 
               <motion.div
@@ -187,7 +187,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
+                <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
                   Ask ChinaPal Free
                   <ArrowRight size={16} />
                 </a>
@@ -326,12 +326,12 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
             variants={fadeUp}
           >
             <p className="font-body text-xs font-semibold text-[#DC2626] uppercase tracking-widest mb-3">
-              What&apos;s included
+              When things go wrong
             </p>
             <h2 className="font-display text-3xl md:text-4xl text-[#111110] mb-4">
-              Everything China throws at you,
+              You text us.
               <br />
-              <span className="italic">handled.</span>
+              <span className="italic">We fix it.</span>
             </h2>
           </motion.div>
 
@@ -348,8 +348,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <CreditCard size={18} className="text-[#DC2626]" />
               </div>
               <div>
-                <h3 className="font-display text-lg text-white mb-1">Alipay & App Setup</h3>
-                <p className="font-body text-xs text-white/50">Get digital payments working before you land.</p>
+                <h3 className="font-display text-lg text-white mb-1">Your payment fails at the restaurant.</h3>
+                <p className="font-body text-xs text-white/50">You text us. Fixed in 2 minutes.</p>
               </div>
             </motion.div>
 
@@ -365,8 +365,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <Train size={16} className="text-[#DC2626]" />
               </div>
               <div>
-                <h3 className="font-display text-sm text-[#111110] mb-0.5">Train & Transport</h3>
-                <p className="font-body text-xs text-[#78716C]">High-speed rail, metro, taxis.</p>
+                <h3 className="font-display text-sm text-[#111110] mb-0.5">The booking site is all Chinese.</h3>
+                <p className="font-body text-xs text-[#78716C]">You screenshot it. We tell you what to press.</p>
               </div>
             </motion.div>
 
@@ -382,8 +382,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <Ticket size={16} className="text-[#DC2626]" />
               </div>
               <div>
-                <h3 className="font-display text-sm text-[#111110] mb-0.5">Attraction Tickets</h3>
-                <p className="font-body text-xs text-[#78716C]">Skip the queues.</p>
+                <h3 className="font-display text-sm text-[#111110] mb-0.5">Forbidden City is sold out.</h3>
+                <p className="font-body text-xs text-[#78716C]">We know the workaround.</p>
               </div>
             </motion.div>
 
@@ -399,8 +399,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <Utensils size={16} className="text-[#DC2626]" />
               </div>
               <div>
-                <h3 className="font-display text-sm text-[#111110] mb-0.5">Restaurant Picks</h3>
-                <p className="font-body text-xs text-[#78716C]">Local, not tourist traps.</p>
+                <h3 className="font-display text-sm text-[#111110] mb-0.5">The menu has no English.</h3>
+                <p className="font-body text-xs text-[#78716C]">Send us a photo. We tell you what to order.</p>
               </div>
             </motion.div>
 
@@ -416,8 +416,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <Navigation size={16} className="text-[#DC2626]" />
               </div>
               <div>
-                <h3 className="font-display text-sm text-[#111110] mb-0.5">Getting Around</h3>
-                <p className="font-body text-xs text-[#78716C]">Step-by-step directions.</p>
+                <h3 className="font-display text-sm text-[#111110] mb-0.5">Wrong exit, no English taxi.</h3>
+                <p className="font-body text-xs text-[#78716C]">We send the Chinese address to show the driver.</p>
               </div>
             </motion.div>
 
@@ -433,8 +433,8 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 <MessageCircle size={18} className="text-white" />
               </div>
               <div>
-                <h3 className="font-display text-base text-white mb-0.5">Any China Question</h3>
-                <p className="font-body text-xs text-white/50">Culture, customs, language, logistics — just ask.</p>
+                <h3 className="font-display text-base text-white mb-0.5">Anything else goes wrong?</h3>
+                <p className="font-body text-xs text-white/50">Culture, customs, language, logistics — just text us.</p>
               </div>
             </motion.div>
           </div>
@@ -494,7 +494,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Start Asking Free
                   <ArrowRight size={16} />
                 </a>
@@ -767,15 +767,15 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
             variants={fadeUp}
           >
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl text-white mb-5 leading-[1.05]">
-              Ready to explore China
+              Don&apos;t figure out China
               <br />
-              <span className="italic text-[#FCA5A5]">without the friction?</span>
+              <span className="italic text-[#FCA5A5]">alone.</span>
             </h2>
             <p className="font-body text-white/50 text-base mb-8 max-w-md mx-auto">
-              $49 per trip. 10 days of human-based text support. Everything you need.
+              Tell us where you&apos;re going. We&apos;ll make sure you&apos;re ready.
             </p>
-            <a href="https://wa.me/447549879026?text=Hey%21%20I%27m%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
-              Get ChinaPal for my trip
+            <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
+              Ask ChinaPal Free
               <ArrowRight size={16} />
             </a>
             <p className="font-body text-xs text-white/30 mt-4">

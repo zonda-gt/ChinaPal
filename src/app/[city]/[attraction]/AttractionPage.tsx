@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import type { Attraction } from "@/lib/attractions";
+import { CDN_BASE } from "@/lib/constants";
 
 interface Props {
   data: Attraction;
@@ -10,7 +11,7 @@ interface Props {
 }
 
 export default function AttractionPage({ data, citySlug, attractionSlug }: Props) {
-  const img = (file: string) => `/images/${attractionSlug}/${file}`;
+  const img = (file: string) => `${CDN_BASE}/images/${attractionSlug}/${file}`;
   const heroImg = img("ctrip_photo_01.jpg");
   const highlightImg = (h: { image?: string; name: string }) =>
     h.image ? img(h.image) : heroImg;

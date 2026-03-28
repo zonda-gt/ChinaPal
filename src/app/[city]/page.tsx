@@ -7,6 +7,7 @@ import {
   getCityNameEn,
   getCityNameCn,
 } from "@/lib/attractions";
+import { CDN_BASE } from "@/lib/constants";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const attractions = getAttractionsByCity(city);
   const firstSlug = attractions[0]?.slug;
   const imageUrl = firstSlug
-    ? `https://chinapal.co/images/${firstSlug}/ctrip_photo_01.jpg`
+    ? `${CDN_BASE}/images/${firstSlug}/ctrip_photo_01.jpg`
     : undefined;
 
   return {
@@ -86,7 +87,7 @@ export default async function CityPage({ params }: PageProps) {
               >
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={`/images/${a.slug}/ctrip_photo_01.jpg`}
+                    src={`${CDN_BASE}/images/${a.slug}/ctrip_photo_01.jpg`}
                     alt={a.data.attraction_name_en}
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
