@@ -102,7 +102,7 @@ const faqs = [
   },
   {
     q: "Do you book everything for me directly?",
-    a: "We help with booking-related questions and support, and where applicable we guide or assist with the process. For most bookings we walk you through it step by step.",
+    a: "Yes — we handle bookings for you. Train tickets, attraction reservations, and anything else you need booked. Just tell us what you want and we'll take care of it.",
   },
   {
     q: "What if I'm traveling longer than 10 days?",
@@ -329,10 +329,8 @@ export default function Product() {
               Why <span className="italic text-[#DC2626]">$49</span> works.
             </h2>
             <p className="font-body text-base text-[#78716C] leading-relaxed text-center">
-              We&apos;re not a travel agency. We don&apos;t book your hotels. We don&apos;t arrange tours.
-              We don&apos;t meet you at the airport. You travel independently — we&apos;re the person
-              you text when things go sideways. No office, no vehicles, no staff on the ground.
-              Just someone who knows China, on WhatsApp, when you need them.
+              We&apos;re not a travel agency. We don&apos;t meet you at the airport.
+              You travel independently — we are someone who knows China, on WhatsApp, when you need them.
               That&apos;s why it costs less than a single dinner in Shanghai.
             </p>
           </motion.div>
