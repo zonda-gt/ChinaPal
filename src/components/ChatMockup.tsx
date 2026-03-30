@@ -126,7 +126,7 @@ export default function ChatMockup({ autoPlay = true }: { autoPlay?: boolean }) 
               return (
                 <div key={i} className="flex justify-end animate-bubble-in">
                   <div
-                    className="max-w-[75%] rounded-2xl rounded-tr-sm px-3 py-2 text-xs text-white"
+                    className="max-w-[75%] rounded-2xl rounded-tr-sm px-3 py-2 text-sm text-white"
                     style={{ backgroundColor: RED, fontFamily: FONT }}
                   >
                     {msg.text}
