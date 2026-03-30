@@ -280,7 +280,7 @@ export default function Product() {
                   </div>
 
                   <a
-                    href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3"
+                    href="https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
@@ -514,7 +514,7 @@ export default function Product() {
               $49 per trip. 10 days of human-based text support.
             </p>
             <a
-              href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3"
+              href="https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-base px-8 py-3.5"

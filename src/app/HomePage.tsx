@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { ArrowRight, MessageCircle, Zap, Shield } from "lucide-react";
+import { ArrowRight, MessageCircle, Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatMockup from "@/components/ChatMockup";
@@ -11,10 +11,8 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import PricingSection from "@/components/PricingSection";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp";
-const HAPPY_TRAVELER = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-happy-traveler-apdXYVS7AUjaND4MGNMiZk.webp";
-const STRESS_DIY = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-stress-diy-RRscBThD6EWMEdhQKQiWUM.webp";
 
-const WA_LINK = "https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3";
+const WA_LINK = "https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3";
 
 function HeroSection() {
   const [loaded, setLoaded] = useState(false);
@@ -60,7 +58,7 @@ function HeroSection() {
                   <em className="not-italic" style={{ color: "oklch(0.70 0.18 25)" }}>handled.</em>
                 </h1>
 
-                <p className="text-xl text-white/80 mb-8 max-w-md leading-relaxed font-body">
+                <p className="text-sm md:text-xl text-white/80 mb-8 max-w-md leading-relaxed font-body">
                   Trains, tickets, restaurants, Didi — just message us. We speak Chinese so you don&apos;t have to.
                 </p>
 
@@ -86,7 +84,6 @@ function HeroSection() {
                 <div className="flex flex-wrap items-center gap-6 mt-10">
                   {[
                     { icon: MessageCircle, text: "WhatsApp & chat" },
-                    { icon: Zap, text: "Response in minutes" },
                     { icon: Shield, text: "100% satisfaction guarantee" },
                   ].map(({ icon: Icon, text }) => (
                     <div key={text} className="flex items-center gap-2">
@@ -177,41 +174,68 @@ function BeforeAfterSection() {
   }, []);
 
   return (
-    <section className="py-24 px-4 bg-white overflow-hidden">
-      <div className="max-w-6xl mx-auto">
+    <section className="py-12 md:py-24 px-4 bg-white overflow-hidden">
+      <div className="max-w-3xl mx-auto">
         <div
           ref={ref}
-          className="grid grid-cols-1 md:grid-cols-2 gap-0 rounded-3xl overflow-hidden shadow-2xl transition-all duration-1000"
-          style={{ opacity: visible ? 1 : 0, transform: visible ? "scale(1)" : "scale(0.97)" }}
+          className="grid grid-cols-2 gap-2 md:gap-6 transition-all duration-1000"
+          style={{ opacity: visible ? 1 : 0, transform: visible ? "translateY(0)" : "translateY(24px)" }}
         >
-          <div className="relative">
-            <img src={STRESS_DIY} alt="Stressed traveler trying to book China trip" className="w-full h-80 md:h-full object-cover" style={{ filter: "grayscale(30%) brightness(0.7)" }} />
-            <div className="absolute inset-0 flex flex-col justify-end p-8" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 60%)" }}>
-              <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 rounded-full bg-stone-500 flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">&#x2715;</span>
-                </div>
-                <span className="text-white/70 text-xs font-bold uppercase tracking-widest font-body">Without ChinaPal</span>
+          {/* Without */}
+          <div className="rounded-xl md:rounded-2xl p-3 md:p-8 border border-stone-200" style={{ backgroundColor: "oklch(0.97 0.003 260)" }}>
+            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
+              <div className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-stone-400 flex items-center justify-center">
+                <span className="text-white text-[8px] md:text-xs font-bold">&#x2715;</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-white mb-2">5+ apps. 47 options. 0 answers.</h3>
-              <p className="text-white/70 text-sm font-body">Hours lost to Chinese apps, wrong gates, and tourist traps.</p>
+              <span className="text-[8px] md:text-xs font-bold uppercase tracking-widest font-body" style={{ color: "oklch(0.52 0.01 260)" }}>Without ChinaPal</span>
             </div>
+            <h3 className="font-display text-sm md:text-2xl font-bold mb-1 md:mb-2" style={{ color: "oklch(0.18 0.01 260)" }}>
+              10+ Chinese apps. 0&nbsp;answers.
+            </h3>
+            <p className="text-[10px] md:text-sm leading-snug md:leading-relaxed font-body" style={{ color: "oklch(0.52 0.01 260)" }}>
+              Hours lost to learning Chinese apps, wrong gates, and tourist traps.
+            </p>
           </div>
 
-          <div className="relative">
-            <img src={HAPPY_TRAVELER} alt="Happy couple at Zhangjiajie with ChinaPal" className="w-full h-80 md:h-full object-cover" />
-            <div className="absolute inset-0 flex flex-col justify-end p-8" style={{ background: "linear-gradient(to top, rgba(0,0,0,0.75) 0%, transparent 60%)" }}>
-              <div className="inline-flex items-center gap-2 mb-3">
-                <div className="w-6 h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: "oklch(0.48 0.22 25)" }}>
-                  <span className="text-white text-xs font-bold">&#x2713;</span>
-                </div>
-                <span className="text-xs font-bold uppercase tracking-widest font-body" style={{ color: "oklch(0.70 0.18 25)" }}>With ChinaPal</span>
+          {/* With */}
+          <div className="rounded-xl md:rounded-2xl p-3 md:p-8 border" style={{ backgroundColor: "oklch(0.97 0.02 25)", borderColor: "oklch(0.88 0.06 25)" }}>
+            <div className="inline-flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
+              <div className="w-4 h-4 md:w-6 md:h-6 rounded-full flex items-center justify-center" style={{ backgroundColor: "oklch(0.48 0.22 25)" }}>
+                <span className="text-white text-[8px] md:text-xs font-bold">&#x2713;</span>
               </div>
-              <h3 className="font-display text-2xl font-bold text-white mb-2">One message. Done.</h3>
-              <p className="text-white/70 text-sm font-body">Just show up. We handled the trains, tickets, tables, and taxis.</p>
+              <span className="text-[8px] md:text-xs font-bold uppercase tracking-widest font-body" style={{ color: "oklch(0.48 0.22 25)" }}>With ChinaPal</span>
             </div>
+            <h3 className="font-display text-sm md:text-2xl font-bold mb-1 md:mb-2" style={{ color: "oklch(0.18 0.01 260)" }}>
+              One message. Done.
+            </h3>
+            <p className="text-[10px] md:text-sm leading-snug md:leading-relaxed font-body" style={{ color: "oklch(0.52 0.01 260)" }}>
+              Just show up. We handled the trains, tickets, tables, and taxis.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
+  );
+}
+
+function AskUsButton() {
+  return (
+    <section className="py-10 px-4 bg-white">
+      <div className="flex justify-center">
+        <a
+          href={WA_LINK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group flex flex-col items-center gap-1 px-12 py-5 rounded-full text-center transition-all animate-[pulse-cta_2s_ease-in-out_infinite]"
+          style={{ backgroundColor: "oklch(0.48 0.22 25)" }}
+        >
+          <span className="text-white font-display text-xl md:text-2xl font-bold">
+            Ask us anything
+          </span>
+          <span className="text-white/70 text-xs md:text-sm font-body">
+            about China — it&apos;s free
+          </span>
+        </a>
       </div>
     </section>
   );
@@ -266,6 +290,7 @@ export default function HomePage() {
       <HeroSection />
       <StatsSection />
       <BeforeAfterSection />
+      <AskUsButton />
       <ComparisonSection />
       <FeaturesSection />
       <TestimonialsSection />

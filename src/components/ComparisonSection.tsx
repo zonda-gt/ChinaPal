@@ -44,6 +44,8 @@ interface Scenario {
   diyImage: string;
   diyLabel: string;   // short label shown on the DIY side
   diyCaption: string;
+  diyBrand: string;   // brand name for the DIY logo badge
+  diyBrandColor: string; // brand color
   messages: ChatMsg[];
   confirmLabel?: string;
   cardHeight?: number; // px — override per scenario
@@ -52,10 +54,12 @@ interface Scenario {
 /* ── data ─────────────────────────────────────────────────── */
 const scenarios: Scenario[] = [
   {
-    label: "Attraction Tickets",
+    label: "Tickets",
     diyImage: KLOOK,
     diyLabel: "Attraction tickets with Klook",
     diyCaption: "5 platforms · 3 in Chinese · Still not sure which gate.",
+    diyBrand: "Klook",
+    diyBrandColor: "#FF5722",
     cardHeight: 560,
     messages: [
       { from: "user", text: "We want to visit Zhangjiajie. What should we book?" },
@@ -73,6 +77,8 @@ const scenarios: Scenario[] = [
     diyImage: C12306,
     diyLabel: "Train tickets with 12306",
     diyCaption: "30+ trains. All in Chinese. Which station? Which class? Which seat?",
+    diyBrand: "12306",
+    diyBrandColor: "#1A56DB",
     messages: [
       { from: "user", text: "We need a train from Shanghai to Xi'an on April 12, 2 people" },
       { from: "bot",  text: "G360, departs Hongqiao 9:05am, arrives 13:32. Second class, seats 7A and 7B together. Here are your e-tickets 🎫" },
@@ -83,7 +89,9 @@ const scenarios: Scenario[] = [
     label: "Restaurant",
     diyImage: DIANPING,
     diyLabel: "Restaurant booking — DIY",
-    diyCaption: "Hundreds of reviews. All in Chinese. Can't tell tourist trap from local gem.",
+    diyCaption: "Hundreds of reviews. All in Chinese. Can't tell which is good.",
+    diyBrand: "Dianping",
+    diyBrandColor: "#FF6B00",
     messages: [
       { from: "user", text: "Where should we eat near the Bund tonight? Something local, not touristy" },
       { from: "bot",  text: "Reserved at 南翔馒头店 for 7:30pm. Get the xiaolongbao and the braised pork. It's a 5 min walk from your hotel — here's the Amap link 📍" },
@@ -95,6 +103,8 @@ const scenarios: Scenario[] = [
     diyImage: DIDI,
     diyLabel: "Getting around with Didi",
     diyCaption: "Typed 'National Exhibition Center' — every autocomplete result is in Chinese. No idea which one to pick.",
+    diyBrand: "DiDi",
+    diyBrandColor: "#FF7A00",
     messages: [
       { from: "user", text: "We need to get to Mutianyu Great Wall tomorrow morning" },
       { from: "bot",  text: "Didi booked for 7:30am at your hotel lobby. Driver Mr. Zhang, black Buick, plate 京A·58291. I've sent him your pickup in Chinese. I'll call him at pickup time 👋" },
@@ -283,6 +293,13 @@ function SideBySide({ scenario, index }: { scenario: Scenario; index: number }) 
               backgroundColor: scenario.label === "Getting Around" ? "#e8e4df" : undefined,
             }}
           />
+          {/* DIY brand badge */}
+          <div
+            className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest pointer-events-none shadow-sm"
+            style={{ backgroundColor: scenario.diyBrandColor, color: "white", fontFamily: FONT }}
+          >
+            {scenario.diyBrand}
+          </div>
         </div>
 
         {/* RIGHT: ChinaPal chat */}
@@ -439,6 +456,13 @@ function BeforeAfterSlider({ scenario, index }: { scenario: Scenario; index: num
                 backgroundColor: scenario.label === "Getting Around" ? "#e8e4df" : undefined,
               }}
             />
+            {/* DIY brand badge */}
+            <div
+              className="absolute top-3 left-3 flex items-center gap-1.5 px-2 py-1 rounded-full text-[9px] font-bold uppercase tracking-widest pointer-events-none shadow-sm"
+              style={{ backgroundColor: scenario.diyBrandColor, color: "white", fontFamily: FONT }}
+            >
+              {scenario.diyBrand}
+            </div>
           </div>
         </div>
 
