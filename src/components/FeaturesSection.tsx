@@ -5,9 +5,7 @@
    Single section-level IntersectionObserver — no per-card observers to avoid layout thrashing */
 
 import { useEffect, useRef, useState } from "react";
-import {
-  Ticket, Train, UtensilsCrossed, Car, Map, AlertCircle, CreditCard, Camera
-} from "lucide-react";
+import { Ticket, Train, Map, AlertCircle } from "lucide-react";
 
 const features = [
   {
@@ -21,16 +19,6 @@ const features = [
     desc: "We pick the best train, book the seats together, and send you the e-tickets. 12306 is our problem, not yours.",
   },
   {
-    icon: UtensilsCrossed,
-    title: "Restaurants",
-    desc: "We read Dianping, call ahead, and reserve a table. You get a local gem, not a tourist trap.",
-  },
-  {
-    icon: Car,
-    title: "Didi & Transport",
-    desc: "We book the ride, send the driver your location in Chinese, and call at pickup time if needed.",
-  },
-  {
     icon: Map,
     title: "Full Trip Planning",
     desc: "Tell us your cities and dates. We build the itinerary, sequence the trains, and flag what to skip.",
@@ -39,16 +27,6 @@ const features = [
     icon: AlertCircle,
     title: "Day-of Support",
     desc: "Train cancelled? Entrance closed? We're on it — rebooked and a Chinese screenshot in your hand in minutes.",
-  },
-  {
-    icon: CreditCard,
-    title: "Alipay & WeChat Pay",
-    desc: "We walk you through setup so you can pay like a local. No cash queues, no declined cards.",
-  },
-  {
-    icon: Camera,
-    title: "Passport Entry",
-    desc: "One photo of all passports. We fill in every form across every platform. You type nothing.",
   },
 ];
 
@@ -90,7 +68,7 @@ export default function FeaturesSection() {
         </div>
 
         {/* Cards grid — staggered via CSS delay, no per-card observers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (

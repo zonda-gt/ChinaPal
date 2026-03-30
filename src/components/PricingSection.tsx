@@ -5,7 +5,7 @@
    Single section-level IntersectionObserver — no per-card observers to avoid layout thrashing */
 
 import { useEffect, useRef, useState } from "react";
-import { Check } from "lucide-react";
+import { Check, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const plans = [
@@ -61,6 +61,7 @@ const plans = [
 
 export default function PricingSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -70,6 +71,16 @@ export default function PricingSection() {
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
+  }, []);
+
+  // Scroll to Explorer (2nd card) on mobile by default
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el || window.innerWidth >= 768) return;
+    const card = el.children[1] as HTMLElement | undefined;
+    if (card) {
+      el.scrollLeft = card.offsetLeft - (el.offsetWidth - card.offsetWidth) / 2;
+    }
   }, []);
 
   return (
@@ -97,11 +108,35 @@ export default function PricingSection() {
         </div>
 
         {/* Cards — staggered via CSS delay, no per-card observers */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 items-start">
+        <div className="relative">
+          {/* Left arrow — mobile only */}
+          <button
+            aria-label="Previous plan"
+            className="md:hidden absolute left-0 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-white/90 shadow border border-stone-200 flex items-center justify-center"
+            onClick={() => {
+              const el = scrollRef.current;
+              if (el) el.scrollBy({ left: -(el.offsetWidth * 0.65), behavior: "smooth" });
+            }}
+          >
+            <ChevronLeft className="w-4 h-4" style={{ color: "oklch(0.35 0.01 260)" }} />
+          </button>
+          {/* Right arrow — mobile only */}
+          <button
+            aria-label="Next plan"
+            className="md:hidden absolute right-0 top-1/2 -translate-y-1/2 z-10 w-7 h-7 rounded-full bg-white/90 shadow border border-stone-200 flex items-center justify-center"
+            onClick={() => {
+              const el = scrollRef.current;
+              if (el) el.scrollBy({ left: el.offsetWidth * 0.65, behavior: "smooth" });
+            }}
+          >
+            <ChevronRight className="w-4 h-4" style={{ color: "oklch(0.35 0.01 260)" }} />
+          </button>
+
+        <div ref={scrollRef} className="flex md:grid md:grid-cols-3 gap-3 md:gap-6 items-start overflow-x-auto md:overflow-visible snap-x snap-mandatory pb-4 md:pb-0 -mx-2 px-6 md:mx-0 md:px-0 scrollbar-hide" style={{ WebkitOverflowScrolling: "touch" }}>
           {plans.map((plan, i) => (
             <div
               key={i}
-              className={`rounded-2xl p-7 border ${plan.highlighted ? "shadow-xl relative" : "bg-white border-stone-200 shadow-sm"}`}
+              className={`rounded-xl md:rounded-2xl p-3.5 md:p-7 border flex-shrink-0 w-[65vw] md:w-auto snap-center ${plan.highlighted ? "shadow-xl relative" : "bg-white border-stone-200 shadow-sm"}`}
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(28px)",
@@ -113,36 +148,36 @@ export default function PricingSection() {
               }}
             >
               {plan.highlighted && (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="bg-white text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full shadow-sm"
+                <div className="absolute -top-2.5 md:-top-3 left-1/2 -translate-x-1/2">
+                  <span className="bg-white text-[10px] md:text-xs font-bold uppercase tracking-widest px-3 py-1 md:px-4 md:py-1.5 rounded-full shadow-sm"
                     style={{ color: "oklch(0.48 0.22 25)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                     Most popular
                   </span>
                 </div>
               )}
 
-              <div className="mb-6">
+              <div className="mb-3 md:mb-6">
                 <h3
-                  className="font-display font-bold text-xl mb-1"
+                  className="font-display font-bold text-base md:text-xl mb-0.5 md:mb-1"
                   style={{ color: plan.highlighted ? "white" : "oklch(0.18 0.01 260)" }}
                 >
                   {plan.name}
                 </h3>
                 <p
-                  className="text-xs mb-4"
+                  className="text-[10px] md:text-xs mb-2 md:mb-4"
                   style={{ color: plan.highlighted ? "rgba(255,255,255,0.75)" : "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
                   {plan.tagline}
                 </p>
                 <div className="flex items-baseline gap-1">
                   <span
-                    className="font-display font-bold text-4xl"
+                    className="font-display font-bold text-2xl md:text-4xl"
                     style={{ color: plan.highlighted ? "white" : "oklch(0.18 0.01 260)" }}
                   >
                     {plan.price}
                   </span>
                   <span
-                    className="text-sm"
+                    className="text-[10px] md:text-sm"
                     style={{ color: plan.highlighted ? "rgba(255,255,255,0.75)" : "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                   >
                     {plan.period}
@@ -150,15 +185,15 @@ export default function PricingSection() {
                 </div>
               </div>
 
-              <ul className="space-y-3 mb-8">
+              <ul className="space-y-1.5 md:space-y-3 mb-4 md:mb-8">
                 {plan.features.map((feature, j) => (
-                  <li key={j} className="flex items-start gap-2.5">
+                  <li key={j} className="flex items-start gap-1.5 md:gap-2.5">
                     <Check
-                      className="w-4 h-4 mt-0.5 flex-shrink-0"
+                      className="w-3 h-3 md:w-4 md:h-4 mt-0.5 flex-shrink-0"
                       style={{ color: plan.highlighted ? "rgba(255,255,255,0.9)" : "oklch(0.48 0.22 25)" }}
                     />
                     <span
-                      className="text-sm"
+                      className="text-[11px] md:text-sm leading-tight"
                       style={{
                         color: plan.highlighted ? "rgba(255,255,255,0.9)" : "oklch(0.35 0.01 260)",
                         fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -171,7 +206,7 @@ export default function PricingSection() {
               </ul>
 
               <Button
-                className={`w-full font-semibold rounded-full py-3 transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] ${plan.highlighted ? "bg-white" : ""}`}
+                className={`w-full font-semibold rounded-full py-2 md:py-3 text-xs md:text-sm transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] ${plan.highlighted ? "bg-white" : ""}`}
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
                   ...(plan.highlighted
@@ -183,6 +218,7 @@ export default function PricingSection() {
               </Button>
             </div>
           ))}
+        </div>
         </div>
 
         <p className="text-center text-sm mt-8" style={{ color: "oklch(0.60 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>

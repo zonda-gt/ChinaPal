@@ -29,7 +29,7 @@ const ZJJ_PHOTOS = [
 /* ── Image constants ─────────────────────────────────────── */
 const KLOOK    = "https://pub-4176b2b92fac4c24bb6fe630ebf1b0f1.r2.dev/images/homepage/attractionticket_diy.png";
 const C12306   = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/diy-12306-screenshot-8nttVHF4ExhAWzC4Ep7cgL.webp";
-const DIANPING = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/diy-dianping-screenshot-ShMfdTGutaNMS9hbYfbANF.webp";
+const DIANPING = "/dianping.png";
 const DIDI     = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/diy-didi-screenshot-v2-oQ7GETZsDF4VMFFZBY6RES.webp";
 const PASSPORT = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/diy-passport-grid-MXtSG9SvtK64BXHYwSHSxZ.webp";
 

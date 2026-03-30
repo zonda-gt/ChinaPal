@@ -12,7 +12,7 @@ const testimonials = [
     name: "Sarah M.",
     location: "London, UK",
     trip: "Beijing & Xi'an, 12 days",
-    quote: "I'd spent 3 evenings trying to figure out 12306. Sent ChinaPal one message and had e-tickets in 10 minutes. I just showed up and got on the train.",
+    quote: "Honestly I'd been putting off the train booking for days because 12306 made zero sense. Messaged ChinaPal and had the e-tickets in like 10 minutes. Felt stupid for not doing it sooner lol",
     stars: 5,
     initials: "SM",
   },
@@ -20,25 +20,25 @@ const testimonials = [
     name: "James & Lisa K.",
     location: "Sydney, Australia",
     trip: "Zhangjiajie & Shanghai, 10 days",
-    quote: "One photo of 4 passports. Every ticket, train, and restaurant booked. I genuinely don't know how we used to do this trip without them.",
+    quote: "We sent one photo of our 4 passports and they just booked everything? Trains, tickets, cable cars, all of it. My wife still talks about how easy it was. Super good $59 we spent on the whole trip.",
     stars: 5,
     initials: "JK",
-  },
-  {
-    name: "David R.",
-    location: "Toronto, Canada",
-    trip: "Family of 4, 14 days",
-    quote: "Train cancelled with 20 minutes notice. ChinaPal had us on the next one and sent a screenshot in Chinese to show the staff. I didn't even have to speak.",
-    stars: 5,
-    initials: "DR",
   },
   {
     name: "Emma T.",
     location: "Amsterdam, Netherlands",
     trip: "Solo trip, 8 days",
-    quote: "Every restaurant was a local place — no English menus, no tourists, incredible food. ChinaPal called ahead and reserved the table. I just walked in.",
+    quote: "The restaurant recs alone were worth it. Every place was somewhere I never would've found on my own — no English menu, no tourists, amazing food. They just called ahead and reserved. I literally just showed up and ate.",
     stars: 5,
     initials: "ET",
+  },
+  {
+    name: "Mike & Jenny S.",
+    location: "Dallas, USA",
+    trip: "Beijing, Xi'an & Shanghai",
+    quote: "We had a rough idea of what we wanted but didn't know how to structure it. Sent them our dates and wish list and they came back with a day-by-day plan that's great — told us to skip a day in Beijing and add one in Xi'an instead. Glad they did, it was the highlight of the whole trip.",
+    stars: 5,
+    initials: "MS",
   },
 ];
 
@@ -56,11 +56,11 @@ export default function TestimonialsSection() {
   }, []);
 
   return (
-    <section className="py-24 px-4" style={{ backgroundColor: "oklch(0.96 0.006 80)" }}>
+    <section className="py-12 md:py-24 px-2 md:px-4" style={{ backgroundColor: "oklch(0.96 0.006 80)" }}>
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         {/* Title */}
         <div
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
@@ -80,11 +80,11 @@ export default function TestimonialsSection() {
         </div>
 
         {/* Cards — staggered via CSS delay, no per-card observers */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-2 gap-2 md:gap-6">
           {testimonials.map((t, i) => (
             <div
               key={i}
-              className="bg-white rounded-2xl p-7 border border-stone-100 shadow-sm flex flex-col"
+              className="bg-white rounded-xl md:rounded-2xl p-2.5 md:p-5 border border-stone-100 shadow-sm flex flex-col"
               style={{
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateY(0)" : "translateY(24px)",
@@ -93,31 +93,32 @@ export default function TestimonialsSection() {
               }}
             >
               {/* Stars */}
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-0.5 mb-1.5 md:mb-3">
                 {Array.from({ length: t.stars }).map((_, si) => (
-                  <Star key={si} className="w-4 h-4 fill-current" style={{ color: "oklch(0.48 0.22 25)" }} />
+                  <Star key={si} className="w-2.5 h-2.5 md:w-3.5 md:h-3.5 fill-current" style={{ color: "oklch(0.48 0.22 25)" }} />
                 ))}
               </div>
 
               {/* Quote */}
-              <blockquote className="font-display text-lg font-medium italic leading-relaxed mb-6 flex-1" style={{ color: "oklch(0.18 0.01 260)" }}>
-                "{t.quote}"
+              <blockquote className="font-display text-[10px] md:text-sm font-medium italic leading-snug md:leading-relaxed mb-2 md:mb-4 flex-1" style={{ color: "oklch(0.18 0.01 260)" }}>
+                &ldquo;{t.quote}&rdquo;
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-1.5 md:gap-3">
                 <div
-                  className="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-                  style={{ backgroundColor: "oklch(0.48 0.22 25)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                  className="w-5 h-5 md:w-8 md:h-8 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0"
+                  style={{ backgroundColor: "oklch(0.48 0.22 25)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontSize: "8px" }}
                 >
-                  {t.initials}
+                  <span className="hidden md:inline text-xs">{t.initials}</span>
+                  <span className="md:hidden">{t.initials}</span>
                 </div>
-                <div>
-                  <div className="font-semibold text-sm" style={{ color: "oklch(0.18 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                <div className="min-w-0">
+                  <div className="font-semibold text-[9px] md:text-xs truncate" style={{ color: "oklch(0.18 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                     {t.name}
                   </div>
-                  <div className="text-xs" style={{ color: "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-                    {t.location} · {t.trip}
+                  <div className="text-[8px] md:text-xs truncate" style={{ color: "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                    {t.location}
                   </div>
                 </div>
               </div>
