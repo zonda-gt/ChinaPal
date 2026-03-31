@@ -280,9 +280,7 @@ export default function Product() {
                   </div>
 
                   <a
-                    href="https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/start"
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
                       plan.highlight
                         ? "bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-[0_2px_12px_rgba(220,38,38,0.4)]"
@@ -514,9 +512,7 @@ export default function Product() {
               $49 per trip. 10 days of human-based text support.
             </p>
             <a
-              href="https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/start"
               className="btn-primary text-base px-8 py-3.5"
             >
               Start Free Trial

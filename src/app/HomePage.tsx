@@ -12,7 +12,7 @@ import PricingSection from "@/components/PricingSection";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp";
 
-const WA_LINK = "https://wa.me/447549879026?text=Hey!%20I'm%20planning%20a%20trip%20to%20China%20and%20could%20use%20some%20help%20%F0%9F%87%A8%F0%9F%87%B3";
+const START_LINK = "/start";
 
 function HeroSection() {
   const [loaded, setLoaded] = useState(false);
@@ -64,9 +64,7 @@ function HeroSection() {
 
                 <div className="flex flex-row flex-wrap gap-3">
                   <a
-                    href={WA_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={START_LINK}
                     className="text-white font-semibold px-8 py-4 rounded-full text-base transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 font-body"
                     style={{ backgroundColor: "oklch(0.48 0.22 25)" }}
                   >
