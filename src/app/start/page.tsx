@@ -21,11 +21,11 @@ export default function StartPage() {
           </div>
 
           <h1 className="font-display text-3xl md:text-4xl font-bold mb-3" style={{ color: "oklch(0.18 0.01 260)" }}>
-            We chat on WhatsApp
+            Connect on WhatsApp
           </h1>
 
           <p className="font-body text-base mb-8 leading-relaxed" style={{ color: "oklch(0.52 0.01 260)" }}>
-            It&apos;s the fastest way to help you. Tell us your dates and cities, and we&apos;ll get you sorted.
+            for free. Tell us your dates and cities, and we&apos;ll get you sorted.
           </p>
 
           <a
@@ -45,6 +45,30 @@ export default function StartPage() {
               Email us instead
             </a>
           </p>
+
+          {/* Divider */}
+          <div className="flex items-center gap-4 mt-10 mb-6">
+            <div className="flex-1 h-px" style={{ backgroundColor: "oklch(0.85 0.005 260)" }} />
+            <span className="font-body text-xs uppercase tracking-widest" style={{ color: "oklch(0.60 0.01 260)" }}>or</span>
+            <div className="flex-1 h-px" style={{ backgroundColor: "oklch(0.85 0.005 260)" }} />
+          </div>
+
+          <p className="font-body text-sm mb-5" style={{ color: "oklch(0.45 0.01 260)" }}>
+            Get our app for on-the-go help during your trip
+          </p>
+
+          <div className="flex justify-center gap-3">
+            <img
+              src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+              alt="Download on the App Store"
+              className="h-10"
+            />
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+              alt="Get it on Google Play"
+              className="h-10"
+            />
+          </div>
         </div>
       </main>
 

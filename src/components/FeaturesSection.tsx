@@ -44,11 +44,11 @@ export default function FeaturesSection() {
   }, []);
 
   return (
-    <section id="features" className="py-24 px-4 bg-white">
+    <section id="features" className="py-12 md:py-24 px-2 md:px-4 bg-white">
       <div ref={sectionRef} className="max-w-6xl mx-auto">
         {/* Title */}
         <div
-          className="text-center mb-16"
+          className="text-center mb-8 md:mb-16"
           style={{
             opacity: visible ? 1 : 0,
             transform: visible ? "translateY(0)" : "translateY(24px)",
@@ -68,13 +68,13 @@ export default function FeaturesSection() {
         </div>
 
         {/* Cards grid — staggered via CSS delay, no per-card observers */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-5">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
               <div
                 key={i}
-                className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm hover:shadow-md hover:-translate-y-1 group"
+                className="bg-white rounded-xl md:rounded-2xl p-2.5 md:p-6 border border-stone-100 shadow-sm hover:shadow-md hover:-translate-y-1 group"
                 style={{
                   opacity: visible ? 1 : 0,
                   transform: visible ? "translateY(0)" : "translateY(24px)",
@@ -83,15 +83,15 @@ export default function FeaturesSection() {
                 }}
               >
                 <div
-                  className="w-11 h-11 rounded-xl flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110"
+                  className="w-8 h-8 md:w-11 md:h-11 rounded-lg md:rounded-xl flex items-center justify-center mb-2 md:mb-4 transition-transform duration-300 group-hover:scale-110"
                   style={{ backgroundColor: "oklch(0.92 0.05 25)" }}
                 >
-                  <Icon className="w-5 h-5" style={{ color: "oklch(0.48 0.22 25)" }} />
+                  <Icon className="w-3.5 h-3.5 md:w-5 md:h-5" style={{ color: "oklch(0.48 0.22 25)" }} />
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2" style={{ color: "oklch(0.18 0.01 260)" }}>
+                <h3 className="font-display font-bold text-xs md:text-lg mb-1 md:mb-2" style={{ color: "oklch(0.18 0.01 260)" }}>
                   {feature.title}
                 </h3>
-                <p className="text-sm leading-relaxed" style={{ color: "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                <p className="text-[10px] md:text-sm leading-snug md:leading-relaxed" style={{ color: "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
                   {feature.desc}
                 </p>
               </div>
