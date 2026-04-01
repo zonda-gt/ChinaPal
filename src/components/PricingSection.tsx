@@ -6,6 +6,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Check, ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 
 const plans = [
@@ -206,6 +207,7 @@ export default function PricingSection() {
               </ul>
 
               <Button
+                asChild
                 className={`w-full font-semibold rounded-full py-2 md:py-3 text-xs md:text-sm transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] ${plan.highlighted ? "bg-white" : ""}`}
                 style={{
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
@@ -214,7 +216,7 @@ export default function PricingSection() {
                     : { backgroundColor: "oklch(0.48 0.22 25)", color: "white" }),
                 }}
               >
-                {plan.cta}
+                <Link href="/start">{plan.cta}</Link>
               </Button>
             </div>
           ))}

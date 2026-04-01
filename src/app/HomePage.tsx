@@ -222,17 +222,15 @@ function AskUsButton() {
     <section className="py-10 px-4 bg-white">
       <div className="flex justify-center">
         <a
-          href={WA_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={START_LINK}
           className="group flex flex-col items-center gap-1 px-12 py-5 rounded-full text-center transition-all animate-[pulse-cta_2s_ease-in-out_infinite]"
           style={{ backgroundColor: "oklch(0.48 0.22 25)" }}
         >
           <span className="text-white font-display text-xl md:text-2xl font-bold">
-            Connect on WhatsApp
+            Ask us anything
           </span>
           <span className="text-white/70 text-xs md:text-sm font-body">
-            for free
+            about China — it&apos;s free
           </span>
         </a>
       </div>
@@ -268,9 +266,7 @@ function CtaSection() {
           Tell us your dates and where you want to go. We handle everything else in Chinese, so you don&apos;t have to.
         </p>
         <a
-          href={WA_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href={START_LINK}
           className="text-white font-semibold px-10 py-4 rounded-full text-lg transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] inline-flex items-center gap-2 font-body"
           style={{ backgroundColor: "oklch(0.48 0.22 25)" }}
         >
