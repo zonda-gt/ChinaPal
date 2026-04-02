@@ -26,6 +26,8 @@ const DEFAULT_IMAGES: ImageMap = {
   bailong: `${CDN}/zjj-bailong-elevator-9wBE8Ew5MeTzffXtu96bUz.webp`,
   avatar: `${CDN}/zjj-avatar-pillars-JfnwwF7VRiJvmNKdnJuoV2.webp`,
   tianzi_clouds: `${CDN}/zjj-tianzi-clouds-9hojziDU5h4PbieGP8mtEX.webp`,
+  tianzi_preview3: `${CDN}/zjj-avatar-pillars-JfnwwF7VRiJvmNKdnJuoV2.webp`,
+  show_preview3: `${CDN}/zjj-tujia-weaving-mr8ec3URk5JHRPu8h7Wg67.webp`,
   tujia: `${CDN}/zjj-tujia-weaving-mr8ec3URk5JHRPu8h7Wg67.webp`,
   stream_close: `${CDN}/zjj-stream-close-hBhQpt79q4p9cSqndUf8Ww.webp`,
   ten_mile: `${CDN}/zjj-ten-mile-night-hhDcwkiXTzUM77iNNhKJJz.webp`,
@@ -67,7 +69,7 @@ function syncImgVars(img: ImageMap) {
   HUNAN_FOOD_IMG = img.hunan_food;
 }
 
-const WA_BASE = "https://wa.me/447447781385?text=";
+const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I'd%20like%20to%20plan%20a%20trip%20to%20China";
 
 interface Restaurant {
   name: string;
@@ -102,25 +104,25 @@ interface TimelineItem {
   transportAfter?: TransportLeg;
 }
 
-const day1: TimelineItem[] = [
+function buildDay1(img: ImageMap): TimelineItem[] { return [
   {
     id: "d1-forest",
-    time: "8:00 AM",
+    time: "Morning · 8:00",
     icon: Sun,
     iconBg: "#FFF3E0",
     type: "activity",
     title: "Zhangjiajie National Forest Park",
     subtitle: "Morning exploration",
-    description: "Start your day early at one of China's most breathtaking landscapes — over 3,000 sandstone pillars erupting from misty valleys like something from another world. Ride the Bailong Elevator 326 metres up a sheer cliff face, then walk the ridge paths through Yuanjiajie to see the actual pillar that inspired Avatar's floating mountains. Cross the First Natural Bridge — a stone arch spanning a 400-metre drop — and finish at Enchanting Terrace (迷魂台), where dozens of peaks dissolve into the clouds below you.",
+    description: "Thousands of tall sandstone pillars in a huge forested valley — this is the park that inspired the mountains in Avatar. You'll take the Bailong Elevator up the cliff, walk the Yuanjiajie ridge to the main viewpoints (Avatar Hallelujah Mountain, First Natural Bridge, Enchanting Terrace), then shuttle bus back down.",
     image: FOREST_IMG,
-    tip: "Our tip: Enter via the East Gate (Wulingyuan) and head straight for the Bailong Elevator before the queues build. After Yuanjiajie, take the free shuttle bus back down. Wear comfortable shoes — the ridge paths are paved but you'll be walking for hours.",
+    tip: "Our tip: Enter via the East Gate and head straight for the Bailong Elevator before the queues build. Wear comfortable shoes — lots of walking.",
     previewImages: [FOREST_IMG, BAILONG_IMG, AVATAR_IMG],
     previewLine: "Towering sandstone pillars, the Bailong Elevator, and Avatar-inspiring views.",
     transportAfter: { mode: "taxi", duration: "5 min", note: "Taxi from park gate to restaurant" },
   },
   {
     id: "d1-lunch",
-    time: "12:30 PM",
+    time: "Midday · 12:30",
     icon: Utensils,
     iconBg: "#FFF0EE",
     type: "meal",
@@ -136,7 +138,7 @@ const day1: TimelineItem[] = [
   },
   {
     id: "d1-tianzi",
-    time: "2:30 PM",
+    time: "Afternoon · 2:30",
     icon: Camera,
     iconBg: "#E8F5E9",
     type: "activity",
@@ -145,13 +147,13 @@ const day1: TimelineItem[] = [
     description: "Take the cable car up to Tianzi Mountain (天子山), the highest peak in the Wulingyuan area. On clear days the views are infinite; on misty days you get the famous 'sea of clouds' effect where the stone pillars emerge from a white ocean of fog. Walk the ridge trails and take in the Emperor's Brush Peak viewpoint.",
     image: TIANZI_IMG,
     tip: "Our tip: The cable car can have queues — aim to arrive by 2:30pm. If it's cloudy, don't worry — the mist makes it even more magical.",
-    previewImages: [TIANZI_IMG, TIANZI_CLOUDS_IMG, AVATAR_IMG],
+    previewImages: [TIANZI_IMG, TIANZI_CLOUDS_IMG, img.tianzi_preview3],
     previewLine: "The highest peak in Wulingyuan — cable car up, sea of clouds below.",
     transportAfter: { mode: "taxi", duration: "15 min", note: "Taxi down to Wulingyuan town for dinner" },
   },
   {
     id: "d1-dinner",
-    time: "6:00 PM",
+    time: "Evening · 6:00",
     icon: Utensils,
     iconBg: "#FFF0EE",
     type: "meal",
@@ -167,7 +169,7 @@ const day1: TimelineItem[] = [
   },
   {
     id: "d1-show",
-    time: "8:00 PM",
+    time: "Evening · 8:00",
     icon: Moon,
     iconBg: "#EDE7F6",
     type: "activity",
@@ -176,13 +178,13 @@ const day1: TimelineItem[] = [
     description: "This is one of the most spectacular shows in China — 500+ performers, real waterfalls on stage, fire, acrobatics, and the stories of the Tujia and Miao ethnic minorities who have called these mountains home for centuries. It's genuinely moving and unlike anything you'll see elsewhere.",
     image: SHOW_IMG,
     tip: "Our tip: Tickets are pre-booked — I've got yours sorted. The show is about 90 minutes. Bring a light jacket as it can get cool in the open-air theatre.",
-    previewImages: [SHOW_IMG, SHOW_STAGE_IMG, TUJIA_IMG],
+    previewImages: [SHOW_IMG, SHOW_STAGE_IMG, img.show_preview3],
     previewLine: "500+ performers, real waterfalls on stage, fire, and Tujia & Miao culture.",
     transportAfter: { mode: "taxi", duration: "10 min", note: "Taxi back to your hotel" },
   },
   {
     id: "d1-hotel",
-    time: "10:00 PM",
+    time: "Night · 10:00",
     icon: Hotel,
     iconBg: "#E3F2FD",
     type: "hotel",
@@ -190,12 +192,12 @@ const day1: TimelineItem[] = [
     subtitle: "Rest up — big day tomorrow",
     description: "Head back to your hotel and get a good night's sleep. Day 2 starts with a cultural workshop and more incredible scenery.",
   },
-];
+]; }
 
-const day2: TimelineItem[] = [
+function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.forest; const BAILONG_IMG = img.bailong; const AVATAR_IMG = img.avatar; const TIANZI_IMG = img.tianzi; const TIANZI_CLOUDS_IMG = img.tianzi_clouds; const GOLDEN_IMG = img.golden; const SHOW_IMG = img.show; const SHOW_STAGE_IMG = img.show_stage; const CONCIERGE_IMG = img.concierge; const TUJIA_IMG = img.tujia; const STREAM_CLOSE_IMG = img.stream_close; const TEN_MILE_IMG = img.ten_mile; const HUNAN_FOOD_IMG = img.hunan_food; return [
   {
     id: "d2-workshop",
-    time: "9:00 AM",
+    time: "Morning · 9:00",
     icon: Sun,
     iconBg: "#FFF3E0",
     type: "activity",
@@ -209,7 +211,7 @@ const day2: TimelineItem[] = [
   },
   {
     id: "d2-lunch",
-    time: "12:00 PM",
+    time: "Midday · 12:00",
     icon: Utensils,
     iconBg: "#FFF0EE",
     type: "meal",
@@ -225,7 +227,7 @@ const day2: TimelineItem[] = [
   },
   {
     id: "d2-stream",
-    time: "2:00 PM",
+    time: "Afternoon · 2:00",
     icon: Navigation,
     iconBg: "#E8F5E9",
     type: "activity",
@@ -240,7 +242,7 @@ const day2: TimelineItem[] = [
   },
   {
     id: "d2-dinner",
-    time: "6:30 PM",
+    time: "Evening · 6:30",
     icon: Utensils,
     iconBg: "#FFF0EE",
     type: "meal",
@@ -256,7 +258,7 @@ const day2: TimelineItem[] = [
   },
   {
     id: "d2-gallery",
-    time: "8:30 PM",
+    time: "Evening · 8:30",
     icon: Sunset,
     iconBg: "#FFF8E1",
     type: "activity",
@@ -270,7 +272,7 @@ const day2: TimelineItem[] = [
   },
   {
     id: "d2-hotel",
-    time: "10:00 PM",
+    time: "Night · 10:00",
     icon: Hotel,
     iconBg: "#E3F2FD",
     type: "hotel",
@@ -278,7 +280,7 @@ const day2: TimelineItem[] = [
     subtitle: "Pack up — early start tomorrow",
     description: "Get a good rest. Your airport transfer is arranged for the morning.",
   },
-];
+]; }
 
 const departure = {
   time: "Morning",
@@ -305,17 +307,17 @@ function TransportConnector({ leg }: { leg: TransportLeg }) {
   return (
     <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
       {/* Spine alignment */}
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 48, flexShrink: 0 }}>
-        <div style={{ width: 2, height: 10, background: "#E8E4DE" }} />
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
+        <div style={{ width: 2, height: 8, background: "#E8E4DE" }} />
         <div style={{
-          width: 28, height: 28, borderRadius: "50%",
+          width: 22, height: 22, borderRadius: "50%",
           background: cfg.bg, border: `1.5px dashed ${cfg.color}55`,
           display: "flex", alignItems: "center", justifyContent: "center",
           flexShrink: 0,
         }}>
-          <Icon size={13} color={cfg.color} />
+          <Icon size={11} color={cfg.color} />
         </div>
-        <div style={{ width: 2, height: 10, background: "#E8E4DE" }} />
+        <div style={{ width: 2, height: 8, background: "#E8E4DE" }} />
       </div>
       {/* Label */}
       <div style={{ flex: 1, paddingLeft: 8, display: "flex", alignItems: "center", gap: 8, paddingTop: 0 }}>
@@ -429,15 +431,15 @@ function TimelineCard({
   return (
     <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
       {/* Timeline spine */}
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 48, flexShrink: 0 }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
         <div style={{
-          width: 40, height: 40, borderRadius: "50%",
+          width: 28, height: 28, borderRadius: "50%",
           background: item.iconBg,
           display: "flex", alignItems: "center", justifyContent: "center",
           border: `2px solid ${typeColors[item.type]}22`,
           flexShrink: 0, zIndex: 1,
         }}>
-          <Icon size={18} color={typeColors[item.type]} />
+          <Icon size={14} color={typeColors[item.type]} />
         </div>
         <div style={{ width: 2, flex: 1, background: "#E8E4DE", minHeight: 20 }} />
       </div>
@@ -576,7 +578,7 @@ function TimelineCard({
                 {/* Want to change this activity? */}
                 {item.type === "activity" && (
                   <a
-                    href={`${WA_BASE}${encodeURIComponent(`Hi Mei! I'd like to discuss changing the "${item.title}" activity in my Zhangjiajie itinerary. Can we talk through some options?`)}`}
+                    href={WA_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => e.stopPropagation()}
@@ -602,7 +604,7 @@ function TimelineCard({
 }
 
 // Mei's tailored recommendations
-const MEI_PICKS = [
+function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIANZI_CLOUDS_IMG = img.tianzi_clouds; const TUJIA_IMG = img.tujia; const GOLDEN_IMG = img.golden; const HUNAN_FOOD_IMG = img.hunan_food; const CONCIERGE_IMG = img.concierge; return [
   {
     id: "pick-1",
     emoji: "🍵",
@@ -658,9 +660,12 @@ const MEI_PICKS = [
     tag: "Mei's shopping guide",
     tagColor: "#D97706",
   },
-];
+]; }
 
 function MeiRecommendations() {
+  const img = useImg();
+  const MEI_PICKS = buildMeiPicks(img);
+  const CONCIERGE_IMG = img.concierge;
   const [saved, setSaved] = useState<Set<string>>(new Set());
 
   const toggle = (id: string) => {
@@ -760,7 +765,7 @@ function MeiRecommendations() {
             <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: 0 }}>Ask Mei to add them to your itinerary</p>
           </div>
           <a
-            href={`${WA_BASE}${encodeURIComponent(savedText)}`}
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -814,7 +819,7 @@ function PersonalisationBanner() {
       </div>
       {/* CTA */}
       <a
-        href={`${WA_BASE}${encodeURIComponent("Hi Mei! I've been looking at my Zhangjiajie itinerary and I'd like to make some changes. Can we chat?")}`}
+        href={WA_LINK}
         target="_blank"
         rel="noopener noreferrer"
         style={{
@@ -871,7 +876,7 @@ function SelectionSummaryBar({ selections, allMeals }: { selections: Record<stri
           </p>
         </div>
         <a
-          href={`${WA_BASE}${encodeURIComponent(fullMessage)}`}
+          href={WA_LINK}
           target="_blank"
           rel="noopener noreferrer"
           style={{
@@ -896,8 +901,11 @@ function SelectionSummaryBar({ selections, allMeals }: { selections: Record<stri
 export default function ItineraryPage({ images }: { images?: ImageMap }) {
   const img = images ?? DEFAULT_IMAGES;
   syncImgVars(img);
+
+  const day1 = buildDay1(img);
+  const day2 = buildDay2(img);
+
   const [activeDay, setActiveDay] = useState(1);
-  // selectedRestaurants: { [mealId]: restaurantName }
   const [selectedRestaurants, setSelectedRestaurants] = useState<Record<string, string>>({});
 
   const handleSelectRestaurant = (mealId: string, restaurantName: string) => {
@@ -940,6 +948,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             padding-top: 0 !important;
           }
           .itinerary-sidebar {
+            display: none !important;
+          }
+          .itinerary-desktop-only {
             display: none !important;
           }
         }
@@ -999,16 +1010,16 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                   <div style={{ width: 7, height: 7, background: "#22C55E", borderRadius: "50%" }} />
                 </div>
                 <p style={{ fontSize: 13, color: "rgba(255,255,255,0.75)", margin: 0, lineHeight: 1.6 }}>
-                  We've put together a detailed plan for your two days here. Message me for food and activity recommendations!
+                  We've put together a recommendation plan for your two days here. Message me for more recommendations or any help!
                 </p>
               </div>
             </div>
             <a
-              href={`${WA_BASE}${encodeURIComponent("Hi Mei! I'm looking at my Zhangjiajie itinerary and have a question.")}`}
+              href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", width: "100%", background: "#E8271A", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
             >
-              <MessageCircle size={15} /> Message Mei
+              <MessageCircle size={15} /> Message Us
             </a>
           </div>
 
@@ -1051,7 +1062,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               </div>
             ))}
             <a
-              href={`${WA_BASE}${encodeURIComponent("Hi Mei! I've been looking at my Zhangjiajie itinerary and I'd like to make some changes. Can we chat?")}`}
+              href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, background: "#F7F5F2", padding: "12px 0", textDecoration: "none", color: "#1A1A1A", fontSize: 12, fontWeight: 700, borderTop: "1px solid #F0EDE8" }}
             >
@@ -1074,64 +1085,44 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                   <div style={{ width: 6, height: 6, background: "#22C55E", borderRadius: "50%", marginLeft: 2 }} />
                 </div>
                 <p style={{ fontSize: 13.5, color: "rgba(255,255,255,0.82)", margin: 0, lineHeight: 1.6 }}>
-                  We've put together a detailed plan for your two days here. Message me for food and activity recommendations!
+                  We've put together a recommendation plan for your two days here. Message me for more recommendations or any help!
                 </p>
               </div>
             </div>
             <a
-              href={`${WA_BASE}${encodeURIComponent("Hi Mei! I'm looking at my Zhangjiajie itinerary and have a question.")}`}
+              href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
               style={{ marginTop: 14, display: "flex", width: "100%", background: "#E8271A", border: "none", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
             >
-              <MessageCircle size={15} /> Message Mei
+              <MessageCircle size={15} /> Message Us
             </a>
           </div>
 
-          {/* Mobile-only: Personalisation banner */}
-          <div className="itinerary-mobile-only">
+          {/* Personalisation banner & Mei picks — desktop only */}
+          <div className="itinerary-desktop-only">
             <PersonalisationBanner />
+            <MeiRecommendations />
           </div>
 
-          {/* Mei's tailored recommendations — full width on both */}
-          <MeiRecommendations />
-
-          {/* Trip overview pills — mobile only */}
-          <div className="itinerary-mobile-only" style={{ display: "flex", gap: 8, padding: "16px 0 0", overflowX: "auto", scrollbarWidth: "none" }}>
-            {[
-              { icon: "🏔️", label: "4 Attractions" },
-              { icon: "🍜", label: "9 Restaurant Options" },
-              { icon: "🎭", label: "1 Show" },
-              { icon: "🚡", label: "Cable Cars" },
-            ].map((pill) => (
-              <div key={pill.label} style={{ flexShrink: 0, background: "#fff", borderRadius: 20, padding: "7px 14px", display: "flex", alignItems: "center", gap: 6, border: "1px solid #E8E4DE", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
-                <span style={{ fontSize: 14 }}>{pill.icon}</span>
-                <span style={{ fontSize: 12, fontWeight: 700, color: "#1A1A1A", whiteSpace: "nowrap" }}>{pill.label}</span>
-              </div>
-            ))}
-          </div>
 
           {/* Sticky day tabs */}
-          <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", padding: "14px 0 0", borderBottom: "1px solid #E8E4DE", marginTop: 16 }}>
-            <div style={{ display: "flex", gap: 8 }}>
-              {[1, 2].map((day) => (
-                <button
-                  key={day}
-                  onClick={() => setActiveDay(day)}
-                  style={{
-                    flex: 1, padding: "11px 0", borderRadius: 12, border: "none",
-                    background: activeDay === day ? "#1A1A1A" : "#fff",
-                    color: activeDay === day ? "#fff" : "#888",
-                    fontSize: 13, fontWeight: 800, cursor: "pointer",
-                    fontFamily: "'Plus Jakarta Sans', sans-serif",
-                    transition: "all 0.2s",
-                    boxShadow: activeDay === day ? "0 4px 12px rgba(0,0,0,0.2)" : "none",
-                  }}
-                >
-                  Day {day} {day === 1 ? "— Forest & Mountains" : "— Culture & Stream"}
-                </button>
-              ))}
-            </div>
-            <div style={{ height: 14 }} />
+          <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20 }}>
+            {[1, 2].map((day) => (
+              <button
+                key={day}
+                onClick={() => setActiveDay(day)}
+                style={{
+                  padding: "10px 2px", border: "none", background: "none",
+                  color: activeDay === day ? "#C0392B" : "#888",
+                  fontSize: 13, fontWeight: 700, cursor: "pointer",
+                  fontFamily: "'Plus Jakarta Sans', sans-serif",
+                  borderBottom: activeDay === day ? "2px solid #C0392B" : "2px solid transparent",
+                  marginBottom: -1, whiteSpace: "nowrap",
+                }}
+              >
+                {day === 1 ? "Day 1 — Forest & Mountains" : "Day 2 — Culture & Stream"}
+              </button>
+            ))}
           </div>
 
           {/* Day content */}
@@ -1182,9 +1173,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
 
             {/* Departure card */}
             <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
-              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 48, flexShrink: 0 }}>
-                <div style={{ width: 40, height: 40, borderRadius: "50%", background: "#E8F5E9", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid #05996922", flexShrink: 0 }}>
-                  <Plane size={18} color="#059669" />
+              <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
+                <div style={{ width: 28, height: 28, borderRadius: "50%", background: "#E8F5E9", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid #05996922", flexShrink: 0 }}>
+                  <Plane size={14} color="#059669" />
                 </div>
               </div>
               <div style={{ flex: 1, paddingBottom: 32, paddingLeft: 8 }}>
@@ -1209,18 +1200,6 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
       {/* Selection summary floating bar */}
       <SelectionSummaryBar selections={selectedRestaurants} allMeals={allMeals} />
 
-      {/* Sticky bottom CTA */}
-      <div style={{ position: "fixed", bottom: 0, left: 0, right: 0, background: "rgba(247,245,242,0.97)", backdropFilter: "blur(16px)", borderTop: "1px solid #E8E4DE", padding: "12px 16px 20px", zIndex: 10 }}>
-        <a
-          href={`${WA_BASE}${encodeURIComponent("Hi Mei! I need to change something in my Zhangjiajie itinerary.")}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ display: "flex", width: "100%", background: "#E8271A", border: "none", borderRadius: 16, padding: "14px 0", color: "#fff", fontSize: 15, fontWeight: 800, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 8, textDecoration: "none", boxSizing: "border-box", boxShadow: "0 4px 20px rgba(232,39,26,0.35)" }}
-        >
-          <MessageCircle size={17} />
-          Customize your trip
-        </a>
-      </div>
 
       <Footer />
     </div>
