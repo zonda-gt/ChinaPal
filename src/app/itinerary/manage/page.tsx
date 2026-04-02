@@ -21,6 +21,7 @@ const ACTIVITY_GROUPS = [
     slots: [
       { key: "tianzi", label: "Main Image" },
       { key: "tianzi_clouds", label: "Preview 2 — Sea of Clouds" },
+      { key: "tianzi_preview3", label: "Preview 3" },
     ],
   },
   {
@@ -29,6 +30,7 @@ const ACTIVITY_GROUPS = [
     slots: [
       { key: "show", label: "Main Image" },
       { key: "show_stage", label: "Preview 2 — Stage View" },
+      { key: "show_preview3", label: "Preview 3" },
     ],
   },
   {

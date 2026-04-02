@@ -7,7 +7,7 @@
    Fonts: Fraunces (display headings) + Plus Jakarta Sans (body)
 */
 import { useState } from "react";
-import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, Bus, Footprints } from "lucide-react";
+import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, Bus, Footprints } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { createContext, useContext } from "react";
@@ -115,7 +115,7 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     subtitle: "Morning exploration",
     description: "Thousands of tall sandstone pillars in a huge forested valley — this is the park that inspired the mountains in Avatar. You'll take the Bailong Elevator up the cliff, walk the Yuanjiajie ridge to the main viewpoints (Avatar Hallelujah Mountain, First Natural Bridge, Enchanting Terrace), then shuttle bus back down.",
     image: FOREST_IMG,
-    tip: "Our tip: Enter via the East Gate and head straight for the Bailong Elevator before the queues build. Wear comfortable shoes — lots of walking.",
+    tip: "Our tip: Enter via the East Gate and head straight for the Bailong Elevator before the queues build. Peak season waits can hit 1-2 hours — we pre-book VIP fast-track passes to skip them.",
     previewImages: [FOREST_IMG, BAILONG_IMG, AVATAR_IMG],
     previewLine: "Towering sandstone pillars, the Bailong Elevator, and Avatar-inspiring views.",
     transportAfter: { mode: "taxi", duration: "5 min", note: "Taxi from park gate to restaurant" },
@@ -128,7 +128,7 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     type: "meal",
     title: "Lunch",
     subtitle: "Suggested restaurants",
-    description: "After a morning in the mountains, you've earned a proper meal. Here are Mei's top picks near the park:",
+    description: "After a morning in the mountains, you've earned a proper meal. Here are our top picks near the park:",
     restaurants: [
       { name: "Tujia Farmhouse Kitchen (土家农家乐)", cuisine: "Local Tujia", note: "Authentic local home cooking — try the smoked pork and wild fern shoots. Very popular with locals.", price: "¥40–60 pp", rating: 4.8 },
       { name: "Wulingyuan Scenic Restaurant", cuisine: "Hunan & Local", note: "Reliable, English-friendly menu, right near the park entrance. Good for groups.", price: "¥60–90 pp", rating: 4.5 },
@@ -146,7 +146,7 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     subtitle: "Afternoon — Sea of Clouds",
     description: "Take the cable car up to Tianzi Mountain (天子山), the highest peak in the Wulingyuan area. On clear days the views are infinite; on misty days you get the famous 'sea of clouds' effect where the stone pillars emerge from a white ocean of fog. Walk the ridge trails and take in the Emperor's Brush Peak viewpoint.",
     image: TIANZI_IMG,
-    tip: "Our tip: The cable car can have queues — aim to arrive by 2:30pm. If it's cloudy, don't worry — the mist makes it even more magical.",
+    tip: "Our tip: Cable car queues can be brutal — aim to arrive by 2:30pm. If it's cloudy, the mist actually makes it better. We book the combo transport pass so you're not paying per ride.",
     previewImages: [TIANZI_IMG, TIANZI_CLOUDS_IMG, img.tianzi_preview3],
     previewLine: "The highest peak in Wulingyuan — cable car up, sea of clouds below.",
     transportAfter: { mode: "taxi", duration: "15 min", note: "Taxi down to Wulingyuan town for dinner" },
@@ -177,7 +177,7 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     subtitle: "Evening cultural performance",
     description: "This is one of the most spectacular shows in China — 500+ performers, real waterfalls on stage, fire, acrobatics, and the stories of the Tujia and Miao ethnic minorities who have called these mountains home for centuries. It's genuinely moving and unlike anything you'll see elsewhere.",
     image: SHOW_IMG,
-    tip: "Our tip: Tickets are pre-booked — I've got yours sorted. The show is about 90 minutes. Bring a light jacket as it can get cool in the open-air theatre.",
+    tip: "Our tip: Tickets sell out and need to be booked in advance through Chinese-only platforms. The show is about 90 minutes — bring a light jacket for the open-air theatre. We handle the booking.",
     previewImages: [SHOW_IMG, SHOW_STAGE_IMG, img.show_preview3],
     previewLine: "500+ performers, real waterfalls on stage, fire, and Tujia & Miao culture.",
     transportAfter: { mode: "taxi", duration: "10 min", note: "Taxi back to your hotel" },
@@ -235,7 +235,7 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
     subtitle: "Afternoon — Scenic valley walk",
     description: "The Golden Whip Stream (金鞭溪) is a 7.5km walk through a narrow valley between towering cliffs, following a crystal-clear turquoise stream. It's one of the most peaceful and beautiful walks in all of China — monkeys sometimes come down to the path, and the light filtering through the forest canopy is extraordinary.",
     image: GOLDEN_IMG,
-    tip: "Our tip: The full walk takes about 2.5 hours at a relaxed pace. You can exit at either end and take a shuttle back. Bring water and don't rush — this is the one to savour.",
+    tip: "Our tip: The full walk takes about 2.5 hours. Keep snacks in a zipped bag — the monkeys here are aggressive food thieves. We'll make sure you know which exit to take for your pickup.",
     previewImages: [GOLDEN_IMG, STREAM_CLOSE_IMG, AVATAR_IMG],
     previewLine: "A 7.5km valley walk through turquoise water and towering cliffs — monkeys included.",
     transportAfter: { mode: "taxi", duration: "20 min", note: "Taxi to Zhangjiajie city centre for dinner" },
@@ -285,7 +285,7 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
 const departure = {
   time: "Morning",
   title: "Airport Transfer",
-  description: "Your driver will pick you up from the hotel lobby. Zhangjiajie Hehua International Airport is about 40 minutes from the city centre. I'll send you the driver's details and contact number the evening before.",
+  description: "We arrange a private driver to take you from your hotel to Zhangjiajie Hehua International Airport — about 40 minutes. No haggling with taxis, no language barrier.",
 };
 
 // Transport connector between timeline stops
@@ -417,7 +417,9 @@ function TimelineCard({
   onSelectRestaurant: (mealId: string, restaurantName: string) => void;
 }) {
   const [expanded, setExpanded] = useState(index === 0);
+  const [imgIdx, setImgIdx] = useState(0);
   const Icon = item.icon;
+  const images = item.image ? [item.image, ...(item.previewImages || [])].filter((v, i, a) => a.indexOf(v) === i) : [];
 
   const typeColors: Record<string, string> = {
     activity: "#1A1A1A",
@@ -452,10 +454,25 @@ function TimelineCard({
           style={{ background: "#fff", borderRadius: 18, overflow: "hidden", boxShadow: "0 2px 16px rgba(0,0,0,0.07)", border: "1px solid #F0EDE8", cursor: item.type !== "hotel" ? "pointer" : "default" }}
           onClick={() => item.type !== "hotel" && setExpanded(!expanded)}
         >
-          {/* Hero image — only shown when expanded */}
-          {item.image && expanded && (
-            <div style={{ height: 160, overflow: "hidden" }}>
-              <img src={item.image} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+          {/* Hero image carousel — only shown when expanded */}
+          {images.length > 0 && expanded && (
+            <div style={{ position: "relative", height: 160, overflow: "hidden" }}>
+              <img src={images[imgIdx]} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.2s" }} />
+              {images.length > 1 && (
+                <>
+                  <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx - 1 + images.length) % images.length); }} style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                    <ChevronLeft size={16} color="#fff" />
+                  </button>
+                  <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx + 1) % images.length); }} style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                    <ChevronRight size={16} color="#fff" />
+                  </button>
+                  <div style={{ position: "absolute", bottom: 8, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 5 }}>
+                    {images.map((_, i) => (
+                      <div key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === imgIdx ? "#fff" : "rgba(255,255,255,0.45)", transition: "background 0.2s" }} />
+                    ))}
+                  </div>
+                </>
+              )}
             </div>
           )}
 
@@ -476,11 +493,18 @@ function TimelineCard({
             {!expanded && item.type === "activity" && item.previewImages && (
               <div style={{ marginTop: 10 }}>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 5, marginBottom: 8 }}>
-                  {item.previewImages.map((src, i) => (
+                  {item.previewImages.slice(0, 2).map((src, i) => (
                     <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
                       <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   ))}
+                  <div style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden", position: "relative", cursor: "pointer" }}>
+                    <img src={item.previewImages[2]} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.4)" }} />
+                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
+                      <span style={{ fontSize: 18, fontWeight: 800, color: "#fff" }}>+</span>
+                      <span style={{ fontSize: 10, fontWeight: 700, color: "rgba(255,255,255,0.85)", textTransform: "uppercase", letterSpacing: "0.05em" }}>See more</span>
+                    </div>
+                  </div>
                 </div>
                 {item.previewLine && (
                   <p style={{ fontSize: 12.5, color: "#666", margin: 0, lineHeight: 1.5 }}>{item.previewLine}</p>
@@ -544,10 +568,10 @@ function TimelineCard({
                 {item.restaurants && (
                   <div onClick={(e) => e.stopPropagation()}>
                     <p style={{ fontSize: 11, fontWeight: 800, color: "#1A1A1A", margin: "0 0 6px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                      Pick your restaurant
+                      Recommended restaurants
                     </p>
                     <p style={{ fontSize: 12, color: "#888", margin: "0 0 10px", lineHeight: 1.4 }}>
-                      Tap one to select it — Mei will book it for you.
+                      These are hard to book without a Chinese phone number — we reserve them for you.
                     </p>
                     {item.restaurants.map((r) => (
                       <RestaurantCard
@@ -590,7 +614,7 @@ function TimelineCard({
                       fontSize: 12.5, fontWeight: 600,
                     }}
                   >
-                    <Pencil size={13} color="#888" />
+                    <MessageCircle size={13} color="#888" />
                     Any questions? Message us
                   </a>
                 )}
@@ -622,9 +646,9 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     type: "Sunrise Spot",
     title: "Huangshi Village Sunrise",
     desc: "Hike up to Huangshi Village before dawn and watch the sun rise over the pillars. One of the most breathtaking moments you can have in China.",
-    meiNote: "I'll arrange an early morning guide for you if you want this — just say the word.",
+    meiNote: "We can arrange an early morning guide for this — just say the word.",
     image: FOREST_IMG,
-    tag: "Mei can arrange",
+    tag: "We can arrange",
     tagColor: "#E8271A",
   },
   {
@@ -644,9 +668,9 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     type: "Nature",
     title: "Baofeng Lake Boat Ride",
     desc: "A serene boat ride on an emerald lake surrounded by karst peaks. Waterfall cascades directly into the lake — genuinely magical.",
-    meiNote: "Great add-on if you have a spare hour. I can book the boat tickets in advance.",
+    meiNote: "Great add-on if you have a spare hour. We book the boat tickets in advance.",
     image: GOLDEN_IMG,
-    tag: "Mei can book",
+    tag: "We can book",
     tagColor: "#E8271A",
   },
   {
@@ -657,7 +681,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     desc: "The best place to buy authentic local souvenirs — Tujia brocade, dried mushrooms, local tea, and hand-carved stone pieces.",
     meiNote: "Avoid the tourist shops near the park gate — this market has the real stuff at fair prices.",
     image: HUNAN_FOOD_IMG,
-    tag: "Mei's shopping guide",
+    tag: "Shopping guide",
     tagColor: "#D97706",
   },
 ]; }
@@ -678,8 +702,8 @@ function MeiRecommendations() {
 
   const savedItems = MEI_PICKS.filter(p => saved.has(p.id));
   const savedText = savedItems.length > 0
-    ? `Hi Mei! I'm interested in these extra activities you recommended:\n${savedItems.map(p => `• ${p.title}`).join("\n")}\n\nCan we add any of these to my Zhangjiajie itinerary?`
-    : "Hi Mei! I'd love to hear more about your personalised recommendations for my Zhangjiajie trip.";
+    ? `Hi! I saw the Zhangjiajie sample itinerary and I'm interested in these activities:\n${savedItems.map(p => `• ${p.title}`).join("\n")}\n\nCan you help me plan a trip?`
+    : "Hi! I saw the Zhangjiajie sample itinerary — I'd like to find out more about planning a trip.";
 
   return (
     <div style={{ margin: "20px 0 0" }}>
@@ -689,10 +713,10 @@ function MeiRecommendations() {
           <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 36, height: 36, borderRadius: 10, objectFit: "cover", flexShrink: 0 }} />
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
-              <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>Mei's picks for you</p>
-              <span style={{ fontSize: 10, background: "#FFF0EE", color: "#E8271A", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>Personalised</span>
+              <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>Things most tourists miss</p>
+              <span style={{ fontSize: 10, background: "#FFF0EE", color: "#E8271A", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>Local picks</span>
             </div>
-            <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>Places & activities I think you'll love — tap ♡ to save, then ask me to add them.</p>
+            <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>Off-the-beaten-path spots we can add to your trip — tap ♡ to save any you like.</p>
           </div>
         </div>
       </div>
@@ -762,7 +786,7 @@ function MeiRecommendations() {
             <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", margin: "0 0 2px" }}>
               {saved.size} place{saved.size > 1 ? "s" : ""} saved
             </p>
-            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: 0 }}>Ask Mei to add them to your itinerary</p>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: 0 }}>Want us to add these to your trip?</p>
           </div>
           <a
             href={WA_LINK}
@@ -774,7 +798,7 @@ function MeiRecommendations() {
               fontSize: 12, fontWeight: 800, whiteSpace: "nowrap", flexShrink: 0,
             }}
           >
-            Ask Mei →
+            Get Started →
           </a>
         </div>
       )}
@@ -790,18 +814,18 @@ function PersonalisationBanner() {
       <div style={{ background: "#1A1A1A", padding: "16px 18px 14px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
           <Sparkles size={16} color="#E8271A" />
-          <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", margin: 0 }}>This itinerary is just a starting point</p>
+          <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", margin: 0 }}>We'd customise all of this for your trip</p>
         </div>
         <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.65)", margin: 0, lineHeight: 1.5 }}>
-          Mei built this around your trip — but every detail can be changed. She's a real person, and she's here to make it exactly right for you.
+          This is a sample — your actual itinerary gets built around your dates, budget, group size, and interests.
         </p>
       </div>
       {/* 3 personalisation options */}
       <div style={{ background: "#fff", display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
         {[
-          { emoji: "🍽️", label: "Swap a restaurant", desc: "Dietary needs, budget, or just curious?" },
-          { emoji: "🏔️", label: "Add an activity", desc: "More time? Mei knows hidden spots." },
-          { emoji: "⏱️", label: "Change the pace", desc: "Want a slower morning or a rest day?" },
+          { emoji: "🎟️", label: "We book everything", desc: "Tickets, restaurants, transport — all need Chinese platforms" },
+          { emoji: "🗺️", label: "Local knowledge", desc: "Skip the tourist traps, find the real spots" },
+          { emoji: "📱", label: "On-the-ground help", desc: "Message us anytime during your trip" },
         ].map((item, i) => (
           <div
             key={item.label}
@@ -831,7 +855,7 @@ function PersonalisationBanner() {
         }}
       >
         <MessageCircle size={15} color="#E8271A" />
-        Tell Mei what you'd like to change
+        Plan my trip
       </a>
     </div>
   );
@@ -848,7 +872,7 @@ function SelectionSummaryBar({ selections, allMeals }: { selections: Record<stri
     .map(m => `• ${m.title}: ${selections[m.id].split(" (")[0]}`)
     .join("\n");
 
-  const fullMessage = `Hi Mei! Here are my restaurant choices for Zhangjiajie:\n${waText}\n\nPlease book these for me. Thanks!`;
+  const fullMessage = `Hi! I'm interested in a Zhangjiajie trip. Here are the restaurants I'd like:\n${waText}\n\nCan you help me plan and book?`;
 
   return (
     <div style={{
@@ -872,7 +896,7 @@ function SelectionSummaryBar({ selections, allMeals }: { selections: Record<stri
             {count} of {mealItems.length} meals chosen
           </p>
           <p style={{ fontSize: 11, color: "rgba(255,255,255,0.55)", margin: 0 }}>
-            {count < mealItems.length ? "Keep selecting your restaurants" : "All meals chosen — confirm with Mei!"}
+            {count < mealItems.length ? "Pick your favourites" : "Ready — let us book these for you"}
           </p>
         </div>
         <a
@@ -891,7 +915,7 @@ function SelectionSummaryBar({ selections, allMeals }: { selections: Record<stri
             flexShrink: 0,
           }}
         >
-          Confirm with Mei →
+          Get Started →
         </a>
       </div>
     </div>
@@ -965,7 +989,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             <div style={{ width: 24, height: 24, background: "#E8271A", borderRadius: 7, display: "flex", alignItems: "center", justifyContent: "center" }}>
               <span style={{ fontSize: 10, fontWeight: 900, color: "#fff" }}>CP</span>
             </div>
-            <span style={{ fontSize: 11, color: "rgba(255,255,255,0.85)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>Your ChinaPal Itinerary</span>
+            <span style={{ fontSize: 11, color: "rgba(255,255,255,0.85)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>ChinaPal · Sample Itinerary</span>
           </div>
           <h1 style={{ fontSize: "clamp(32px,5vw,56px)", fontWeight: 900, color: "#fff", margin: "0 0 10px", fontFamily: "'Fraunces', serif", lineHeight: 1.05 }}>
             Zhangjiajie Adventure
@@ -1006,11 +1030,11 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
                   <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>Mei</span>
-                  <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 8px", borderRadius: 20, fontWeight: 600 }}>Your Concierge</span>
+                  <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 8px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
                   <div style={{ width: 7, height: 7, background: "#22C55E", borderRadius: "50%" }} />
                 </div>
                 <p style={{ fontSize: 13, color: "rgba(255,255,255,0.75)", margin: 0, lineHeight: 1.6 }}>
-                  We've put together a recommendation plan for your two days here. Message me for more recommendations or any help!
+                  Here's what a Zhangjiajie trip could look like. We handle tickets, restaurants, transport, and on-the-ground help — so you don't have to figure it all out yourself.
                 </p>
               </div>
             </div>
@@ -1019,7 +1043,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", width: "100%", background: "#E8271A", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
             >
-              <MessageCircle size={15} /> Message Us
+              <MessageCircle size={15} /> Plan My Trip
             </a>
           </div>
 
@@ -1044,14 +1068,14 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             <div style={{ background: "#1A1A1A", padding: "14px 16px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 4 }}>
                 <Sparkles size={14} color="#E8271A" />
-                <p style={{ fontSize: 12, fontWeight: 800, color: "#fff", margin: 0 }}>Customise your trip</p>
+                <p style={{ fontSize: 12, fontWeight: 800, color: "#fff", margin: 0 }}>What we handle for you</p>
               </div>
-              <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.5 }}>Every detail can be changed — just ask Mei.</p>
+              <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.5 }}>The hard parts of a China trip, sorted.</p>
             </div>
             {[
-              { emoji: "🍽️", label: "Swap a restaurant", desc: "Dietary needs, budget, or just curious?" },
-              { emoji: "🏔️", label: "Add an activity", desc: "More time? Mei knows hidden spots." },
-              { emoji: "⏱️", label: "Change the pace", desc: "Want a slower morning or a rest day?" },
+              { emoji: "🎟️", label: "Ticket booking", desc: "Requires Chinese phone number & payment apps" },
+              { emoji: "🗺️", label: "Local knowledge", desc: "Skip tourist traps, find the real spots" },
+              { emoji: "📱", label: "On-the-ground help", desc: "Message us anytime during your trip" },
             ].map((item, i) => (
               <div key={item.label} style={{ padding: "12px 16px", borderBottom: i < 2 ? "1px solid #F5F3F0" : "none", display: "flex", gap: 10, alignItems: "flex-start" }}>
                 <span style={{ fontSize: 18, flexShrink: 0 }}>{item.emoji}</span>
@@ -1066,7 +1090,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, background: "#F7F5F2", padding: "12px 0", textDecoration: "none", color: "#1A1A1A", fontSize: 12, fontWeight: 700, borderTop: "1px solid #F0EDE8" }}
             >
-              <MessageCircle size={13} color="#E8271A" /> Tell Mei what you'd like to change
+              <MessageCircle size={13} color="#E8271A" /> Plan my trip
             </a>
           </div>
         </aside>
@@ -1081,11 +1105,11 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               <div>
                 <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 5 }}>
                   <span style={{ fontSize: 13, fontWeight: 800, color: "#fff" }}>Mei</span>
-                  <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 7px", borderRadius: 20, fontWeight: 600 }}>Your Concierge</span>
+                  <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 7px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
                   <div style={{ width: 6, height: 6, background: "#22C55E", borderRadius: "50%", marginLeft: 2 }} />
                 </div>
                 <p style={{ fontSize: 13.5, color: "rgba(255,255,255,0.82)", margin: 0, lineHeight: 1.6 }}>
-                  We've put together a recommendation plan for your two days here. Message me for more recommendations or any help!
+                  Here's what a Zhangjiajie trip could look like. We handle tickets, restaurants, transport, and on-the-ground help — so you don't have to figure it all out yourself.
                 </p>
               </div>
             </div>
@@ -1094,7 +1118,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               target="_blank" rel="noopener noreferrer"
               style={{ marginTop: 14, display: "flex", width: "100%", background: "#E8271A", border: "none", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
             >
-              <MessageCircle size={15} /> Message Us
+              <MessageCircle size={15} /> Plan My Trip
             </a>
           </div>
 
@@ -1186,7 +1210,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                   <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: 0 }}>{departure.description}</p>
                   <div style={{ marginTop: 12, background: "#F0FDF4", borderRadius: 10, padding: "10px 12px", display: "flex", gap: 8, alignItems: "flex-start" }}>
                     <Info size={14} color="#059669" style={{ flexShrink: 0, marginTop: 1 }} />
-                    <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>Safe travels! It's been a pleasure planning this trip for you. Message me anytime for your next China adventure. 🙏</p>
+                    <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>This is just a sample — your real itinerary gets fully customised. Message us to get started.</p>
                   </div>
                 </div>
               </div>
