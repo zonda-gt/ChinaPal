@@ -64,13 +64,6 @@ export default function Navbar() {
             >
               How it works
             </a>
-            <a
-              href="/product"
-              className={`font-body text-sm font-medium px-3.5 py-2 rounded-full transition-colors ${linkClass}`}
-            >
-              Product
-            </a>
-
             {/* Guides dropdown */}
             <div
               className="relative"
@@ -104,7 +97,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="/start" className="btn-primary text-sm py-2 px-5">
+            <a href="/start" className="btn-primary text-sm py-2 px-5" style={{ backgroundColor: "oklch(0.48 0.22 25)" }}>
               Ask ChinaPal Free
             </a>
           </div>
@@ -132,13 +125,6 @@ export default function Navbar() {
           >
             How it works
           </a>
-          <a
-            href="/product"
-            className="block font-body text-sm font-medium text-[#52525B] py-2.5 hover:text-[#DC2626] transition-colors"
-            onClick={() => setOpen(false)}
-          >
-            Pricing
-          </a>
           <div>
             <p className="font-body text-xs font-semibold text-[#A8A29E] uppercase tracking-widest pt-3 pb-2">
               Guides
@@ -157,7 +143,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="pt-3">
-            <a href="/start" className="btn-primary w-full justify-center text-sm">
+            <a href="/start" className="btn-primary w-full justify-center text-sm" style={{ backgroundColor: "oklch(0.48 0.22 25)" }}>
               Ask ChinaPal Free
             </a>
           </div>

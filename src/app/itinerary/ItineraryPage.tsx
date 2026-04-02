@@ -75,12 +75,25 @@ function syncImgVars(img: ImageMap) {
 
 const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I'd%20like%20to%20plan%20a%20trip%20to%20China";
 
+const RESTAURANT_IMAGES = {
+  yinxiangLaozaotai: "/uploads/itinerary/restaurants/yinxiang-laozaotai.jpg",
+  suoxiShanzhai: "/uploads/itinerary/restaurants/suoxi-shanzhai.jpg",
+  yicunYard: "/uploads/itinerary/restaurants/yicun-yard.jpg",
+  daduiYucun: "/uploads/itinerary/restaurants/dadui-yucun.jpg",
+  xibuStreetSnacks: "/uploads/itinerary/restaurants/xibu-street-snacks.jpg",
+  xianghuaBbq: "/uploads/itinerary/restaurants/xianghua-bbq.jpg",
+  watersideBar: "/uploads/itinerary/restaurants/waterside-bar.jpg",
+  xitangJiafan: "/uploads/itinerary/restaurants/xitang-jiafan.JPG",
+} as const;
+
 interface Restaurant {
   name: string;
+  englishName?: string;
   cuisine: string;
   note: string;
   price: string;
   rating: number;
+  image?: string;
 }
 
 type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "car";
@@ -128,15 +141,14 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     id: "d1-lunch",
     time: "Midday · 12:30",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Lunch",
     subtitle: "Suggested restaurants",
     description: "After a morning in the mountains, you've earned a proper meal. Here are our top picks near the park:",
     restaurants: [
-      { name: "Tujia Farmhouse Kitchen (土家农家乐)", cuisine: "Local Tujia", note: "Authentic local home cooking — try the smoked pork and wild fern shoots. Very popular with locals.", price: "¥40–60 pp", rating: 4.8 },
-      { name: "Wulingyuan Scenic Restaurant", cuisine: "Hunan & Local", note: "Reliable, English-friendly menu, right near the park entrance. Good for groups.", price: "¥60–90 pp", rating: 4.5 },
-      { name: "Laowu Noodle House (老五面馆)", cuisine: "Noodles & Snacks", note: "Quick, cheap, and delicious. Try the spicy beef noodles — a local staple.", price: "¥20–35 pp", rating: 4.7 },
+      { name: "印象老灶台", englishName: "Old Stove Kitchen", cuisine: "Rustic Xiangxi", note: "A proper old-stove style restaurant with clay-pot chicken, baskets of local produce, and the kind of smoky farmhouse atmosphere that feels great after a morning hike.", price: "¥60–90 pp", rating: 4.8, image: RESTAURANT_IMAGES.yinxiangLaozaotai },
+      { name: "索溪山寨", englishName: "Suoxi Mountain Lodge", cuisine: "Xiangxi specialties", note: "A lively regional dining room with red lanterns and folk decor. Good if you want a broad intro to Xiangxi dishes without overthinking the order.", price: "¥70–110 pp", rating: 4.7, image: RESTAURANT_IMAGES.suoxiShanzhai },
     ],
     transportAfter: { mode: "cable-car", duration: "25 min", note: "Cable car up to Tianzi Mountain ridge" },
   },
@@ -159,15 +171,14 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     id: "d1-dinner",
     time: "Evening · 6:00",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Dinner",
     subtitle: "Suggested restaurants",
     description: "Refuel before the evening show. These are all within easy reach of the Charming Xiangxi theatre:",
     restaurants: [
-      { name: "Xiangxi Impression Restaurant (湘西印象)", cuisine: "Hunan cuisine", note: "The best place for proper Hunan food — fiery and fragrant. Try the Chairman Mao red-braised pork.", price: "¥70–100 pp", rating: 4.9 },
-      { name: "Zhangjiajie Grand Hotel Restaurant", cuisine: "Chinese & Western", note: "Comfortable, quieter setting. Good if you want a relaxed dinner before the show.", price: "¥80–120 pp", rating: 4.4 },
-      { name: "Riverside Night Market Stalls", cuisine: "Street food", note: "Walk along the river and graze on BBQ skewers, stinky tofu, and cold noodles. Very lively atmosphere.", price: "¥25–50 pp", rating: 4.6 },
+      { name: "一村院子餐厅", englishName: "Village Courtyard", cuisine: "Courtyard fine dining", note: "A beautiful timber courtyard with pond-side tables and a polished, slower-paced feel. The best spot for an atmospheric dinner before the show.", price: "¥120–180 pp", rating: 4.8, image: RESTAURANT_IMAGES.yicunYard },
+      { name: "大队老渔村", englishName: "Old Fishing Village", cuisine: "Farmhouse Xiangxi", note: "A rustic, ingredient-led spot with jars of pickles, fresh chillies, and preserved meats on display. Great for hearty fish dishes and bolder local flavors.", price: "¥80–120 pp", rating: 4.7, image: RESTAURANT_IMAGES.daduiYucun },
     ],
     transportAfter: { mode: "walk", duration: "8 min", note: "Short walk to the Charming Xiangxi Theatre" },
   },
@@ -192,7 +203,7 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     icon: Hotel,
     iconBg: "#E3F2FD",
     type: "hotel",
-    title: "Check in to Hotel",
+    title: "Back to Hotel",
     subtitle: "Rest up — big day tomorrow",
     description: "Head back to your hotel and get a good night's sleep. Day 2 starts with a cultural workshop and more incredible scenery.",
   },
@@ -217,15 +228,14 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
     id: "d2-lunch",
     time: "Midday · 12:00",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Lunch",
     subtitle: "Suggested restaurants",
     description: "A relaxed midday meal before your afternoon walk along Golden Whip Stream:",
     restaurants: [
-      { name: "Suoxi Valley Farmhouse (索溪峪农家)", cuisine: "Local Tujia", note: "Set meals with local specialties — bamboo rice, river fish, and pickled vegetables. Homely and filling.", price: "¥50–70 pp", rating: 4.7 },
-      { name: "Zhangjiajie Cuisine Museum Restaurant", cuisine: "Hunan regional", note: "A great introduction to the full range of Hunan cuisine — interactive and educational too.", price: "¥75–110 pp", rating: 4.6 },
-      { name: "Wulingyuan Riverside Café", cuisine: "Light bites & coffee", note: "If you want something lighter — sandwiches, noodles, and good coffee with a view of the stream.", price: "¥35–55 pp", rating: 4.4 },
+      { name: "喜棠家饭", englishName: "Xitang Home Kitchen", cuisine: "Comfort food", note: "A warm, family-style place with straightforward local dishes — nothing fancy, just good honest food. A solid easy lunch before heading back out walking.", price: "¥55–85 pp", rating: 4.6, image: RESTAURANT_IMAGES.xitangJiafan },
+      { name: "印象老灶台", englishName: "Old Stove Kitchen", cuisine: "Rustic Xiangxi", note: "If you want something more characterful at lunch, this is the atmospheric pick: clay pots, local ingredients, and a proper old-kitchen feel.", price: "¥60–90 pp", rating: 4.8, image: RESTAURANT_IMAGES.yinxiangLaozaotai },
     ],
     transportAfter: { mode: "walk", duration: "5 min", note: "Walk to the Golden Whip Stream entrance" },
   },
@@ -248,15 +258,14 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
     id: "d2-dinner",
     time: "Evening · 6:30",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Dinner",
     subtitle: "Relaxed evening in Wulingyuan",
-    description: "Make your last dinner in Zhangjiajie a memorable one:",
+    description: "Wind down the day with a relaxed evening meal in Wulingyuan:",
     restaurants: [
-      { name: "Tianmen Mountain Restaurant (天门山餐厅)", cuisine: "Hunan fine dining", note: "The best meal in Zhangjiajie — beautifully presented Hunan dishes in an elegant setting. Worth splashing out.", price: "¥120–180 pp", rating: 4.9 },
-      { name: "Old Street Night Market (老街夜市)", cuisine: "Street food & BBQ", note: "Lively, fun, and social. Great way to end the trip — try everything and soak up the atmosphere.", price: "¥30–60 pp", rating: 4.7 },
-      { name: "Lotus Pavilion Restaurant (荷花阁)", cuisine: "Cantonese & Hunan fusion", note: "Quieter and more refined — good for a relaxed final dinner if you want to wind down.", price: "¥90–130 pp", rating: 4.5 },
+      { name: "溪布街小吃", englishName: "XiBu Street Snacks", cuisine: "Street food", note: "Perfect if you want a lively XiBu Street evening: cold noodles, mugwort cakes, and easy snack-hopping around the lit-up riverside area.", price: "¥25–50 pp", rating: 4.7, image: RESTAURANT_IMAGES.xibuStreetSnacks },
+      { name: "香花烧烤", englishName: "Xianghua BBQ", cuisine: "BBQ", note: "A fun, casual grill with skewers over charcoal and punchy, garlicky plates for sharing. Best if you want a louder, more social dinner.", price: "¥50–80 pp", rating: 4.6, image: RESTAURANT_IMAGES.xianghuaBbq },
     ],
     transportAfter: { mode: "shuttle", duration: "18 min", note: "Shuttle bus to Ten-Mile Gallery entrance" },
   },
@@ -321,7 +330,7 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     id: "d3-lunch",
     time: "Midday · 12:00",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Lunch",
     subtitle: "Quick bite before the 999 steps",
@@ -340,9 +349,9 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     type: "activity",
     title: "Tianmen Cave & 999 Steps",
     subtitle: "Heaven's Gate — the iconic climb",
-    description: "Descend via escalators inside the mountain to reach Tianmen Cave (天门洞) — a massive natural hole through the cliff face, 131 metres high and 57 metres wide, formed in 263 AD. Then climb down the famous 999 steps — a steep, dramatic staircase that descends from the cave to the road below. The number 999 represents the 'nine heavens' in Chinese numerology.",
+    description: "Descend via escalators inside the mountain to reach Tianmen Cave (天门洞) — a massive natural hole through the cliff face, 131 metres high and 57 metres wide, first recorded over 1,700 years ago. Then climb down the famous 999 steps — a steep, dramatic staircase that descends from the cave to the road below. The number 999 represents the 'nine heavens' in Chinese numerology.",
     image: img.tianmen_cave,
-    tip: "Our tip: Going DOWN the 999 steps is much easier than climbing up. Take it slow on the steep upper sections and use the railings. The cave itself is most dramatic when clouds drift through it.",
+    tip: "Our tip: Take it slow on the steep upper sections and use the railings — the steps are uneven. The cave itself is most dramatic when clouds drift through it, which happens most mornings.",
     previewImages: [img.tianmen_cave, img.tianmen_glass, img.tianmen_cablecar],
     previewLine: "131m-high natural cave, 999 steps, and the feeling of descending from heaven.",
     transportAfter: { mode: "shuttle", duration: "25 min", note: "Coach down the 99-bend road" },
@@ -355,7 +364,7 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     type: "activity",
     title: "99-Bend Road Descent",
     subtitle: "White-knuckle mountain road",
-    description: "The coach ride down Tongtian Avenue — 10.77 kilometres of mountain road with 99 hairpin turns switchbacking from 1,300m to 200m. The bus drivers navigate blind 180-degree turns with centimetres of clearance. It's equal parts terrifying and impressive, and the aerial views from above are spectacular.",
+    description: "The coach ride down Tongtian Avenue — nearly 11 kilometres of mountain road with 99 hairpin turns switchbacking from 1,300m to 200m. The bus drivers navigate blind 180-degree turns with centimetres of clearance. It's equal parts terrifying and impressive, and the aerial views from above are spectacular.",
     tip: "Our tip: Sit on the left side for the best cliff-drop views. The ride takes about 25 minutes. If you get motion sick easily, take medication beforehand.",
     previewImages: [img.tianmen_cave, img.tianmen_glass, img.tianmen_cablecar],
     previewLine: "99 hairpin turns, 1,300m descent — the most dramatic bus ride of your life.",
@@ -364,15 +373,14 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     id: "d3-dinner",
     time: "Evening · 6:00",
     icon: Utensils,
-    iconBg: "#FFF0EE",
+    iconBg: "#FFF1F3",
     type: "meal",
     title: "Final Dinner",
     subtitle: "Farewell meal in the city",
     description: "Your last evening in Zhangjiajie — celebrate three incredible days with a proper meal in the city centre:",
     restaurants: [
-      { name: "Tianmen Fox Fairy Restaurant (天门狐仙)", cuisine: "Hunan fine dining", note: "The best restaurant in Zhangjiajie city — upscale Hunan cuisine with views. Perfect for a farewell dinner.", price: "¥120–180 pp", rating: 4.9 },
-      { name: "Dayong Ancient City Night Market (大庸古城夜市)", cuisine: "Street food & BBQ", note: "Lively night market in the old town. BBQ skewers, stinky tofu, cold beer — the best atmosphere in the city.", price: "¥30–60 pp", rating: 4.7 },
-      { name: "Meng Hui Da Yong (梦回大庸)", cuisine: "Traditional Hunan", note: "Classic Hunan restaurant with a cosy setting. Great red-braised pork and spicy fish head. Reliable and affordable.", price: "¥60–100 pp", rating: 4.6 },
+      { name: "一村院子餐厅", englishName: "Village Courtyard", cuisine: "Courtyard fine dining", note: "A strong final-night pick if you want somewhere beautiful and calm. The landscaped courtyard and polished setting make it feel like a proper farewell dinner.", price: "¥120–180 pp", rating: 4.8, image: RESTAURANT_IMAGES.yicunYard },
+      { name: "水上酒吧", englishName: "Waterside Bar", cuisine: "Cocktails & light bites", note: "Best for a looser last evening: waterside seating, glowing night views, and a cocktail-bar atmosphere around XiBu Street rather than a formal sit-down meal.", price: "¥60–120 pp", rating: 4.5, image: RESTAURANT_IMAGES.watersideBar },
     ],
     transportAfter: { mode: "taxi", duration: "10 min", note: "Taxi back to your city hotel" },
   },
@@ -384,7 +392,7 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     type: "hotel",
     title: "City Hotel",
     subtitle: "Final night — airport tomorrow",
-    description: "Rest up at your city centre hotel. Your airport transfer is arranged for the morning — Zhangjiajie Hehua Airport is just 20 minutes from the city.",
+    description: "Rest up at your city centre hotel. Your airport transfer is arranged for the morning — Zhangjiajie Hehua Airport is about 40 minutes from the city.",
   },
 ]; }
 
@@ -447,21 +455,28 @@ function RestaurantCard({ r }: { r: Restaurant }) {
       style={{
         background: "#fff",
         borderRadius: 14,
-        padding: "14px 16px",
+        overflow: "hidden",
         marginBottom: 10,
         boxShadow: "0 2px 12px rgba(0,0,0,0.06)",
         border: "1px solid #F0EDE8",
+        display: "flex",
       }}
     >
-      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 8 }}>
-        <div style={{ flex: 1 }}>
-          <p style={{ fontSize: 14, fontWeight: 800, color: "#1A1A1A", margin: "0 0 2px", fontFamily: "'Fraunces', serif" }}>{r.name}</p>
-          <p style={{ fontSize: 11, color: "#E8271A", fontWeight: 700, margin: "0 0 6px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{r.cuisine}</p>
-          <p style={{ fontSize: 13, color: "#555", margin: 0, lineHeight: 1.5 }}>{r.note}</p>
+      {r.image && (
+        <div style={{ width: 100, minHeight: 100, flexShrink: 0, overflow: "hidden", background: "#F7F5F2" }}>
+          <img src={r.image} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
-        <div style={{ flexShrink: 0, textAlign: "right" }}>
-          <span style={{ fontSize: 11, color: "#888", fontWeight: 600 }}>{r.price}</span>
+      )}
+      <div style={{ padding: "10px 12px", flex: 1, minWidth: 0 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 6 }}>
+          <div>
+            <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>{r.englishName || r.name}</p>
+            {r.englishName && <p style={{ fontSize: 10, color: "#999", margin: "1px 0 0" }}>{r.name}</p>}
+          </div>
+          <span style={{ fontSize: 10, color: "#888", fontWeight: 600, flexShrink: 0 }}>{r.price}</span>
         </div>
+        <span style={{ display: "inline-block", fontSize: 8, fontWeight: 700, color: "#D0021B", background: "#FFF1F3", padding: "1px 6px", borderRadius: 20, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 4 }}>{r.cuisine}</span>
+        <p style={{ fontSize: 11.5, color: "#555", margin: "4px 0 0", lineHeight: 1.45 }}>{r.note}</p>
       </div>
     </div>
   );
@@ -571,28 +586,16 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
               </div>
             )}
 
-            {/* COLLAPSED PREVIEW — meal: 3-col restaurant mini cards */}
+            {/* COLLAPSED PREVIEW — meal: inline restaurant names */}
             {!expanded && item.type === "meal" && item.restaurants && (
-              <div style={{ marginTop: 10 }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 6 }}>
-                  {item.restaurants.map((r) => (
-                    <div
-                      key={r.name}
-                      style={{
-                        background: "#F7F5F2",
-                        borderRadius: 10,
-                        padding: "8px 8px 7px",
-                        border: "1px solid #EDE9E3",
-                      }}
-                    >
-                      <div style={{ width: 28, height: 28, borderRadius: 8, overflow: "hidden", marginBottom: 5 }}>
-                        <img src={HUNAN_FOOD_IMG} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                      </div>
-                      <p style={{ fontSize: 10, fontWeight: 800, color: "#1A1A1A", margin: "0 0 2px", lineHeight: 1.3, fontFamily: "'Fraunces', serif" }}>{r.name.split(" (")[0]}</p>
-                      <p style={{ fontSize: 9.5, color: "#E8271A", fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.03em" }}>{r.cuisine}</p>
-                    </div>
-                  ))}
-                </div>
+              <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
+                {item.restaurants.map((r, i) => (
+                  <React.Fragment key={r.name}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{r.englishName || r.name}</span>
+                    {i < item.restaurants!.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
+                  </React.Fragment>
+                ))}
+                <span style={{ fontSize: 10, color: "#AAA", marginLeft: 2 }}>{item.restaurants[0].price}</span>
               </div>
             )}
 
@@ -660,7 +663,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     meiNote: "This needs to be booked through a local operator. Tell me your dates and I'll arrange it — it sells out fast.",
     image: FOREST_IMG,
     tag: "Premium",
-    tagColor: "#E8271A",
+    tagColor: "#D0021B",
   },
   {
     id: "pick-2",
@@ -746,10 +749,10 @@ function MeiRecommendations() {
           <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 36, height: 36, borderRadius: 10, objectFit: "cover", flexShrink: 0 }} />
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
-              <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>Things most tourists miss</p>
-              <span style={{ fontSize: 10, background: "#FFF0EE", color: "#E8271A", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>Local picks</span>
+              <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>You could also do</p>
+              <span style={{ fontSize: 10, background: "#FFF1F3", color: "#D0021B", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>Local picks</span>
             </div>
-            <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>Off-the-beaten-path spots we can add to your trip — tap ♡ to save any you like.</p>
+            <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>Other spots near Zhangjiajie we can add to your trip — just let us know.</p>
           </div>
         </div>
       </div>
@@ -770,7 +773,7 @@ function MeiRecommendations() {
               }}
             >
               {/* Image */}
-              <div style={{ height: 180, position: "relative", overflow: "hidden" }}>
+              <div style={{ height: 240, position: "relative", overflow: "hidden" }}>
                 <img src={pick.image} alt={pick.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%)" }} />
                 
@@ -807,11 +810,14 @@ function PersonalisationBanner() {
       {/* Header */}
       <div style={{ background: "#1A1A1A", padding: "16px 18px 14px" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-          <Sparkles size={16} color="#E8271A" />
+          <Sparkles size={16} color="#D0021B" />
           <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", margin: 0 }}>We'd customise all of this for your trip</p>
         </div>
         <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.65)", margin: 0, lineHeight: 1.5 }}>
-          This is a sample — your actual itinerary gets built around your dates, budget, group size, and interests.
+          This is a sample — we'd tailor everything around your dates, pace, and what you're into.
+        </p>
+        <p style={{ fontSize: 12, color: "#D0021B", fontWeight: 700, margin: "8px 0 0" }}>
+          No service fee — you only pay for tickets and bookings at face value.
         </p>
       </div>
       {/* 3 personalisation options */}
@@ -830,8 +836,8 @@ function PersonalisationBanner() {
             }}
           >
             <div style={{ display: "flex", justifyContent: "center", marginBottom: 8 }}>
-              <div style={{ width: 36, height: 36, borderRadius: 10, background: "#FFF0EE", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <item.icon size={18} color="#E8271A" />
+              <div style={{ width: 36, height: 36, borderRadius: 10, background: "#FFF1F3", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                <item.icon size={18} color="#D0021B" />
               </div>
             </div>
             <p style={{ fontSize: 11, fontWeight: 800, color: "#1A1A1A", margin: "0 0 3px", lineHeight: 1.3 }}>{item.label}</p>
@@ -852,8 +858,8 @@ function PersonalisationBanner() {
           borderTop: "1px solid #F0EDE8",
         }}
       >
-        <MessageCircle size={15} color="#E8271A" />
-        Plan my trip
+        <MessageCircle size={15} color="#D0021B" />
+        Ask us anything
       </a>
     </div>
   );
@@ -916,12 +922,6 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
         <img src={FOREST_IMG} alt="Zhangjiajie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "clamp(20px,4vw,48px) clamp(20px,6vw,80px)" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 12 }}>
-            <div style={{ width: 24, height: 24, background: "#E8271A", borderRadius: 7, display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <span style={{ fontSize: 10, fontWeight: 900, color: "#fff" }}>CP</span>
-            </div>
-            <span style={{ fontSize: 11, color: "rgba(255,255,255,0.85)", fontWeight: 700, letterSpacing: "0.08em", textTransform: "uppercase" }}>ChinaPal · Sample Itinerary</span>
-          </div>
           <h1 style={{ fontSize: "clamp(32px,5vw,56px)", fontWeight: 900, color: "#fff", margin: "0 0 10px", fontFamily: "'Fraunces', serif", lineHeight: 1.05 }}>
             Zhangjiajie Adventure
           </h1>
@@ -944,6 +944,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             ) : (
               <>A sample trip — yours to explore. Every detail is customisable.</>
             )}
+          </p>
+          <p style={{ fontSize: 12, color: "#D0021B", fontWeight: 700, margin: "8px 0 0" }}>
+            No service fee — you only pay for tickets and bookings at face value.
           </p>
         </div>
       </div>
@@ -979,9 +982,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             <a
               href={WA_LINK}
               target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", width: "100%", background: "#E8271A", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
+              style={{ display: "flex", width: "100%", background: "#D0021B", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
             >
-              <MessageCircle size={15} /> Plan My Trip
+              <MessageCircle size={15} /> Ask Us Anything
             </a>
           </div>
 
@@ -1005,7 +1008,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
           <div style={{ background: "#fff", borderRadius: 16, border: "1px solid #E8E4DE", overflow: "hidden", marginBottom: 16 }}>
             <div style={{ background: "#1A1A1A", padding: "14px 16px" }}>
               <div style={{ display: "flex", alignItems: "center", gap: 7, marginBottom: 4 }}>
-                <Sparkles size={14} color="#E8271A" />
+                <Sparkles size={14} color="#D0021B" />
                 <p style={{ fontSize: 12, fontWeight: 800, color: "#fff", margin: 0 }}>What we handle for you</p>
               </div>
               <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.6)", margin: 0, lineHeight: 1.5 }}>The hard parts of a China trip, sorted.</p>
@@ -1016,8 +1019,8 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               { icon: MessageCircle, label: "On-the-ground help", desc: "Message us anytime during your trip" },
             ].map((item, i) => (
               <div key={item.label} style={{ padding: "12px 16px", borderBottom: i < 2 ? "1px solid #F5F3F0" : "none", display: "flex", gap: 10, alignItems: "flex-start" }}>
-                <div style={{ width: 30, height: 30, borderRadius: 8, background: "#FFF0EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                  <item.icon size={15} color="#E8271A" />
+                <div style={{ width: 30, height: 30, borderRadius: 8, background: "#FFF1F3", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+                  <item.icon size={15} color="#D0021B" />
                 </div>
                 <div>
                   <p style={{ fontSize: 12, fontWeight: 700, color: "#1A1A1A", margin: "0 0 2px" }}>{item.label}</p>
@@ -1030,7 +1033,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, background: "#F7F5F2", padding: "12px 0", textDecoration: "none", color: "#1A1A1A", fontSize: 12, fontWeight: 700, borderTop: "1px solid #F0EDE8" }}
             >
-              <MessageCircle size={13} color="#E8271A" /> Plan my trip
+              <MessageCircle size={13} color="#D0021B" /> Ask us anything
             </a>
           </div>
         </aside>
@@ -1062,7 +1065,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
             {activeDay === 1 && (
               <>
                 <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <div style={{ width: 36, height: 36, background: "#E8271A", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <div style={{ width: 36, height: 36, background: "#D0021B", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <span style={{ fontSize: 16, fontWeight: 900, color: "#fff", fontFamily: "'Fraunces', serif" }}>1</span>
                   </div>
                   <div>
@@ -1096,9 +1099,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                         <a
                           href={WA_LINK}
                           target="_blank" rel="noopener noreferrer"
-                          style={{ marginTop: 12, display: "flex", width: "100%", background: "#E8271A", border: "none", borderRadius: 10, padding: "9px 0", color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
+                          style={{ marginTop: 12, display: "flex", width: "100%", background: "#D0021B", border: "none", borderRadius: 10, padding: "9px 0", color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
                         >
-                          <MessageCircle size={14} /> Plan My Trip
+                          <MessageCircle size={14} /> Ask Us Anything
                         </a>
                       </div>
                     )}
@@ -1174,7 +1177,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                       <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: 0 }}>{departure.description}</p>
                       <div style={{ marginTop: 12, background: "#F0FDF4", borderRadius: 10, padding: "10px 12px", display: "flex", gap: 8, alignItems: "flex-start" }}>
                         <Info size={14} color="#059669" style={{ flexShrink: 0, marginTop: 1 }} />
-                        <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>This is just a sample — your real itinerary gets fully customised. Message us to get started.</p>
+                        <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>This is just a sample — we'd tailor everything around your dates and what you want to do. Message us to get started.</p>
                       </div>
                     </div>
                   </div>
