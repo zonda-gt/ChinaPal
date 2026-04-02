@@ -17,21 +17,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Links */}
-          <div className="grid grid-cols-2 gap-x-16 gap-y-2">
-            <div className="space-y-2.5">
-              <p className="font-body text-xs font-semibold text-white/30 uppercase tracking-widest mb-4">Product</p>
-              <Link href="/product" className="block font-body text-sm text-white/55 hover:text-white transition-colors">Pricing</Link>
-              <a href="/#how-it-works" className="block font-body text-sm text-white/55 hover:text-white transition-colors">How it works</a>
-              <a href="/#included" className="block font-body text-sm text-white/55 hover:text-white transition-colors">What&apos;s included</a>
-            </div>
-            <div className="space-y-2.5">
-              <p className="font-body text-xs font-semibold text-white/30 uppercase tracking-widest mb-4">Resources</p>
-              <a href="/#guides" className="block font-body text-sm text-white/55 hover:text-white transition-colors">China Guides</a>
-              <a href="/product#faq" className="block font-body text-sm text-white/55 hover:text-white transition-colors">FAQ</a>
-              <a href="#" className="block font-body text-sm text-white/55 hover:text-white transition-colors">Contact</a>
-            </div>
-          </div>
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3">

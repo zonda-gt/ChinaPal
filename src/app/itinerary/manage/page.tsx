@@ -56,6 +56,15 @@ const ACTIVITY_GROUPS = [
     ],
   },
   {
+    title: "Tianmen Mountain (Day 3)",
+    description: "Cable car, glass skywalks, Heaven's Gate cave",
+    slots: [
+      { key: "tianmen_cablecar", label: "Cable Car Ride" },
+      { key: "tianmen_glass", label: "Glass Skywalk" },
+      { key: "tianmen_cave", label: "Heaven's Gate & 999 Steps" },
+    ],
+  },
+  {
     title: "Other",
     description: "Concierge photo and restaurant thumbnails",
     slots: [

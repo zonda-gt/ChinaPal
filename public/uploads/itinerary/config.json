@@ -1,4 +1,12 @@
 {
   "forest": "/uploads/itinerary/forest.jpeg",
-  "avatar": "/uploads/itinerary/avatar.jpeg"
+  "avatar": "/uploads/itinerary/avatar.jpeg",
+  "tianzi_clouds": "/uploads/itinerary/tianzi_clouds.jpeg",
+  "tianzi_preview3": "/uploads/itinerary/tianzi_preview3.webp",
+  "tianzi": "/uploads/itinerary/tianzi.jpeg",
+  "show_stage": "/uploads/itinerary/show_stage.jpg",
+  "show_preview3": "/uploads/itinerary/show_preview3.jpeg",
+  "tianmen_cablecar": "/uploads/itinerary/tianmen_cablecar.jpg",
+  "tianmen_cave": "/uploads/itinerary/tianmen_cave.webp",
+  "tianmen_glass": "/uploads/itinerary/tianmen_glass.jpg"
 }

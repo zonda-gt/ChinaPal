@@ -19,6 +19,9 @@ export const IMAGE_SLOTS = [
   { key: "ten_mile", label: "Ten-Mile Gallery", description: "Ten-Mile Gallery preview" },
   { key: "show_stage", label: "Show Stage", description: "Charming Xiangxi preview" },
   { key: "hunan_food", label: "Hunan Food", description: "Restaurant card thumbnails" },
+  { key: "tianmen_cablecar", label: "Tianmen Cable Car", description: "Tianmen Mountain cable car ride" },
+  { key: "tianmen_glass", label: "Tianmen Glass Skywalk", description: "Glass skywalk on cliff face" },
+  { key: "tianmen_cave", label: "Tianmen Cave (Heaven's Gate)", description: "999 steps and the cave" },
 ] as const;
 
 export type ImageSlotKey = (typeof IMAGE_SLOTS)[number]["key"];
@@ -39,6 +42,9 @@ const CDN_DEFAULTS: Record<ImageSlotKey, string> = {
   ten_mile: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-ten-mile-night-hhDcwkiXTzUM77iNNhKJJz.webp",
   show_stage: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-show-stage-5vsSH7YEVUrQP8TKivY3B2.webp",
   hunan_food: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-hunan-food-5uvTJyHoH4ttNhNFdYfrT2.webp",
+  tianmen_cablecar: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-forest-park-Fk6sgYY4AzscGgsTAdGZLa.webp",
+  tianmen_glass: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-forest-park-Fk6sgYY4AzscGgsTAdGZLa.webp",
+  tianmen_cave: "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/zjj-forest-park-Fk6sgYY4AzscGgsTAdGZLa.webp",
 };
 
 export type ImageMap = Record<ImageSlotKey, string>;
