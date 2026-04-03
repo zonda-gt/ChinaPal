@@ -708,7 +708,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     title: "Forest Hot Springs",
     desc: "Soak in natural hot springs surrounded by forest after 3 days of hiking. Multiple outdoor pools at different temperatures, with mountain views.",
     meiNote: "The Hetian Resort springs are the best — we can book a session and arrange pickup from your hotel.",
-    image: TUJIA_IMG,
+    image: "/uploads/itinerary/hotspring.webp",
     tag: "After the hike",
     tagColor: "#D97706",
   },
@@ -923,7 +923,7 @@ export default function ItineraryPage({ images, leadName }: { images?: ImageMap;
             <div style={{ width: 3, height: 3, background: "rgba(255,255,255,0.5)", borderRadius: "50%" }} />
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <Clock size={14} color="rgba(255,255,255,0.8)" />
-              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>3 Days · 2 Nights</span>
+              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>3 Days</span>
             </div>
             <div style={{ width: 3, height: 3, background: "rgba(255,255,255,0.5)", borderRadius: "50%" }} />
             <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>Zhangjiajie, China</span>
