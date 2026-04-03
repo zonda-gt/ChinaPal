@@ -191,9 +191,9 @@ function buildDay1(img: ImageMap): TimelineItem[] { return [
     title: "Charming Xiangxi Show",
     subtitle: "Evening cultural performance",
     description: "This is one of the most spectacular shows in China — 500+ performers, real waterfalls on stage, fire, acrobatics, and the stories of the Tujia and Miao ethnic minorities who have called these mountains home for centuries. It's genuinely moving and unlike anything you'll see elsewhere.",
-    image: SHOW_IMG,
+    image: "/uploads/itinerary/xiangxi_show.jpg",
     tip: "Our tip: Tickets sell out and need to be booked in advance through Chinese-only platforms. The show is about 90 minutes — bring a light jacket for the open-air theatre. We handle the booking.",
-    previewImages: [SHOW_IMG, SHOW_STAGE_IMG, img.show_preview3],
+    previewImages: ["/uploads/itinerary/xiangxi_show.jpg", SHOW_STAGE_IMG, img.show_preview3],
     previewLine: "500+ performers, real waterfalls on stage, fire, and Tujia & Miao culture.",
     transportAfter: { mode: "taxi", duration: "10 min", note: "Taxi back to your hotel" },
   },
@@ -219,8 +219,9 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
     title: "Guaiyaomei Tujia Brocade Workshop",
     subtitle: "Morning — Cultural immersion",
     description: "Start Day 2 with something genuinely unique — a visit to a traditional Tujia brocade weaving workshop. The Tujia people have been weaving their intricate 'xilankapu' cloth for over 2,000 years, and here you can watch master weavers at work and try the loom yourself. The patterns tell stories of mountains, rivers, and daily life.",
+    image: "/uploads/itinerary/tujia_silk1.jpeg",
     tip: "Our tip: This is a quieter, more personal experience — perfect for the morning before the busier afternoon. You can buy authentic brocade pieces directly from the weavers.",
-    previewImages: [TUJIA_IMG, HUNAN_FOOD_IMG, STREAM_CLOSE_IMG],
+    previewImages: ["/uploads/itinerary/tujia_silk1.jpeg", "/uploads/itinerary/tujia_silk2.jpg", "/uploads/itinerary/tujia_silk3.jpeg"],
     previewLine: "Watch master weavers at work and try the loom yourself — 2,000 years of craft.",
     transportAfter: { mode: "walk", duration: "12 min", note: "Short walk into Wulingyuan town for lunch" },
   },
@@ -267,21 +268,22 @@ function buildDay2(img: ImageMap): TimelineItem[] { const FOREST_IMG = img.fores
       { name: "溪布街小吃", englishName: "XiBu Street Snacks", cuisine: "Street food", note: "Perfect if you want a lively XiBu Street evening: cold noodles, mugwort cakes, and easy snack-hopping around the lit-up riverside area.", price: "¥25–50 pp", rating: 4.7, image: RESTAURANT_IMAGES.xibuStreetSnacks },
       { name: "香花烧烤", englishName: "Xianghua BBQ", cuisine: "BBQ", note: "A fun, casual grill with skewers over charcoal and punchy, garlicky plates for sharing. Best if you want a louder, more social dinner.", price: "¥50–80 pp", rating: 4.6, image: RESTAURANT_IMAGES.xianghuaBbq },
     ],
-    transportAfter: { mode: "shuttle", duration: "18 min", note: "Shuttle bus to Ten-Mile Gallery entrance" },
+    transportAfter: { mode: "taxi", duration: "20 min", note: "Taxi to Zhangjiajie Songcheng Tourist Area" },
   },
   {
-    id: "d2-gallery",
+    id: "d2-show",
     time: "Evening · 8:30",
-    icon: Sunset,
-    iconBg: "#FFF8E1",
+    icon: Moon,
+    iconBg: "#EDE7F6",
     type: "activity",
-    title: "Ten-Mile Gallery",
-    subtitle: "Evening — Scenic light rail",
-    description: "A scenic light rail that glides through a valley of stone pillars lit up in the evening. The formations here have poetic names like 'Fairy Maiden Scattering Flowers' and 'Marshal\'s Troops Review'. It's a magical, unhurried way to say goodbye to the national park before tomorrow's Tianmen Mountain adventure.",
-    tip: "Our tip: The evening light rail runs until about 10pm. It's a 30-minute round trip — perfect for after dinner. Much less crowded in the evening.",
-    previewImages: [TEN_MILE_IMG, TIANZI_CLOUDS_IMG, img.tianzi_preview3],
-    previewLine: "Scenic light rail through illuminated stone pillars — a peaceful end to the day.",
-    transportAfter: { mode: "taxi", duration: "12 min", note: "Taxi back to your hotel" },
+    title: "Zhangjiajie Eternal Love Show",
+    subtitle: "Evening — 千古情 spectacular",
+    image: "/uploads/itinerary/eternal_love1.jpg",
+    description: "A huge indoor show by Songcheng — the same company behind China's most popular live performances. About an hour of Tujia and Miao legends, aerial acrobatics, fire, water effects, and a rotating stage. It covers the mythology of how Zhangjiajie's pillars were formed and the love stories of the local ethnic minorities.",
+    tip: "Our tip: Tickets are around ¥260–300 and need to be booked on Chinese platforms. The Songcheng complex around the theatre has food and smaller free performances too — worth arriving early.",
+    previewImages: ["/uploads/itinerary/eternal_love1.jpg", "/uploads/itinerary/eternal_love2.jpg", "/uploads/itinerary/eternal_love3.jpg"],
+    previewLine: "Aerial acrobatics, fire, water effects, and Tujia legends — a massive indoor spectacular.",
+    transportAfter: { mode: "taxi", duration: "15 min", note: "Taxi back to your hotel" },
   },
   {
     id: "d2-hotel",
@@ -305,9 +307,9 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     title: "Tianmen Mountain Cable Car",
     subtitle: "The world's longest cable car",
     description: "Start your final day with the most dramatic cable car ride in China — 7.5 kilometres from downtown Zhangjiajie straight up into the clouds. The 28-minute ride passes over the city, through forest, and into the mountain mist. At 1,519 metres, Tianmen Mountain is a completely different experience from the forest park.",
-    image: img.tianmen_cablecar,
+    image: "/uploads/itinerary/tianmen_cable1.jpg",
     tip: "Our tip: Book the earliest time slot (8:00 AM) to avoid queues and get the clearest weather. Sit on the right side going up for the best mountain views. Bring a warm jacket — the summit is 10-15°C colder than the city.",
-    previewImages: [img.tianmen_cablecar, img.tianmen_glass, img.tianmen_cave],
+    previewImages: ["/uploads/itinerary/tianmen_cable1.jpg", "/uploads/itinerary/tianmen_cable2.jpg", "/uploads/itinerary/tianmen_cable3.jpg"],
     previewLine: "A 28-minute ride from city streets into the clouds — 7.5km of jaw-dropping scenery.",
     transportAfter: { mode: "walk", duration: "5 min", note: "Walk to the east summit trail" },
   },
@@ -364,9 +366,10 @@ function buildDay3(img: ImageMap): TimelineItem[] { return [
     type: "activity",
     title: "99-Bend Road Descent",
     subtitle: "White-knuckle mountain road",
+    image: "/uploads/itinerary/99bend1.webp",
     description: "The coach ride down Tongtian Avenue — nearly 11 kilometres of mountain road with 99 hairpin turns switchbacking from 1,300m to 200m. The bus drivers navigate blind 180-degree turns with centimetres of clearance. It's equal parts terrifying and impressive, and the aerial views from above are spectacular.",
     tip: "Our tip: Sit on the left side for the best cliff-drop views. The ride takes about 25 minutes. If you get motion sick easily, take medication beforehand.",
-    previewImages: [img.tianmen_cave, img.tianmen_glass, img.tianmen_cablecar],
+    previewImages: ["/uploads/itinerary/99bend1.webp", "/uploads/itinerary/99bend2.jpeg", "/uploads/itinerary/99bend3.webp"],
     previewLine: "99 hairpin turns, 1,300m descent — the most dramatic bus ride of your life.",
   },
   {
@@ -661,7 +664,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     title: "Avatar Helicopter Tour",
     desc: "Fly over the sandstone pillars at eye level — a god's-eye view of the Avatar mountains, Tianmen Cave, and the 99-bend road. Nothing else in Zhangjiajie comes close.",
     meiNote: "This needs to be booked through a local operator. Tell me your dates and I'll arrange it — it sells out fast.",
-    image: FOREST_IMG,
+    image: "/uploads/itinerary/helicopter.jpg",
     tag: "Premium",
     tagColor: "#D0021B",
   },
@@ -672,7 +675,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     title: "Grand Canyon Adventure Combo",
     desc: "Glass bridge + 260m bungee jump + rock climbing + cave exploration — a full day of adrenaline in the Grand Canyon scenic area.",
     meiNote: "About 1 hour from the park. We book the combo ticket and arrange transport — much cheaper as a package.",
-    image: img.tianmen_glass,
+    image: "/uploads/itinerary/grand_canyon.jpg",
     tag: "Thrill seekers",
     tagColor: "#B45309",
   },
@@ -694,7 +697,7 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
     title: "Baofeng Lake Boat Ride",
     desc: "A serene boat ride on an emerald lake surrounded by karst peaks. Waterfall cascades directly into the lake — genuinely magical.",
     meiNote: "Great add-on if you have a spare hour. We book the boat tickets in advance.",
-    image: GOLDEN_IMG,
+    image: "/uploads/itinerary/baofeng_lake.jpg",
     tag: "Nature",
     tagColor: "#059669",
   },
@@ -807,19 +810,6 @@ function MeiRecommendations() {
 function PersonalisationBanner() {
   return (
     <div style={{ margin: "16px 16px 0", borderRadius: 20, overflow: "hidden", border: "1px solid #E8E4DE" }}>
-      {/* Header */}
-      <div style={{ background: "#1A1A1A", padding: "16px 18px 14px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 6 }}>
-          <Sparkles size={16} color="#D0021B" />
-          <p style={{ fontSize: 13, fontWeight: 800, color: "#fff", margin: 0 }}>We'd customise all of this for your trip</p>
-        </div>
-        <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.65)", margin: 0, lineHeight: 1.5 }}>
-          This is a sample — we'd tailor everything around your dates, pace, and what you're into.
-        </p>
-        <p style={{ fontSize: 12, color: "#D0021B", fontWeight: 700, margin: "8px 0 0" }}>
-          No service fee — you only pay for tickets and bookings at face value.
-        </p>
-      </div>
       {/* 3 personalisation options */}
       <div style={{ background: "#fff", display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
         {[
@@ -1124,7 +1114,7 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
                   </div>
                   <div>
                     <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>Day Two</h2>
-                <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>Tujia Workshop · Golden Whip Stream · Ten-Mile Gallery</p>
+                <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>Tujia Workshop · Golden Whip Stream · Eternal Love Show</p>
               </div>
             </div>
             {day2.map((item, i) => (
