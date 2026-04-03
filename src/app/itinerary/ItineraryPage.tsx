@@ -856,9 +856,9 @@ function PersonalisationBanner() {
 }
 
 
-export default function ItineraryPage({ images }: { images?: ImageMap }) {
+export default function ItineraryPage({ images, leadName }: { images?: ImageMap; leadName?: string }) {
   const searchParams = useSearchParams();
-  const visitorName = searchParams.get("name");
+  const visitorName = leadName || searchParams.get("name");
   const img = images ?? DEFAULT_IMAGES;
   syncImgVars(img);
 
@@ -911,9 +911,9 @@ export default function ItineraryPage({ images }: { images?: ImageMap }) {
       <div style={{ position: "relative", height: "clamp(260px, 38vw, 420px)", overflow: "hidden" }}>
         <img src={FOREST_IMG} alt="Zhangjiajie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%)" }} />
-        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "clamp(20px,4vw,48px) clamp(20px,6vw,80px)" }}>
+        <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "clamp(20px,4vw,48px) clamp(20px,6vw,80px)", paddingTop: 72 }}>
           <h1 style={{ fontSize: "clamp(32px,5vw,56px)", fontWeight: 900, color: "#fff", margin: "0 0 10px", fontFamily: "'Fraunces', serif", lineHeight: 1.05 }}>
-            Zhangjiajie Adventure
+            {visitorName ? `${visitorName}'s Zhangjiajie Adventure` : "Zhangjiajie Adventure"}
           </h1>
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
