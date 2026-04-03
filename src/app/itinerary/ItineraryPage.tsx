@@ -908,7 +908,7 @@ export default function ItineraryPage({ images, leadName }: { images?: ImageMap;
       `}</style>
 
       {/* Hero header — taller on desktop */}
-      <div style={{ position: "relative", height: "clamp(260px, 38vw, 420px)", overflow: "hidden" }}>
+      <div style={{ position: "relative", height: "500px", overflow: "hidden" }}>
         <img src={FOREST_IMG} alt="Zhangjiajie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "clamp(20px,4vw,48px) clamp(20px,6vw,80px)", paddingTop: 72 }}>
