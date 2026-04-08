@@ -4,9 +4,9 @@ import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I'd%20like%20to%20plan%20a%20trip%20to%20China";
+const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I%20need%20train%20tickets%20in%20China.";
 
-export default function StartPage() {
+export default function TrainsStartPage() {
   return (
     <div className="min-h-screen flex flex-col" style={{ backgroundColor: "oklch(0.985 0.005 80)" }}>
       <Navbar />
@@ -21,11 +21,11 @@ export default function StartPage() {
           </div>
 
           <h1 className="font-display text-3xl md:text-4xl font-bold mb-3" style={{ color: "oklch(0.18 0.01 260)" }}>
-            Connect on WhatsApp
+            Book your China train
           </h1>
 
           <p className="font-body text-base mb-8 leading-relaxed" style={{ color: "oklch(0.52 0.01 260)" }}>
-            for free. Tell us your dates and cities, and we&apos;ll get you sorted.
+            Tell us your route and dates — we&apos;ll book on 12306 and send your e-tickets.
           </p>
 
           <a
