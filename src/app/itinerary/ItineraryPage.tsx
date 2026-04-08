@@ -121,6 +121,38 @@ interface TimelineItem {
   transportAfter?: TransportLeg;
 }
 
+interface MeiPick {
+  id: string;
+  emoji: string;
+  type: string;
+  title: string;
+  desc: string;
+  meiNote: string;
+  image: string;
+  tag: string;
+  tagColor: string;
+}
+
+interface DayConfig {
+  label: string;
+  subtitle: string;
+  color: string;
+  items: TimelineItem[];
+}
+
+export interface ItineraryConfig {
+  cityName: string;
+  title: string;
+  location: string;
+  duration: string;
+  heroImage: string;
+  days: DayConfig[];
+  picks: MeiPick[];
+  departure: { time: string; title: string; description: string };
+  departureNote: string;
+  meiGreeting: string;
+}
+
 function buildDay1(img: ImageMap): TimelineItem[] { return [
   {
     id: "d1-forest",
@@ -736,9 +768,9 @@ function buildMeiPicks(img: ImageMap) { const FOREST_IMG = img.forest; const TIA
   },
 ]; }
 
-function MeiRecommendations() {
+function MeiRecommendations({ picks }: { picks?: MeiPick[] }) {
   const img = useImg();
-  const MEI_PICKS = buildMeiPicks(img);
+  const MEI_PICKS = picks ?? buildMeiPicks(img);
   const CONCIERGE_IMG = img.concierge;
   
 
@@ -856,15 +888,35 @@ function PersonalisationBanner() {
 }
 
 
-export default function ItineraryPage({ images, leadName }: { images?: ImageMap; leadName?: string }) {
+export default function ItineraryPage({ images, leadName, config }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig }) {
   const searchParams = useSearchParams();
   const visitorName = leadName || searchParams.get("name");
   const img = images ?? DEFAULT_IMAGES;
   syncImgVars(img);
 
-  const day1 = buildDay1(img);
-  const day2 = buildDay2(img);
-  const day3 = buildDay3(img);
+  // Use provided config or build default Zhangjiajie config
+  const cfg: ItineraryConfig = config ?? {
+    cityName: "Zhangjiajie",
+    title: "Zhangjiajie Adventure",
+    location: "Hunan, China",
+    duration: "3 Days",
+    heroImage: FOREST_IMG,
+    days: [
+      { label: "Day 1", subtitle: "Forest Park · Tianzi Mountain · Charming Xiangxi Show", color: "#D0021B", items: buildDay1(img) },
+      { label: "Day 2", subtitle: "Tujia Workshop · Golden Whip Stream · Eternal Love Show", color: "#1A1A1A", items: buildDay2(img) },
+      { label: "Day 3", subtitle: "Tianmen Mountain · Glass Skywalks · 999 Steps · 99-Bend Road", color: "#B45309", items: buildDay3(img) },
+    ],
+    picks: buildMeiPicks(img),
+    departure: {
+      time: "Morning",
+      title: "Airport Transfer",
+      description: "We arrange a private driver to take you from your hotel to Zhangjiajie Hehua International Airport — about 40 minutes. No haggling with taxis, no language barrier.",
+    },
+    departureNote: "This is just a sample — we'd tailor everything around your dates and what you want to do. Message us to get started.",
+    meiGreeting: `This is what a ${visitorName ? visitorName + "'s " : ""}Zhangjiajie trip could look like. We handle tickets, restaurants, transport, and on-the-ground help — so you can just enjoy the trip.`,
+  };
+
+  const allMeals = cfg.days.flatMap(d => d.items).filter(i => i.type === "meal");
 
   const [activeDay, setActiveDay] = useState(1);
 
@@ -909,24 +961,24 @@ export default function ItineraryPage({ images, leadName }: { images?: ImageMap;
 
       {/* Hero header — taller on desktop */}
       <div style={{ position: "relative", height: "500px", overflow: "hidden" }}>
-        <img src={FOREST_IMG} alt="Zhangjiajie" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+        <img src={cfg.heroImage} alt={cfg.cityName} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%)" }} />
         <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", justifyContent: "flex-end", padding: "clamp(20px,4vw,48px) clamp(20px,6vw,80px)", paddingTop: 72 }}>
           <h1 style={{ fontSize: "clamp(32px,5vw,56px)", fontWeight: 900, color: "#fff", margin: "0 0 10px", fontFamily: "'Fraunces', serif", lineHeight: 1.05 }}>
-            {visitorName ? `${visitorName}'s Zhangjiajie Adventure` : "Zhangjiajie Adventure"}
+            {visitorName ? `${visitorName}'s ${cfg.title}` : cfg.title}
           </h1>
           <div style={{ display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <MapPin size={14} color="rgba(255,255,255,0.8)" />
-              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>Hunan, China</span>
+              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>{cfg.location}</span>
             </div>
             <div style={{ width: 3, height: 3, background: "rgba(255,255,255,0.5)", borderRadius: "50%" }} />
             <div style={{ display: "flex", alignItems: "center", gap: 5 }}>
               <Clock size={14} color="rgba(255,255,255,0.8)" />
-              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>3 Days</span>
+              <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>{cfg.duration}</span>
             </div>
             <div style={{ width: 3, height: 3, background: "rgba(255,255,255,0.5)", borderRadius: "50%" }} />
-            <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>Zhangjiajie, China</span>
+            <span style={{ fontSize: 13, color: "rgba(255,255,255,0.8)", fontWeight: 600 }}>{cfg.cityName}, China</span>
           </div>
           <p style={{ fontSize: 13, color: "rgba(255,255,255,0.6)", margin: "12px 0 0", lineHeight: 1.5 }}>
             {visitorName ? (
@@ -934,9 +986,6 @@ export default function ItineraryPage({ images, leadName }: { images?: ImageMap;
             ) : (
               <>A sample trip — yours to explore. Every detail is customisable.</>
             )}
-          </p>
-          <p style={{ fontSize: 12, color: "#D0021B", fontWeight: 700, margin: "8px 0 0" }}>
-            No service fee — you only pay for tickets and bookings at face value.
           </p>
         </div>
       </div>
@@ -1032,155 +1081,113 @@ export default function ItineraryPage({ images, leadName }: { images?: ImageMap;
         <main>
           {/* Sticky day tabs */}
           <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20 }}>
-            {[1, 2, 3].map((day) => (
+            {cfg.days.map((_, i) => (
               <button
-                key={day}
-                onClick={() => setActiveDay(day)}
+                key={i}
+                onClick={() => setActiveDay(i + 1)}
                 style={{
                   padding: "10px 2px", border: "none", background: "none",
-                  color: activeDay === day ? "#C0392B" : "#888",
+                  color: activeDay === i + 1 ? "#C0392B" : "#888",
                   fontSize: 13, fontWeight: 700, cursor: "pointer",
                   fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  borderBottom: activeDay === day ? "2px solid #C0392B" : "2px solid transparent",
+                  borderBottom: activeDay === i + 1 ? "2px solid #C0392B" : "2px solid transparent",
                   marginBottom: -1, whiteSpace: "nowrap",
                 }}
               >
-                {day === 1 ? "Day 1" : day === 2 ? "Day 2" : "Day 3"}
+                Day {i + 1}
               </button>
             ))}
           </div>
 
           {/* Day content */}
           <div style={{ paddingTop: 20 }}>
-            {activeDay === 1 && (
-              <>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <div style={{ width: 36, height: 36, background: "#D0021B", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontSize: 16, fontWeight: 900, color: "#fff", fontFamily: "'Fraunces', serif" }}>1</span>
+            {cfg.days.map((day, dayIdx) => {
+              const dayNum = dayIdx + 1;
+              if (activeDay !== dayNum) return null;
+              const dayNames = ["One", "Two", "Three", "Four", "Five"];
+              const isLastDay = dayIdx === cfg.days.length - 1;
+              return (
+                <React.Fragment key={dayIdx}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
+                    <div style={{ width: 36, height: 36, background: day.color, borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <span style={{ fontSize: 16, fontWeight: 900, color: "#fff", fontFamily: "'Fraunces', serif" }}>{dayNum}</span>
+                    </div>
+                    <div>
+                      <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>Day {dayNames[dayIdx] ?? dayNum}</h2>
+                      <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>{day.subtitle}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>Day One</h2>
-                    <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>Forest Park · Tianzi Mountain · Charming Xiangxi Show</p>
-                  </div>
-                </div>
-                {day1.map((item, i) => (
-                  <React.Fragment key={item.id}>
-                    <TimelineCardWithTransport
-                      item={item}
-                      index={i}
-                    />
-                    {/* Mei greeting after lunch (2nd item) */}
-                    {i === 1 && (
-                      <div style={{ margin: "8px 0 20px", marginLeft: 40, background: "#1A1A1A", borderRadius: 18, padding: "16px", position: "relative", overflow: "hidden" }}>
-                        <div style={{ position: "absolute", top: -30, right: -30, width: 100, height: 100, background: "rgba(232,39,26,0.15)", borderRadius: "50%", filter: "blur(30px)" }} />
-                        <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                          <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 36, height: 36, borderRadius: 12, objectFit: "cover", border: "2px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
-                          <div>
-                            <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                              <span style={{ fontSize: 12, fontWeight: 800, color: "#fff" }}>Mei</span>
-                              <span style={{ fontSize: 9, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 6px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
-                              <div style={{ width: 5, height: 5, background: "#22C55E", borderRadius: "50%" }} />
+                  {day.items.map((item, i) => (
+                    <React.Fragment key={item.id}>
+                      <TimelineCardWithTransport item={item} index={i} />
+                      {/* Mei greeting after lunch on Day 1 */}
+                      {dayIdx === 0 && i === 1 && (
+                        <div style={{ margin: "8px 0 20px", marginLeft: 40, background: "#1A1A1A", borderRadius: 18, padding: "16px", position: "relative", overflow: "hidden" }}>
+                          <div style={{ position: "absolute", top: -30, right: -30, width: 100, height: 100, background: "rgba(232,39,26,0.15)", borderRadius: "50%", filter: "blur(30px)" }} />
+                          <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+                            <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 36, height: 36, borderRadius: 12, objectFit: "cover", border: "2px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
+                            <div>
+                              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
+                                <span style={{ fontSize: 12, fontWeight: 800, color: "#fff" }}>Mei</span>
+                                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 6px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
+                                <div style={{ width: 5, height: 5, background: "#22C55E", borderRadius: "50%" }} />
+                              </div>
+                              <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.8)", margin: 0, lineHeight: 1.55 }}>
+                                {cfg.meiGreeting}
+                              </p>
                             </div>
-                            <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.8)", margin: 0, lineHeight: 1.55 }}>
-                              This is what a Zhangjiajie trip could look like. We handle tickets, restaurants, transport, and on-the-ground help — so you can just enjoy the trip.
-                            </p>
+                          </div>
+                          <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
+                            style={{ marginTop: 12, display: "flex", width: "100%", background: "#D0021B", border: "none", borderRadius: 10, padding: "9px 0", color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}>
+                            <MessageCircle size={14} /> Ask Us Anything
+                          </a>
+                        </div>
+                      )}
+                    </React.Fragment>
+                  ))}
+
+                  {/* Departure card on last day */}
+                  {isLastDay && (
+                    <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
+                      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
+                        <div style={{ width: 28, height: 28, borderRadius: "50%", background: "#E8F5E9", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid #05996922", flexShrink: 0 }}>
+                          <Plane size={14} color="#059669" />
+                        </div>
+                      </div>
+                      <div style={{ flex: 1, paddingBottom: 32, paddingLeft: 8 }}>
+                        <p style={{ fontSize: 11, color: "#999", fontWeight: 700, margin: "0 0 4px", letterSpacing: "0.06em", textTransform: "uppercase", paddingTop: 10 }}>{cfg.departure.time}</p>
+                        <div style={{ background: "#fff", borderRadius: 18, padding: "14px 16px", boxShadow: "0 2px 16px rgba(0,0,0,0.07)", border: "1px solid #F0EDE8" }}>
+                          <p style={{ fontSize: 11, color: "#059669", fontWeight: 700, margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.04em" }}>Departure Day</p>
+                          <h3 style={{ fontSize: 16, fontWeight: 800, color: "#1A1A1A", margin: "0 0 10px", fontFamily: "'Fraunces', serif" }}>{cfg.departure.title}</h3>
+                          <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: 0 }}>{cfg.departure.description}</p>
+                          <div style={{ marginTop: 12, background: "#F0FDF4", borderRadius: 10, padding: "10px 12px", display: "flex", gap: 8, alignItems: "flex-start" }}>
+                            <Info size={14} color="#059669" style={{ flexShrink: 0, marginTop: 1 }} />
+                            <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>{cfg.departureNote}</p>
                           </div>
                         </div>
-                        <a
-                          href={WA_LINK}
-                          target="_blank" rel="noopener noreferrer"
-                          style={{ marginTop: 12, display: "flex", width: "100%", background: "#D0021B", border: "none", borderRadius: 10, padding: "9px 0", color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
-                        >
-                          <MessageCircle size={14} /> Ask Us Anything
-                        </a>
-                      </div>
-                    )}
-                  </React.Fragment>
-                ))}
-                <button
-                  onClick={() => { setActiveDay(2); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                  style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 8, padding: "12px 0", background: "none", border: "1px solid #E8E4DE", borderRadius: 12, color: "#1A1A1A", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                >
-                  Continue to Day 2 →
-                </button>
-              </>
-            )}
-
-            {activeDay === 2 && (
-              <>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <div style={{ width: 36, height: 36, background: "#1A1A1A", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontSize: 16, fontWeight: 900, color: "#fff", fontFamily: "'Fraunces', serif" }}>2</span>
-                  </div>
-                  <div>
-                    <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>Day Two</h2>
-                <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>Tujia Workshop · Golden Whip Stream · Eternal Love Show</p>
-              </div>
-            </div>
-            {day2.map((item, i) => (
-              <TimelineCardWithTransport
-                key={item.id}
-                item={item}
-                index={i}
-              />
-            ))}
-                <button
-                  onClick={() => { setActiveDay(3); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                  style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 8, padding: "12px 0", background: "none", border: "1px solid #E8E4DE", borderRadius: 12, color: "#1A1A1A", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
-                >
-                  Continue to Day 3 →
-                </button>
-            </>
-            )}
-
-            {activeDay === 3 && (
-              <>
-                <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 20 }}>
-                  <div style={{ width: 36, height: 36, background: "#B45309", borderRadius: 10, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <span style={{ fontSize: 16, fontWeight: 900, color: "#fff", fontFamily: "'Fraunces', serif" }}>3</span>
-                  </div>
-                  <div>
-                    <h2 style={{ fontSize: 18, fontWeight: 900, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>Day Three</h2>
-                    <p style={{ fontSize: 12, color: "#888", margin: 0, fontWeight: 600 }}>Tianmen Mountain · Glass Skywalks · 999 Steps · 99-Bend Road</p>
-                  </div>
-                </div>
-                {day3.map((item, i) => (
-                  <TimelineCardWithTransport
-                    key={item.id}
-                    item={item}
-                    index={i}
-                  />
-                ))}
-
-                {/* Departure card */}
-                <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
-                  <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
-                    <div style={{ width: 28, height: 28, borderRadius: "50%", background: "#E8F5E9", display: "flex", alignItems: "center", justifyContent: "center", border: "2px solid #05996922", flexShrink: 0 }}>
-                      <Plane size={14} color="#059669" />
-                    </div>
-                  </div>
-                  <div style={{ flex: 1, paddingBottom: 32, paddingLeft: 8 }}>
-                    <p style={{ fontSize: 11, color: "#999", fontWeight: 700, margin: "0 0 4px", letterSpacing: "0.06em", textTransform: "uppercase", paddingTop: 10 }}>{departure.time}</p>
-                    <div style={{ background: "#fff", borderRadius: 18, padding: "14px 16px", boxShadow: "0 2px 16px rgba(0,0,0,0.07)", border: "1px solid #F0EDE8" }}>
-                      <p style={{ fontSize: 11, color: "#059669", fontWeight: 700, margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.04em" }}>Departure Day</p>
-                      <h3 style={{ fontSize: 16, fontWeight: 800, color: "#1A1A1A", margin: "0 0 10px", fontFamily: "'Fraunces', serif" }}>{departure.title}</h3>
-                      <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: 0 }}>{departure.description}</p>
-                      <div style={{ marginTop: 12, background: "#F0FDF4", borderRadius: 10, padding: "10px 12px", display: "flex", gap: 8, alignItems: "flex-start" }}>
-                        <Info size={14} color="#059669" style={{ flexShrink: 0, marginTop: 1 }} />
-                        <p style={{ fontSize: 12, color: "#166534", margin: 0, lineHeight: 1.5 }}>This is just a sample — we'd tailor everything around your dates and what you want to do. Message us to get started.</p>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </>
-            )}
+                  )}
+
+                  {/* Continue to next day button */}
+                  {!isLastDay && (
+                    <button
+                      onClick={() => { setActiveDay(dayNum + 1); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                      style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 8, padding: "12px 0", background: "none", border: "1px solid #E8E4DE", borderRadius: 12, color: "#D0021B", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                    >
+                      Continue to Day {dayNum + 1} →
+                    </button>
+                  )}
+                </React.Fragment>
+              );
+            })}
           </div>
         </main>
       </div>{/* end itinerary-layout */}
 
       {/* Mei's Picks + Personalisation — bottom of page, all devices */}
       <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(16px,4vw,48px)" }}>
-        <MeiRecommendations />
+        <MeiRecommendations picks={cfg.picks} />
         <PersonalisationBanner />
       </div>
 
