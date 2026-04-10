@@ -63,9 +63,7 @@ function HeroSection() {
 
                 <div className="flex flex-row flex-wrap gap-3">
                   <a
-                    href={WA_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={START_LINK}
                     className="text-white font-semibold px-8 py-4 rounded-full text-base transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] flex items-center gap-2 font-body"
                     style={{ backgroundColor: "oklch(0.48 0.22 25)" }}
                   >
