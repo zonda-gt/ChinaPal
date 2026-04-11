@@ -10,7 +10,13 @@ export const metadata: Metadata = {
     template: "%s | ChinaPal",
   },
   description:
-    "Expert travel guides for China's top attractions. Written for foreigners, powered by local knowledge.",
+    "China travel, without the friction. A local expert one text away — for setup, bookings, and every question China throws at you.",
+  openGraph: {
+    siteName: "ChinaPal",
+  },
+  other: {
+    "google-site-name": "ChinaPal",
+  },
 };
 
 export default function RootLayout({
@@ -21,6 +27,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "ChinaPal",
+              alternateName: "China Pal",
+              url: "https://chinapal.co",
+            }),
+          }}
+        />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
