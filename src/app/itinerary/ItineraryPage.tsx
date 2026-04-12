@@ -7,7 +7,7 @@
    Fonts: Fraunces (display headings) + Plus Jakarta Sans (body)
 */
 import React, { useState } from "react";
-import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, Bus, Footprints } from "lucide-react";
+import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, TrainFront, Bus, Footprints } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -96,7 +96,7 @@ interface Restaurant {
   image?: string;
 }
 
-type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "car";
+type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "car" | "train";
 
 interface TransportLeg {
   mode: TransportMode;
@@ -448,6 +448,7 @@ const TRANSPORT_CONFIG: Record<TransportMode, { icon: React.ElementType; label: 
   shuttle:     { icon: Bus,       label: "Shuttle",    color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   "light-rail":{ icon: TramFront, label: "Light Rail", color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   car:         { icon: Car,       label: "Car",        color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
+  train:       { icon: TrainFront,label: "Train",      color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
 };
 
 function TransportConnector({ leg }: { leg: TransportLeg }) {
@@ -1080,7 +1081,7 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
         {/* ── MAIN CONTENT COLUMN ── */}
         <main>
           {/* Sticky day tabs */}
-          <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20 }}>
+          <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20, overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
             {cfg.days.map((_, i) => (
               <button
                 key={i}
@@ -1104,7 +1105,7 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
             {cfg.days.map((day, dayIdx) => {
               const dayNum = dayIdx + 1;
               if (activeDay !== dayNum) return null;
-              const dayNames = ["One", "Two", "Three", "Four", "Five"];
+              const dayNames = ["One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten", "Eleven", "Twelve"];
               const isLastDay = dayIdx === cfg.days.length - 1;
               return (
                 <React.Fragment key={dayIdx}>
