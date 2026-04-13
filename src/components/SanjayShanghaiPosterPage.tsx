@@ -2,7 +2,7 @@
 
 /* eslint-disable @next/next/no-img-element */
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Dancing_Script, DM_Sans } from "next/font/google";
 
@@ -22,9 +22,8 @@ const SHDISNEY_IMAGE = "/uploads/itinerary/shdisney.jpg";
 const SHANGHAI_MAP_IMAGE =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/PwMrEaeBjvxp5svWcwqXHF/shanghai_map-NeX2Joxz7nyaxgxqkNfzv6.webp";
 const PRODUCT_IMAGES = [
-  "/uploads/itinerary/carousel-shanghai-3.jpg",
   "/uploads/itinerary/carousel-shanghai-4.jpg",
-  "/uploads/itinerary/carousel-shanghai-5.webp",
+  "/uploads/itinerary/carousel-shanghai-3.jpg",
   "/uploads/itinerary/carousel-shanghai-1.jpg",
   "/uploads/itinerary/carousel-shanghai-2.jpg",
 ] as const;
@@ -225,58 +224,41 @@ export default function SanjayShanghaiPosterPage() {
   const [tianzifang, yuGarden, bund, nanjingRoad, frenchConcession, disney] =
     poster.attractions;
   const [carouselIndex, setCarouselIndex] = useState(0);
-  const [touchStartX, setTouchStartX] = useState<number | null>(null);
+  const scrollerRef = useRef<HTMLDivElement | null>(null);
 
   const goToSlide = (index: number) => {
-    setCarouselIndex(index);
+    const scroller = scrollerRef.current;
+    if (!scroller) return;
+    scroller.scrollTo({ left: index * scroller.clientWidth, behavior: "smooth" });
   };
 
-  const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
-    setTouchStartX(event.touches[0]?.clientX ?? null);
-  };
-
-  const handleTouchEnd = (event: React.TouchEvent<HTMLDivElement>) => {
-    if (touchStartX === null) return;
-
-    const touchEndX = event.changedTouches[0]?.clientX ?? touchStartX;
-    const delta = touchStartX - touchEndX;
-
-    if (Math.abs(delta) > 40) {
-      if (delta > 0) {
-        setCarouselIndex((current) => (current + 1) % PRODUCT_IMAGES.length);
-      } else {
-        setCarouselIndex((current) =>
-          current === 0 ? PRODUCT_IMAGES.length - 1 : current - 1,
-        );
-      }
-    }
-
-    setTouchStartX(null);
+  const handleScroll = (event: React.UIEvent<HTMLDivElement>) => {
+    const scroller = event.currentTarget;
+    const next = Math.round(scroller.scrollLeft / scroller.clientWidth);
+    if (next !== carouselIndex) setCarouselIndex(next);
   };
 
   return (
     <div className={`${dmSans.className} min-h-screen bg-stone-100 px-4 py-6`}>
       <div className="mx-auto max-w-[420px] space-y-4">
         <section className="-mx-4 overflow-hidden bg-white">
-          <div
-            className="relative overflow-hidden"
-            onTouchStart={handleTouchStart}
-            onTouchEnd={handleTouchEnd}
-          >
-            <motion.div
-              className="flex"
-              animate={{ x: `-${carouselIndex * 100}%` }}
-              transition={{ duration: 0.35, ease: "easeOut" }}
+          <div className="relative">
+            <div
+              ref={scrollerRef}
+              onScroll={handleScroll}
+              className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              style={{ touchAction: "pan-y pinch-zoom" }}
             >
               {PRODUCT_IMAGES.map((image, index) => (
                 <img
                   key={index}
                   src={image}
                   alt={`Shanghai trip preview ${index + 1}`}
-                  className="h-[500px] w-full shrink-0 object-cover"
+                  className="h-[500px] w-full shrink-0 snap-center snap-always object-cover"
+                  draggable={false}
                 />
               ))}
-            </motion.div>
+            </div>
 
             <div className="absolute inset-x-0 bottom-6 flex items-center justify-center gap-3">
               {PRODUCT_IMAGES.map((_, index) => (
@@ -304,7 +286,7 @@ export default function SanjayShanghaiPosterPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              {["Family trip", "4-star stay", "Customizable"].map((tag) => (
+              {["WhatsApp concierge included", "4-star stay", "Fully customizable"].map((tag) => (
                 <span
                   key={tag}
                   className="border border-[#F0C8D1] px-2 py-1 text-[11px] font-semibold text-[#D3567E]"
@@ -367,6 +349,19 @@ export default function SanjayShanghaiPosterPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="overflow-hidden rounded-2xl bg-white shadow-lg"
+        >
+          <img
+            src={SHANGHAI_MAP_IMAGE}
+            alt="Shanghai attraction map"
+            className="w-full object-cover"
+          />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="relative overflow-hidden rounded-xl shadow-md"
         >
@@ -412,19 +407,6 @@ export default function SanjayShanghaiPosterPage() {
           <img
             src={SANJAY_FEATURE_IMAGE}
             alt="Sanjay itinerary feature"
-            className="w-full object-cover"
-          />
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="overflow-hidden rounded-2xl bg-white shadow-lg"
-        >
-          <img
-            src={SHANGHAI_MAP_IMAGE}
-            alt="Shanghai attraction map"
             className="w-full object-cover"
           />
         </motion.div>
