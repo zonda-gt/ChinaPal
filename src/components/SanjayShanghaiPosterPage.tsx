@@ -257,7 +257,7 @@ export default function SanjayShanghaiPosterPage() {
   return (
     <div className={`${dmSans.className} min-h-screen bg-stone-100 px-4 py-6`}>
       <div className="mx-auto max-w-[420px] space-y-4">
-        <section className="overflow-hidden rounded-xl bg-white shadow-lg">
+        <section className="-mx-4 overflow-hidden bg-white">
           <div
             className="relative overflow-hidden"
             onTouchStart={handleTouchStart}
