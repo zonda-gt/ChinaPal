@@ -89,6 +89,17 @@ const poster = {
   ] satisfies Attraction[],
 };
 
+const hotel = {
+  name: "Rezen Hotel Shanghai Pudong Avenue",
+  description:
+    "4-star stay in Pudong · skyline views · breakfast included · family-friendly.",
+  images: [
+    "/uploads/itinerary/sanjay-hotel-1.jpg",
+    "/uploads/itinerary/sanjay-hotel-2.jpg",
+    "/uploads/itinerary/sanjay-hotel-3.jpg",
+  ],
+};
+
 const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
@@ -122,7 +133,7 @@ const itineraryDays: ItineraryDay[] = [
     title: "Yu Garden + Departure",
     items: [
       "Yu Garden + Yuyuan Bazaar street food",
-      "Nanjing Road last-minute shopping",
+      "Nanjing Road shopping",
       "🚄 Train D99: Shanghai → Guangzhou (departs 17:43, overnight sleeper, arrives next morning 09:45)",
     ],
   },
@@ -241,22 +252,33 @@ export default function SanjayShanghaiPosterPage() {
   return (
     <div className={`${dmSans.className} min-h-screen bg-stone-100 px-4 py-6`}>
       <div className="mx-auto max-w-[420px] space-y-4">
-        <section className="-mx-4 overflow-hidden bg-white">
+        <section className="-mx-4 bg-white">
           <div className="relative">
             <div
               ref={scrollerRef}
               onScroll={handleScroll}
-              className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              style={{ touchAction: "pan-y pinch-zoom" }}
+              className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden"
+              style={{
+                scrollSnapType: "x mandatory",
+                overscrollBehaviorX: "contain",
+                touchAction: "pan-y pinch-zoom",
+                scrollbarWidth: "none",
+                msOverflowStyle: "none",
+              }}
             >
               {PRODUCT_IMAGES.map((image, index) => (
-                <img
+                <div
                   key={index}
-                  src={image}
-                  alt={`Shanghai trip preview ${index + 1}`}
-                  className="h-[500px] w-full shrink-0 snap-center snap-always object-cover"
-                  draggable={false}
-                />
+                  className="h-[500px] w-full shrink-0 basis-full"
+                  style={{ scrollSnapAlign: "center", scrollSnapStop: "always" }}
+                >
+                  <img
+                    src={image}
+                    alt={`Shanghai trip preview ${index + 1}`}
+                    className="h-full w-full object-cover"
+                    draggable={false}
+                  />
+                </div>
               ))}
             </div>
 
@@ -297,7 +319,7 @@ export default function SanjayShanghaiPosterPage() {
             </div>
 
             <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              ¥ 6399 from / person
+              ¥ 2300 / person
             </p>
           </div>
         </section>
@@ -409,6 +431,60 @@ export default function SanjayShanghaiPosterPage() {
             alt="Sanjay itinerary feature"
             className="w-full object-cover"
           />
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="overflow-hidden rounded-xl bg-[#C23845] p-4 shadow-md"
+        >
+          <div className="px-2 pb-5 pt-3 text-center">
+            <h2
+              className={`${dancingScript.className} text-6xl leading-none text-white`}
+            >
+              Hotel
+            </h2>
+            <p className="mt-2 text-2xl font-bold tracking-widest text-white">
+              HOTEL
+            </p>
+
+            <div className="mx-auto mt-4 flex max-w-[220px] items-center gap-3">
+              <div className="h-px flex-1 bg-white/40" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                Your Stay
+              </p>
+              <div className="h-px flex-1 bg-white/40" />
+            </div>
+
+            <p className="mt-2 text-[13px] font-semibold tracking-wide text-white/85">
+              {hotel.name}
+            </p>
+          </div>
+
+          <div className="space-y-1 overflow-hidden rounded-md">
+            <img
+              src={hotel.images[0]}
+              alt="Hotel main"
+              className="aspect-[3/2] w-full object-cover"
+            />
+            <div className="grid grid-cols-2 gap-1">
+              <img
+                src={hotel.images[1]}
+                alt="Hotel detail 1"
+                className="aspect-[3/2] w-full object-cover"
+              />
+              <img
+                src={hotel.images[2]}
+                alt="Hotel detail 2"
+                className="aspect-[3/2] w-full object-cover"
+              />
+            </div>
+          </div>
+
+          <p className="mt-3 px-1 text-[12px] leading-relaxed text-white/90">
+            {hotel.description}
+          </p>
         </motion.div>
 
         <div className="pb-4 text-center text-xs text-stone-400">
