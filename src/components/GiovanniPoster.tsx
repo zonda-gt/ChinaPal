@@ -98,7 +98,7 @@ const cityItineraries: CityItinerary[] = [
         day: "DAY 1",
         title: "Pandas & Leshan Buddha",
         items: [
-          "Giant Panda Base at opening (7:30 AM)",
+          "Giant Panda Base at opening (they most active)",
           "🚄 Train C6255 to Leshan · Giant Buddha boat cruise",
           "Sleep in Leshan",
         ],
@@ -320,9 +320,8 @@ export default function GiovanniPoster() {
             <div className="flex flex-wrap gap-2">
               {[
                 "Every ticket pre-booked",
-                "Train e-tickets to your passport",
+                "Transport logistics sorted",
                 "WhatsApp concierge included",
-                "Hotels you've booked",
                 "Fully customisable",
               ].map((tag) => (
                 <span

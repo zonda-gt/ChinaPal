@@ -606,33 +606,29 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
                 <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
                 <h3 style={{ fontSize: isCompact ? 13 : 16, fontWeight: isCompact ? 700 : 800, color: isCompact ? "#666" : "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
               </div>
-              {item.type !== "hotel" && (
+              {item.type !== "hotel" && !(item.type === "activity" && !expanded && item.previewImages) && (
                 <div style={{ width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
                   {expanded ? <ChevronUp size={isCompact ? 12 : 14} color="#888" /> : <ChevronDown size={isCompact ? 12 : 14} color="#888" />}
                 </div>
               )}
             </div>
 
-            {/* COLLAPSED PREVIEW — activity: 3 images + one-liner */}
+            {/* COLLAPSED PREVIEW — activity: 2 images + one-liner */}
             {!expanded && item.type === "activity" && item.previewImages && (
               <div style={{ marginTop: 10 }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 5, marginBottom: 8 }}>
-                  {item.previewImages.slice(0, 2).map((src, i) => (
+                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 5, marginBottom: 8 }}>
+                  {[item.previewImages[0], item.previewImages[1] ?? item.previewImages[0]].map((src, i) => (
                     <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
                       <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                   ))}
-                  <div style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden", position: "relative", cursor: "pointer" }}>
-                    <img src={item.previewImages[2]} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", filter: "brightness(0.4)" }} />
-                    <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 2 }}>
-                      <span style={{ fontSize: 18, fontWeight: 800, color: "#fff" }}>+</span>
-                      <span style={{ fontSize: 10, fontWeight: 700, color: "rgba(255,255,255,0.85)", textTransform: "uppercase", letterSpacing: "0.05em" }}>See more</span>
-                    </div>
-                  </div>
                 </div>
                 {item.previewLine && (
                   <p style={{ fontSize: 12.5, color: "#666", margin: 0, lineHeight: 1.5 }}>{item.previewLine}</p>
                 )}
+                <div style={{ display: "flex", justifyContent: "center", marginTop: 4, marginBottom: -4 }}>
+                  <ChevronDown size={14} color="#C0C0C0" />
+                </div>
               </div>
             )}
 
@@ -680,30 +676,9 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
                 )}
 
                 {item.tip && (
-                  <div style={{ background: "#FFF8F0", borderRadius: 12, padding: "10px 14px", display: "flex", gap: 10, alignItems: "flex-start", marginTop: 12 }}>
-                    <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 28, height: 28, borderRadius: "50%", objectFit: "cover", flexShrink: 0 }} />
+                  <div style={{ background: "#FFF8F0", borderRadius: 12, padding: "10px 14px", marginTop: 12 }}>
                     <p style={{ fontSize: 12.5, color: "#555", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>{item.tip}</p>
                   </div>
-                )}
-
-                {/* Want to change this activity? */}
-                {item.type === "activity" && (
-                  <a
-                    href={WA_LINK}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => e.stopPropagation()}
-                    style={{
-                      display: "flex", alignItems: "center", gap: 6,
-                      marginTop: 12, padding: "9px 14px",
-                      background: "#F5F2EE", borderRadius: 10,
-                      textDecoration: "none", color: "#555",
-                      fontSize: 12.5, fontWeight: 600,
-                    }}
-                  >
-                    <MessageCircle size={13} color="#888" />
-                    Any questions? Message us
-                  </a>
                 )}
               </div>
             )}
