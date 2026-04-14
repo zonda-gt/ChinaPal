@@ -6,7 +6,7 @@
    Layout: Mobile-first single column, desktop 2-column with sticky sidebar
    Fonts: Fraunces (display headings) + Plus Jakarta Sans (body)
 */
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, TrainFront, Bus, Footprints } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -138,6 +138,7 @@ interface DayConfig {
   subtitle: string;
   color: string;
   items: TimelineItem[];
+  city?: string;
 }
 
 export interface ItineraryConfig {
@@ -540,28 +541,41 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
     transport: "#8A8A8A",
   };
 
+  const isMeal = item.type === "meal";
+  const isTransport = item.type === "transport";
+  const isHotel = item.type === "hotel";
+  const isCompact = isMeal || isTransport || isHotel;
+
   return (
     <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
       {/* Timeline spine */}
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", width: 32, flexShrink: 0 }}>
         <div style={{
-          width: 28, height: 28, borderRadius: "50%",
-          background: item.iconBg,
+          width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: "50%",
+          background: isCompact ? "#F5F2EE" : item.iconBg,
           display: "flex", alignItems: "center", justifyContent: "center",
           border: `2px solid ${typeColors[item.type]}22`,
           flexShrink: 0, zIndex: 1,
+          marginTop: isCompact ? 3 : 0,
         }}>
-          <Icon size={14} color={typeColors[item.type]} />
+          <Icon size={isCompact ? 11 : 14} color={isCompact ? "#AAA" : typeColors[item.type]} />
         </div>
         <div style={{ width: 2, flex: 1, background: "#E8E4DE", minHeight: 20 }} />
       </div>
 
       {/* Card */}
-      <div style={{ flex: 1, paddingBottom: 20, paddingLeft: 8 }}>
-        <p style={{ fontSize: 11, color: "#999", fontWeight: 700, margin: "0 0 4px", letterSpacing: "0.06em", textTransform: "uppercase", paddingTop: 10 }}>{item.time}</p>
+      <div style={{ flex: 1, paddingBottom: isCompact ? 14 : 20, paddingLeft: 8 }}>
+        <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : "#999", fontWeight: 700, margin: "0 0 3px", letterSpacing: "0.06em", textTransform: "uppercase", paddingTop: isCompact ? 6 : 10 }}>{item.time}</p>
 
         <div
-          style={{ background: "#fff", borderRadius: 18, overflow: "hidden", boxShadow: "0 2px 16px rgba(0,0,0,0.07)", border: "1px solid #F0EDE8", cursor: item.type !== "hotel" ? "pointer" : "default" }}
+          style={{
+            background: isCompact ? "#FBFAF8" : "#fff",
+            borderRadius: isCompact ? 12 : 18,
+            overflow: "hidden",
+            boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
+            border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
+            cursor: item.type !== "hotel" ? "pointer" : "default",
+          }}
           onClick={() => item.type !== "hotel" && setExpanded(!expanded)}
         >
           {/* Hero image carousel — only shown when expanded */}
@@ -586,15 +600,15 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
             </div>
           )}
 
-          <div style={{ padding: "14px 16px" }}>
+          <div style={{ padding: isCompact ? "9px 13px" : "14px 16px" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
               <div style={{ flex: 1 }}>
-                <p style={{ fontSize: 11, color: typeColors[item.type], fontWeight: 700, margin: "0 0 3px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
-                <h3 style={{ fontSize: 16, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
+                <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
+                <h3 style={{ fontSize: isCompact ? 13 : 16, fontWeight: isCompact ? 700 : 800, color: isCompact ? "#666" : "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
               </div>
               {item.type !== "hotel" && (
-                <div style={{ width: 28, height: 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
-                  {expanded ? <ChevronUp size={14} color="#888" /> : <ChevronDown size={14} color="#888" />}
+                <div style={{ width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
+                  {expanded ? <ChevronUp size={isCompact ? 12 : 14} color="#888" /> : <ChevronDown size={isCompact ? 12 : 14} color="#888" />}
                 </div>
               )}
             </div>
@@ -619,6 +633,18 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
                 {item.previewLine && (
                   <p style={{ fontSize: 12.5, color: "#666", margin: 0, lineHeight: 1.5 }}>{item.previewLine}</p>
                 )}
+              </div>
+            )}
+
+            {/* COLLAPSED PREVIEW — transport: inline duration + price + train info */}
+            {!expanded && item.type === "transport" && item.previewLine && (
+              <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
+                {item.previewLine.split("·").map((part, i, arr) => (
+                  <React.Fragment key={i}>
+                    <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{part.trim()}</span>
+                    {i < arr.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
+                  </React.Fragment>
+                ))}
               </div>
             )}
 
@@ -889,7 +915,7 @@ function PersonalisationBanner() {
 }
 
 
-export default function ItineraryPage({ images, leadName, config }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig }) {
+export default function ItineraryPage({ images, leadName, config, chromeless }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig; chromeless?: boolean }) {
   const searchParams = useSearchParams();
   const visitorName = leadName || searchParams.get("name");
   const img = images ?? DEFAULT_IMAGES;
@@ -920,11 +946,18 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
   const allMeals = cfg.days.flatMap(d => d.items).filter(i => i.type === "meal");
 
   const [activeDay, setActiveDay] = useState(1);
+  const dayTabsRef = useRef<HTMLDivElement | null>(null);
+  const scrollToDayTabs = () => {
+    const el = dayTabsRef.current;
+    if (!el) return;
+    const y = el.getBoundingClientRect().top + window.scrollY - 64;
+    window.scrollTo({ top: y, behavior: "smooth" });
+  };
 
   return (
     <ImgCtx.Provider value={img}>
-    <div style={{ minHeight: "100vh", background: "#F7F5F2", fontFamily: "'Plus Jakarta Sans', sans-serif", paddingBottom: 100 }}>
-      <Navbar />
+    <div style={{ minHeight: chromeless ? "auto" : "100vh", background: "#F7F5F2", fontFamily: "'Plus Jakarta Sans', sans-serif", paddingBottom: chromeless ? 40 : 100 }}>
+      {!chromeless && <Navbar />}
       <style>{`
         @media (min-width: 900px) {
           .itinerary-layout {
@@ -961,6 +994,7 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
       `}</style>
 
       {/* Hero header — taller on desktop */}
+      {!chromeless && (
       <div style={{ position: "relative", height: "500px", overflow: "hidden" }}>
         <img src={cfg.heroImage} alt={cfg.cityName} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.7) 100%)" }} />
@@ -990,6 +1024,7 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
           </p>
         </div>
       </div>
+      )}
 
       {/* ── DESKTOP: two-column grid, MOBILE: single column ── */}
       <div style={{
@@ -1003,31 +1038,6 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
 
         {/* ── LEFT SIDEBAR (desktop only) ── */}
         <aside className="itinerary-sidebar" style={{ display: "none" }}>
-          {/* Mei card */}
-          <div style={{ background: "#1A1A1A", borderRadius: 20, padding: "20px", position: "relative", overflow: "hidden", marginBottom: 16 }}>
-            <div style={{ position: "absolute", top: -30, right: -30, width: 100, height: 100, background: "rgba(232,39,26,0.15)", borderRadius: "50%", filter: "blur(30px)" }} />
-            <div style={{ display: "flex", gap: 14, alignItems: "flex-start", marginBottom: 14 }}>
-              <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 52, height: 52, borderRadius: 16, objectFit: "cover", border: "2px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
-              <div>
-                <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 6 }}>
-                  <span style={{ fontSize: 15, fontWeight: 800, color: "#fff" }}>Mei</span>
-                  <span style={{ fontSize: 10, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 8px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
-                  <div style={{ width: 7, height: 7, background: "#22C55E", borderRadius: "50%" }} />
-                </div>
-                <p style={{ fontSize: 13, color: "rgba(255,255,255,0.75)", margin: 0, lineHeight: 1.6 }}>
-                  Here's what a Zhangjiajie trip could look like. We handle tickets, restaurants, transport, and on-the-ground help — so you don't have to figure it all out yourself.
-                </p>
-              </div>
-            </div>
-            <a
-              href={WA_LINK}
-              target="_blank" rel="noopener noreferrer"
-              style={{ display: "flex", width: "100%", background: "#D0021B", borderRadius: 12, padding: "11px 0", color: "#fff", fontSize: 13, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}
-            >
-              <MessageCircle size={15} /> Ask Us Anything
-            </a>
-          </div>
-
           {/* Trip stats */}
           <div style={{ background: "#fff", borderRadius: 16, padding: "16px", border: "1px solid #E8E4DE", marginBottom: 16 }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: "#999", margin: "0 0 12px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Trip Overview</p>
@@ -1081,23 +1091,34 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
         {/* ── MAIN CONTENT COLUMN ── */}
         <main>
           {/* Sticky day tabs */}
-          <div style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20, overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none" }}>
-            {cfg.days.map((_, i) => (
-              <button
-                key={i}
-                onClick={() => setActiveDay(i + 1)}
-                style={{
-                  padding: "10px 2px", border: "none", background: "none",
-                  color: activeDay === i + 1 ? "#C0392B" : "#888",
-                  fontSize: 13, fontWeight: 700, cursor: "pointer",
-                  fontFamily: "'Plus Jakarta Sans', sans-serif",
-                  borderBottom: activeDay === i + 1 ? "2px solid #C0392B" : "2px solid transparent",
-                  marginBottom: -1, whiteSpace: "nowrap",
-                }}
-              >
-                Day {i + 1}
-              </button>
-            ))}
+          <div ref={dayTabsRef} style={{ position: "sticky", top: 64, zIndex: 10, background: "#F7F5F2", borderBottom: "1px solid #E8E4DE", display: "flex", gap: 20, overflowX: "auto", WebkitOverflowScrolling: "touch", scrollbarWidth: "none", paddingTop: cfg.days.some(d => d.city) ? 6 : 0 }}>
+            {cfg.days.map((day, i) => {
+              const prevCity = i > 0 ? cfg.days[i - 1].city : undefined;
+              const isCityStart = day.city && day.city !== prevCity;
+              const hasAnyCity = cfg.days.some(d => d.city);
+              return (
+                <button
+                  key={i}
+                  onClick={() => { setActiveDay(i + 1); scrollToDayTabs(); }}
+                  style={{
+                    padding: "0 2px 10px", border: "none", background: "none",
+                    color: activeDay === i + 1 ? "#C0392B" : "#888",
+                    fontSize: 13, fontWeight: 700, cursor: "pointer",
+                    fontFamily: "'Plus Jakarta Sans', sans-serif",
+                    borderBottom: activeDay === i + 1 ? "2px solid #C0392B" : "2px solid transparent",
+                    marginBottom: -1, whiteSpace: "nowrap",
+                    display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 2,
+                  }}
+                >
+                  {hasAnyCity && (
+                    <span style={{ fontSize: 9, fontWeight: 800, color: isCityStart ? "#C0392B" : "transparent", textTransform: "uppercase", letterSpacing: "0.08em", height: 12, lineHeight: "12px" }}>
+                      {isCityStart ? day.city : "·"}
+                    </span>
+                  )}
+                  <span style={{ paddingTop: hasAnyCity ? 4 : 10 }}>Day {i + 1}</span>
+                </button>
+              );
+            })}
           </div>
 
           {/* Day content */}
@@ -1121,29 +1142,6 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
                   {day.items.map((item, i) => (
                     <React.Fragment key={item.id}>
                       <TimelineCardWithTransport item={item} index={i} />
-                      {/* Mei greeting after lunch on Day 1 */}
-                      {dayIdx === 0 && i === 1 && (
-                        <div style={{ margin: "8px 0 20px", marginLeft: 40, background: "#1A1A1A", borderRadius: 18, padding: "16px", position: "relative", overflow: "hidden" }}>
-                          <div style={{ position: "absolute", top: -30, right: -30, width: 100, height: 100, background: "rgba(232,39,26,0.15)", borderRadius: "50%", filter: "blur(30px)" }} />
-                          <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
-                            <img src={CONCIERGE_IMG} alt="Mei" style={{ width: 36, height: 36, borderRadius: 12, objectFit: "cover", border: "2px solid rgba(255,255,255,0.15)", flexShrink: 0 }} />
-                            <div>
-                              <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-                                <span style={{ fontSize: 12, fontWeight: 800, color: "#fff" }}>Mei</span>
-                                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.5)", background: "rgba(255,255,255,0.1)", padding: "2px 6px", borderRadius: 20, fontWeight: 600 }}>ChinaPal Concierge</span>
-                                <div style={{ width: 5, height: 5, background: "#22C55E", borderRadius: "50%" }} />
-                              </div>
-                              <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.8)", margin: 0, lineHeight: 1.55 }}>
-                                {cfg.meiGreeting}
-                              </p>
-                            </div>
-                          </div>
-                          <a href={WA_LINK} target="_blank" rel="noopener noreferrer"
-                            style={{ marginTop: 12, display: "flex", width: "100%", background: "#D0021B", border: "none", borderRadius: 10, padding: "9px 0", color: "#fff", fontSize: 12, fontWeight: 700, cursor: "pointer", alignItems: "center", justifyContent: "center", gap: 6, textDecoration: "none", boxSizing: "border-box" }}>
-                            <MessageCircle size={14} /> Ask Us Anything
-                          </a>
-                        </div>
-                      )}
                     </React.Fragment>
                   ))}
 
@@ -1173,7 +1171,7 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
                   {/* Continue to next day button */}
                   {!isLastDay && (
                     <button
-                      onClick={() => { setActiveDay(dayNum + 1); window.scrollTo({ top: 0, behavior: "smooth" }); }}
+                      onClick={() => { setActiveDay(dayNum + 1); scrollToDayTabs(); }}
                       style={{ display: "flex", width: "100%", alignItems: "center", justifyContent: "center", gap: 6, marginTop: 8, padding: "12px 0", background: "none", border: "1px solid #E8E4DE", borderRadius: 12, color: "#D0021B", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                     >
                       Continue to Day {dayNum + 1} →
@@ -1187,12 +1185,14 @@ export default function ItineraryPage({ images, leadName, config }: { images?: I
       </div>{/* end itinerary-layout */}
 
       {/* Mei's Picks + Personalisation — bottom of page, all devices */}
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(16px,4vw,48px)" }}>
-        <MeiRecommendations picks={cfg.picks} />
-        <PersonalisationBanner />
-      </div>
+      {!chromeless && (
+        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 clamp(16px,4vw,48px)" }}>
+          <MeiRecommendations picks={cfg.picks} />
+          <PersonalisationBanner />
+        </div>
+      )}
 
-      <Footer />
+      {!chromeless && <Footer />}
     </div>
     </ImgCtx.Provider>
   );
