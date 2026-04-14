@@ -11,6 +11,9 @@ export default function GiovanniClient({ images }: { images: ImageMap }) {
   const config = buildGiovanniConfig();
   return (
     <>
+      <style>{`
+        header button[aria-label="Toggle menu"] { display: none !important; }
+      `}</style>
       <Navbar />
       <GiovanniPoster />
       <div style={{ background: "#F7F5F2", padding: "32px 16px 16px", textAlign: "center" }}>

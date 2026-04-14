@@ -233,8 +233,8 @@ function AttractionCard({
       transition={{ duration: 0.35 }}
       className="relative overflow-hidden rounded-sm bg-white p-2 shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
     >
-      <div className="px-3 py-2 text-center">
-        <p className="block whitespace-nowrap text-[15px] font-semibold text-[#912F34]">
+      <div className="px-2 py-2 text-center">
+        <p className="block text-[13px] font-semibold leading-tight text-[#912F34]">
           {attraction.nameEn}
         </p>
       </div>
@@ -243,6 +243,58 @@ function AttractionCard({
         alt={attraction.nameEn}
         className={fullWidth ? "h-40 w-full rounded-[2px] object-cover" : "h-28 w-full rounded-[2px] object-cover"}
       />
+    </motion.div>
+  );
+}
+
+function FeaturedAttractionCard({
+  attraction,
+  reverse = false,
+}: {
+  attraction: Attraction;
+  reverse?: boolean;
+}) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 16 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.35 }}
+      className="overflow-hidden rounded-sm bg-white p-2 shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
+    >
+      <div
+        className={`grid items-center gap-3 ${
+          reverse ? "grid-cols-[1.45fr_1fr]" : "grid-cols-[1fr_1.45fr]"
+        }`}
+      >
+        {reverse ? (
+          <>
+            <img
+              src={attraction.image}
+              alt={attraction.nameEn}
+              className="h-28 w-full rounded-[2px] object-cover"
+            />
+            <div className="px-3 text-center">
+              <p className="text-[17px] font-semibold leading-tight text-[#912F34]">
+                {attraction.nameEn}
+              </p>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="px-3 text-center">
+              <p className="text-[17px] font-semibold leading-tight text-[#912F34]">
+                {attraction.nameEn}
+              </p>
+            </div>
+            <img
+              src={attraction.image}
+              alt={attraction.nameEn}
+              className="h-28 w-full rounded-[2px] object-cover"
+            />
+          </>
+        )}
+      </div>
     </motion.div>
   );
 }
@@ -282,7 +334,7 @@ export default function GiovanniPoster() {
               ref={scrollerRef}
               onScroll={handleScroll}
               className="flex snap-x snap-mandatory overflow-x-auto overscroll-x-contain scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              style={{ touchAction: "pan-y pinch-zoom" }}
+              style={{ touchAction: "pan-x pan-y pinch-zoom" }}
             >
               {CAROUSEL_IMAGES.map((image, index) => (
                 <img
@@ -371,10 +423,8 @@ export default function GiovanniPoster() {
                     {city.days}
                   </p>
                 </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <AttractionCard attraction={city.small[0]} />
-                  <AttractionCard attraction={city.small[1]} />
-                </div>
+                <FeaturedAttractionCard attraction={city.small[0]} />
+                <FeaturedAttractionCard attraction={city.small[1]} reverse />
                 <div className="grid grid-cols-1">
                   <AttractionCard attraction={city.featured} fullWidth />
                 </div>
