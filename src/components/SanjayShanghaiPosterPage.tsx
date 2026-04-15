@@ -40,6 +40,7 @@ interface Attraction {
 
 interface ItineraryDay {
   day: string;
+  date?: string;
   title: string;
   items: string[];
 }
@@ -102,38 +103,52 @@ const hotel = {
 
 const itineraryDays: ItineraryDay[] = [
   {
+    day: "LANDING",
+    date: "17 May · 01:00",
+    title: "Land in Shanghai · Transfer to Hotel",
+    items: [
+      "✈️ Arrival at Shanghai Pudong 01:00 (17 May, early hours)",
+      "Pre-arranged transfer → hotel in Pudong",
+      "Check-in, sleep, recover for Day 1",
+    ],
+  },
+  {
     day: "DAY 1",
+    date: "17 May",
     title: "Arrive in Shanghai · Maglev Experience",
     items: [
-      "✈️ Arrival → Maglev Pudong Airport to city (431 km/h, 7 min)",
+      "Yu Garden + Yuyuan Bazaar street food",
+      "Nanjing Road shopping",
       "The Bund sunset walk + Pudong skyline photos",
       "Hotel: 4★ Pudong",
     ],
   },
   {
     day: "DAY 2",
+    date: "18 May",
     title: "Shanghai Disneyland",
     items: [
-      "Full-day Disney",
+      "Full-day Disney (Monday weekday recommended for lighter crowds)",
       "Hotel: 4★ Pudong",
     ],
   },
   {
     day: "DAY 3",
+    date: "19 May",
     title: "Shanghai Tower + French Concession",
     items: [
       "Shanghai Tower 632m observation deck (world's 2nd tallest)",
       "French Concession walk + Tianzifang art alleys",
-      "Evening: Sleep No More Shanghai OR Shanghai Circus World acrobatics (pick one)",
+      "Evening: Maglev train return ride (Longyang Rd ↔ Pudong Airport, 431 km/h)",
       "Hotel: 4★ Pudong",
     ],
   },
   {
     day: "DAY 4",
-    title: "Yu Garden + Departure",
+    date: "20 May",
+    title: "Free time · Departure to Guangzhou",
     items: [
-      "Yu Garden + Yuyuan Bazaar street food",
-      "Nanjing Road shopping",
+      "Free time in Shanghai before the train",
       "🚄 Train D99: Shanghai → Guangzhou (departs 17:43, overnight sleeper, arrives next morning 09:45)",
     ],
   },
@@ -319,7 +334,7 @@ export default function SanjayShanghaiPosterPage() {
             </div>
 
             <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              ¥ 2300 / person
+              ¥ 2600 / person
             </p>
           </div>
         </section>
@@ -336,9 +351,6 @@ export default function SanjayShanghaiPosterPage() {
             >
               {poster.destinationEn}
             </h1>
-            <p className="mt-2 text-2xl font-bold tracking-widest text-white">
-              {poster.destinationCn}
-            </p>
 
             <div className="mx-auto mt-4 flex max-w-[220px] items-center gap-3">
               <div className="h-px flex-1 bg-white/40" />
@@ -397,11 +409,18 @@ export default function SanjayShanghaiPosterPage() {
             <div className="space-y-6">
               {itineraryDays.map((entry) => (
                 <div key={entry.day} className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <DayBadge label={entry.day} />
-                    <p className="min-w-0 text-[16px] font-extrabold leading-[1.05] text-white">
-                      {entry.title}
-                    </p>
+                  <div className="space-y-1.5">
+                    {entry.date && (
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-white/70">
+                        {entry.date}
+                      </p>
+                    )}
+                    <div className="flex items-center gap-2">
+                      <DayBadge label={entry.day} />
+                      <p className="min-w-0 text-[16px] font-extrabold leading-[1.05] text-white">
+                        {entry.title}
+                      </p>
+                    </div>
                   </div>
 
                   <div className="space-y-1.5 pl-[10px]">
@@ -445,9 +464,6 @@ export default function SanjayShanghaiPosterPage() {
             >
               Hotel
             </h2>
-            <p className="mt-2 text-2xl font-bold tracking-widest text-white">
-              HOTEL
-            </p>
 
             <div className="mx-auto mt-4 flex max-w-[220px] items-center gap-3">
               <div className="h-px flex-1 bg-white/40" />
@@ -485,6 +501,49 @@ export default function SanjayShanghaiPosterPage() {
           <p className="mt-3 px-1 text-[12px] leading-relaxed text-white/90">
             {hotel.description}
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.45 }}
+          className="space-y-3 bg-white px-4 py-4"
+        >
+          <div>
+            <div className="mb-1.5 flex items-center gap-1.5">
+              <span className="inline-block h-3 w-[3px] bg-[#C23845]" />
+              <h3 className="text-[13px] font-extrabold text-[#1F1F1F]">
+                Price Included
+              </h3>
+            </div>
+            <ol className="space-y-0.5 text-[11px] leading-[1.35] text-[#333333]">
+              <li>1. Hotel: 4 nights at Rezen Hotel Shanghai Pudong (4★), 2 rooms with daily breakfast.</li>
+              <li>2. Pre-arranged airport-to-hotel transfer on arrival on day 1.</li>
+              <li>3. Attractions: Shanghai Disneyland day tickets × 4, Shanghai Tower 632m observation deck × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
+              <li>4. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
+              <li>5. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
+              <li>6. Planning: Daily itinerary guidance and on-the-ground assistance.</li>
+            </ol>
+          </div>
+
+          <div>
+            <div className="mb-1.5 flex items-center gap-1.5">
+              <span className="inline-block h-3 w-[3px] bg-[#C23845]" />
+              <h3 className="text-[13px] font-extrabold text-[#1F1F1F]">
+                Price Not Included
+              </h3>
+            </div>
+            <ol className="space-y-0.5 text-[11px] leading-[1.35] text-[#333333]">
+              <li>1. International flights between Kathmandu and Shanghai.</li>
+              <li>2. Local transport within Shanghai (metro, taxi, Didi).</li>
+              <li>3. Private guide and private car services (available on request, quoted separately).</li>
+              <li>4. Lunches, dinners, snacks and drinks outside hotel breakfast.</li>
+              <li>5. Travel insurance and China visa fees.</li>
+              <li>6. Personal expenses such as laundry, minibar, phone, alcohol, and souvenirs.</li>
+              <li>7. Additional costs caused by delays, cancellations, weather, mechanical issues or other force majeure events.</li>
+              <li>8. Any item not explicitly listed under &quot;Price Included&quot;.</li>
+            </ol>
+          </div>
         </motion.div>
 
         <div className="pb-4 text-center text-xs text-stone-400">
