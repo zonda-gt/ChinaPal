@@ -70,10 +70,10 @@ const cities: City[] = [
     caps: "ZHANGJIAJIE",
     days: "Days 7–11",
     small: [
-      { nameEn: "Avatar Mountains", image: FOREST },
+      { nameEn: "Tianmen Mountain", image: TIANMEN },
       { nameEn: "Glass Bridge", image: GLASS_BRIDGE },
     ],
-    featured: { nameEn: "Tianmen Mountain", image: TIANMEN },
+    featured: { nameEn: "Avatar Mountains", image: FOREST },
   },
 ];
 

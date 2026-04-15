@@ -10,7 +10,7 @@ interface Props {
   attractionSlug: string;
 }
 
-const WA_BASE = "https://wa.me/447447781385?text=";
+const WA_BASE = "https://wa.me/8618201806768?text=";
 
 export default function AttractionPage({ data, citySlug, attractionSlug }: Props) {
   const waLink = `${WA_BASE}${encodeURIComponent(`Hi! I'm interested in visiting ${data.attraction_name_en} — could you help me plan?`)}`;

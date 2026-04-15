@@ -276,7 +276,7 @@ export default function SanjayShanghaiPosterPage() {
               style={{
                 scrollSnapType: "x mandatory",
                 overscrollBehaviorX: "contain",
-                touchAction: "pan-y pinch-zoom",
+                touchAction: "pan-x pan-y pinch-zoom",
                 scrollbarWidth: "none",
                 msOverflowStyle: "none",
               }}

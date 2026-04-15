@@ -13,7 +13,7 @@ import PricingSection from "@/components/PricingSection";
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp";
 
 const START_LINK = "/start";
-const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I'd%20like%20to%20plan%20a%20trip%20to%20China";
+const WA_LINK = "https://wa.me/8618201806768?text=Hi!%20I'd%20like%20to%20plan%20a%20trip%20to%20China";
 
 function HeroSection() {
   const [loaded, setLoaded] = useState(false);

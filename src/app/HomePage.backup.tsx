@@ -187,7 +187,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
+                <a href="https://wa.me/8618201806768?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base">
                   Ask ChinaPal Free
                   <ArrowRight size={16} />
                 </a>
@@ -494,7 +494,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
                 variants={fadeUp}
                 custom={3}
               >
-                <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
+                <a href="https://wa.me/8618201806768?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary">
                   Start Asking Free
                   <ArrowRight size={16} />
                 </a>
@@ -774,7 +774,7 @@ export default function HomePage({ guides }: { guides: GuideCard[] }) {
             <p className="font-body text-white/50 text-base mb-8 max-w-md mx-auto">
               $49 per trip. 10 days of human-based text support. Everything you need.
             </p>
-            <a href="https://wa.me/447549879026?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
+            <a href="https://wa.me/8618201806768?text=Hi!%20I'm%20planning%20a%20trip%20to%20%5Bcity%5D%20in%20%5Bmonth%5D%20%E2%80%94%20can%20you%20help%3F%20%F0%9F%87%A8%F0%9F%87%B3" target="_blank" rel="noopener noreferrer" className="btn-primary text-base px-8 py-3.5">
               Get ChinaPal for my trip
               <ArrowRight size={16} />
             </a>

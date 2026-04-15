@@ -172,6 +172,7 @@ body {
 .font-display { font-family: 'Fraunces', 'DM Serif Display', Georgia, serif; }
 .font-body { font-family: 'Plus Jakarta Sans', 'Geist', 'Inter', system-ui, sans-serif; }
 
+
 /* ── Pill badge ── */
 .pill-badge {
   display: inline-flex;

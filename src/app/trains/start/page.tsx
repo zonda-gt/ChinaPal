@@ -4,7 +4,7 @@ import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const WA_LINK = "https://wa.me/447447781385?text=Hi!%20I%20need%20train%20tickets%20in%20China.";
+const WA_LINK = "https://wa.me/8618201806768?text=Hi!%20I%20need%20train%20tickets%20in%20China.";
 
 export default function TrainsStartPage() {
   return (
