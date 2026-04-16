@@ -42,6 +42,7 @@ interface ItineraryDay {
   day: string;
   date?: string;
   title: string;
+  tags?: string[];
   items: string[];
 }
 
@@ -106,6 +107,7 @@ const itineraryDays: ItineraryDay[] = [
     day: "LANDING",
     date: "17 May · 01:00",
     title: "Land in Shanghai · Transfer to Hotel",
+    tags: ["Airport pickup included"],
     items: [
       "✈️ Arrival at Shanghai Pudong 01:00 (17 May, early hours)",
       "Pre-arranged transfer → hotel in Pudong",
@@ -115,11 +117,14 @@ const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
     date: "17 May",
-    title: "Arrive in Shanghai · Maglev Experience",
+    title: "Yu Garden · The Bund · Wukang Road",
+    tags: ["Yu Garden tickets included", "Citywalk guide via Concierge"],
     items: [
       "Yu Garden + Yuyuan Bazaar street food",
+      "French Concession walk + Wukang Road + Tianzifang art alleys",
       "Nanjing Road shopping",
       "The Bund sunset walk + Pudong skyline photos",
+      "North Bund evening stroll + skyline views",
       "Hotel: 4★ Pudong",
     ],
   },
@@ -127,6 +132,7 @@ const itineraryDays: ItineraryDay[] = [
     day: "DAY 2",
     date: "18 May",
     title: "Shanghai Disneyland",
+    tags: ["Disney tickets included"],
     items: [
       "Full-day Disney (Monday weekday recommended for lighter crowds)",
       "Hotel: 4★ Pudong",
@@ -135,10 +141,12 @@ const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 3",
     date: "19 May",
-    title: "Shanghai Tower + French Concession",
+    title: "Jing'an Temple · Shanghai Tower · Lujiazui",
+    tags: ["Tower + Maglev tickets included", "Citywalk guide via Concierge"],
     items: [
+      "Jing'an Temple morning visit",
       "Shanghai Tower 632m observation deck (world's 2nd tallest)",
-      "French Concession walk + Tianzifang art alleys",
+      "Lujiazui city walk + skyscraper district",
       "Evening: Maglev train return ride (Longyang Rd ↔ Pudong Airport, 431 km/h)",
       "Hotel: 4★ Pudong",
     ],
@@ -146,9 +154,11 @@ const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 4",
     date: "20 May",
-    title: "Free time · Departure to Guangzhou",
+    title: "City Walk · Departure to Guangzhou",
+    tags: ["Station drop-off included", "Sleeper train booked"],
     items: [
-      "Free time in Shanghai before the train",
+      "Morning city walk along Suzhou Creek + Xintiandi",
+      "Pre-arranged drop-off to Shanghai Hongqiao Railway Station",
       "🚄 Train D99: Shanghai → Guangzhou (departs 17:43, overnight sleeper, arrives next morning 09:45)",
     ],
   },
@@ -423,6 +433,19 @@ export default function SanjayShanghaiPosterPage() {
                     </div>
                   </div>
 
+                  {entry.tags && entry.tags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5 pl-[10px]">
+                      {entry.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-sm bg-white/20 px-2 py-0.5 text-[10px] font-semibold tracking-wide text-white/95 backdrop-blur-sm"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
                   <div className="space-y-1.5 pl-[10px]">
                     {entry.items.map((item) => (
                       <p
@@ -518,11 +541,11 @@ export default function SanjayShanghaiPosterPage() {
             </div>
             <ol className="space-y-0.5 text-[11px] leading-[1.35] text-[#333333]">
               <li>1. Hotel: 4 nights at Rezen Hotel Shanghai Pudong (4★), 2 rooms with daily breakfast.</li>
-              <li>2. Pre-arranged airport-to-hotel transfer on arrival on day 1.</li>
+              <li>2. Pre-arranged airport-to-hotel transfer on arrival on day 1 + hotel-to-railway station drop-off on day 4.</li>
               <li>3. Attractions: Shanghai Disneyland day tickets × 4, Shanghai Tower 632m observation deck × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
               <li>4. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
               <li>5. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
-              <li>6. Planning: Daily itinerary guidance and on-the-ground assistance.</li>
+              <li>6. Planning: Daily itinerary guidance, city walk route planning, and on-the-ground assistance via concierge.</li>
             </ol>
           </div>
 
