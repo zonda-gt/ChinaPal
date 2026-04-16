@@ -155,7 +155,7 @@ const itineraryDays: ItineraryDay[] = [
     day: "DAY 4",
     date: "20 May",
     title: "City Walk · Departure to Guangzhou",
-    tags: ["Station drop-off included", "Sleeper train booked"],
+    tags: ["Private 6-seater car with driver", "Station drop-off included", "Sleeper train booked"],
     items: [
       "Morning city walk along Suzhou Creek + Xintiandi",
       "Pre-arranged drop-off to Shanghai Nan Railway Station",
@@ -542,7 +542,7 @@ export default function SanjayShanghaiPosterPage() {
             <ol className="space-y-0.5 text-[11px] leading-[1.35] text-[#333333]">
               <li>1. Hotel: 4 nights at Rezen Hotel Shanghai Pudong (4★), 2 rooms with daily breakfast.</li>
               <li>2. Pre-arranged airport-to-hotel transfer on arrival on day 1 + hotel-to-railway station drop-off on day 4.</li>
-              <li>3. Private 6-seater car charter with driver for Day 1, 2, and 3.</li>
+              <li>3. Private 6-seater car charter with driver for Day 1, 2, 3, and 4.</li>
               <li>4. Attractions: Shanghai Disneyland day tickets × 4, Shanghai Tower 632m observation deck × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
               <li>5. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
               <li>6. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
