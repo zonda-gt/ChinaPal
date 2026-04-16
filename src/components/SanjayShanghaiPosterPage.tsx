@@ -158,7 +158,7 @@ const itineraryDays: ItineraryDay[] = [
     tags: ["Station drop-off included", "Sleeper train booked"],
     items: [
       "Morning city walk along Suzhou Creek + Xintiandi",
-      "Pre-arranged drop-off to Shanghai Hongqiao Railway Station",
+      "Pre-arranged drop-off to Shanghai Nan Railway Station",
       "🚄 Train D99: Shanghai → Guangzhou (departs 17:43, overnight sleeper, arrives next morning 09:45)",
     ],
   },
