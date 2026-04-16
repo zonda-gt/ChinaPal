@@ -118,37 +118,37 @@ const itineraryDays: ItineraryDay[] = [
     day: "DAY 1",
     date: "17 May",
     title: "Yu Garden · The Bund · Wukang Road",
-    tags: ["Yu Garden tickets included", "Citywalk guide via Concierge"],
+    tags: ["Yu Garden tickets included", "Citywalk guide via Concierge", "Private 6-seater car with driver"],
     items: [
       "Yu Garden + Yuyuan Bazaar street food",
       "French Concession walk + Wukang Road + Tianzifang art alleys",
       "Nanjing Road shopping",
       "The Bund sunset walk + Pudong skyline photos",
       "North Bund evening stroll + skyline views",
-      "Hotel: 4★ Pudong",
+      "Hotel: 4★ Pudong | Local chartered transport included",
     ],
   },
   {
     day: "DAY 2",
     date: "18 May",
     title: "Shanghai Disneyland",
-    tags: ["Disney tickets included"],
+    tags: ["Disney tickets included", "Private 6-seater car with driver"],
     items: [
       "Full-day Disney (Monday weekday recommended for lighter crowds)",
-      "Hotel: 4★ Pudong",
+      "Hotel: 4★ Pudong | Local chartered transport included",
     ],
   },
   {
     day: "DAY 3",
     date: "19 May",
     title: "Jing'an Temple · Shanghai Tower · Lujiazui",
-    tags: ["Tower + Maglev tickets included", "Citywalk guide via Concierge"],
+    tags: ["Tower + Maglev tickets included", "Citywalk guide via Concierge", "Private 6-seater car with driver"],
     items: [
       "Jing'an Temple morning visit",
       "Shanghai Tower 632m observation deck (world's 2nd tallest)",
       "Lujiazui city walk + skyscraper district",
       "Evening: Maglev train return ride (Longyang Rd ↔ Pudong Airport, 431 km/h)",
-      "Hotel: 4★ Pudong",
+      "Hotel: 4★ Pudong | Local chartered transport included",
     ],
   },
   {
@@ -333,7 +333,7 @@ export default function SanjayShanghaiPosterPage() {
             </div>
 
             <div className="flex flex-wrap gap-3">
-              {["WhatsApp concierge included", "4-star stay", "Fully customizable"].map((tag) => (
+              {["WhatsApp concierge included", "4-star stay", "Fully customizable", "Private 6-seater car with driver"].map((tag) => (
                 <span
                   key={tag}
                   className="border border-[#F0C8D1] px-2 py-1 text-[11px] font-semibold text-[#D3567E]"
@@ -344,7 +344,7 @@ export default function SanjayShanghaiPosterPage() {
             </div>
 
             <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              ¥ 2600 / person
+              ¥ 3050 / person
             </p>
           </div>
         </section>
@@ -542,10 +542,11 @@ export default function SanjayShanghaiPosterPage() {
             <ol className="space-y-0.5 text-[11px] leading-[1.35] text-[#333333]">
               <li>1. Hotel: 4 nights at Rezen Hotel Shanghai Pudong (4★), 2 rooms with daily breakfast.</li>
               <li>2. Pre-arranged airport-to-hotel transfer on arrival on day 1 + hotel-to-railway station drop-off on day 4.</li>
-              <li>3. Attractions: Shanghai Disneyland day tickets × 4, Shanghai Tower 632m observation deck × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
-              <li>4. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
-              <li>5. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
-              <li>6. Planning: Daily itinerary guidance, city walk route planning, and on-the-ground assistance via concierge.</li>
+              <li>3. Private 6-seater car charter with driver for Day 1, 2, and 3.</li>
+              <li>4. Attractions: Shanghai Disneyland day tickets × 4, Shanghai Tower 632m observation deck × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
+              <li>5. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
+              <li>6. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
+              <li>7. Planning: Daily itinerary guidance, city walk route planning, and on-the-ground assistance via concierge.</li>
             </ol>
           </div>
 
