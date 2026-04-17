@@ -149,7 +149,7 @@ const cityItineraries: CityItinerary[] = [
         day: "DAY 6",
         title: "Chongqing → Zhangjiajie",
         items: [
-          "Morning: Three Gorges Museum (free)",
+          "Three Gorges Museum (free) · Kuixing Building",
           "🚄 High-speed train to Zhangjiajie West",
           "Check in Wulingyuan",
         ],
@@ -173,7 +173,6 @@ const cityItineraries: CityItinerary[] = [
         day: "DAY 8",
         title: "Golden Whip Stream · Evening Show",
         items: [
-          "Tujia brocade workshop",
           "7.5km Golden Whip Stream valley walk",
           "Charming Xiangxi outdoor spectacular",
         ],
@@ -207,11 +206,11 @@ const cityItineraries: CityItinerary[] = [
       },
       {
         day: "DAY 12",
-        title: "Zhangjiajie → Chengdu → Hanoi",
+        title: "Zhangjiajie → Chongqing → Hanoi",
         items: [
-          "🚄 Early train Zhangjiajie → Chengdu (via Chongqing, ~5 hrs)",
-          "Taxi Chengdu East → Tianfu International Airport",
-          "✈️ Afternoon flight to Hanoi",
+          "🚄 Train Zhangjiajie → Chongqing (~2–3 hrs, ¥244)",
+          "Transfer to airport",
+          "✈️ Flight to Hanoi",
         ],
       },
     ],
