@@ -100,14 +100,14 @@ const cityItineraries: CityItinerary[] = [
         items: [
           "Giant Panda Base at opening (they most active)",
           "🚄 Train C6255 to Leshan · Giant Buddha boat cruise",
-          "Sleep in Leshan",
+          "🚄 Evening train back to Chengdu (~1 hr, ¥54)",
         ],
       },
       {
         day: "DAY 2",
         title: "Mount Emei · Golden Summit",
         items: [
-          "Direct taxi Leshan → Baoguo Temple (~¥90)",
+          "🚄 Morning train Chengdu East → Mount Emei (1h 15min, ¥65)",
           "Scenic bus + cable car to 3,077m Golden Summit",
           "🚄 Evening train C6264 back to Chengdu",
         ],
