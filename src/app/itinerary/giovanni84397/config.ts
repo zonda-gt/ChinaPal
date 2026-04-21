@@ -44,7 +44,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d1-panda",
-            time: "7:30",
+            time: "07:30",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -71,7 +71,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d1-leshan",
-            time: "1:30",
+            time: "13:30",
             icon: Camera,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -85,7 +85,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d1-train-back",
-            time: "5:30",
+            time: "17:30",
             icon: TrainFront,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -98,7 +98,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d1-hotel",
-            time: "8:00",
+            time: "20:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -117,7 +117,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d2-depart",
-            time: "7:00",
+            time: "07:00",
             icon: Car,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -129,7 +129,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d2-train-out",
-            time: "8:00",
+            time: "08:00",
             icon: TrainFront,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -142,7 +142,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d2-emei",
-            time: "9:30",
+            time: "09:30",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -156,7 +156,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d2-wannian",
-            time: "3:30",
+            time: "15:30",
             icon: Camera,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -170,7 +170,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d2-train-back",
-            time: "6:40",
+            time: "18:40",
             icon: TrainFront,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -183,7 +183,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d2-hotel",
-            time: "9:30",
+            time: "21:30",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -202,7 +202,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d3-wuhou",
-            time: "9:00",
+            time: "09:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -230,7 +230,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d3-train",
-            time: "2:30",
+            time: "14:30",
             icon: TrainFront,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -243,7 +243,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d3-checkin",
-            time: "5:00",
+            time: "17:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -254,7 +254,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d3-hongyadong",
-            time: "7:30",
+            time: "19:30",
             icon: Moon,
             iconBg: "#EDE7F6",
             type: "activity",
@@ -280,7 +280,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d4-depart",
-            time: "7:00",
+            time: "07:00",
             icon: Bus,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -321,7 +321,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d4-drone",
-            time: "8:00",
+            time: "20:00",
             icon: Moon,
             iconBg: "#EDE7F6",
             type: "activity",
@@ -332,7 +332,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d4-hotel",
-            time: "10:00",
+            time: "22:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -351,7 +351,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d5-ciqikou",
-            time: "9:00",
+            time: "09:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -365,7 +365,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d5-liziba",
-            time: "2:30",
+            time: "14:30",
             icon: Camera,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -379,7 +379,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d5-cableway",
-            time: "4:00",
+            time: "16:00",
             icon: Navigation,
             iconBg: "#FFF8E1",
             type: "activity",
@@ -393,7 +393,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d5-1949",
-            time: "7:00",
+            time: "19:00",
             icon: Utensils,
             iconBg: "#FFF0EE",
             type: "activity",
@@ -404,7 +404,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d5-hotel",
-            time: "10:00",
+            time: "22:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -423,7 +423,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d6-museum",
-            time: "9:00",
+            time: "09:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -451,7 +451,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d6-train",
-            time: "1:00",
+            time: "13:00",
             icon: TrainFront,
             iconBg: "#E3F2FD",
             type: "transport",
@@ -464,7 +464,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d6-arrive",
-            time: "4:30",
+            time: "16:30",
             icon: MapPin,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -475,7 +475,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d6-hotel",
-            time: "5:30",
+            time: "17:30",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -497,7 +497,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d7-park",
-            time: "8:00",
+            time: "08:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -511,7 +511,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d7-tianzi",
-            time: "2:30",
+            time: "14:30",
             icon: Camera,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -525,7 +525,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d7-hotel",
-            time: "9:00",
+            time: "21:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -544,7 +544,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d8-stream",
-            time: "2:00",
+            time: "14:00",
             icon: Camera,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -558,7 +558,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d8-show",
-            time: "8:00",
+            time: "20:00",
             icon: Moon,
             iconBg: "#EDE7F6",
             type: "activity",
@@ -572,7 +572,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d8-hotel",
-            time: "10:00",
+            time: "22:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -591,7 +591,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d9-canyon",
-            time: "8:00",
+            time: "08:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -619,7 +619,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d9-free",
-            time: "3:00",
+            time: "15:00",
             icon: Footprints,
             iconBg: "#FFF8E1",
             type: "activity",
@@ -630,7 +630,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d9-hotel",
-            time: "9:00",
+            time: "21:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -649,7 +649,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d10-cave",
-            time: "8:30",
+            time: "08:30",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -663,7 +663,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d10-checkin",
-            time: "2:00",
+            time: "14:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -674,7 +674,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d10-72tower",
-            time: "3:30",
+            time: "15:30",
             icon: Camera,
             iconBg: "#FFF8E1",
             type: "activity",
@@ -688,7 +688,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d10-hotel",
-            time: "9:00",
+            time: "21:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
@@ -707,7 +707,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
         items: [
           {
             id: "g-d11-cable",
-            time: "8:00",
+            time: "08:00",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
@@ -721,7 +721,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d11-glass",
-            time: "9:00",
+            time: "09:00",
             icon: Camera,
             iconBg: "#E8F5E9",
             type: "activity",
@@ -732,7 +732,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d11-cave",
-            time: "1:00",
+            time: "13:00",
             icon: Navigation,
             iconBg: "#FFF8E1",
             type: "activity",
@@ -745,7 +745,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d11-99bend",
-            time: "3:00",
+            time: "15:00",
             icon: Camera,
             iconBg: "#E3F2FD",
             type: "activity",
@@ -757,7 +757,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
           },
           {
             id: "g-d11-hotel",
-            time: "9:00",
+            time: "21:00",
             icon: Hotel,
             iconBg: "#E3F2FD",
             type: "hotel",
