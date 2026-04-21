@@ -163,28 +163,29 @@ const cityItineraries: CityItinerary[] = [
     days: [
       {
         day: "DAY 7",
-        title: "Avatar Forest Park",
+        title: "Forest Park Mountain Core",
         items: [
-          "Bailong Elevator (world's tallest outdoor lift)",
-          "Yuanjiajie · Avatar Hallelujah Mountain",
-          "Tianzi Mountain cable car",
+          "Bailong Elevator + Yuanjiajie (Avatar Hallelujah)",
+          "Yangjiajie Natural Great Wall (hidden ridge)",
+          "Tianzishan — Shentang Bay & Dianjiangtai",
         ],
       },
       {
         day: "DAY 8",
-        title: "Golden Whip Stream · Evening Show",
+        title: "Valley Loop · Evening Show",
         items: [
-          "7.5km Golden Whip Stream valley walk",
+          "Jinbian Stream valley walk (turquoise water)",
+          "Huangshizhai sky-island panorama",
           "Charming Xiangxi outdoor spectacular",
         ],
       },
       {
         day: "DAY 9",
-        title: "Grand Canyon · Glass Bridge",
+        title: "Grand Canyon B-Line",
         items: [
-          "430m glass-bottomed bridge (300m high)",
-          "Grand Canyon waterfalls + descent",
-          "Free afternoon or Baofeng Lake",
+          "Glass Bridge first (empty before 09:00)",
+          "Cliff walkway + ¥30 elevator shortcut",
+          "Rainbow Waterfall + Shenquan Lake boat",
         ],
       },
       {
