@@ -1,4 +1,4 @@
-import { Sun, Camera, Utensils, Moon, Hotel, Navigation, Sunset, Footprints, TrainFront, Car, Bus, MapPin, Plane, Luggage } from "lucide-react";
+import { Sun, Camera, Utensils, Moon, Hotel, Navigation, Sunset, Footprints, TrainFront, Car, Bus, MapPin, Plane } from "lucide-react";
 import type { ItineraryConfig } from "../ItineraryPage";
 
 /* ── Image path prefixes ── */
@@ -51,22 +51,22 @@ export function buildGiovanniConfig(): ItineraryConfig {
             title: "Arrive Chengdu Tianfu International",
             subtitle: "Air China CA · Brussels → Chengdu TFU · direct",
             description: "Air China direct flight from Brussels (BRU), departing 19 May 13:25, landing at Chengdu Tianfu International (TFU) at 05:45 on 20 May. TFU is the newer international hub, about 50 km south-east of the city centre. After landing, clear immigration and collect your checked bag — should be through the arrivals hall by around 06:30.",
-            tip: "Our tip: Fill in your arrival card on the plane. Immigration queues can be 20–30 minutes early morning. Free airport WiFi works without a Chinese number — just use your passport to log in. Have our WhatsApp open so we can confirm your luggage handover and taxi.",
+            tip: "Our tip: Fill in your arrival card on the plane. Immigration queues can be 20–30 minutes early morning. Free airport WiFi works without a Chinese number — just use your passport to log in. Have our WhatsApp open so we can confirm your taxi pickup.",
             previewLine: "Direct · Air China · lands 05:45 at TFU",
-            transportAfter: { mode: "walk", duration: "5 min", note: "Walk to the luggage forwarding counter in the arrivals hall" },
+            transportAfter: { mode: "taxi", duration: "1 hr 40 min", note: "Taxi: TFU → Hotel (bag drop) → Panda Base West Gate" },
           },
           {
-            id: "g-d1-luggage",
+            id: "g-d1-transfer",
             time: "06:45",
-            icon: Luggage,
-            iconBg: "#FFF8E1",
+            icon: Car,
+            iconBg: "#E3F2FD",
             type: "transport",
-            title: "Send Luggage to Hotel",
-            subtitle: "Airport luggage forwarding · TFU → Chengdu hotel",
-            description: "Instead of dragging your suitcase to the Panda Base, we pre-arrange an SF Express luggage forwarding service at TFU arrivals. You hand off your bag at the counter, they deliver it straight to your Chengdu hotel — it's waiting for you when you check in tonight. Cost is ¥80–120 per bag depending on size. Keep only a day pack with your passport, phone, charger, layers, and the essentials for today.",
-            tip: "Our tip: We send the counter location and QR code to your WhatsApp before you land. Keep a photo of your checked-bag tag and your hotel booking confirmation on your phone — the counter staff need both.",
-            previewLine: "Hand off your suitcase · day pack only for today",
-            transportAfter: { mode: "taxi", duration: "75 min", note: "Taxi: TFU airport → Panda Base (~70 km, ~¥180)" },
+            title: "Taxi to Hotel, then Panda Base",
+            subtitle: "TFU → Hotel (drop luggage) → Panda Base West Gate · ~1h 40min driving",
+            description: "Rather than dragging your suitcase around all day, the taxi stops at your Chengdu hotel first so you can leave your bag with reception (they'll hold it until check-in tonight) before continuing straight to the Panda Base West Gate. Total driving time is about 1 hour 40 minutes — roughly 50 minutes airport to hotel, a quick bag drop, then another 30–40 minutes out to the Panda Base. Public transport is an option (~2h 20min) but adds hassle with luggage and we don't recommend it post-flight.",
+            tip: "Our tip: We pre-arrange the driver so he's waiting with a ChinaPal sign at arrivals. Freshen up at the hotel during the bag drop — a splash of water helps before the pandas. Keep a day pack with your passport, phone, charger, and a layer.",
+            previewLine: "~1h 40min taxi · quick bag drop at hotel en route",
+            transportAfter: { mode: "taxi", duration: "1h 40min", note: "TFU → Hotel → Panda Base West Gate" },
           },
           {
             id: "g-d1-panda",

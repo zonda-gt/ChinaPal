@@ -98,7 +98,7 @@ const cityItineraries: CityItinerary[] = [
         day: "DAY 1",
         title: "Arrival · Pandas · Leshan Buddha",
         items: [
-          "✈️ Land TFU 05:45 · luggage forwarded to hotel",
+          "✈️ Land TFU 05:45 · taxi via hotel to drop bags",
           "Giant Panda Base · morning when pandas are active",
           "🚄 Train C6255 to Leshan · Giant Buddha boat cruise",
           "🚄 Evening train back to Chengdu (~1 hr, ¥54)",
