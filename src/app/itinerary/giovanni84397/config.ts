@@ -1,4 +1,4 @@
-import { Sun, Camera, Utensils, Moon, Hotel, Navigation, Sunset, Footprints, TrainFront, Car, Bus, MapPin, Plane } from "lucide-react";
+import { Sun, Camera, Utensils, Moon, Hotel, Navigation, Sunset, Footprints, TrainFront, Car, Bus, MapPin, Plane, Luggage } from "lucide-react";
 import type { ItineraryConfig } from "../ItineraryPage";
 
 /* ── Image path prefixes ── */
@@ -39,19 +39,45 @@ export function buildGiovanniConfig(): ItineraryConfig {
       {
         label: "Day 1",
         city: "Chengdu",
-        subtitle: "May 20 (Wed) · Chengdu & Leshan — Panda Base · Giant Buddha",
+        subtitle: "May 20 (Wed) · Arrival · Panda Base · Leshan Giant Buddha",
         color: "#D0021B",
         items: [
           {
+            id: "g-d1-arrival",
+            time: "05:45",
+            icon: Plane,
+            iconBg: "#E3F2FD",
+            type: "transport",
+            title: "Arrive Chengdu Tianfu International",
+            subtitle: "Air China CA · Brussels → Chengdu TFU · direct",
+            description: "Air China direct flight from Brussels (BRU), departing 19 May 13:25, landing at Chengdu Tianfu International (TFU) at 05:45 on 20 May. TFU is the newer international hub, about 50 km south-east of the city centre. After landing, clear immigration and collect your checked bag — should be through the arrivals hall by around 06:30.",
+            tip: "Our tip: Fill in your arrival card on the plane. Immigration queues can be 20–30 minutes early morning. Free airport WiFi works without a Chinese number — just use your passport to log in. Have our WhatsApp open so we can confirm your luggage handover and taxi.",
+            previewLine: "Direct · Air China · lands 05:45 at TFU",
+            transportAfter: { mode: "walk", duration: "5 min", note: "Walk to the luggage forwarding counter in the arrivals hall" },
+          },
+          {
+            id: "g-d1-luggage",
+            time: "06:45",
+            icon: Luggage,
+            iconBg: "#FFF8E1",
+            type: "transport",
+            title: "Send Luggage to Hotel",
+            subtitle: "Airport luggage forwarding · TFU → Chengdu hotel",
+            description: "Instead of dragging your suitcase to the Panda Base, we pre-arrange an SF Express luggage forwarding service at TFU arrivals. You hand off your bag at the counter, they deliver it straight to your Chengdu hotel — it's waiting for you when you check in tonight. Cost is ¥80–120 per bag depending on size. Keep only a day pack with your passport, phone, charger, layers, and the essentials for today.",
+            tip: "Our tip: We send the counter location and QR code to your WhatsApp before you land. Keep a photo of your checked-bag tag and your hotel booking confirmation on your phone — the counter staff need both.",
+            previewLine: "Hand off your suitcase · day pack only for today",
+            transportAfter: { mode: "taxi", duration: "75 min", note: "Taxi: TFU airport → Panda Base (~70 km, ~¥180)" },
+          },
+          {
             id: "g-d1-panda",
-            time: "07:30",
+            time: "08:30",
             icon: Sun,
             iconBg: "#FFF3E0",
             type: "activity",
             title: "Giant Panda Base",
             description: "The world's largest captive panda breeding facility — 244 giant pandas in naturalistic forest enclosures. You'll see adults lazily eating bamboo, red pandas climbing trees, and if you're lucky, the nursery with newborn cubs behind glass. The base is huge (200+ hectares) but the best enclosures are clustered together. Cost: ¥55 entry + ¥85 audio guide (we bundle both). Gates open at 7:30 AM.",
             image: `${CD}/panda1.jpg`,
-            tip: "Our tip: Be at the gate when it opens at 7:30 AM sharp — pandas are most active before 10 AM and the crowds arrive by 9. The audio guide (¥85) is worth it and the tickets must be booked on Chinese apps days in advance. We handle both.",
+            tip: "Our tip: Pandas are most active before 10 AM and crowds arrive by 9 — your post-flight timing still catches the best window. The audio guide (¥85) is worth it; tickets must be booked on Chinese apps days in advance. We handle both.",
             previewImages: [`${CD}/panda1.jpg`, `${CD}/panda2.jpg`, `${CD}/panda3.jpg`],
             previewLine: "244 giant pandas — adults, cubs, and red pandas in bamboo forest enclosures.",
             transportAfter: { mode: "taxi", duration: "30 min", note: "Taxi: Panda Base → Chengdu East Station" },
