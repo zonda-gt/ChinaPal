@@ -372,7 +372,7 @@ export function buildGiovanniConfig(): ItineraryConfig {
       {
         label: "Day 5",
         city: "Chongqing",
-        subtitle: "May 24 · Chongqing — Ciqikou · Cableway · 1949 Banquet",
+        subtitle: "May 24 · Chongqing — Ciqikou · Qingyu Yan Banquet · Cableway",
         color: "#1A1A1A",
         items: [
           {
@@ -387,7 +387,21 @@ export function buildGiovanniConfig(): ItineraryConfig {
             tip: "Our tip: Go in the morning before 11 AM — the main street gets very crowded by noon. The side alleys are quieter and more interesting. Free entry.",
             previewImages: [`${CQ}/ciqikou1.jpg`, `${CQ}/ciqikou2.jpg`, `${CQ}/ciqikou3.jpg`],
             previewLine: "1,000-year-old hillside town — stone lanes, tea houses, and twisted fried dough.",
-            transportAfter: { mode: "taxi", duration: "25 min", note: "Taxi to Jiefangbei / city centre" },
+            transportAfter: { mode: "taxi", duration: "25 min", note: "Taxi to the Qingyu Yan banquet hall" },
+          },
+          {
+            id: "g-d5-qingyu",
+            time: "12:00",
+            icon: Utensils,
+            iconBg: "#FFF0EE",
+            type: "activity",
+            title: "Qingyu Yan Banquet — Themed Lunch",
+            description: "An immersive Chinese-style banquet where each course is plated as a tableau — painted porcelain, carved vegetables, lacquered serving boxes, and staff in traditional dress serving you in a private themed room. It's the same slow, theatrical eating culture that drives the 1949 dinner show, but at lunchtime and without the drama of a full show — just the food, the craft, and the setting. Expect 8–12 small courses spanning cold dishes, hot wok plates, soup, seasonal vegetables, and a final sweet. Good palate-cleanser between Ciqikou snacks and the evening's neon skyline.",
+            image: `${CQ}/qingyu-yan-1.jpg`,
+            tip: "Our tip: The banquet runs about 90 minutes — don't rush. Tell us in advance if you want mild spice, as the kitchen can dial down the Sichuan heat. We book a private room and handle the menu selection.",
+            previewImages: [`${CQ}/qingyu-yan-1.jpg`, `${CQ}/qingyu-yan-2.jpg`, `${CQ}/qingyu-yan-3.jpg`],
+            previewLine: "A multi-course Chinese banquet plated like artwork — 90 minutes in a private themed room.",
+            transportAfter: { mode: "taxi", duration: "15 min", note: "Taxi to Liziba monorail" },
           },
           {
             id: "g-d5-liziba",
