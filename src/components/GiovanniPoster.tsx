@@ -139,11 +139,11 @@ const cityItineraries: CityItinerary[] = [
       },
       {
         day: "DAY 5",
-        title: "Chongqing City · 1949 Banquet",
+        title: "Chongqing City · 《1949》 Show",
         items: [
           "Ciqikou Ancient Town · Liziba monorail",
           "Yangtze River Cableway",
-          "1949 Banquet immersive dinner show",
+          "《Chongqing 1949》 75-min immersive live show",
         ],
       },
       {
