@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ChinaPal · Guangzhou ↔ Shaoxing Quote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;0,900;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cp-red: oklch(0.48 0.22 25);
+  --cp-red-light: oklch(0.70 0.18 25);
+  --cp-red-tint-bg: oklch(0.97 0.02 25);
+  --cp-red-tint-border: oklch(0.85 0.08 25);
+  --cp-cream: oklch(0.985 0.005 80);
+  --cp-cream-alt: oklch(0.975 0.006 80);
+  --cp-ink: oklch(0.18 0.01 260);
+  --cp-ink-muted: oklch(0.52 0.01 260);
+  --cp-ink-lighter: oklch(0.60 0.01 260);
+  --cp-green-tint-bg: oklch(0.96 0.04 150);
+  --cp-green-tint-border: oklch(0.85 0.10 150);
+  --cp-green-deep: oklch(0.50 0.14 150);
+  --cp-hairline: rgba(0,0,0,0.1);
+  --cp-card-border: #e9e5de;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  background-color: var(--cp-cream);
+  color: var(--cp-ink);
+  font-size: 16px; line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.wrap { max-width: 1080px; margin: 0 auto; padding: 48px 40px; }
+
+.top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 44px; }
+.logo { font-size: 22px; font-weight: 800; letter-spacing: -0.02em; color: var(--cp-ink); text-decoration: none; }
+.logo .r { color: var(--cp-red); }
+.pill-label { text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; font-size: 10px; color: var(--cp-ink-muted); }
+
+.status-pill { display: inline-flex; align-items: center; gap: 8px; padding: 5px 14px; border-radius: 999px; border: 1px solid var(--cp-red-tint-border); background: var(--cp-red-tint-bg); margin-bottom: 22px; }
+.status-pill .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; }
+.status-pill .pill-label { color: var(--cp-red); }
+
+.hero { margin-bottom: 32px; }
+.hero h1 { font-family: 'Fraunces', Georgia, serif; font-size: 60px; font-weight: 700; line-height: 1.04; letter-spacing: -0.02em; margin: 0 0 18px 0; color: var(--cp-ink); }
+.hero h1 em { font-style: normal; color: var(--cp-red-light); }
+.hero p { font-size: 18px; line-height: 1.65; color: var(--cp-ink-muted); max-width: 700px; margin: 0; }
+.hero p .accent { color: var(--cp-ink); font-weight: 600; }
+
+/* Trip meta (hotel + dates) */
+.trip-meta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px; }
+.trip-meta-item { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 14px; background: #fff; border: 1px solid var(--cp-card-border); }
+.trip-meta-item svg { color: var(--cp-red); flex-shrink: 0; }
+.trip-meta-text { display: flex; flex-direction: column; line-height: 1.25; }
+.trip-meta-text .pill-label { margin-bottom: 3px; }
+.trip-meta-text .val { font-family: 'Fraunces', Georgia, serif; font-size: 15px; font-weight: 600; color: var(--cp-ink); }
+
+.reco { border-radius: 20px; border: 1px solid var(--cp-green-tint-border); background: var(--cp-green-tint-bg); padding: 26px 30px; margin-bottom: 40px; display: flex; align-items: center; gap: 32px; flex-wrap: wrap; }
+.reco-icon { width: 44px; height: 44px; border-radius: 50%; background: var(--cp-green-deep); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.reco-left { display: flex; align-items: center; gap: 16px; flex-shrink: 0; }
+.reco-label { color: var(--cp-green-deep); }
+.reco-title { font-family: 'Fraunces', Georgia, serif; font-size: 26px; font-weight: 700; line-height: 1.15; color: var(--cp-ink); margin-top: 2px; }
+.reco-title em { font-style: normal; color: var(--cp-green-deep); }
+.reco-stats { display: grid; grid-template-columns: repeat(3, auto); gap: 36px; margin-left: auto; }
+.reco-stat-num { font-family: 'Fraunces', Georgia, serif; font-size: 30px; font-weight: 700; line-height: 1; color: var(--cp-ink); }
+.reco-stat-label { margin-top: 4px; }
+
+.options { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 48px; }
+.card { background: #ffffff; border-radius: 20px; padding: 28px; position: relative; display: flex; flex-direction: column; border: 1px solid var(--cp-card-border); }
+.card.primary { border-width: 2px; border-color: var(--cp-red); box-shadow: 0 18px 45px -22px rgba(176, 50, 29, 0.28); }
+
+.badge { position: absolute; top: -13px; left: 24px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px; border-radius: 999px; background: var(--cp-red); }
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: #86efac; }
+.badge .pill-label { color: #fff; }
+
+.card-head { display: flex; align-items: flex-start; justify-content: space-between; margin: 4px 0 22px 0; }
+.card-head h2 { font-family: 'Fraunces', Georgia, serif; font-size: 30px; font-weight: 700; color: var(--cp-ink); margin: 4px 0 0 0; line-height: 1; }
+.card-head .mode-icon { color: var(--cp-ink-lighter); flex-shrink: 0; }
+
+.itin { flex: 1; }
+.row { display: flex; align-items: flex-start; gap: 16px; padding: 14px 0; }
+.row + .row { border-top: 1px dashed var(--cp-hairline); }
+.row-date { flex-shrink: 0; width: 68px; }
+.row-date-label { text-transform: uppercase; letter-spacing: 0.18em; font-weight: 700; font-size: 10px; color: var(--cp-ink-muted); }
+.row-date-day { font-family: 'Fraunces', Georgia, serif; font-size: 15px; font-weight: 600; color: var(--cp-ink); margin-top: 2px; }
+.row-main { flex: 1; min-width: 0; }
+.row-price { flex-shrink: 0; text-align: right; }
+.row-price-amt { font-family: 'Fraunces', Georgia, serif; font-size: 18px; font-weight: 700; color: var(--cp-ink); }
+
+.leg-line { display: flex; align-items: baseline; gap: 10px; margin-bottom: 2px; }
+.leg-time { font-family: 'Fraunces', Georgia, serif; font-size: 20px; font-weight: 700; color: var(--cp-ink); line-height: 1.1; }
+.leg-place { font-size: 13px; color: var(--cp-ink-lighter); }
+.leg-middle { display: flex; align-items: center; gap: 10px; margin: 6px 0; }
+.leg-middle-line { flex: 1; height: 1px; background: var(--cp-red); opacity: 0.3; }
+.leg-middle.train .leg-middle-line { background: var(--cp-ink-lighter); opacity: 0.25; }
+.leg-middle-text { text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; font-size: 10px; white-space: nowrap; color: var(--cp-red); }
+.leg-middle.train .leg-middle-text { color: var(--cp-ink-muted); }
+
+.svc-head { display: flex; align-items: center; gap: 8px; }
+.svc-title { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 600; color: var(--cp-ink); }
+.svc-sub { font-size: 13px; color: var(--cp-ink-lighter); margin-top: 3px; }
+
+/* Arrival chip — highlights when you're at the hotel */
+.arrive-chip { display: inline-flex; align-items: center; gap: 6px; margin-top: 8px; padding: 4px 10px 4px 8px; border-radius: 999px; font-size: 12px; font-weight: 600; line-height: 1; background: var(--cp-green-tint-bg); border: 1px solid var(--cp-green-tint-border); color: var(--cp-green-deep); font-family: 'Fraunces', Georgia, serif; }
+.arrive-chip.neutral { background: var(--cp-cream-alt); border-color: var(--cp-card-border); color: var(--cp-ink-muted); }
+.arrive-chip svg { flex-shrink: 0; }
+
+.total { margin-top: 22px; padding-top: 22px; display: flex; align-items: flex-end; justify-content: space-between; }
+.card.primary .total { border-top: 2px solid var(--cp-red-tint-border); }
+.card:not(.primary) .total { border-top: 1px solid var(--cp-card-border); }
+.total-label { line-height: 1.3; }
+.total-sub { font-size: 13px; color: var(--cp-ink-lighter); margin-top: 6px; }
+.total-amt { font-family: 'Fraunces', Georgia, serif; font-size: 40px; font-weight: 700; line-height: 1; color: var(--cp-ink); }
+.card.primary .total-amt { color: var(--cp-red); }
+
+.h2h-label { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+.h2h-label .line { flex: 1; height: 1px; background: var(--cp-ink-lighter); opacity: 0.3; }
+.h2h { border-radius: 18px; overflow: hidden; border: 1px solid var(--cp-card-border); }
+.h2h-row { display: grid; grid-template-columns: 1.6fr 1fr 1fr; background: #fff; }
+.h2h-row + .h2h-row { border-top: 1px solid var(--cp-card-border); }
+.h2h-row.head { background: var(--cp-cream-alt); }
+.h2h-row.head > div { padding: 14px 22px; }
+.h2h-row > div { padding: 16px 22px; }
+.h2h-col-label { color: var(--cp-ink-muted); font-size: 15px; }
+.h2h-col-val { font-family: 'Fraunces', Georgia, serif; font-size: 16px; font-weight: 600; color: var(--cp-ink); }
+.h2h-col-flight-head { color: var(--cp-red); }
+.h2h-col-val.highlight-red { color: var(--cp-red); }
+.h2h-col-val.muted { color: var(--cp-ink-lighter); font-weight: 400; }
+.h2h-row.spotlight { background: var(--cp-red-tint-bg); }
+.h2h-row.spotlight .h2h-col-label { color: var(--cp-red); font-weight: 600; }
+.h2h-row.spotlight .h2h-col-val.highlight-red { font-size: 19px; }
+
+.h2h-note { font-size: 14px; line-height: 1.65; color: var(--cp-ink-muted); max-width: 820px; margin: 20px 0 48px 0; }
+.h2h-note .accent { color: var(--cp-ink); font-weight: 600; }
+
+.cta { border-radius: 20px; background: var(--cp-red); padding: 40px 32px; text-align: center; color: #fff; }
+.cta .pill-label { color: rgba(255,255,255,0.72); margin-bottom: 12px; display: inline-block; }
+.cta h3 { font-family: 'Fraunces', Georgia, serif; font-size: 36px; font-weight: 700; color: #fff; margin: 0 0 10px 0; line-height: 1.1; }
+.cta h3 em { font-style: normal; color: #ffd7d0; }
+.cta p { color: rgba(255,255,255,0.82); max-width: 560px; margin: 0 auto; line-height: 1.6; }
+.cta-online { margin-top: 22px; display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,0.15); }
+.cta-online .dot { width: 7px; height: 7px; border-radius: 50%; background: #86efac; }
+.cta-online span { color: rgba(255,255,255,0.92); font-size: 14px; }
+
+.foot { margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--cp-card-border); display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.foot-left { display: flex; align-items: center; gap: 8px; }
+.foot-brand { font-family: 'Fraunces', Georgia, serif; font-weight: 700; font-size: 18px; color: var(--cp-ink); }
+.foot-brand .r { color: var(--cp-red); }
+.foot-tag { color: var(--cp-ink-lighter); font-size: 14px; }
+.foot-right { color: var(--cp-ink-lighter); font-size: 12px; }
+
+@media (max-width: 860px) {
+  .wrap { padding: 32px 22px; }
+  .hero h1 { font-size: 44px; }
+  .hero p { font-size: 16px; }
+  .reco { gap: 20px; padding: 22px; }
+  .reco-stats { margin-left: 0; width: 100%; gap: 24px; }
+  .reco-stat-num { font-size: 24px; }
+  .options { grid-template-columns: 1fr; }
+  .h2h-row { grid-template-columns: 1.2fr 1fr 1fr; }
+  .cta h3 { font-size: 28px; }
+}
+@media print { body { background: #fff; } .wrap { padding: 24px; max-width: none; } .card, .reco, .h2h, .cta { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="top">
+    <a href="#" class="logo">China<span class="r">Pal</span></a>
+    <span class="pill-label">Trip Quote · 25-00428</span>
+  </header>
+
+  <section class="hero">
+    <div class="status-pill">
+      <span class="dot"></span>
+      <span class="pill-label">Prepared for you · Apr 28 → May 2</span>
+    </div>
+    <h1>Guangzhou&nbsp;↔&nbsp;Shaoxing,<br><em>handled.</em></h1>
+    <p>You asked about train tickets — we priced both options so you can choose. Short version: <span class="accent">the train is ¥272 cheaper, but flying gets you to your hotel by ~9:50 am instead of ~6:20 pm — an 8½-hour head start in Shaoxing.</span> We'd still pick A.</p>
+  </section>
+
+  <!-- Trip meta: hotel + dates -->
+  <div class="trip-meta">
+    <div class="trip-meta-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
+      <div class="trip-meta-text">
+        <span class="pill-label">Hotel</span>
+        <span class="val">Lavande Hotel China Light Textile City · Keqiao, Shaoxing</span>
+      </div>
+    </div>
+    <div class="trip-meta-item">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg>
+      <div class="trip-meta-text">
+        <span class="pill-label">Dates</span>
+        <span class="val">Apr 28 → May 2 · 4 nights · 1 traveller</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="reco">
+    <div class="reco-left">
+      <div class="reco-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <div>
+        <div class="pill-label reco-label">Our recommendation</div>
+        <div class="reco-title">Fly — gain <em>a half-day</em> in Shaoxing.</div>
+      </div>
+    </div>
+    <div class="reco-stats">
+      <div><div class="reco-stat-num">8h 30m</div><div class="pill-label reco-stat-label">Head start</div></div>
+      <div><div class="reco-stat-num">0</div><div class="pill-label reco-stat-label">Transfers</div></div>
+      <div><div class="reco-stat-num">+¥272</div><div class="pill-label reco-stat-label">Small premium</div></div>
+    </div>
+  </section>
+
+  <section class="options">
+
+    <div class="card primary">
+      <div class="badge"><span class="dot"></span><span class="pill-label">Recommended</span></div>
+      <div class="card-head">
+        <div>
+          <div class="pill-label" style="margin-bottom:4px;">Option A</div>
+          <h2>By flight</h2>
+        </div>
+        <svg class="mode-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
+      </div>
+      <div class="itin">
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">Apr 28</div><div class="row-date-day">Mon</div></div>
+          <div class="row-main">
+            <div class="leg-line"><span class="leg-time">06:20</span><span class="leg-place">Guangzhou (CAN)</span></div>
+            <div class="leg-middle"><div class="leg-middle-line"></div><span class="leg-middle-text">2h 20m · Direct</span><div class="leg-middle-line"></div></div>
+            <div class="leg-line"><span class="leg-time">08:40</span><span class="leg-place">Hangzhou (HGH)</span></div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥946</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">Apr 28</div><div class="row-date-day">9:00</div></div>
+          <div class="row-main">
+            <div class="svc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cp-red);"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+              <span class="svc-title">Airport → hotel transfer</span>
+            </div>
+            <div class="svc-sub">HGH airport to Lavande Hotel · ~50 min drive</div>
+            <div class="arrive-chip">
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+              At hotel ~9:50 am
+            </div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥148.5</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">May 2</div><div class="row-date-day">9:00</div></div>
+          <div class="row-main">
+            <div class="svc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cp-red);"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+              <span class="svc-title">Hotel → airport transfer</span>
+            </div>
+            <div class="svc-sub">Lavande Hotel to HGH airport · ~50 min drive</div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥148.5</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">May 2</div><div class="row-date-day">Fri</div></div>
+          <div class="row-main">
+            <div class="leg-line"><span class="leg-time">10:55</span><span class="leg-place">Hangzhou (HGH)</span></div>
+            <div class="leg-middle"><div class="leg-middle-line"></div><span class="leg-middle-text">2h 25m · Direct</span><div class="leg-middle-line"></div></div>
+            <div class="leg-line"><span class="leg-time">13:20</span><span class="leg-place">Guangzhou (CAN)</span></div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥1,012</div></div>
+        </div>
+      </div>
+      <div class="total">
+        <div>
+          <div class="pill-label total-label">Total · 1 traveller</div>
+          <div class="total-sub">2 flights, 2 private transfers, all booked by us</div>
+        </div>
+        <div class="total-amt">¥2,255</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="pill-label" style="margin-bottom:4px;">Option B</div>
+          <h2>By train</h2>
+        </div>
+        <svg class="mode-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="16" rx="2"/><path d="M4 11h16"/><path d="m8 19-2 3"/><path d="m18 22-2-3"/><path d="M8 15h.01"/><path d="M16 15h.01"/></svg>
+      </div>
+      <div class="itin">
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">Apr 28</div><div class="row-date-day">Mon</div></div>
+          <div class="row-main">
+            <div class="leg-line"><span class="leg-time">07:30</span><span class="leg-place">Guangzhou East</span></div>
+            <div class="leg-middle train"><div class="leg-middle-line"></div><span class="leg-middle-text">10h 6m · 1 transfer (Nanchang, 1h 36m)</span><div class="leg-middle-line"></div></div>
+            <div class="leg-line"><span class="leg-time">17:36</span><span class="leg-place">Shaoxing North</span></div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥831</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">Apr 28</div><div class="row-date-day">18:00</div></div>
+          <div class="row-main">
+            <div class="svc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cp-ink-lighter);"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+              <span class="svc-title">Station → hotel transfer</span>
+            </div>
+            <div class="svc-sub">Shaoxing North to Lavande Hotel · ~20 min drive</div>
+            <div class="arrive-chip neutral">At hotel ~6:20 pm</div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥83</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">May 2</div><div class="row-date-day">6:30</div></div>
+          <div class="row-main">
+            <div class="svc-head">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--cp-ink-lighter);"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></svg>
+              <span class="svc-title">Hotel → station transfer</span>
+            </div>
+            <div class="svc-sub">Lavande Hotel to Shaoxing North · ~20 min drive</div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥83</div></div>
+        </div>
+        <div class="row">
+          <div class="row-date"><div class="row-date-label">May 2</div><div class="row-date-day">Fri</div></div>
+          <div class="row-main">
+            <div class="leg-line"><span class="leg-time">07:57</span><span class="leg-place">Shaoxing North</span></div>
+            <div class="leg-middle train"><div class="leg-middle-line"></div><span class="leg-middle-text">6h 41m · 1 transfer (Hangzhou, 32m)</span><div class="leg-middle-line"></div></div>
+            <div class="leg-line"><span class="leg-time">14:38</span><span class="leg-place">Guangzhou South</span></div>
+          </div>
+          <div class="row-price"><div class="row-price-amt">¥985.6</div></div>
+        </div>
+      </div>
+      <div class="total">
+        <div>
+          <div class="pill-label total-label">Total · 1 traveller</div>
+          <div class="total-sub">2 trains (1 transfer each way), 2 station transfers</div>
+        </div>
+        <div class="total-amt">¥1,982.6</div>
+      </div>
+    </div>
+
+  </section>
+
+  <section>
+    <div class="h2h-label">
+      <div class="line"></div><span class="pill-label">Head-to-head</span><div class="line"></div>
+    </div>
+    <div class="h2h">
+      <div class="h2h-row head">
+        <div class="pill-label"></div>
+        <div class="pill-label h2h-col-flight-head">Flight</div>
+        <div class="pill-label">Train</div>
+      </div>
+      <div class="h2h-row">
+        <div class="h2h-col-label">Door-to-door travel time</div>
+        <div class="h2h-col-val">~4h 45m</div>
+        <div class="h2h-col-val">~16h 47m</div>
+      </div>
+      <div class="h2h-row">
+        <div class="h2h-col-label">Transfers en route</div>
+        <div class="h2h-col-val">None</div>
+        <div class="h2h-col-val">1 each way</div>
+      </div>
+      <div class="h2h-row">
+        <div class="h2h-col-label">Arrive at Lavande Hotel on Apr 28</div>
+        <div class="h2h-col-val">~9:50 am</div>
+        <div class="h2h-col-val">~6:20 pm</div>
+      </div>
+      <div class="h2h-row spotlight">
+        <div class="h2h-col-label">Head start in Shaoxing</div>
+        <div class="h2h-col-val highlight-red">+8h 30m</div>
+        <div class="h2h-col-val muted">—</div>
+      </div>
+      <div class="h2h-row">
+        <div class="h2h-col-label">Total cost</div>
+        <div class="h2h-col-val">¥2,255</div>
+        <div class="h2h-col-val">¥1,982.6</div>
+      </div>
+    </div>
+    <p class="h2h-note">
+      <span class="accent">Why we still recommend flying.</span> Yes — the train comes in ¥272 cheaper. But that saving costs you about 12 hours of travel, two transfers, and <span class="accent">an 8½-hour later arrival at Lavande Hotel.</span> With the flight, you're checked in by ~9:50 am on Apr 28 — the whole afternoon and evening are yours to explore Keqiao. By train, you don't walk into the hotel until ~6:20 pm, so day one is basically spent in transit. On a 4-night trip that's a meaningful slice of the vacation. If you'd rather bank the ¥272, option B is perfectly fine — just tell us and we'll lock it in.
+    </p>
+  </section>
+
+  <section class="cta">
+    <div class="pill-label">Next step</div>
+    <h3>Reply with <em>A</em> or <em>B</em>.</h3>
+    <p>Once you confirm, we lock in the flights/trains and the car service, send a passport confirmation note, and your e-tickets arrive right in this chat.</p>
+    <div class="cta-online"><span class="dot"></span><span>We're online — reply anytime</span></div>
+  </section>
+
+  <footer class="foot">
+    <div class="foot-left">
+      <span class="foot-brand">China<span class="r">Pal</span></span>
+      <span class="foot-tag">· Your China Travel Concierge</span>
+    </div>
+    <div class="foot-right">Quote valid 48 hours · Prices in CNY · Includes all service fees</div>
+  </footer>
+
+</div>
+</body>
+</html>
