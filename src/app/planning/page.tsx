@@ -39,7 +39,7 @@ export default function PlanningPage() {
               China<span className="text-red-cp">Pal</span>
             </Link>
             <Link
-              href="/start"
+              href="/planning/start"
               className="text-white text-sm font-semibold py-2 px-5 rounded-full bg-red-cp"
             >
               Plan my trip
@@ -67,7 +67,7 @@ export default function PlanningPage() {
                 </p>
                 <div className="flex flex-row flex-wrap gap-3">
                   <Link
-                    href="/start"
+                    href="/planning/start"
                     className="text-white font-semibold px-8 py-4 rounded-full text-base bg-red-cp hover:opacity-90 inline-flex items-center gap-2"
                   >
                     Plan my trip
@@ -78,7 +78,7 @@ export default function PlanningPage() {
                   </Link>
                 </div>
                 <div className="flex flex-wrap items-center gap-6 mt-10">
-                  <div className="flex items-center gap-2 text-sm text-white/70">From £49 per trip</div>
+                  <div className="flex items-center gap-2 text-sm text-white/70">Free — custom itinerary in 24h</div>
                   <div className="flex items-center gap-2 text-sm text-white/70">Built by humans in China</div>
                 </div>
               </div>
@@ -118,37 +118,31 @@ export default function PlanningPage() {
         </div>
       </section>
 
-      <section className="py-12 px-4 bg-white border-y border-stone-100">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+      <section className="py-5 px-4 bg-white border-y border-stone-100">
+        <div className="max-w-5xl mx-auto grid grid-cols-4 gap-3 md:gap-8 text-center">
           {[
-            { num: "40h", label: "Of research saved" },
-            { num: "24h", label: "Plan turnaround" },
-            { num: "2,400+", label: "Trips handled" },
-            { num: "4.9/5", label: "Traveler rating" },
+            { num: "40h", label: "Research saved" },
+            { num: "24h", label: "Turnaround" },
+            { num: "240+", label: "Trips handled" },
+            { num: "4.9/5", label: "Rating" },
           ].map((s) => (
             <div key={s.label}>
-              <div className="font-display text-3xl md:text-4xl font-bold text-red-cp">{s.num}</div>
-              <div className="text-sm text-muted">{s.label}</div>
+              <div className="font-display text-xl md:text-2xl font-bold text-red-cp leading-none">{s.num}</div>
+              <div className="text-[11px] md:text-xs text-muted mt-1">{s.label}</div>
             </div>
           ))}
         </div>
       </section>
 
-      <section className="py-16 px-4 bg-white">
+      <section className="py-10 px-4 bg-white">
         <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-10">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-4 bg-red-soft text-red-cp border border-red-soft">
-              Why ChinaPal
-            </div>
-            <h2 className="font-display text-3xl md:text-4xl font-bold">Planning China alone is brutal.</h2>
-          </div>
           <div className="grid grid-cols-2 gap-3 md:gap-6">
             <div className="rounded-xl p-4 md:p-8 border border-stone-200" style={{ backgroundColor: "oklch(0.97 0.003 260)" }}>
               <div className="inline-flex items-center gap-2 mb-3">
                 <div className="w-5 h-5 rounded-full bg-stone-400 flex items-center justify-center">
                   <span className="text-white text-xs font-bold">✕</span>
                 </div>
-                <span className="text-xs font-bold uppercase tracking-widest text-muted">Doing it yourself</span>
+                <span className="text-xs font-bold uppercase tracking-widest text-muted">Plan it yourself</span>
               </div>
               <h3 className="font-display text-lg md:text-2xl font-bold mb-2">40 hours, 80 tabs, no idea.</h3>
               <p className="text-xs md:text-sm leading-snug text-muted">
@@ -168,6 +162,16 @@ export default function PlanningPage() {
               </p>
             </div>
           </div>
+
+          <div className="flex justify-center mt-10">
+            <Link
+              href="/planning/start"
+              className="pulse-cta flex flex-col items-center gap-1 px-12 py-5 rounded-full bg-red-cp text-center"
+            >
+              <span className="text-white font-display text-xl md:text-2xl font-bold">Plan my China trip</span>
+              <span className="text-white/70 text-xs md:text-sm">Free — custom itinerary in 24h</span>
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -179,7 +183,7 @@ export default function PlanningPage() {
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold mb-3">Here&apos;s what you&apos;d actually get.</h2>
             <p className="text-muted max-w-md mx-auto text-sm md:text-base">
-              A 4-day plan we built for a family of 4 from Nepal — every day, every booking, every detail.
+              A 4-day plan we built for a family of 4 from France — every day, every booking, every detail.
             </p>
           </div>
 
@@ -188,7 +192,6 @@ export default function PlanningPage() {
               day: "DAY 1",
               head: "17 May · Yu Garden · The Bund · Wukang Road",
               tags: [
-                { label: "Yu Garden tickets included", red: true },
                 { label: "Private 6-seater car" },
                 { label: "Citywalk guide" },
               ],
@@ -203,7 +206,6 @@ export default function PlanningPage() {
               day: "DAY 2",
               head: "18 May · Shanghai Disneyland",
               tags: [
-                { label: "Disney tickets included", red: true },
                 { label: "Private 6-seater car" },
               ],
               bullets: [
@@ -215,7 +217,6 @@ export default function PlanningPage() {
               day: "DAY 3",
               head: "19 May · Jing'an Temple · Shanghai Tower",
               tags: [
-                { label: "Tower + Maglev tickets included", red: true },
                 { label: "Citywalk guide" },
               ],
               bullets: [
@@ -275,18 +276,18 @@ export default function PlanningPage() {
             </div>
             <h2 className="font-display text-3xl md:text-4xl font-bold">Three messages. One plan. Done.</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-2 md:gap-4">
             {[
-              { n: "1", title: "Tell us your trip", body: "Cities, dates, who's going. One WhatsApp message is enough." },
-              { n: "2", title: "We build the plan", body: "Day-by-day itinerary with attractions, restaurants, transport, hotels — sent within 24 hours." },
-              { n: "3", title: "We book everything", body: "Tickets, trains, restaurants, drivers — handled. You just show up." },
+              { n: "1", title: "Tell us your trip", body: "Cities, dates, who's going." },
+              { n: "2", title: "We build the plan", body: "Day-by-day, sent in 24h." },
+              { n: "3", title: "We book everything", body: "Tickets, trains, drivers — done." },
             ].map((s) => (
-              <div key={s.n} className="bg-white rounded-2xl p-6 border border-stone-100 shadow-sm">
-                <div className="w-10 h-10 rounded-xl bg-red-soft flex items-center justify-center mb-4 font-display font-bold text-red-cp">
+              <div key={s.n} className="bg-white rounded-xl p-3 md:p-6 border border-stone-100 shadow-sm">
+                <div className="w-7 h-7 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-red-soft flex items-center justify-center mb-2 md:mb-4 font-display font-bold text-red-cp text-sm md:text-base">
                   {s.n}
                 </div>
-                <h3 className="font-display font-bold text-lg mb-2">{s.title}</h3>
-                <p className="text-sm text-muted">{s.body}</p>
+                <h3 className="font-display font-bold text-sm md:text-lg mb-1 md:mb-2 leading-tight">{s.title}</h3>
+                <p className="text-xs md:text-sm text-muted leading-snug">{s.body}</p>
               </div>
             ))}
           </div>
@@ -296,11 +297,11 @@ export default function PlanningPage() {
       <section className="py-12 px-4 bg-white">
         <div className="flex justify-center">
           <Link
-            href="/start"
+            href="/planning/start"
             className="pulse-cta flex flex-col items-center gap-1 px-12 py-5 rounded-full bg-red-cp text-center"
           >
             <span className="text-white font-display text-xl md:text-2xl font-bold">Plan my China trip</span>
-            <span className="text-white/70 text-xs md:text-sm">Free to ask. £49 to book.</span>
+            <span className="text-white/70 text-xs md:text-sm">Free — custom itinerary in 24h</span>
           </Link>
         </div>
       </section>
@@ -309,7 +310,7 @@ export default function PlanningPage() {
         <h2 className="font-display text-4xl md:text-5xl font-bold text-white mb-4">Ready to stop researching?</h2>
         <p className="text-white/80 mb-8 max-w-md mx-auto">Send us your dates. Get a real plan in 24h.</p>
         <Link
-          href="/start"
+          href="/planning/start"
           className="inline-block bg-white text-red-cp font-semibold px-10 py-4 rounded-full text-base hover:opacity-90"
         >
           Plan my trip on WhatsApp →
