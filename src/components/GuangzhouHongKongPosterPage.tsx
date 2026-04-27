@@ -137,9 +137,9 @@ const itineraryDays: ItineraryDay[] = [
     tags: ["Flex day"],
     open: true,
     items: [
-      "🏞️ Guilin & Yangshuo (3–4 days) — karst peaks, Li River cruise, rice terraces",
-      "🏯 Xi'an (2–3 days) — Terracotta Warriors, ancient city walls",
-      "🏙️ Shanghai (2–3 days) — modern skyline, the Bund, water towns",
+      "Guilin & Yangshuo (3–4 days) — karst peaks, Li River cruise, rice terraces",
+      "Xi'an (2–3 days) — Terracotta Warriors, ancient city walls",
+      "Shanghai (2–3 days) — modern skyline, the Bund, water towns",
     ],
   },
   {
@@ -235,19 +235,16 @@ const itineraryDays: ItineraryDay[] = [
 
 const extensions = [
   {
-    emoji: "🏞️",
     name: "Guilin & Yangshuo",
     duration: "3–4 days",
     blurb: "Karst mountains, Li River cruise, rice terraces — our top pick for nature.",
   },
   {
-    emoji: "🏯",
     name: "Xi'an",
     duration: "2–3 days",
     blurb: "Terracotta Warriors and intact Ming-era city walls — top pick for history.",
   },
   {
-    emoji: "🏙️",
     name: "Shanghai",
     duration: "2–3 days",
     blurb: "The Bund, modern skyline, classic water towns just outside the city.",
@@ -587,7 +584,6 @@ export default function GuangzhouHongKongPosterPage() {
               >
                 <div className="flex items-baseline justify-between gap-2">
                   <p className="text-[15px] font-bold text-[#912F34]">
-                    <span className="mr-1.5">{ext.emoji}</span>
                     {ext.name}
                   </p>
                   <p className="shrink-0 text-[11px] font-semibold uppercase tracking-wide text-[#C23845]">
