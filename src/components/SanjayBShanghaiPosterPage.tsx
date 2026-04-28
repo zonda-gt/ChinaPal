@@ -481,7 +481,7 @@ export default function SanjayBShanghaiPosterPage() {
               <li>1. Pre-arranged airport pickup on arrival on day 1 + drop-off to railway station on day 4.</li>
               <li>2. Private 6-seater car charter with driver for Day 1, 2, 3, and 4.</li>
               <li>3. Attractions: Shanghai Disneyland day tickets × 4, Huangpu River night cruise × 4, Shanghai Maglev train return ride × 4, Yu Garden day tickets × 4.</li>
-              <li>4. Train: D99 Shanghai → Guangzhou, 1st-class 4-berth sleeper cabin × 4.</li>
+              <li>4. Train: D99 Shanghai → Guangzhou, hard sleeper (硬卧) berth × 4.</li>
               <li>5. Concierge: WhatsApp support throughout the trip, including restaurant booking + recommendations, taxi booking.</li>
               <li>6. Planning: Daily itinerary guidance, city walk route planning, and on-the-ground assistance via concierge.</li>
             </ol>
