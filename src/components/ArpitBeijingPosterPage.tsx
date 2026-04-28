@@ -54,8 +54,8 @@ const poster = {
     },
     {
       id: "3",
-      nameEn: "Tiananmen Square",
-      image: "/uploads/itinerary/beijing/forbidden3.jpg",
+      nameEn: "Summer Palace",
+      image: "/uploads/itinerary/beijing/scraper/summer-palace-bridge.jpg",
     },
     {
       id: "4",
@@ -76,9 +76,9 @@ const poster = {
 };
 
 const hotel = {
-  name: "4★ Wangfujing-area Hotel (to confirm)",
+  name: "4★ Wangfujing-area Hotel · 4 rooms (2 pax/room)",
   description:
-    "Central Wangfujing base · walkable to Tiananmen + Forbidden City · senior-friendly access · 2 family rooms.",
+    "Central Wangfujing base · walkable to Tiananmen + Forbidden City · senior-friendly lifts and step-free access · daily breakfast included. Final pick from: Novotel Beijing Peace, DoubleTree by Hilton Beijing Wangfujing, or Hilton Beijing Wangfujing — we'll confirm based on availability for your dates.",
   images: [
     "/uploads/itinerary/beijing/hutong1.jpg",
     "/uploads/itinerary/beijing/hutong2.jpg",
@@ -89,26 +89,28 @@ const hotel = {
 const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
-    date: "Tue 5 May · Arrival",
-    title: "PEK Arrival · Forbidden City",
-    tags: ["11-seater coach + guide", "Light pacing"],
+    date: "Fri 5 June · Arrival",
+    title: "PEK Arrival · Temple of Heaven · Forbidden City",
+    tags: ["11-seater coach + guide", "Senior-friendly pacing"],
     items: [
-      "Morning: land at PEK, coach transfer to your Wangfujing hotel",
-      "Lunch: Beijing noodles or dumplings near the hotel",
+      "07:30 — meet your guide at PEK arrivals after SQ800 from Singapore",
+      "Coach transfer to your Wangfujing hotel · drop bags (rooms ready by 14:00)",
+      "Late breakfast nearby, then a gentle walk through Temple of Heaven (flat park, easy on the seniors after a redeye)",
+      "Lunch in the area, then check in",
       "Afternoon: walk Tiananmen Square through the Forbidden City (about 3 hours)",
       "Evening: stroll Wangfujing Street, dinner nearby, early night",
     ],
   },
   {
     day: "DAY 2",
-    date: "Wed 6 May · Wall + Heaven",
-    title: "Great Wall · Temple of Heaven · Duck",
-    tags: ["Round-trip cable car", "Duck dinner for 8"],
+    date: "Sat 6 June · Wall + Summer Palace",
+    title: "Mutianyu Great Wall · Summer Palace · Peking Duck",
+    tags: ["Round-trip cable car", "Lakeside walk at Summer Palace"],
     items: [
       "Morning: drive to Mutianyu Great Wall (about 1.5 hours)",
       "At the wall: cable car up, walk a section at your pace, cable car down",
       "Lunch at the Mutianyu base",
-      "Afternoon: drive back into Beijing for Temple of Heaven (about 1.5 hours there)",
+      "Afternoon: drive across to Summer Palace · gentle lakeside walk along the Long Corridor + Seventeen-Arch Bridge (about 2 hours)",
       "Evening: farewell Peking Duck dinner at Siji Minfu, Wangfujing",
     ],
   },
@@ -120,20 +122,22 @@ const tradeoffs = [
     body: "Mutianyu has both-way cable car — essential when 4 of 8 are seniors. Badaling is more crowded and has steeper sections.",
   },
   {
-    title: "Why Summer Palace is dropped",
-    body: "Too much walking when stacked on Wall + Forbidden City + Temple of Heaven across 2 days. Honest trade: keep the 3 they'll enjoy, skip the one that'll exhaust them. If pushed, only fit is a 30-min Kunming Lake drive-by from East Gate Day 2 — not really 'seeing' it.",
+    title: "Why Temple of Heaven on Day 1, not Day 2",
+    body: "Day 1 starts after a redeye — Temple of Heaven is a flat park, the gentlest of the big sites, perfect for easing in. Day 2 then keeps the heavy outdoor walking (Wall + Summer Palace) clustered in the north so you're not crossing the city twice.",
   },
   {
-    title: "Why Day 1 stays light",
-    body: "May 5 is the last day of Labor Day holiday — heavy PEK return traffic + packed sites. May 6 is the first normal day, much calmer, so it does the heavy lifting.",
+    title: "Why this date is great",
+    body: "Early June falls between Labor Day (May) and the summer holiday peak (mid-July) — calmer crowds at Forbidden City + Mutianyu, mild weather for outdoor walking, and Summer Palace's lake gardens are at their best.",
   },
 ];
 
 const prebookings = [
   "Forbidden City — passport-linked timed entry, sells out",
   "Mutianyu round-trip cable car combo × 8",
-  "Restaurant reservations for 8 pax (Day 1 lunch + Day 2 duck dinner)",
-  "11-seater coach with English-speaking guide × 2 days",
+  "Summer Palace entry × 8",
+  "Hotel: 4 rooms × 2 nights at the chosen Wangfujing 4★",
+  "PEK pickup for SQ800 (07:30 arrival) — 11-seater coach + English-speaking guide × 2 days",
+  "Restaurant reservations: farewell Peking Duck dinner for 8 (Siji Minfu, Wangfujing)",
 ];
 
 function AttractionCard({
@@ -229,7 +233,7 @@ function DayBadge({ label }: { label: string }) {
 }
 
 export default function ArpitBeijingPosterPage() {
-  const [forbidden, mutianyu, tiananmen, templeHeaven, wangfujing, duck] =
+  const [forbidden, mutianyu, summerPalace, templeHeaven, wangfujing, duck] =
     poster.attractions;
   const [carouselIndex, setCarouselIndex] = useState(0);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
@@ -320,10 +324,10 @@ export default function ArpitBeijingPosterPage() {
             </div>
 
             <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              from ¥ 950 / person
+              ¥ 1,320 / person
             </p>
             <p className="text-[12px] font-medium leading-snug text-[#7A1F25]">
-              May 5–6, 2026 · 8 pax sharing · English-speaking guide included
+              5–6 June 2026 · 8 pax sharing · English-speaking guide included
             </p>
           </div>
         </section>
@@ -357,7 +361,7 @@ export default function ArpitBeijingPosterPage() {
           <div className="space-y-3">
             <div className="grid grid-cols-2 gap-3">
               <AttractionCard attraction={forbidden} />
-              <AttractionCard attraction={tiananmen} />
+              <AttractionCard attraction={summerPalace} />
             </div>
 
             <div className="grid grid-cols-1">
@@ -534,12 +538,12 @@ export default function ArpitBeijingPosterPage() {
               </h3>
             </div>
             <ol className="space-y-0.5 text-[8px] leading-[1.3] text-[#888888]">
-              <li>1. Hotel: 2 nights at 4★ Wangfujing-area hotel (TBC), 2 family rooms with breakfast.</li>
+              <li>1. Hotel: 2 nights at 4★ Wangfujing-area hotel (Novotel Peace / DoubleTree Wangfujing / Hilton Wangfujing), 4 rooms × 2 pax with daily breakfast.</li>
               <li>2. Private 11-seater coach with English-speaking guide for Day 1 and Day 2.</li>
-              <li>3. PEK arrival pickup at terminal arrivals hall.</li>
-              <li>4. Attractions: Forbidden City × 8 (timed entry), Mutianyu Great Wall round-trip cable car × 8, Temple of Heaven × 8.</li>
-              <li>5. Concierge: WhatsApp support throughout, restaurant booking, taxi assistance.</li>
-              <li>6. Planning: Itinerary tuned for 4 seniors + Labor Day holiday traffic.</li>
+              <li>3. PEK arrival pickup for SQ800 (07:30 arrival from Singapore) at the terminal arrivals hall.</li>
+              <li>4. Attractions: Forbidden City × 8 (passport-linked timed entry), Mutianyu Great Wall round-trip cable car × 8, Temple of Heaven × 8, Summer Palace × 8.</li>
+              <li>5. Concierge: 24/7 WhatsApp support throughout, restaurant booking, taxi assistance, eSIM setup help.</li>
+              <li>6. Planning: Itinerary tuned for 4 seniors with senior-friendly pacing and routing.</li>
             </ol>
           </div>
 
