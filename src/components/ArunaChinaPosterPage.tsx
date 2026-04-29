@@ -93,27 +93,27 @@ const cityStays: CityStay[] = [
   },
   {
     city: "Chongqing",
-    nights: "2 nights · 28–30 Aug",
+    nights: "1 night · 28–29 Aug",
     area: "Yuzhong, riverside near Hongya Cave",
   },
   {
     city: "Shanghai",
-    nights: "3 nights · 30 Aug – 2 Sep",
+    nights: "2 nights · 29–31 Aug",
     area: "Near the Bund or Nanjing Road · 5 friends join here",
   },
   {
     city: "Zhangjiajie",
-    nights: "3 nights · 2–5 Sep",
+    nights: "3 nights · 31 Aug – 3 Sep",
     area: "Zhangjiajie city, near the cable car station",
   },
   {
     city: "Xi'an",
-    nights: "2 nights · 5–7 Sep",
+    nights: "2 nights · 3–5 Sep",
     area: "Inside the City Wall, Bell Tower area",
   },
   {
     city: "Beijing",
-    nights: "2 nights · 7–9 Sep",
+    nights: "4 nights · 5–9 Sep",
     area: "Wangfujing or Qianmen — central evening strolls",
   },
 ];
@@ -122,13 +122,14 @@ const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
     date: "Wed 26 Aug · Arrival",
-    title: "Land in Guangzhou · Welcome dinner",
-    tags: ["Airport pickup included", "Vegetarian set menu"],
+    title: "Land in Guangzhou · Pearl River cruise",
+    tags: ["Airport pickup included", "Pearl River cruise", "Indian dinner"],
     items: [
-      "Group arrival at Guangzhou Baiyun International (CAN)",
+      "Group arrival at Guangzhou Baiyun International (CAN) ~2 PM",
       "Private coach transfer with English-speaking representative",
       "Hotel check-in + welcome briefing",
-      "Welcome dinner at a Cantonese restaurant (transfers both ways)",
+      "Pearl River evening cruise — seated, AC, panoramic skyline",
+      "Welcome dinner at an Indian restaurant in Guangzhou (transfer arranged)",
       "Hotel: 4★ Tianhe or Yuexiu area",
     ],
   },
@@ -136,93 +137,66 @@ const itineraryDays: ItineraryDay[] = [
     day: "DAY 2",
     date: "Thu 27 Aug",
     title: "Guangzhou Highlights · Canton Tower",
-    tags: ["Pre-booked tickets", "Pearl River cruise"],
+    tags: ["Pre-booked tickets", "Canton Tower observation deck"],
     items: [
       "Chen Clan Ancestral Hall — Cantonese architecture, flat courtyards",
       "Shamian Island — colonial-era European architecture, tree-lined walking",
-      "Cantonese dim sum lunch (vegetarian dim sum pre-arranged)",
+      "Vegetarian Cantonese dim sum lunch (no meat/fish — pre-arranged)",
       "Beijing Lu pedestrian street — shopping and street life",
       "Canton Tower — elevator to observation deck for sunset and night skyline",
-      "Pearl River evening cruise — seated, AC, panoramic skyline",
-      "Dinner at riverside restaurant (transfer arranged)",
+      "Indian dinner in Guangzhou (transfer arranged)",
     ],
   },
   {
     day: "DAY 3",
     date: "Fri 28 Aug · Flight",
-    title: "Guangzhou → Chongqing · Jiefangbei evening",
-    tags: ["Domestic flight", "Late check-out"],
+    title: "Guangzhou → Chongqing · Liziba · Hongya Cave",
+    tags: ["Domestic flight", "Liziba monorail", "Hongya Cave at dusk"],
     items: [
-      "Leisurely breakfast · late check-out",
+      "Early breakfast · check-out",
       "Transfer to CAN · ✈️ flight to Chongqing Jiangbei (CKG) (~2 hrs)",
       "Coach transfer to hotel · check-in",
-      "Kuixing building + Kuixinglou square — short walk",
-      "Jiefangbei pedestrian street evening",
-      "Mild Chongqing dinner (non-spicy, vegetarian-friendly menu pre-set)",
+      "Liziba Station — quick photo stop where the monorail passes through the apartment building",
+      "Kuixing building + Jiefangbei pedestrian street — late-afternoon walk",
+      "Hongya Cave at dusk — multi-level stilt complex with elevators",
+      "Indian dinner in Chongqing (vegetarian if Indian unavailable — pre-arranged)",
       "Hotel: 4★ in Yuzhong, riverside near Hongya Cave",
     ],
   },
   {
     day: "DAY 4",
-    date: "Sat 29 Aug",
-    title: "Chongqing Highlights · Pandas · Hongya Cave",
-    tags: ["Chongqing Zoo", "Hongya Cave at dusk"],
+    date: "Sat 29 Aug · Flight",
+    title: "Chongqing Zoo · → Shanghai · 5 friends join",
+    tags: ["Giant pandas", "Domestic flight", "Group meet-up"],
     items: [
-      "Chongqing Zoo early start — giant pandas (battery-operated carts available, ~2–3 hrs at relaxed pace)",
-      "Ciqikou Ancient Town — flat cobblestone streets, tea house stop",
-      "Lunch at Ciqikou",
-      "Liziba Station — famous train-through-building (short photo stop)",
-      "Hongya Cave at dusk — multi-level stilt complex with elevators between levels",
-      "Dinner at riverside restaurant (transfer arranged)",
-    ],
-  },
-  {
-    day: "DAY 5",
-    date: "Sun 30 Aug · Flight",
-    title: "Chongqing → Shanghai · 5 friends join",
-    tags: ["Domestic flight", "Group meet-up"],
-    items: [
-      "Breakfast · transfer to CKG",
+      "Early breakfast · Chongqing Zoo opens 8 AM",
+      "Giant pandas — battery-operated carts available, ~2 hrs at relaxed pace",
+      "Light vegetarian lunch in Chongqing",
+      "Transfer to CKG",
       "✈️ Flight Chongqing → Shanghai Hongqiao or Pudong (~2.5 hrs)",
-      "5 additional friends join the group at Shanghai hotel",
-      "Coach transfer to hotel · check-in and rest",
-      "Combined-group dinner at hotel area (now 23 pax — TBC)",
+      "5 additional friends join at Shanghai hotel (group now 23 — TBC)",
+      "Combined-group Indian dinner at hotel area",
       "Hotel: 4★ near the Bund or Nanjing Road",
     ],
   },
   {
-    day: "DAY 6",
-    date: "Mon 31 Aug",
-    title: "Old & New Shanghai · Huangpu cruise",
-    tags: ["Yu Garden tickets", "River cruise included"],
+    day: "DAY 5",
+    date: "Sun 30 Aug",
+    title: "Shanghai full day · Yu Garden · Bund · Lujiazui",
+    tags: ["Yu Garden tickets", "Huangpu cruise", "Packed day"],
     items: [
-      "Yu Garden — classical garden, flat walking",
-      "Yu Garden Bazaar — shopping + Shanghai snacks",
-      "Lunch at Nanxiang for soup dumplings (vegetarian dumplings pre-arranged)",
+      "Yu Garden — classical garden, flat walking + Yu Garden Bazaar (morning)",
+      "Vegetarian dumplings lunch at Nanxiang (no meat — pre-arranged)",
       "The Bund — colonial architecture + Pudong skyline photo stop",
-      "Hotel rest before evening",
+      "Shanghai Tower observation deck — Lujiazui skyline (afternoon)",
+      "Quick French Concession / Xintiandi walk if time permits",
       "Huangpu River Evening Cruise — seated, AC, panoramic skyline",
-      "Dinner aboard or at Bund-area restaurant (transfer arranged)",
+      "Indian dinner at Bund-area restaurant (transfer arranged)",
     ],
   },
   {
-    day: "DAY 7",
-    date: "Tue 1 Sep",
-    title: "Lujiazui · French Concession · Shopping",
-    tags: ["Observation deck", "Guided walking tour"],
-    items: [
-      "Shanghai Tower or Pearl Tower — elevator to observation deck for skyline views",
-      "Walk around Lujiazui financial district",
-      "Lunch",
-      "Former French Concession — Xintiandi area, tree-lined streets",
-      "Tianzifang — boutique alleys (mostly flat)",
-      "Nanjing Road afternoon shopping — coach available for early hotel return",
-      "Dinner at a Shanghainese restaurant (transfer arranged)",
-    ],
-  },
-  {
-    day: "DAY 8",
-    date: "Wed 2 Sep · Bullet train",
+    day: "DAY 6",
+    date: "Mon 31 Aug · Bullet train",
     title: "Shanghai → Zhangjiajie · 72 Wonders Tower",
     tags: ["G-class train", "Group seating arranged"],
     items: [
@@ -231,13 +205,13 @@ const itineraryDays: ItineraryDay[] = [
       "Light meal on board (packed by hotel)",
       "Arrival Zhangjiajie · private coach transfer to hotel",
       "Evening visit: 72 Wonders Tower (illuminated after dark)",
-      "Light dinner at hotel",
+      "Light vegetarian dinner at hotel",
       "Hotel: 4★ in Zhangjiajie city near cable car station",
     ],
   },
   {
-    day: "DAY 9",
-    date: "Thu 3 Sep",
+    day: "DAY 7",
+    date: "Tue 1 Sep",
     title: "Tianmen Mountain · Heaven's Gate",
     tags: ["Scenic cable car", "Escalators inside the mountain"],
     items: [
@@ -247,26 +221,26 @@ const itineraryDays: ItineraryDay[] = [
       "Glass Skywalk optional · non-glass viewing path also available",
       "Heaven's Gate — recommended: shuttle + escalator down to view from platform (no 999 steps)",
       "Coach down via the famous 99-bend road (or cable car back)",
-      "Lunch in Zhangjiajie city · free afternoon at hotel · dinner at hotel",
+      "Vegetarian lunch in Zhangjiajie city · free afternoon at hotel · vegetarian dinner at hotel",
     ],
   },
   {
-    day: "DAY 10",
-    date: "Fri 4 Sep",
+    day: "DAY 8",
+    date: "Wed 2 Sep",
     title: "Zhangjiajie Forest Park · Avatar Mountains",
     tags: ["Bailong glass elevator", "No climbing required"],
     items: [
       "Drive to Zhangjiajie National Forest Park (~40 mins from Zhangjiajie city)",
       "Bailong Glass Elevator — world's tallest outdoor elevator, no climbing",
       "Yuanjiajie — Avatar Hallelujah viewpoint + First Bridge Under Heaven",
-      "Lunch at a mountain-top restaurant inside the park",
+      "Vegetarian lunch at a mountain-top restaurant inside the park",
       "Shuttle to Tianzi Mountain area · cable car or shuttle down",
-      "Return to hotel · dinner at hotel",
+      "Return to hotel · vegetarian dinner at hotel",
     ],
   },
   {
-    day: "DAY 11",
-    date: "Sat 5 Sep · Bullet train",
+    day: "DAY 9",
+    date: "Thu 3 Sep · Bullet train",
     title: "Zhangjiajie → Xi'an · City Wall sunset",
     tags: ["G-class train", "City Wall electric cart"],
     items: [
@@ -275,28 +249,28 @@ const itineraryDays: ItineraryDay[] = [
       "Arrival Xi'an · coach transfer to hotel · check-in",
       "Xi'an City Wall — electric cart along the wall, photo stops at four cardinal gates (no walking)",
       "Sunset photo stop at the east side",
-      "Dinner at Bell Tower area restaurant (transfer arranged)",
+      "Indian dinner near Bell Tower area (transfer arranged)",
       "Hotel: 4★ inside Xi'an City Wall (Bell Tower area)",
     ],
   },
   {
-    day: "DAY 12",
-    date: "Sun 6 Sep",
-    title: "Terracotta Warriors · Wild Goose Pagoda · Muslim Quarter",
-    tags: ["Tickets pre-booked", "Electric shuttle from gate", "Tang Dynasty Show"],
+    day: "DAY 10",
+    date: "Fri 4 Sep",
+    title: "Terracotta Warriors · Wild Goose Pagoda · Tang Show",
+    tags: ["Tickets pre-booked", "Tang Dynasty Show"],
     items: [
       "Drive to Terracotta Warriors Museum (~1 hr)",
       "Guided visit — Pits 1, 2, 3 + Bronze Chariots Hall",
-      "Museum-side lunch · dumpling sampler with vegetarian options",
+      "Vegetarian lunch museum-side (no meat — pre-arranged)",
       "Return to Xi'an",
       "Big Wild Goose Pagoda from the plaza · Great Tang All Day Mall stroll",
       "Muslim Quarter evening walk (Beiyuanmen) — split into two groups so guide accommodates slower walkers",
-      "Tang Dynasty Dinner Show with vegetarian-friendly banquet",
+      "Tang Dynasty Show (show only) + separate Indian / vegetarian dinner pre-arranged",
     ],
   },
   {
-    day: "DAY 13",
-    date: "Mon 7 Sep · Bullet train",
+    day: "DAY 11",
+    date: "Sat 5 Sep · Bullet train",
     title: "Xi'an → Beijing · Houhai evening",
     tags: ["G-class train", "Evening at leisure"],
     items: [
@@ -304,38 +278,62 @@ const itineraryDays: ItineraryDay[] = [
       "🚄 G-class bullet train Xi'an → Beijing West (~4.5–5 hrs, group seating arranged)",
       "Arrival Beijing · coach transfer to hotel · check-in",
       "Houhai / Shichahai evening — \"Bund of Beijing\" lakeside walk",
-      "Wangfujing street and night market",
-      "Dinner at Wangfujing area (transfer arranged)",
+      "Wangfujing street and night market (browse only — Indian dinner arranged separately)",
+      "Indian dinner in Wangfujing area (transfer arranged)",
       "Hotel: 4★ Wangfujing or Qianmen area",
     ],
   },
   {
-    day: "DAY 14",
-    date: "Tue 8 Sep",
+    day: "DAY 12",
+    date: "Sun 6 Sep",
     title: "Great Wall at Mutianyu",
     tags: ["Cable car included", "Toboggan optional"],
     items: [
       "Early drive to Mutianyu (~1.5 hrs) — chosen over Badaling for fewer crowds",
       "Cable car up · cable car or toboggan down",
       "Walk a short, restored Wall section at the top",
-      "Lunch at a Wall-side restaurant",
-      "Return to Beijing",
-      "Optional Olympic Park night view drive-by",
-      "Dinner: Peking Duck banquet with parallel vegetarian dishes pre-arranged",
+      "Vegetarian lunch at a Wall-side restaurant (no meat — pre-arranged)",
+      "Return to Beijing · optional Olympic Park night view drive-by",
+      "Indian dinner in Beijing (transfer arranged)",
+    ],
+  },
+  {
+    day: "DAY 13",
+    date: "Mon 7 Sep",
+    title: "Forbidden City · Tiananmen · Temple of Heaven",
+    tags: ["Forbidden City pre-booked", "Pre-booked tickets"],
+    items: [
+      "Tiananmen Square (flat, photo stops)",
+      "Forbidden City — central axis only, golf-cart-friendly entry",
+      "Vegetarian / Indian lunch",
+      "Temple of Heaven — flat park, afternoon culture (tai chi, calligraphy)",
+      "Return to hotel for short rest",
+      "Indian dinner near Wangfujing (transfer arranged)",
+    ],
+  },
+  {
+    day: "DAY 14",
+    date: "Tue 8 Sep",
+    title: "Summer Palace · Hutong rickshaw · Shopping",
+    tags: ["Boat ride", "Hutong rickshaw"],
+    items: [
+      "Summer Palace — Kunming Lake boat to reduce walking; Long Corridor + Marble Boat",
+      "Vegetarian / Indian lunch",
+      "Hutong rickshaw tour through Shichahai — flat ride, optional family courtyard visit",
+      "Wangfujing afternoon shopping — coach available for early hotel return",
+      "Indian farewell dinner (transfer arranged)",
     ],
   },
   {
     day: "DAY 15",
     date: "Wed 9 Sep · Departure",
-    title: "Forbidden City · Tiananmen · Departure",
-    tags: ["Forbidden City pre-booked", "Airport drop-off included"],
+    title: "Pre-dawn transfer to PKX · Departure",
+    tags: ["Airport drop-off included", "8:30 AM flight"],
     items: [
-      "Early breakfast · check-out (luggage stored at hotel)",
-      "Tiananmen Square (flat, photo stops)",
-      "Forbidden City — central axis only, golf-cart-friendly entry",
-      "Vegetarian-friendly farewell lunch",
-      "Return to hotel for luggage",
-      "Private coach transfer to Beijing Capital (PEK) or Daxing (PKX) for evening departure flight",
+      "Pre-dawn wake-up · early breakfast (or boxed) · check-out",
+      "Pre-arranged coach transfer to Beijing Daxing (PKX)",
+      "Group must arrive at airport by ~6:30 AM for the 8:30 AM departure flight",
+      "No sightseeing today — departure-only day",
     ],
   },
 ];
@@ -503,7 +501,7 @@ export default function ArunaChinaPosterPage() {
                 Aruna Group Trip | China 15 Days 14 Nights
               </h2>
               <p className="text-[13px] font-normal leading-snug text-[#4A4A4A]">
-                6 cities · 18 pax (23 from Shanghai onwards — TBC) · vegetarian-friendly throughout · English-speaking national escort
+                6 cities · 18 pax (23 from Shanghai onwards — TBC) · Indian veg / vegetarian throughout (no meat, no fish) · English-speaking national escort
               </p>
             </div>
 
@@ -511,7 +509,7 @@ export default function ArunaChinaPosterPage() {
               {[
                 "24/7 WhatsApp concierge",
                 "4-star stays",
-                "Vegetarian restaurants",
+                "Indian veg / vegetarian",
                 "Private coach",
                 "English-speaking escort",
               ].map((tag) => (
@@ -524,9 +522,16 @@ export default function ArunaChinaPosterPage() {
               ))}
             </div>
 
-            <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              from ¥ 12,800 / person
-            </p>
+            <div className="space-y-1">
+              <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
+                from ¥ 12,800 / person
+                <span className="ml-2 text-[12px] font-normal text-stone-500">main group · 18 pax · 14 nights</span>
+              </p>
+              <p className="text-[15px] font-semibold leading-none text-[#3F3F3F]">
+                ¥ 9,100 / person
+                <span className="ml-2 text-[12px] font-normal text-stone-500">5 friends · 9 nights · joining later</span>
+              </p>
+            </div>
           </div>
         </section>
 
@@ -606,39 +611,39 @@ export default function ArunaChinaPosterPage() {
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-[#C23845]">2</td>
-                  <td className="px-3 py-2">28–30 Aug</td>
-                  <td className="px-3 py-2">2</td>
+                  <td className="px-3 py-2">28–29 Aug</td>
+                  <td className="px-3 py-2">1</td>
                   <td className="px-3 py-2">Chongqing</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-[#C23845]">3</td>
-                  <td className="px-3 py-2">30 Aug – 2 Sep</td>
-                  <td className="px-3 py-2">3</td>
+                  <td className="px-3 py-2">29–31 Aug</td>
+                  <td className="px-3 py-2">2</td>
                   <td className="px-3 py-2">Shanghai (5 friends join)</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-[#C23845]">4</td>
-                  <td className="px-3 py-2">2–5 Sep</td>
+                  <td className="px-3 py-2">31 Aug – 3 Sep</td>
                   <td className="px-3 py-2">3</td>
                   <td className="px-3 py-2">Zhangjiajie</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-[#C23845]">5</td>
-                  <td className="px-3 py-2">5–7 Sep</td>
+                  <td className="px-3 py-2">3–5 Sep</td>
                   <td className="px-3 py-2">2</td>
                   <td className="px-3 py-2">Xi&apos;an</td>
                 </tr>
                 <tr>
                   <td className="px-3 py-2 font-semibold text-[#C23845]">6</td>
-                  <td className="px-3 py-2">7–9 Sep</td>
-                  <td className="px-3 py-2">2</td>
+                  <td className="px-3 py-2">5–9 Sep</td>
+                  <td className="px-3 py-2">4</td>
                   <td className="px-3 py-2">Beijing</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <p className="mt-3 text-[11px] leading-relaxed text-stone-500">
-            Inter-city: 2 domestic flights (Guangzhou → Chongqing; Chongqing → Shanghai) and 3 G-class bullet trains (Shanghai → Zhangjiajie; Zhangjiajie → Xi&apos;an; Xi&apos;an → Beijing). Reverse-route start in Guangzhou suits long-haul carriers from Mumbai.
+            Inter-city: 2 domestic flights (Guangzhou → Chongqing; Chongqing → Shanghai) and 3 G-class bullet trains (Shanghai → Zhangjiajie; Zhangjiajie → Xi&apos;an; Xi&apos;an → Beijing). Reverse-route start in Guangzhou suits long-haul carriers from Mumbai. Departure 9 Sep 8:30 AM from Beijing Daxing (PKX).
           </p>
         </motion.div>
 
@@ -777,14 +782,14 @@ export default function ArunaChinaPosterPage() {
             </div>
             <ol className="space-y-0.5 text-[10px] leading-[1.35] text-[#333333]">
               <li>1. Hotels: 14 nights in 4★ accommodation across 6 cities (twin/double sharing) with daily breakfast.</li>
-              <li>2. Lunches and dinners as marked in the itinerary, all with parallel vegetarian set menus.</li>
+              <li>2. Restaurant arrangements: we book the right Indian / vegetarian restaurants in each city (no meat, no fish) and provide transfers — meal costs are settled by the group at the restaurant.</li>
               <li>3. Inter-city transport: 2 domestic flights (Guangzhou → Chongqing; Chongqing → Shanghai) and 3 G-class bullet trains (Shanghai → Zhangjiajie; Zhangjiajie → Xi&apos;an; Xi&apos;an → Beijing).</li>
               <li>4. Private air-conditioned coach throughout (sized for 18 pax to Shanghai, then upsized for 23 pax from Shanghai onwards — TBC).</li>
               <li>5. English-speaking national escort throughout + local English-speaking guide in each city.</li>
-              <li>6. All airport, train station, hotel and dinner transfers.</li>
-              <li>7. Pre-booked entrance tickets to all listed attractions including Chongqing Zoo.</li>
-              <li>8. All cable cars, elevators, electric shuttles and boat rides as listed (Bailong glass elevator, Tianmen cable car, Mutianyu cable car, Pearl River cruise, Huangpu cruise, Shanghai Tower observation deck, Canton Tower observation deck, City Wall electric cart).</li>
-              <li>9. Tang Dynasty Dinner Show in Xi&apos;an with vegetarian-friendly banquet.</li>
+              <li>6. All airport, train station, hotel and dinner transfers (including pre-dawn 9 Sep transfer to PKX).</li>
+              <li>7. Pre-booked entrance tickets to all listed attractions (Chongqing Zoo, Forbidden City, Temple of Heaven, Summer Palace, Yu Garden, Terracotta Warriors, Tianmen Mountain, Forest Park, Canton Tower).</li>
+              <li>8. All cable cars, elevators, electric shuttles and boat rides as listed (Bailong glass elevator, Tianmen cable car, Mutianyu cable car, Pearl River cruise, Huangpu cruise, Summer Palace boat, Shanghai Tower observation deck, Canton Tower observation deck, City Wall electric cart, Hutong rickshaw).</li>
+              <li>9. Tang Dynasty Show in Xi&apos;an (show only — separate Indian / vegetarian dinner pre-arranged).</li>
               <li>10. 24/7 ChinaPal concierge support during the trip.</li>
             </ol>
           </div>
@@ -800,11 +805,14 @@ export default function ArunaChinaPosterPage() {
               <li>1. International flights to Guangzhou and from Beijing.</li>
               <li>2. China visa fees.</li>
               <li>3. Travel insurance.</li>
-              <li>4. Drinks beyond water at meals.</li>
-              <li>5. Personal expenses, tips for guides and drivers.</li>
-              <li>6. Optional activities not listed (foot massage, Glass Skywalk).</li>
-              <li>7. Additional costs caused by delays, cancellations, weather, mechanical issues or other force majeure events.</li>
-              <li>8. Any item not explicitly listed under &quot;Price Included&quot;.</li>
+              <li>4. Lunches, dinners and snacks — bills are paid directly to the restaurant (we handle bookings, transfers and dietary briefings, daily breakfast is included with the hotel).</li>
+              <li>5. Drinks beyond water at meals.</li>
+              <li>6. Personal expenses, tips for guides and drivers.</li>
+              <li>7. Optional activities not listed (foot massage, Glass Skywalk, Glass Bridge).</li>
+              <li>8. Extra checked-baggage fees on domestic flights beyond the standard 23 kg allowance.</li>
+              <li>9. International flights for the 5 friends to/from China.</li>
+              <li>10. Additional costs caused by delays, cancellations, weather, mechanical issues or other force majeure events.</li>
+              <li>11. Any item not explicitly listed under &quot;Price Included&quot;.</li>
             </ol>
           </div>
         </motion.div>
