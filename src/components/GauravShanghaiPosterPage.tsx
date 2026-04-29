@@ -78,7 +78,7 @@ const poster = {
 const hotel = {
   name: "Rezen Hotel Shanghai Pudong Avenue · 2 rooms × 6 nights",
   description:
-    "4★ stay in Pudong · skyline views · breakfast included · family-friendly · 2 rooms (one for adults, one for kids). Pudong base means shorter rides to Disney and the airport — handy for a family trip.",
+    "4★ stay in Pudong · skyline views · breakfast included · family-friendly · 2 rooms (one for adults, one for kids).",
   images: [
     "/uploads/itinerary/sanjay-hotel-1.jpg",
     "/uploads/itinerary/sanjay-hotel-2.jpg",
