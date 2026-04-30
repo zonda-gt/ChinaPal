@@ -76,13 +76,13 @@ const poster = {
 };
 
 const hotel = {
-  name: "Rezen Hotel Shanghai Pudong Avenue · 2 rooms × 6 nights",
+  name: "Holiday Inn Shanghai Jing'an · Premium Double × 6 nights",
   description:
-    "4★ stay in Pudong · skyline views · breakfast included · family-friendly · 2 rooms (one for adults, one for kids).",
+    "4★ international-chain stay in central Jing'an · premium room with 2 double beds (fits the family of 4) · breakfast included · close to Jing'an Temple and metro.",
   images: [
-    "/uploads/itinerary/sanjay-hotel-1.jpg",
-    "/uploads/itinerary/sanjay-hotel-2.jpg",
-    "/uploads/itinerary/sanjay-hotel-3.jpg",
+    "/uploads/itinerary/shanghai/hotel/holiday-inn-jingan-1.webp",
+    "/uploads/itinerary/shanghai/hotel/holiday-inn-jingan-2.webp",
+    "/uploads/itinerary/shanghai/hotel/holiday-inn-jingan-3.webp",
   ],
 };
 
@@ -90,12 +90,12 @@ const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
     date: "Sat 16 May · Arrival",
-    title: "Arrival · Easy Pudong Reset",
+    title: "Arrival · Easy Jing'an Reset",
     tags: ["Airport pickup included", "Family-friendly pacing"],
     items: [
-      "Morning: land Shanghai · airport pickup (private car for luggage) · transfer to Rezen Hotel Pudong",
+      "Morning: land Shanghai · airport pickup (private car for luggage) · transfer to Holiday Inn Jing'an",
       "Drop bags · light lunch nearby (Shanghainese, kid-friendly)",
-      "Afternoon: rest at hotel · gentle stroll along the Pudong Riverside (Binjiang Avenue) — views of the Bund from across the water",
+      "Afternoon: gentle walk · Jing'an Temple + Jing'an Park (within 10 min of hotel)",
       "Evening: dinner near hotel · early night to recover from the flight",
     ],
   },
@@ -195,7 +195,7 @@ const prebookings = [
   "Shanghai Science & Technology Museum × 4",
   "Yu Garden entry × 4",
   "Huangpu River sunset cruise × 4",
-  "Hotel: 2 rooms × 6 nights at Rezen Hotel Shanghai Pudong Avenue",
+  "Hotel: 1 premium room × 6 nights at Holiday Inn Shanghai Jing'an",
   "Airport pickup + drop-off (private car, luggage-friendly)",
 ];
 
@@ -367,7 +367,7 @@ export default function GauravShanghaiPosterPage() {
 
             <div className="flex flex-wrap gap-3">
               {[
-                "2 rooms at Rezen Pudong",
+                "Holiday Inn Jing'an · Premium Double",
                 "Disney + Legoland on weekdays",
                 "Airport pickup + drop-off",
                 "24hr WhatsApp concierge",
@@ -382,7 +382,7 @@ export default function GauravShanghaiPosterPage() {
             </div>
 
             <p className="text-[20px] font-semibold leading-none text-[#3F3F3F]">
-              ¥ 2,700 / person
+              ¥ 2,640 / person
             </p>
             <p className="text-[12px] font-medium leading-snug text-[#7A1F25]">
               16–22 May 2026 · 6 nights · 2 adults + 2 kids
@@ -596,7 +596,7 @@ export default function GauravShanghaiPosterPage() {
               </h3>
             </div>
             <ol className="space-y-0.5 text-[8px] leading-[1.3] text-[#888888]">
-              <li>1. Hotel: 6 nights at Rezen Hotel Shanghai Pudong Avenue (4★), 2 rooms with breakfast.</li>
+              <li>1. Hotel: 6 nights at Holiday Inn Shanghai Jing'an (4★), 1 premium double room with 2 double beds, breakfast included.</li>
               <li>2. Airport transfers: arrival pickup + departure drop-off (private car, luggage-friendly).</li>
               <li>3. Attraction tickets × 4: Shanghai Disneyland, Legoland Shanghai, Shanghai Tower, Science &amp; Technology Museum, Yu Garden, Huangpu River cruise.</li>
               <li>4. Disney + Legoland day pickups: arranged transport to/from each park.</li>
