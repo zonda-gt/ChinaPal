@@ -51,6 +51,15 @@ interface CityStay {
   pricePerRoom: string;
 }
 
+interface TransportLeg {
+  date: string;
+  route: string;
+  mode: "Flight" | "Train";
+  number: string;
+  time: string;
+  pricePerPax: string;
+}
+
 const poster = {
   destinationEn: "China",
   subtitle: "ARUNA · 15 DAYS · 6 CITIES",
@@ -139,6 +148,49 @@ const cityStays: CityStay[] = [
   },
 ];
 
+const transports: TransportLeg[] = [
+  {
+    date: "Fri 28 Aug",
+    route: "Guangzhou → Chongqing",
+    mode: "Train",
+    number: "G-class bullet train",
+    time: "08:30 – 14:24 (~6 hrs)",
+    pricePerPax: "¥600 / pax",
+  },
+  {
+    date: "Sat 29 Aug",
+    route: "Chongqing → Shanghai",
+    mode: "Flight",
+    number: "FM9420",
+    time: "17:30 – 20:00 (~2.5 hrs)",
+    pricePerPax: "¥1,090 / pax",
+  },
+  {
+    date: "Mon 31 Aug",
+    route: "Shanghai → Zhangjiajie",
+    mode: "Train",
+    number: "G-class bullet train",
+    time: "07:04 – 14:19 (~7 hrs 15 min)",
+    pricePerPax: "¥784 / pax",
+  },
+  {
+    date: "Thu 3 Sep",
+    route: "Zhangjiajie → Xi'an",
+    mode: "Flight",
+    number: "GS7662",
+    time: "15:25 – 16:55 (~1 hr 30 min)",
+    pricePerPax: "¥930 / pax",
+  },
+  {
+    date: "Sat 5 Sep",
+    route: "Xi'an → Beijing",
+    mode: "Train",
+    number: "G-class bullet train",
+    time: "10:02 – 14:21 (~4 hrs 20 min)",
+    pricePerPax: "¥540 / pax",
+  },
+];
+
 const itineraryDays: ItineraryDay[] = [
   {
     day: "DAY 1",
@@ -170,18 +222,19 @@ const itineraryDays: ItineraryDay[] = [
   },
   {
     day: "DAY 3",
-    date: "Fri 28 Aug · Flight",
+    date: "Fri 28 Aug · Bullet train",
     title: "Guangzhou → Chongqing · Liziba · Hongya Cave",
-    tags: ["Domestic flight", "Liziba monorail", "Hongya Cave at dusk"],
+    tags: ["G-class train", "Liziba monorail", "Hongya Cave at dusk"],
     items: [
-      "Early breakfast · check-out",
-      "Transfer to CAN · ✈️ flight to Chongqing Jiangbei (CKG) (~2 hrs)",
-      "Coach transfer to hotel · check-in",
+      "Early breakfast · check-out · transfer to Guangzhou South Station",
+      "🚄 G-class bullet train Guangzhou → Chongqing 08:30 – 14:24 (~6 hrs, group seating arranged)",
+      "Light meal on board (packed by hotel)",
+      "Coach transfer to hotel · check-in (~15:30)",
       "Liziba Station — quick photo stop where the monorail passes through the apartment building",
       "Kuixing building + Jiefangbei pedestrian street — late-afternoon walk",
       "Hongya Cave at dusk — multi-level stilt complex with elevators",
       "Indian dinner in Chongqing (vegetarian if Indian unavailable — pre-arranged)",
-      "Hotel: 4★ in Yuzhong, riverside near Hongya Cave",
+      "Hotel: Jinke Shengjia Hotel, Yuzhong (riverside near Hongya Cave)",
     ],
   },
   {
@@ -193,11 +246,11 @@ const itineraryDays: ItineraryDay[] = [
       "Early breakfast · Chongqing Zoo opens 8 AM",
       "Giant pandas — battery-operated carts available, ~2 hrs at relaxed pace",
       "Light vegetarian lunch in Chongqing",
-      "Transfer to CKG",
-      "✈️ Flight Chongqing → Shanghai Hongqiao or Pudong (~2.5 hrs)",
+      "Afternoon transfer to Chongqing Jiangbei (CKG)",
+      "✈️ Flight FM9420 Chongqing → Shanghai Hongqiao 17:30 – 20:00 (~2.5 hrs)",
       "5 additional friends join at Shanghai hotel (group now 23 — TBC)",
-      "Combined-group Indian dinner at hotel area",
-      "Hotel: 4★ near the Bund or Nanjing Road",
+      "Combined-group Indian dinner at hotel area (late dinner)",
+      "Hotel: Crystal Orange Hotel Shanghai Lujiazui Oriental Pearl",
     ],
   },
   {
@@ -221,13 +274,13 @@ const itineraryDays: ItineraryDay[] = [
     title: "Shanghai → Zhangjiajie · 72 Wonders Tower",
     tags: ["G-class train", "Group seating arranged"],
     items: [
-      "Breakfast · transfer to Shanghai Hongqiao Station",
-      "🚄 G-class bullet train Shanghai → Zhangjiajie West (~7.5 hrs, 2nd-class soft seats, group seating arranged)",
+      "Boxed breakfast · pre-dawn transfer to Shanghai Hongqiao Station",
+      "🚄 G-class bullet train Shanghai → Zhangjiajie West 07:04 – 14:19 (~7 hrs 15 min, group seating arranged)",
       "Light meal on board (packed by hotel)",
       "Arrival Zhangjiajie · private coach transfer to hotel",
       "Evening visit: 72 Wonders Tower (illuminated after dark)",
       "Light vegetarian dinner at hotel",
-      "Hotel: 4★ in Zhangjiajie city near cable car station",
+      "Hotel: Mengtu Hotel No.1 West Street (right by Tianmen cable car)",
     ],
   },
   {
@@ -261,23 +314,25 @@ const itineraryDays: ItineraryDay[] = [
   },
   {
     day: "DAY 9",
-    date: "Thu 3 Sep · Bullet train",
-    title: "Zhangjiajie → Xi'an · City Wall sunset",
-    tags: ["G-class train", "City Wall electric cart"],
+    date: "Thu 3 Sep · Flight",
+    title: "Zhangjiajie morning · → Xi'an · City Wall sunset",
+    tags: ["Optional Baofeng Lake / Glass Bridge", "Domestic flight", "City Wall electric cart"],
     items: [
-      "Breakfast · transfer to Zhangjiajie West Station",
-      "🚄 G-class bullet train Zhangjiajie → Xi'an North (~5.5 hrs, group seating arranged)",
-      "Arrival Xi'an · coach transfer to hotel · check-in",
-      "Xi'an City Wall — electric cart along the wall, photo stops at four cardinal gates (no walking)",
-      "Sunset photo stop at the east side",
+      "Relaxed breakfast · check-out",
+      "Optional morning excursion: Baofeng Lake boat cruise (gentle, recommended) OR Grand Canyon Glass Bridge",
+      "Vegetarian lunch in Zhangjiajie",
+      "Transfer to Zhangjiajie Hehua (DYG) airport",
+      "✈️ Flight GS7662 Zhangjiajie → Xi'an Xianyang (XIY) 15:25 – 16:55 (~1 hr 30 min)",
+      "Coach transfer to Xi'an hotel · check-in (~18:00)",
+      "Xi'an City Wall — electric cart along the wall, photo stops + sunset view at the east side",
       "Indian dinner near Bell Tower area (transfer arranged)",
-      "Hotel: 4★ inside Xi'an City Wall (Bell Tower area)",
+      "Hotel: Vienna International (Xi'an Datang Everbright)",
     ],
   },
   {
     day: "DAY 10",
     date: "Fri 4 Sep",
-    title: "Terracotta Warriors · Wild Goose Pagoda · Tang Show",
+    title: "Terracotta Warriors · Muslim Quarter · Tang Show",
     tags: ["Tickets pre-booked", "Tang Dynasty Show"],
     items: [
       "Drive to Terracotta Warriors Museum (~1 hr)",
@@ -295,13 +350,13 @@ const itineraryDays: ItineraryDay[] = [
     title: "Xi'an → Beijing · Houhai evening",
     tags: ["G-class train", "Evening at leisure"],
     items: [
-      "Breakfast · leisurely morning · transfer to Xi'an North Station",
-      "🚄 G-class bullet train Xi'an → Beijing West (~4.5–5 hrs, group seating arranged)",
+      "Breakfast · transfer to Xi'an North Station",
+      "🚄 G-class bullet train Xi'an → Beijing West 10:02 – 14:21 (~4 hrs 20 min, group seating arranged)",
       "Arrival Beijing · coach transfer to hotel · check-in",
       "Houhai / Shichahai evening — \"Bund of Beijing\" lakeside walk",
       "Wangfujing street and night market (browse only — Indian dinner arranged separately)",
       "Indian dinner in Wangfujing area (transfer arranged)",
-      "Hotel: 4★ Wangfujing or Qianmen area",
+      "Hotel: Beijing Tiananmen Forbidden City Baogui Hotel",
     ],
   },
   {
@@ -673,12 +728,8 @@ export default function ArunaChinaPosterPage() {
             </table>
           </div>
           <p className="mt-3 text-[11px] leading-relaxed text-stone-500">
-            Inter-city: 2 domestic flights (Guangzhou → Chongqing; Chongqing → Shanghai) and 3 G-class bullet trains (Shanghai → Zhangjiajie; Zhangjiajie → Xi&apos;an; Xi&apos;an → Beijing). Reverse-route start in Guangzhou suits long-haul carriers from Mumbai. Departure 9 Sep 8:30 AM from Beijing Daxing (PKX).
+            Inter-city: 3 G-class bullet trains (Guangzhou → Chongqing; Shanghai → Zhangjiajie; Xi&apos;an → Beijing) and 2 domestic flights (Chongqing → Shanghai; Zhangjiajie → Xi&apos;an). Reverse-route start in Guangzhou suits long-haul carriers from Mumbai. Departure 9 Sep 8:30 AM from Beijing Daxing (PKX). Full leg-by-leg detail in the Transport section below.
           </p>
-          <div className="mt-3 rounded-md bg-amber-50 px-3 py-2 text-[11px] leading-relaxed text-stone-700">
-            <p className="font-semibold text-[#C23845]">Train-only alternative (avoids domestic baggage limits)</p>
-            <p className="mt-1">Both flight legs can be replaced with G-class trains: Guangzhou → Chongqing (~7 hrs) and Chongqing → Shanghai (~10 hrs). No 23 kg baggage cap, but each leg becomes a full transit day. <span className="font-semibold">Same package price either way</span> — group&apos;s choice on flights vs trains.</p>
-          </div>
         </motion.div>
 
         <motion.div
@@ -813,6 +864,69 @@ export default function ArunaChinaPosterPage() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.42 }}
+          className="overflow-hidden rounded-xl bg-[#C23845] p-4 shadow-md"
+        >
+          <div className="px-2 pb-5 pt-3 text-center">
+            <h2
+              className={`${dancingScript.className} text-6xl leading-none text-white`}
+            >
+              Transport
+            </h2>
+
+            <div className="mx-auto mt-4 flex max-w-[240px] items-center gap-3">
+              <div className="h-px flex-1 bg-white/40" />
+              <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-white/90">
+                3 trains · 2 flights
+              </p>
+              <div className="h-px flex-1 bg-white/40" />
+            </div>
+
+            <p className="mt-2 text-[13px] font-semibold tracking-wide text-white/85">
+              Booked legs · group seats arranged
+            </p>
+            <p className="mt-2 text-[10px] leading-snug text-white/70">
+              Trains preferred wherever practical to avoid the 23 kg domestic-flight baggage cap. Two legs kept as flights: Chongqing → Shanghai (the train is 10+ hrs) and Zhangjiajie → Xi&apos;an (no direct train — it would need a Chongqing or Wuhan transfer).
+            </p>
+          </div>
+
+          <div className="space-y-2">
+            {transports.map((leg) => (
+              <div
+                key={`${leg.date}-${leg.route}`}
+                className="space-y-1 rounded-md bg-white px-3 py-2.5 shadow-[0_2px_12px_rgba(0,0,0,0.08)]"
+              >
+                <div className="flex items-baseline justify-between gap-2">
+                  <p className="text-[14px] font-extrabold leading-tight text-[#912F34]">
+                    {leg.route}
+                  </p>
+                  <span
+                    className={`rounded-sm px-2 py-0.5 text-[10px] font-semibold ${
+                      leg.mode === "Flight"
+                        ? "bg-[#912F34] text-white"
+                        : "bg-[#912F34]/10 text-[#912F34]"
+                    }`}
+                  >
+                    {leg.mode}
+                  </span>
+                </div>
+                <p className="text-[11px] font-semibold text-[#1F1F1F]">
+                  {leg.number}
+                </p>
+                <p className="text-[11px] leading-snug text-[#4A4A4A]">
+                  {leg.date} · {leg.time}
+                </p>
+                <p className="text-[10px] font-normal leading-snug text-stone-400">
+                  {leg.pricePerPax}
+                </p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.45 }}
           className="space-y-3 bg-white px-4 py-4"
         >
@@ -826,10 +940,10 @@ export default function ArunaChinaPosterPage() {
             <ol className="space-y-0.5 text-[10px] leading-[1.35] text-[#333333]">
               <li>1. Hotels: 14 nights in 4★ accommodation across 6 cities (twin/double sharing) with daily breakfast.</li>
               <li>2. Restaurant arrangements: we book the right Indian / vegetarian restaurants in each city (no meat, no fish) and provide transfers — meal costs are settled by the group at the restaurant.</li>
-              <li>3. Inter-city transport: 2 domestic flights (Guangzhou → Chongqing; Chongqing → Shanghai) and 3 G-class bullet trains (Shanghai → Zhangjiajie; Zhangjiajie → Xi&apos;an; Xi&apos;an → Beijing).</li>
+              <li>3. Inter-city transport: 3 G-class bullet trains (Guangzhou → Chongqing; Shanghai → Zhangjiajie; Xi&apos;an → Beijing) and 2 domestic flights (FM9420 Chongqing → Shanghai; GS7662 Zhangjiajie → Xi&apos;an).</li>
               <li>4. Private air-conditioned coach throughout (sized for 18 pax to Shanghai, then upsized for 23 pax from Shanghai onwards — TBC).</li>
-              <li>5. English-speaking national escort throughout + local English-speaking guide in each city.</li>
-              <li>6. All airport, train station, hotel and dinner transfers (including pre-dawn 9 Sep transfer to PKX).</li>
+              <li>5. English-speaking national escort with the group every day end-to-end, including on the bullet trains, plus a local English-speaking guide in each city.</li>
+              <li>6. All airport, train station, hotel and dinner transfers (including the 4 AM coach to PKX on 9 Sep).</li>
               <li>7. Pre-booked entrance tickets to all listed attractions (Chongqing Zoo, Forbidden City, Temple of Heaven, Summer Palace, Yu Garden, Terracotta Warriors, Tianmen Mountain, Forest Park, Canton Tower).</li>
               <li>8. All cable cars, elevators, electric shuttles and boat rides as listed (Bailong glass elevator, Tianmen cable car both ways, Tianmen Glass Skywalk, Mutianyu cable car both ways, Pearl River cruise, Huangpu cruise, Summer Palace boat, Shanghai Tower observation deck, Canton Tower observation deck, City Wall electric cart, Hutong rickshaw with family courtyard visit).</li>
               <li>9. Tang Dynasty Show in Xi&apos;an (show only — separate Indian / vegetarian dinner pre-arranged).</li>
