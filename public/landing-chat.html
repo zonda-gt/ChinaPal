@@ -14,6 +14,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- hero LCP image (same as home page) — preload so it paints fast on mobile ad traffic -->
+<link rel="preload" as="image" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp" fetchpriority="high">
 <style>
   :root{
     --bg:oklch(0.985 0.005 80);--bg-warm:oklch(0.975 0.006 80);--surface:oklch(0.97 0.003 260);
@@ -49,16 +51,20 @@
     padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px)}
 
   /* ---------- HERO ---------- */
-  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#241a18,#2a1d1a 50%,#1a1413);
-    padding:118px 0 60px}
+  /* same hero image + darkening treatment as the home page (brightness ~0.45 + bottom fade) */
+  .hero{position:relative;overflow:hidden;padding:118px 0 60px;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,.50) 60%,rgba(26,20,19,.97) 100%),
+      linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+      url('https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp') center/cover no-repeat}
   .hero .glow{position:absolute;width:620px;height:620px;right:-160px;top:-180px;border-radius:50%;
     background:radial-gradient(circle,oklch(0.55 0.20 25 /.32),transparent 65%);filter:blur(18px)}
-  .hero svg.scape{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;opacity:.42}
+  .hero svg.scape{display:none}
   .hero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px}
   .hero h1{font-family:var(--display);color:#fff;font-size:clamp(36px,5.4vw,60px);line-height:1.06;
-    letter-spacing:-.01em;margin:20px 0 16px}
+    letter-spacing:-.01em;margin:20px 0 16px;text-shadow:0 2px 26px rgba(0,0,0,.55)}
   .hero h1 em{font-style:normal;color:var(--red-bright)}
-  .hero .sub{color:rgba(255,255,255,.8);font-size:clamp(16px,1.7vw,19px);max-width:560px;margin:0 auto 22px;line-height:1.55}
+  .hero .sub{color:rgba(255,255,255,.85);font-size:clamp(16px,1.7vw,19px);max-width:560px;margin:0 auto 22px;line-height:1.55;text-shadow:0 1px 14px rgba(0,0,0,.5)}
   .hero-trust{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:6px}
   .hero-trust span{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.66);font-size:13px;font-weight:500}
   .hero-trust svg{width:14px;height:14px;color:var(--red-bright)}
@@ -82,7 +88,7 @@
   /* keep items at full height so the body scrolls instead of flex-shrinking
      (otherwise the plan card gets squished and clips Day 2/3) */
   .chat-body>*{flex:0 0 auto}
-  .msg{max-width:86%;padding:12px 15px;font-size:14px;line-height:1.55;border-radius:18px;animation:pop .35s ease}
+  .msg{max-width:86%;padding:13px 16px;font-size:15px;line-height:1.55;border-radius:18px;animation:pop .35s ease}
   @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
   .msg.me{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:5px}
   .msg.ai{align-self:flex-start;background:#fff;color:var(--ink);border:1px solid var(--line);
@@ -125,18 +131,39 @@
   .handoff .cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
   .handoff .fine{display:block;margin-top:10px;font-size:12px;color:var(--faint)}
   .chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px;background:#fff;border-top:1px solid var(--line)}
-  .chip{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface);
-    border:1px solid var(--line);border-radius:999px;padding:9px 15px;cursor:pointer;transition:.16s}
+  .chip{font-family:var(--body);font-size:14px;font-weight:600;color:var(--ink);background:var(--surface);
+    border:1px solid var(--line);border-radius:999px;padding:11px 16px;cursor:pointer;transition:.16s}
   .chip:hover{border-color:var(--red);color:var(--red);background:var(--red-tint)}
   .chip.act{border-color:var(--red-line);color:var(--red);background:var(--red-tint)}
   .chip.act:hover{background:var(--red);color:#fff;border-color:var(--red)}
-  .chat-input{display:flex;align-items:center;gap:10px;padding:13px 16px;background:#fff;border-top:1px solid var(--line)}
-  .chat-input input{flex:1;border:0;background:#f1ede9;border-radius:999px;padding:11px 16px;font-family:var(--body);
-    font-size:13.5px;color:var(--ink);outline:none}
+  .chat-input{display:flex;align-items:center;gap:10px;padding:14px 16px;background:#fff;border-top:1px solid var(--line)}
+  /* 16px font is deliberate: anything smaller makes iOS Safari auto-zoom on focus */
+  .chat-input input{flex:1;border:0;background:#f1ede9;border-radius:999px;padding:14px 18px;font-family:var(--body);
+    font-size:16px;color:var(--ink);outline:none}
+  .chat-input input:focus{box-shadow:0 0 0 2px var(--red-line) inset}
   .chat-input input::placeholder{color:#a8a29e}
-  .chat-input .send{width:34px;height:34px;border:0;border-radius:50%;background:var(--red);cursor:pointer;
-    display:flex;align-items:center;justify-content:center;flex:none}
+  .chat-input .send{width:44px;height:44px;border:0;border-radius:50%;background:var(--red);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;flex:none;transition:.16s}
+  .chat-input .send:hover{filter:brightness(1.08)}
+  .chat-input .send:active{transform:scale(.94)}
   .demo-cap{text-align:center;color:rgba(255,255,255,.55);font-size:13px;margin-top:14px}
+  /* mobile (most ad traffic): tighten the hero so the chat sits near the fold */
+  @media(max-width:600px){
+    .hero{padding:86px 0 26px}
+    .hero h1{font-size:clamp(30px,8.4vw,40px);margin:14px 0 11px;text-shadow:0 2px 18px rgba(0,0,0,.6)}
+    .hero .sub{font-size:15px;margin-bottom:15px}
+    .hero-trust{gap:6px 14px}
+    .hero-trust span{font-size:12px}
+    /* full-bleed chat: stretch the whole width, drop the boxed-widget chrome
+       so it reads like a real product surface, not a demo card */
+    .demo-shell{margin-top:18px;padding:0}
+    .chat{border-radius:18px 18px 0 0;border-left:0;border-right:0}
+    .chat-body{min-height:320px;max-height:min(76vh,640px);padding:18px 16px}
+    .chat-input{padding:14px 16px calc(14px + env(safe-area-inset-bottom))}
+    .demo-cap{padding:14px 24px 0;margin-top:0}
+    /* pricing stays a floating card on mobile — side gutter so it doesn't jam the edges */
+    .pbox{margin:0 16px;padding:30px 22px 26px;border-radius:16px}
+  }
 
   /* ---------- compressed story strip (dream, above the moat) ---------- */
   .story{background:#1a1413;padding:84px 0 90px}
@@ -165,8 +192,10 @@
   .cpbub p{color:#fff;font-size:12px;line-height:1.5}
   @media(max-width:920px){.beats{grid-template-columns:repeat(2,1fr);max-width:640px}
     .beats .bcard:last-child{grid-column:1/-1;min-height:340px}}
-  @media(max-width:520px){.beats{grid-template-columns:1fr;max-width:380px}
-    .beats .bcard:last-child{min-height:440px}}
+  /* phones: single stacked column, full-height cards — every moment seen on a natural scroll */
+  @media(max-width:560px){
+    .beats{grid-template-columns:1fr;max-width:400px;gap:12px}
+    .beats .bcard:last-child{grid-column:auto;min-height:440px}}
 
   /* ---------- generic section ---------- */
   .pad{padding:88px 0}
@@ -206,20 +235,28 @@
   .frz .cap .d{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
   @media(max-width:880px){.frz-grid{grid-template-columns:1fr;max-width:400px;margin:14px auto 0}}
 
-  /* ---------- pricing ---------- */
+  /* ---------- pricing — matches the ChinaPal Pass card on the home & product pages ---------- */
   .price-sec{background:var(--bg-warm)}
-  .pbox{max-width:540px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);
-    border-radius:24px;padding:46px 38px;box-shadow:0 20px 50px -28px rgba(0,0,0,.18)}
-  .pbox .amt{font-family:var(--display);font-size:60px;line-height:1;color:var(--ink)}
-  .pbox .amt small{font-size:19px;color:var(--muted);font-weight:400;font-family:var(--body)}
-  .pbox .rf{color:var(--red);font-weight:700;font-size:15px;margin-top:8px}
-  .pbox .note{color:var(--muted);font-size:14px;margin-top:6px}
-  .plist{list-style:none;margin:24px 0 28px;display:inline-block;text-align:left}
-  .plist li{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:var(--ink);padding:7px 0;line-height:1.45}
-  .plist svg{width:17px;height:17px;color:var(--red);flex:none;margin-top:2px}
-  .guar{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin-top:20px}
-  .guar span{font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
-  .guar svg{width:14px;height:14px;color:var(--red)}
+  .pbox{position:relative;display:flex;flex-direction:column;max-width:520px;margin:0 auto;text-align:left;
+    background:var(--red);border:1px solid var(--red);border-radius:18px;padding:34px 32px 30px;
+    box-shadow:0 12px 40px -10px rgba(220,38,38,.38)}
+  .ptag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#fff;
+    color:var(--red);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+  .pname{font-family:var(--display);font-weight:700;font-size:22px;color:#fff;margin-bottom:2px}
+  .punit{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:16px}
+  .pamt{display:flex;align-items:baseline;gap:8px;font-family:var(--display);font-weight:700;
+    font-size:clamp(42px,11vw,52px);line-height:1;color:#fff;margin-bottom:16px}
+  .pamt small{font-size:17px;font-weight:400;color:rgba(255,255,255,.7);font-family:var(--body)}
+  .pblurb{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin-bottom:20px}
+  .plist{list-style:none;margin:0 0 20px;display:block;text-align:left;flex:1}
+  .plist li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.92);padding:6px 0;line-height:1.45}
+  .plist svg{width:17px;height:17px;color:#fff;flex:none;margin-top:2px}
+  .pnote{font-size:12.5px;font-style:italic;color:rgba(255,255,255,.6);margin-bottom:18px}
+  .pbuy{display:block;width:100%;text-align:center;background:#fff;color:var(--red);font-weight:700;
+    font-size:15px;padding:15px 22px;border-radius:999px;transition:.18s;cursor:pointer}
+  .pbuy:hover{transform:scale(1.02);filter:brightness(.97)}
+  .pbuy:active{transform:scale(.98)}
 
   /* ---------- FAQ ---------- */
   .faq{max-width:680px;margin:30px auto 0}
@@ -309,11 +346,11 @@
       </div>
     </div>
     <div class="bcard">
-      <div class="bshot" style="--img:url('/places/card-hongya-cave.jpg')"></div>
+      <div class="bshot" style="--img:url('/places/guanyinge-teahouse.jpg')"></div>
       <span class="nm">02</span>
       <div class="binner">
-        <div class="youbub">Is Hongya Cave worth it, or a tourist trap?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Not 7pm with the crowds — go at 9:30. Come in from the top on Cangbai Rd and take the elevator down. Half the people, all the lights.</p></div>
+        <div class="youbub">Where do locals actually drink tea — not a tourist spot?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Old Guanyinge teahouse — bamboo chairs, a few yuan a cup, ear-cleaners working the room. Go mid-morning, sit by the window, stay an hour. No one rushes you.</p></div>
       </div>
     </div>
     <div class="bcard">
@@ -343,96 +380,29 @@
   </div>
 </section>
 
-<!-- ============ THE MOAT — why a human, when AI is free ============ -->
-<section class="moat pad" id="why">
-  <div class="narrow center rv">
-    <span class="eyebrow">The honest part</span>
-    <h2 class="sec">Anyone can get the plan. We're the part that's there.</h2>
-    <p class="lead">The plan is free here — and free everywhere. What you can't get from any chatbot is someone in China while you're in it.</p>
-  </div>
-  <div class="split rv">
-    <div class="col">
-      <div class="k">Free · AI (here or anywhere)</div>
-      <h3>The plan.</h3>
-      <ul>
-        <li>A solid 3-day route</li>
-        <li>Things to do, in good order</li>
-        <li>General food &amp; area ideas</li>
-        <li>Answers to typed questions</li>
-      </ul>
-    </div>
-    <div class="col hl">
-      <div class="k">$39 · a real local, your whole trip</div>
-      <h3>Someone who acts on it.</h3>
-      <ul>
-        <li>Reserves the place with no English line — in Chinese</li>
-        <li>Reads your menu photo at the table and says what to order</li>
-        <li>Briefs your taxi driver so you actually arrive</li>
-        <li>Rebuilds the day when it rains, while it's raining</li>
-        <li>Answers at 9pm when you're lost at the wrong metro exit</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ FROZEN REAL EXCHANGES (show, don't tell) ============ -->
-<section class="pad center">
-  <div class="narrow rv">
-    <span class="eyebrow">Not a claim — a look</span>
-    <h2 class="sec">This is the part you're paying for.</h2>
-    <p class="lead">No waiting on this page. This is what it looks like on the trip, frozen in place.</p>
-  </div>
-  <!-- SWAP these three for screenshots of your real exchanges. Specificity is the pitch. -->
-  <div class="frz-grid wrap rv" style="padding:0">
-    <div class="frz">
-      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
-      <div class="b">
-        <div class="bb me">At a hotpot place — menu's only in Chinese, waiter's waiting 😅 📷</div>
-        <div class="bb ai">Order these 4: clear+spicy split broth, beef short rib, hand-pulled noodle, tofu skin. Skip the "premium" set — tourist upsell. Enjoy!</div>
-      </div>
-      <div class="cap"><div class="t">Live, at the table</div><div class="d">A bot can't read your photo at 8pm. We do.</div></div>
-    </div>
-    <div class="frz">
-      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
-      <div class="b">
-        <div class="bb me">Rain wrecked our Saturday plan 😩</div>
-        <div class="bb ai">Skip the lake walk. Tea house in the hills 15 min away — locals go when it rains, misty view's better. Didi sorted, driver briefed. Order the Longjing 🍵</div>
-      </div>
-      <div class="cap"><div class="t">Fixed, in the moment</div><div class="d">Re-planned while it was actually happening.</div></div>
-    </div>
-    <div class="frz">
-      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
-      <div class="b">
-        <div class="bb me">Driver has no idea where we're going 🚖</div>
-        <div class="bb ai">Show him this: 师傅您好，请走南京西路到静安寺，到地铁站口停就行，谢谢。 You're 6 min away.</div>
-      </div>
-      <div class="cap"><div class="t">In Chinese, instantly</div><div class="d">The thing Google Translate fumbles, handled.</div></div>
-    </div>
-  </div>
-</section>
-
 <!-- ============ PRICING ============ -->
 <section class="price-sec pad" id="price">
   <div class="narrow center rv">
     <span class="eyebrow">One flat fee · your whole trip</span>
     <h2 class="sec">Less than one taxi from the airport.</h2>
+    <p class="lead">The plan's free — here and everywhere. The $39 is for the one thing no app can do: a real local in China while you're in it, your whole trip.</p>
   </div>
-  <div class="pbox rv" style="margin-top:34px">
-    <div class="amt">$39<small> / trip</small></div>
-    <div class="rf">One avoided tourist-trap dinner already pays for it.</div>
-    <div class="note">Not per day. Not per question. The whole trip.</div>
+  <div class="pbox rv" style="margin-top:40px">
+    <span class="ptag">Most popular</span>
+    <div class="pname">ChinaPal Pass</div>
+    <div class="punit">A real local, your whole trip in China</div>
+    <div class="pamt">$39<small>/ trip</small></div>
+    <p class="pblurb">One avoided tourist-trap dinner already pays for it. Not per day, not per question — the whole trip.</p>
     <ul class="plist">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A real local on call, unlimited, your entire trip</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We reserve the hard places — in Chinese, for you</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Menu photos, signs, driver messages — translated live</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plans rebuilt on the ground when things change</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We earn nothing on your bookings — zero reason to upsell</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A real local on call, unlimited — your entire trip</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reserves the place with no English line — in Chinese, for you</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reads your menu photo at the table and tells you what to order</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Briefs your taxi driver in Chinese so you actually arrive</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rebuilds the day when it rains — while it's raining</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Earns nothing on your bookings — so we never upsell you</li>
     </ul>
-    <div><a href="/checkout?plan=chinapal-pass" class="btn btn-primary" id="buy" style="padding:16px 38px">Get a local for the whole trip — $39</a></div>
-    <div class="guar">
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Money-back if it didn't help</span>
-      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>First question free</span>
-    </div>
+    <p class="pnote">Money-back if it didn't help · first question free.</p>
+    <a href="/checkout?plan=chinapal-pass" class="pbuy" id="buy">Get a local for the whole trip — $39</a>
   </div>
 </section>
 
