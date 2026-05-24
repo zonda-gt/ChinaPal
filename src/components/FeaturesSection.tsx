@@ -5,28 +5,28 @@
    Single section-level IntersectionObserver — no per-card observers to avoid layout thrashing */
 
 import { useEffect, useRef, useState } from "react";
-import { Ticket, Train, Map, AlertCircle } from "lucide-react";
+import { ClipboardCheck, Utensils, Ticket, MessageCircle } from "lucide-react";
 
 const features = [
   {
+    icon: ClipboardCheck,
+    title: "Itinerary Review",
+    desc: "Send us your draft plan. We'll tell you what to skip, what to add, and how to make the day-by-day actually flow.",
+  },
+  {
+    icon: Utensils,
+    title: "Local Recommendations",
+    desc: "Restaurants, cafes, neighborhoods, day trips. Local judgment instead of tourist-trap top-10 lists.",
+  },
+  {
     icon: Ticket,
-    title: "Attraction Tickets",
-    desc: "Right gate, right time, right combo. We navigate Klook, Mafengwo, and official sites so you don't have to.",
+    title: "Ticket Guidance",
+    desc: "Which Trip.com option, which Klook ticket, which gate. You book on the platforms you trust — we tell you which one to pick.",
   },
   {
-    icon: Train,
-    title: "Train Booking",
-    desc: "We pick the best train, book the seats together, and send you the e-tickets. 12306 is our problem, not yours.",
-  },
-  {
-    icon: Map,
-    title: "Full Trip Planning",
-    desc: "Tell us your cities and dates. We build the itinerary, sequence the trains, and flag what to skip.",
-  },
-  {
-    icon: AlertCircle,
-    title: "Day-of Support",
-    desc: "Train cancelled? Entrance closed? We're on it — rebooked and a Chinese screenshot in your hand in minutes.",
+    icon: MessageCircle,
+    title: "Text a Local",
+    desc: "Translate a menu, decode a sign, ask \"what should we do next?\" — real humans on app chat or WhatsApp.",
   },
 ];
 
@@ -57,13 +57,13 @@ export default function FeaturesSection() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold uppercase tracking-widest mb-6 border"
             style={{ backgroundColor: "oklch(0.92 0.05 25)", color: "oklch(0.48 0.22 25)", borderColor: "oklch(0.85 0.08 25)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-            What we handle
+            How we help
           </div>
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4" style={{ color: "oklch(0.18 0.01 260)" }}>
-            We handle the hard parts.
+            Local judgment. By text.
           </h2>
           <p className="text-lg max-w-xl mx-auto" style={{ color: "oklch(0.52 0.01 260)", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-            Every booking that takes you an hour of confusion takes us one message. Here's what's included.
+            Book on platforms you trust. Use ChinaPal to plan smarter, choose better, and text a local when you need help.
           </p>
         </div>
 

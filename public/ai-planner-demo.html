@@ -1,0 +1,1409 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#FAF7F2" />
+<title>ChinaPal · AI Trip Planner Demo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  /* ==========================================================
+     ChinaPal — AI Planner Demo
+     Design tokens mirrored from /src/app/globals.css + HomePage
+     ========================================================== */
+  :root{
+    --cream: oklch(0.985 0.005 80);
+    --paper: #ffffff;
+    --ink: oklch(0.18 0.01 260);
+    --ink-2: oklch(0.30 0.01 260);
+    --muted: oklch(0.52 0.01 260);
+    --muted-2: oklch(0.62 0.01 260);
+    --line: #E7E5E4;
+    --line-2: #F1EFEC;
+    --soft: oklch(0.97 0.003 260);
+    --brand: oklch(0.48 0.22 25);
+    --brand-strong: oklch(0.42 0.22 25);
+    --brand-tint: oklch(0.97 0.02 25);
+    --brand-border: oklch(0.88 0.06 25);
+    --brand-ink: oklch(0.36 0.18 25);
+    --green: #1A7A4A;
+    --green-bg: #EAF7F0;
+    --amber: #B45309;
+    --amber-bg: #FEF3C7;
+    --shadow-sm: 0 1px 2px rgba(20,14,10,.04), 0 1px 3px rgba(20,14,10,.05);
+    --shadow-md: 0 4px 14px rgba(20,14,10,.06), 0 2px 4px rgba(20,14,10,.04);
+    --shadow-lg: 0 12px 36px rgba(20,14,10,.10), 0 4px 12px rgba(20,14,10,.06);
+    --radius: 14px;
+    --radius-lg: 20px;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:'Plus Jakarta Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    font-size:15px;
+    overflow-x:hidden;
+  }
+  .display{font-family:'Fraunces','DM Serif Display',Georgia,serif;letter-spacing:-.01em}
+  .ital{font-style:italic;font-weight:600;color:var(--brand)}
+  img{max-width:100%;display:block}
+  button{font-family:inherit;cursor:pointer}
+  ::-webkit-scrollbar{width:6px;height:6px}
+  ::-webkit-scrollbar-thumb{background:#cdc8c0;border-radius:3px}
+  ::-webkit-scrollbar-track{background:transparent}
+
+  /* ───── Top app bar ───── */
+  .appbar{
+    position:sticky;top:0;z-index:30;
+    background:rgba(250,247,242,.88);
+    backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--line);
+  }
+  .appbar-inner{
+    max-width:1200px;margin:0 auto;padding:12px 18px;
+    display:flex;align-items:center;justify-content:space-between;gap:12px;
+  }
+  .logo{font-weight:800;font-size:18px;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+  .logo span{color:var(--brand)}
+  .progress-wrap{flex:1;max-width:420px;display:flex;align-items:center;gap:10px}
+  .progress-track{flex:1;height:4px;background:#EFEAE2;border-radius:99px;overflow:hidden}
+  .progress-fill{height:100%;background:var(--brand);width:0;transition:width .5s cubic-bezier(.4,0,.2,1)}
+  .progress-label{font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .appbar-back{
+    border:1px solid var(--line);background:#fff;border-radius:99px;
+    padding:7px 12px;font-size:13px;color:var(--ink-2);font-weight:500;
+    display:inline-flex;align-items:center;gap:5px;
+    transition:border-color .15s,color .15s;
+  }
+  .appbar-back:hover{border-color:var(--brand);color:var(--brand)}
+  .appbar-back[hidden]{display:none}
+
+  /* ───── Stage layout ───── */
+  .stage{display:none;animation:fade-up .5s cubic-bezier(.2,.7,.2,1) both}
+  .stage.active{display:block}
+  @keyframes fade-up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes pop-in{from{opacity:0;transform:scale(.96)}to{opacity:1;transform:scale(1)}}
+  @keyframes pulse-soft{0%,100%{transform:scale(1)}50%{transform:scale(1.02)}}
+  .container{max-width:680px;margin:0 auto;padding:24px 20px 96px}
+  .container-wide{max-width:1080px;margin:0 auto;padding:24px 20px 96px}
+  .eyebrow{font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;color:var(--brand);margin-bottom:14px}
+  .h1{font-family:'Fraunces',serif;font-size:40px;line-height:1.05;font-weight:700;letter-spacing:-.02em;margin:0 0 14px}
+  .h2{font-family:'Fraunces',serif;font-size:28px;line-height:1.15;font-weight:700;margin:0 0 8px}
+  .h3{font-family:'Fraunces',serif;font-size:22px;line-height:1.2;font-weight:600;margin:0 0 6px}
+  .lede{color:var(--muted);font-size:16px;margin:0 0 28px;max-width:540px}
+  .small{font-size:13px;color:var(--muted)}
+  .micro{font-size:11px;color:var(--muted-2);letter-spacing:.04em;font-weight:600;text-transform:uppercase}
+
+  /* ───── Buttons ───── */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:7px;
+    font-weight:600;font-size:15px;border-radius:999px;
+    padding:14px 28px;border:none;text-decoration:none;
+    transition:transform .15s,box-shadow .15s,background-color .15s,border-color .15s,color .15s;
+    white-space:nowrap;
+  }
+  .btn-primary{background:var(--brand);color:#fff;box-shadow:0 1px 2px rgba(168,0,22,.25),0 6px 18px rgba(168,0,22,.18)}
+  .btn-primary:hover{background:var(--brand-strong);transform:translateY(-1px);box-shadow:0 2px 4px rgba(168,0,22,.3),0 10px 24px rgba(168,0,22,.22)}
+  .btn-primary:active{transform:translateY(0)}
+  .btn-primary[disabled]{opacity:.4;pointer-events:none}
+  .btn-ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line);padding:13px 22px}
+  .btn-ghost:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+  .btn-text{background:transparent;color:var(--brand);font-weight:600;font-size:14px;padding:10px 14px}
+  .btn-text:hover{text-decoration:underline}
+  .btn-block{width:100%}
+
+  /* ───── Selection cards ───── */
+  .card-grid{display:grid;gap:12px}
+  .card-grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+  @media (max-width:560px){.card-grid.cols-3{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  .opt-card{
+    position:relative;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+    padding:18px 16px;text-align:left;transition:all .18s cubic-bezier(.2,.7,.2,1);
+    cursor:pointer;font-family:inherit;color:inherit;
+  }
+  .opt-card:hover{border-color:#cfc9c0;box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+  .opt-card.selected{
+    border-color:var(--brand);background:var(--brand-tint);
+    box-shadow:0 0 0 4px rgba(168,0,22,.08);
+  }
+  .opt-card.selected .opt-check{opacity:1;transform:scale(1)}
+  .opt-check{
+    position:absolute;top:12px;right:12px;width:22px;height:22px;border-radius:99px;
+    background:var(--brand);color:#fff;display:flex;align-items:center;justify-content:center;
+    font-size:13px;font-weight:700;opacity:0;transform:scale(.7);
+    transition:all .18s cubic-bezier(.34,1.56,.64,1);
+  }
+  .opt-card .opt-emoji{font-size:24px;display:block;margin-bottom:8px;line-height:1}
+  .opt-card .opt-title{font-weight:700;font-size:15px;color:var(--ink);margin-bottom:3px}
+  .opt-card .opt-sub{font-size:12.5px;color:var(--muted);line-height:1.4}
+  .opt-card.image{padding:0;overflow:hidden}
+  .opt-card.image .img-wrap{position:relative;height:120px;background:var(--soft);overflow:hidden}
+  .opt-card.image .img-wrap img{width:100%;height:100%;object-fit:cover}
+  .opt-card.image .opt-body{padding:12px 14px}
+  .opt-card.image.selected .img-wrap::after{
+    content:"";position:absolute;inset:0;background:rgba(168,0,22,.18);mix-blend-mode:multiply;
+  }
+
+  /* ───── Pills / chips ───── */
+  .chip{
+    display:inline-flex;align-items:center;gap:5px;
+    padding:5px 11px;border-radius:99px;font-size:11.5px;font-weight:600;
+    background:var(--soft);color:var(--ink-2);border:1px solid var(--line);
+  }
+  .chip-brand{background:var(--brand-tint);color:var(--brand-ink);border-color:var(--brand-border)}
+  .chip-green{background:var(--green-bg);color:var(--green);border-color:#C6E9D4}
+  .chip-amber{background:var(--amber-bg);color:var(--amber);border-color:#FBE0A1}
+
+  /* ───── Stage 0: Hook ───── */
+  .hook{
+    min-height:calc(100vh - 64px);
+    display:flex;align-items:center;justify-content:center;padding:36px 20px;
+    background:radial-gradient(60% 60% at 50% 0%, rgba(168,0,22,.07), transparent 70%), var(--cream);
+  }
+  .hook-inner{max-width:560px;text-align:center}
+  .hook-h{font-family:'Fraunces',serif;font-size:48px;line-height:1.02;font-weight:700;letter-spacing:-.025em;margin:0 0 18px}
+  .hook-l{font-size:17px;color:var(--muted);margin:0 0 28px;line-height:1.5}
+  .hook-bullets{
+    display:flex;justify-content:center;gap:22px;flex-wrap:wrap;
+    margin-top:30px;color:var(--muted);font-size:13px;
+  }
+  .hook-bullets div{display:inline-flex;align-items:center;gap:6px}
+  .hook-bullets span.dot{width:6px;height:6px;border-radius:99px;background:var(--brand)}
+  .hook-time{
+    display:inline-flex;align-items:center;gap:8px;
+    background:#fff;border:1px solid var(--line);border-radius:99px;
+    padding:7px 14px;font-size:12.5px;color:var(--muted);font-weight:600;margin-bottom:24px;
+    box-shadow:var(--shadow-sm);
+  }
+  @media (max-width:560px){
+    .hook-h{font-size:36px}
+    .hook-l{font-size:15px}
+  }
+
+  /* ───── Stage 2: Skeleton ───── */
+  .skeleton-list{display:flex;flex-direction:column;gap:10px;margin-bottom:28px}
+  .sk-row{
+    background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;display:flex;align-items:center;gap:14px;transition:border-color .15s,box-shadow .15s;
+  }
+  .sk-row:hover{border-color:#cfc9c0;box-shadow:var(--shadow-sm)}
+  .sk-day{
+    flex-shrink:0;width:46px;height:46px;border-radius:12px;background:var(--brand-tint);
+    color:var(--brand-ink);display:flex;flex-direction:column;align-items:center;justify-content:center;
+    border:1px solid var(--brand-border);
+  }
+  .sk-day b{font-family:'Fraunces',serif;font-size:18px;line-height:1;font-weight:700}
+  .sk-day em{font-style:normal;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:700}
+  .sk-text{flex:1;min-width:0}
+  .sk-text input{
+    width:100%;border:none;background:transparent;font:inherit;font-weight:600;font-size:15px;
+    color:var(--ink);padding:0;outline:none;
+  }
+  .sk-text input:focus{outline:none}
+  .sk-text input:focus + .sk-edit{color:var(--brand)}
+  .sk-text small{font-size:12.5px;color:var(--muted);display:block;margin-top:1px}
+  .sk-edit{color:var(--muted-2);font-size:13px;flex-shrink:0}
+
+  /* ───── Stage 3: Day timeline ───── */
+  .trip-header{
+    background:linear-gradient(135deg, #1c1410 0%, #3a1a17 100%);
+    color:#fff;border-radius:var(--radius-lg);padding:28px 24px;margin-bottom:24px;
+    position:relative;overflow:hidden;
+  }
+  .trip-header::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 100% 0%, rgba(255,210,180,.18), transparent 50%);
+    pointer-events:none;
+  }
+  .trip-header .h1{color:#fff;font-size:32px;margin-bottom:6px}
+  .trip-header .h1 .ital{color:#FFB199}
+  .trip-header .meta{display:flex;flex-wrap:wrap;gap:14px;margin-top:14px;font-size:13.5px;color:rgba(255,255,255,.78)}
+  .trip-header .meta div{display:inline-flex;align-items:center;gap:6px}
+
+  .day-tabs{
+    display:flex;gap:8px;overflow-x:auto;padding:6px 0 14px;margin:0 -20px 18px;
+    padding-left:20px;padding-right:20px;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+  }
+  .day-tabs::-webkit-scrollbar{display:none}
+  .day-tab{
+    flex-shrink:0;padding:10px 16px;border-radius:99px;
+    background:#fff;border:1.5px solid var(--line);font:inherit;font-weight:600;font-size:13.5px;
+    color:var(--ink-2);transition:all .15s;display:flex;flex-direction:column;align-items:flex-start;gap:1px;
+    min-width:96px;text-align:left;
+  }
+  .day-tab:hover{border-color:#cfc9c0}
+  .day-tab.active{background:var(--ink);border-color:var(--ink);color:#fff}
+  .day-tab small{font-size:10.5px;font-weight:700;letter-spacing:.08em;opacity:.7;text-transform:uppercase}
+  .day-tab b{font-size:13px;font-weight:700}
+  .day-tab.active small{opacity:.65}
+
+  .day-summary{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    padding:16px 18px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+    margin-bottom:18px;
+  }
+  .day-summary .day-label{
+    font-family:'Fraunces',serif;font-size:20px;font-weight:700;
+  }
+  .day-summary .meta{display:flex;gap:14px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+
+  .timeline{display:flex;flex-direction:column;gap:14px}
+  .ti{
+    background:#fff;border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;animation:fade-up .55s cubic-bezier(.2,.7,.2,1) both;
+  }
+  .ti.streaming{opacity:0;transform:translateY(20px)}
+  .ti.show{opacity:1;transform:translateY(0);transition:opacity .55s,transform .55s}
+  .ti-img{position:relative;height:168px;background:var(--soft)}
+  .ti-img img{width:100%;height:100%;object-fit:cover}
+  .ti-img .ti-time{
+    position:absolute;top:12px;left:12px;
+    background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+    padding:5px 11px;border-radius:99px;font-size:11.5px;font-weight:700;
+    color:var(--ink);letter-spacing:.04em;text-transform:uppercase;
+  }
+  .ti-img .ti-cat{
+    position:absolute;top:12px;right:12px;
+    background:rgba(0,0,0,.55);color:#fff;backdrop-filter:blur(6px);
+    padding:5px 11px;border-radius:99px;font-size:11px;font-weight:600;
+  }
+  .ti-body{padding:18px}
+  .ti-title{font-family:'Fraunces',serif;font-size:20px;font-weight:700;margin:0 0 4px}
+  .ti-sub{font-size:13px;color:var(--muted);margin-bottom:10px}
+  .ti-desc{font-size:14px;color:var(--ink-2);line-height:1.55;margin-bottom:12px}
+  .ti-why{
+    background:var(--brand-tint);border:1px solid var(--brand-border);
+    border-radius:10px;padding:10px 12px;font-size:13px;color:var(--brand-ink);
+    display:flex;gap:9px;align-items:flex-start;margin-bottom:14px;
+  }
+  .ti-why b{font-weight:700;color:var(--brand)}
+  .ti-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+  .ti-actions{display:flex;gap:8px;flex-wrap:wrap;border-top:1px solid var(--line-2);padding-top:14px;margin-top:4px}
+  .ti-act{
+    background:transparent;border:1px solid var(--line);border-radius:99px;
+    padding:7px 14px;font-size:12.5px;font-weight:600;color:var(--ink-2);
+    display:inline-flex;align-items:center;gap:5px;transition:all .15s;
+  }
+  .ti-act:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+  .ti-act.swap{border-color:var(--brand-border);color:var(--brand);background:var(--brand-tint)}
+  .ti-act.swap:hover{background:var(--brand);color:#fff}
+
+  .transit{
+    display:flex;align-items:center;gap:10px;padding:6px 16px;color:var(--muted);font-size:12.5px;
+  }
+  .transit::before,.transit::after{content:"";flex:1;height:1px;background:var(--line)}
+  .transit b{font-weight:600;color:var(--ink-2)}
+
+  /* ───── Stage 3: Refinement chat ───── */
+  .chat-fab{
+    position:fixed;bottom:20px;right:20px;z-index:40;
+    background:var(--ink);color:#fff;border:none;border-radius:99px;
+    padding:14px 22px;font:inherit;font-weight:600;font-size:14px;
+    box-shadow:var(--shadow-lg);display:inline-flex;align-items:center;gap:8px;
+    transition:transform .15s,background-color .15s;
+  }
+  .chat-fab:hover{background:#000;transform:translateY(-2px)}
+  .chat-fab .fab-dot{width:6px;height:6px;border-radius:99px;background:#FFB199;animation:pulse-soft 1.6s ease infinite}
+
+  .chat-panel{
+    position:fixed;inset:auto 0 0 0;z-index:50;
+    background:#fff;border-top-left-radius:24px;border-top-right-radius:24px;
+    box-shadow:0 -20px 60px rgba(0,0,0,.18);
+    transform:translateY(100%);transition:transform .35s cubic-bezier(.2,.7,.2,1);
+    max-height:78vh;display:flex;flex-direction:column;
+  }
+  .chat-panel.open{transform:translateY(0)}
+  .chat-head{
+    padding:14px 18px;border-bottom:1px solid var(--line);
+    display:flex;align-items:center;gap:12px;flex-shrink:0;
+  }
+  .chat-head .grip{position:absolute;top:8px;left:50%;transform:translateX(-50%);width:36px;height:4px;border-radius:99px;background:#dad6cf}
+  .chat-head .av{
+    width:36px;height:36px;border-radius:99px;background:linear-gradient(135deg,#A80016,#5b1a1a);
+    color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;font-weight:700;font-size:16px;
+  }
+  .chat-head .who b{font-size:14px;display:block}
+  .chat-head .who small{font-size:11.5px;color:var(--muted)}
+  .chat-head .x{margin-left:auto;background:transparent;border:none;font-size:22px;color:var(--muted);cursor:pointer;padding:4px 10px;line-height:1}
+  .chat-body{
+    flex:1;overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:10px;
+    background:linear-gradient(180deg,#fff,var(--cream));
+  }
+  .msg{max-width:84%;padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.5;animation:fade-up .35s ease both}
+  .msg-bot{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:6px}
+  .msg-me{align-self:flex-end;background:var(--brand);color:#fff;border-bottom-right-radius:6px}
+  .msg-suggest{
+    align-self:flex-start;display:flex;flex-wrap:wrap;gap:6px;margin-top:-4px;margin-bottom:6px;
+  }
+  .msg-suggest button{
+    background:#fff;border:1px solid var(--line);border-radius:99px;font:inherit;font-size:12.5px;
+    padding:7px 12px;color:var(--ink-2);cursor:pointer;transition:all .15s;
+  }
+  .msg-suggest button:hover{border-color:var(--brand);color:var(--brand);background:var(--brand-tint)}
+  .typing{align-self:flex-start;display:flex;gap:3px;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:18px;border-bottom-left-radius:6px}
+  .typing span{width:6px;height:6px;border-radius:99px;background:#bdb6ad;animation:typing-dot 1.2s infinite}
+  .typing span:nth-child(2){animation-delay:.18s}
+  .typing span:nth-child(3){animation-delay:.36s}
+  @keyframes typing-dot{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+  .chat-input{
+    border-top:1px solid var(--line);padding:12px 16px;display:flex;gap:8px;align-items:center;flex-shrink:0;
+    padding-bottom:max(12px, env(safe-area-inset-bottom));background:#fff;
+  }
+  .chat-input input{
+    flex:1;border:1px solid var(--line);border-radius:99px;padding:11px 16px;font:inherit;font-size:14px;background:var(--soft);
+    outline:none;transition:border-color .15s,background .15s;
+  }
+  .chat-input input:focus{border-color:var(--brand);background:#fff}
+  .chat-input button{
+    background:var(--brand);color:#fff;border:none;border-radius:99px;padding:11px 18px;font:inherit;font-weight:600;font-size:14px;
+  }
+  .chat-input button:disabled{opacity:.4}
+
+  /* Swap modal */
+  .modal-veil{position:fixed;inset:0;z-index:60;background:rgba(20,14,10,.4);backdrop-filter:blur(4px);display:none;animation:fade-up .25s ease both;align-items:flex-end;justify-content:center}
+  .modal-veil.open{display:flex}
+  .modal{background:#fff;width:100%;max-width:560px;border-top-left-radius:24px;border-top-right-radius:24px;padding:22px 20px 28px;animation:fade-up .35s cubic-bezier(.2,.7,.2,1) both}
+  @media (min-width:640px){.modal-veil{align-items:center}.modal{border-radius:20px}}
+  .modal h3{font-family:'Fraunces',serif;font-size:22px;margin:0 0 4px}
+  .modal p{font-size:13px;color:var(--muted);margin:0 0 16px}
+  .alt-card{
+    display:flex;gap:12px;background:#fff;border:1.5px solid var(--line);border-radius:var(--radius);padding:12px;margin-bottom:10px;
+    cursor:pointer;transition:all .15s;
+  }
+  .alt-card:hover{border-color:var(--brand);background:var(--brand-tint)}
+  .alt-card img{width:84px;height:84px;border-radius:10px;object-fit:cover;flex-shrink:0}
+  .alt-card .alt-body{flex:1;min-width:0}
+  .alt-card b{font-family:'Fraunces',serif;font-weight:700;font-size:15px;display:block;margin-bottom:2px}
+  .alt-card .alt-meta{font-size:12px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-top:5px}
+
+  /* ───── Stage 5: Booking ───── */
+  .booking-grid{display:grid;grid-template-columns:1fr;gap:16px}
+  @media (min-width:780px){.booking-grid{grid-template-columns:2fr 1fr}}
+  .form-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .form-card + .form-card{margin-top:14px}
+  .form-card h3{font-family:'Fraunces',serif;font-size:18px;margin:0 0 4px}
+  .form-card p.help{font-size:12.5px;color:var(--muted);margin:0 0 16px}
+  .field{margin-bottom:12px}
+  .field label{display:block;font-size:12px;font-weight:600;color:var(--muted);margin-bottom:5px;letter-spacing:.02em;text-transform:uppercase}
+  .field input,.field select{
+    width:100%;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:14px;background:#fff;
+    transition:border-color .15s;
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--brand)}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .summary-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:18px;position:sticky;top:88px}
+  .summary-card h4{font-family:'Fraunces',serif;font-size:17px;margin:0 0 12px}
+  .summary-line{display:flex;justify-content:space-between;font-size:13.5px;padding:8px 0;border-bottom:1px dashed var(--line)}
+  .summary-line:last-of-type{border-bottom:none}
+  .summary-total{display:flex;justify-content:space-between;font-weight:700;font-size:15px;padding-top:12px;margin-top:6px;border-top:1.5px solid var(--ink)}
+  .booking-progress{margin-top:18px}
+  .bp-row{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+  .bp-row:last-child{border-bottom:none}
+  .bp-icon{width:30px;height:30px;border-radius:99px;background:var(--soft);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;border:1.5px solid var(--line)}
+  .bp-icon.done{background:var(--green-bg);border-color:var(--green);color:var(--green)}
+  .bp-icon.busy{background:var(--brand-tint);border-color:var(--brand);color:var(--brand);animation:pulse-soft 1.5s ease infinite}
+  .bp-text{flex:1}
+  .bp-text b{display:block;font-size:13.5px;font-weight:600}
+  .bp-text small{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+
+  /* ───── Generic helpers ───── */
+  .row-flex{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .stack-actions{display:flex;gap:10px;margin-top:24px;flex-wrap:wrap}
+  .floating-cta{
+    position:sticky;bottom:0;background:linear-gradient(180deg,transparent,var(--cream) 30%);
+    padding:24px 0 12px;margin:0 -20px -96px;padding-left:20px;padding-right:20px;
+    z-index:10;
+  }
+  @media (min-width:560px){.floating-cta{position:static;background:none;padding:0;margin:24px 0 0}}
+  .skip-link{display:inline-block;font-size:13px;color:var(--muted);text-decoration:underline;text-underline-offset:3px;margin-top:14px}
+  .skip-link:hover{color:var(--brand)}
+
+  /* utility */
+  .mt-12{margin-top:12px}.mt-16{margin-top:16px}.mt-24{margin-top:24px}
+  .mb-8{margin-bottom:8px}.mb-16{margin-bottom:16px}.mb-24{margin-bottom:24px}
+  .center{text-align:center}
+  .grow{flex:1}
+</style>
+</head>
+<body>
+
+<!-- ================= APP BAR ================= -->
+<header class="appbar">
+  <div class="appbar-inner">
+    <a href="#" class="logo" onclick="goStage(0);return false;">China<span>Pal</span></a>
+    <div class="progress-wrap">
+      <div class="progress-track"><div class="progress-fill" id="pfill"></div></div>
+      <span class="progress-label" id="plabel">START</span>
+    </div>
+    <button class="appbar-back" id="backBtn" hidden onclick="goBack()">← Back</button>
+  </div>
+</header>
+
+<!-- ================= STAGE 0 — HOOK ================= -->
+<section class="stage active" id="stage-0">
+  <div class="hook">
+    <div class="hook-inner">
+      <div class="hook-time">⏱ Takes about 90 seconds</div>
+      <h1 class="hook-h">Plan your China trip,<br><span class="ital">handled.</span></h1>
+      <p class="hook-l">Tell us a few things, and we'll draft a complete itinerary — including what to skip, where to eat, and what we'll book for you. Free to try.</p>
+      <button class="btn btn-primary" onclick="goStage(1)">Start planning →</button>
+      <div class="hook-bullets">
+        <div><span class="dot"></span> No sign-up to start</div>
+        <div><span class="dot"></span> Edit anything inline</div>
+        <div><span class="dot"></span> Real Chinese-speaking team</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STAGE 1 — INTAKE ================= -->
+<section class="stage" id="stage-1">
+  <div class="container">
+
+    <!-- Q1 dates -->
+    <div class="qstep" data-q="dates">
+      <div class="eyebrow">Question 1 of 7</div>
+      <h2 class="h1">When are you traveling?</h2>
+      <p class="lede">Rough is fine — we can re-time things if your dates shift.</p>
+      <div class="form-card" style="padding:18px">
+        <div class="field-row">
+          <div class="field">
+            <label>Arrive China</label>
+            <input type="date" id="dateStart" value="2026-05-12">
+          </div>
+          <div class="field">
+            <label>Depart China</label>
+            <input type="date" id="dateEnd" value="2026-05-18">
+          </div>
+        </div>
+        <div class="card-grid cols-2" style="margin-top:6px">
+          <button class="opt-card" data-flex="fixed" onclick="pickFlex(this,'fixed')">
+            <span class="opt-check">✓</span>
+            <span class="opt-emoji">📅</span>
+            <div class="opt-title">Dates fixed</div>
+            <div class="opt-sub">Flights already booked</div>
+          </button>
+          <button class="opt-card selected" data-flex="flex" onclick="pickFlex(this,'flex')">
+            <span class="opt-check">✓</span>
+            <span class="opt-emoji">🗓</span>
+            <div class="opt-title">Flexible ±3 days</div>
+            <div class="opt-sub">Can shift to dodge crowds</div>
+          </button>
+        </div>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q2 cities -->
+    <div class="qstep" data-q="cities" hidden>
+      <div class="eyebrow">Question 2 of 7</div>
+      <h2 class="h1">Which cities are you visiting?</h2>
+      <p class="lede">Tap one or more — or let us recommend a route based on your duration.</p>
+      <div class="card-grid cols-3">
+        <button class="opt-card image selected" onclick="toggleCity(this)" data-city="Shanghai">
+          <span class="opt-check">✓</span>
+          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=600&q=80" alt="Shanghai" loading="lazy" onerror="this.src='https://picsum.photos/seed/shanghai/600/400'"></div>
+          <div class="opt-body"><div class="opt-title">Shanghai</div><div class="opt-sub">Modern, foreigner-friendly</div></div>
+        </button>
+        <button class="opt-card image" onclick="toggleCity(this)" data-city="Beijing">
+          <span class="opt-check">✓</span>
+          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=600&q=80" alt="Beijing" loading="lazy" onerror="this.src='https://picsum.photos/seed/beijing/600/400'"></div>
+          <div class="opt-body"><div class="opt-title">Beijing</div><div class="opt-sub">Wall, Forbidden City</div></div>
+        </button>
+        <button class="opt-card image" onclick="toggleCity(this)" data-city="Chengdu">
+          <span class="opt-check">✓</span>
+          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1601907579329-bd96a4527db4?w=600&q=80" alt="Chengdu" loading="lazy" onerror="this.src='https://picsum.photos/seed/chengdu/600/400'"></div>
+          <div class="opt-body"><div class="opt-title">Chengdu</div><div class="opt-sub">Pandas, hot pot</div></div>
+        </button>
+        <button class="opt-card image" onclick="toggleCity(this)" data-city="Xi'an">
+          <span class="opt-check">✓</span>
+          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1599619585752-c3edb42a414c?w=600&q=80" alt="Xi'an" loading="lazy" onerror="this.src='https://picsum.photos/seed/xian/600/400'"></div>
+          <div class="opt-body"><div class="opt-title">Xi'an</div><div class="opt-sub">Terracotta army</div></div>
+        </button>
+        <button class="opt-card image" onclick="toggleCity(this)" data-city="Guilin">
+          <span class="opt-check">✓</span>
+          <div class="img-wrap"><img src="https://images.unsplash.com/photo-1546484959-f9a381d1330d?w=600&q=80" alt="Guilin" loading="lazy" onerror="this.src='https://picsum.photos/seed/guilin/600/400'"></div>
+          <div class="opt-body"><div class="opt-title">Guilin</div><div class="opt-sub">Karst rivers</div></div>
+        </button>
+        <button class="opt-card" onclick="toggleCity(this)" data-city="suggest">
+          <span class="opt-check">✓</span>
+          <span class="opt-emoji">✨</span>
+          <div class="opt-title">Help me pick</div>
+          <div class="opt-sub">Suggest a route for me</div>
+        </button>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q3 group -->
+    <div class="qstep" data-q="group" hidden>
+      <div class="eyebrow">Question 3 of 7</div>
+      <h2 class="h1">Who's traveling?</h2>
+      <p class="lede">This shapes pace, accommodation, and the entire tone of suggestions.</p>
+      <div class="card-grid cols-2">
+        <button class="opt-card" onclick="pickGroup(this,'solo')"><span class="opt-check">✓</span><span class="opt-emoji">🧍</span><div class="opt-title">Solo</div><div class="opt-sub">Just me</div></button>
+        <button class="opt-card" onclick="pickGroup(this,'couple')"><span class="opt-check">✓</span><span class="opt-emoji">💑</span><div class="opt-title">Couple</div><div class="opt-sub">2 adults</div></button>
+        <button class="opt-card selected" onclick="pickGroup(this,'family')"><span class="opt-check">✓</span><span class="opt-emoji">👨‍👩‍👧</span><div class="opt-title">Family with kids</div><div class="opt-sub">2 adults + child(ren)</div></button>
+        <button class="opt-card" onclick="pickGroup(this,'friends')"><span class="opt-check">✓</span><span class="opt-emoji">👯</span><div class="opt-title">Friends group</div><div class="opt-sub">3+ adults</div></button>
+        <button class="opt-card" onclick="pickGroup(this,'multigen')"><span class="opt-check">✓</span><span class="opt-emoji">👵</span><div class="opt-title">Multi-generation</div><div class="opt-sub">Including grandparents</div></button>
+        <button class="opt-card" onclick="pickGroup(this,'business')"><span class="opt-check">✓</span><span class="opt-emoji">💼</span><div class="opt-title">Business + leisure</div><div class="opt-sub">Mix of work & explore</div></button>
+      </div>
+      <div id="kidsAges" class="form-card mt-16">
+        <p class="micro mb-8">Quick — kids' ages?</p>
+        <div class="card-grid cols-3">
+          <button class="opt-card" onclick="this.classList.toggle('selected')"><span class="opt-check">✓</span><div class="opt-title">Toddler</div><div class="opt-sub">0-3</div></button>
+          <button class="opt-card selected" onclick="this.classList.toggle('selected')"><span class="opt-check">✓</span><div class="opt-title">Child</div><div class="opt-sub">4-9</div></button>
+          <button class="opt-card" onclick="this.classList.toggle('selected')"><span class="opt-check">✓</span><div class="opt-title">Tween/Teen</div><div class="opt-sub">10-17</div></button>
+        </div>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q4 purpose -->
+    <div class="qstep" data-q="purpose" hidden>
+      <div class="eyebrow">Question 4 of 7</div>
+      <h2 class="h1">What's this trip for?</h2>
+      <p class="lede">The single most useful question — it implies dozens of preferences at once.</p>
+      <div class="card-grid cols-2">
+        <button class="opt-card" onclick="pickPurpose(this,'honeymoon')"><span class="opt-check">✓</span><span class="opt-emoji">🌹</span><div class="opt-title">Honeymoon</div><div class="opt-sub">Romantic, premium, slow</div></button>
+        <button class="opt-card selected" onclick="pickPurpose(this,'family')"><span class="opt-check">✓</span><span class="opt-emoji">🎒</span><div class="opt-title">Family vacation</div><div class="opt-sub">Kid-friendly pacing</div></button>
+        <button class="opt-card" onclick="pickPurpose(this,'first')"><span class="opt-check">✓</span><span class="opt-emoji">🌏</span><div class="opt-title">First-time China</div><div class="opt-sub">Hit the iconic stuff</div></button>
+        <button class="opt-card" onclick="pickPurpose(this,'returning')"><span class="opt-check">✓</span><span class="opt-emoji">🔁</span><div class="opt-title">Returning, dig deeper</div><div class="opt-sub">Off the beaten path</div></button>
+        <button class="opt-card" onclick="pickPurpose(this,'friends')"><span class="opt-check">✓</span><span class="opt-emoji">🍻</span><div class="opt-title">Friends trip</div><div class="opt-sub">Food, nightlife, fun</div></button>
+        <button class="opt-card" onclick="pickPurpose(this,'biz')"><span class="opt-check">✓</span><span class="opt-emoji">💼</span><div class="opt-title">Business + leisure</div><div class="opt-sub">Use spare days well</div></button>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q5 budget -->
+    <div class="qstep" data-q="budget" hidden>
+      <div class="eyebrow">Question 5 of 7</div>
+      <h2 class="h1">What's your comfort level?</h2>
+      <p class="lede">No pressure — you can adjust on individual items later.</p>
+      <div class="card-grid cols-2">
+        <button class="opt-card" onclick="pickBudget(this,'budget')">
+          <span class="opt-check">✓</span><span class="opt-emoji">🎒</span>
+          <div class="opt-title">Budget-conscious</div>
+          <div class="opt-sub">3-star hotels · ¥120–250/meal · ~¥800/day total</div>
+        </button>
+        <button class="opt-card selected" onclick="pickBudget(this,'comfort')">
+          <span class="opt-check">✓</span><span class="opt-emoji">🛏</span>
+          <div class="opt-title">Comfortable</div>
+          <div class="opt-sub">4-star hotels · ¥250–500/meal · ~¥1,500/day total</div>
+        </button>
+        <button class="opt-card" onclick="pickBudget(this,'premium')">
+          <span class="opt-check">✓</span><span class="opt-emoji">✨</span>
+          <div class="opt-title">Premium</div>
+          <div class="opt-sub">5-star · ¥500–1,000/meal · ~¥3,000/day total</div>
+        </button>
+        <button class="opt-card" onclick="pickBudget(this,'luxury')">
+          <span class="opt-check">✓</span><span class="opt-emoji">👑</span>
+          <div class="opt-title">Luxury</div>
+          <div class="opt-sub">Peninsula tier · tasting menus · ~¥6,000+/day</div>
+        </button>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q6 interests -->
+    <div class="qstep" data-q="interests" hidden>
+      <div class="eyebrow">Question 6 of 7</div>
+      <h2 class="h1">Pick up to 3 you care about most.</h2>
+      <p class="lede">We'll learn the rest from how you react to suggestions.</p>
+      <div class="card-grid cols-3" id="interestsGrid">
+        <button class="opt-card" onclick="toggleInterest(this,'culture')"><span class="opt-check">✓</span><span class="opt-emoji">🏛</span><div class="opt-title">Culture & history</div></button>
+        <button class="opt-card selected" onclick="toggleInterest(this,'food')"><span class="opt-check">✓</span><span class="opt-emoji">🥢</span><div class="opt-title">Food</div></button>
+        <button class="opt-card selected" onclick="toggleInterest(this,'iconic')"><span class="opt-check">✓</span><span class="opt-emoji">📸</span><div class="opt-title">Iconic sights</div></button>
+        <button class="opt-card" onclick="toggleInterest(this,'nature')"><span class="opt-check">✓</span><span class="opt-emoji">🌿</span><div class="opt-title">Nature</div></button>
+        <button class="opt-card selected" onclick="toggleInterest(this,'family')"><span class="opt-check">✓</span><span class="opt-emoji">🎢</span><div class="opt-title">Family fun</div></button>
+        <button class="opt-card" onclick="toggleInterest(this,'shopping')"><span class="opt-check">✓</span><span class="opt-emoji">🛍</span><div class="opt-title">Shopping</div></button>
+        <button class="opt-card" onclick="toggleInterest(this,'art')"><span class="opt-check">✓</span><span class="opt-emoji">🎨</span><div class="opt-title">Art & design</div></button>
+        <button class="opt-card" onclick="toggleInterest(this,'wellness')"><span class="opt-check">✓</span><span class="opt-emoji">🧘</span><div class="opt-title">Wellness</div></button>
+        <button class="opt-card" onclick="toggleInterest(this,'local')"><span class="opt-check">✓</span><span class="opt-emoji">🏘</span><div class="opt-title">Local life</div></button>
+      </div>
+      <p class="small mt-12" id="interestsHint">3 of 3 selected — tap one to swap.</p>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="nextQ()">Continue →</button>
+      </div>
+    </div>
+
+    <!-- Q7 dietary -->
+    <div class="qstep" data-q="dietary" hidden>
+      <div class="eyebrow">Question 7 of 7</div>
+      <h2 class="h1">Anything we shouldn't book?</h2>
+      <p class="lede">Hard restrictions — we treat these as non-negotiable filters.</p>
+      <div class="card-grid cols-2">
+        <button class="opt-card" onclick="toggleDiet(this,'halal')"><span class="opt-check">✓</span><span class="opt-emoji">🕌</span><div class="opt-title">Halal only</div></button>
+        <button class="opt-card" onclick="toggleDiet(this,'vegetarian')"><span class="opt-check">✓</span><span class="opt-emoji">🥗</span><div class="opt-title">Vegetarian</div></button>
+        <button class="opt-card" onclick="toggleDiet(this,'vegan')"><span class="opt-check">✓</span><span class="opt-emoji">🌱</span><div class="opt-title">Vegan</div></button>
+        <button class="opt-card" onclick="toggleDiet(this,'pork-free')"><span class="opt-check">✓</span><span class="opt-emoji">🚫🥓</span><div class="opt-title">No pork</div></button>
+        <button class="opt-card" onclick="toggleDiet(this,'mobility')"><span class="opt-check">✓</span><span class="opt-emoji">♿</span><div class="opt-title">Limited mobility</div></button>
+        <button class="opt-card selected" onclick="toggleDiet(this,'none')"><span class="opt-check">✓</span><span class="opt-emoji">✅</span><div class="opt-title">No restrictions</div></button>
+      </div>
+      <div class="stack-actions">
+        <button class="btn btn-primary btn-block" onclick="goStage(2)">Build my draft →</button>
+        <a class="skip-link" onclick="goStage(2)">Skip · I'll tell you later</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= STAGE 2 — SKELETON ================= -->
+<section class="stage" id="stage-2">
+  <div class="container">
+    <div class="eyebrow">Step 2 — Confirm the bones first</div>
+    <h2 class="h1">Here's the shape of your trip.</h2>
+    <p class="lede">Quick scan, edit anything that's wrong, then we'll fill in the hour-by-hour details. This is faster than re-generating later.</p>
+
+    <div class="row-flex mb-16" style="gap:8px">
+      <span class="chip chip-brand">Family of 4 · 2 adults + 2 kids</span>
+      <span class="chip">May 12 – 18 · 6 nights</span>
+      <span class="chip">Comfortable tier</span>
+      <span class="chip">Food · Iconic · Family fun</span>
+    </div>
+
+    <div class="skeleton-list" id="skeletonList">
+      <div class="sk-row"><div class="sk-day"><b>1</b><em>Tue</em></div>
+        <div class="sk-text">
+          <input value="Arrive PVG · settle in · evening Bund walk + Shanghainese dinner">
+          <small>~3 hrs · low-effort recovery day</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>2</b><em>Wed</em></div>
+        <div class="sk-text">
+          <input value="Yu Garden morning · Pearl Tower & Lujiazui · hot pot dinner">
+          <small>~9 hrs · classic Shanghai overview</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>3</b><em>Thu</em></div>
+        <div class="sk-text">
+          <input value="French Concession · Tianzifang · Xintiandi evening">
+          <small>~7 hrs · slower pace, café stops</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>4</b><em>Fri</em></div>
+        <div class="sk-text">
+          <input value="Shanghai Disneyland — full day (we book Premier Access)">
+          <small>~12 hrs · early start required</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>5</b><em>Sat</em></div>
+        <div class="sk-text">
+          <input value="Zhujiajiao water town day-trip · easy evening">
+          <small>~7 hrs · escape the city</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>6</b><em>Sun</em></div>
+        <div class="sk-text">
+          <input value="M50 art district · Jing'an Temple · last shopping">
+          <small>~6 hrs · light final day</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+      <div class="sk-row"><div class="sk-day"><b>7</b><em>Mon</em></div>
+        <div class="sk-text">
+          <input value="Depart PVG (afternoon flight) · airport transfer included">
+          <small>~2 hrs active</small>
+        </div>
+        <span class="sk-edit">✎</span>
+      </div>
+    </div>
+
+    <div class="stack-actions">
+      <button class="btn btn-ghost" onclick="addSkRow()">+ Add a day / day-trip</button>
+      <button class="btn btn-primary grow" onclick="goStage(3)">Looks good — fill in the details →</button>
+    </div>
+    <p class="small mt-12">Tap any line to edit. Want to swap Day 5 for Suzhou or Hangzhou? Just type it — we'll re-balance the route.</p>
+  </div>
+</section>
+
+<!-- ================= STAGE 3 — DETAILED DAYS ================= -->
+<section class="stage" id="stage-3">
+  <div class="container">
+
+    <div class="trip-header">
+      <div class="micro" style="color:rgba(255,255,255,.7);margin-bottom:8px">YOUR DRAFT ITINERARY</div>
+      <h1 class="h1">Shanghai, <span class="ital">7 days</span></h1>
+      <div class="small" style="color:rgba(255,255,255,.78)">Wong family · 2 adults + 2 kids · May 12 – 18, 2026</div>
+      <div class="meta">
+        <div>🏨 Holiday Inn Jing'an</div>
+        <div>💰 ~¥10,400/pax all-in</div>
+        <div>🍽 Halal-friendly options checked</div>
+      </div>
+    </div>
+
+    <div class="day-tabs" id="dayTabs"></div>
+    <div id="dayContent"></div>
+
+    <div class="stack-actions" style="margin-top:32px">
+      <button class="btn btn-ghost" onclick="goBack()">← Edit the bones</button>
+      <button class="btn btn-primary grow" onclick="goStage(4)">Looks good — book it →</button>
+    </div>
+    <p class="small mt-12">Every item has a quick swap. Or open the chat below for anything specific.</p>
+  </div>
+
+  <!-- Floating chat trigger -->
+  <button class="chat-fab" id="chatFab" onclick="toggleChat(true)">
+    <span class="fab-dot"></span> Ask Mei to adjust
+  </button>
+</section>
+
+<!-- ================= STAGE 4 — BOOKING ================= -->
+<section class="stage" id="stage-4">
+  <div class="container-wide">
+    <div class="eyebrow">Final step — bookings</div>
+    <h2 class="h1">Lock it in.</h2>
+    <p class="lede">We'll book hotels first (foundational), time-sensitive attractions next, and confirm the rest as availability is checked. Passport details only needed now.</p>
+
+    <div class="booking-grid">
+      <div>
+        <div class="form-card">
+          <h3>Lead traveler</h3>
+          <p class="help">Used for hotel registration and Disney Premier Access. Must match passport.</p>
+          <div class="field-row">
+            <div class="field"><label>First / given name</label><input value="Wei Lin"></div>
+            <div class="field"><label>Last / family name</label><input value="Wong"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Passport number</label><input placeholder="e.g. E12345678"></div>
+            <div class="field"><label>Nationality</label><select><option>Singapore</option><option>Malaysia</option><option>India</option><option>Australia</option><option>UK</option><option>USA</option></select></div>
+          </div>
+          <div class="field"><label>WhatsApp (we'll send updates here)</label><input value="+65 9123 4567"></div>
+        </div>
+
+        <div class="form-card">
+          <h3>Other travelers</h3>
+          <p class="help">Names + ages of co-travelers. Passport details for kids needed before Disney.</p>
+          <div class="field-row">
+            <div class="field"><label>Adult 2</label><input value="Mei Wong, 36"></div>
+            <div class="field"><label>Child 1</label><input value="Jaden, 8"></div>
+          </div>
+          <div class="field"><label>Child 2</label><input value="Sophie, 5"></div>
+          <button class="btn-text" type="button">+ Add another traveler</button>
+        </div>
+
+        <div class="form-card">
+          <h3>Payment method</h3>
+          <p class="help">We don't charge until each booking is confirmed. You'll see exactly what's charged for each.</p>
+          <div class="card-grid cols-2">
+            <button class="opt-card selected"><span class="opt-check">✓</span><span class="opt-emoji">💳</span><div class="opt-title">Credit card</div><div class="opt-sub">Visa / Mastercard / Amex</div></button>
+            <button class="opt-card"><span class="opt-check">✓</span><span class="opt-emoji">📱</span><div class="opt-title">WeChat Pay (intl)</div><div class="opt-sub">Faster for restaurants</div></button>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="summary-card">
+          <h4>Trip summary</h4>
+          <div class="summary-line"><span>Holiday Inn Jing'an · 6 nights</span><b>¥6,540</b></div>
+          <div class="summary-line"><span>Disney park tickets × 4</span><b>¥1,900</b></div>
+          <div class="summary-line"><span>Premier Access (Zootopia + TRON)</span><b>¥720</b></div>
+          <div class="summary-line"><span>Yu Garden + Pearl Tower</span><b>¥640</b></div>
+          <div class="summary-line"><span>Restaurant reservations × 5</span><b>included</b></div>
+          <div class="summary-line"><span>Airport transfer (PVG ⇄ hotel)</span><b>¥520</b></div>
+          <div class="summary-line"><span>Zhujiajiao day trip</span><b>¥1,280</b></div>
+          <div class="summary-line"><span>ChinaPal concierge</span><b>¥800</b></div>
+          <div class="summary-total"><span>Total (4 pax)</span><span>¥41,600</span></div>
+          <p class="small" style="margin-top:10px">≈ S$7,720 · ≈ US$5,710<br>Charged in stages as bookings confirm.</p>
+          <button class="btn btn-primary btn-block mt-16" onclick="startBooking()">Confirm & start booking →</button>
+        </div>
+
+        <div class="form-card mt-16" id="bookingProgress" hidden>
+          <h3>Booking progress</h3>
+          <div class="booking-progress">
+            <div class="bp-row"><div class="bp-icon" id="bp1">1</div><div class="bp-text"><b>Holiday Inn Jing'an</b><small>Reserving 6 nights, 1 family room</small></div></div>
+            <div class="bp-row"><div class="bp-icon" id="bp2">2</div><div class="bp-text"><b>Disney park tickets × 4</b><small>Day-pegged for May 15 (Friday)</small></div></div>
+            <div class="bp-row"><div class="bp-icon" id="bp3">3</div><div class="bp-text"><b>Yu Garden + Pearl Tower</b><small>Pre-paid combo, skip-the-line</small></div></div>
+            <div class="bp-row"><div class="bp-icon" id="bp4">4</div><div class="bp-text"><b>Restaurant reservations × 5</b><small>Halal-friendly options confirmed</small></div></div>
+            <div class="bp-row"><div class="bp-icon" id="bp5">5</div><div class="bp-text"><b>Airport transfer</b><small>PVG ⇄ Jing'an, family vehicle</small></div></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="stack-actions">
+      <button class="btn btn-ghost" onclick="goBack()">← Back to itinerary</button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CHAT PANEL ================= -->
+<div class="chat-panel" id="chatPanel">
+  <div class="chat-head">
+    <div class="grip"></div>
+    <div class="av">M</div>
+    <div class="who"><b>Mei · ChinaPal concierge</b><small>Typically replies in &lt;30s</small></div>
+    <button class="x" onclick="toggleChat(false)">×</button>
+  </div>
+  <div class="chat-body" id="chatBody">
+    <div class="msg msg-bot">Hi Wei Lin 👋 I drafted your 7-day Shanghai trip. Anything you want me to adjust before we book?</div>
+    <div class="msg-suggest">
+      <button onclick="sendMsg('Day 2 feels too packed — can we slow it down?')">Day 2 feels too packed</button>
+      <button onclick="sendMsg('Make Day 4 (Disney) start later — kids hate early mornings')">Disney start later</button>
+      <button onclick="sendMsg('We&apos;re not foodies — fewer restaurant stops')">Fewer restaurants</button>
+      <button onclick="sendMsg('What&apos;s the weather likely to be?')">Weather forecast?</button>
+    </div>
+  </div>
+  <form class="chat-input" onsubmit="event.preventDefault();sendMsgFromInput()">
+    <input id="chatInput" placeholder="Type anything — e.g. add a hotel pool day" autocomplete="off">
+    <button type="submit">Send</button>
+  </form>
+</div>
+
+<!-- ================= SWAP MODAL ================= -->
+<div class="modal-veil" id="swapModal" onclick="if(event.target===this)closeSwap()">
+  <div class="modal">
+    <h3>Swap this for…</h3>
+    <p>3 alternatives at similar pace, time slot, and budget.</p>
+    <div id="swapAlts"></div>
+    <button class="btn btn-ghost btn-block mt-12" onclick="closeSwap()">Cancel</button>
+  </div>
+</div>
+
+<script>
+/* =====================================================================
+   STATE & NAVIGATION
+   ===================================================================== */
+const state = {
+  stage: 0,
+  q: 0,
+  history: [],
+  flex: 'flex',
+  cities: ['Shanghai'],
+  group: 'family',
+  purpose: 'family',
+  budget: 'comfort',
+  interests: ['food','iconic','family'],
+  diet: ['none'],
+};
+
+const STAGES = [
+  { id:'stage-0', label:'START',     pct: 0  },
+  { id:'stage-1', label:'INTAKE',    pct: 25 },
+  { id:'stage-2', label:'STRUCTURE', pct: 55 },
+  { id:'stage-3', label:'ITINERARY', pct: 80 },
+  { id:'stage-4', label:'BOOKING',   pct: 100},
+];
+
+function goStage(idx, push=true){
+  if(push) state.history.push(state.stage);
+  document.querySelectorAll('.stage').forEach(s=>s.classList.remove('active'));
+  document.getElementById(STAGES[idx].id).classList.add('active');
+  document.getElementById('pfill').style.width = STAGES[idx].pct + '%';
+  document.getElementById('plabel').textContent = STAGES[idx].label;
+  document.getElementById('backBtn').hidden = idx === 0;
+  state.stage = idx;
+  window.scrollTo({top:0,behavior:'smooth'});
+
+  if(idx === 1) showQ(0);
+  if(idx === 3) renderTrip();
+  if(idx === 4){ document.getElementById('bookingProgress').hidden = true; }
+  if(idx !== 3) toggleChat(false);
+}
+
+function goBack(){
+  if(state.stage === 1 && state.q > 0){ showQ(state.q - 1); return; }
+  const prev = state.history.pop();
+  if(typeof prev === 'number') goStage(prev, false);
+  else goStage(Math.max(0, state.stage - 1), false);
+}
+
+/* =====================================================================
+   STAGE 1 — INTAKE FLOW
+   ===================================================================== */
+const Q_KEYS = ['dates','cities','group','purpose','budget','interests','dietary'];
+
+function showQ(i){
+  state.q = i;
+  document.querySelectorAll('#stage-1 .qstep').forEach((el,idx)=>{
+    el.hidden = idx !== i;
+  });
+  window.scrollTo({top:0,behavior:'smooth'});
+  // sub-progress (intake subdivides 0–55%)
+  const pct = STAGES[1].pct + (i/Q_KEYS.length) * (STAGES[2].pct - STAGES[1].pct);
+  document.getElementById('pfill').style.width = pct + '%';
+}
+
+function nextQ(){
+  if(state.q < Q_KEYS.length - 1) showQ(state.q + 1);
+  else goStage(2);
+}
+
+function pickFlex(el, val){
+  document.querySelectorAll('[data-flex]').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  state.flex = val;
+}
+function pickGroup(el, val){
+  document.querySelectorAll('#stage-1 .qstep[data-q="group"] > .card-grid .opt-card').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  state.group = val;
+  document.getElementById('kidsAges').style.display = (val === 'family' || val === 'multigen') ? 'block' : 'none';
+}
+function pickPurpose(el, val){
+  document.querySelectorAll('#stage-1 .qstep[data-q="purpose"] .opt-card').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  state.purpose = val;
+}
+function pickBudget(el, val){
+  document.querySelectorAll('#stage-1 .qstep[data-q="budget"] .opt-card').forEach(b=>b.classList.remove('selected'));
+  el.classList.add('selected');
+  state.budget = val;
+}
+function toggleCity(el){
+  const city = el.dataset.city;
+  if(city === 'suggest'){
+    document.querySelectorAll('#stage-1 .qstep[data-q="cities"] .opt-card').forEach(b=>b.classList.remove('selected'));
+    el.classList.add('selected');
+    state.cities = ['suggest'];
+    return;
+  }
+  // unselect "suggest" if any
+  const sug = document.querySelector('[data-city="suggest"]');
+  if(sug) sug.classList.remove('selected');
+  state.cities = state.cities.filter(c => c !== 'suggest');
+  el.classList.toggle('selected');
+  if(el.classList.contains('selected')) state.cities.push(city);
+  else state.cities = state.cities.filter(c=>c !== city);
+}
+function toggleInterest(el, val){
+  const grid = document.getElementById('interestsGrid');
+  const selected = grid.querySelectorAll('.opt-card.selected');
+  if(!el.classList.contains('selected') && selected.length >= 3){
+    // gentle limit: pulse hint
+    document.getElementById('interestsHint').textContent = 'Max 3 — tap a selected one to swap.';
+    return;
+  }
+  el.classList.toggle('selected');
+  const n = grid.querySelectorAll('.opt-card.selected').length;
+  document.getElementById('interestsHint').textContent = n + ' of 3 selected — tap one to swap.';
+  state.interests = [...grid.querySelectorAll('.opt-card.selected')].map(b=>b.querySelector('.opt-title').textContent.trim().toLowerCase());
+}
+function toggleDiet(el, val){
+  if(val === 'none'){
+    document.querySelectorAll('#stage-1 .qstep[data-q="dietary"] .opt-card').forEach(b=>b.classList.remove('selected'));
+    el.classList.add('selected');
+    state.diet = ['none'];
+    return;
+  }
+  const noneEl = document.querySelector('[onclick*="\'none\'"]');
+  if(noneEl) noneEl.classList.remove('selected');
+  el.classList.toggle('selected');
+  state.diet = [...document.querySelectorAll('#stage-1 .qstep[data-q="dietary"] .opt-card.selected')].map(b=>b.querySelector('.opt-title').textContent);
+}
+
+function addSkRow(){
+  const list = document.getElementById('skeletonList');
+  const idx = list.children.length + 1;
+  const row = document.createElement('div');
+  row.className = 'sk-row';
+  row.innerHTML = `<div class="sk-day"><b>${idx}</b><em>Day</em></div>
+    <div class="sk-text"><input placeholder="What would you like on this day?"><small>Add a description</small></div>
+    <span class="sk-edit">✎</span>`;
+  list.appendChild(row);
+  setTimeout(()=>row.querySelector('input').focus(), 80);
+}
+
+/* =====================================================================
+   STAGE 3 — TRIP DATA + RENDER
+   Drawn from /place_scraper/data/上海 processed JSON
+   ===================================================================== */
+const IMG = {
+  bund:        'https://images.unsplash.com/photo-1538428494232-9c0d8a3ab403?w=900&q=80',
+  yu_garden:   'https://images.unsplash.com/photo-1545893835-abaa50cbe628?w=900&q=80',
+  pearl_tower: 'https://images.unsplash.com/photo-1474181487882-5abf3f0ba6c2?w=900&q=80',
+  hot_pot:     'https://images.unsplash.com/photo-1518427613429-3399a13c95da?w=900&q=80',
+  french:      'https://images.unsplash.com/photo-1598866594230-a7c12756260f?w=900&q=80',
+  tianzifang:  'https://images.unsplash.com/photo-1548919973-5cef591cdbc9?w=900&q=80',
+  xintiandi:   'https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80',
+  disney:      'https://images.unsplash.com/photo-1566576721346-d4a3b4eaeb55?w=900&q=80',
+  zhujiajiao:  'https://images.unsplash.com/photo-1551918120-9739cb430c6d?w=900&q=80',
+  m50:         'https://images.unsplash.com/photo-1547891654-e66ed7ebb968?w=900&q=80',
+  jingan:      'https://images.unsplash.com/photo-1580413057-2c1ae5d4a9ea?w=900&q=80',
+  hotel:       'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=900&q=80',
+  shanghainese:'https://images.unsplash.com/photo-1563245372-f21724e3856d?w=900&q=80',
+  cafe:        'https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80',
+  dimsum:      'https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=900&q=80',
+};
+function fallback(key){ return `https://picsum.photos/seed/${key}/900/600`; }
+
+const TRIP = [
+  // --- DAY 1 ---
+  { label: 'DAY 1 · TUE MAY 12', title: 'Arrive · easy first night',
+    summary: ['~3 hrs active', '🚶 1.2 km walking', '💸 ~¥800/pax'],
+    items: [
+      { time:'15:30', cat:'Arrival', img:'hotel', title:'Check in · Holiday Inn Jing\'an',
+        sub:'Premium room, ~¥1,090/night',
+        desc:'Family suite with twin queens, 12-min walk to Jing\'an Temple metro. We\'ll arrange airport pickup so you walk straight from arrivals to the car.',
+        why:'Picked because it sits between French Concession (Day 3) and Bund (tonight) — minimises transit on a tired day.',
+        chips:['🛏 Family suite','🚗 Transfer included','🛜 Reliable wifi'],
+        nonSwap:true,
+      },
+      { time:'18:00', cat:'Iconic', img:'bund', title:'The Bund (外滩)',
+        sub:'Free · 2 hrs · weekday-evening manageable crowds',
+        desc:'1.5 km riverside promenade. Arrive 30 minutes before sunset to catch lights coming on at 7:00 PM. Walk the full length, optionally take the ¥2 ferry across to Pudong for the reverse view.',
+        why:'You picked iconic sights as a top-3 interest. Easy first-night activity — no tickets, jet-lag-friendly pace, kids love the lights.',
+        chips:['🆓 Free','📸 Iconic','🟢 Easy walk','👶 Stroller friendly'],
+        kid:true,
+      },
+      { time:'19:30', cat:'Dinner', img:'shanghainese', title:'Yang\'s Dumpling (Nanjing Rd location)',
+        sub:'Shanghainese · ¥40-60/pax',
+        desc:'Walk-in spot 5 min from the Bund. Famous for pan-fried pork buns (生煎包) — order 8, the kids will eat 6.',
+        why:'Quick, kid-friendly, halal-checked side dishes available. We picked this over the Bund\'s tourist-trap restaurants directly on the promenade.',
+        chips:['¥40-60/pax','🟢 Comfort food','🟡 Halal sides only'],
+      },
+    ],
+  },
+  // --- DAY 2 ---
+  { label: 'DAY 2 · WED MAY 13', title: 'Classic Shanghai overview',
+    summary: ['~9 hrs active', '🚶 6 km walking', '💸 ~¥1,400/pax'],
+    items: [
+      { time:'09:00', cat:'Heritage', img:'yu_garden', title:'Yu Garden (豫园)',
+        sub:'¥45/adult, kids free · 1.5 hrs',
+        desc:'400-year-old Ming dynasty garden — rockeries, koi ponds, dragon-walls. Best in the morning before bus tours arrive (typically 10:30 AM). Surrounding bazaar has food stalls and souvenirs.',
+        why:'Morning slot to dodge the 10:30 tour-bus rush. Pairs naturally with Pudong crossing afterwards.',
+        chips:['¥45/adult','🌿 Heritage','🌅 Morning best','🟢 Easy'],
+      },
+      { time:'12:30', cat:'Lunch', img:'dimsum', title:'Nanxiang Steamed Buns (南翔)',
+        sub:'Inside Yu Bazaar · ¥80/pax',
+        desc:'The original 1900-founded xiao long bao spot. Get a number, expect a 20-min wait. The 3rd-floor crab roe XLB are worth the upgrade.',
+        why:'Walking-distance, won\'t lose momentum. Sophie can eat the plain pork buns; halal vegetarian buns available.',
+        chips:['¥80/pax','⏱ 20-min queue','🟡 Halal-veg only'],
+      },
+      { time:'14:30', cat:'Iconic', img:'pearl_tower', title:'Shanghai Tower observation deck',
+        sub:'¥180/adult · 1.5 hrs',
+        desc:'632m — 3rd tallest building on Earth. The 118th-floor view spans the Bund AND back inland. Faster than queueing for Pearl Tower\'s observation deck and views are better.',
+        why:'You said iconic + family — kids love the world-record speed elevator (18m/sec). We\'ll book skip-the-line tickets so you don\'t spend an hour in the basement queue.',
+        chips:['¥180/adult','📸 Iconic','🛗 Skip-line booked','🟢 Easy'],
+      },
+      { time:'19:00', cat:'Dinner', img:'hot_pot', title:'Haidilao (Lujiazui)',
+        sub:'Sichuan hot pot · ¥128/pax',
+        desc:'Cook-it-yourself pot at your table. Famous for over-the-top service — free manicures, balloon animals for the kids, noodle-pulling performance. Get the split pot (mild tomato + medium spicy).',
+        why:'Perfect for families — kids find it more entertainment than dinner. Mushroom broth is fully vegetarian; we flagged the staff that you avoid pork.',
+        chips:['¥128/pax','🎭 Family fun','🟢 Pork-free possible','📵 Loud'],
+      },
+    ],
+  },
+  // --- DAY 3 ---
+  { label: 'DAY 3 · THU MAY 14', title: 'French Concession · slow day',
+    summary: ['~7 hrs active', '🚶 4 km walking', '💸 ~¥1,100/pax'],
+    items: [
+      { time:'10:00', cat:'Wander', img:'french', title:'Former French Concession walk',
+        sub:'Free · 2 hrs · plane-tree-lined streets',
+        desc:'Start at Wukang Road. We\'ll text you 3 hidden cafes, the photo spot for the famous Wukang Mansion, and a stationery shop the kids will love.',
+        why:'You picked food + iconic, but a long day yesterday means a slow morning today. This is wander-with-snacks energy.',
+        chips:['🆓 Free','☕ Café-hopping','🟢 Stroller friendly'],
+      },
+      { time:'13:00', cat:'Lunch', img:'cafe', title:'Café del Volcán + bakery hop',
+        sub:'¥120/pax · light brunch',
+        desc:'Single-origin coffee + croissants. We\'ll add 2 nearby bakeries on the walk so the kids can pick.',
+        why:'Aligns with your "food" interest without committing 90 minutes to a sit-down meal.',
+        chips:['¥120/pax','☕ Specialty coffee'],
+      },
+      { time:'15:30', cat:'Cultural', img:'tianzifang', title:'Tianzifang (田子坊)',
+        sub:'Free entry · 2 hrs',
+        desc:'Maze of restored shikumen lane houses turned into boutiques, galleries, indie cafés. Pickpocket-aware on weekends.',
+        why:'Walkable from French Concession; gives kids something to do while you browse.',
+        chips:['🆓 Free','🛍 Shopping','📸 Photogenic','🟡 Crowded weekends'],
+      },
+      { time:'19:00', cat:'Evening', img:'xintiandi', title:'Xintiandi for dinner + drinks',
+        sub:'~¥350/pax',
+        desc:'Restored 1920s shikumen blocks, now upscale dining/bars. Recommended: T8 (modern Chinese, kid-OK before 8 PM) or Crystal Jade for dim sum.',
+        why:'Premium tier match for budget. Kid-friendly until 8 PM, then Mei + Wei Lin can grab a nightcap while we set up an in-hotel sitter.',
+        chips:['¥350/pax','🍷 Date-night option','👶 Kid-OK until 8'],
+      },
+    ],
+  },
+  // --- DAY 4 ---
+  { label: 'DAY 4 · FRI MAY 15', title: 'Disneyland — full day',
+    summary: ['~12 hrs active', '🚶 18 km walking', '💸 ~¥1,800/pax'],
+    items: [
+      { time:'07:30', cat:'Transfer', img:'disney', title:'Pre-arranged car to Disney',
+        sub:'~50 min · ¥220 one-way',
+        desc:'Driver meets you at the hotel lobby. Avoids the Metro Line 11 + Line 2 transfer with sleepy kids.',
+        why:'Premium tier match; you need to be at the gate by 8:30 to ride Zootopia first. Public transit would mean a 6:45 wakeup.',
+        chips:['🚗 Door-to-door','⏱ Avoids 2-line transfer'],
+      },
+      { time:'08:30', cat:'Theme park', img:'disney', title:'Shanghai Disneyland · all day',
+        sub:'¥599/adult, ¥449/child · ~12 hrs',
+        desc:'Newest Disney in the world. Hit Zootopia (Hot Pursuit) first — exclusive to this park, queue hits 3 hours by noon. We\'ll pre-book Premier Access for the 2 longest queues. Castle fireworks 8:00 PM.',
+        why:'Highest-impact day for kids 5 + 8. Friday is a "Regular" pricing tier — ¥120/pax cheaper than weekends.',
+        chips:['¥599/adult','🎢 Family essential','✨ Premier Access ×2','📅 Cheaper weekday'],
+        kid:true,
+      },
+      { time:'21:00', cat:'Transfer', img:'disney', title:'Pre-arranged car back',
+        sub:'~50 min',
+        desc:'Same driver. Surge pricing post-fireworks is brutal — this saves you ¥150 and 25 minutes of queueing.',
+        why:'Practical — Didi at park-close is one of the most-complained-about pain points.',
+        chips:['🚗 Pre-booked','⛔ Avoids surge'],
+      },
+    ],
+  },
+  // --- DAY 5 ---
+  { label: 'DAY 5 · SAT MAY 16', title: 'Zhujiajiao water town',
+    summary: ['~7 hrs active', '🛥 Boat ride', '💸 ~¥1,280/pax'],
+    items: [
+      { time:'09:30', cat:'Day trip', img:'zhujiajiao', title:'Zhujiajiao ancient water town',
+        sub:'~1 hr from city · entry ¥80',
+        desc:'1,700-year-old canal town — 36 stone bridges, gondola rides, traditional snack stalls. Less polished than Wuzhen but feels more authentic and is closer to Shanghai.',
+        why:'After Disney exhaustion, this is a soft-pace day with no walking marathon. Kids love the boats.',
+        chips:['¥80 entry','🛥 Gondola ¥150','🟢 Easy pace'],
+        kid:true,
+      },
+      { time:'13:00', cat:'Lunch', img:'shanghainese', title:'Local restaurant on the canal',
+        sub:'¥150/pax',
+        desc:'Pre-booked window table overlooking the bridges. Order the freshwater shrimp and the soy-braised pork knuckle.',
+        why:'You said food is a top-3 interest; canal-side authentic over bus-tour cafeteria.',
+        chips:['¥150/pax','📍 Canal view'],
+      },
+      { time:'19:00', cat:'Dinner', img:'cafe', title:'Easy hotel-area dinner',
+        sub:'Pick on the night',
+        desc:'Back in Jing\'an by 5:30 PM. We\'ll send 3 walk-in options within 5 min of the hotel — your choice based on energy levels.',
+        why:'Flexible after a travel day. No reservation pressure.',
+        chips:['📍 5-min walk','🤷 Pick on the night'],
+      },
+    ],
+  },
+  // --- DAY 6 ---
+  { label: 'DAY 6 · SUN MAY 17', title: 'Art · temples · last shopping',
+    summary: ['~6 hrs active', '🚶 3 km walking', '💸 ~¥900/pax'],
+    items: [
+      { time:'10:00', cat:'Art', img:'m50', title:'M50 Creative Park',
+        sub:'Free entry · 1.5 hrs',
+        desc:'Converted textile mills now housing 100+ contemporary art galleries. Free roaming, lots of street art, Sunday is open-studio day.',
+        why:'You haven\'t picked "art" in your top-3, but Mei and Wei Lin will both like this. Kids get a hidden Pokemon-stamp trail through the galleries.',
+        chips:['🆓 Free','🎨 Galleries','👨‍👩‍👧 Hidden stamp trail'],
+      },
+      { time:'13:00', cat:'Lunch', img:'dimsum', title:'Lin Long Fang (dim sum)',
+        sub:'¥120/pax',
+        desc:'Reliable Cantonese dim sum near M50. We\'ve flagged staff about pork — they have ~15 non-pork options including har gow and shrimp dumplings.',
+        why:'Halal-friendly within their menu, fast service, good for tired kids.',
+        chips:['¥120/pax','🟢 Pork-free menu confirmed','⏱ Fast service'],
+      },
+      { time:'15:30', cat:'Heritage', img:'jingan', title:'Jing\'an Temple',
+        sub:'¥50/adult · 45 min',
+        desc:'Rare urban Buddhist temple, gold-leaf interiors, surrounded by skyscrapers — the visual contrast is the photo. Active worship space, dress modestly.',
+        why:'Walking-distance from your hotel. Easy last cultural moment without travel time.',
+        chips:['¥50/adult','📸 Skyline contrast','🟡 Modest dress'],
+      },
+      { time:'18:00', cat:'Dinner', img:'shanghainese', title:'Old Jesse (老吉士)',
+        sub:'Shanghainese · ¥280/pax',
+        desc:'Tiny 50-year-old institution, our pre-booked 6 PM seating. The braised pork (we\'ve subbed for braised beef on your table) is the talk of the town.',
+        why:'Closing meal — celebratory but unpretentious. We\'ve coordinated a pork-free menu in advance.',
+        chips:['¥280/pax','🍽 Reservation booked','🟢 Pork-free menu'],
+      },
+    ],
+  },
+  // --- DAY 7 ---
+  { label: 'DAY 7 · MON MAY 18', title: 'Depart',
+    summary: ['~2 hrs active', '🛬 PVG departure', ''],
+    items: [
+      { time:'10:00', cat:'Easy', img:'cafe', title:'Slow morning · breakfast at hotel',
+        sub:'Included',
+        desc:'Late checkout arranged until 12:30 (free for premium tier).',
+        why:'No need to rush — flight is 17:40.',
+        chips:['🛏 Late checkout','🆓 Included'],
+      },
+      { time:'14:00', cat:'Transfer', img:'hotel', title:'Pre-arranged car to PVG',
+        sub:'~70 min · ¥260',
+        desc:'Family vehicle, English-speaking driver. We\'ll send a WhatsApp 30 min before pickup.',
+        why:'You\'ll be 2hr20 ahead of your 17:40 flight — comfortable buffer.',
+        chips:['🚗 Family vehicle','📲 WhatsApp updates'],
+      },
+    ],
+  },
+];
+
+/* Alt options for swap */
+const ALT = {
+  default: [
+    { img:'tianzifang', title:'Tianzifang lane walk', meta:['Free','📸 Photogenic','🟢 Easy'] },
+    { img:'jingan', title:'Jing\'an Temple visit', meta:['¥50','45 min','🟡 Modest dress'] },
+    { img:'cafe', title:'Wukang Rd café crawl', meta:['¥120/pax','☕ Slow pace','🟢 Easy'] },
+  ]
+};
+
+let activeDay = 0;
+function renderTrip(){
+  const tabs = document.getElementById('dayTabs');
+  tabs.innerHTML = TRIP.map((d,i)=>`
+    <button class="day-tab ${i===activeDay?'active':''}" onclick="switchDay(${i})">
+      <small>${d.label.split('·')[0].trim()}</small>
+      <b>${d.label.split('·').slice(1).join(' · ').trim() || 'Day'}</b>
+    </button>`).join('');
+  renderDay();
+}
+function switchDay(i){ activeDay = i; renderTrip(); }
+
+function renderDay(){
+  const d = TRIP[activeDay];
+  const c = document.getElementById('dayContent');
+  c.innerHTML = `
+    <div class="day-summary">
+      <div class="day-label">${d.title}</div>
+      <div class="meta">${d.summary.filter(Boolean).map(s=>`<span>${s}</span>`).join('')}</div>
+    </div>
+    <div class="timeline" id="timeline">
+      ${d.items.map((it,idx)=>renderItem(it,idx)).join('')}
+    </div>`;
+  // streaming reveal
+  const items = c.querySelectorAll('.ti.streaming');
+  items.forEach((el,i)=>{
+    setTimeout(()=>el.classList.add('show'), 80 + i * 220);
+  });
+}
+
+function renderItem(it, idx){
+  const transit = idx > 0 ? `<div class="transit"><b>${transitFor(idx)}</b></div>` : '';
+  const swap = it.nonSwap ? '' : `<button class="ti-act swap" onclick="openSwap('${it.title.replace(/'/g,"\\'")}')">↻ Swap</button>`;
+  return `${transit}<article class="ti streaming">
+    <div class="ti-img">
+      <img src="${IMG[it.img]||fallback(it.img)}" alt="${it.title}" loading="lazy" onerror="this.src='${fallback(it.img)}'">
+      <div class="ti-time">${it.time}</div>
+      <div class="ti-cat">${it.cat}</div>
+    </div>
+    <div class="ti-body">
+      <h3 class="ti-title">${it.title}</h3>
+      <div class="ti-sub">${it.sub}</div>
+      <p class="ti-desc">${it.desc}</p>
+      <div class="ti-why"><b>Why this?</b><span>${it.why}</span></div>
+      <div class="ti-meta">${it.chips.map(c=>`<span class="chip">${c}</span>`).join('')}</div>
+      <div class="ti-actions">
+        ${swap}
+        <button class="ti-act" onclick="alert('Removed (demo only)')">✕ Remove</button>
+        <button class="ti-act" onclick="alert('Move to a different time slot — demo only')">↳ Move</button>
+        <button class="ti-act" onclick="alert('Detailed view: full place card with reviews, photos, getting-in info, common scams, useful Mandarin phrases — pulled from /place_scraper/data/上海')">ⓘ Full info</button>
+      </div>
+    </div>
+  </article>`;
+}
+function transitFor(i){
+  const opts = ['🚶 8 min walk','🚖 Didi · 12 min · ~¥35','🚇 Metro Line 2 · 14 min · ¥4','🚶 5 min walk','🚖 Didi · 18 min · ~¥45'];
+  return opts[i % opts.length];
+}
+
+/* ===== Swap modal ===== */
+function openSwap(title){
+  const v = document.getElementById('swapModal');
+  document.getElementById('swapAlts').innerHTML = ALT.default.map(a=>`
+    <div class="alt-card" onclick="closeSwap();alert('Swapped (demo only)')">
+      <img src="${IMG[a.img]||fallback(a.img)}" alt="${a.title}" loading="lazy" onerror="this.src='${fallback(a.img)}'">
+      <div class="alt-body">
+        <b>${a.title}</b>
+        <div class="small">Same time slot · same duration · matches your interests</div>
+        <div class="alt-meta">${a.meta.map(m=>`<span class="chip">${m}</span>`).join('')}</div>
+      </div>
+    </div>`).join('');
+  v.classList.add('open');
+}
+function closeSwap(){ document.getElementById('swapModal').classList.remove('open'); }
+
+/* =====================================================================
+   CHAT REFINEMENT
+   ===================================================================== */
+function toggleChat(open){
+  document.getElementById('chatPanel').classList.toggle('open', open);
+  document.getElementById('chatFab').style.display = open ? 'none' : '';
+}
+function sendMsg(text){
+  document.getElementById('chatInput').value = '';
+  appendMsg(text, 'me');
+  // remove suggestion chips
+  const sug = document.querySelector('#chatBody .msg-suggest');
+  if(sug) sug.remove();
+  // typing indicator
+  const body = document.getElementById('chatBody');
+  const typ = document.createElement('div');
+  typ.className = 'typing';
+  typ.innerHTML = '<span></span><span></span><span></span>';
+  body.appendChild(typ);
+  body.scrollTop = body.scrollHeight;
+  setTimeout(()=>{
+    typ.remove();
+    appendMsg(replyFor(text), 'bot');
+  }, 1100);
+}
+function sendMsgFromInput(){
+  const v = document.getElementById('chatInput').value.trim();
+  if(!v) return;
+  sendMsg(v);
+}
+function appendMsg(text, who){
+  const body = document.getElementById('chatBody');
+  const m = document.createElement('div');
+  m.className = 'msg msg-' + who;
+  m.textContent = text;
+  body.appendChild(m);
+  body.scrollTop = body.scrollHeight;
+}
+function replyFor(text){
+  const t = text.toLowerCase();
+  if(t.includes('packed') || t.includes('slow')) return "Got it — I removed the Pearl Tower stop and shifted hot pot 30 min earlier. Day 2 is now ~7 hrs active. Want me to also extend the morning at Yu Garden?";
+  if(t.includes('disney') || t.includes('later')) return "Done — Disney now starts at 10:00 AM with car pickup at 9:15. The trade-off: Zootopia queue will be ~60 min instead of 5. I added Premier Access for it (¥110/pax). OK to charge?";
+  if(t.includes('foodie') || t.includes('restaurant')) return "Switched 2 sit-down meals on Days 3 and 6 to grab-and-go bakery stops. Saved you about 90 min total — added a Yuyuan kite-flying slot in the freed time.";
+  if(t.includes('weather')) return "May 12-18 in Shanghai: ~18-25°C, 30% rain probability mostly afternoons. I've already padded indoor backup options on Days 3 and 5.";
+  if(t.includes('hotel') || t.includes('pool')) return "The Holiday Inn doesn't have a pool. The W Shanghai (¥1,580/night, +¥490/night vs current) does — rooftop, kids welcome. Want me to swap?";
+  return "Noted — I'll factor that in. Want me to apply it just to today, or to the whole trip?";
+}
+
+/* =====================================================================
+   STAGE 4 — BOOKING SIMULATION
+   ===================================================================== */
+function startBooking(){
+  document.getElementById('bookingProgress').hidden = false;
+  const steps = ['bp1','bp2','bp3','bp4','bp5'];
+  steps.forEach((id, i)=>{
+    setTimeout(()=>{
+      // mark previous done
+      if(i > 0){
+        const prev = document.getElementById(steps[i-1]);
+        prev.classList.remove('busy');
+        prev.classList.add('done');
+        prev.textContent = '✓';
+      }
+      const el = document.getElementById(id);
+      el.classList.add('busy');
+      el.textContent = '⟳';
+    }, 800 * i);
+  });
+  // final
+  setTimeout(()=>{
+    const last = document.getElementById('bp5');
+    last.classList.remove('busy');
+    last.classList.add('done');
+    last.textContent = '✓';
+    setTimeout(()=>{
+      alert('All 5 bookings confirmed! Confirmation emails sent. (Demo only.)');
+    }, 400);
+  }, 800 * 5);
+}
+
+/* init */
+goStage(0, false);
+</script>
+
+</body>
+</html>

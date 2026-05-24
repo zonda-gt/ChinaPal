@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ============================================================
+  GOOGLE ADS LANDING PAGE  ·  reference build = SHANGHAI
+  To clone for another query (Beijing / "China itinerary" / etc.):
+   - swap every  data-city  / [CITY] text block
+   - keep the structure + the chat logic identical
+  EDIT PRICE: search  $39  and change in 3 places (hero chip, handoff, pricing)
+============================================================= -->
+<title>Plan your China trip — a local's free plan | ChinaPal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:oklch(0.985 0.005 80);--bg-warm:oklch(0.975 0.006 80);--surface:oklch(0.97 0.003 260);
+    --red:oklch(0.48 0.22 25);--red-bright:oklch(0.70 0.18 25);--red-tint:oklch(0.97 0.02 25);
+    --red-line:oklch(0.88 0.06 25);--ink:oklch(0.18 0.01 260);--muted:oklch(0.52 0.01 260);
+    --faint:oklch(0.60 0.01 260);--line:oklch(0.92 0.004 260);
+    --display:"DM Serif Display",Georgia,serif;--body:"Plus Jakarta Sans",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:780px;margin:0 auto;padding:0 24px}
+  .serif{font-family:var(--display);font-weight:400}
+  .red{color:var(--red)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);
+    display:inline-flex;align-items:center;gap:8px;background:var(--red-tint);border:1px solid var(--red-line);
+    padding:7px 16px;border-radius:999px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);
+    font-weight:700;border-radius:999px;padding:15px 30px;font-size:15px;cursor:pointer;border:0;transition:.18s;white-space:nowrap}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+  /* ---------- HEADER ---------- */
+  header{position:absolute;inset:0 0 auto 0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 24px}
+  .logo{font-size:21px;font-weight:800;letter-spacing:-.02em;color:#fff}
+  .nav .pill{font-size:13px;font-weight:600;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.25);
+    padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px)}
+
+  /* ---------- HERO ---------- */
+  .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,#241a18,#2a1d1a 50%,#1a1413);
+    padding:118px 0 60px}
+  .hero .glow{position:absolute;width:620px;height:620px;right:-160px;top:-180px;border-radius:50%;
+    background:radial-gradient(circle,oklch(0.55 0.20 25 /.32),transparent 65%);filter:blur(18px)}
+  .hero svg.scape{position:absolute;left:0;right:0;bottom:0;width:100%;height:46%;opacity:.42}
+  .hero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px}
+  .hero h1{font-family:var(--display);color:#fff;font-size:clamp(36px,5.4vw,60px);line-height:1.06;
+    letter-spacing:-.01em;margin:20px 0 16px}
+  .hero h1 em{font-style:normal;color:var(--red-bright)}
+  .hero .sub{color:rgba(255,255,255,.8);font-size:clamp(16px,1.7vw,19px);max-width:560px;margin:0 auto 22px;line-height:1.55}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:6px}
+  .hero-trust span{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.66);font-size:13px;font-weight:500}
+  .hero-trust svg{width:14px;height:14px;color:var(--red-bright)}
+  .badge{color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);backdrop-filter:blur(6px)}
+  .badge .dt{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+
+  /* ---------- CHAT (the live demo) ---------- */
+  .demo-shell{position:relative;z-index:2;max-width:760px;margin:34px auto 0;padding:0 24px}
+  .chat{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 30px 80px -20px rgba(0,0,0,.5);
+    border:1px solid rgba(0,0,0,.05)}
+  .chat-bar{display:flex;align-items:center;gap:10px;background:var(--red);padding:13px 18px}
+  .chat-bar .av{width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;
+    align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12px}
+  .chat-bar b{color:#fff;font-size:15px;font-weight:700}
+  .chat-bar .stat{margin-left:auto;color:rgba(255,255,255,.85);font-size:12px;font-weight:600;
+    display:flex;align-items:center;gap:6px}
+  .chat-bar .stat .g{width:7px;height:7px;border-radius:50%;background:#4ade80}
+  .chat-body{background:#f6f3f0;padding:20px 18px;display:flex;flex-direction:column;gap:12px;
+    min-height:340px;max-height:min(72vh,640px);overflow-y:auto;scroll-behavior:smooth}
+  /* keep items at full height so the body scrolls instead of flex-shrinking
+     (otherwise the plan card gets squished and clips Day 2/3) */
+  .chat-body>*{flex:0 0 auto}
+  .msg{max-width:86%;padding:12px 15px;font-size:14px;line-height:1.55;border-radius:18px;animation:pop .35s ease}
+  @keyframes pop{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .msg.me{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:5px}
+  .msg.ai{align-self:flex-start;background:#fff;color:var(--ink);border:1px solid var(--line);
+    border-bottom-left-radius:5px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+  .msg.ai b{font-weight:700}
+  .plan{align-self:flex-start;max-width:96%;background:#fff;border:1px solid var(--line);border-radius:16px;
+    padding:4px 0;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04);animation:pop .4s ease}
+  .plan .ph{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red);
+    padding:12px 16px 8px}
+  .plan .row{display:flex;gap:14px;padding:9px 16px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5}
+  .plan .row .d{flex:none;width:46px;font-weight:800;color:var(--red);font-family:var(--display)}
+  .plan .row .t{color:var(--ink)}
+  .plan .row .t b{display:block;font-family:var(--display);font-weight:700;margin-bottom:5px;color:var(--ink)}
+  .plan .row .t .li{display:block;color:var(--muted);font-size:12.5px;line-height:1.55;padding-left:13px;position:relative;margin-top:2px}
+  .plan .row .t .li::before{content:"";position:absolute;left:2px;top:8px;width:4px;height:4px;border-radius:50%;background:var(--red)}
+  .plan .row .t .li strong{color:var(--ink);font-weight:700}
+  .plan .row .t .li em{font-style:normal;color:var(--red);font-weight:600}
+  .plan .row .t .skip{color:var(--faint);font-size:12.5px;display:block;margin-top:3px}
+  .plan .sec{font-size:10.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--red);
+    text-align:center;padding:15px 16px 7px;border-top:1px solid var(--line)}
+  .plan .sec:first-of-type{border-top:0}
+  .typing{align-self:flex-start;background:#fff;border:1px solid var(--line);border-radius:18px;
+    border-bottom-left-radius:5px;padding:13px 16px;display:flex;gap:4px}
+  .typing i{width:6px;height:6px;border-radius:50%;background:#c9c2bb;animation:bl 1.2s infinite}
+  .typing i:nth-child(2){animation-delay:.18s}.typing i:nth-child(3){animation-delay:.36s}
+  @keyframes bl{0%,60%,100%{opacity:.3}30%{opacity:1}}
+  .handoff{align-self:flex-start;max-width:96%;background:var(--red-tint);border:1px solid var(--red-line);
+    border-radius:16px;padding:16px 17px;animation:pop .4s ease}
+  .handoff h4{font-size:16px;font-weight:800;color:var(--ink);margin-bottom:6px;line-height:1.25}
+  .handoff p{font-size:14px;line-height:1.6;color:var(--muted);margin-bottom:14px}
+  .handoff p b{font-weight:700;color:var(--ink)}
+  .handoff .price{display:flex;align-items:baseline;gap:9px;margin-bottom:3px}
+  .handoff .price .was{font-size:16px;color:var(--faint);text-decoration:line-through}
+  .handoff .price .now{font-family:var(--display);font-size:26px;font-weight:700;color:var(--ink)}
+  .handoff .price .tag{align-self:center;font-size:9.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    color:var(--red);background:#fff;border:1px solid var(--red-line);border-radius:999px;padding:3px 8px}
+  .handoff .perday{font-size:12.5px;color:var(--muted);margin-bottom:13px}
+  .handoff .cta{display:inline-flex;align-items:center;gap:9px;background:var(--red);color:#fff;
+    font-weight:700;font-size:14px;padding:13px 22px;border-radius:999px;cursor:pointer;transition:.18s}
+  .handoff .cta:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .handoff .fine{display:block;margin-top:10px;font-size:12px;color:var(--faint)}
+  .chips{display:flex;flex-wrap:wrap;gap:8px;padding:14px 16px;background:#fff;border-top:1px solid var(--line)}
+  .chip{font-family:var(--body);font-size:13px;font-weight:600;color:var(--ink);background:var(--surface);
+    border:1px solid var(--line);border-radius:999px;padding:9px 15px;cursor:pointer;transition:.16s}
+  .chip:hover{border-color:var(--red);color:var(--red);background:var(--red-tint)}
+  .chip.act{border-color:var(--red-line);color:var(--red);background:var(--red-tint)}
+  .chip.act:hover{background:var(--red);color:#fff;border-color:var(--red)}
+  .chat-input{display:flex;align-items:center;gap:10px;padding:13px 16px;background:#fff;border-top:1px solid var(--line)}
+  .chat-input input{flex:1;border:0;background:#f1ede9;border-radius:999px;padding:11px 16px;font-family:var(--body);
+    font-size:13.5px;color:var(--ink);outline:none}
+  .chat-input input::placeholder{color:#a8a29e}
+  .chat-input .send{width:34px;height:34px;border:0;border-radius:50%;background:var(--red);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;flex:none}
+  .demo-cap{text-align:center;color:rgba(255,255,255,.55);font-size:13px;margin-top:14px}
+
+  /* ---------- compressed story strip (dream, above the moat) ---------- */
+  .story{background:#1a1413;padding:84px 0 90px}
+  .story .head{text-align:center;max-width:680px;margin:0 auto 44px;padding:0 24px}
+  .story .head .eyebrow{color:var(--red-bright)}
+  .story .head h2{font-family:var(--display);color:#fff;font-size:clamp(27px,3.8vw,42px);
+    line-height:1.16;letter-spacing:-.01em;margin-top:14px}
+  .story .head h2 em{font-style:normal;color:var(--red-bright)}
+  .beats{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+  .bcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
+    background:#241a18;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end}
+  .bshot{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;
+    background-image:var(--img,linear-gradient(160deg,#3a2622,#181210))}
+  .bshot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
+    rgba(20,15,14,.05) 0%,rgba(20,15,14,.42) 40%,rgba(20,15,14,.93) 100%)}
+  .bcard .nm{position:absolute;top:13px;left:15px;z-index:3;font-family:var(--display);
+    color:var(--red-bright);font-size:16px}
+  .binner{position:relative;z-index:2;padding:0 13px 14px;display:flex;flex-direction:column}
+  .youbub{align-self:flex-end;max-width:85%;margin-bottom:8px;background:rgba(255,255,255,.93);
+    color:var(--ink);border-radius:14px 14px 5px 14px;padding:9px 12px;font-size:11.5px;
+    font-weight:500;line-height:1.4;box-shadow:0 4px 14px -4px rgba(0,0,0,.45)}
+  .cpbub{align-self:flex-start;display:flex;gap:8px;align-items:flex-start;max-width:96%;background:var(--red);
+    border-radius:14px 14px 14px 5px;padding:10px 12px;box-shadow:0 8px 22px -8px rgba(0,0,0,.6)}
+  .cpbub .cpav{flex:none;width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,.25);
+    color:#fff;font-weight:800;font-size:8.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .cpbub p{color:#fff;font-size:12px;line-height:1.5}
+  @media(max-width:920px){.beats{grid-template-columns:repeat(2,1fr);max-width:640px}
+    .beats .bcard:last-child{grid-column:1/-1;min-height:340px}}
+  @media(max-width:520px){.beats{grid-template-columns:1fr;max-width:380px}
+    .beats .bcard:last-child{min-height:440px}}
+
+  /* ---------- generic section ---------- */
+  .pad{padding:88px 0}
+  .center{text-align:center}
+  h2.sec{font-family:var(--display);font-size:clamp(28px,4vw,44px);line-height:1.14;letter-spacing:-.01em;margin:16px 0 14px}
+  p.lead{color:var(--muted);font-size:17px;max-width:560px;margin:0 auto;line-height:1.6}
+
+  /* ---------- the moat / why the human ---------- */
+  .moat{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:840px;margin:38px auto 0}
+  .col{border-radius:18px;padding:26px 26px;border:1px solid var(--line);background:var(--surface)}
+  .col.hl{background:var(--red-tint);border-color:var(--red-line)}
+  .col .k{font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--faint);margin-bottom:12px}
+  .col.hl .k{color:var(--red)}
+  .col h3{font-family:var(--display);font-size:22px;margin-bottom:10px;line-height:1.2}
+  .col ul{list-style:none}
+  .col li{font-size:14px;color:var(--muted);padding:6px 0 6px 22px;position:relative;line-height:1.5}
+  .col li::before{content:"";position:absolute;left:0;top:13px;width:6px;height:6px;border-radius:50%;background:#c2bcb4}
+  .col.hl li::before{background:var(--red)}
+  .col.hl li{color:var(--ink)}
+  @media(max-width:680px){.split{grid-template-columns:1fr}}
+
+  /* frozen exchanges */
+  .frz-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:14px}
+  .frz{background:#f6f3f0;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column}
+  .frz .h{display:flex;align-items:center;gap:8px;padding:11px 14px;background:var(--red)}
+  .frz .h .a{width:22px;height:22px;border-radius:50%;background:rgba(255,255,255,.22);display:flex;
+    align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:9px}
+  .frz .h b{color:#fff;font-size:12px}
+  .frz .h .g{margin-left:auto;width:7px;height:7px;border-radius:50%;background:#4ade80}
+  .frz .b{padding:14px 13px;display:flex;flex-direction:column;gap:7px;flex:1}
+  .frz .bb{max-width:88%;padding:8px 12px;font-size:12px;line-height:1.5;border-radius:14px}
+  .frz .bb.me{align-self:flex-end;background:var(--red);color:#fff;border-bottom-right-radius:4px}
+  .frz .bb.ai{align-self:flex-start;background:#fff;border:1px solid var(--line);border-bottom-left-radius:4px}
+  .frz .cap{padding:12px 15px;background:#fff;border-top:1px solid var(--line)}
+  .frz .cap .t{font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--red)}
+  .frz .cap .d{font-size:12.5px;color:var(--muted);margin-top:3px;line-height:1.4}
+  @media(max-width:880px){.frz-grid{grid-template-columns:1fr;max-width:400px;margin:14px auto 0}}
+
+  /* ---------- pricing ---------- */
+  .price-sec{background:var(--bg-warm)}
+  .pbox{max-width:540px;margin:0 auto;text-align:center;background:#fff;border:1px solid var(--line);
+    border-radius:24px;padding:46px 38px;box-shadow:0 20px 50px -28px rgba(0,0,0,.18)}
+  .pbox .amt{font-family:var(--display);font-size:60px;line-height:1;color:var(--ink)}
+  .pbox .amt small{font-size:19px;color:var(--muted);font-weight:400;font-family:var(--body)}
+  .pbox .rf{color:var(--red);font-weight:700;font-size:15px;margin-top:8px}
+  .pbox .note{color:var(--muted);font-size:14px;margin-top:6px}
+  .plist{list-style:none;margin:24px 0 28px;display:inline-block;text-align:left}
+  .plist li{display:flex;align-items:flex-start;gap:11px;font-size:14.5px;color:var(--ink);padding:7px 0;line-height:1.45}
+  .plist svg{width:17px;height:17px;color:var(--red);flex:none;margin-top:2px}
+  .guar{display:flex;flex-wrap:wrap;gap:8px 22px;justify-content:center;margin-top:20px}
+  .guar span{font-size:13px;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+  .guar svg{width:14px;height:14px;color:var(--red)}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:680px;margin:30px auto 0}
+  .qa{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:10px;overflow:hidden}
+  .qa summary{list-style:none;cursor:pointer;padding:17px 20px;font-weight:600;font-size:15px;
+    display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .pm{color:var(--red);font-size:20px;font-weight:400;transition:.2s}
+  .qa[open] summary .pm{transform:rotate(45deg)}
+  .qa .ans{padding:0 20px 18px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+  /* ---------- final ---------- */
+  .final{background:linear-gradient(180deg,#241a18,#1a1413);color:#fff;text-align:center}
+  .final h2{font-family:var(--display);font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin-bottom:12px}
+  .final h2 em{font-style:normal;color:var(--red-bright)}
+  .final p{color:rgba(255,255,255,.72);font-size:17px;max-width:480px;margin:0 auto 26px}
+  footer{background:#1a1413;color:rgba(255,255,255,.5);padding:36px 0;text-align:center;font-size:13px}
+  footer b{color:#fff;font-weight:700}
+  footer .fl{margin-top:8px;font-size:12px;color:rgba(255,255,255,.38)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">China<span class="red">Pal</span></div>
+    <a href="#price" class="pill">Real local · whole trip · $39</a>
+  </div>
+</header>
+
+<!-- ============ HERO (message-matched to the search) ============ -->
+<section class="hero">
+  <div class="glow"></div>
+  <svg class="scape" viewBox="0 0 1440 360" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0 360V210C130 165 240 230 360 195C480 160 560 115 700 150C840 185 920 125 1060 160C1200 195 1320 150 1440 185V360Z" fill="#000" opacity=".33"/>
+    <path d="M0 360V275C150 250 270 295 410 265C550 235 650 210 810 245C970 280 1090 230 1230 265C1330 290 1380 280 1440 275V360Z" fill="#000" opacity=".5"/>
+  </svg>
+  <div class="hero-inner">
+    <span class="eyebrow badge"><span class="dt"></span>For your trip to China</span>
+    <!-- [CITY] HEADLINE — mirror the Google search term -->
+    <h1>The China trip<br>a <em>local</em> would actually give you.</h1>
+    <p class="sub">Build it free, right now — then keep a real local in your pocket for the part no app can do: reserving, translating and fixing things while you're there.</p>
+    <div class="hero-trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>The plan is free</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Real people, not just AI</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We don't sell hotels or tickets</span>
+    </div>
+  </div>
+
+  <!-- ===== THE LIVE DEMO ===== -->
+  <div class="demo-shell">
+    <div class="chat">
+      <div class="chat-bar">
+        <div class="av">CP</div><b>ChinaPal Planner</b>
+        <span class="stat"><span class="g"></span>free</span>
+      </div>
+      <div class="chat-body" id="body">
+        <div class="msg ai">Hi — tell me about your China trip and I'll give you the plan a local would actually give you. Free, right now. Tap one to start ↓</div>
+      </div>
+      <div class="chips" id="chips"></div>
+      <div class="chat-input">
+        <input id="inp" placeholder="…or type your own question" autocomplete="off">
+        <button class="send" id="send" aria-label="Send">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M22 2 11 13M22 2l-7 20-4-9-9-4 20-7Z" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+    <p class="demo-cap">Try it — the plan really is free. See where the AI stops and a person takes over.</p>
+  </div>
+</section>
+
+<!-- ============ COMPRESSED STORY STRIP (the dream, after they've tried it) ============ -->
+<section class="story">
+  <div class="head rv">
+    <span class="eyebrow">A real trip · 10 days · Chengdu &amp; Chongqing</span>
+    <h2>This is what your China trip<br><em>actually</em> looks like.</h2>
+  </div>
+  <!-- Each card: full-bleed photo + a real ChinaPal text overlaid. Swap --img
+       (in /public/places) and the bubble copy together. Keep details plausible. -->
+  <div class="beats rv">
+    <div class="bcard">
+      <div class="bshot" style="--img:url('/places/card-hotpot.jpg')"></div>
+      <span class="nm">01</span>
+      <div class="binner">
+        <div class="youbub">Where do we eat tonight — somewhere actually local?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Skip the chains. Two streets back — red stools on the pavement, no English menu. Get the 牛油 broth, order duck intestine and lotus root, and say 微辣 unless you really mean it.</p></div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bshot" style="--img:url('/places/card-hongya-cave.jpg')"></div>
+      <span class="nm">02</span>
+      <div class="binner">
+        <div class="youbub">Is Hongya Cave worth it, or a tourist trap?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Not 7pm with the crowds — go at 9:30. Come in from the top on Cangbai Rd and take the elevator down. Half the people, all the lights.</p></div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bshot" style="--img:url('/places/card-train-window.jpg')"></div>
+      <span class="nm">03</span>
+      <div class="binner">
+        <div class="youbub">Which train to Guiyang — and where do we sit?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Chongqing to Guiyang — book a left-side window, second class. The line runs through the gorges for an hour. Don't sleep through it.</p></div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bshot" style="--img:url('/places/card-panda.jpg')"></div>
+      <span class="nm">04</span>
+      <div class="binner">
+        <div class="youbub">How do we see the pandas without the crowds?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Be at the gate for opening, 7:30, and go left — not right. That's where the cubs are. You'll get them almost to yourself before the tour buses land.</p></div>
+      </div>
+    </div>
+    <div class="bcard">
+      <div class="bshot" style="--img:url('/places/card-fenghuang.jpg')"></div>
+      <span class="nm">05</span>
+      <div class="binner">
+        <div class="youbub">We have a spare day — anywhere worth it?</div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Add a night in Fenghuang on the way back — riverside old town, lit up after dark. Stay on the water, not the new side. You'll thank me.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ THE MOAT — why a human, when AI is free ============ -->
+<section class="moat pad" id="why">
+  <div class="narrow center rv">
+    <span class="eyebrow">The honest part</span>
+    <h2 class="sec">Anyone can get the plan. We're the part that's there.</h2>
+    <p class="lead">The plan is free here — and free everywhere. What you can't get from any chatbot is someone in China while you're in it.</p>
+  </div>
+  <div class="split rv">
+    <div class="col">
+      <div class="k">Free · AI (here or anywhere)</div>
+      <h3>The plan.</h3>
+      <ul>
+        <li>A solid 3-day route</li>
+        <li>Things to do, in good order</li>
+        <li>General food &amp; area ideas</li>
+        <li>Answers to typed questions</li>
+      </ul>
+    </div>
+    <div class="col hl">
+      <div class="k">$39 · a real local, your whole trip</div>
+      <h3>Someone who acts on it.</h3>
+      <ul>
+        <li>Reserves the place with no English line — in Chinese</li>
+        <li>Reads your menu photo at the table and says what to order</li>
+        <li>Briefs your taxi driver so you actually arrive</li>
+        <li>Rebuilds the day when it rains, while it's raining</li>
+        <li>Answers at 9pm when you're lost at the wrong metro exit</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FROZEN REAL EXCHANGES (show, don't tell) ============ -->
+<section class="pad center">
+  <div class="narrow rv">
+    <span class="eyebrow">Not a claim — a look</span>
+    <h2 class="sec">This is the part you're paying for.</h2>
+    <p class="lead">No waiting on this page. This is what it looks like on the trip, frozen in place.</p>
+  </div>
+  <!-- SWAP these three for screenshots of your real exchanges. Specificity is the pitch. -->
+  <div class="frz-grid wrap rv" style="padding:0">
+    <div class="frz">
+      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
+      <div class="b">
+        <div class="bb me">At a hotpot place — menu's only in Chinese, waiter's waiting 😅 📷</div>
+        <div class="bb ai">Order these 4: clear+spicy split broth, beef short rib, hand-pulled noodle, tofu skin. Skip the "premium" set — tourist upsell. Enjoy!</div>
+      </div>
+      <div class="cap"><div class="t">Live, at the table</div><div class="d">A bot can't read your photo at 8pm. We do.</div></div>
+    </div>
+    <div class="frz">
+      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
+      <div class="b">
+        <div class="bb me">Rain wrecked our Saturday plan 😩</div>
+        <div class="bb ai">Skip the lake walk. Tea house in the hills 15 min away — locals go when it rains, misty view's better. Didi sorted, driver briefed. Order the Longjing 🍵</div>
+      </div>
+      <div class="cap"><div class="t">Fixed, in the moment</div><div class="d">Re-planned while it was actually happening.</div></div>
+    </div>
+    <div class="frz">
+      <div class="h"><div class="a">CP</div><b>ChinaPal</b><div class="g"></div></div>
+      <div class="b">
+        <div class="bb me">Driver has no idea where we're going 🚖</div>
+        <div class="bb ai">Show him this: 师傅您好，请走南京西路到静安寺，到地铁站口停就行，谢谢。 You're 6 min away.</div>
+      </div>
+      <div class="cap"><div class="t">In Chinese, instantly</div><div class="d">The thing Google Translate fumbles, handled.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="price-sec pad" id="price">
+  <div class="narrow center rv">
+    <span class="eyebrow">One flat fee · your whole trip</span>
+    <h2 class="sec">Less than one taxi from the airport.</h2>
+  </div>
+  <div class="pbox rv" style="margin-top:34px">
+    <div class="amt">$39<small> / trip</small></div>
+    <div class="rf">One avoided tourist-trap dinner already pays for it.</div>
+    <div class="note">Not per day. Not per question. The whole trip.</div>
+    <ul class="plist">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A real local on call, unlimited, your entire trip</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We reserve the hard places — in Chinese, for you</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Menu photos, signs, driver messages — translated live</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Plans rebuilt on the ground when things change</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>We earn nothing on your bookings — zero reason to upsell</li>
+    </ul>
+    <div><a href="/checkout?plan=chinapal-pass" class="btn btn-primary" id="buy" style="padding:16px 38px">Get a local for the whole trip — $39</a></div>
+    <div class="guar">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Money-back if it didn't help</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>First question free</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ (objection handling + SEO) ============ -->
+<section class="pad">
+  <div class="narrow center rv">
+    <span class="eyebrow">Before you ask</span>
+    <h2 class="sec">The honest answers.</h2>
+  </div>
+  <div class="faq rv">
+    <details class="qa"><summary>Is this just an AI bot? <span class="pm">+</span></summary>
+      <div class="ans">No. The planner above is AI and it's free — keep it forever. What $39 buys is the opposite of a bot: real people in China who reserve, translate and fix things in real time during your trip. That's the part no AI, ours or anyone's, can do.</div></details>
+    <details class="qa"><summary>Do I have to book my hotel and tickets through you? <span class="pm">+</span></summary>
+      <div class="ans">No, and we'd rather you didn't. Book those on Trip.com or wherever's cheapest. We make zero money on your bookings — so we have no reason to ever upsell you. We just tell you the truth and help on the ground.</div></details>
+    <details class="qa"><summary>How fast does a real person reply? <span class="pm">+</span></summary>
+      <div class="ans">A real local — not a bot — usually within the hour, and fast when you're mid-problem. It's a considered human answer, not an instant auto-reply. That's the point: the thoughtful, in-language, on-the-ground response is what you can't get anywhere else.</div></details>
+    <details class="qa"><summary>What if I only have one question? <span class="pm">+</span></summary>
+      <div class="ans">Ask it free — that's the offer, no payment, no signup. If it's worth having someone for the whole trip, it's $39 flat, and money-back if it didn't help.</div></details>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final pad">
+  <div class="narrow rv">
+    <h2>Get the plan free.<br><em>Take a local with you.</em></h2>
+    <p>The itinerary's done and it didn't cost you anything. The part that matters is who's on the other end when you're there.</p>
+    <a href="#price" class="btn btn-primary" style="padding:17px 38px;font-size:16px">Get a local for the whole trip — $39</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>China<span style="color:var(--red-bright)">Pal</span></b> — a real local, one text away, your whole trip in China.</div>
+    <div class="fl">© 2026 ChinaPal · We don't sell hotels or tickets · Book those wherever's cheapest</div>
+  </div>
+</footer>
+
+<script>
+/* ============================================================
+   LIVE PLANNER  —  real Claude (Haiku) via /api/landing-chat.
+   Conversion guardrail: after FREE_LIMIT replies the client shows
+   the $39 handoff and locks the composer. The API route enforces
+   a matching hard cap server-side (defense in depth). The system
+   prompt forbids inventing specific places/prices and tells the
+   model to push booking/translating/on-the-ground asks to the
+   paid human team — so every path still leads to the wall.
+============================================================ */
+(function(){
+  const body=document.getElementById('body'),chips=document.getElementById('chips'),
+        inp=document.getElementById('inp'),send=document.getElementById('send');
+
+  const HANDOFF={
+    title:"Want a real local to check this?",
+    p:"Upgrade to ChinaPal human support. We'll tailor this plan to your exact hotel, dates and budget — then stay on text through your trip for bookings, tickets, and “what now?” moments.",
+    was:"$99",
+    now:"$39",
+    perday:"≈ $6/day for a local on call",
+    cta:"Upgrade to human support",
+    fine:"First message free · money-back if it didn't help"
+  };
+
+  const STARTERS=[
+    "3 days in Beijing, first time — what's the plan?",
+    "Best way to see the pandas in Chengdu?",
+    "Where do locals actually eat in Chongqing?",
+    "Xi'an or Luoyang for history?"
+  ];
+
+  const FREE_LIMIT=3;            // free AI replies, then the wall
+  let userTurns=0, busy=false, walled=false;
+  const convo=[];               // [{role, content}] sent to /api/landing-chat
+
+  const wait=ms=>new Promise(r=>setTimeout(r,ms));
+  const scroll=()=>{body.scrollTop=body.scrollHeight;};
+  function esc(s){return s.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+  function add(cls,html){const d=document.createElement('div');d.className=cls;d.innerHTML=html;body.appendChild(d);scroll();return d;}
+  function typing(){return add('typing','<i></i><i></i><i></i>');}
+
+  function setStarters(){
+    chips.innerHTML='';
+    if(walled)return;
+    STARTERS.forEach(text=>{
+      const b=document.createElement('button');
+      b.className='chip';b.textContent=text;
+      b.onclick=()=>ask(text);chips.appendChild(b);
+    });
+  }
+
+  function handoff(){
+    walled=true;chips.innerHTML='';
+    const d=document.createElement('div');d.className='handoff';
+    d.innerHTML='<h4>'+HANDOFF.title+'</h4><p>'+HANDOFF.p+'</p>'
+      +'<div class="price"><span class="was">'+HANDOFF.was+'</span>'
+      +'<span class="now">'+HANDOFF.now+'</span>'
+      +'<span class="tag">Launch price</span></div>'
+      +'<div class="perday">'+HANDOFF.perday+'</div>'
+      +'<span class="cta">'+HANDOFF.cta+'</span>'
+      +'<span class="fine">'+HANDOFF.fine+'</span>';
+    d.querySelector('.cta').onclick=()=>document.getElementById('price').scrollIntoView({behavior:'smooth'});
+    body.appendChild(d);scroll();
+    inp.disabled=true;send.disabled=true;inp.placeholder='Continue with a real local →';
+  }
+
+  // Reveal the model's reply word-by-word, HTML-safe (textContent, not innerHTML).
+  async function streamText(text){
+    const m=add('msg ai','');m.style.whiteSpace='pre-wrap';
+    const parts=text.split(/(\s+)/);let acc='';
+    for(const p of parts){acc+=p;m.textContent=acc;scroll();await wait(16);}
+  }
+
+  // Format one bullet for scannability: bold the place/action (before the "·"),
+  // and highlight time/price/duration tokens in red. esc() first → injection-safe.
+  function fmtItem(raw){
+    raw=String(raw||'');
+    const hl=s=>esc(s)
+      .replace(/(\d{1,2}(?::\d{2})?\s?(?:am|pm))/gi,'<em>$1</em>')
+      .replace(/(¥\s?\d[\d,]*)/g,'<em>$1</em>')
+      .replace(/\b(\d+(?:\.\d+)?\s?(?:min|mins|hr|hrs|hour|hours|km))\b/gi,'<em>$1</em>');
+    const i=raw.indexOf('·');
+    if(i>=0) return '<strong>'+esc(raw.slice(0,i).trim())+'</strong> · '+hl(raw.slice(i+1).trim());
+    return hl(raw.trim());
+  }
+
+  // Render a structured day-by-day plan as a card (esc() keeps it injection-safe).
+  function renderPlan(days){
+    let h='<div class="ph">Your plan</div>';
+    let curCity='';
+    days.forEach(d=>{
+      const city=String(d.city||'').trim();
+      if(city && city.toLowerCase()!==curCity.toLowerCase()){
+        curCity=city;
+        h+='<div class="sec">'+esc(city)+'</div>';
+      }
+      const items=(Array.isArray(d.items)?d.items:[])
+        .map(it=>'<span class="li">'+fmtItem(it)+'</span>').join('');
+      h+='<div class="row"><div class="d">'+esc(String(d.label||''))+'</div>'
+        +'<div class="t"><b>'+esc(String(d.title||''))+'</b>'+items+'</div></div>';
+    });
+    const el=document.createElement('div');el.className='plan';el.innerHTML=h;
+    body.appendChild(el);scroll();
+  }
+
+  // Flatten a structured reply to plain text for the conversation history.
+  function flatten(d){
+    let s=d.reply||'';
+    (Array.isArray(d.days)?d.days:[]).forEach(x=>{
+      s+='\n'+(x.label?x.label+': ':'')+(x.title||'')
+        +(Array.isArray(x.items)&&x.items.length?' — '+x.items.join('; '):'');
+    });
+    if(d.closing)s+='\n'+d.closing;
+    return s.trim();
+  }
+
+  async function ask(text){
+    text=(text||'').trim();
+    if(!text||busy||walled)return;
+    busy=true;chips.innerHTML='';inp.value='';
+    add('msg me',esc(text));
+    convo.push({role:'user',content:text});
+    userTurns++;
+    const t=typing();
+    let replied=false;
+    try{
+      const res=await fetch('/api/landing-chat',{
+        method:'POST',headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({messages:convo})
+      });
+      const data=await res.json().catch(()=>({}));
+      t.remove();
+      if(data&&data.reply){
+        await streamText(data.reply);
+        if(Array.isArray(data.days)&&data.days.length){await wait(260);renderPlan(data.days);}
+        if(data.closing){await wait(220);await streamText(data.closing);}
+        convo.push({role:'assistant',content:flatten(data)});
+        replied=true;
+      }else{
+        await streamText("I'm having a hiccup reaching the team for a second — try once more, or grab a real local below.");
+      }
+    }catch(e){
+      t.remove();
+      await streamText("I'm having a hiccup reaching the team for a second — try once more, or grab a real local below.");
+    }
+    busy=false;
+    if(replied&&userTurns>=FREE_LIMIT){await wait(450);handoff();}
+    else if(!walled)setStarters();
+  }
+
+  send.onclick=()=>ask(inp.value);
+  inp.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();ask(inp.value);}});
+
+  setStarters();
+
+  /* scroll reveals */
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'-30px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>

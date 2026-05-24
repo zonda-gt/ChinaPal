@@ -6,28 +6,45 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "db:init": "tsx scripts/lib/init-db.ts",
+    "ingest:normalize": "tsx scripts/ingest/01-normalize.ts",
+    "ingest:enrich": "tsx scripts/ingest/02-enrich.ts",
+    "ingest:merge": "tsx scripts/ingest/03-merge-enrichment.ts",
+    "ingest:images": "tsx scripts/ingest/04-images.ts",
+    "ingest:geocode": "tsx scripts/ingest/05-geocode.ts",
+    "ingest:check": "tsx scripts/ingest/06-quality-check.ts",
+    "ingest:all": "tsx scripts/ingest/run-all.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.92.0",
     "@radix-ui/react-slot": "^1.2.4",
+    "@supabase/supabase-js": "^2.106.1",
+    "better-sqlite3": "^12.9.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "dotenv": "^17.4.2",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.6.0",
     "next": "16.2.1",
     "posthog-js": "^1.363.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "tailwind-merge": "^3.5.0"
+    "sqlite-vec": "^0.1.9",
+    "stripe": "^22.1.1",
+    "tailwind-merge": "^3.5.0",
+    "voyageai": "^0.2.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.1",
     "tailwindcss": "^4",
+    "tsx": "^4.21.0",
     "typescript": "^5"
   }
 }

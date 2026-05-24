@@ -2,18 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Link from "next/link";
 import {
   CheckCircle2,
   ChevronDown,
   ArrowRight,
   MessageCircle,
   Smartphone,
-  Train,
-  Utensils,
+  CreditCard,
+  ClipboardCheck,
+  Compass,
   X,
-  Star,
-  Zap,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -27,96 +25,123 @@ const fadeUp = {
   }),
 };
 
+const TRIP_CHECK_HREF = "/checkout?plan=trip-check";
+const PASS_HREF = "/checkout?plan=chinapal-pass";
+
 const plans = [
   {
-    name: "Essential",
-    price: "$29",
-    duration: "3 days",
-    desc: "Short trip or just need help getting set up.",
+    key: "trip-check",
+    name: "Trip Check",
+    price: "$19",
+    unit: "one-time review",
+    desc:
+      "Already have a rough plan? Send it over. A local reviews it and shows you how to make it smoother, more local, and more realistic.",
     features: [
-      "3 days of text support",
-      "Alipay & app setup help",
-      "Up to 20 messages",
-      "WhatsApp or WeChat",
+      "Itinerary review",
+      "Hotel area check",
+      "Route improvements",
+      "What to skip, what to add",
+      "Food and neighborhood ideas",
+      "Day-trip decision help",
+      "One round of local feedback",
     ],
-    cta: "Get Essential",
+    boundary: "One-time review — not live on-trip support.",
+    cta: "Check my trip",
+    href: TRIP_CHECK_HREF,
     highlight: false,
     tag: null,
   },
   {
-    name: "Trip Pass",
-    price: "$49",
-    duration: "10 days",
-    desc: "The most popular option for a standard China trip.",
+    key: "chinapal-pass",
+    name: "ChinaPal Pass",
+    price: "$39",
+    unit: "7 days of local text help",
+    desc:
+      "Text a real local team for 7 days. Planning, food, shopping, routes, ticket guidance, translation, and “what should we do next?” moments.",
     features: [
-      "10 days of text support",
-      "Tailored travel consultation",
-      "Pre-trip setup help",
-      "Unlimited messages",
-      "Train & attraction booking help",
-      "Restaurant & activity advice",
-      "Fast troubleshooting",
-      "WhatsApp or WeChat",
+      "7 days of local text support",
+      "Personalized itinerary help",
+      "Simple day-by-day planning",
+      "Restaurants, cafes, shopping, nightlife",
+      "Hotel area & neighborhood advice",
+      "Attraction & day-trip advice",
+      "Ticket guidance before you book",
+      "Route and transport suggestions",
+      "Translation and Chinese message help",
+      "App chat or WhatsApp support",
     ],
-    cta: "Start Free Trial",
+    boundary:
+      "Best for independent travelers. Multi-city, large groups, or full detailed planning? Ask us for a custom quote.",
+    cta: "Get 7 days of local help",
+    href: PASS_HREF,
     highlight: true,
     tag: "Most popular",
   },
-  {
-    name: "Extended Trip",
-    price: "$79",
-    duration: "21 days",
-    desc: "Longer itinerary or multiple cities across China.",
-    features: [
-      "21 days of text support",
-      "Everything in Trip Pass",
-      "Multi-city itinerary help",
-      "Priority response",
-      "WhatsApp or WeChat",
-    ],
-    cta: "Get Extended",
-    highlight: false,
-    tag: null,
-  },
 ];
 
-const scenarios = [
-  { q: "My Alipay card is not working — what should I do?", emoji: "💳" },
-  { q: "Which train from Shanghai to Hangzhou?", emoji: "🚄" },
-  { q: "Is this restaurant worth going to, or a tourist trap?", emoji: "🍜" },
-  { q: "I'm stuck trying to buy this ticket — workaround?", emoji: "🎟️" },
-  { q: "What should I do in this area tonight?", emoji: "🌆" },
-  { q: "Best way to get to this attraction?", emoji: "🗺️" },
+const comparison = {
+  "Trip Check": [
+    "One-time local review",
+    "Best before booking",
+    "Great for rough plans",
+  ],
+  "ChinaPal Pass": [
+    "7 days of local text help",
+    "Best before and during your trip",
+    "Great for first-time China travelers",
+  ],
+};
+
+const askQuestions = [
+  "Is this hotel area good for first-time visitors?",
+  "Can you improve my 3-day Shanghai itinerary?",
+  "Where should we eat near our hotel tonight?",
+  "Should we do Suzhou or Zhujiajiao?",
+  "What should we do after Yu Garden?",
+  "Which ticket should I book on Trip.com?",
+  "Can you translate this menu and tell us what to order?",
+  "Where can I buy interesting gifts that don’t feel touristy?",
+  "Plan a relaxed family day with good food and low walking.",
+];
+
+const isList = [
+  "A local trip advisor by text",
+  "Planning and recommendation help",
+  "Real human support",
+  "China-specific local judgment",
+];
+
+const isNotList = [
+  "A forced package tour",
+  "A hotel reseller",
+  "A ticket markup service",
+  "A generic AI chatbot",
 ];
 
 const faqs = [
   {
-    q: "Is this a tour guide service?",
-    a: "No — ChinaPal is text-based travel support for independent travelers. We help you navigate China's digital systems and answer your questions, but we are not a guided tour service.",
+    q: "Do you book hotels and tickets for me?",
+    a: "You book on platforms you trust — Trip.com, Booking.com, Klook, and the rest. We help you decide what to book and how to plan around it.",
   },
   {
-    q: "Can you help before my trip starts?",
-    a: "Yes — your plan includes help during your trip window. We recommend activating it a few days before you fly so we can help with setup and preparation.",
+    q: "Is this AI or real humans?",
+    a: "ChinaPal Pass gives you real local human support by text.",
   },
   {
-    q: "Do you book everything for me directly?",
-    a: "Yes — we handle bookings for you. Train tickets, attraction reservations, and anything else you need booked. Just tell us what you want and we'll take care of it.",
+    q: "When does my 7-day pass start?",
+    a: "It starts when you send your first real support message — not the moment you check out.",
   },
   {
-    q: "What if I'm traveling longer than 10 days?",
-    a: "Choose the Extended Trip plan for 21 days, or purchase an additional Trip Pass to extend your support window.",
+    q: "Can I use WhatsApp?",
+    a: "Yes. After checkout you can choose app chat or WhatsApp.",
   },
   {
-    q: "Which messaging apps do you support?",
-    a: "We support WhatsApp and WeChat. You can choose whichever is more convenient for you.",
+    q: "Who is this best for?",
+    a: "First-time China travelers, couples, families, and independent travelers who want local help without joining a group tour.",
   },
   {
-    q: "Is this for emergencies?",
-    a: "ChinaPal is for travel support and local guidance, not emergency services. For genuine emergencies, contact local services (110 police, 120 ambulance in China).",
-  },
-  {
-    q: "Can I ask more than one question?",
-    a: "Trip Pass and Extended Trip plans include unlimited messages. The Essential plan includes up to 20 messages.",
+    q: "What if my trip is very complex?",
+    a: "For multi-city trips, large groups, or detailed full planning, contact us for a custom quote.",
   },
 ];
 
@@ -133,7 +158,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
         </span>
         <ChevronDown
           size={16}
-          className={`shrink-0 text-[#78716C] transition-transform duration-200 ${open ? "rotate-180" : ""}`}
+          className={`shrink-0 text-[#78716C] transition-transform duration-200 ${
+            open ? "rotate-180" : ""
+          }`}
         />
       </button>
       <AnimatePresence initial={false}>
@@ -145,7 +172,9 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <p className="font-body text-sm text-[#78716C] leading-relaxed pb-5">{a}</p>
+            <p className="font-body text-sm text-[#78716C] leading-relaxed pb-5">
+              {a}
+            </p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -155,18 +184,22 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function Product() {
   return (
-    <div className="min-h-screen bg-[#FAFAF9]">
+    <div className="min-h-screen bg-[#FAFAF9] pb-24 md:pb-0">
       <Navbar />
 
       {/* ══════════════════════════════════════════
-          HERO — Superhuman centered
+          HERO
           ══════════════════════════════════════════ */}
-      <section className="pt-32 pb-20 text-center">
+      <section className="pt-32 pb-16 text-center">
         <div className="cp-container max-w-2xl mx-auto">
-          <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5, delay: 0 }}>
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
             <span className="pill-badge bg-[#FEF2F2] text-[#DC2626] border border-[#FECACA] mb-6">
               <span className="w-1.5 h-1.5 rounded-full bg-[#DC2626]" />
-              Simple, flat pricing
+              Local help for your China trip
             </span>
           </motion.div>
 
@@ -176,52 +209,72 @@ export default function Product() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.08 }}
           >
-            Your China trip,
+            Choose your level of
             <br />
-            <span className="italic text-[#DC2626]">backed up.</span>
+            <span className="italic text-[#DC2626]">local China help.</span>
           </motion.h1>
 
           <motion.p
-            className="font-body text-base text-[#78716C] leading-relaxed max-w-md mx-auto mb-8"
+            className="font-body text-base text-[#78716C] leading-relaxed max-w-lg mx-auto mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.16 }}
           >
-            10 days of local help by text — for setup, bookings, transport, and
-            day-to-day questions. Travel independently, with backup.
+            Book hotels and tickets on platforms you trust. Use ChinaPal for
+            local judgment, better recommendations, trip planning, and
+            real-time help by text.
           </motion.p>
 
-          {/* Mini social proof */}
           <motion.div
-            className="flex items-center justify-center gap-2"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.55, delay: 0.24 }}
           >
-            <div className="flex -space-x-1.5">
-              {["S", "J", "L", "M", "A"].map((l, i) => (
-                <div
-                  key={i}
-                  className="w-7 h-7 rounded-full border-2 border-white bg-[#FEF2F2] flex items-center justify-center text-[10px] font-display font-bold text-[#DC2626]"
-                >
-                  {l}
-                </div>
-              ))}
-            </div>
-            <div className="flex gap-0.5">
-              {[1,2,3,4,5].map(s => <Star key={s} size={12} className="fill-[#DC2626] text-[#DC2626]" />)}
-            </div>
-            <span className="font-body text-xs text-[#78716C]">100+ travelers helped</span>
+            <a
+              href={PASS_HREF}
+              className="btn-primary text-sm px-7 py-3.5 w-full sm:w-auto justify-center"
+            >
+              Get 7 days of local help
+              <ArrowRight size={16} />
+            </a>
+            <a
+              href={TRIP_CHECK_HREF}
+              className="font-body font-semibold text-sm px-7 py-3.5 rounded-full border border-[#E7E5E4] text-[#111110] hover:border-[#DC2626] hover:text-[#DC2626] hover:bg-[#FEF2F2] transition-all w-full sm:w-auto text-center"
+            >
+              Check my trip
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.32 }}
+          >
+            {[
+              "No forced travel packages",
+              "App or WhatsApp support",
+              "Built for foreign travelers in China",
+            ].map((chip) => (
+              <div
+                key={chip}
+                className="flex items-center gap-1.5 font-body text-xs text-[#78716C]"
+              >
+                <CheckCircle2 size={12} className="text-[#DC2626] shrink-0" />
+                {chip}
+              </div>
+            ))}
           </motion.div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          PRICING CARDS
+          PRICING CARDS (2 tiers)
           ══════════════════════════════════════════ */}
-      <section className="pb-20">
-        <div className="cp-container max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-4">
+      <section className="pb-16">
+        <div className="cp-container max-w-3xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4">
             {plans.map((plan, i) => (
               <motion.div
                 key={plan.name}
@@ -246,41 +299,68 @@ export default function Product() {
 
                 <div className="p-7 flex-1 flex flex-col">
                   <div className="mb-6">
-                    <p className={`font-body text-xs font-semibold uppercase tracking-widest mb-2 ${plan.highlight ? "text-white/50" : "text-[#78716C]"}`}>
+                    <p
+                      className={`font-body text-xs font-semibold uppercase tracking-widest mb-2 ${
+                        plan.highlight ? "text-white/50" : "text-[#78716C]"
+                      }`}
+                    >
                       {plan.name}
                     </p>
                     <div className="flex items-baseline gap-1.5 mb-1">
-                      <span className={`font-display text-4xl ${plan.highlight ? "text-white" : "text-[#111110]"}`}>
+                      <span
+                        className={`font-display text-4xl ${
+                          plan.highlight ? "text-white" : "text-[#111110]"
+                        }`}
+                      >
                         {plan.price}
                       </span>
-                      <span className={`font-body text-sm ${plan.highlight ? "text-white/40" : "text-[#A8A29E]"}`}>
-                        per trip
+                      <span
+                        className={`font-body text-sm ${
+                          plan.highlight ? "text-white/40" : "text-[#A8A29E]"
+                        }`}
+                      >
+                        {plan.unit}
                       </span>
                     </div>
-                    <p className={`font-body text-xs mb-3 ${plan.highlight ? "text-white/40" : "text-[#A8A29E]"}`}>
-                      {plan.duration} of support
-                    </p>
-                    <p className={`font-body text-sm leading-relaxed ${plan.highlight ? "text-white/60" : "text-[#78716C]"}`}>
+                    <p
+                      className={`font-body text-sm leading-relaxed mt-3 ${
+                        plan.highlight ? "text-white/60" : "text-[#78716C]"
+                      }`}
+                    >
                       {plan.desc}
                     </p>
                   </div>
 
-                  <div className="flex-1 space-y-2.5 mb-7">
+                  <div className="flex-1 space-y-2.5 mb-6">
                     {plan.features.map((f) => (
                       <div key={f} className="flex items-start gap-2.5">
                         <CheckCircle2
                           size={14}
-                          className={`shrink-0 mt-0.5 ${plan.highlight ? "text-[#DC2626]" : "text-[#A8A29E]"}`}
+                          className={`shrink-0 mt-0.5 ${
+                            plan.highlight ? "text-[#DC2626]" : "text-[#A8A29E]"
+                          }`}
                         />
-                        <span className={`font-body text-sm ${plan.highlight ? "text-white/80" : "text-[#111110]"}`}>
+                        <span
+                          className={`font-body text-sm ${
+                            plan.highlight ? "text-white/85" : "text-[#111110]"
+                          }`}
+                        >
                           {f}
                         </span>
                       </div>
                     ))}
                   </div>
 
+                  <p
+                    className={`font-body text-xs italic leading-relaxed mb-5 ${
+                      plan.highlight ? "text-white/45" : "text-[#A8A29E]"
+                    }`}
+                  >
+                    {plan.boundary}
+                  </p>
+
                   <a
-                    href="/start"
+                    href={plan.href}
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
                       plan.highlight
                         ? "bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-[0_2px_12px_rgba(220,38,38,0.4)]"
@@ -300,69 +380,58 @@ export default function Product() {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
-            custom={3}
+            custom={2}
           >
-            No subscription. No hidden fees. Pay once per trip.
+            Pay once. No subscription. No hidden fees.
           </motion.p>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          WHAT'S INCLUDED — bento mini
+          COMPARISON STRIP
           ══════════════════════════════════════════ */}
-      <section className="section bg-white">
+      <section className="pb-20">
         <div className="cp-container max-w-3xl mx-auto">
           <motion.div
-            className="text-center mb-12"
+            className="grid sm:grid-cols-2 gap-4"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeUp}
           >
-            <p className="font-body text-xs font-semibold text-[#DC2626] uppercase tracking-widest mb-3">
-              What&apos;s included
-            </p>
-            <h2 className="font-display text-3xl md:text-4xl text-[#111110]">
-              Four areas.
-              <span className="italic"> Full coverage.</span>
-            </h2>
-          </motion.div>
-
-          <div className="grid sm:grid-cols-2 gap-4">
-            {[
-              { icon: Zap, title: "Tailored travel consultation", desc: "Share your trip details and get personalised advice on itinerary, timing, and what to prioritise for your cities." },
-              { icon: Smartphone, title: "Pre-trip setup", desc: "Alipay, essential apps, transport basics, and practical prep before arrival." },
-              { icon: MessageCircle, title: "In-trip troubleshooting", desc: "Get help when payments, transport, bookings, or local systems get confusing." },
-              { icon: Train, title: "Booking & transport", desc: "Guidance with trains, attractions, taxis, and key trip logistics." },
-              { icon: Utensils, title: "Local travel advice", desc: "Ask about places, timing, routes, food, neighborhoods, and what's worth doing." },
-            ].map((item, i) => (
-              <motion.div
-                key={item.title}
-                className="bg-[#FAFAF9] rounded-2xl border border-[#E7E5E4] p-6 card-hover"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                variants={fadeUp}
-                custom={i}
+            {Object.entries(comparison).map(([name, items], idx) => (
+              <div
+                key={name}
+                className={`rounded-2xl p-6 border ${
+                  idx === 1
+                    ? "bg-[#FEF2F2] border-[#FECACA]"
+                    : "bg-white border-[#E7E5E4]"
+                }`}
               >
-                <div className="w-9 h-9 rounded-xl bg-[#FEF2F2] flex items-center justify-center mb-4">
-                  <item.icon size={16} className="text-[#DC2626]" />
-                </div>
-                <h3 className="font-display text-base text-[#111110] mb-1.5">{item.title}</h3>
-                <p className="font-body text-sm text-[#78716C] leading-relaxed">{item.desc}</p>
-              </motion.div>
+                <p className="font-body text-xs font-semibold uppercase tracking-widest text-[#DC2626] mb-3">
+                  {name}
+                </p>
+                <ul className="space-y-2">
+                  {items.map((item) => (
+                    <li
+                      key={item}
+                      className="font-display text-base text-[#111110] leading-snug"
+                    >
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             ))}
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* ══════════════════════════════════════════
-          EXAMPLE SCENARIOS — dark section
+          WHAT CAN YOU ASK CHINAPAL?
           ══════════════════════════════════════════ */}
-      <section className="relative overflow-hidden bg-[#111110] py-20">
-        <div className="absolute inset-0 dot-grid opacity-25" />
-        <div className="absolute inset-0 bg-gradient-to-br from-[#DC2626]/8 via-transparent to-transparent" />
-        <div className="relative z-10 cp-container max-w-3xl mx-auto">
+      <section className="section bg-white">
+        <div className="cp-container max-w-4xl mx-auto">
           <motion.div
             className="text-center mb-10"
             initial="hidden"
@@ -373,24 +442,25 @@ export default function Product() {
             <p className="font-body text-xs font-semibold text-[#DC2626] uppercase tracking-widest mb-3">
               Real questions
             </p>
-            <h2 className="font-display text-3xl text-white">
-              What travelers ask us
+            <h2 className="font-display text-3xl md:text-4xl text-[#111110]">
+              What can you ask ChinaPal?
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 gap-3">
-            {scenarios.map((s, i) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {askQuestions.map((q, i) => (
               <motion.div
-                key={s.q}
-                className="glass-card px-5 py-4 flex items-start gap-3"
+                key={q}
+                className="bg-[#FAFAF9] rounded-2xl border border-[#E7E5E4] px-5 py-4 card-hover"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
               >
-                <span className="text-xl shrink-0 mt-0.5">{s.emoji}</span>
-                <p className="font-body text-sm text-white/75 italic leading-relaxed">&ldquo;{s.q}&rdquo;</p>
+                <p className="font-body text-sm text-[#111110] italic leading-relaxed">
+                  &ldquo;{q}&rdquo;
+                </p>
               </motion.div>
             ))}
           </div>
@@ -398,11 +468,81 @@ export default function Product() {
       </section>
 
       {/* ══════════════════════════════════════════
-          WHO IT'S FOR
+          HOW IT WORKS
           ══════════════════════════════════════════ */}
       <section className="section bg-[#FAFAF9]">
+        <div className="cp-container max-w-4xl mx-auto">
+          <motion.div
+            className="text-center mb-12"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <p className="font-body text-xs font-semibold text-[#DC2626] uppercase tracking-widest mb-3">
+              How it works
+            </p>
+            <h2 className="font-display text-3xl md:text-4xl text-[#111110]">
+              Three simple steps.
+            </h2>
+          </motion.div>
+
+          <div className="grid md:grid-cols-3 gap-4">
+            {[
+              {
+                icon: ClipboardCheck,
+                step: "01",
+                title: "Choose a plan",
+                desc: "Trip Check for a one-time review, or ChinaPal Pass for 7 days of local text help.",
+              },
+              {
+                icon: Compass,
+                step: "02",
+                title: "Tell us your trip",
+                desc: "Share your dates, cities, hotel options, or questions. We get to work on local recommendations.",
+              },
+              {
+                icon: MessageCircle,
+                step: "03",
+                title: "Get local help by app or WhatsApp",
+                desc: "Chat where you prefer. Your 7-day Pass starts when you send your first real support message.",
+              },
+            ].map((step, i) => (
+              <motion.div
+                key={step.step}
+                className="bg-white rounded-2xl border border-[#E7E5E4] p-6 card-hover"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                variants={fadeUp}
+                custom={i}
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-9 h-9 rounded-xl bg-[#FEF2F2] flex items-center justify-center">
+                    <step.icon size={16} className="text-[#DC2626]" />
+                  </div>
+                  <span className="font-display text-xs text-[#A8A29E] tracking-widest">
+                    {step.step}
+                  </span>
+                </div>
+                <h3 className="font-display text-lg text-[#111110] mb-1.5">
+                  {step.title}
+                </h3>
+                <p className="font-body text-sm text-[#78716C] leading-relaxed">
+                  {step.desc}
+                </p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          WHAT CHINAPAL IS / ISN'T
+          ══════════════════════════════════════════ */}
+      <section className="section bg-white">
         <div className="cp-container max-w-3xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4">
             <motion.div
               initial="hidden"
               whileInView="visible"
@@ -410,19 +550,20 @@ export default function Product() {
               variants={fadeUp}
               custom={0}
             >
-              <div className="bg-white rounded-2xl border border-[#E7E5E4] p-7">
-                <h3 className="font-display text-xl text-[#111110] mb-5">Best for</h3>
+              <div className="bg-[#FAFAF9] rounded-2xl border border-[#E7E5E4] p-7 h-full">
+                <h3 className="font-display text-xl text-[#111110] mb-5">
+                  ChinaPal <span className="italic text-[#DC2626]">is</span>
+                </h3>
                 <div className="space-y-3">
-                  {[
-                    "First-time travelers to China",
-                    "Independent travelers who want backup",
-                    "Anyone worried about payments & transport",
-                    "Couples, families, and solo travelers",
-                    "Anyone who wants local knowledge by text",
-                  ].map((item) => (
+                  {isList.map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
-                      <CheckCircle2 size={14} className="text-[#DC2626] shrink-0" />
-                      <span className="font-body text-sm text-[#111110]">{item}</span>
+                      <CheckCircle2
+                        size={14}
+                        className="text-[#DC2626] shrink-0"
+                      />
+                      <span className="font-body text-sm text-[#111110]">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
@@ -436,26 +577,93 @@ export default function Product() {
               variants={fadeUp}
               custom={1}
             >
-              <div className="bg-white rounded-2xl border border-[#E7E5E4] p-7">
+              <div className="bg-[#FAFAF9] rounded-2xl border border-[#E7E5E4] p-7 h-full">
                 <h3 className="font-display text-xl text-[#111110] mb-5">
-                  What ChinaPal is <span className="italic">not</span>
+                  ChinaPal is <span className="italic">not</span>
                 </h3>
                 <div className="space-y-3">
-                  {[
-                    "Guided tours or in-person accompaniment",
-                    "Visa applications or immigration services",
-                    "24/7 emergency rescue services",
-                    "In-person translation",
-                    "Full luxury concierge services",
-                  ].map((item) => (
+                  {isNotList.map((item) => (
                     <div key={item} className="flex items-center gap-2.5">
                       <X size={14} className="text-[#A8A29E] shrink-0" />
-                      <span className="font-body text-sm text-[#78716C]">{item}</span>
+                      <span className="font-body text-sm text-[#78716C]">
+                        {item}
+                      </span>
                     </div>
                   ))}
                 </div>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════
+          PAYMENT + CHAT CHANNEL
+          ══════════════════════════════════════════ */}
+      <section className="section bg-[#FAFAF9]">
+        <div className="cp-container max-w-3xl mx-auto">
+          <motion.div
+            className="text-center mb-10"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <h2 className="font-display text-3xl md:text-4xl text-[#111110] mb-3">
+              Pay securely on ChinaPal.
+              <br />
+              <span className="italic text-[#DC2626]">Chat where you prefer.</span>
+            </h2>
+            <p className="font-body text-sm text-[#78716C] max-w-md mx-auto">
+              Checkout happens on the website — not inside WhatsApp. After
+              payment, choose your support channel.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 gap-4">
+            <motion.div
+              className="bg-white rounded-2xl border border-[#E7E5E4] p-6 card-hover"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={0}
+            >
+              <div className="w-9 h-9 rounded-xl bg-[#FEF2F2] flex items-center justify-center mb-4">
+                <Smartphone size={16} className="text-[#DC2626]" />
+              </div>
+              <h3 className="font-display text-base text-[#111110] mb-1.5">
+                In-app chat
+              </h3>
+              <p className="font-body text-sm text-[#78716C] leading-relaxed">
+                Best for saved plans and organized recommendations you can come
+                back to.
+              </p>
+            </motion.div>
+
+            <motion.div
+              className="bg-white rounded-2xl border border-[#E7E5E4] p-6 card-hover"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+              custom={1}
+            >
+              <div className="w-9 h-9 rounded-xl bg-[#FEF2F2] flex items-center justify-center mb-4">
+                <MessageCircle size={16} className="text-[#DC2626]" />
+              </div>
+              <h3 className="font-display text-base text-[#111110] mb-1.5">
+                WhatsApp
+              </h3>
+              <p className="font-body text-sm text-[#78716C] leading-relaxed">
+                Best for quick on-the-go help while you&apos;re out exploring.
+              </p>
+            </motion.div>
+          </div>
+
+          <div className="flex items-center justify-center gap-2 mt-6 font-body text-xs text-[#A8A29E]">
+            <CreditCard size={12} />
+            Secure checkout. Pick your channel right after payment.
           </div>
         </div>
       </section>
@@ -504,28 +712,46 @@ export default function Product() {
             variants={fadeUp}
           >
             <h2 className="font-display text-4xl md:text-5xl text-[#111110] mb-4 leading-[1.05]">
-              Travel independently.
+              Plan smarter. Travel better.
               <br />
-              <span className="italic text-[#DC2626]">With backup.</span>
+              <span className="italic text-[#DC2626]">
+                Text a local when you need help.
+              </span>
             </h2>
             <p className="font-body text-sm text-[#78716C] mb-8 leading-relaxed">
-              $49 per trip. 10 days of human-based text support.
+              Trip Check is for improving a plan once. ChinaPal Pass is for
+              having a local China team you can text throughout your trip.
             </p>
-            <a
-              href="/start"
-              className="btn-primary text-base px-8 py-3.5"
-            >
-              Start Free Trial
-              <ArrowRight size={16} />
-            </a>
-            <p className="font-body text-xs text-[#A8A29E] mt-4">
-              No subscription. Pay once per trip.
-            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href={PASS_HREF} className="btn-primary text-base px-8 py-3.5">
+                Get 7 days of local help
+                <ArrowRight size={16} />
+              </a>
+              <a
+                href={TRIP_CHECK_HREF}
+                className="font-body font-semibold text-sm px-7 py-3.5 rounded-full border border-[#E7E5E4] text-[#111110] hover:border-[#DC2626] hover:text-[#DC2626] hover:bg-[#FEF2F2] transition-all w-full sm:w-auto text-center"
+              >
+                Check my trip
+              </a>
+            </div>
           </motion.div>
         </div>
       </section>
 
       <Footer />
+
+      {/* ══════════════════════════════════════════
+          STICKY MOBILE CTA
+          ══════════════════════════════════════════ */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-40 px-4 pb-4 pt-3 bg-gradient-to-t from-[#FAFAF9] via-[#FAFAF9]/95 to-transparent">
+        <a
+          href={PASS_HREF}
+          className="flex items-center justify-center gap-2 w-full bg-[#DC2626] text-white font-body font-semibold text-sm py-3.5 rounded-full shadow-[0_8px_24px_rgba(220,38,38,0.35)] active:scale-[0.98] transition-transform"
+        >
+          Get 7 days of local help — $39
+          <ArrowRight size={16} />
+        </a>
+      </div>
     </div>
   );
 }

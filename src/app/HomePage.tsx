@@ -289,6 +289,7 @@ export default function HomePage() {
       <ComparisonSection />
       <FeaturesSection />
       <TestimonialsSection />
+      <PricingSection />
       <CtaSection />
       <Footer />
     </div>

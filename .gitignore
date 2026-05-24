@@ -40,3 +40,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 .wrangler/
+
+# planner pipeline data
+/data/db/*.sqlite
+/data/db/*.sqlite-*
+/data/cache/
