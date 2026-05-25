@@ -92,14 +92,12 @@
   .cmp-sec{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
   .cmp{max-width:820px;margin:34px auto 0;border:1px solid var(--line);border-radius:18px;overflow:hidden;
     box-shadow:0 20px 50px -30px rgba(0,0,0,.2)}
-  .cmp .crow{display:grid;grid-template-columns:1.25fr 1fr 1.1fr;align-items:stretch}
+  .cmp .crow{display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
   .cmp .crow+.crow{border-top:1px solid var(--line)}
   .cmp .crow>div{padding:14px 18px;font-size:14.5px;display:flex;align-items:center}
-  .cmp .lab{color:var(--muted);font-weight:600;background:var(--surface)}
   .cmp .guide{color:var(--ink)}
   .cmp .cp{background:var(--red-tint);color:var(--ink);font-weight:600;border-left:1px solid var(--red-line)}
   .cmp .chead{padding:16px 18px;font-weight:800;font-size:13px;letter-spacing:.04em}
-  .cmp .chead.lab{background:var(--ink);color:#fff;font-family:var(--display);font-weight:400;font-size:15px;letter-spacing:0}
   .cmp .chead.guide{background:#f1ede9;color:var(--faint);text-transform:uppercase}
   .cmp .chead.cp{background:var(--red);color:#fff;text-transform:uppercase;border-left:1px solid var(--red)}
   .cmp .cp b{color:var(--red);font-weight:800}
@@ -181,16 +179,10 @@
     .anchor{grid-template-columns:1fr;gap:6px}
     .anchor .arr{transform:rotate(90deg);margin:4px 0}
     .flex-grid{grid-template-columns:1fr;max-width:440px}
-    /* comparison: add a side gutter so it doesn't jam the edges, and reflow each row
-       to [attribute] over [Private guide | ChinaPal] for a clean side-by-side read */
+    /* comparison: side gutter + tighter cells (clean 2 columns, same as desktop) */
     .cmp{margin:26px 16px 0}
-    .cmp .crow{grid-template-columns:1fr 1fr;grid-template-areas:"lab lab" "guide cp"}
-    .cmp .crow>div{padding:11px 13px;font-size:13px;align-items:flex-start;line-height:1.4}
-    .cmp .crow>div.lab{display:none}
-    .cmp .guide{grid-area:guide}
-    .cmp .cp{grid-area:cp}
-    .cmp .chead.lab{display:none}
-    .cmp .chead{font-size:11px;padding:12px 13px}
+    .cmp .crow>div{padding:11px 14px;font-size:13px;align-items:flex-start;line-height:1.4}
+    .cmp .chead{font-size:11px;padding:12px 14px}
   }
   @media(max-width:600px){
     .pbox{margin:0 16px;padding:30px 22px 26px;border-radius:16px}
@@ -239,44 +231,36 @@
   </div>
   <div class="cmp rv">
     <div class="crow">
-      <div class="chead lab">How it compares</div>
       <div class="chead guide">Private guide</div>
       <div class="chead cp">ChinaPal</div>
     </div>
     <div class="crow">
-      <div class="lab">What it costs</div>
-      <div class="guide">≈ $100–200 / day</div>
-      <div class="cp"><b>$39</b> · your whole trip</div>
+      <div class="guide">≈ $100–200 a day</div>
+      <div class="cp"><b>$39</b> — your whole trip</div>
     </div>
     <div class="crow">
-      <div class="lab">Your schedule</div>
-      <div class="guide">Fixed hours &amp; route</div>
-      <div class="cp">Anytime you text · your pace</div>
+      <div class="guide">Locked to fixed hours</div>
+      <div class="cp">On call anytime, your pace</div>
     </div>
     <div class="crow">
-      <div class="lab">Presence</div>
       <div class="guide">By your side all day</div>
-      <div class="cp">Only when you want them</div>
+      <div class="cp">There only when you want</div>
     </div>
     <div class="crow">
-      <div class="lab">On your bookings</div>
-      <div class="guide">Often commission-based</div>
-      <div class="cp">We earn nothing — ever</div>
+      <div class="guide">Takes commission on your bookings</div>
+      <div class="cp">Earns nothing on your bookings</div>
     </div>
     <div class="crow">
-      <div class="lab">Translation</div>
-      <div class="guide">One guide, one language</div>
-      <div class="cp">Menus, signs, drivers — live</div>
+      <div class="guide">Translates one language</div>
+      <div class="cp">Translates menus, signs &amp; drivers — live</div>
     </div>
     <div class="crow">
-      <div class="lab">Plans change</div>
-      <div class="guide">Re-book &amp; re-pay</div>
-      <div class="cp">Just text "change of plan"</div>
+      <div class="guide">Re-book &amp; re-pay to change plans</div>
+      <div class="cp">Change plans with one text</div>
     </div>
     <div class="crow">
-      <div class="lab">Off the script</div>
-      <div class="guide">Hard to go off-route</div>
-      <div class="cp">Go anywhere · ask anything</div>
+      <div class="guide">Sticks to the set route</div>
+      <div class="cp">Go anywhere, ask anything</div>
     </div>
   </div>
 </section>
