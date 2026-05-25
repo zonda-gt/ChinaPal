@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- ============================================================
+  GOOGLE ADS LANDING PAGE  ·  angle = "SOLO TRAVEL CHINA, WITHOUT FEELING ALONE"
+  Sells the FEELING: confidence · safety · independence · reassurance · freedom
+  Wedge: "For solo travelers in China — explore freely, with a real local on standby."
+  Target searches: "solo travel China", "travel China alone", "is China safe solo"
+  EDIT PRICE: search  $39
+============================================================= -->
+<title>Travel China solo — without feeling alone | ChinaPal</title>
+<meta name="description" content="For solo travelers in China: explore freely with a real local human on standby. Text them the moment China gets confusing — lost at night, a menu you can't read, plans that fell through. $39, your whole trip.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- hero LCP image (same as home page) — preload so it paints fast on mobile ad traffic -->
+<link rel="preload" as="image" href="https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp" fetchpriority="high">
+<style>
+  :root{
+    --bg:oklch(0.985 0.005 80);--bg-warm:oklch(0.975 0.006 80);--surface:oklch(0.97 0.003 260);
+    --red:oklch(0.48 0.22 25);--red-bright:oklch(0.70 0.18 25);--red-tint:oklch(0.97 0.02 25);
+    --red-line:oklch(0.88 0.06 25);--ink:oklch(0.18 0.01 260);--muted:oklch(0.52 0.01 260);
+    --faint:oklch(0.60 0.01 260);--line:oklch(0.92 0.004 260);
+    --display:"DM Serif Display",Georgia,serif;--body:"Plus Jakarta Sans",system-ui,sans-serif;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:var(--body);-webkit-font-smoothing:antialiased;line-height:1.5}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+  .narrow{max-width:780px;margin:0 auto;padding:0 24px}
+  .red{color:var(--red)}
+  .eyebrow{font-size:12px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;color:var(--red);
+    display:inline-flex;align-items:center;gap:8px;background:var(--red-tint);border:1px solid var(--red-line);
+    padding:7px 16px;border-radius:999px}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--body);
+    font-weight:700;border-radius:999px;padding:15px 30px;font-size:15px;cursor:pointer;border:0;transition:.18s;white-space:nowrap}
+  .btn-primary{background:var(--red);color:#fff}
+  .btn-primary:hover{filter:brightness(1.08);transform:translateY(-1px)}
+  .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.32)}
+  .btn-ghost:hover{background:rgba(255,255,255,.1)}
+  .rv{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .rv.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}}
+
+  /* ---------- HEADER ---------- */
+  header{position:absolute;inset:0 0 auto 0;z-index:20}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:1080px;margin:0 auto;padding:0 24px}
+  .logo{font-size:21px;font-weight:800;letter-spacing:-.02em;color:#fff}
+  .nav .pill{font-size:13px;font-weight:600;color:rgba(255,255,255,.85);border:1px solid rgba(255,255,255,.25);
+    padding:8px 16px;border-radius:999px;backdrop-filter:blur(8px)}
+
+  /* ---------- HERO ---------- */
+  /* same hero image + darkening treatment as the home page (brightness ~0.45 + bottom fade) */
+  .hero{position:relative;overflow:hidden;padding:124px 0 84px;
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,.50) 60%,rgba(26,20,19,.97) 100%),
+      linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+      url('https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp') center/cover no-repeat}
+  .hero .glow{position:absolute;width:620px;height:620px;right:-160px;top:-180px;border-radius:50%;
+    background:radial-gradient(circle,oklch(0.55 0.20 25 /.32),transparent 65%);filter:blur(18px)}
+  .hero-inner{position:relative;z-index:2;text-align:center;max-width:760px;margin:0 auto;padding:0 24px}
+  .hero h1{font-family:var(--display);color:#fff;font-size:clamp(36px,5.6vw,62px);line-height:1.05;
+    letter-spacing:-.01em;margin:20px 0 16px;text-shadow:0 2px 26px rgba(0,0,0,.55)}
+  .hero h1 em{font-style:normal;color:var(--red-bright)}
+  .hero .sub{color:rgba(255,255,255,.85);font-size:clamp(16px,1.7vw,19px);max-width:580px;margin:0 auto 26px;
+    line-height:1.55;text-shadow:0 1px 14px rgba(0,0,0,.5)}
+  .hero-cta{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:center;margin-top:22px}
+  .hero-trust span{display:inline-flex;align-items:center;gap:7px;color:rgba(255,255,255,.66);font-size:13px;font-weight:500}
+  .hero-trust svg{width:14px;height:14px;color:var(--red-bright)}
+  .badge{color:#fff;border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.07);backdrop-filter:blur(6px)}
+  .badge .dt{width:7px;height:7px;border-radius:50%;background:#4ade80;animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(74,222,128,.6)}70%{box-shadow:0 0 0 8px rgba(74,222,128,0)}100%{box-shadow:0 0 0 0 rgba(74,222,128,0)}}
+  .kick{margin-top:24px;color:rgba(255,255,255,.72);font-size:15px;font-style:italic}
+  .kick b{font-style:normal;color:#fff;font-weight:600}
+
+  /* ---------- generic section ---------- */
+  .pad{padding:84px 0}
+  .center{text-align:center}
+  h2.sec{font-family:var(--display);font-size:clamp(28px,4vw,44px);line-height:1.14;letter-spacing:-.01em;margin:16px 0 14px}
+  h2.sec em{font-style:normal;color:var(--red)}
+  p.lead{color:var(--muted);font-size:17px;max-width:580px;margin:0 auto;line-height:1.6}
+
+  /* ---------- MOMENTS (worry -> reassurance, no photos) ---------- */
+  .moments{background:var(--bg-warm)}
+  .mgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:860px;margin:42px auto 0}
+  .mcard{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 24px;
+    box-shadow:0 1px 3px rgba(0,0,0,.04)}
+  .mcard .worry{color:var(--muted);font-size:15px;font-style:italic;line-height:1.5}
+  .mcard .div{display:flex;align-items:center;gap:10px;margin:15px 0 13px}
+  .mcard .div .ln{flex:1;height:1px;background:var(--line)}
+  .mcard .div .tag{font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--red)}
+  .mcard .resp{display:flex;gap:11px;color:var(--ink);font-size:14.5px;line-height:1.55}
+  .mcard .resp svg{flex:none;width:18px;height:18px;color:var(--red);margin-top:2px}
+  .mcard .resp b{color:var(--red);font-weight:700}
+
+  /* ---------- WEDGE: explore freely ---------- */
+  .feelings{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 10px;max-width:640px;margin:30px auto 0}
+  .feelings span{font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--red);
+    background:var(--red-tint);border:1px solid var(--red-line);padding:8px 16px;border-radius:999px}
+  .notjust{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 12px;max-width:780px;margin:30px auto 0}
+  .notjust span{font-size:14px;font-weight:600;padding:9px 16px;border-radius:999px;border:1px solid var(--line);background:#fff}
+  .notjust .no{color:var(--faint);text-decoration:line-through;text-decoration-color:var(--red-line)}
+  .notjust .yes{color:#fff;background:var(--red);border-color:var(--red)}
+
+  /* ---------- PRICING (matches the ChinaPal Pass card on the home & product pages) ---------- */
+  .price-sec{background:#fff;border-top:1px solid var(--line)}
+  .pbox{position:relative;display:flex;flex-direction:column;max-width:520px;margin:0 auto;text-align:left;
+    background:#111110;border:1px solid var(--red);border-radius:16px;padding:34px 32px 30px;
+    box-shadow:0 8px 48px rgba(220,38,38,.2)}
+  .ptag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--red);
+    color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .pname{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(255,255,255,.5);margin-bottom:10px}
+  .punit{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:16px}
+  .pamt{display:flex;align-items:baseline;gap:9px;font-family:var(--display);font-weight:700;
+    font-size:clamp(38px,10vw,44px);line-height:1;color:#fff;margin-bottom:14px}
+  .pamt small{font-size:14px;font-weight:400;color:rgba(255,255,255,.4);font-family:var(--body)}
+  .pblurb{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);margin-bottom:22px}
+  .plist{list-style:none;margin:0 0 20px;display:block;text-align:left;flex:1}
+  .plist li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.85);padding:6px 0;line-height:1.45}
+  .plist svg{width:16px;height:16px;color:var(--red);flex:none;margin-top:3px}
+  .pnote{font-size:12px;font-style:italic;color:rgba(255,255,255,.45);line-height:1.5;margin-bottom:18px}
+  .pbuy{display:block;width:100%;text-align:center;background:var(--red);color:#fff;font-weight:700;
+    font-size:15px;padding:14px 22px;border-radius:999px;transition:.18s;cursor:pointer;box-shadow:0 2px 12px rgba(220,38,38,.4)}
+  .pbuy:hover{filter:brightness(1.1);transform:translateY(-1px)}
+  .pbuy:active{transform:scale(.98)}
+  .price-foot{text-align:center;margin-top:18px;color:var(--muted);font-size:14px}
+  .price-foot a{color:var(--red);font-weight:700}
+
+  /* ---------- FAQ ---------- */
+  .faq{max-width:680px;margin:30px auto 0}
+  .qa{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:10px;overflow:hidden}
+  .qa summary{list-style:none;cursor:pointer;padding:17px 20px;font-weight:600;font-size:15px;
+    display:flex;justify-content:space-between;align-items:center;gap:14px}
+  .qa summary::-webkit-details-marker{display:none}
+  .qa summary .pm{color:var(--red);font-size:20px;font-weight:400;transition:.2s}
+  .qa[open] summary .pm{transform:rotate(45deg)}
+  .qa .ans{padding:0 20px 18px;color:var(--muted);font-size:14.5px;line-height:1.6}
+
+  /* ---------- FINAL ---------- */
+  .final{background:linear-gradient(180deg,#241a18,#1a1413);color:#fff;text-align:center}
+  .final h2{font-family:var(--display);font-size:clamp(30px,4.4vw,48px);line-height:1.12;margin-bottom:12px}
+  .final h2 em{font-style:normal;color:var(--red-bright)}
+  .final p{color:rgba(255,255,255,.72);font-size:17px;max-width:480px;margin:0 auto 26px}
+  footer{background:#1a1413;color:rgba(255,255,255,.5);padding:36px 0;text-align:center;font-size:13px}
+  footer b{color:#fff;font-weight:700}
+  footer .fl{margin-top:8px;font-size:12px;color:rgba(255,255,255,.38)}
+
+  /* ---------- responsive ---------- */
+  @media(max-width:760px){
+    .hero{padding:98px 0 64px}
+    .mgrid{grid-template-columns:1fr;max-width:460px}
+  }
+  @media(max-width:600px){ .pbox{margin:0 16px;padding:30px 22px 26px;border-radius:16px} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">China<span class="red">Pal</span></div>
+    <a href="#price" class="pill">A local on standby · $39</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="glow"></div>
+  <div class="hero-inner">
+    <span class="eyebrow badge"><span class="dt"></span>For solo travelers in China</span>
+    <h1>Travel China solo.<br>Without feeling <em>alone</em>.</h1>
+    <p class="sub">A real local human you can text the moment China gets confusing — the wrong metro exit at midnight, a menu you can't read, a plan that just fell apart. Explore freely. Someone's always on standby.</p>
+    <div class="hero-cta">
+      <a href="/checkout?plan=chinapal-pass" class="btn btn-primary">Get a local on standby — $39</a>
+      <a href="/landing-chat" class="btn btn-ghost">Ask a local free →</a>
+    </div>
+    <div class="hero-trust">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A real person, not a bot</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>There whenever you need</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Money-back if it didn't help</span>
+    </div>
+    <p class="kick">Not a tour guide. Not a chaperone. <b>Just backup — one text away.</b></p>
+  </div>
+</section>
+
+<!-- ============ MOMENTS — the feeling, made concrete ============ -->
+<section class="moments pad">
+  <div class="narrow center rv">
+    <span class="eyebrow">You're never actually alone</span>
+    <h2 class="sec">Alone in China.<br>But not <em>actually</em> alone.</h2>
+    <p class="lead">Solo travel is the best — right up until a moment like one of these. That's when a real local, one text away, changes everything.</p>
+  </div>
+  <div class="mgrid rv">
+    <div class="mcard">
+      <div class="worry">"It's late, I don't recognise this street, and my battery's at 12%."</div>
+      <div class="div"><span class="tag">Then</span><span class="ln"></span></div>
+      <div class="resp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>A real local confirms <b>you're safe</b>, gives you the quickest way back, and stays on text until you're in the door.</span></div>
+    </div>
+    <div class="mcard">
+      <div class="worry">"The menu's all characters and the waiter's waiting on me."</div>
+      <div class="div"><span class="tag">Then</span><span class="ln"></span></div>
+      <div class="resp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Snap a photo. In minutes you know <b>exactly what to order</b> — and how to ask for it. Table for one, sorted.</span></div>
+    </div>
+    <div class="mcard">
+      <div class="worry">"My whole plan for tomorrow just fell apart."</div>
+      <div class="div"><span class="tag">Then</span><span class="ln"></span></div>
+      <div class="resp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Two texts and your day's <b>rebuilt</b> around the weather and what's actually worth your time.</span></div>
+    </div>
+    <div class="mcard">
+      <div class="worry">"I just want to know this is normal and I'm not being scammed."</div>
+      <div class="div"><span class="tag">Then</span><span class="ln"></span></div>
+      <div class="resp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Ask anything, any hour. Sometimes you just need a local to say <b>"you're fine, go for it."</b></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPLORE FREELY / THE WEDGE ============ -->
+<section class="pad center" id="why">
+  <div class="narrow rv">
+    <span class="eyebrow">The whole idea</span>
+    <h2 class="sec">Explore freely — with a local <em>on standby</em>.</h2>
+    <p class="lead">You don't want a guide trailing you or a fixed itinerary. You want to wander, get a little lost, do bold things — knowing a real local has your back the second you need them. That's the feeling we sell:</p>
+  </div>
+  <div class="feelings rv">
+    <span>Confidence</span>
+    <span>Safety</span>
+    <span>Independence</span>
+    <span>Reassurance</span>
+    <span>Freedom</span>
+  </div>
+  <div class="notjust rv">
+    <span class="no">A tour guide</span>
+    <span class="no">A rigid itinerary</span>
+    <span class="no">Expensive private service</span>
+    <span class="no">Someone following you</span>
+    <span class="yes">Just a real local, one text away</span>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="price-sec pad" id="price">
+  <div class="narrow center rv">
+    <span class="eyebrow">One flat fee · your whole trip</span>
+    <h2 class="sec">A local in your corner — the whole trip.</h2>
+    <p class="lead">Less than a night in a hostel bar. There for every "wait, what do I do now?" — from landing to your last night.</p>
+  </div>
+  <div class="pbox rv" style="margin-top:40px">
+    <span class="ptag">Most popular</span>
+    <div class="pname">ChinaPal Pass</div>
+    <div class="pamt">$39<small>7 days of local text help</small></div>
+    <p class="pblurb">Text a real local team for 7 days. Planning, food, shopping, routes, ticket guidance, translation, and “what should we do next?” moments.</p>
+    <ul class="plist">
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>7 days of local text support</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Personalized itinerary help</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Simple day-by-day planning</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Restaurants, cafes, shopping, nightlife</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Hotel area &amp; neighborhood advice</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Attraction &amp; day-trip advice</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Ticket guidance before you book</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Route and transport suggestions</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Translation and Chinese message help</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>App chat or WhatsApp support</li>
+    </ul>
+    <p class="pnote">Best for independent travelers. Multi-city, large groups, or full detailed planning? Ask us for a custom quote.</p>
+    <a href="/checkout?plan=chinapal-pass" class="pbuy" id="buy">Get 7 days of local help</a>
+  </div>
+  <p class="price-foot rv">Want to feel it first? <a href="/landing-chat">Ask a local free →</a></p>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="pad" style="background:var(--bg-warm)">
+  <div class="narrow center rv">
+    <span class="eyebrow">Before you ask</span>
+    <h2 class="sec">The honest answers.</h2>
+  </div>
+  <div class="faq rv">
+    <details class="qa"><summary>Is it a real person, or a bot? <span class="pm">+</span></summary>
+      <div class="ans">A real local team in China, answering by text — reassuring, recommending, translating, and fixing things in real time. (There's a free AI planner too if you want a quick draft — but the standby support is human.)</div></details>
+    <details class="qa"><summary>Can I actually trust them? Is it safe? <span class="pm">+</span></summary>
+      <div class="ans">Yes. It's a vetted local team, we never handle your bookings or payments (so there's nothing to scam), and it's money-back if it didn't help. We're the people you turn to when something feels off — not the other way round.</div></details>
+    <details class="qa"><summary>Do you track my location? That feels a bit much. <span class="pm">+</span></summary>
+      <div class="ans">No tracking, ever. We only know what you choose to tell us, only when you text. No one is following you or watching where you go — that's the whole point. You explore; we're on standby.</div></details>
+    <details class="qa"><summary>What if I just need reassurance, not a real problem solved? <span class="pm">+</span></summary>
+      <div class="ans">That's exactly what this is for. Half of solo travel is just wanting someone local to say "yes, that's normal, you're fine." Text us anytime — there are no silly questions.</div></details>
+    <details class="qa"><summary>What if I'm somewhere off the beaten path? <span class="pm">+</span></summary>
+      <div class="ans">As long as you've got data or wifi, we've got you — small towns, night trains, remote trailheads included. The further you wander, the more useful a local on standby becomes.</div></details>
+  </div>
+</section>
+
+<!-- ============ FINAL ============ -->
+<section class="final pad">
+  <div class="narrow rv">
+    <h2>Go everywhere.<br>Just not <em>alone</em>.</h2>
+    <p>Explore China on your own terms — with a real local on standby the whole way.</p>
+    <a href="/checkout?plan=chinapal-pass" class="btn btn-primary" style="padding:17px 38px;font-size:16px">Get a local on standby — $39</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div><b>China<span style="color:var(--red-bright)">Pal</span></b> — a real local on standby, your whole trip in China.</div>
+    <div class="fl">© 2026 ChinaPal · We don't sell hotels or tickets · Book those wherever's cheapest</div>
+  </div>
+</footer>
+
+<script>
+/* reveal on scroll */
+(function(){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'-30px'});
+  document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+</script>
+</body>
+</html>

@@ -172,30 +172,47 @@
   .story .head h2{font-family:var(--display);color:#fff;font-size:clamp(27px,3.8vw,42px);
     line-height:1.16;letter-spacing:-.01em;margin-top:14px}
   .story .head h2 em{font-style:normal;color:var(--red-bright)}
-  .beats{max-width:1080px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
-  .bcard{position:relative;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
-    background:#241a18;min-height:440px;display:flex;flex-direction:column;justify-content:flex-end}
+  /* desktop/tablet: 2-up carousel (scroll-snap) with arrows + dots */
+  .beats-wrap{position:relative;max-width:1180px;margin:0 auto;padding:0 24px}
+  .beats{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;
+    -webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .beats::-webkit-scrollbar{display:none}
+  .beats .bcard{flex:0 0 calc((100% - 20px)/2);scroll-snap-align:start}
+  .beats-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:6;width:46px;height:46px;
+    border-radius:50%;border:0;background:rgba(255,255,255,.94);color:var(--ink);cursor:pointer;
+    display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px -6px rgba(0,0,0,.55);transition:.16s}
+  .beats-nav:hover{background:#fff;transform:translateY(-50%) scale(1.07)}
+  .beats-nav:disabled{opacity:.28;cursor:default;box-shadow:none}
+  .beats-nav.prev{left:8px}.beats-nav.next{right:8px}
+  .beats-nav svg{width:20px;height:20px}
+  .beats-dots{display:flex;justify-content:center;gap:8px;margin-top:26px}
+  .beats-dots button{width:8px;height:8px;padding:0;border:0;border-radius:50%;
+    background:rgba(255,255,255,.28);cursor:pointer;transition:.2s}
+  .beats-dots button.active{background:var(--red-bright);width:22px;border-radius:5px}
+  .bcard{position:relative;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.08);
+    background:#241a18;min-height:520px;display:flex;flex-direction:column;justify-content:flex-end}
   .bshot{position:absolute;inset:0;z-index:0;background-size:cover;background-position:center;
     background-image:var(--img,linear-gradient(160deg,#3a2622,#181210))}
+  /* keep the top of each photo clean; darken only the lower third where the bubbles sit */
   .bshot::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,
-    rgba(20,15,14,.05) 0%,rgba(20,15,14,.42) 40%,rgba(20,15,14,.93) 100%)}
+    rgba(20,15,14,0) 0%,rgba(20,15,14,.10) 42%,rgba(20,15,14,.72) 72%,rgba(20,15,14,.95) 100%)}
   .bcard .nm{position:absolute;top:13px;left:15px;z-index:3;font-family:var(--display);
     color:var(--red-bright);font-size:16px}
   .binner{position:relative;z-index:2;padding:0 13px 14px;display:flex;flex-direction:column}
   .youbub{align-self:flex-end;max-width:85%;margin-bottom:8px;background:rgba(255,255,255,.93);
     color:var(--ink);border-radius:14px 14px 5px 14px;padding:9px 12px;font-size:11.5px;
     font-weight:500;line-height:1.4;box-shadow:0 4px 14px -4px rgba(0,0,0,.45)}
-  .cpbub{align-self:flex-start;display:flex;gap:8px;align-items:flex-start;max-width:96%;background:var(--red);
-    border-radius:14px 14px 14px 5px;padding:10px 12px;box-shadow:0 8px 22px -8px rgba(0,0,0,.6)}
+  .cpbub{align-self:flex-start;display:flex;gap:8px;align-items:flex-start;max-width:93%;background:var(--red);
+    border-radius:15px 15px 15px 5px;padding:11px 13px;box-shadow:0 10px 26px -8px rgba(0,0,0,.6)}
   .cpbub .cpav{flex:none;width:21px;height:21px;border-radius:50%;background:rgba(255,255,255,.25);
     color:#fff;font-weight:800;font-size:8.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
-  .cpbub p{color:#fff;font-size:12px;line-height:1.5}
-  @media(max-width:920px){.beats{grid-template-columns:repeat(2,1fr);max-width:640px}
-    .beats .bcard:last-child{grid-column:1/-1;min-height:340px}}
-  /* phones: single stacked column, full-height cards — every moment seen on a natural scroll */
+  .cpbub p{color:#fff;font-size:12.5px;line-height:1.45}
+  /* phones: drop the carousel — single stacked column, every moment seen on a natural scroll */
   @media(max-width:560px){
-    .beats{grid-template-columns:1fr;max-width:400px;gap:12px}
-    .beats .bcard:last-child{grid-column:auto;min-height:440px}}
+    .beats-wrap{padding:0 16px;max-width:420px}
+    .beats{display:grid;grid-template-columns:1fr;gap:14px;overflow:visible}
+    .beats .bcard{flex:none;min-height:480px}
+    .beats-nav,.beats-dots{display:none}}
 
   /* ---------- generic section ---------- */
   .pad{padding:88px 0}
@@ -238,24 +255,25 @@
   /* ---------- pricing — matches the ChinaPal Pass card on the home & product pages ---------- */
   .price-sec{background:var(--bg-warm)}
   .pbox{position:relative;display:flex;flex-direction:column;max-width:520px;margin:0 auto;text-align:left;
-    background:var(--red);border:1px solid var(--red);border-radius:18px;padding:34px 32px 30px;
-    box-shadow:0 12px 40px -10px rgba(220,38,38,.38)}
-  .ptag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:#fff;
-    color:var(--red);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
-    padding:7px 16px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
-  .pname{font-family:var(--display);font-weight:700;font-size:22px;color:#fff;margin-bottom:2px}
-  .punit{font-size:14px;color:rgba(255,255,255,.78);margin-bottom:16px}
-  .pamt{display:flex;align-items:baseline;gap:8px;font-family:var(--display);font-weight:700;
-    font-size:clamp(42px,11vw,52px);line-height:1;color:#fff;margin-bottom:16px}
-  .pamt small{font-size:17px;font-weight:400;color:rgba(255,255,255,.7);font-family:var(--body)}
-  .pblurb{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin-bottom:20px}
+    background:#111110;border:1px solid var(--red);border-radius:16px;padding:34px 32px 30px;
+    box-shadow:0 8px 48px rgba(220,38,38,.2)}
+  .ptag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);white-space:nowrap;background:var(--red);
+    color:#fff;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;
+    padding:7px 16px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+  .pname{font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    color:rgba(255,255,255,.5);margin-bottom:10px}
+  .punit{font-size:14px;color:rgba(255,255,255,.4);margin-bottom:16px}
+  .pamt{display:flex;align-items:baseline;gap:9px;font-family:var(--display);font-weight:700;
+    font-size:clamp(38px,10vw,44px);line-height:1;color:#fff;margin-bottom:14px}
+  .pamt small{font-size:14px;font-weight:400;color:rgba(255,255,255,.4);font-family:var(--body)}
+  .pblurb{font-size:14px;line-height:1.6;color:rgba(255,255,255,.6);margin-bottom:22px}
   .plist{list-style:none;margin:0 0 20px;display:block;text-align:left;flex:1}
-  .plist li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.92);padding:6px 0;line-height:1.45}
-  .plist svg{width:17px;height:17px;color:#fff;flex:none;margin-top:2px}
-  .pnote{font-size:12.5px;font-style:italic;color:rgba(255,255,255,.6);margin-bottom:18px}
-  .pbuy{display:block;width:100%;text-align:center;background:#fff;color:var(--red);font-weight:700;
-    font-size:15px;padding:15px 22px;border-radius:999px;transition:.18s;cursor:pointer}
-  .pbuy:hover{transform:scale(1.02);filter:brightness(.97)}
+  .plist li{display:flex;align-items:flex-start;gap:10px;font-size:14px;color:rgba(255,255,255,.85);padding:6px 0;line-height:1.45}
+  .plist svg{width:16px;height:16px;color:var(--red);flex:none;margin-top:3px}
+  .pnote{font-size:12px;font-style:italic;color:rgba(255,255,255,.45);line-height:1.5;margin-bottom:18px}
+  .pbuy{display:block;width:100%;text-align:center;background:var(--red);color:#fff;font-weight:700;
+    font-size:15px;padding:14px 22px;border-radius:999px;transition:.18s;cursor:pointer;box-shadow:0 2px 12px rgba(220,38,38,.4)}
+  .pbuy:hover{filter:brightness(1.1);transform:translateY(-1px)}
   .pbuy:active{transform:scale(.98)}
 
   /* ---------- FAQ ---------- */
@@ -336,13 +354,17 @@
   </div>
   <!-- Each card: full-bleed photo + a real ChinaPal text overlaid. Swap --img
        (in /public/places) and the bubble copy together. Keep details plausible. -->
-  <div class="beats rv">
+  <div class="beats-wrap rv">
+    <button class="beats-nav prev" id="beatsPrev" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+    </button>
+    <div class="beats" id="beats">
     <div class="bcard">
       <div class="bshot" style="--img:url('/places/card-hotpot.jpg')"></div>
       <span class="nm">01</span>
       <div class="binner">
         <div class="youbub">Where do we eat tonight — somewhere actually local?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Skip the chains. Two streets back — red stools on the pavement, no English menu. Get the 牛油 broth, order duck intestine and lotus root, and say 微辣 unless you really mean it.</p></div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Skip the chains. Red stools two streets back, no English menu. Get the 牛油 broth — and say 微辣 only if you mean it.</p></div>
       </div>
     </div>
     <div class="bcard">
@@ -350,7 +372,7 @@
       <span class="nm">02</span>
       <div class="binner">
         <div class="youbub">Where do locals actually drink tea — not a tourist spot?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Old Guanyinge teahouse — bamboo chairs, a few yuan a cup, ear-cleaners working the room. Go mid-morning, sit by the window, stay an hour. No one rushes you.</p></div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Old Guanyinge teahouse — bamboo chairs, a few yuan a cup. Go mid-morning, sit by the window, stay an hour.</p></div>
       </div>
     </div>
     <div class="bcard">
@@ -358,7 +380,7 @@
       <span class="nm">03</span>
       <div class="binner">
         <div class="youbub">Which train to Guiyang — and where do we sit?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Chongqing to Guiyang — book a left-side window, second class. The line runs through the gorges for an hour. Don't sleep through it.</p></div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Chongqing to Guiyang — left-side window, second class. An hour through the gorges. Don't sleep through it.</p></div>
       </div>
     </div>
     <div class="bcard">
@@ -366,7 +388,7 @@
       <span class="nm">04</span>
       <div class="binner">
         <div class="youbub">How do we see the pandas without the crowds?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Be at the gate for opening, 7:30, and go left — not right. That's where the cubs are. You'll get them almost to yourself before the tour buses land.</p></div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Be at the gate for 7:30 opening, then go left — that's the cubs. Yours almost alone before the tour buses.</p></div>
       </div>
     </div>
     <div class="bcard">
@@ -374,9 +396,14 @@
       <span class="nm">05</span>
       <div class="binner">
         <div class="youbub">We have a spare day — anywhere worth it?</div>
-        <div class="cpbub"><span class="cpav">CP</span><p>Add a night in Fenghuang on the way back — riverside old town, lit up after dark. Stay on the water, not the new side. You'll thank me.</p></div>
+        <div class="cpbub"><span class="cpav">CP</span><p>Add a night in Fenghuang — riverside old town, lit after dark. Stay on the water, not the new side.</p></div>
       </div>
     </div>
+    </div>
+    <button class="beats-nav next" id="beatsNext" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+    </button>
+    <div class="beats-dots" id="beatsDots"></div>
   </div>
 </section>
 
@@ -390,19 +417,22 @@
   <div class="pbox rv" style="margin-top:40px">
     <span class="ptag">Most popular</span>
     <div class="pname">ChinaPal Pass</div>
-    <div class="punit">A real local, your whole trip in China</div>
-    <div class="pamt">$39<small>/ trip</small></div>
-    <p class="pblurb">One avoided tourist-trap dinner already pays for it. Not per day, not per question — the whole trip.</p>
+    <div class="pamt">$39<small>7 days of local text help</small></div>
+    <p class="pblurb">Text a real local team for 7 days. Planning, food, shopping, routes, ticket guidance, translation, and “what should we do next?” moments.</p>
     <ul class="plist">
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>A real local on call, unlimited — your entire trip</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reserves the place with no English line — in Chinese, for you</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Reads your menu photo at the table and tells you what to order</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Briefs your taxi driver in Chinese so you actually arrive</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Rebuilds the day when it rains — while it's raining</li>
-      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Earns nothing on your bookings — so we never upsell you</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>7 days of local text support</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Personalized itinerary help</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Simple day-by-day planning</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Restaurants, cafes, shopping, nightlife</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Hotel area &amp; neighborhood advice</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Attraction &amp; day-trip advice</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Ticket guidance before you book</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Route and transport suggestions</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>Translation and Chinese message help</li>
+      <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8.5 12.5 2.5 2.5 4.5-5"/></svg>App chat or WhatsApp support</li>
     </ul>
-    <p class="pnote">Money-back if it didn't help · first question free.</p>
-    <a href="/checkout?plan=chinapal-pass" class="pbuy" id="buy">Get a local for the whole trip — $39</a>
+    <p class="pnote">Best for independent travelers. Multi-city, large groups, or full detailed planning? Ask us for a custom quote.</p>
+    <a href="/checkout?plan=chinapal-pass" class="pbuy" id="buy">Get 7 days of local help</a>
   </div>
 </section>
 
@@ -598,6 +628,30 @@
   /* scroll reveals */
   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}}),{threshold:.12,rootMargin:'-30px'});
   document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+})();
+
+/* ===== story-strip carousel (desktop/tablet): 2 cards per view, arrows + dots ===== */
+(function(){
+  const track=document.getElementById('beats');
+  if(!track)return;
+  const prev=document.getElementById('beatsPrev'),next=document.getElementById('beatsNext'),
+        dots=document.getElementById('beatsDots'),cards=[...track.children];
+  const step=()=>{const c=cards[0];if(!c)return 0;const g=parseFloat(getComputedStyle(track).gap)||0;
+    return c.getBoundingClientRect().width+g;};
+  cards.forEach((c,i)=>{const b=document.createElement('button');
+    b.setAttribute('aria-label','Go to slide '+(i+1));
+    b.onclick=()=>track.scrollTo({left:step()*i,behavior:'smooth'});dots.appendChild(b);});
+  function sync(){
+    const s=step()||1,idx=Math.round(track.scrollLeft/s);
+    [...dots.children].forEach((d,i)=>d.classList.toggle('active',i===idx));
+    prev.disabled=track.scrollLeft<=2;
+    next.disabled=track.scrollLeft+track.clientWidth>=track.scrollWidth-2;
+  }
+  prev.onclick=()=>track.scrollBy({left:-step()*2,behavior:'smooth'});
+  next.onclick=()=>track.scrollBy({left:step()*2,behavior:'smooth'});
+  track.addEventListener('scroll',sync,{passive:true});
+  window.addEventListener('resize',sync);
+  sync();
 })();
 </script>
 </body>
