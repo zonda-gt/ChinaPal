@@ -1,5 +1,7 @@
 "use client";
 
+import { useEffect } from "react";
+import posthog from "posthog-js";
 import { CheckCircle2, MessageCircle, Smartphone, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import type { Plan } from "@/lib/plans";
@@ -8,7 +10,39 @@ import { whatsappLink } from "@/lib/plans";
 // Where the actual product lives (the inbound_travel concierge app).
 const APP_URL = "https://app.hellochina.chat";
 
-export default function SuccessClient({ plan }: { plan: Plan }) {
+export default function SuccessClient({
+  plan,
+  sessionId,
+}: {
+  plan: Plan;
+  sessionId: string;
+}) {
+  // Fire the purchase conversion once per Stripe session (dedupes on refresh).
+  useEffect(() => {
+    if (!sessionId) return;
+    const key = `ph_purchase_${sessionId}`;
+    if (sessionStorage.getItem(key)) return;
+    sessionStorage.setItem(key, "1");
+    posthog.capture("purchase_completed", {
+      plan: plan.key,
+      value: plan.price,
+      currency: "USD",
+    });
+
+    // Google Ads conversion (set NEXT_PUBLIC_GOOGLE_ADS_ID + _PURCHASE_LABEL).
+    const adsId = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+    const label = process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL;
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    if (adsId && label && w.gtag) {
+      w.gtag("event", "conversion", {
+        send_to: `${adsId}/${label}`,
+        value: plan.price,
+        currency: "USD",
+        transaction_id: sessionId,
+      });
+    }
+  }, [plan, sessionId]);
+
   return (
     <div className="min-h-screen bg-[#FAFAF9]">
       <Navbar />

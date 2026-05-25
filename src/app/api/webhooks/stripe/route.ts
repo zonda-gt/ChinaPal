@@ -83,7 +83,9 @@ async function recordPaidEntitlement(session: Stripe.Checkout.Session) {
   const amount = ((session.amount_total ?? 0) / 100).toFixed(2);
   const currency = (session.currency ?? "usd").toUpperCase();
   await notifyTeam(
-    `💰 *${plan.name}* paid · ${name} · ${email}\n` +
-      `${amount} ${currency} · user ${userId}`,
+    `💰 ChinaPal payment\n` +
+      `${plan.name} — ${amount} ${currency}\n` +
+      `${name} · ${email}\n` +
+      `user: ${userId}`,
   );
 }

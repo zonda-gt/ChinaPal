@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import { ShieldCheck, CheckCircle2, ArrowLeft, LogOut } from "lucide-react";
+import { ShieldCheck, CheckCircle2, ArrowLeft, LogOut, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import type { Plan } from "@/lib/plans";
 import { getSupabaseBrowserClient } from "@/lib/supabase/client";
@@ -19,20 +19,18 @@ function GoogleMark() {
   );
 }
 
-function AppleMark() {
-  return (
-    <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-      <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z" />
-    </svg>
-  );
-}
-
 export default function CheckoutClient({ plan }: { plan: Plan }) {
   const supabase = getSupabaseBrowserClient();
   const [user, setUser] = useState<User | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  // Email magic-link (6-digit code) state
+  const [email, setEmail] = useState("");
+  const [code, setCode] = useState("");
+  const [codeSent, setCodeSent] = useState(false);
+  const [emailBusy, setEmailBusy] = useState(false);
 
   // Read the session on mount, and react to the OAuth redirect coming back.
   useEffect(() => {
@@ -59,6 +57,43 @@ export default function CheckoutClient({ plan }: { plan: Plan }) {
       options: { redirectTo: window.location.href },
     });
     if (error) setError(error.message);
+  }
+
+  // Email magic link: step 1 — send the 6-digit code.
+  async function sendEmailCode(e: React.FormEvent) {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setError(null);
+    setEmailBusy(true);
+    const { error } = await supabase.auth.signInWithOtp({
+      email: email.trim(),
+      options: { shouldCreateUser: true, emailRedirectTo: window.location.href },
+    });
+    setEmailBusy(false);
+    if (error) {
+      setError(error.message);
+      return;
+    }
+    setCodeSent(true);
+  }
+
+  // Email magic link: step 2 — verify the code (signs them in in-place).
+  async function verifyEmailCode(e: React.FormEvent) {
+    e.preventDefault();
+    if (!code.trim()) return;
+    setError(null);
+    setEmailBusy(true);
+    const { error } = await supabase.auth.verifyOtp({
+      email: email.trim(),
+      token: code.trim(),
+      type: "email",
+    });
+    setEmailBusy(false);
+    if (error) {
+      setError(error.message);
+      return;
+    }
+    // onAuthStateChange flips `user` and the view switches to the pay step.
   }
 
   async function handleSignOut() {
@@ -216,13 +251,74 @@ export default function CheckoutClient({ plan }: { plan: Plan }) {
                       <GoogleMark />
                       Continue with Google
                     </button>
-                    <button
-                      onClick={() => signInWith("apple")}
-                      className="w-full flex items-center justify-center gap-3 px-4 py-3.5 rounded-xl border border-[#111110] bg-[#111110] font-body text-sm font-semibold text-white hover:bg-black transition-colors"
-                    >
-                      <AppleMark />
-                      Continue with Apple
-                    </button>
+                    {/* Apple sign-in parked — re-add a button calling
+                        signInWith("apple") once Apple-web (Services ID + .p8)
+                        is configured in Supabase. */}
+
+                    <div className="flex items-center gap-3">
+                      <div className="h-px flex-1 bg-[#E7E5E4]" />
+                      <span className="font-body text-xs text-[#A8A29E]">or</span>
+                      <div className="h-px flex-1 bg-[#E7E5E4]" />
+                    </div>
+
+                    {!codeSent ? (
+                      <form onSubmit={sendEmailCode} className="space-y-3">
+                        <input
+                          type="email"
+                          required
+                          value={email}
+                          onChange={(e) => setEmail(e.target.value)}
+                          placeholder="you@example.com"
+                          className="w-full px-4 py-3 rounded-xl border border-[#E7E5E4] bg-[#FAFAF9] font-body text-sm text-[#111110] focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                        />
+                        <button
+                          type="submit"
+                          disabled={emailBusy || !email.trim()}
+                          className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl border border-[#E7E5E4] bg-white font-body text-sm font-semibold text-[#111110] hover:bg-[#FAFAF9] hover:border-[#D6D3D1] transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          <Mail size={15} className="text-[#78716C]" />
+                          {emailBusy ? "Sending…" : "Email me a code"}
+                        </button>
+                      </form>
+                    ) : (
+                      <form onSubmit={verifyEmailCode} className="space-y-3">
+                        <p className="font-body text-xs text-[#52525B] text-center">
+                          Enter the 6-digit code sent to{" "}
+                          <span className="font-semibold text-[#111110]">
+                            {email}
+                          </span>
+                        </p>
+                        <input
+                          type="text"
+                          inputMode="numeric"
+                          autoComplete="one-time-code"
+                          required
+                          value={code}
+                          onChange={(e) => setCode(e.target.value)}
+                          placeholder="123456"
+                          className="w-full px-4 py-3 rounded-xl border border-[#E7E5E4] bg-[#FAFAF9] font-body text-center text-lg tracking-[0.4em] text-[#111110] focus:outline-none focus:border-[#DC2626] focus:bg-white transition-colors"
+                        />
+                        <button
+                          type="submit"
+                          disabled={emailBusy || !code.trim()}
+                          className="btn-primary w-full justify-center text-sm py-3 disabled:opacity-50 disabled:cursor-not-allowed"
+                        >
+                          {emailBusy ? "Verifying…" : "Verify code"}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setCodeSent(false);
+                            setCode("");
+                            setError(null);
+                          }}
+                          className="w-full font-body text-xs text-[#78716C] hover:text-[#111110] transition-colors"
+                        >
+                          Use a different email
+                        </button>
+                      </form>
+                    )}
+
                     <p className="font-body text-xs text-[#A8A29E] text-center leading-relaxed">
                       We only use this to identify your order and connect it to
                       your concierge in the app.

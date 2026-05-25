@@ -15,6 +15,12 @@ import {
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import posthog from "posthog-js";
+
+/** Fire a PostHog event when someone clicks a checkout CTA. */
+function trackCheckout(plan: string, location: string) {
+  posthog.capture("checkout_clicked", { plan, location });
+}
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -288,6 +294,9 @@ export default function Product() {
                 viewport={{ once: true }}
                 variants={fadeUp}
                 custom={i}
+                onViewportEnter={() =>
+                  posthog.capture("product_card_viewed", { plan: plan.key })
+                }
               >
                 {plan.tag && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
@@ -361,6 +370,7 @@ export default function Product() {
 
                   <a
                     href={plan.href}
+                    onClick={() => trackCheckout(plan.key, "pricing_card")}
                     className={`w-full text-center py-3 px-5 rounded-full text-sm font-body font-semibold transition-all ${
                       plan.highlight
                         ? "bg-[#DC2626] text-white hover:bg-[#B91C1C] shadow-[0_2px_12px_rgba(220,38,38,0.4)]"

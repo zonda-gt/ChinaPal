@@ -3,6 +3,9 @@ import "./globals.css";
 import { PostHogProvider } from "./providers";
 import { PostHogPageView } from "./PostHogPageView";
 
+// Google Ads tag. Set NEXT_PUBLIC_GOOGLE_ADS_ID (e.g. "AW-1234567890") to enable.
+const GOOGLE_ADS_ID = process.env.NEXT_PUBLIC_GOOGLE_ADS_ID;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://chinapal.co"),
   title: {
@@ -55,6 +58,19 @@ export default function RootLayout({
               __html: `(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w0yzfjrluq");`,
             }}
           />
+        )}
+        {GOOGLE_ADS_ID && (
+          <>
+            <script
+              async
+              src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+            />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ADS_ID}');`,
+              }}
+            />
+          </>
         )}
       </head>
       <body>

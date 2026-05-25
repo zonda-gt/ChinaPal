@@ -30,5 +30,5 @@ export default async function Page({
   const planKey = session.metadata?.plan;
   if (!isPlanKey(planKey)) redirect("/product");
 
-  return <SuccessClient plan={PLANS[planKey]} />;
+  return <SuccessClient plan={PLANS[planKey]} sessionId={session_id} />;
 }
