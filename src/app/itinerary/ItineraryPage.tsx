@@ -142,6 +142,7 @@ interface DayConfig {
 }
 
 export interface ItineraryConfig {
+  overview?: { icon: string; label: string }[];
   cityName: string;
   title: string;
   location: string;
@@ -616,8 +617,8 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
             {/* COLLAPSED PREVIEW — activity: 2 images + one-liner */}
             {!expanded && item.type === "activity" && item.previewImages && (
               <div style={{ marginTop: 10 }}>
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 5, marginBottom: 8 }}>
-                  {[item.previewImages[0], item.previewImages[1] ?? item.previewImages[0]].map((src, i) => (
+                <div style={{ display: "grid", gridTemplateColumns: item.previewImages.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginBottom: 8 }}>
+                  {item.previewImages.slice(0, 2).map((src, i) => (
                     <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
                       <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
@@ -1016,12 +1017,12 @@ export default function ItineraryPage({ images, leadName, config, chromeless }: 
           {/* Trip stats */}
           <div style={{ background: "#fff", borderRadius: 16, padding: "16px", border: "1px solid #E8E4DE", marginBottom: 16 }}>
             <p style={{ fontSize: 11, fontWeight: 700, color: "#999", margin: "0 0 12px", textTransform: "uppercase", letterSpacing: "0.06em" }}>Trip Overview</p>
-            {[
+            {(cfg.overview ?? [
               { icon: "🏔️", label: "4 Attractions" },
               { icon: "🍜", label: "9 Restaurant Options" },
               { icon: "🎭", label: "1 Cultural Show" },
               { icon: "🚡", label: "Cable Cars Included" },
-            ].map(p => (
+            ]).map(p => (
               <div key={p.label} style={{ display: "flex", alignItems: "center", gap: 10, padding: "8px 0", borderBottom: "1px solid #F5F3F0" }}>
                 <span style={{ fontSize: 16 }}>{p.icon}</span>
                 <span style={{ fontSize: 13, fontWeight: 600, color: "#1A1A1A" }}>{p.label}</span>
