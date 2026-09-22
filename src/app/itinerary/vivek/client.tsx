@@ -28,7 +28,7 @@ export default function VivekClient({ images }: { images: ImageMap }) {
           <p className="text-center text-[13px] leading-6 text-[#888]">Choose a day, then tap a stop for its photos, stories and practical details.</p>
         </div>
       </section>
-      <ItineraryPage images={images} config={config} leadName="Vivek" chromeless />
+      <ItineraryPage images={images} config={config} leadName="Vivek" chromeless initialDay={3} />
       <section className="bg-[#F7F5F2] px-4 pb-12">
         <div className="mx-auto max-w-[640px] space-y-4">
           <div className="rounded-2xl border border-[#E8E4DE] bg-white p-6 text-[13px] leading-6 text-[#666]">

@@ -891,7 +891,7 @@ function PersonalisationBanner() {
 }
 
 
-export default function ItineraryPage({ images, leadName, config, chromeless }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig; chromeless?: boolean }) {
+export default function ItineraryPage({ images, leadName, config, chromeless, initialDay = 1 }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig; chromeless?: boolean; initialDay?: number }) {
   const searchParams = useSearchParams();
   const visitorName = leadName || searchParams.get("name");
   const img = images ?? DEFAULT_IMAGES;
@@ -921,7 +921,7 @@ export default function ItineraryPage({ images, leadName, config, chromeless }: 
 
   const allMeals = cfg.days.flatMap(d => d.items).filter(i => i.type === "meal");
 
-  const [activeDay, setActiveDay] = useState(1);
+  const [activeDay, setActiveDay] = useState(initialDay);
   const dayTabsRef = useRef<HTMLDivElement | null>(null);
   const scrollToDayTabs = () => {
     const el = dayTabsRef.current;
