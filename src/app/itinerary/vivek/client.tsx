@@ -29,17 +29,6 @@ export default function VivekClient({ images }: { images: ImageMap }) {
         </div>
       </section>
       <ItineraryPage images={images} config={config} leadName="Vivek" chromeless initialDay={3} />
-      <section className="bg-[#F7F5F2] px-4 pb-12">
-        <div className="mx-auto max-w-[640px] space-y-4">
-          <div className="rounded-2xl border border-[#E8E4DE] bg-white p-6 text-[13px] leading-6 text-[#666]">
-            <h2 className="mb-2 text-base font-bold text-[#333]">A few details to make it yours</h2>
-            <p>This is a proposed itinerary. Guide hours, vehicles, train seats, entry reservations, restaurants and optional experiences will be confirmed with the final quote.</p>
-            <p className="mt-3">We have noted the shellfish restriction. Before confirming the menus, we will clarify the exact requirements and coordinate suitable dishes, sauces, stocks and cross-contact precautions with both restaurants. Please also confirm any other dietary needs, mobility preferences and luggage count. Friday includes private transport throughout; the final quote should confirm guide and vehicle hours, plus the Suzhou transfers.</p>
-            <p className="mt-3">We have allowed more time for Saturday’s return journey and proposed a 09:15 Sunday airport pickup instead of the draft’s 10:30. All travel times are estimates.</p>
-            <a className="mt-5 inline-flex rounded-full bg-[#C23845] px-5 py-2.5 font-semibold text-white" href="https://wa.me/8618201806768?text=Hi!%20I%27d%20like%20to%20discuss%20Vivek%27s%20Shanghai%20and%20Suzhou%20itinerary%20for%20November%2025%E2%80%9329%2C%202026." target="_blank" rel="noopener noreferrer">Discuss this itinerary</a>
-          </div>
-        </div>
-      </section>
       <Footer />
     </>
   );
