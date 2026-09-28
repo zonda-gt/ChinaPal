@@ -75,5 +75,82 @@
     "source": "https://www.jfdaily.com/sgh/detail?id=1169490",
     "title": "Huaihai Middle Road",
     "credit": "Shangguan News"
+  },
+  {
+    "id": "rong-zhai-exterior",
+    "url": "https://www.pradagroup.com/content/dam/pradagroup/immagini/prosepettive/storie/progetti-speciali-pagine-dettaglio/prada-rong-zhai/Gallery1_1rongzhai.jpg/_jcr_content/renditions/cq5dam.web.1920.1920.jpeg",
+    "source": "https://www.pradagroup.com/en/perspectives/stories/sezione-progetti-speciali/prada-rong-zhai.html",
+    "title": "Prada Rong Zhai exterior",
+    "credit": "Prada Group"
+  },
+  {
+    "id": "rong-zhai-interior",
+    "url": "https://www.pradagroup.com/content/dam/pradagroup/immagini/prosepettive/storie/progetti-speciali-pagine-dettaglio/prada-rong-zhai/Gallery1_2rongzhai.jpg/_jcr_content/renditions/cq5dam.web.1920.1920.jpeg",
+    "source": "https://www.pradagroup.com/en/perspectives/stories/sezione-progetti-speciali/prada-rong-zhai.html",
+    "title": "Prada Rong Zhai restored interior",
+    "credit": "Prada Group"
+  },
+  {
+    "id": "xin-rong-ji-dish",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/02753437af34439b91736a2687a805ac.jpg?format=webp&h=500&w=500",
+    "source": "https://guide.michelin.com/gb/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
+    "title": "Xin Rong Ji (West Nanjing Road) dish",
+    "credit": "Xin Rong Ji / MICHELIN Guide"
+  },
+  {
+    "id": "xin-rong-ji-cuisine",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/72396ac5c3e942cd90937d40c8d3f166.jpg?format=webp&h=500&w=500",
+    "source": "https://guide.michelin.com/gb/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
+    "title": "Xin Rong Ji (West Nanjing Road) cuisine",
+    "credit": "Xin Rong Ji / MICHELIN Guide"
+  },
+  {
+    "id": "rockbund-street",
+    "url": "https://static.zhoudaosh.com/files/himages/2020/20200805/93ef2fabbb070d6544850db3a559517d.jpg",
+    "source": "https://static.zhoudaosh.com/files/cnews/2020/20200805/A2A46904CBF6F9A5B33760787A3C764A45696CD6C1FF379168281DD3A6391A64/3.html",
+    "title": "Yuanmingyuan Road, Rockbund",
+    "credit": "Zhoudao"
+  },
+  {
+    "id": "rockbund-architecture",
+    "url": "https://english.shanghai.gov.cn/cmsres/bc/bc990f1aa2dd47f98333eb0ddc91a72e/c81e728d9d4c2f636f067f89cc14862c.jpg",
+    "source": "https://english.shanghai.gov.cn/en-ArtExhibitions/20250211/8de04476f5104ff5ae91f0a9fc482400.html",
+    "title": "Yuanmingyuan Apartments, Rockbund",
+    "credit": "Shanghai Municipal Government"
+  },
+  {
+    "id": "hyland-exterior",
+    "url": "https://media.radissonhotels.net/image/radisson-collection-hotel-hyland-shanghai/exterior/16256-140364-f72437983_3XL.jpg",
+    "source": "https://www.radissonhotels.com/en-us/hotels/radisson-collection-hyland-shanghai",
+    "title": "Radisson Collection Hotel, Hyland Shanghai entrance",
+    "credit": "Radisson Hotels"
+  },
+  {
+    "id": "hyland-lobby",
+    "url": "https://media.radissonhotels.net/image/radisson-collection-hotel-hyland-shanghai/lobby/16256-140364-f71651001_3xl.jpg?impolicy=SecondGalleryImg",
+    "source": "https://www.radissonhotels.com/en-us/hotels/radisson-collection-hyland-shanghai",
+    "title": "Radisson Collection Hotel, Hyland Shanghai lobby",
+    "credit": "Radisson Hotels"
+  },
+  {
+    "id": "canton8-dish",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/dcbcaedc13314b8f9fd23d66baa7a8d7.jpg?format=webp&h=500&w=500",
+    "source": "https://guide.michelin.com/tw/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+    "title": "Canton 8 (Huangpu) dish",
+    "credit": "Gary / Canton 8 / MICHELIN Guide"
+  },
+  {
+    "id": "canton8-interior",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/8c06b24c80c4404283eb746266be3387.jpg?format=webp&h=500&w=500",
+    "source": "https://guide.michelin.com/tw/en/shanghai-municipality/shanghai/restaurant/canton-8-runan-street",
+    "title": "Canton 8 (Huangpu) interior",
+    "credit": "Gary / Canton 8 / MICHELIN Guide"
+  },
+  {
+    "id": "louis-exhibition",
+    "url": "https://scadmin.hkri.com/-/media/hkri/pressreleases/2025/0629-hth-lv/04.jpg",
+    "source": "https://scadmin.hkri.com/en/Media-Centre/Press-Releases/2025/0629-HTH-LV",
+    "title": "Visionary Journeys exhibition at The Louis, Shanghai",
+    "credit": "HKR International / Louis Vuitton"
   }
 ]

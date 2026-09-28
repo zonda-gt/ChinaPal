@@ -20,16 +20,16 @@ const photo = (name: string) => `/uploads/itinerary/vivek/${name}.webp`;
 const CAROUSEL_IMAGES = [
   { image: photo("the-louis"), label: "The Louis · HKRI Taikoo Hui, Shanghai" },
   { image: photo("pingjiang-road"), label: "Pingjiang Road · Suzhou" },
-  { image: photo("jingan-temple"), label: "Jing’an Temple · Shanghai" },
+  { image: photo("rong-zhai-exterior"), label: "Prada Rong Zhai · Shanghai" },
   { image: photo("suzhou-museum"), label: "Suzhou Museum · Suzhou" },
 ];
 
 interface Attraction { nameEn: string; image: string; }
 const cities = [
   { name: "Shanghai", days: "FRI · NOV 27", small: [
-    { nameEn: "Jing’an Temple", image: photo("jingan-temple") },
+    { nameEn: "Prada Rong Zhai", image: photo("rong-zhai-exterior") },
     { nameEn: "The Louis · LV Ship", image: photo("the-louis") },
-  ], featured: { nameEn: "Sinan Mansions", image: photo("sinan-mansions") } },
+  ], featured: { nameEn: "Rockbund / Waitanyuan", image: photo("rockbund-street") } },
   { name: "Suzhou", days: "SAT · NOV 28", small: [
     { nameEn: "Suzhou Museum", image: photo("suzhou-museum") },
     { nameEn: "Lion Grove Garden", image: photo("lion-grove") },
@@ -41,7 +41,7 @@ const cityItineraries = [
     { day: "NOV 26", title: "A day of your own", items: ["Thursday stays with your existing plans", "No guide scheduled · take the day at your pace"] },
   ] },
   { cityName: "Two days with your guide", days: [
-    { day: "NOV 27", title: "Shanghai · food, streets & stories", items: ["Jing’an Temple → the LV ship → Starbucks Roastery", "798 Huaihai Road · Harbin bakery · seated lunch", "Fuxing Park → Sinan Mansions → Xintiandi", "Short vehicle hops and time for tea along the way"] },
+    { day: "NOV 27", title: "Heritage, Michelin Dining & The Louis", items: ["09:30 hotel pickup · private guide and driver", "10:00 Prada Rong Zhai → 12:00 Xin Rong Ji lunch", "14:30 Rockbund walk → 16:30 hotel return & rest", "17:45 Canton 8 dinner → 20:00 The Louis", "21:30 private transfer back to the hotel"] },
     { day: "NOV 28", title: "Suzhou · gardens & canals", items: ["High-speed train + private station transfers proposed", "Suzhou Museum → Lion Grove Garden", "Lunch and a gentle Pingjiang Road stroll", "Optional canal boat and pingtan tea session", "Aim to return to the Shanghai hotel around 18:30"] },
   ] },
   { cityName: "Homeward", days: [

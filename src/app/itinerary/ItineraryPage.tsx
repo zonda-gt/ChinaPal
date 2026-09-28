@@ -117,6 +117,7 @@ interface TimelineItem {
   tip?: string;
   restaurants?: Restaurant[];
   previewImages?: string[];
+  showPhotoPreview?: boolean;
   previewLine?: string;
   transportAfter?: TransportLeg;
 }
@@ -534,6 +535,9 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   const [imgIdx, setImgIdx] = useState(0);
   const Icon = item.icon;
   const images = item.image ? [item.image, ...(item.previewImages || [])].filter((v, i, a) => a.indexOf(v) === i) : [];
+  const previewImages = item.previewImages ?? [];
+  const hasPhotoPreview = previewImages.length > 0 && (item.type === "activity" || item.showPhotoPreview);
+  const canExpand = item.type !== "hotel" || hasPhotoPreview;
 
   const typeColors: Record<string, string> = {
     activity: "#8A8A8A",
@@ -545,7 +549,7 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   const isMeal = item.type === "meal";
   const isTransport = item.type === "transport";
   const isHotel = item.type === "hotel";
-  const isCompact = isMeal || isTransport || isHotel;
+  const isCompact = (isMeal || isTransport || isHotel) && !item.showPhotoPreview;
 
   return (
     <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
@@ -575,9 +579,9 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
             overflow: "hidden",
             boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
             border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
-            cursor: item.type !== "hotel" ? "pointer" : "default",
+            cursor: canExpand ? "pointer" : "default",
           }}
-          onClick={() => item.type !== "hotel" && setExpanded(!expanded)}
+          onClick={() => canExpand && setExpanded(!expanded)}
         >
           {/* Hero image carousel — only shown when expanded */}
           {images.length > 0 && expanded && (
@@ -607,18 +611,18 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
                 <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
                 <h3 style={{ fontSize: isCompact ? 13 : 16, fontWeight: isCompact ? 700 : 800, color: isCompact ? "#666" : "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
               </div>
-              {item.type !== "hotel" && !(item.type === "activity" && !expanded && item.previewImages) && (
+              {canExpand && !(!expanded && hasPhotoPreview) && (
                 <div style={{ width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
                   {expanded ? <ChevronUp size={isCompact ? 12 : 14} color="#888" /> : <ChevronDown size={isCompact ? 12 : 14} color="#888" />}
                 </div>
               )}
             </div>
 
-            {/* COLLAPSED PREVIEW — activity: 2 images + one-liner */}
-            {!expanded && item.type === "activity" && item.previewImages && (
+            {/* Photo previews for activities and opted-in dining or hotel stops */}
+            {!expanded && hasPhotoPreview && (
               <div style={{ marginTop: 10 }}>
-                <div style={{ display: "grid", gridTemplateColumns: item.previewImages.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginBottom: 8 }}>
-                  {item.previewImages.slice(0, 2).map((src, i) => (
+                <div style={{ display: "grid", gridTemplateColumns: previewImages.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginBottom: 8 }}>
+                  {previewImages.slice(0, 2).map((src, i) => (
                     <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
                       <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
@@ -660,7 +664,9 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
 
             {expanded && (
               <div style={{ marginTop: 12 }}>
-                <p style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{item.description}</p>
+                {item.description.split("\n\n").map((paragraph, paragraphIndex) => (
+                  <p key={paragraphIndex} style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{paragraph}</p>
+                ))}
 
                 {item.restaurants && (
                   <div onClick={(e) => e.stopPropagation()}>
