@@ -19,6 +19,19 @@ export const photos = {
   era: "/uploads/itinerary/ruijun/era.webp",
 };
 
+const secondPhotos: Record<string, string> = {
+  [photos.lake]: "/uploads/itinerary/hangzhou/westlake2.jpg",
+  [photos.temple]: "/uploads/itinerary/ruijun/temple-2.webp",
+  [photos.hefang]: "/uploads/itinerary/hangzhou/hefang2.jpg",
+  [photos.garden]: "/uploads/itinerary/shanghai/scraper/yugarden-bridge.jpg",
+  [photos.wukang]: "/uploads/itinerary/ruijun/wukang-2.webp",
+  [photos.xintiandi]: "/uploads/itinerary/vivek/xintiandi.webp",
+  [photos.northBund]: "/uploads/itinerary/ruijun/north-bund-2.webp",
+  [photos.silk]: "/uploads/itinerary/ruijun/silk-2.webp",
+  [photos.feilai]: "/uploads/itinerary/ruijun/feilai-2.webp",
+  [photos.era]: "/uploads/itinerary/ruijun/era-2.webp",
+};
+
 export const dietaryNote = "No meat, seafood, alliums or gelatine — including stocks, sauces, fillings and desserts. Eggs and dairy are fine. Each restaurant must confirm these requirements before the meal.";
 
 export const trains = [
@@ -36,7 +49,10 @@ export const daySummaries = [
 ];
 
 function stop(id: string, time: string, title: string, description: string, options: Partial<Omit<Item, "id" | "time" | "title" | "description">> = {}): Item {
-  return { id: `ruijun-${id}`, time, title, description, icon: Footprints, iconBg: "#FFF0EE", type: "activity", ...options, previewImages: options.previewImages ?? (options.image ? [options.image] : undefined) };
+  const previewImages = options.previewImages ?? (options.image
+    ? [options.image, secondPhotos[options.image]].filter(Boolean)
+    : undefined);
+  return { id: `ruijun-${id}`, time, title, description, icon: Footprints, iconBg: "#FFF0EE", type: "activity", ...options, previewImages };
 }
 
 function meal(id: string, time: string, title: string, chinese: string, description: string): Item {

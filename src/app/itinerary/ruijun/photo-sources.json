@@ -133,5 +133,94 @@
     "credit": "Sohu",
     "path": "/uploads/itinerary/ruijun/qipao.webp",
     "downloadedOn": "2026-09-30"
+  },
+  {
+    "id": "wukang-2",
+    "title": "Wukang Mansion",
+    "url": "https://images.smartshanghai.com.cn/uploads/repository/2021/10/28/d43acdb1-237d-4963-8037-4df8426e6543.jpg",
+    "source": "https://www.smartshanghai.com/venue/14908/wukang_mansion_huaihai_zhong_lu",
+    "credit": "SmartShanghai",
+    "path": "/uploads/itinerary/ruijun/wukang-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "silk-2",
+    "title": "Hangzhou China Silk Town shopfront",
+    "url": "https://www.hlimg.com/images/things2do/738X538/ttd_1518863593m1.JPG",
+    "source": "https://www.hellotravel.com/china/silk-market-hangzhou",
+    "credit": "HelloTravel",
+    "path": "/uploads/itinerary/ruijun/silk-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "feilai-2",
+    "title": "Feilai Peak entrance",
+    "url": "https://ak-d.tripcdn.com/images/0EQ4t12000rlzz69l06C9.jpg",
+    "source": "https://au.trip.com/travel-guide/attraction/hangzhou/lingyin-temple-75771/",
+    "credit": "Trip.com travel community",
+    "path": "/uploads/itinerary/ruijun/feilai-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "era-2",
+    "title": "ERA stage performance",
+    "url": "https://english.shanghai.gov.cn/cmsres/f7/f78592be34fb4f10949a6a50a4b54b75/8878c5e0c358ce339a95129e495cdca0.jpeg",
+    "source": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251004/5b822b3aaf3841a6a0fa1d88a00ceb95.html",
+    "credit": "Shanghai Municipal Government / China Daily",
+    "path": "/uploads/itinerary/ruijun/era-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "north-bund-2",
+    "title": "Grand Halls on the North Bund",
+    "url": "https://english.shanghai.gov.cn/cmsres/f9/f9bf869349b0420bb028818a74531032/8d9fefd89d53924efc3617d483f10ece.jpg",
+    "source": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20250625/1196e9be6eb5421eb977549f8394ea12.html",
+    "credit": "Shanghai Observer / Shanghai Municipal Government",
+    "path": "/uploads/itinerary/ruijun/north-bund-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "temple-2",
+    "title": "Lingyin Temple aerial view",
+    "url": "https://obj.shine.cn/files/2025/12/10/2b58f244-c4a0-43e5-b0a0-52b7876ca543_0.jpg",
+    "source": "https://www.citynewsservice.cn/articles/shanghaidaily/news/hangzhous-lingyin-feilai-peak-scraps-entry-fees-env00rrm",
+    "credit": "Shanghai Daily / City News Service",
+    "path": "/uploads/itinerary/ruijun/temple-2.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "xintiandi-2",
+    "title": "Xintiandi street view",
+    "url": "https://ak-d.tripcdn.com/images/1mi55424x97vl60lgCF1D.jpg?proc=source%2Ftrip",
+    "source": "https://www.trip.com/moments/theme/poi-xintiandi-10524092-attraction-993137/",
+    "credit": "Trip.com",
+    "path": "/uploads/itinerary/vivek/xintiandi.webp"
+  },
+  {
+    "id": "west-lake-2",
+    "title": "West Lake — second view",
+    "path": "/uploads/itinerary/hangzhou/westlake2.jpg",
+    "source": "/itinerary/hangzhou",
+    "credit": "Existing ChinaPal destination photo collection"
+  },
+  {
+    "id": "hefang-2",
+    "title": "Hefang Street — second view",
+    "path": "/uploads/itinerary/hangzhou/hefang2.jpg",
+    "source": "/itinerary/hangzhou",
+    "credit": "Existing ChinaPal destination photo collection"
+  },
+  {
+    "id": "yu-garden-2",
+    "title": "Yu Garden and Nine-Turn Bridge area",
+    "path": "/uploads/itinerary/shanghai/scraper/yugarden-bridge.jpg",
+    "source": "/itinerary/shanghai",
+    "credit": "Existing ChinaPal destination photo collection"
   }
 ]
