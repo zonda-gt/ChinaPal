@@ -96,11 +96,11 @@ interface Restaurant {
   image?: string;
 }
 
-type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "car" | "train";
+type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "metro" | "car" | "train";
 
 interface TransportLeg {
   mode: TransportMode;
-  duration: string;
+  duration?: string;
   note?: string;
 }
 
@@ -450,6 +450,7 @@ const TRANSPORT_CONFIG: Record<TransportMode, { icon: React.ElementType; label: 
   "cable-car": { icon: TramFront, label: "Cable Car",  color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   shuttle:     { icon: Bus,       label: "Shuttle",    color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   "light-rail":{ icon: TramFront, label: "Light Rail", color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
+  metro:       { icon: TramFront, label: "Metro",      color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   car:         { icon: Car,       label: "Car",        color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
   train:       { icon: TrainFront,label: "Train",      color: TRANSPORT_COLOR, bg: TRANSPORT_BG },
 };
@@ -476,8 +477,10 @@ function TransportConnector({ leg }: { leg: TransportLeg }) {
       <div style={{ flex: 1, paddingLeft: 8, display: "flex", alignItems: "center", gap: 8, paddingTop: 0 }}>
         <div style={{ display: "flex", alignItems: "center", gap: 6, background: cfg.bg, borderRadius: 20, padding: "5px 12px", border: `1px solid ${cfg.color}22` }}>
           <span style={{ fontSize: 11.5, fontWeight: 700, color: cfg.color }}>{cfg.label}</span>
-          <span style={{ width: 3, height: 3, background: cfg.color, borderRadius: "50%", opacity: 0.5 }} />
-          <span style={{ fontSize: 11.5, fontWeight: 800, color: cfg.color }}>{leg.duration}</span>
+          {leg.duration && <>
+            <span style={{ width: 3, height: 3, background: cfg.color, borderRadius: "50%", opacity: 0.5 }} />
+            <span style={{ fontSize: 11.5, fontWeight: 800, color: cfg.color }}>{leg.duration}</span>
+          </>}
         </div>
         {leg.note && (
           <span style={{ fontSize: 11, color: "#AAA", fontStyle: "italic", flex: 1 }}>{leg.note}</span>

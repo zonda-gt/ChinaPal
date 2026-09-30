@@ -3,6 +3,7 @@ import type { ItineraryConfig } from "../ItineraryPage";
 
 type Item = ItineraryConfig["days"][number]["items"][number];
 type Day = ItineraryConfig["days"][number];
+type TransportLeg = NonNullable<Item["transportAfter"]>;
 
 export const photos = {
   lake: "/uploads/itinerary/xhs/lake.webp",
@@ -48,11 +49,52 @@ export const daySummaries = [
   { date: "15 Oct · Thu", title: "A comfortable journey home", detail: "Leave the hotel around 07:00; aim for Pudong at 08:30 for the 11:30 flight." },
 ];
 
+const transfers: Record<string, TransportLeg> = {
+  pudong: { mode: "train", note: "Airport Link Line: Pudong → Hongqiao T2; walk to the railway station and allow time for security." },
+  g1509: { mode: "taxi", note: "Hangzhou East station → SkyBird Hotel for luggage drop and rest." },
+  skybird: { mode: "taxi", note: "SkyBird Hotel → Qingchun Li at Kerry Centre; a taxi saves walking after the flight." },
+  "qingchun-li": { mode: "taxi", note: "Optional: Kerry Centre → China Silk Town. Return to the hotel instead if tired." },
+  "silk-town": { mode: "taxi", note: "China Silk Town → Southern Song Imperial Street / Hefang Street, with a hotel break first if needed." },
+  "hefang-first": { mode: "taxi", note: "Old streets → Su Man Xiang Pro at Hubin Yintai IN77, if dinner is confirmed." },
+  sumanxiang: { mode: "taxi", note: "After dinner → SkyBird Hotel." },
+  "temple-transfer": { mode: "walk", note: "Shuttle drop-off → Lingyin–Feilai Peak entrance → lower carvings; allow for entry checks." },
+  feilai: { mode: "walk", note: "Lower carvings beside Cold Spring Stream → Lingyin’s Hall of Heavenly Kings; take breaks on uneven paths." },
+  lingyin: { mode: "walk", note: "Follow the exit signs towards optional Zhi Zhu; skip the sweet-soup stop and go to lunch if tired." },
+  zhizhu: { mode: "walk", note: "Zhi Zhu → Qingchun Perma for lunch; check the walking route locally before setting off." },
+  "qingchun-perma": { mode: "shuttle", note: "Take the available shuttle / public transport out, then continue to Hubin. Ask restaurant or transport staff for the departure stop." },
+  "west-lake": { mode: "taxi", note: "Hubin lakeside → Yi Jia Su, Jiefang Road, for dinner around 17:00–17:30." },
+  "yi-jia-su": { mode: "taxi", note: "Dinner → SkyBird Hotel. If choosing the optional lake show, confirm the performance and dinner-to-show route first." },
+  "hangzhou-show": { mode: "taxi", note: "If attending the show: venue → SkyBird Hotel afterwards." },
+  "hangzhou-start": { mode: "taxi", note: "SkyBird Hotel → Hefang Street / Southern Song Imperial Street, or the shop for a confirmed qipao collection." },
+  "hangzhou-morning": { mode: "taxi", note: "Morning browsing → Qingchun Shitang for lunch around 11:00; confirm the restaurant branch before pickup." },
+  "qingchun-shitang": { mode: "taxi", note: "Lunch → SkyBird Hotel to collect luggage → Hangzhou East station. Aim to arrive by 13:20 for G204 at 14:22." },
+  g204: { mode: "metro", note: "Line 10: Hongqiao Railway Station → Laoximen, then walk to Demores Hotel. A taxi is the luggage-friendly alternative." },
+  demores: { mode: "taxi", note: "Demores Hotel → Ruo Wu Liang Du C for dinner; confirm the restaurant address with the reservation." },
+  breeze: { mode: "taxi", note: "Optional: dinner → Xintiandi by a short ride, or walk if comfortable. Otherwise return to Demores Hotel." },
+  xintiandi: { mode: "taxi", note: "Xintiandi → Demores Hotel when everyone is ready." },
+  "garden-start": { mode: "metro", note: "Line 10: Laoximen → Yuyuan Garden, then walk to the garden entrance. Take a taxi from Demores Hotel if preferred." },
+  "yu-garden": { mode: "walk", note: "Garden / bazaar area → Chunfeng Songyue Lou for lunch; keep any qipao browsing within this area." },
+  songyue: { mode: "metro", note: "Yu Garden area → People’s Square / Nanjing Road; check the metro connection before setting off." },
+  "peoples-square": { mode: "taxi", note: "Shopping / café stop → Gong De Lin on West Nanjing Road; use a taxi if everyone has had enough walking." },
+  gongdelin: { mode: "taxi", note: "After dinner and optional East Nanjing Road browsing → North Bund, near the International Cruise Terminal / White Magnolia Plaza." },
+  "north-bund": { mode: "taxi", note: "North Bund waterfront → Demores Hotel. The fabric-market card below is a separate morning alternative." },
+  "fabric-alternative": { mode: "taxi", note: "Alternative morning route only: South Bund Fabric Market → Songyue Lou for lunch → Yu Garden in the afternoon." },
+  "wukang-start": { mode: "metro", note: "Line 10: Laoximen → Shanghai Library, then walk towards Wukang Road. A taxi can take you directly to Wukang Mansion." },
+  wukang: { mode: "taxi", note: "Wukang / Anfu Road → Linhu Vegetarian at Poly Time for lunch; metro is another option." },
+  linhu: { mode: "taxi", note: "Poly Time → your chosen Huaihai Road shopping stop; use a short ride to save energy." },
+  huaihai: { mode: "taxi", note: "Huaihai Road / Maoming South Road / Changle Road → Demores Hotel for rest and packing." },
+  rest: { mode: "walk", note: "Demores Hotel → Hui Yuan Vegetarian at Huaihai Road Food Court, or take a short taxi ride if preferred." },
+  huiyuan: { mode: "taxi", note: "Choose one evening venue: Shanghai Circus World for ERA, or Shanghai Grand Theatre for Phantom. Set departure after tickets are confirmed; metro is an option for ERA." },
+  era: { mode: "taxi", note: "After ERA: Shanghai Circus World → Demores Hotel. Phantom below is the alternative show, not the next stop." },
+  phantom: { mode: "taxi", note: "After Phantom: Shanghai Grand Theatre → Demores Hotel for rest before the morning airport transfer." },
+  "breakfast-home": { mode: "car", duration: "Allow 90 min", note: "Taxi / arranged car: Demores Hotel → Pudong Airport. Leave around 07:00; target arrival 08:30 for the 11:30 flight." },
+};
+
 function stop(id: string, time: string, title: string, description: string, options: Partial<Omit<Item, "id" | "time" | "title" | "description">> = {}): Item {
   const previewImages = options.previewImages ?? (options.image
     ? [options.image, secondPhotos[options.image]].filter(Boolean)
     : undefined);
-  return { id: `ruijun-${id}`, time, title, description, icon: Footprints, iconBg: "#FFF0EE", type: "activity", ...options, previewImages };
+  return { id: `ruijun-${id}`, time, title, description, icon: Footprints, iconBg: "#FFF0EE", type: "activity", transportAfter: transfers[id], ...options, previewImages };
 }
 
 function meal(id: string, time: string, title: string, chinese: string, description: string): Item {
@@ -100,6 +142,7 @@ export function buildRuijunConfig(): ItineraryConfig {
         stop("hangzhou-show", "Evening · optional", "Enduring Memories of Hangzhou", "《最忆是杭州》 can be considered if you feel up to it. The performance time, tickets and dinner route need to be confirmed before this is added; a restful evening at the hotel remains the main plan.", { icon: Theater, subtitle: "Optional · performance and tickets to confirm", iconBg: "#EDE7F6" }),
       ]),
       day(3, "Shanghai", [
+        stop("hangzhou-start", "After breakfast · hotel departure", "Check out & leave luggage at SkyBird Hotel", "Have breakfast, check out and leave your luggage with the hotel before your relaxed morning. Return for the bags after lunch.", { icon: Hotel, type: "hotel", iconBg: "#E3F2FD" }),
         stop("hangzhou-morning", "After breakfast", "A relaxed last morning in Hangzhou", "Keep the morning easy around Hefang Street or Southern Song Imperial Street, or collect qipao alterations only if the shop has confirmed they are ready. Check out and leave your luggage with the hotel.", { image: photos.hefang, previewLine: "Gentle browsing or a confirmed qipao collection" }),
         meal("qingchun-shitang", "Around 11:00 · early lunch", "Qingchun Shitang", "庆春食堂", "Have an early lunch, then collect your luggage and take a taxi to Hangzhou East Railway Station. Aim to reach the station by 13:20."),
         stop("g204", "14:22 → 15:09 · booked", "G204 · Hangzhou East → Shanghai Hongqiao", "Your booked train leaves Hangzhou East at 14:22 and arrives at Shanghai Hongqiao at 15:09. Keep the lunch and hotel pickup comfortably ahead of your 13:20 station-arrival target.", { icon: TrainFront, type: "transport", iconBg: "#E3F2FD", previewLine: "G204 · departs 14:22 · arrives 15:09 · booked" }),
@@ -108,6 +151,7 @@ export function buildRuijunConfig(): ItineraryConfig {
         stop("xintiandi", "After dinner · optional", "A little evening browsing in Xintiandi", "Take a short ride or walk towards Xintiandi, depending on your parents’ energy. Browse a small area, then return to the hotel when you feel ready.", { icon: Moon, image: photos.xintiandi, previewLine: "A short evening outing, if everyone feels comfortable", iconBg: "#EDE7F6" }),
       ]),
       day(4, "Shanghai", [
+        stop("garden-start", "After breakfast · hotel departure", "Leave Demores Hotel for Yu Garden", "Choose Metro Line 10 from Laoximen or a taxi to the garden, depending on everyone’s energy.", { icon: Hotel, type: "hotel", iconBg: "#E3F2FD" }),
         stop("yu-garden", "Morning", "Yu Garden & the Nine-Turn Bridge area", "After breakfast, take a taxi or Metro Line 10 from Laoximen to Yuyuan Garden. Visit the garden, then explore a short section of the bazaar and Nine-Turn Bridge area. If qipao browsing appeals, allow 45–60 minutes in the surrounding shops in place of some general browsing.", { icon: Camera, image: photos.garden, previewLine: "Garden details, a short bazaar walk & optional qipao browsing" }),
         meal("songyue", "Lunch", "Chunfeng Songyue Lou", "春风松月楼", "Have a simple vegetarian noodle lunch. Confirm the broth, toppings and seasonings meet your requirements before ordering."),
         stop("peoples-square", "Afternoon", "People’s Square & Nanjing Road", "Continue by metro to People’s Square and Nanjing Road. Keep time for a seated café break and shorten the shopping if everyone would prefer a slower afternoon.", { icon: ShoppingBag, previewLine: "Browse a little, then sit down for a café break" }),
@@ -116,6 +160,7 @@ export function buildRuijunConfig(): ItineraryConfig {
         stop("fabric-alternative", "Alternative route · replaces the morning", "More qipao time at South Bund Fabric Market", "If qipao shopping becomes a priority, visit 南外滩轻纺面料市场 in the morning instead. Take a taxi to Songyue Lou for lunch and visit Yu Garden in the afternoon, shortening or skipping People’s Square. The market focuses on tailoring, with some ready-made pieces; agree any alteration or collection date with the shop.", { icon: ShoppingBag, subtitle: "An alternative, not an additional stop", tip: "Choose this route before setting off so the day stays comfortable." }),
       ]),
       day(5, "Shanghai", [
+        stop("wukang-start", "After breakfast · hotel departure", "Leave Demores Hotel for Wukang Road", "Take Metro Line 10 towards Shanghai Library, or a taxi directly to Wukang Mansion to save walking.", { icon: Hotel, type: "hotel", iconBg: "#E3F2FD" }),
         stop("wukang", "After breakfast", "Wukang Mansion & Wukang Road", "Take Metro Line 10 to Shanghai Library or a taxi to Wukang Mansion. Enjoy a gentle walk along part of Wukang Road, with a café stop. Continue towards Anfu Road only if comfortable, and use a taxi to shorten the walk whenever needed.", { icon: Coffee, image: photos.wukang, previewLine: "Tree-lined streets, a café pause & easy taxi options" }),
         meal("linhu", "Lunch", "The Linhu Vegetarian · Poly Time", "临湖素食·保利时光里店", "Take the metro or a taxi from the Wukang Road area for lunch. This meal is subject to the restaurant confirming your dietary requirements."),
         stop("huaihai", "Early afternoon", "Huaihai Road & optional qipao browsing", "Spend the early afternoon shopping around Huaihai Road. If you have not found a qipao yet, browse nearby shops around Maoming South Road / Changle Road. Keep some energy for the return journey to the hotel.", { icon: ShoppingBag, image: photos.huaihai, previewImages: [photos.huaihai, photos.qipao], previewLine: "Shopping time, with another chance to find a qipao" }),
