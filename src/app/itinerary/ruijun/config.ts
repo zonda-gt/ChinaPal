@@ -18,6 +18,8 @@ export const photos = {
   silk: "/uploads/itinerary/ruijun/silk-town.webp",
   feilai: "/uploads/itinerary/ruijun/feilai.webp",
   era: "/uploads/itinerary/ruijun/era.webp",
+  peoplesSquare: "/uploads/itinerary/ruijun/peoples-square.webp",
+  nanjingRoad: "/uploads/itinerary/shanghai/scraper/nanjing-road-neon.jpg",
 };
 
 const secondPhotos: Record<string, string> = {
@@ -156,7 +158,7 @@ export function buildRuijunConfig(): ItineraryConfig {
         stop("garden-start", "After breakfast · hotel departure", "Leave Demores Hotel for Yu Garden", "Choose Metro Line 10 from Laoximen or a taxi to the garden, depending on everyone’s energy.", { icon: Hotel, type: "hotel", iconBg: "#E3F2FD" }),
         stop("yu-garden", "Morning", "Yu Garden & the Nine-Turn Bridge area", "After breakfast, take a taxi or Metro Line 10 from Laoximen to Yuyuan Garden. Visit the garden, then explore a short section of the bazaar and Nine-Turn Bridge area. If qipao browsing appeals, allow 45–60 minutes in the surrounding shops in place of some general browsing.", { icon: Camera, image: photos.garden, previewLine: "Garden details, a short bazaar walk & optional qipao browsing" }),
         meal("songyue", "Lunch", "Chunfeng Songyue Lou", "春风松月楼", "Have a simple vegetarian noodle lunch. Confirm the broth, toppings and seasonings meet your requirements before ordering."),
-        stop("peoples-square", "Afternoon", "People’s Square & Nanjing Road", "Continue by metro to People’s Square and Nanjing Road. Keep time for a seated café break and shorten the shopping if everyone would prefer a slower afternoon.", { icon: ShoppingBag, previewLine: "Browse a little, then sit down for a café break" }),
+        stop("peoples-square", "Afternoon", "People’s Square & Nanjing Road", "Continue by metro to People’s Square and Nanjing Road. Keep time for a seated café break and shorten the shopping if everyone would prefer a slower afternoon.", { icon: ShoppingBag, image: photos.peoplesSquare, previewImages: [photos.peoplesSquare, photos.nanjingRoad], previewLine: "Browse a little, then sit down for a café break" }),
         meal("gongdelin", "Around 17:00 · early dinner", "Gong De Lin · West Nanjing Road", "功德林·南京西路店", "Enjoy an early vegetarian dinner. Afterwards, have a short look around East Nanjing Road only if you feel up to it."),
         stop("north-bund", "Evening", "North Bund waterfront", "Take a taxi to the waterfront near the International Cruise Terminal / White Magnolia Plaza. Enjoy the skyline from a short stretch of the riverside, then return to the hotel by taxi.", { icon: Camera, image: photos.northBund, previewLine: "A short skyline walk · taxi there and back" }),
         stop("fabric-alternative", "Alternative route · replaces the morning", "More qipao time at South Bund Fabric Market", "If qipao shopping becomes a priority, visit 南外滩轻纺面料市场 in the morning instead. Take a taxi to Songyue Lou for lunch and visit Yu Garden in the afternoon, shortening or skipping People’s Square. The market focuses on tailoring, with some ready-made pieces; agree any alteration or collection date with the shop.", { icon: ShoppingBag, subtitle: "An alternative, not an additional stop", tip: "Choose this route before setting off so the day stays comfortable." }),

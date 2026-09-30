@@ -222,5 +222,22 @@
     "path": "/uploads/itinerary/shanghai/scraper/yugarden-bridge.jpg",
     "source": "/itinerary/shanghai",
     "credit": "Existing ChinaPal destination photo collection"
+  },
+  {
+    "id": "peoples-square",
+    "title": "People’s Square, Shanghai",
+    "url": "https://obj.shine.cn/files/2024/01/05/a90d854e-49b1-4289-9518-09c84148bb39_0.jpg",
+    "source": "https://www.citynewsservice.cn/articles/cns/lifestyle/peoples-square-and-peoples-park-the-pulsating-heart-of-the-city-4kb7rbrn",
+    "credit": "Shanghai Daily / City News Service",
+    "path": "/uploads/itinerary/ruijun/peoples-square.webp",
+    "downloadedOn": "2026-09-30",
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "nanjing-road",
+    "title": "Nanjing Road at night",
+    "source": "/itinerary/shanghai",
+    "credit": "Existing ChinaPal destination photo collection",
+    "path": "/uploads/itinerary/shanghai/scraper/nanjing-road-neon.jpg"
   }
 ]
