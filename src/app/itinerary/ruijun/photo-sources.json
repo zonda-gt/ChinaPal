@@ -1,0 +1,137 @@
+[
+  {
+    "id": "garden",
+    "title": "Yu Garden",
+    "url": "https://arabic.shanghai.gov.cn/cmsres/fe/fee07b4347ea4af1869d7b6f02d12697/8ba58f59ee32e3909b521a2e4e492f8d.jpg",
+    "source": "https://arabic.shanghai.gov.cn/ar-TravelinShanghai/index.html",
+    "credit": "Shanghai Municipal Government",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/garden.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 600,
+    "height": 399,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "wukang",
+    "title": "Wukang Road",
+    "url": "https://english.shanghai.gov.cn/cmsres/ab/ab0dbea801aa49ba81e0fdf42c027c35/94cfa06a2f40af3debb4d78bb5d52625.jpg",
+    "source": "https://english.shanghai.gov.cn/en-ScenicSpots/20231218/596192f5f59048bbbc3fa54d92304e93.html",
+    "credit": "VCG / Shanghai Municipal Government",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/wukang.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 1400,
+    "height": 933,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "evening",
+    "title": "Xintiandi",
+    "url": "https://english.shanghai.gov.cn/cmsres/40/40633f8179024713b0defed79b39a0c1/0bac699d5ba7023ea8c012860174d4df.jpg",
+    "source": "https://english.shanghai.gov.cn/en-PlanANightOut/20231217/2f954a83b78945ffb7dac1038e6797c4.html",
+    "credit": "VCG / Shanghai Municipal Government",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/evening.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 1024,
+    "height": 683,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "lake",
+    "title": "West Lake",
+    "url": "https://www.ehangzhou.gov.cn/img/attachement/jpg/site48/20250527/17483419485411.jpg",
+    "source": "https://www.ehangzhou.gov.cn/hz_innovation.html",
+    "credit": "eHangzhou",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/lake.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 1400,
+    "height": 933,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "temple",
+    "title": "Lingyin Temple",
+    "url": "https://www.ehangzhou.gov.cn/att/20180612/1528771958737093828.jpg",
+    "source": "https://www.ehangzhou.gov.cn/2018-06/14/c_242885.htm",
+    "credit": "eHangzhou",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/temple.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 645,
+    "height": 388,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "hefang",
+    "title": "Hefang Street",
+    "url": "https://data.travelchinaguide.com/tour/image/456002.jpg",
+    "source": "https://www.travelchinaguide.com/package/hangzhou-day-trip.htm",
+    "credit": "TravelChinaGuide",
+    "downloaded": true,
+    "path": "/uploads/itinerary/xhs/hefang.webp",
+    "downloadedOn": "2026-09-22",
+    "width": 588,
+    "height": 420,
+    "changes": "Resized and converted to WebP; cropped responsively in the page."
+  },
+  {
+    "id": "huaihai-road",
+    "url": "https://sghimages.shobserver.com/img/catch/2023/11/05/de1cfe0c-683a-4c7c-a8fd-8a3ac6c73ed6.jpg",
+    "source": "https://www.jfdaily.com/sgh/detail?id=1169490",
+    "title": "Huaihai Middle Road",
+    "credit": "Shangguan News",
+    "path": "/uploads/itinerary/vivek/huaihai-road.webp"
+  },
+  {
+    "id": "era",
+    "title": "ERA at Shanghai Circus World",
+    "url": "https://english.shanghai.gov.cn/cmsres/88/88be072b0e194a08837d9c6d13bf6745/7431eca4ea0c7844deec80bb479de72b.jpeg",
+    "source": "https://english.shanghai.gov.cn/en-Latest-WhatsNew/20251004/5b822b3aaf3841a6a0fa1d88a00ceb95.html",
+    "credit": "Shanghai Municipal Government / China Daily",
+    "downloaded": true,
+    "path": "/uploads/itinerary/ruijun/era.webp",
+    "downloadedOn": "2026-09-30"
+  },
+  {
+    "id": "north-bund",
+    "title": "North Bund waterfront",
+    "url": "https://ak-d.tripcdn.com/images/1mi2r424x97txmxf74FDA_W_640_0_R5_Q80.jpg?proc=source%2Ftrip",
+    "source": "https://www.trip.com/moments/detail/the-north-bund-area-2032068-140204710/",
+    "credit": "Trip.com travel community",
+    "downloaded": true,
+    "path": "/uploads/itinerary/ruijun/north-bund.webp",
+    "downloadedOn": "2026-09-30"
+  },
+  {
+    "id": "silk-town",
+    "title": "Hangzhou China Silk Town",
+    "url": "https://www.chinahangzhoutour.com/upload/ueditor/image/20180615/6366468277836523438865842.jpg",
+    "source": "https://www.chinahangzhoutour.com/attractions/show/hangzhou-silk-town.htm",
+    "credit": "China Hangzhou Tour",
+    "downloaded": true,
+    "path": "/uploads/itinerary/ruijun/silk-town.webp",
+    "downloadedOn": "2026-09-30"
+  },
+  {
+    "id": "feilai",
+    "title": "Feilai Peak Scenic Area",
+    "url": "https://www.chinadiscovery.com/assets/images/travel-guide/hangzhou/lingyin-temple/grotto-feilai-peak.jpg",
+    "source": "https://www.chinadiscovery.com/zhejiang/hangzhou/lingyin-temple.html",
+    "credit": "China Discovery",
+    "downloaded": true,
+    "path": "/uploads/itinerary/ruijun/feilai.webp",
+    "downloadedOn": "2026-09-30"
+  },
+  {
+    "id": "qipao",
+    "title": "Qipao boutique display on Maoming South Road",
+    "url": "https://p8.itc.cn/q_70/images03/20220317/3776e74c784e4a7cb280ecf2fdfd0fc3.jpeg",
+    "source": "https://m.sohu.com/a/530560430_121123842",
+    "credit": "Sohu",
+    "path": "/uploads/itinerary/ruijun/qipao.webp",
+    "downloadedOn": "2026-09-30"
+  }
+]
