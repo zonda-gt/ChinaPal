@@ -21,6 +21,7 @@ const categoryDescriptions: Record<Category, { number: string; emoji: string }> 
 };
 
 function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recommendation, index: number) => void }) {
+  const [expanded, setExpanded] = useState(false);
   const strip = useRef<HTMLDivElement>(null);
   const [edges, setEdges] = useState({ start: true, end: false });
   function movePhotos(direction: number) {
@@ -44,12 +45,14 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
     } catch { setCopyError(true); }
   }
 
-  return <article className={styles.card} id={item.id}>
+  return <article className={styles.card} id={item.id} onClick={(event) => {
+    if (!(event.target as HTMLElement).closest("button, a, [data-card-details], [role=region]")) setExpanded((open) => !open);
+  }}>
     <div className={styles.gallery}>
       <div ref={strip} className={styles.photoStrip} role="region" aria-roledescription="carousel" aria-label={`${item.name}: ${item.photos.length} photos. Swipe or use arrow keys to browse.`} tabIndex={0}
         onScroll={(event) => { const track = event.currentTarget; setEdges({ start: track.scrollLeft < 2, end: track.scrollLeft + track.clientWidth >= track.scrollWidth - 2 }); }}
         onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); movePhotos(event.key === "ArrowRight" ? 1 : -1); } }}>
-        {item.photos.map((id, index) => <button type="button" className={styles.photoButton} key={id} onClick={() => onPhoto(item, index)} aria-label={`Enlarge ${item.name} photo ${index + 1}`}>
+        {item.photos.map((id, index) => <button type="button" className={styles.photoButton} key={id} onClick={() => setExpanded((open) => !open)} aria-expanded={expanded} aria-controls={`${item.id}-details`} aria-label={`${expanded ? "Hide" : "Show"} ${item.name} details from photo ${index + 1}`}>
           <img src={photoMap[id].path} alt={photoMap[id].alt} loading="lazy" draggable={false} />
         </button>)}
       </div>
@@ -57,13 +60,13 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
       <button type="button" className={styles.galleryNext} disabled={edges.end} aria-label={`Next ${item.name} photos`} onClick={() => movePhotos(1)}><ChevronRight size={18} /></button>
     </div>
     <div className={styles.cardBody}>
+      <button type="button" className={styles.cardToggle} aria-label={`${expanded ? "Hide" : "Show"} ${item.name} details`} aria-expanded={expanded} aria-controls={`${item.id}-details`} onClick={() => setExpanded((open) => !open)} />
       <div className={styles.placeHeading}><h3>{item.name}</h3><span className={`${styles.cityBadge} ${item.city === "Hangzhou" ? styles.hangzhou : ""}`}>{item.city}</span></div>
       <p className={styles.cardLine}>{item.line}</p>
-      <p className={styles.placeType}>{item.tags[0]}</p>
+      <p className={styles.placeType}>{item.tags[0]}<ChevronDown size={15} aria-hidden="true" className={expanded ? styles.expandedChevron : undefined} /></p>
     </div>
-      <details className={styles.details}>
-        <summary>Visit details <ChevronDown size={17} aria-hidden="true" /></summary>
-        <div className={styles.detailContent}>
+      <div id={`${item.id}-details`} className={styles.detailContent} hidden={!expanded} data-card-details>
+          <button type="button" className={styles.viewPhotos} onClick={() => onPhoto(item, 0)}>View larger photos <span aria-hidden="true">↗</span></button>
           <p className={styles.chinese} lang="zh-CN">{item.chinese}</p><p className={styles.neighbourhood}>{item.neighbourhood}</p>
           <div className={styles.why}><span>Why we picked it for you</span><p>{item.why}</p></div>
           <p className={styles.fit}><Clock3 size={15} aria-hidden="true" /><span>{item.fit}</span></p>
@@ -75,9 +78,7 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
             <dt>{item.category === "Bakeries & cafés" ? "Before ordering" : "Before you book"}</dt><dd>{item.booking}</dd>
           </dl>
           <div className={styles.address}><MapPin size={16} aria-hidden="true" /><div><p>{item.address}</p><p lang="zh-CN">{item.chineseAddress}</p><button type="button" onClick={copyAddress}>{copied ? <Check size={13} /> : <Copy size={13} />} {copied ? "Address copied" : "Copy Chinese address"}</button><span role="status">{copyError ? "Please select and copy the address above." : copied ? "Ready to show your driver." : ""}</span></div></div>
-          <div className={styles.sources}><span>Useful references</span>{item.sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}</div>
-        </div>
-      </details>
+      </div>
   </article>;
 }
 
@@ -103,7 +104,7 @@ export default function RecommendationsClient() {
           <p className={styles.eyebrow}>A personal collection · ChinaPal</p>
           <h1>A few places we picked <em>for you.</em></h1>
           <p className={styles.dedication}>For Ruijun & her parents</p>
-          <p className={styles.intro}>Eight optional stops for your family. Swipe through the photos, then open a place for practical details.</p>
+          <p className={styles.intro}>Eight optional stops for your family. Swipe through the photos. Tap a card for practical details.</p>
           <div className={styles.heroMeta}><span>10–15 October 2026</span><span>Two cities · your own pace</span></div>
         </div>
         <div className={styles.heroPhotos}>
@@ -133,7 +134,7 @@ export default function RecommendationsClient() {
       </section>
 
       <section className={styles.closing}><p className={styles.eyebrow}>Make it your kind of trip</p><h2>Choose what you love. <em>Leave room to enjoy it.</em></h2><p>Keep these ideas beside your daily plan. A favourite stop and a comfortable pace are plenty for one day.</p><Link href="/itinerary/ruijun#daily-plan">Back to your daily itinerary <ArrowRight size={16} /></Link></section>
-      <details className={styles.credits}><summary>Photo credits & planning notes</summary><p>Checked 3 October 2026. Travel times and café budgets are planning estimates. Show dates, seats, opening hours, menus and tailoring quotes need confirmation. Photographs show the named venues or productions; B&C also includes an official brand product photo. Displays, menus and casts may change.</p><div>{photos.map((photo) => <p key={photo.id}><a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.alt}</a> · {photo.credit}</p>)}</div></details>
+      <p className={styles.planningNote}>Travel times and café budgets are estimates. Confirm show times, tickets, opening hours and tailoring quotes before visiting.</p>
     </main>
     <Footer />
     <dialog ref={dialog} className={styles.lightbox}
@@ -144,7 +145,7 @@ export default function RecommendationsClient() {
       {activePhoto && currentPhoto && <div className={styles.lightboxInner}>
         <button type="button" className={styles.closePhoto} onClick={() => dialog.current?.close()} aria-label="Close photo" autoFocus><X size={22} /></button>
         <img src={currentPhoto.path} alt={currentPhoto.alt} />
-        <div className={styles.lightboxControls}><button type="button" aria-label="Previous photo" onClick={() => moveLightbox(-1)}><ChevronLeft /></button><div><p>{activePhoto.item.name} · {activePhoto.index + 1} / {activePhoto.item.photos.length}</p><a href={currentPhoto.source} target="_blank" rel="noopener noreferrer">{currentPhoto.credit} ↗</a></div><button type="button" aria-label="Next photo" onClick={() => moveLightbox(1)}><ChevronRight /></button></div>
+        <div className={styles.lightboxControls}><button type="button" aria-label="Previous photo" onClick={() => moveLightbox(-1)}><ChevronLeft /></button><div><p>{activePhoto.item.name} · {activePhoto.index + 1} / {activePhoto.item.photos.length}</p></div><button type="button" aria-label="Next photo" onClick={() => moveLightbox(1)}><ChevronRight /></button></div>
       </div>}
     </dialog>
   </>;
