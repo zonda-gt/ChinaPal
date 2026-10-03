@@ -102,7 +102,7 @@ export default function RecommendationsClient() {
         <div className={styles.heroCopy}>
           <Link href="/itinerary/ruijun" className={styles.back}><ArrowLeft size={14} /> Your itinerary</Link>
           <p className={styles.eyebrow}>A personal collection · ChinaPal</p>
-          <h1>A few places we picked <em>for you.</em></h1>
+          <h1>Some recommendations &amp; <em>things to do.</em></h1>
           <p className={styles.dedication}>For Ruijun & her parents</p>
           <p className={styles.intro}>Eight optional stops for your family. Swipe through the photos. Tap a card for practical details.</p>
           <div className={styles.heroMeta}><span>10–15 October 2026</span><span>Two cities · your own pace</span></div>
