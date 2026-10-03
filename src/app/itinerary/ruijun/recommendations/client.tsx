@@ -4,7 +4,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowDown, ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, Clock3, Coffee, Copy, MapPin, Theater, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, Clock3, Coffee, Copy, MapPin, Theater, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { recommendations, type Category, type City, type Recommendation } from "./data";
@@ -21,9 +21,15 @@ const categoryDescriptions: Record<Category, { number: string; title: string; de
 };
 
 function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recommendation, index: number) => void }) {
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const touchStart = useRef<{ x: number; y: number } | null>(null);
-  const movePhoto = (offset: number) => setPhotoIndex((index) => (index + offset + item.photos.length) % item.photos.length);
+  const strip = useRef<HTMLDivElement>(null);
+  const [edges, setEdges] = useState({ start: true, end: false });
+  function movePhotos(direction: number) {
+    const track = strip.current;
+    if (!track) return;
+    const photo = track.firstElementChild as HTMLElement | null;
+    const step = (photo?.offsetWidth ?? track.clientWidth / 2) + 8;
+    track.scrollBy({ left: direction * step, behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth" });
+  }
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -39,29 +45,26 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
   }
 
   return <article className={styles.card} id={item.id}>
-    <div className={styles.gallery} role="region" aria-roledescription="carousel" aria-label={`${item.name} photos`}
-      onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); movePhoto(event.key === "ArrowRight" ? 1 : -1); } }}
-      onTouchStart={(event) => { touchStart.current = { x: event.touches[0].clientX, y: event.touches[0].clientY }; }}
-      onTouchEnd={(event) => { if (!touchStart.current) return; const dx = event.changedTouches[0].clientX - touchStart.current.x; const dy = event.changedTouches[0].clientY - touchStart.current.y; if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) { if (event.cancelable) event.preventDefault(); movePhoto(dx < 0 ? 1 : -1); } touchStart.current = null; }}>
-      <button type="button" className={styles.photoButton} onClick={() => onPhoto(item, photoIndex)} aria-label={`Enlarge ${item.name} photo ${photoIndex + 1}`}>
-        <img src={photoMap[item.photos[photoIndex]].path} alt={photoMap[item.photos[photoIndex]].alt} loading="lazy" />
-      </button>
-      <span className={`${styles.cityBadge} ${item.city === "Hangzhou" ? styles.hangzhou : ""}`}>{item.city}</span>
-      <span className={styles.photoNumber} aria-live="polite">{photoIndex + 1} / {item.photos.length}</span>
-      <button type="button" className={styles.galleryPrev} aria-label={`Previous ${item.name} photo`} onClick={() => movePhoto(-1)}><ChevronLeft size={17} /></button>
-      <button type="button" className={styles.galleryNext} aria-label={`Next ${item.name} photo`} onClick={() => movePhoto(1)}><ChevronRight size={17} /></button>
-      <div className={styles.photoDots}>{item.photos.map((id, index) => <button type="button" key={id} aria-label={`Show ${item.name} photo ${index + 1}`} aria-pressed={photoIndex === index} onClick={() => setPhotoIndex(index)}><span /></button>)}</div>
+    <div className={styles.gallery}>
+      <div ref={strip} className={styles.photoStrip} role="region" aria-roledescription="carousel" aria-label={`${item.name}: ${item.photos.length} photos. Swipe or use arrow keys to browse.`} tabIndex={0}
+        onScroll={(event) => { const track = event.currentTarget; setEdges({ start: track.scrollLeft < 2, end: track.scrollLeft + track.clientWidth >= track.scrollWidth - 2 }); }}
+        onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); movePhotos(event.key === "ArrowRight" ? 1 : -1); } }}>
+        {item.photos.map((id, index) => <button type="button" className={styles.photoButton} key={id} onClick={() => onPhoto(item, index)} aria-label={`Enlarge ${item.name} photo ${index + 1}`}>
+          <img src={photoMap[id].path} alt={photoMap[id].alt} loading="lazy" draggable={false} />
+        </button>)}
+      </div>
+      <button type="button" className={styles.galleryPrev} disabled={edges.start} aria-label={`Previous ${item.name} photos`} onClick={() => movePhotos(-1)}><ChevronLeft size={18} /></button>
+      <button type="button" className={styles.galleryNext} disabled={edges.end} aria-label={`Next ${item.name} photos`} onClick={() => movePhotos(1)}><ChevronRight size={18} /></button>
     </div>
     <div className={styles.cardBody}>
-      <p className={styles.neighbourhood}>{item.neighbourhood}</p>
-      <h3>{item.name}</h3>
-      <p className={styles.chinese}>{item.chinese}</p>
+      <div className={styles.placeHeading}><h3>{item.name}</h3><span className={`${styles.cityBadge} ${item.city === "Hangzhou" ? styles.hangzhou : ""}`}>{item.city}</span></div>
       <p className={styles.cardLine}>{item.line}</p>
-      <div className={styles.tags}>{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
+      <p className={styles.placeType}>{item.tags[0]}</p>
     </div>
       <details className={styles.details}>
-        <summary>Visit details & why we picked it <ChevronDown size={17} aria-hidden="true" /></summary>
+        <summary>Visit details <ChevronDown size={17} aria-hidden="true" /></summary>
         <div className={styles.detailContent}>
+          <p className={styles.chinese} lang="zh-CN">{item.chinese}</p><p className={styles.neighbourhood}>{item.neighbourhood}</p>
           <div className={styles.why}><span>Why we picked it for you</span><p>{item.why}</p></div>
           <p className={styles.fit}><Clock3 size={15} aria-hidden="true" /><span>{item.fit}</span></p>
           <dl>
@@ -101,13 +104,11 @@ export default function RecommendationsClient() {
           <h1>A few places we picked <em>for you.</em></h1>
           <p className={styles.dedication}>For Ruijun & her parents</p>
           <p className={styles.intro}>Eight optional stops for your family. Swipe through the photos, then open a place for practical details.</p>
-          <a href="#collection" className={styles.heroCta}>Explore your collection <ArrowDown size={16} /></a>
           <div className={styles.heroMeta}><span>10–15 October 2026</span><span>Two cities · your own pace</span></div>
         </div>
         <div className={styles.heroPhotos}>
           <figure className={styles.heroMain}><img src={photoMap["lake-show-2"].path} alt="Performers and moonlit reflections on the West Lake stage" /><figcaption>Evenings with a little magic.<span>最忆是杭州 · Hangzhou</span></figcaption></figure>
-          <figure className={styles.heroInset}><img src={photoMap["apoli-1"].path} alt="The leafy terrace and storefront of APOLI ITABAKERY" /><figcaption>And time for the little things.</figcaption></figure>
-          <span className={styles.heroStamp}>Chosen<br /><em>with care</em></span>
+
         </div>
       </header>
 
@@ -124,7 +125,7 @@ export default function RecommendationsClient() {
           if (!items.length) return null;
           const heading = categoryDescriptions[group];
           return <section key={group} className={styles.categorySection} aria-labelledby={`heading-${heading.number}`}>
-            <div className={styles.sectionHeading}><span>{heading.number}</span><div><p>{group}</p><h2 id={`heading-${heading.number}`}>{heading.title}</h2><p>{heading.description}</p></div></div>
+            <div className={styles.sectionHeading}><span>{heading.number}</span><div><p>{group}</p><h2 id={`heading-${heading.number}`}>{heading.title}</h2><p>{heading.description}</p></div><span className={styles.sectionCount}>{items.length} {items.length === 1 ? "place" : "places"}</span></div>
             {group === "Bakeries & cafés" && <aside className={styles.dietary}><Coffee size={20} aria-hidden="true" /><div><strong>A small ingredient check before a sweet treat.</strong><p>Eggs and dairy are fine. Ask staff to confirm no meat, seafood, alliums or gelatine, including fillings and glazes. These are places to browse; individual items still need checking.</p></div></aside>}
             <div className={styles.cardGrid}>{items.map((item) => <Card key={item.id} item={item} onPhoto={(selected, index) => setActivePhoto({ item: selected, index })} />)}</div>
           </section>;

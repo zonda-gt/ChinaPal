@@ -27,7 +27,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "era", category: "Shows", city: "Shanghai",
     name: "ERA — Journey Through Time and Space 2", chinese: "时空之旅2", neighbourhood: "Shanghai Circus World",
-    line: "An evening of acrobatics, movement and spectacle.",
+    line: "Visual acrobatics the whole family can enjoy together after an afternoon rest.",
     why: "Our pick if you want a show the three of you can enjoy through movement and music, with little reliance on dialogue. A seated evening after a proper hotel rest.",
     photos: ["era-1", "era-2", "era-3", "era-4", "era-5", "era-6"], tags: ["Acrobatics", "Indoor theatre", "Visually led"],
     fit: "14 October · Choose ERA or Phantom after the Wukang Road day. Pack earlier and keep the afternoon restful.",
@@ -43,7 +43,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "phantom", category: "Shows", city: "Shanghai",
     name: "The Phantom of the Opera", chinese: "剧院魅影", neighbourhood: "Shanghai Grand Theatre · People’s Square",
-    line: "A grand musical evening, with a little more time set aside.",
+    line: "A special evening for musical-theatre lovers, with an early dinner and a taxi home.",
     why: "For a family who enjoys musical theatre: the music, costumes and stagecraft make this a special shared evening. Choose it if everyone is happy with a longer performance.",
     photos: ["phantom-1", "phantom-2", "phantom-3", "phantom-4", "phantom-5", "phantom-6"], tags: ["English-language musical", "Indoor theatre", "Longer evening"],
     fit: "14 October · An alternative to ERA. Have an early dinner and pack before going out for the next morning’s flight.",
@@ -59,7 +59,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "lake-show", category: "Shows", city: "Hangzhou",
     name: "Enduring Memories of Hangzhou", chinese: "最忆是杭州", neighbourhood: "West Lake · Yue Lake",
-    line: "Music and dance, with West Lake itself as the stage.",
+    line: "A memorable lakeside show to round off your West Lake day, if everyone has energy.",
     why: "Our most atmospheric choice for a Hangzhou evening: light, reflections and performers on the water. It pairs naturally with your West Lake day if everyone still has energy.",
     photos: ["lake-show-1", "lake-show-2", "lake-show-3", "lake-show-4", "lake-show-5", "lake-show-6"], tags: ["Outdoor lake show", "Music & dance", "Weather dependent"],
     fit: "11 October · Optional after West Lake. Choose this only if the temple morning has not left everyone tired; adjust dinner around the confirmed performance.",
@@ -75,7 +75,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "songcheng", category: "Shows", city: "Hangzhou",
     name: "Hangzhou Songcheng Show", chinese: "宋城千古情", neighbourhood: "Songcheng scenic area · Zhijiang Road",
-    line: "A colourful stage journey through Hangzhou’s stories.",
+    line: "A lively indoor alternative to the lake show, best enjoyed as a relaxed half-day outing.",
     why: "For a livelier cultural spectacle, with large dance scenes, costumes and theatrical effects. It is an alternative for a family who prefers an indoor stage show to an evening on the lake.",
     photos: ["songcheng-1", "songcheng-2", "songcheng-3", "songcheng-4", "songcheng-5", "songcheng-6"], tags: ["Large-scale stage show", "Chinese cultural stories", "More travel involved"],
     fit: "10 or 11 October · Replace part of an afternoon with this outing. We would not add Songcheng on top of the full temple, lake and evening-show day.",
@@ -91,7 +91,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "apoli", category: "Bakeries & cafés", city: "Shanghai",
     name: "APOLI ITABAKERY", chinese: "AP意大利料理面包坊", neighbourhood: "Xingguo Road · by Wukang Mansion",
-    line: "A little Italian-style bakery pause on your Wukang morning.",
+    line: "An easy pastry-and-coffee pause near Wukang Mansion, right along your planned route.",
     why: "This fits your route especially well: a browse of the pastry counter and a drink near Wukang Mansion, without turning a café stop into another cross-city journey.",
     photos: ["apoli-1", "apoli-2", "apoli-3", "apoli-4", "apoli-5", "apoli-6"], tags: ["Near Wukang Mansion", "Bakery & drinks", "Check ingredients"],
     fit: "14 October · During the Wukang Road morning, before lunch at Linhu Vegetarian.",
@@ -107,7 +107,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "foamy", category: "Bakeries & cafés", city: "Hangzhou",
     name: "Foamy Foamy", chinese: "Foamy Foamy · 湖滨银泰", neighbourhood: "Hubin IN77 · exact unit to confirm",
-    line: "A small dessert detour while you are already by the lake.",
+    line: "Choose a cake to share during your Hubin stroll; check ingredients and seating first.",
     why: "A chance to choose a cake to share after your lakeside stroll. Keeping it within the Hubin outing makes this an easy optional treat rather than a separate excursion.",
     photos: ["foamy-1", "foamy-2", "foamy-3", "foamy-4", "foamy-5", "foamy-6"], tags: ["Near the lake", "Cakes to share", "Confirm branch"],
     fit: "11 October · During the Hubin afternoon, if you would like a dessert before the early dinner.",
@@ -123,7 +123,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "butter", category: "Bakeries & cafés", city: "Shanghai",
     name: "BUTTERFUL & CREAMOROUS", chinese: "黄油与面包 · 新天地店", neighbourhood: "Xintiandi · Xingye Road",
-    line: "A pastry-counter browse among Xintiandi’s old lanes.",
+    line: "A small treat to share while exploring Xintiandi, with takeaway if seats are limited.",
     why: "An easy extra while you are already exploring Xintiandi. Pick something small to share, then keep the evening unhurried rather than planning another full meal.",
     photos: ["butter-1", "butter-2", "butter-3", "butter-4", "butter-5", "butter-6"], tags: ["Pairs with Xintiandi", "Bakery stop", "Takeaway option"],
     fit: "12 October · With the optional Xintiandi visit. Check closing time first if going after dinner.",
@@ -139,7 +139,7 @@ export const recommendations: Recommendation[] = [
   {
     id: "longfeng", category: "Qipao", city: "Shanghai",
     name: "Longfeng Qipao", chinese: "龙凤旗袍", neighbourhood: "Shaanxi North Road · Jing’an",
-    line: "A special stop for traditional Shanghai craftsmanship.",
+    line: "An unhurried qipao browse near West Nanjing Road, with time to try a few styles.",
     why: "Our pick for a more considered qipao browse: look closely at the fabric, edging and handmade knotted buttons, and try a few shapes without feeling rushed to buy.",
     photos: ["longfeng-1", "longfeng-2", "longfeng-3", "longfeng-4", "longfeng-5", "longfeng-6"], tags: ["Heritage since 1936", "Ready-made & custom", "Allow fitting time"],
     fit: "13 October · Pair with the West Nanjing Road part of the day, replacing some general shopping. It is a separate stop from the Huaihai Road boutiques.",
