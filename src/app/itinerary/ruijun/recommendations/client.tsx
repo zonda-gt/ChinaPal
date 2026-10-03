@@ -14,10 +14,10 @@ import styles from "./recommendations.module.css";
 const categories: ("All" | Category)[] = ["All", "Shows", "Bakeries & cafés", "Qipao"];
 const cities: ("Both cities" | City)[] = ["Both cities", "Shanghai", "Hangzhou"];
 const photoMap = Object.fromEntries(photos.map((photo) => [photo.id, photo]));
-const categoryDescriptions: Record<Category, { number: string; title: string; description: string }> = {
-  Shows: { number: "01", title: "An evening to remember.", description: "Four different ways to enjoy a performance together. Choose the one that suits your mood and energy." },
-  "Bakeries & cafés": { number: "02", title: "A little pause, something sweet.", description: "Small detours along routes you already have planned. No need to cross the city just for a pastry." },
-  Qipao: { number: "03", title: "Something to bring home.", description: "Time to browse, notice the details and find a piece that feels like you." },
+const categoryDescriptions: Record<Category, { number: string; emoji: string }> = {
+  Shows: { number: "shows", emoji: "🎭" },
+  "Bakeries & cafés": { number: "cafes", emoji: "☕" },
+  Qipao: { number: "qipao", emoji: "👗" },
 };
 
 function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recommendation, index: number) => void }) {
@@ -125,7 +125,7 @@ export default function RecommendationsClient() {
           if (!items.length) return null;
           const heading = categoryDescriptions[group];
           return <section key={group} className={styles.categorySection} aria-labelledby={`heading-${heading.number}`}>
-            <div className={styles.sectionHeading}><span>{heading.number}</span><div><p>{group}</p><h2 id={`heading-${heading.number}`}>{heading.title}</h2><p>{heading.description}</p></div><span className={styles.sectionCount}>{items.length} {items.length === 1 ? "place" : "places"}</span></div>
+            <div className={styles.sectionHeading}><span aria-hidden="true">{heading.emoji}</span><h2 id={`heading-${heading.number}`}>{group}</h2><span className={styles.sectionCount}>{items.length} {items.length === 1 ? "place" : "places"}</span></div>
             {group === "Bakeries & cafés" && <aside className={styles.dietary}><Coffee size={20} aria-hidden="true" /><div><strong>A small ingredient check before a sweet treat.</strong><p>Eggs and dairy are fine. Ask staff to confirm no meat, seafood, alliums or gelatine, including fillings and glazes. These are places to browse; individual items still need checking.</p></div></aside>}
             <div className={styles.cardGrid}>{items.map((item) => <Card key={item.id} item={item} onPhoto={(selected, index) => setActivePhoto({ item: selected, index })} />)}</div>
           </section>;
