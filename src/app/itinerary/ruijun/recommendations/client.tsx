@@ -4,7 +4,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { ArrowDown, ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, Clock3, Coffee, Copy, MapPin, Sparkles, Theater, X } from "lucide-react";
+import { ArrowDown, ArrowLeft, ArrowRight, Check, ChevronDown, ChevronLeft, ChevronRight, Clock3, Coffee, Copy, MapPin, Theater, X } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { recommendations, type Category, type City, type Recommendation } from "./data";
@@ -21,6 +21,9 @@ const categoryDescriptions: Record<Category, { number: string; title: string; de
 };
 
 function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recommendation, index: number) => void }) {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const touchStart = useRef<{ x: number; y: number } | null>(null);
+  const movePhoto = (offset: number) => setPhotoIndex((index) => (index + offset + item.photos.length) % item.photos.length);
   const [copied, setCopied] = useState(false);
   const [copyError, setCopyError] = useState(false);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -36,12 +39,18 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
   }
 
   return <article className={styles.card} id={item.id}>
-    <div className={styles.gallery}>
-      {item.photos.map((id, index) => <button type="button" className={styles.photoButton} key={id} onClick={() => onPhoto(item, index)} aria-label={`Enlarge ${item.name} photo ${index + 1}`}>
-        <img src={photoMap[id].path} alt={photoMap[id].alt} loading="lazy" />
-        <span className={styles.photoNumber}>{String(index + 1).padStart(2, "0")}</span>
-      </button>)}
+    <div className={styles.gallery} role="region" aria-roledescription="carousel" aria-label={`${item.name} photos`}
+      onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); movePhoto(event.key === "ArrowRight" ? 1 : -1); } }}
+      onTouchStart={(event) => { touchStart.current = { x: event.touches[0].clientX, y: event.touches[0].clientY }; }}
+      onTouchEnd={(event) => { if (!touchStart.current) return; const dx = event.changedTouches[0].clientX - touchStart.current.x; const dy = event.changedTouches[0].clientY - touchStart.current.y; if (Math.abs(dx) > 35 && Math.abs(dx) > Math.abs(dy)) { if (event.cancelable) event.preventDefault(); movePhoto(dx < 0 ? 1 : -1); } touchStart.current = null; }}>
+      <button type="button" className={styles.photoButton} onClick={() => onPhoto(item, photoIndex)} aria-label={`Enlarge ${item.name} photo ${photoIndex + 1}`}>
+        <img src={photoMap[item.photos[photoIndex]].path} alt={photoMap[item.photos[photoIndex]].alt} loading="lazy" />
+      </button>
       <span className={`${styles.cityBadge} ${item.city === "Hangzhou" ? styles.hangzhou : ""}`}>{item.city}</span>
+      <span className={styles.photoNumber} aria-live="polite">{photoIndex + 1} / {item.photos.length}</span>
+      <button type="button" className={styles.galleryPrev} aria-label={`Previous ${item.name} photo`} onClick={() => movePhoto(-1)}><ChevronLeft size={17} /></button>
+      <button type="button" className={styles.galleryNext} aria-label={`Next ${item.name} photo`} onClick={() => movePhoto(1)}><ChevronRight size={17} /></button>
+      <div className={styles.photoDots}>{item.photos.map((id, index) => <button type="button" key={id} aria-label={`Show ${item.name} photo ${index + 1}`} aria-pressed={photoIndex === index} onClick={() => setPhotoIndex(index)}><span /></button>)}</div>
     </div>
     <div className={styles.cardBody}>
       <p className={styles.neighbourhood}>{item.neighbourhood}</p>
@@ -49,11 +58,12 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
       <p className={styles.chinese}>{item.chinese}</p>
       <p className={styles.cardLine}>{item.line}</p>
       <div className={styles.tags}>{item.tags.map((tag) => <span key={tag}>{tag}</span>)}</div>
-      <div className={styles.why}><span>Why we picked it for you</span><p>{item.why}</p></div>
-      <p className={styles.fit}><Clock3 size={15} aria-hidden="true" /><span>{item.fit}</span></p>
+    </div>
       <details className={styles.details}>
-        <summary>Plan your visit <ChevronDown size={17} aria-hidden="true" /></summary>
+        <summary>Visit details & why we picked it <ChevronDown size={17} aria-hidden="true" /></summary>
         <div className={styles.detailContent}>
+          <div className={styles.why}><span>Why we picked it for you</span><p>{item.why}</p></div>
+          <p className={styles.fit}><Clock3 size={15} aria-hidden="true" /><span>{item.fit}</span></p>
           <dl>
             <dt>Time to set aside</dt><dd>{item.time}</dd>
             <dt>Budget & tickets</dt><dd>{item.budget}</dd>
@@ -65,7 +75,6 @@ function Card({ item, onPhoto }: { item: Recommendation; onPhoto: (item: Recomme
           <div className={styles.sources}><span>Useful references</span>{item.sources.map((source) => <a key={source.url} href={source.url} target="_blank" rel="noopener noreferrer">{source.label} ↗</a>)}</div>
         </div>
       </details>
-    </div>
   </article>;
 }
 
@@ -74,6 +83,10 @@ export default function RecommendationsClient() {
   const [city, setCity] = useState<"Both cities" | City>("Both cities");
   const [activePhoto, setActivePhoto] = useState<{ item: Recommendation; index: number } | null>(null);
   const dialog = useRef<HTMLDialogElement>(null);
+  const lightboxTouch = useRef<number | null>(null);
+  function moveLightbox(offset: number) {
+    setActivePhoto((current) => current ? { ...current, index: (current.index + offset + current.item.photos.length) % current.item.photos.length } : null);
+  }
   useEffect(() => { if (activePhoto && !dialog.current?.open) dialog.current?.showModal(); }, [activePhoto]);
   const visible = recommendations.filter((item) => (category === "All" || item.category === category) && (city === "Both cities" || item.city === city));
   const currentPhoto = activePhoto ? photoMap[activePhoto.item.photos[activePhoto.index]] : null;
@@ -85,9 +98,9 @@ export default function RecommendationsClient() {
         <div className={styles.heroCopy}>
           <Link href="/itinerary/ruijun" className={styles.back}><ArrowLeft size={14} /> Your itinerary</Link>
           <p className={styles.eyebrow}>A personal collection · ChinaPal</p>
-          <h1>A few places<br />we picked <em>for you.</em></h1>
+          <h1>A few places we picked <em>for you.</em></h1>
           <p className={styles.dedication}>For Ruijun & her parents</p>
-          <p className={styles.intro}>A memorable show. A slow café pause. A qipao worth trying on. Eight ideas for your time in Hangzhou and Shanghai, with room to choose what feels right on the day.</p>
+          <p className={styles.intro}>Eight optional stops for your family. Swipe through the photos, then open a place for practical details.</p>
           <a href="#collection" className={styles.heroCta}>Explore your collection <ArrowDown size={16} /></a>
           <div className={styles.heroMeta}><span>10–15 October 2026</span><span>Two cities · your own pace</span></div>
         </div>
@@ -97,10 +110,6 @@ export default function RecommendationsClient() {
           <span className={styles.heroStamp}>Chosen<br /><em>with care</em></span>
         </div>
       </header>
-
-      <section className={styles.personalNote} aria-label="How to use your recommendations">
-        <Sparkles size={23} aria-hidden="true" /><div><h2>Make room for what you enjoy.</h2><p>These are optional ideas to weave into your trip. Pick one show for an evening, keep a proper rest before going out, and let a café or shopping stop replace something else when you need a slower day.</p></div>
-      </section>
 
       <section id="collection" className={styles.collection} aria-label="Your recommendations">
         <div className={styles.filters}>
@@ -122,15 +131,19 @@ export default function RecommendationsClient() {
         })}
       </section>
 
-      <section className={styles.closing}><p className={styles.eyebrow}>Make it your kind of trip</p><h2>Choose what you love.<br /><em>Leave room to enjoy it.</em></h2><p>Keep these ideas beside your daily plan. A favourite stop and a comfortable pace are plenty for one day.</p><Link href="/itinerary/ruijun#daily-plan">Back to your daily itinerary <ArrowRight size={16} /></Link></section>
-      <details className={styles.credits}><summary>Photo credits & planning notes</summary><p>Checked 3 October 2026. Travel times and café budgets are planning estimates. Show dates, seats, opening hours, menus and tailoring quotes need confirmation. Photographs show the named venues or productions; displays and casts may change.</p><div>{photos.map((photo) => <p key={photo.id}><a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.alt}</a> · {photo.credit}</p>)}</div></details>
+      <section className={styles.closing}><p className={styles.eyebrow}>Make it your kind of trip</p><h2>Choose what you love. <em>Leave room to enjoy it.</em></h2><p>Keep these ideas beside your daily plan. A favourite stop and a comfortable pace are plenty for one day.</p><Link href="/itinerary/ruijun#daily-plan">Back to your daily itinerary <ArrowRight size={16} /></Link></section>
+      <details className={styles.credits}><summary>Photo credits & planning notes</summary><p>Checked 3 October 2026. Travel times and café budgets are planning estimates. Show dates, seats, opening hours, menus and tailoring quotes need confirmation. Photographs show the named venues or productions; B&C also includes an official brand product photo. Displays, menus and casts may change.</p><div>{photos.map((photo) => <p key={photo.id}><a href={photo.source} target="_blank" rel="noopener noreferrer">{photo.alt}</a> · {photo.credit}</p>)}</div></details>
     </main>
     <Footer />
-    <dialog ref={dialog} className={styles.lightbox} aria-label={activePhoto ? `${activePhoto.item.name} photos` : "Recommendation photos"} onClose={() => setActivePhoto(null)} onClick={(event) => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
+    <dialog ref={dialog} className={styles.lightbox}
+      onKeyDown={(event) => { if (event.key === "ArrowRight" || event.key === "ArrowLeft") { event.preventDefault(); moveLightbox(event.key === "ArrowRight" ? 1 : -1); } }}
+      onTouchStart={(event) => { lightboxTouch.current = event.touches[0].clientX; }}
+      onTouchEnd={(event) => { if (lightboxTouch.current !== null) { const delta = event.changedTouches[0].clientX - lightboxTouch.current; if (Math.abs(delta) > 40) moveLightbox(delta < 0 ? 1 : -1); } lightboxTouch.current = null; }}
+      aria-label={activePhoto ? `${activePhoto.item.name} photos` : "Recommendation photos"} onClose={() => setActivePhoto(null)} onClick={(event) => { if (event.target === event.currentTarget) dialog.current?.close(); }}>
       {activePhoto && currentPhoto && <div className={styles.lightboxInner}>
         <button type="button" className={styles.closePhoto} onClick={() => dialog.current?.close()} aria-label="Close photo" autoFocus><X size={22} /></button>
         <img src={currentPhoto.path} alt={currentPhoto.alt} />
-        <div className={styles.lightboxControls}><button type="button" aria-label="Previous photo" onClick={() => setActivePhoto({ ...activePhoto, index: 1 - activePhoto.index })}><ChevronLeft /></button><div><p>{activePhoto.item.name} · {activePhoto.index + 1} / 2</p><a href={currentPhoto.source} target="_blank" rel="noopener noreferrer">{currentPhoto.credit} ↗</a></div><button type="button" aria-label="Next photo" onClick={() => setActivePhoto({ ...activePhoto, index: 1 - activePhoto.index })}><ChevronRight /></button></div>
+        <div className={styles.lightboxControls}><button type="button" aria-label="Previous photo" onClick={() => moveLightbox(-1)}><ChevronLeft /></button><div><p>{activePhoto.item.name} · {activePhoto.index + 1} / {activePhoto.item.photos.length}</p><a href={currentPhoto.source} target="_blank" rel="noopener noreferrer">{currentPhoto.credit} ↗</a></div><button type="button" aria-label="Next photo" onClick={() => moveLightbox(1)}><ChevronRight /></button></div>
       </div>}
     </dialog>
   </>;
