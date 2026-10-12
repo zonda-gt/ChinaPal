@@ -1,0 +1,232 @@
+[
+  {
+    "id": "hotel",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/xr-shaxb-exterior-41659:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-gb/hotels/shaxb-the-st-regis-on-the-bund-shanghai/photos/",
+    "alt": "Exterior",
+    "path": "/uploads/itinerary/theresa/hotel.webp",
+    "width": 1200,
+    "height": 675,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "hotel-2",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/xr-shaxb-lobby-33068:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-gb/hotels/shaxb-the-st-regis-on-the-bund-shanghai/photos/",
+    "alt": "Lobby Seating Area",
+    "path": "/uploads/itinerary/theresa/hotel-2.webp",
+    "width": 1200,
+    "height": 675,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "drawing",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/-shaxb-the-drawing-room20460-20488:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-gb/hotels/shaxb-the-st-regis-on-the-bund-shanghai/photos/",
+    "alt": "The Drawing Room Cafe Seating Area",
+    "path": "/uploads/itinerary/theresa/drawing.webp",
+    "width": 1200,
+    "height": 675,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "pool",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/xr-shaxb-swimming-pool-40595:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-gb/hotels/shaxb-the-st-regis-on-the-bund-shanghai/photos/",
+    "alt": "Indoor Swimming Pool",
+    "path": "/uploads/itinerary/theresa/pool.webp",
+    "width": 1200,
+    "height": 675,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "breakfast",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/xr-shaxb--stregisbrasserie-34165:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-gb/hotels/shaxb-the-st-regis-on-the-bund-shanghai/photos/",
+    "alt": "The St. Regis Brasserie",
+    "path": "/uploads/itinerary/theresa/breakfast.webp",
+    "width": 1200,
+    "height": 674,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "pony",
+    "url": "https://www.the50.com/bars/best-in-asia/filestore/jpg/Pony%20Up-hero_A50BB26-site.jpg",
+    "source": "https://www.the50.com/bars/best-in-asia/the-list/pony-up.html",
+    "alt": "Pony Up, Shanghai",
+    "path": "/uploads/itinerary/theresa/pony.webp",
+    "width": 620,
+    "height": 400,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "pony-2",
+    "url": "https://www.the50.com/bars/best-in-asia/filestore/jpg/Pony%20Up-drink_A50BB26-site.jpg",
+    "source": "https://www.the50.com/bars/best-in-asia/the-list/pony-up.html",
+    "alt": "Cocktail at Pony Up",
+    "path": "/uploads/itinerary/theresa/pony-2.webp",
+    "width": 620,
+    "height": 400,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "coa",
+    "url": "https://www.thespiritsbusiness.com/content/uploads/2024/07/Salon-at-Coa-Shanghai.jpg",
+    "source": "https://www.thespiritsbusiness.com/2024/07/coa-shanghai-relaunches-with-multi-storey-concept/",
+    "alt": "Salón at Coa Shanghai",
+    "path": "/uploads/itinerary/theresa/coa.webp",
+    "width": 650,
+    "height": 410,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "coa-2",
+    "url": "https://www.thespiritsbusiness.com/content/uploads/2024/07/Taqueria-at-Coa-Shanghai-350x350.jpg",
+    "source": "https://www.thespiritsbusiness.com/2024/07/coa-shanghai-relaunches-with-multi-storey-concept/",
+    "alt": "Taqueria at Coa Shanghai",
+    "path": "/uploads/itinerary/theresa/coa-2.webp",
+    "width": 350,
+    "height": 350,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "rac",
+    "url": "https://img.timeoutshanghai.com/201802/20180212033556876_Large.jpg",
+    "source": "https://www.timeoutshanghai.com/venue/Restaurants-Cafes/48291/RAC-Coffee.html",
+    "alt": "RAC Coffee & Bar, Anfu Road",
+    "path": "/uploads/itinerary/theresa/rac.webp",
+    "width": 750,
+    "height": 422,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "rac-2",
+    "url": "https://p16-lemon8-sg-sign.tiktokcdn-us.com/tos-alisg-v-a3e477-sg/ok4DkAUDoCQfpVOFEAA0bEEO9BZPfDcgHtIOAn~tplv-sdweummd6v-wap-logo-v1:QGZpYXN3Y3k=:1080:0.webp?lk3s=66c60501&source=wap_large_logo_image&x-expires=1794398400&x-signature=fKQ2aMNiLYlQTpXARG7wwgFa%2Fug%3D",
+    "source": "https://www.lemon8-app.com/%40fiaswcy/7498282639669854738?region=us",
+    "alt": "RAC Coffee & Bar exterior on Anfu Road",
+    "path": "/uploads/itinerary/theresa/rac-2.webp",
+    "width": 748,
+    "height": 1000,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "marzo",
+    "url": "https://p16-lemon8-sg-sign.tiktokcdn-us.com/tos-alisg-v-a3e477-sg/oskePnAHeJQfSHA6AGbQdcEYgIDoL7A64oAg38~tplv-sdweummd6v-wap-logo-v1:QGZpYXN3Y3k=:1080:0.webp?lk3s=66c60501&source=wap_large_logo_image&x-expires=1794398400&x-signature=klOidBc7ObjJ8RYnfMOuZPgcVWI%3D",
+    "source": "https://www.lemon8-app.com/%40fiaswcy/7498282639669854738?region=us",
+    "alt": "13DE MARZO Café, Anfu Road",
+    "path": "/uploads/itinerary/theresa/marzo.webp",
+    "width": 750,
+    "height": 1000,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "marzo-2",
+    "url": "https://p16-lemon8-sg-sign.tiktokcdn-us.com/tos-alisg-v-a3e477-sg/o0UOD3dtpEOZ9QHBEo0gADDfFnfAECOAAIHPA2~tplv-sdweummd6v-wap-logo-v1:QGZpYXN3Y3k=:1080:0.webp?lk3s=66c60501&source=wap_large_logo_image&x-expires=1794398400&x-signature=w44jrWgD2itpqJsXfPi2kr95P2k%3D",
+    "source": "https://www.lemon8-app.com/%40fiaswcy/7498282639669854738?region=us",
+    "alt": "Bear display at 13DE MARZO Café",
+    "path": "/uploads/itinerary/theresa/marzo-2.webp",
+    "width": 748,
+    "height": 1000,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "lu",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/234a4e7e41ca496491687277ec456cb8.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lu-bo-lang",
+    "alt": "Lu Bo Lang",
+    "path": "/uploads/itinerary/theresa/lu.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "lu-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/02e9e0fc15344aa68a86bc1585b14462.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lu-bo-lang",
+    "alt": "Lu Bo Lang",
+    "path": "/uploads/itinerary/theresa/lu-2.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "xin",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/02753437af34439b91736a2687a805ac.jpg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
+    "alt": "Xin Rong Ji, West Nanjing Road",
+    "path": "/uploads/itinerary/theresa/xin.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "xin-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/96dcfb5a1d6940d38eac970b70ff4b4c.png?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
+    "alt": "Xin Rong Ji, West Nanjing Road",
+    "path": "/uploads/itinerary/theresa/xin-2.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "sheng",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/61317e9274cd4c71a67d4ebcd8e3cf26.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/sheng-yong-xing",
+    "alt": "Sheng Yong Xing, Huangpu",
+    "path": "/uploads/itinerary/theresa/sheng.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "sheng-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/36cba33b2c60497fac3f9d545210f132.jpg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/sheng-yong-xing",
+    "alt": "Sheng Yong Xing, Huangpu",
+    "path": "/uploads/itinerary/theresa/sheng-2.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "fu",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/2222821454c045d8992c3f29521188f7.jpg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-1088",
+    "alt": "Fu 1088",
+    "path": "/uploads/itinerary/theresa/fu.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "fu-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/4416271bfd7f4a078ea5b2f072a950ab.jpg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-1088",
+    "alt": "Fu 1088",
+    "path": "/uploads/itinerary/theresa/fu-2.webp",
+    "width": 1000,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "longbar",
+    "url": "https://www.meet-in-shanghai.net/static/upload/place/main_20170714143808_812790740.jpg",
+    "source": "https://www.meet-in-shanghai.net/en/food/long-bar-055242/",
+    "alt": "Long Bar, Waldorf Astoria Shanghai on the Bund",
+    "path": "/uploads/itinerary/theresa/longbar.webp",
+    "width": 1200,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "longbar-2",
+    "url": "https://www.meet-in-shanghai.net/static/upload/place/md1_20170714143808_731330230.jpg",
+    "source": "https://www.meet-in-shanghai.net/en/food/long-bar-055242/",
+    "alt": "Long Bar, Waldorf Astoria Shanghai on the Bund",
+    "path": "/uploads/itinerary/theresa/longbar-2.webp",
+    "width": 1200,
+    "height": 800,
+    "downloadedOn": "2026-10-12"
+  }
+]
