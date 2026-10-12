@@ -57,9 +57,9 @@ export default function TheresaClient({ images }: { images: ImageMap }) {
     <ItineraryPage images={images} config={buildTheresaConfig()} leadName="Theresa" chromeless />
 
     <section id="dinner-options" className={styles.dinnerSection} aria-labelledby="dinner-title">
-      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday evening · choose one</p><h2 id="dinner-title">A dinner to look forward to.</h2><p>Target: US$100–150 per person, ideally including drinks. An earlier seating is the preference; bar spending is separate.</p></div>
+      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday evening · choose one</p><h2 id="dinner-title">A dinner to look forward to.</h2><p>Two window tables are reserved for Saturday, 24 October at 7:30 PM — choose Lu Style or Yong Fu. Target: US$100–150 per person, ideally including drinks and service; bar spending is separate.</p></div>
       <div className={styles.dinnerGrid}>{dinnerOptions.map(option => <details className={styles.dinnerCard} key={option.id}>
-        <summary><div className={styles.dinnerPhotos}>{option.images.map((src, i) => <img src={src} key={src} alt={`${option.name} · ${i === 0 ? "restaurant photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>{option.status}</span><h3>{option.name}<ChevronDown size={18} /></h3><p>{option.branch}</p></div></summary>
+        <summary><div className={styles.dinnerPhotos}>{option.images.map((src, i) => <img src={src} key={src} alt={`${option.name} · ${i === 0 ? "restaurant photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>{option.status}</span><h3>{option.name}<ChevronDown size={18} /></h3><p>{option.branch}</p><p className={styles.serviceCharge}>{option.serviceCharge}</p></div></summary>
         <div className={styles.dinnerDetails}><p>{option.description}</p><p>{option.note}</p><p className={styles.address}>{option.address}</p><p className={styles.small}>{option.transfer}</p></div>
       </details>)}</div>
     </section>

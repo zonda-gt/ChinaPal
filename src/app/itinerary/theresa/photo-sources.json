@@ -150,46 +150,6 @@
     "downloadedOn": "2026-10-12"
   },
   {
-    "id": "xin",
-    "url": "https://prod-pics.guide.michelin.com/api/public/content/02753437af34439b91736a2687a805ac.jpg?format=webp&h=800&w=1000",
-    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
-    "alt": "Xin Rong Ji, West Nanjing Road",
-    "path": "/uploads/itinerary/theresa/xin.webp",
-    "width": 1000,
-    "height": 800,
-    "downloadedOn": "2026-10-12"
-  },
-  {
-    "id": "xin-2",
-    "url": "https://prod-pics.guide.michelin.com/api/public/content/96dcfb5a1d6940d38eac970b70ff4b4c.png?format=webp&h=800&w=1000",
-    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/xin-rong-ji-west-nanjing-road",
-    "alt": "Xin Rong Ji, West Nanjing Road",
-    "path": "/uploads/itinerary/theresa/xin-2.webp",
-    "width": 1000,
-    "height": 800,
-    "downloadedOn": "2026-10-12"
-  },
-  {
-    "id": "sheng",
-    "url": "https://prod-pics.guide.michelin.com/api/public/content/61317e9274cd4c71a67d4ebcd8e3cf26.jpeg?format=webp&h=800&w=1000",
-    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/sheng-yong-xing",
-    "alt": "Sheng Yong Xing, Huangpu",
-    "path": "/uploads/itinerary/theresa/sheng.webp",
-    "width": 1000,
-    "height": 800,
-    "downloadedOn": "2026-10-12"
-  },
-  {
-    "id": "sheng-2",
-    "url": "https://prod-pics.guide.michelin.com/api/public/content/36cba33b2c60497fac3f9d545210f132.jpg?format=webp&h=800&w=1000",
-    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/sheng-yong-xing",
-    "alt": "Sheng Yong Xing, Huangpu",
-    "path": "/uploads/itinerary/theresa/sheng-2.webp",
-    "width": 1000,
-    "height": 800,
-    "downloadedOn": "2026-10-12"
-  },
-  {
     "id": "fu",
     "url": "https://prod-pics.guide.michelin.com/api/public/content/2222821454c045d8992c3f29521188f7.jpg?format=webp&h=800&w=1000",
     "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/fu-1088",
@@ -228,5 +188,45 @@
     "width": 1200,
     "height": 800,
     "downloadedOn": "2026-10-12"
+  },
+  {
+    "id": "lu-style",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/fb60ce4308844d76b40b8aa5a46532bc.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lu-style-1203592",
+    "alt": "Lu Style (Huangpu) restaurant photograph",
+    "downloadedOn": "2026-10-12",
+    "path": "/uploads/itinerary/theresa/lu-style.webp",
+    "width": 1000,
+    "height": 800
+  },
+  {
+    "id": "lu-style-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/5c4bc1f26c6744ff981791cd215acb6d.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/lu-style-1203592",
+    "alt": "Lu Style (Huangpu) restaurant photograph",
+    "downloadedOn": "2026-10-12",
+    "path": "/uploads/itinerary/theresa/lu-style-2.webp",
+    "width": 1000,
+    "height": 800
+  },
+  {
+    "id": "yong-fu",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/a2de46ba226a47e89a0690f34cd26d02.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/yong-fu",
+    "alt": "Yong Fu (Huangpu) restaurant photograph",
+    "downloadedOn": "2026-10-12",
+    "path": "/uploads/itinerary/theresa/yong-fu.webp",
+    "width": 1000,
+    "height": 800
+  },
+  {
+    "id": "yong-fu-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/4b7d408c9e2a439c9b69de90f42e6736.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/en/shanghai-municipality/shanghai/restaurant/yong-fu",
+    "alt": "Yong Fu (Huangpu) restaurant photograph",
+    "downloadedOn": "2026-10-12",
+    "path": "/uploads/itinerary/theresa/yong-fu-2.webp",
+    "width": 1000,
+    "height": 800
   }
 ]
