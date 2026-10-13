@@ -228,5 +228,35 @@
     "path": "/uploads/itinerary/theresa/yong-fu-2.webp",
     "width": 1000,
     "height": 800
+  },
+  {
+    "id": "st-regis-bar",
+    "url": "https://cache.marriott.com/is/image/marriotts7prod/xr-shaxb-the-st-regis-bar30568-24803:Wide-Hor?wid=1200&fit=constrain",
+    "source": "https://www.marriott.com/en-us/hotels/shaxb-the-st-regis-on-the-bund-shanghai/dining/",
+    "alt": "The St. Regis Bar seating area",
+    "path": "/uploads/itinerary/theresa/st-regis-bar.webp",
+    "width": 1200,
+    "height": 675,
+    "downloadedOn": "2026-10-13"
+  },
+  {
+    "id": "shanghai-tang",
+    "url": "https://dimg04.c-ctrip.com/images/0105i120008m8sj6wDDA3_D_750_450_Q90.jpg?proc=autoorient",
+    "source": "https://gs.ctrip.com/html5/you/foods/fooddetail/277/6937071.html",
+    "alt": "Shanghai Tang Restaurant, Xintiandi",
+    "path": "/uploads/itinerary/theresa/shanghai-tang.webp",
+    "width": 750,
+    "height": 450,
+    "downloadedOn": "2026-10-13"
+  },
+  {
+    "id": "shanghai-tang-2",
+    "url": "https://dimg04.c-ctrip.com/images/100m0z000000ntby020C5_D_750_450_Q90.jpg?proc=autoorient",
+    "source": "https://gs.ctrip.com/html5/you/foods/fooddetail/277/6937071.html",
+    "alt": "Shanghai Tang Restaurant, Xintiandi, second photograph",
+    "path": "/uploads/itinerary/theresa/shanghai-tang-2.webp",
+    "width": 750,
+    "height": 450,
+    "downloadedOn": "2026-10-13"
   }
 ]

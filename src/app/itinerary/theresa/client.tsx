@@ -15,7 +15,7 @@ export default function TheresaClient({ images }: { images: ImageMap }) {
       <div className={styles.heroCopy}>
         <p className={styles.eyebrow}>A weekend for two · ChinaPal</p>
         <h1>Theresa’s<br />Shanghai <em>weekend.</em></h1>
-        <p className={styles.intro}>Old Town photographs, tree-lined streets and a little time by the river. Good food and cocktails, with room to enjoy your hotel, too.</p>
+        <p className={styles.intro}>Photographs together, tree-lined streets and a little time by the river. Good food and cocktails, with room to enjoy your hotel, too.</p>
         <p className={styles.tripMeta}>23–25 October 2026 <span>3 days · 2 nights</span></p>
         <a className={styles.primary} href="#daily-plan">Explore your itinerary <ArrowDown size={16} /></a>
       </div>
@@ -43,23 +43,23 @@ export default function TheresaClient({ images }: { images: ImageMap }) {
     </section>
 
     <div className={styles.keyMoments} aria-label="Important trip timings">
-      <p><Camera size={18} /><span><strong>Saturday · 9:00 AM</strong>Old Town photoshoot · confirmed</span></p>
-      <p><Camera size={18} /><span><strong>Sunday · 10:40 AM</strong>Wukang Road photoshoot · confirmed</span></p>
+      <p><Camera size={18} /><span><strong>Saturday · arrive by 8:45 AM</strong>Makeup & photoshoot · 9:00–11:00 AM</span></p>
+      <p><Camera size={18} /><span><strong>Sunday · photoshoot undecided</strong>If kept: meet 10:40 AM · shoot 11:00 AM–noon</span></p>
       <p><Plane size={18} /><span><strong>Sunday · leave hotel 2:15 PM</strong>Airport transfer · ~60–90 min</span></p>
     </div>
 
     <section id="daily-plan" className={styles.dailyIntro} aria-labelledby="daily-title">
       <p className={styles.eyebrow}>One day at a time</p><h2 id="daily-title">Your weekend, planned.</h2>
       <p>Choose a day, then tap a place to see the details. Optional stops can flex around how you feel.</p>
-      <p className={styles.small}>~ marks an estimated journey time, not live routing. Allow extra for traffic, queues and finding entrances. Photoshoot finish times and unbooked meals remain flexible.</p>
+      <p className={styles.small}>~ marks an estimated journey time, not live routing. Allow extra for traffic, queues and finding entrances. Sunday’s photoshoot remains undecided; its alternative walk replaces the session. Unbooked meals remain flexible.</p>
       <a href="#dinner-options">Compare your Saturday dinner options <ArrowDown size={14} /></a>
     </section>
     <ItineraryPage images={images} config={buildTheresaConfig()} leadName="Theresa" chromeless />
 
     <section id="dinner-options" className={styles.dinnerSection} aria-labelledby="dinner-title">
-      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday evening · choose one</p><h2 id="dinner-title">A dinner to look forward to.</h2><p>Two window tables are reserved for Saturday, 24 October at 7:30 PM — choose Lu Style or Yong Fu. Target: US$100–150 per person, ideally including drinks and service; bar spending is separate.</p></div>
+      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday evening · choose one</p><h2 id="dinner-title">A dinner to look forward to.</h2><p>Three reservations are held for Saturday, 24 October while you and your partner decide: Shanghai Tang at 7:00 PM, Yong Fu at 7:30 PM, and Fu 1088 at 9:00 PM. We recommend Shanghai Tang for Shanghainese food, a date-night setting and a more moderate budget. No cancellation is being made yet; prices below are estimates or quoted minimums, and bar spending is separate.</p></div>
       <div className={styles.dinnerGrid}>{dinnerOptions.map(option => <details className={styles.dinnerCard} key={option.id}>
-        <summary><div className={styles.dinnerPhotos}>{option.images.map((src, i) => <img src={src} key={src} alt={`${option.name} · ${i === 0 ? "restaurant photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>{option.status}</span><h3>{option.name}<ChevronDown size={18} /></h3><p>{option.branch}</p><p className={styles.serviceCharge}>{option.serviceCharge}</p></div></summary>
+        <summary><div className={styles.dinnerPhotos}>{option.images.map((src, i) => <img src={src} key={src} alt={`${option.name} · ${i === 0 ? "restaurant photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>{option.status}</span><h3>{option.name}<ChevronDown size={18} /></h3><p>{option.branch}</p><p className={styles.serviceCharge}>{option.price}</p><p className={styles.serviceCharge}>{option.serviceCharge}</p></div></summary>
         <div className={styles.dinnerDetails}><p>{option.description}</p><p>{option.note}</p><p className={styles.address}>{option.address}</p><p className={styles.small}>{option.transfer}</p></div>
       </details>)}</div>
     </section>
