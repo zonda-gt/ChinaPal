@@ -53,7 +53,11 @@ export async function POST(req: NextRequest) {
           price_data: {
             currency: "usd",
             unit_amount: plan.price * 100, // dollars → cents
-            product_data: { name: `ChinaPal — ${plan.name}`, description: plan.unit },
+            product_data: {
+              name: plan.name,
+              description: plan.blurb,
+              ...(plan.image ? { images: [plan.image] } : {}),
+            },
           },
         },
       ],

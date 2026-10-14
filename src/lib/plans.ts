@@ -13,10 +13,19 @@ export type Plan = {
   // Condensed "what's included" — a short value reminder for the checkout
   // order summary (not the full feature list, which lives on the pricing page).
   highlights: string[];
+  // Publicly-reachable HTTPS image URL shown on the Stripe Checkout page.
+  // Optional — Stripe shows a placeholder if omitted.
+  image?: string;
   successHeadline: string;
   successHint: string;
   whatsappPrefill: string;
 };
+
+// Shared brand image used on the Stripe Checkout page. Swap per plan later
+// if you have plan-specific imagery (a clipboard for Trip Check, a phone-chat
+// for the Pass, etc.). Must be publicly reachable HTTPS.
+const CHECKOUT_IMAGE =
+  "https://www.chinapal.co/places/wulong-arches.jpg";
 
 export const PLANS: Record<PlanKey, Plan> = {
   "trip-check": {
@@ -33,6 +42,7 @@ export const PLANS: Record<PlanKey, Plan> = {
       "Food & neighbourhood ideas",
       "One round of local feedback",
     ],
+    image: CHECKOUT_IMAGE,
     successHeadline: "Your Trip Check is on the way.",
     successHint:
       "Share your draft itinerary, hotel options, and questions. A local will review and reply within 24 hours.",
@@ -53,6 +63,7 @@ export const PLANS: Record<PlanKey, Plan> = {
       "Ticket guidance + translation help",
       "App chat or WhatsApp",
     ],
+    image: CHECKOUT_IMAGE,
     successHeadline: "You're in. Welcome to ChinaPal Pass.",
     successHint:
       "Your 7 days start when you send your first real support message. Tell us your trip and ask anything.",

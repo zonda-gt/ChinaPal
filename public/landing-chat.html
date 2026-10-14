@@ -525,8 +525,12 @@
     });
   }
 
-  function handoff(){
-    walled=true;chips.innerHTML='';
+  // Show the upsell card. Called after every AI reply; only locks the chat
+  // (`lock=true`) once the free-limit wall is hit. Removes any previous card
+  // so we never stack two identical handoffs in the chat body.
+  function handoff(lock){
+    const existing=body.querySelector('.handoff');
+    if(existing) existing.remove();
     const d=document.createElement('div');d.className='handoff';
     d.innerHTML='<h4>'+HANDOFF.title+'</h4><p>'+HANDOFF.p+'</p>'
       +'<div class="price"><span class="was">'+HANDOFF.was+'</span>'
@@ -537,7 +541,10 @@
       +'<span class="fine">'+HANDOFF.fine+'</span>';
     d.querySelector('.cta').onclick=()=>document.getElementById('price').scrollIntoView({behavior:'smooth'});
     body.appendChild(d);scroll();
-    inp.disabled=true;send.disabled=true;inp.placeholder='Continue with a real local →';
+    if(lock){
+      walled=true;chips.innerHTML='';
+      inp.disabled=true;send.disabled=true;inp.placeholder='Continue with a real local →';
+    }
   }
 
   // Reveal the model's reply word-by-word, HTML-safe (textContent, not innerHTML).
@@ -620,8 +627,11 @@
       await streamText("I'm having a hiccup reaching the team for a second — try once more, or grab a real local below.");
     }
     busy=false;
-    if(replied&&userTurns>=FREE_LIMIT){await wait(450);handoff();}
-    else if(!walled)setStarters();
+    if(replied){
+      await wait(450);
+      handoff(userTurns>=FREE_LIMIT);  // upsell after every reply; lock at the free limit
+    }
+    if(!walled) setStarters();
   }
 
   send.onclick=()=>ask(inp.value);
