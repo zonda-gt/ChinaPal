@@ -28,7 +28,6 @@ const HERO_BG =
   "https://d2xsxph8kpxj0f.cloudfront.net/310519663383502924/dCuiiEQEkteYUXqqZRtP5i/chinapal-hero-bg-FDnCEqDWTZRbZZSyCrbHwY.webp";
 
 const PASS_HREF = "/checkout?plan=chinapal-pass";
-const TRIP_CHECK_HREF = "/checkout?plan=trip-check";
 
 const RED = "oklch(0.48 0.22 25)";
 const RED_LIGHT = "oklch(0.70 0.18 25)";
@@ -118,13 +117,6 @@ function Hero() {
                   >
                     Get ChinaPal — ${PLANS["chinapal-pass"].price}
                     <ArrowRight className="w-4 h-4" />
-                  </a>
-                  <a
-                    href={TRIP_CHECK_HREF}
-                    className="font-semibold px-8 py-4 rounded-full text-base border border-white/30 text-white hover:bg-white/10 transition-all flex items-center gap-2 font-body bg-transparent"
-                    style={{ fontFamily: FONT }}
-                  >
-                    Check my itinerary
                   </a>
                 </div>
 
@@ -760,8 +752,6 @@ function Pricing() {
         "Food and neighborhood ideas",
         "One round of local feedback",
       ],
-      cta: "Check my itinerary",
-      href: TRIP_CHECK_HREF,
       note: "Best before your trip. Not live on-trip support.",
       highlight: false,
     },
@@ -919,25 +909,27 @@ function Pricing() {
                   {plan.note}
                 </p>
 
-                <a
-                  href={plan.href}
-                  className="w-full text-center font-semibold rounded-full py-3 text-sm transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] font-body"
-                  style={
-                    plan.highlight
-                      ? {
-                          backgroundColor: "white",
-                          color: RED,
-                          fontFamily: FONT,
-                        }
-                      : {
-                          backgroundColor: RED,
-                          color: "white",
-                          fontFamily: FONT,
-                        }
-                  }
-                >
-                  {plan.cta}
-                </a>
+                {plan.cta && plan.href && (
+                  <a
+                    href={plan.href}
+                    className="w-full text-center font-semibold rounded-full py-3 text-sm transition-all hover:opacity-90 hover:scale-[1.02] active:scale-[0.98] font-body"
+                    style={
+                      plan.highlight
+                        ? {
+                            backgroundColor: "white",
+                            color: RED,
+                            fontFamily: FONT,
+                          }
+                        : {
+                            backgroundColor: RED,
+                            color: "white",
+                            fontFamily: FONT,
+                          }
+                    }
+                  >
+                    {plan.cta}
+                  </a>
+                )}
               </div>
             </Reveal>
           ))}
@@ -1278,13 +1270,6 @@ function FinalCTA() {
             >
               Get ChinaPal — ${PLANS["chinapal-pass"].price}
               <ArrowRight className="w-4 h-4" />
-            </a>
-            <a
-              href={TRIP_CHECK_HREF}
-              className="font-semibold px-8 py-4 rounded-full text-base border border-white/30 text-white hover:bg-white/10 transition-all inline-flex items-center gap-2 font-body bg-transparent"
-              style={{ fontFamily: FONT }}
-            >
-              Check my itinerary
             </a>
           </div>
         </div>
