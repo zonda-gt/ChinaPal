@@ -92,8 +92,56 @@
     "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
   },
   {
-    "path": "/uploads/itinerary/vivek/sinan-mansions.webp",
-    "reusedFrom": "src/app/itinerary/vivek/photo-sources.json",
-    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+    "id": "hotel-overview",
+    "url": "https://ak-d.tripcdn.com/images/0201f120008wpbghq35EE_R_500_400_R5.webp",
+    "source": "https://sg.trip.com/hotels/shanghai-hotel-detail-768112/homeinn-selected-hotel/photo.html",
+    "title": "Homeinn Selected exterior, overview",
+    "path": "/uploads/itinerary/antonio/hotel-overview.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "grandmother",
+    "url": "https://assets.st-note.com/production/uploads/images/205396861/picture_pc_c6923ef53104335435f83879bdc23b6e.jpg",
+    "source": "https://note.com/tomulya/n/nc7aa7f5c8d03",
+    "title": "Shanghai Grandmother, 70 Fuzhou Road entrance",
+    "path": "/uploads/itinerary/antonio/grandmother.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "grandmother-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi602215gt1bbro00D2B.jpg?proc=source%2Ftrip",
+    "source": "https://www.trip.com/moments/theme/poi-shanghai-grandmother-restaurant-13622469-restaurant-993134/",
+    "title": "Shanghai Grandmother dining room",
+    "path": "/uploads/itinerary/antonio/grandmother-2.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "dexing",
+    "url": "https://www.meet-in-shanghai.net/static//upload/place/main_20170717102656_215976002.jpg",
+    "source": "https://www.meet-in-shanghai.net/cn/food/dexing-hall-guangdong-road-main-store-946409/",
+    "title": "De Xing Guan, Guangdong Road",
+    "path": "/uploads/itinerary/antonio/dexing.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "dexing-2",
+    "url": "https://www.meet-in-shanghai.net/static//upload/place/md1_20170717102656_1304270202.jpg",
+    "source": "https://www.meet-in-shanghai.net/cn/food/dexing-hall-guangdong-road-main-store-946409/",
+    "title": "De Xing Guan, Guangdong Road second photograph",
+    "path": "/uploads/itinerary/antonio/dexing-2.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "sinan-2",
+    "url": "https://images.smartshanghai.com.cn/uploads/repository/2022/01/11/c684490d-7dec-43be-b83f-88f4f1809622.jpg",
+    "source": "https://www.smartshanghai.com/venue/7112/sinan_mansions_fuxing_zhong_lu",
+    "title": "Sinan Mansions pedestrian street",
+    "path": "/uploads/itinerary/antonio/sinan-2.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "path": "/uploads/itinerary/xhs/bund.webp",
+    "reusedFrom": "src/app/itinerary/xhs",
+    "note": "Different Bund view from the hero photograph."
   }
 ]

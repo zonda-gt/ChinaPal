@@ -109,3 +109,6 @@
 .price { background:#eee8e1; border-radius:10px; padding:14px 18px; }
 @media(max-width:1199px) { .welcome { margin-left:48px; margin-right:48px; } }
 @media(max-width:760px) { .welcome { margin:22px 20px 0; font-size:12px; } .rokidSection { grid-template-columns:1fr; padding:24px 20px 35px; gap:20px; } .rokidSection h2 { font-size:27px; } .rokidPhotos img { aspect-ratio:4/3; } .stay { grid-template-columns:35% 1fr; } .flight strong { font-size:20px; } }
+
+/* Keep product photos in the itinerary card; the checklist is text only. */
+.rokidSection { grid-template-columns:1fr; max-width:800px; }

@@ -20,7 +20,7 @@ export default function AntonioClient({ images }: { images: ImageMap }) {
         <a className={styles.primary} href="#daily-plan">Explore your itinerary <ArrowDown size={16} /></a>
       </div>
       <figure className={styles.heroPhoto}>
-        <img src={photos.bund[0]} alt="Shanghai’s Pudong skyline across the Huangpu River from the Bund" fetchPriority="high" />
+        <img src={photos.hero} alt="Shanghai’s Pudong skyline across the Huangpu River from the Bund" fetchPriority="high" />
         <figcaption>A little taste of Shanghai.<span>上海 · 11—13 NOVEMBER</span></figcaption>
       </figure>
     </header>
@@ -28,7 +28,7 @@ export default function AntonioClient({ images }: { images: ImageMap }) {
     <p className={styles.welcome}>Welcome to Shanghai, Antonio. We’ve planned this short visit around what matters most to you: experiencing the city through its food, seeing a few memorable sights and exploring at a comfortable pace. <strong>Your November 12 accompaniment is confirmed.</strong> The itinerary below is our proposed plan, with room to adjust together.</p>
     <section id="your-stay" className={styles.overview} aria-label="Your stay at a glance">
       <article className={styles.stay}>
-        <img src={photos.hotel[0]} alt="Homeinn Selected Hotel, Shanghai Bund World Metro Station branch" loading="lazy" />
+        <img src={photos.hotelOverview} alt="Homeinn Selected Hotel, Shanghai Bund World Metro Station branch" loading="lazy" />
         <div><p className={styles.eyebrow}>Your Shanghai address</p><h2>Homeinn Selected</h2><p>Shanghai Bund World Metro Station Hotel</p><p>如家商旅酒店<br />（上海外滩大世界地铁站店）</p><p className={styles.small}>68 Huaihai East Road, Huangpu District<br />上海市黄浦区淮海东路68号</p></div>
       </article>
       <div className={styles.flights}>
@@ -50,7 +50,7 @@ export default function AntonioClient({ images }: { images: ImageMap }) {
     </section>
     <ItineraryPage images={images} config={buildAntonioConfig()} leadName="Antonio" chromeless />
     <section id="rokid-visit" className={styles.rokidSection} aria-labelledby="rokid-title">
-      <div className={styles.rokidPhotos}>{photos.rokid.map((src, i) => <img key={src} src={src} alt={`Rokid display glasses · official product photograph ${i + 1}`} loading="lazy" />)}<p>Product photographs for reference. The exact model and availability will be checked in store.</p></div>
+
       <div><p className={styles.eyebrow}>A little discovery · 12 November</p><h2 id="rokid-title">Try it. See if it suits you.</h2><p>Huaihai Middle Road is our preferred Rokid stop; the Bund branch is the alternative. We’ll visit one store and help you check the details before you decide.</p><ul>{glassesChecklist.map(item => <li key={item}><Check size={16} /><span>{item}</span></li>)}</ul><p className={styles.price}><strong>Indicative price: around CNY 2,800</strong><br />From your supplied plan; depends on the model. Confirm the final price and availability in store.</p><p>There’s no pressure to buy — the visit is a chance to see whether the glasses suit you.</p></div>
     </section>
     <section id="final-details" className={styles.finalDetails} aria-labelledby="final-title">
