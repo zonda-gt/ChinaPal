@@ -14,7 +14,8 @@
     "ingest:images": "tsx scripts/ingest/04-images.ts",
     "ingest:geocode": "tsx scripts/ingest/05-geocode.ts",
     "ingest:check": "tsx scripts/ingest/06-quality-check.ts",
-    "ingest:all": "tsx scripts/ingest/run-all.ts"
+    "ingest:all": "tsx scripts/ingest/run-all.ts",
+    "test:inbox": "node --import tsx --test src/lib/inbox/policy.test.ts src/lib/instagram/webhook.test.ts scripts/inbox-database.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",
@@ -27,6 +28,7 @@
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.6.0",
     "next": "16.2.1",
+    "openai": "^7.34.0",
     "posthog-js": "^1.363.4",
     "react": "19.2.4",
     "react-dom": "19.2.4",
@@ -36,6 +38,7 @@
     "voyageai": "^0.2.1"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "^0.5.10",
     "@tailwindcss/postcss": "^4",
     "@types/better-sqlite3": "^7.6.13",
     "@types/node": "^20",

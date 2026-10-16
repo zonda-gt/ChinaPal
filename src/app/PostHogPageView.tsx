@@ -9,7 +9,7 @@ function PageViewTracker() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname) {
+    if (pathname && pathname !== "/inbox" && !pathname.startsWith("/inbox/")) {
       let url = window.origin + pathname;
       if (searchParams.toString()) {
         url = url + "?" + searchParams.toString();
