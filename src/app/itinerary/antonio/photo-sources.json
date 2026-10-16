@@ -1,0 +1,99 @@
+[
+  {
+    "id": "hotel",
+    "url": "https://ak-d.tripcdn.com/images/02013120008wpbi0l5604_R_500_400_R5.webp",
+    "source": "https://sg.trip.com/hotels/shanghai-hotel-detail-768112/homeinn-selected-hotel/photo.html",
+    "title": "Homeinn Selected, Shanghai Bund World Metro Station exterior",
+    "path": "/uploads/itinerary/antonio/hotel.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "hotel-2",
+    "url": "https://ak-d.tripcdn.com/images/020181200085s3p0f7066_R_500_400_R5.webp",
+    "source": "https://sg.trip.com/hotels/shanghai-hotel-detail-768112/homeinn-selected-hotel/photo.html",
+    "title": "Homeinn Selected, Shanghai Bund World Metro Station",
+    "path": "/uploads/itinerary/antonio/hotel-2.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "sinan",
+    "url": "https://japanese.shanghai.gov.cn/cmsres/63/63c614790f7642d6b5fa772200f3bcef/2d5be64053c2dc0d061289154fc5b13d.jpg",
+    "source": "https://japanese.shanghai.gov.cn/ja-SpecialtyShoppingAreas/20240320/c64d8f64b7cf4833b8c09fde7bd86bff.html",
+    "title": "Sinan Mansions",
+    "path": "/uploads/itinerary/antonio/sinan.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "xiandelai",
+    "url": "https://www.meet-in-shanghai.net/static//upload/mainpic/20200115153438_665204297.jpg",
+    "source": "https://www.meet-in-shanghai.net/cn/food/fresh-pork-ribs-rice-cake-yunnan-south-road-store-772278/",
+    "title": "Xiandelai pork chop and rice cakes",
+    "path": "/uploads/itinerary/antonio/xiandelai.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "rokid",
+    "url": "https://global.rokid.com/cdn/shop/files/001_8c854eae-1297-4a66-a5bc-808f5e127dfc.jpg?width=1000",
+    "source": "https://global.rokid.com/collections/glasses",
+    "title": "Rokid Glasses with display, official product photograph",
+    "path": "/uploads/itinerary/antonio/rokid.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "rokid-2",
+    "url": "https://global.rokid.com/cdn/shop/files/004.png?width=1000",
+    "source": "https://global.rokid.com/collections/glasses",
+    "title": "Rokid Glasses with display, official product photograph",
+    "path": "/uploads/itinerary/antonio/rokid-2.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "crab-noodles",
+    "url": "https://imagepphcloud.thepaper.cn/pph/image/283/179/186.jpg",
+    "source": "https://www.thepaper.cn/newsDetail_forward_25714430",
+    "title": "Shanghai crab roe noodles",
+    "path": "/uploads/itinerary/antonio/crab-noodles.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "laozhengxing",
+    "url": "https://axwwgrkdco.cloudimg.io/v7/__gmpics__/aa28658d5f1a42ee903b5b814a2993a7?width=1000",
+    "source": "https://guide.michelin.com/ae-az/en/shanghai-municipality/shanghai/restaurant/lao-zheng-xing-huangpu",
+    "title": "Braised meat at Lao Zheng Xing",
+    "path": "/uploads/itinerary/antonio/laozhengxing.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "id": "xiaolongbao",
+    "url": "https://english.shanghai.gov.cn/cmsres/4b/4be53133670046fb997e6ee188d2f14a/99d82487adec4565d9db8b4fcbd24ff8.jpg",
+    "source": "https://english.shanghai.gov.cn/en-GlobalTasteinShanghai2026-LocalFlavors/20260316/00b0c6d1698d406c8d532a6e169e1a1e.html",
+    "title": "Shanghai xiaolongbao",
+    "path": "/uploads/itinerary/antonio/xiaolongbao.webp",
+    "downloadedOn": "2026-10-16"
+  },
+  {
+    "path": "/uploads/itinerary/xhs/garden.webp",
+    "reusedFrom": "src/app/itinerary/xhs",
+    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+  },
+  {
+    "path": "/uploads/itinerary/shanghai/scraper/yugarden-bridge.jpg",
+    "reusedFrom": "public/uploads/itinerary/shanghai/scraper",
+    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+  },
+  {
+    "path": "/uploads/itinerary/shanghai/scraper/bund-skyline.jpg",
+    "reusedFrom": "public/uploads/itinerary/shanghai/scraper",
+    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+  },
+  {
+    "path": "/uploads/itinerary/shanghai/scraper/bund-buildings.png",
+    "reusedFrom": "public/uploads/itinerary/shanghai/scraper",
+    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+  },
+  {
+    "path": "/uploads/itinerary/vivek/sinan-mansions.webp",
+    "reusedFrom": "src/app/itinerary/vivek/photo-sources.json",
+    "note": "Existing Shanghai itinerary image; original provenance retained in its source collection."
+  }
+]
