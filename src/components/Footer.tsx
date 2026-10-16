@@ -17,6 +17,11 @@ export default function Footer() {
             </p>
           </div>
 
+          <nav aria-label="Privacy and contact" className="flex flex-wrap gap-x-6 gap-y-3 text-sm text-white/75">
+            <Link href="/privacy" className="underline underline-offset-4 hover:text-white">Privacy policy</Link>
+            <Link href="/data-deletion" className="underline underline-offset-4 hover:text-white">Data deletion</Link>
+            <a href="mailto:chinapal_travel@outlook.com" className="underline underline-offset-4 hover:text-white">Contact</a>
+          </nav>
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3">
