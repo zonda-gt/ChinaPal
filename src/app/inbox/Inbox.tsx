@@ -84,6 +84,16 @@ export default function Inbox() {
     [limit, setLimit] = useState(100);
   const limitRef = useRef(limit),
     busyRef = useRef(false);
+  // Keep recent chats in this signed-in tab only; never persist customer data
+  // in localStorage. Request IDs prevent late responses from replacing newer data.
+  const threadCache = useRef(
+      new Map<string, { data: Thread; limit: number }>(),
+    ),
+    latestRequests = useRef(new Map<string, number>()),
+    requestId = useRef(0),
+    selectionVersion = useRef(0),
+    sessionVersion = useRef(0),
+    importing = useRef(new Set<string>());
   const selectedRef = useRef(selected),
     dirtyRef = useRef(dirty),
     draftRef = useRef(draft),
@@ -101,8 +111,20 @@ export default function Inbox() {
   }, []);
   const loadThread = useCallback(
     async (peer: string, count = 100, reset = false) => {
+      const selection = selectionVersion.current;
+      const request = ++requestId.current;
+      latestRequests.current.set(peer, request);
       const data = await api<Thread>(`conversations/${peer}?limit=${count}`);
-      if (selectedRef.current !== peer) return;
+      if (latestRequests.current.get(peer) !== request) return;
+      threadCache.current.delete(peer);
+      threadCache.current.set(peer, { data, limit: count });
+      if (threadCache.current.size > 30)
+        threadCache.current.delete(threadCache.current.keys().next().value!);
+      if (
+        selectedRef.current !== peer ||
+        selectionVersion.current !== selection
+      )
+        return data;
       setThread(data);
       if (!notesDirty.current || reset) {
         setNotes(data.conversation.notes);
@@ -121,6 +143,7 @@ export default function Inbox() {
       const seenAt = data.messages.at(-1)?.sent_at;
       if (seenAt && document.visibilityState === "visible")
         await api(`conversations/${peer}/read`, { seenAt });
+      return data;
     },
     [],
   );
@@ -141,28 +164,36 @@ export default function Inbox() {
   useEffect(() => {
     if (!selected || !staff) return;
     let cancelled = false;
-    setThread(null);
-    setError("");
-    setDraft(null);
-    setText("");
-    setDirty(false);
-    dirtyRef.current = false;
-    draftRef.current = null;
-    notesDirty.current = false;
-    setConflict(false);
-    setLimit(100);
-    loadThread(selected, 100, true)
-      .then(async () => {
-        if (!cancelled) {
+    const session = sessionVersion.current;
+    // Hydration happens immediately in choose(). Revalidate saved data without
+    // blanking the chat. Instagram is needed only for a first history import.
+    loadThread(selected, limitRef.current)
+      .then(async (data) => {
+        if (
+          !cancelled &&
+          data &&
+          !data.conversation.synced_at &&
+          data.conversation.thread_id &&
+          !importing.current.has(selected)
+        ) {
+          importing.current.add(selected);
           try {
             await api(`conversations/${selected}/sync`, {});
-            if (!cancelled) await loadThread(selected, 100);
+            if (sessionVersion.current === session)
+              await loadThread(
+                selected,
+                threadCache.current.get(selected)?.limit ?? 100,
+              );
           } catch (e) {
             if (!cancelled) setError((e as Error).message);
+          } finally {
+            importing.current.delete(selected);
           }
         }
       })
-      .catch((e) => setError(e.message));
+      .catch((e) => {
+        if (!cancelled) setError(e.message);
+      });
     const timer = setInterval(() => {
       if (document.visibilityState === "visible")
         loadThread(selected, limitRef.current).catch(() => {});
@@ -237,10 +268,44 @@ export default function Inbox() {
     )
       return;
     selectedRef.current = peer;
+    selectionVersion.current++;
+    const cached = peer ? threadCache.current.get(peer) : undefined;
+    const saved = cached?.data.drafts.find((d) => d.status === "draft") || null;
+    setThread(cached?.data ?? null);
+    setDraft(saved);
+    draftRef.current = saved;
+    setText(saved?.body || "");
+    setNotes(cached?.data.conversation.notes || "");
+    setStage(cached?.data.conversation.stage || "inquiry");
+    setLimit(cached?.limit ?? 100);
+    limitRef.current = cached?.limit ?? 100;
+    setDirty(false);
+    dirtyRef.current = false;
+    notesDirty.current = false;
+    setConflict(false);
+    setError("");
+    setNotice("");
+    setInstruction("");
     setSelected(peer);
     setDetailsOpen(false);
   }
   function acceptDraft(d: Draft) {
+    const cached = threadCache.current.get(d.peer_id);
+    if (cached) {
+      // A poll started before this save must not restore the old draft.
+      latestRequests.current.delete(d.peer_id);
+      const data = {
+        ...cached.data,
+        drafts: [
+          d,
+          ...cached.data.drafts.filter(
+            (other) => other.id !== d.id && other.status !== "draft",
+          ),
+        ],
+      };
+      threadCache.current.set(d.peer_id, { ...cached, data });
+      setThread(data);
+    }
     setDraft(d);
     draftRef.current = d;
     setText(d.body);
@@ -414,6 +479,11 @@ export default function Inbox() {
                 )
                   return;
                 await api("auth/logout", {});
+                threadCache.current.clear();
+                latestRequests.current.clear();
+                sessionVersion.current++;
+                selectedRef.current = null;
+                selectionVersion.current++;
                 setStaff(null);
                 setConversations([]);
                 setThread(null);
@@ -626,6 +696,7 @@ export default function Inbox() {
                         notes,
                       });
                       notesDirty.current = false;
+                      await loadThread(selected, limit);
                       await loadList();
                       setNotice("Details saved.");
                     })
