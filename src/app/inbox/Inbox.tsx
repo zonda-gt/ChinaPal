@@ -6,7 +6,8 @@ import {
   ArrowLeft,
   ArrowUpRight,
   Check,
-  ChevronDown,
+  PanelRight,
+  UserRound,
   CircleHelp,
   Inbox as InboxIcon,
   Camera,
@@ -23,6 +24,8 @@ import {
 } from "lucide-react";
 import type { Conversation, Draft, Message, Staff } from "@/lib/inbox/types";
 import s from "./inbox.module.css";
+import TravelProfile from "./TravelProfile";
+import usePanelLayout from "./usePanelLayout";
 type Thread = {
   conversation: Conversation;
   messages: Message[];
@@ -60,6 +63,7 @@ const initials = (name: string) =>
     .slice(0, 2)
     .toUpperCase();
 export default function Inbox() {
+  const panels = usePanelLayout();
   const [staff, setStaff] = useState<Staff | null>(null),
     [checking, setChecking] = useState(true),
     [password, setPassword] = useState("");
@@ -440,33 +444,31 @@ export default function Inbox() {
       </main>
     );
   return (
-    <main className={s.workspace} data-ph-no-capture data-clarity-mask="true">
+    <main ref={panels.workspace} style={panels.style} data-resizing={panels.active || undefined} className={s.workspace} data-ph-no-capture data-clarity-mask="true">
       <aside className={s.rail}>
-        <Link href="/" className={s.brand}>
-          China<span>Pal</span>
-          <small>TEAM WORKSPACE</small>
+        <Link
+          href="/"
+          className={s.railBrand}
+          aria-label="ChinaPal home"
+          title="ChinaPal home"
+        >
+          C<span>P</span>
         </Link>
-        <div className={s.railLabel}>WORKSPACE</div>
-        <button className={s.railActive} onClick={() => choose(null)}>
-          <InboxIcon size={19} /> Inbox <span>{unread || ""}</span>
+        <button
+          className={s.railActive}
+          onClick={() => choose(null)}
+          aria-label="Inbox"
+          title={`Inbox · ${unread} unread`}
+        >
+          <InboxIcon size={22} />
+          {unread > 0 && <span className={s.railBadge}>{unread}</span>}
         </button>
-        <div className={s.railNote}>
-          <Sparkles size={19} />
-          <strong>A helping hand.</strong>
-          <p>
-            AI prepares the reply.
-            <br />
-            You make it personal.
-          </p>
-          <span>
-            <span className={s.dot} /> Manual approval on
-          </span>
-        </div>
         <div className={s.railBottom}>
-          <div className={s.staffAvatar}>CP</div>
-          <div>
-            <strong>ChinaPal team</strong>
-            <small>Shared admin access</small>
+          <div
+            className={s.staffAvatar}
+            title="ChinaPal team · Shared admin access"
+          >
+            CP
           </div>
           <button
             aria-label="Sign out"
@@ -495,12 +497,28 @@ export default function Inbox() {
           </button>
         </div>
       </aside>
-      <section className={`${s.listPanel} ${selected ? s.mobileHide : ""}`}>
+      <header className={s.workspaceHeader}>
+        <div>
+          <h1>Inbox</h1>
+          <p>Every conversation, a little more personal.</p>
+        </div>
+        <span className={s.approvalBadge}>
+          <ShieldCheck size={15} /> Replies approved by you
+        </span>
+      </header>
+      <div className={s.channelBar}>
+        <span>
+          <Camera size={17} /> Instagram <b>{conversations.length}</b>
+        </span>
+        <span className={s.connected}>
+          <i /> Connected
+        </span>
+      </div>
+      <section ref={panels.list} id="conversation-list" className={`${s.listPanel} ${selected ? s.mobileHide : ""}`}>
         <header className={s.listHeader}>
           <div>
-            <span className={s.eyebrow}>INSTAGRAM</span>
             <h1>
-              Inbox <span>{conversations.length}</span>
+              Messages <span>{conversations.length}</span>
             </h1>
           </div>
           <button
@@ -555,11 +573,10 @@ export default function Inbox() {
                     <time>{date(c.last_message_at)}</time>
                   </span>
                   <span className={s.rowBottom}>
-                    {c.stage === "customer"
-                      ? "Customer"
-                      : c.stage === "archived"
-                        ? "Archived"
-                        : "Service inquiry"}
+                    <span className={s.preview}>
+                      {c.last_direction === "outbound" ? "You: " : ""}
+                      {c.last_preview || "History not loaded yet"}
+                    </span>
                     {isUnread && <i className={s.unreadDot} />}
                   </span>
                 </span>
@@ -589,7 +606,8 @@ export default function Inbox() {
           <Camera size={14} /> Connected to your Instagram account
         </footer>
       </section>
-      <section className={`${s.mainPanel} ${!selected ? s.mobileHide : ""}`}>
+      <section ref={panels.main} className={`${s.mainPanel} ${!selected ? s.mobileHide : ""}`}>
+        <div className={`${s.resizeHandle} ${s.listResize}`} {...panels.handle("list", "Resize conversation list", "conversation-list")} />
         {!selected ? (
           <div className={s.welcome}>
             <div className={s.welcomeIcon}>
@@ -654,65 +672,14 @@ export default function Inbox() {
               </button>
               <button
                 className={s.detailsButton}
+                aria-label="Contact details"
+                aria-expanded={detailsOpen}
+                aria-controls="contact-details"
                 onClick={() => setDetailsOpen(!detailsOpen)}
               >
-                Details <ChevronDown size={15} />
+                <PanelRight size={17} /> <span>Details</span>
               </button>
             </header>
-            {detailsOpen && (
-              <section className={s.details}>
-                <label>
-                  Conversation stage
-                  <select
-                    value={stage}
-                    onChange={(e) => {
-                      setStage(e.target.value);
-                      notesDirty.current = true;
-                    }}
-                  >
-                    <option value="inquiry">Inquiry</option>
-                    <option value="customer">Customer</option>
-                    <option value="archived">Archived</option>
-                  </select>
-                </label>
-                <label>
-                  Private notes for the team and AI
-                  <textarea
-                    value={notes}
-                    maxLength={5000}
-                    placeholder="Travel dates, preferences, details already confirmed…"
-                    onChange={(e) => {
-                      setNotes(e.target.value);
-                      notesDirty.current = true;
-                    }}
-                  />
-                </label>
-                <button
-                  disabled={!!busy}
-                  onClick={() =>
-                    run("details", async () => {
-                      await api(`conversations/${selected}/details`, {
-                        stage,
-                        notes,
-                      });
-                      notesDirty.current = false;
-                      await loadThread(selected, limit);
-                      await loadList();
-                      setNotice("Details saved.");
-                    })
-                  }
-                >
-                  Save details
-                </button>
-                <a
-                  href="https://www.instagram.com/direct/inbox/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  Open Instagram <ArrowUpRight size={14} />
-                </a>
-              </section>
-            )}
             <div className={s.messages}>
               {!thread && (
                 <div className={s.loading}>
@@ -818,191 +785,304 @@ export default function Inbox() {
               )}
             </div>
             {thread && (
-              <section className={s.composer}>
-                <div className={s.composerHeading}>
-                  <span>
-                    <Sparkles size={16} /> Reply assistant{" "}
-                    <small>Draft only</small>
-                  </span>
-                  <span className={s.saved}>
-                    {dirty
-                      ? "Unsaved edits"
-                      : draft
-                        ? "Shared draft saved"
-                        : "Ready to help"}
-                  </span>
-                </div>
-                {pending && (
-                  <div className={s.warning}>
-                    <strong>
-                      A reply is being sent or awaiting confirmation.
-                    </strong>{" "}
-                    If this remains pending for two minutes, check the actual
-                    Instagram chat before resolving it.
-                    <div>
-                      {[
-                        ["sent", "It was sent"],
-                        ["not-sent", "It was not sent"],
-                      ].map(([outcome, label]) => (
-                        <button
-                          key={outcome}
-                          disabled={
-                            !!busy ||
-                            Date.now() - Date.parse(pending.updated_at) < 120000
-                          }
-                          onClick={() => {
-                            if (
-                              window.confirm(
-                                "Have you checked the actual Instagram chat and confirmed this delivery status?",
+              <>
+                <div className={`${s.resizeHandle} ${s.composerResize}`} {...panels.handle("composer", "Resize reply assistant", "reply-assistant")} />
+                <section ref={panels.composer} id="reply-assistant" className={s.composer}>
+                  <div className={s.composerHeading}>
+                    <span>
+                      <Sparkles size={16} /> Reply assistant{" "}
+                      <small>Draft only</small>
+                    </span>
+                    <span className={s.saved}>
+                      {dirty
+                        ? "Unsaved edits"
+                        : draft
+                          ? "Shared draft saved"
+                          : "Ready to help"}
+                    </span>
+                  </div>
+                  {pending && (
+                    <div className={s.warning}>
+                      <strong>
+                        A reply is being sent or awaiting confirmation.
+                      </strong>{" "}
+                      If this remains pending for two minutes, check the actual
+                      Instagram chat before resolving it.
+                      <div>
+                        {[
+                          ["sent", "It was sent"],
+                          ["not-sent", "It was not sent"],
+                        ].map(([outcome, label]) => (
+                          <button
+                            key={outcome}
+                            disabled={
+                              !!busy ||
+                              Date.now() - Date.parse(pending.updated_at) < 120000
+                            }
+                            onClick={() => {
+                              if (
+                                window.confirm(
+                                  "Have you checked the actual Instagram chat and confirmed this delivery status?",
+                                )
                               )
-                            )
-                              run("resolve", async () => {
-                                await api(`conversations/${selected}/resolve`, {
-                                  id: pending.id,
-                                  outcome,
-                                  checkedInstagram: true,
+                                run("resolve", async () => {
+                                  await api(`conversations/${selected}/resolve`, {
+                                    id: pending.id,
+                                    outcome,
+                                    checkedInstagram: true,
+                                  });
+                                  await loadThread(selected, limit, true);
                                 });
-                                await loadThread(selected, limit, true);
-                              });
-                          }}
-                        >
-                          {label}
-                        </button>
-                      ))}
+                            }}
+                          >
+                            {label}
+                          </button>
+                        ))}
+                      </div>
                     </div>
-                  </div>
-                )}
-                {staleDraft && (
-                  <div className={s.warning}>
-                    New messages arrived after this draft was saved. Review
-                    them, then save or revise your reply.
-                  </div>
-                )}
-                {conflict && (
-                  <div className={s.warning}>
-                    The shared draft changed while you were editing. Your text
-                    is preserved.
-                    <button
-                      onClick={() => {
-                        if (
-                          window.confirm(
-                            "Replace your unsaved text with the latest shared draft?",
-                          )
-                        ) {
-                          setDirty(false);
-                          dirtyRef.current = false;
-                          loadThread(selected, limit, true).catch((e) =>
-                            setError(e.message),
-                          );
-                        }
-                      }}
-                    >
-                      Load shared draft
-                    </button>
-                  </div>
-                )}
-                {draft?.warnings?.length ? (
-                  <div className={s.aiNotes}>
-                    <CircleHelp size={15} />
-                    <div>
-                      {draft.warnings.map((w, i) => (
-                        <p key={i}>{w}</p>
-                      ))}
+                  )}
+                  {staleDraft && (
+                    <div className={s.warning}>
+                      New messages arrived after this draft was saved. Review
+                      them, then save or revise your reply.
                     </div>
-                  </div>
-                ) : null}
-                <textarea
-                  className={s.reply}
-                  aria-label="Reply draft"
-                  value={text}
-                  maxLength={4000}
-                  onChange={(e) => {
-                    setText(e.target.value);
-                    setDirty(true);
-                    dirtyRef.current = true;
-                  }}
-                  placeholder="Write your reply, or let AI prepare a first draft…"
-                  disabled={!!busy || !!pending}
-                />
-                <div className={s.revision}>
-                  <Sparkles size={15} />
-                  <input
-                    aria-label="Revision instruction"
-                    placeholder="Ask AI to refine it: “shorter”, “add the price”, “more friendly”…"
-                    value={instruction}
-                    onChange={(e) => setInstruction(e.target.value)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" && instruction.trim() && !busy) {
-                        e.preventDefault();
-                        generate();
-                      }
+                  )}
+                  {conflict && (
+                    <div className={s.warning}>
+                      The shared draft changed while you were editing. Your text
+                      is preserved.
+                      <button
+                        onClick={() => {
+                          if (
+                            window.confirm(
+                              "Replace your unsaved text with the latest shared draft?",
+                            )
+                          ) {
+                            setDirty(false);
+                            dirtyRef.current = false;
+                            loadThread(selected, limit, true).catch((e) =>
+                              setError(e.message),
+                            );
+                          }
+                        }}
+                      >
+                        Load shared draft
+                      </button>
+                    </div>
+                  )}
+                  {draft?.warnings?.length ? (
+                    <div className={s.aiNotes}>
+                      <CircleHelp size={15} />
+                      <div>
+                        {draft.warnings.map((w, i) => (
+                          <p key={i}>{w}</p>
+                        ))}
+                      </div>
+                    </div>
+                  ) : null}
+                  <textarea
+                    className={s.reply}
+                    aria-label="Reply draft"
+                    value={text}
+                    maxLength={4000}
+                    onChange={(e) => {
+                      setText(e.target.value);
+                      setDirty(true);
+                      dirtyRef.current = true;
                     }}
+                    placeholder="Write your reply, or let AI prepare a first draft…"
                     disabled={!!busy || !!pending}
                   />
-                  <button
-                    disabled={
-                      !!busy || !!pending || !thread.messages.length || conflict
-                    }
-                    onClick={() => generate()}
-                  >
-                    {busy === "generate" ? (
-                      <Loader2 size={15} className={s.spin} />
-                    ) : (
-                      <Sparkles size={15} />
-                    )}
-                    {text ? "Revise" : "Generate draft"}
-                  </button>
-                </div>
-                <div className={s.composerFooter}>
-                  <span>
-                    {[...text].length}/1,000{" "}
-                    <span className={s.window}>
-                      {thread.canSend
-                        ? "· Reply window open"
-                        : "· Reply in Instagram: 24-hour window closed"}
-                    </span>
-                  </span>
-                  <div>
+                  <div className={s.revision}>
+                    <Sparkles size={15} />
+                    <input
+                      aria-label="Revision instruction"
+                      placeholder="Ask AI to refine it: “shorter”, “add the price”, “more friendly”…"
+                      value={instruction}
+                      onChange={(e) => setInstruction(e.target.value)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" && instruction.trim() && !busy) {
+                          e.preventDefault();
+                          generate();
+                        }
+                      }}
+                      disabled={!!busy || !!pending}
+                    />
                     <button
                       disabled={
-                        !!busy ||
-                        !text.trim() ||
-                        conflict ||
-                        !!pending ||
-                        (!dirty && !!draft && !staleDraft)
+                        !!busy || !!pending || !thread.messages.length || conflict
                       }
-                      onClick={() =>
-                        run("save", async () => {
-                          await save();
-                          setNotice("Draft saved for the team.");
-                        })
-                      }
+                      onClick={() => generate()}
                     >
-                      Save draft
-                    </button>
-                    <button
-                      className={s.primary}
-                      disabled={
-                        !!busy ||
-                        !draft ||
-                        dirty ||
-                        staleDraft ||
-                        conflict ||
-                        !!pending ||
-                        !thread.canSend ||
-                        [...text].length > 1000
-                      }
-                      onClick={() => setConfirmSend(true)}
-                    >
-                      <Send size={15} /> Approve & send
+                      {busy === "generate" ? (
+                        <Loader2 size={15} className={s.spin} />
+                      ) : (
+                        <Sparkles size={15} />
+                      )}
+                      {text ? "Revise" : "Generate draft"}
                     </button>
                   </div>
-                </div>
-              </section>
+                  <div className={s.composerFooter}>
+                    <span>
+                      {[...text].length}/1,000{" "}
+                      <span className={s.window}>
+                        {thread.canSend
+                          ? "· Reply window open"
+                          : "· Reply in Instagram: 24-hour window closed"}
+                      </span>
+                    </span>
+                    <div>
+                      <button
+                        disabled={
+                          !!busy ||
+                          !text.trim() ||
+                          conflict ||
+                          !!pending ||
+                          (!dirty && !!draft && !staleDraft)
+                        }
+                        onClick={() =>
+                          run("save", async () => {
+                            await save();
+                            setNotice("Draft saved for the team.");
+                          })
+                        }
+                      >
+                        Save draft
+                      </button>
+                      <button
+                        className={s.primary}
+                        disabled={
+                          !!busy ||
+                          !draft ||
+                          dirty ||
+                          staleDraft ||
+                          conflict ||
+                          !!pending ||
+                          !thread.canSend ||
+                          [...text].length > 1000
+                        }
+                        onClick={() => setConfirmSend(true)}
+                      >
+                        <Send size={15} /> Approve & send
+                      </button>
+                    </div>
+                  </div>
+                </section>
+              </>
             )}
           </>
         )}
       </section>
+      <div className={`${s.resizeHandle} ${s.detailsResize}`} {...panels.handle("details", "Resize contact details", "contact-details")} />
+      <aside
+        ref={panels.details}
+        id="contact-details"
+        aria-label="Contact information"
+        className={`${s.infoPanel} ${detailsOpen && selected ? s.infoOpen : ""}`}
+      >
+        <header className={s.infoHeading}>
+          <h2>Contact details</h2>
+          <button
+            className={s.infoClose}
+            aria-label="Close contact details"
+            onClick={() => setDetailsOpen(false)}
+          >
+            <X size={18} />
+          </button>
+        </header>
+        {selected ? (
+          <>
+            <div className={s.contactCard}>
+              <span className={s.avatar}>
+                {initials(
+                  active?.username ||
+                    conversations.find((c) => c.peer_id === selected)
+                      ?.username ||
+                    "",
+                )}
+              </span>
+              <strong>
+                @
+                {active?.username ||
+                  conversations.find((c) => c.peer_id === selected)?.username}
+              </strong>
+              <span>Instagram</span>
+            </div>
+            {thread && (
+              <TravelProfile
+                key={selected}
+                peer={selected}
+                revision={JSON.stringify([
+                  thread.messages.map((m) => [m.id, m.deleted]),
+                  active?.history_complete,
+                ])}
+              />
+            )}
+            {thread && (
+              <section className={s.details}>
+                <label>
+                  Conversation stage
+                  <select
+                    value={stage}
+                    onChange={(e) => {
+                      setStage(e.target.value);
+                      notesDirty.current = true;
+                    }}
+                  >
+                    <option value="inquiry">Inquiry</option>
+                    <option value="customer">Customer</option>
+                    <option value="archived">Archived</option>
+                  </select>
+                </label>
+                <label>
+                  Private notes for the team and AI
+                  <textarea
+                    value={notes}
+                    maxLength={5000}
+                    placeholder="Travel dates, preferences, details already confirmed…"
+                    onChange={(e) => {
+                      setNotes(e.target.value);
+                      notesDirty.current = true;
+                    }}
+                  />
+                </label>
+                <button
+                  disabled={!!busy || !thread}
+                  onClick={() =>
+                    run("details", async () => {
+                      await api(`conversations/${selected}/details`, {
+                        stage,
+                        notes,
+                      });
+                      notesDirty.current = false;
+                      await loadThread(selected, limit);
+                      await loadList();
+                      setNotice("Details saved.");
+                    })
+                  }
+                >
+                  Save details
+                </button>
+                <a
+                  href="https://www.instagram.com/direct/inbox/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open Instagram <ArrowUpRight size={14} />
+                </a>
+              </section>
+            )}
+          </>
+        ) : (
+          <div className={s.infoEmpty}>
+            <UserRound size={28} />
+            <h3>Get to know your guest</h3>
+            <p>
+              Select a conversation to see their details and your team’s notes.
+            </p>
+          </div>
+        )}
+      </aside>
       {(error || notice) && (
         <div
           role={error ? "alert" : "status"}

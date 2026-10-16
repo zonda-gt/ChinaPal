@@ -30,6 +30,29 @@ It combines the two migrations, enables RLS on every table and revokes browser
 access. The user applied this on 2026-10-16; live password login, conversation
 import, message/image retrieval and draft persistence were verified afterward.
 
+Before deploying travel profiles, also apply
+`supabase/migrations/202610160002_inbox_profiles.sql`. This creates the private
+`inbox_profiles` table with RLS and server-only grants. Development profiles
+are stored locally under the ignored `data/cache/inbox-profiles` directory;
+production profiles are stored in Supabase.
+
+## Inbox layout and AI context
+
+Drag the dividers beside the conversation list and contact details to adjust
+panel widths. Drag above the reply assistant to adjust its height. Arrow keys
+also resize a focused divider; double-click or Home resets it. Only panel sizes
+are saved in browser localStorage. Customer messages are not persisted there.
+
+The drafting instructions include the approved brief in
+`docs/chinapal-service-brief.md`, mirrored in `src/lib/inbox/ai.ts`. Keep these
+aligned when changing service terms. The About profile is not included in
+reply generation.
+
+About profiles use up to 1,000 saved messages, within a 120,000-character text
+budget, and show source messages and history coverage. Images are not included.
+The active conversation generates its first profile automatically and refreshes
+after a pause when its saved history changes. Unchanged profiles are reused.
+
 ## Webhooks after deployment
 
 1. Meta → Instagram use case → API setup with Instagram login → Configure webhooks.

@@ -12,6 +12,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
     for (const file of [
       "202610150001_instagram_webhook_deliveries.sql",
       "202610160001_inbox.sql",
+      "202610160002_inbox_profiles.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -132,6 +133,12 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       user_read: false,
       anon_send: false,
     });
+    const profileSecurity = (
+      await pg.query(
+        "select relrowsecurity as rls, has_table_privilege('anon','inbox_profiles','select') as anon_read, has_table_privilege('authenticated','inbox_profiles','select') as user_read, has_table_privilege('service_role','inbox_profiles','insert') as server_write from pg_class where oid='public.inbox_profiles'::regclass",
+      )
+    ).rows[0];
+    assert.deepEqual(profileSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
     await pg.exec("set role anon");
     await assert.rejects(
       pg.query("select * from inbox_messages"),

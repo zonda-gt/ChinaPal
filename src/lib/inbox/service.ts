@@ -57,13 +57,39 @@ export async function storeMessage(message: Message) {
   checked(error);
 }
 export async function listConversations() {
+  // One indexed, bounded child lookup per conversation in the same DB request.
   const { data, error } = await db()
     .from("inbox_conversations")
-    .select("*")
+    .select("*, latest:inbox_messages(text,direction,deleted,attachments)")
     .order("last_message_at", { ascending: false, nullsFirst: false })
+    .order("sent_at", { referencedTable: "latest", ascending: false })
+    .order("id", { referencedTable: "latest", ascending: false })
+    .limit(1, { referencedTable: "latest" })
     .limit(500);
   checked(error);
-  return data as Conversation[];
+  return (data || []).map(({ latest, ...conversation }) => {
+    const message = latest?.[0];
+    const attachment = message?.attachments?.[0]?.type;
+    const preview = !message
+      ? "History not loaded yet"
+      : message.deleted
+        ? "Message was unsent"
+        : message.text?.trim() ||
+          (attachment === "image"
+            ? "Photo"
+            : attachment === "video"
+              ? "Video"
+              : attachment === "audio"
+                ? "Voice message"
+                : attachment
+                  ? "Attachment"
+                  : "Message unavailable");
+    return {
+      ...conversation,
+      last_preview: preview.replace(/\s+/g, " ").slice(0, 180),
+      last_direction: message?.direction,
+    } as Conversation;
+  });
 }
 export async function syncConversations(after?: string) {
   await lease("sync-list", 180);
