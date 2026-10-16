@@ -1,0 +1,19 @@
+{
+  "checkedOn": "2026-10-16",
+  "primaryItinerarySource": "Customer itinerary screenshots supplied in this conversation. Personal bookings, payment statuses, train seats and flight times are transcribed from those notes, not independently accessed reservation systems.",
+  "hotelCorrection": "User confirmed Leading Men Hotel address as 湖南省张家界市武陵源区沿河路3号.",
+  "verifiedPlaces": [
+    {"place":"CIIF 2026","source":"https://touch.shio.gov.cn/jsp/cfbm_detail_en.jsp?id=20260821171739621","finding":"12–16 October 2026 at National Exhibition and Convention Center (Shanghai). Visitor credential remains unverified."},
+    {"place":"Duoyun Books flagship","source":"https://www.wutopialab.com/worksinfo.aspx?id=52","finding":"Shanghai Tower 52F. Photography matched to this flagship, not another Duoyun branch or Shanghai Tower observatory."},
+    {"place":"Leading Men Hotel","source":"https://www.klook.com/zh-CN/hotels/detail/176255-leading-men-hotel/","finding":"3 Yanhe Road, Wulingyuan. Chinese trading names vary across booking sources; retained supplied English name."},
+    {"place":"Pagoda Hotel Chengdu Taikoo Li","source":"https://www.choicehotels.com/en-xl/china/chengdu/ascend-hotels/cp041","finding":"16 Huaxing East Street."},
+    {"place":"Grand Hyatt Guangzhou","source":"https://www.hyatt.com/grand-hyatt/en-US/guagh-grand-hyatt-guangzhou","finding":"12 Zhujiang West Road."},
+    {"place":"Crowne Plaza Shenzhen Futian","source":"https://www.ihg.com/crowneplaza/hotels/us/en/shenzhen/szxsf/hoteldetail","finding":"28 Fuhua First Road, Futian."},
+    {"place":"Chengdu Research Base of Giant Panda Breeding","source":"https://www.panda.org.cn/cn/","finding":"Current morning entry starts 07:30; 60+ eligible visitors exempt from advance reservation with original ID verification. Shuttle extra. No inference about customer age."},
+    {"place":"Shufeng Yayun","source":"https://ditu.amap.com/place/B001C7WA8H","finding":"Source screenshot reads 蜀风雅韵. Qintai Road / Cultural Park venue; avoid inconsistent online street numbers and follow issued ticket entrance."},
+    {"place":"Chongqing drone show","source":"https://meetchongqing.com/chongqing-drone-light-show/","finding":"Secondary schedule corroborates Oct 24 at 20:30. Official date-specific announcement not independently obtained; 20:30–20:50 shown as planned window from supplied notes, with explicit same-day official/weather check."}
+  ],
+  "transport": "Road and walking durations are approximate planning allowances, not measured live routes. Flight terminals, operators, unknown cruise pier, Shenzhen technology service areas and airport pickup times are not invented.",
+  "photos": "44 distinct image files including hero, visually checked. New sources are recorded in photo-sources.json. Named destinations and actual shows used; no generated destination imagery. Existing shared photographs remain at their current paths. Drone images depict previous displays. Waterfront images do not assert a specific booked vessel.",
+  "reuse": "Shanghai Wukang and Bund photos are from existing xhs/ruijun source records; ERA from Shanghai government performance article in ruijun recommendations/photos.json. Existing Chongqing and Zhangjiajie assets were visually checked. Mislabelled legacy Kuixinglou images were not used; correct bridge photos were sourced specifically for this page."
+}
