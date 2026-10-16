@@ -95,3 +95,17 @@
 @media(prefers-reduced-motion:reduce) { .page * { scroll-behavior:auto!important; transition:none!important; } }
 
 .dinnerCopy p.serviceCharge { margin-top:10px; font-size:11px; font-weight:700; color:#98414a; }
+
+.reservationGrid,.backupGrid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; align-items:start; }
+.reservationGrid .dinnerPhotos img { aspect-ratio:4/3; }
+.menuCard { border:1px solid #e7e0d7; background:#fff; border-radius:14px; padding:24px; }
+.menuCard h3 { font-size:24px; line-height:1.25; margin:0 0 18px; }
+.menuCard>p { font-size:12px; line-height:1.8; color:#736861; }
+.menuCard .eyebrow { font-size:10px; color:#a13d49; }
+.dishList { list-style:none; margin:20px 0; padding:0; }
+.dishList li { display:flex; align-items:start; justify-content:space-between; gap:16px; padding:15px 0; border-top:1px solid #eee7df; font-size:12px; line-height:1.6; }
+.dishList strong { color:#493a34; }
+.dishList small { display:block; font-size:10px; color:#80766f; margin-top:5px; }
+.dishList li>span { flex-shrink:0; color:#98414a; font-weight:700; white-space:nowrap; }
+.menuCard .menuTotal { background:#f7f2ed; border-radius:8px; padding:12px; color:#704449; font-weight:600; }
+@media(max-width:760px) { .reservationGrid,.backupGrid { grid-template-columns:1fr; gap:16px; } .menuCard { padding:20px; } }

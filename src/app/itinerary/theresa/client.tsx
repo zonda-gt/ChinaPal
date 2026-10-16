@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import type { ImageMap } from "@/lib/itinerary-images";
 import ItineraryPage from "../ItineraryPage";
-import { buildTheresaConfig, dinnerOptions, finalDetails, photos } from "./config";
+import { barAlternatives, buildTheresaConfig, dinnerDishes, dinnerReservation, finalDetails, photos, preorderNote } from "./config";
 import styles from "./theresa.module.css";
 
 export default function TheresaClient({ images }: { images: ImageMap }) {
@@ -26,7 +26,7 @@ export default function TheresaClient({ images }: { images: ImageMap }) {
     </header>
 
     <nav className={styles.jumpLinks} aria-label="Itinerary sections">
-      <a href="#your-stay">Your stay</a><a href="#daily-plan">Daily plan</a><a href="#dinner-options">Dinner options</a><a href="#final-details">To confirm</a>
+      <a href="#your-stay">Your stay</a><a href="#daily-plan">Daily plan</a><a href="#dinner-options">Saturday dinner</a><a href="#bar-options">Backup bars</a><a href="#final-details">To confirm</a>
     </nav>
 
     <section id="your-stay" className={styles.overview} aria-label="Your stay and flights">
@@ -52,20 +52,39 @@ export default function TheresaClient({ images }: { images: ImageMap }) {
       <p className={styles.eyebrow}>One day at a time</p><h2 id="daily-title">Your weekend, planned.</h2>
       <p>Choose a day, then tap a place to see the details. Optional stops can flex around how you feel.</p>
       <p className={styles.small}>~ marks an estimated journey time, not live routing. Allow extra for traffic, queues and finding entrances. Sunday’s photoshoot remains undecided; its alternative walk replaces the session. Unbooked meals remain flexible.</p>
-      <a href="#dinner-options">Compare your Saturday dinner options <ArrowDown size={14} /></a>
+      <a href="#dinner-options">Your confirmed dinner & suggested dishes <ArrowDown size={14} /></a>
     </section>
     <ItineraryPage images={images} config={buildTheresaConfig()} leadName="Theresa" chromeless />
 
     <section id="dinner-options" className={styles.dinnerSection} aria-labelledby="dinner-title">
-      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday evening · choose one</p><h2 id="dinner-title">A dinner to look forward to.</h2><p>Three reservations are held for Saturday, 24 October while you and your partner decide: Shanghai Tang at 7:00 PM, Yong Fu at 7:30 PM, and Fu 1088 at 9:00 PM. We recommend Shanghai Tang for Shanghainese food, a date-night setting and a more moderate budget. No cancellation is being made yet; prices below are estimates or quoted minimums, and bar spending is separate.</p></div>
-      <div className={styles.dinnerGrid}>{dinnerOptions.map(option => <details className={styles.dinnerCard} key={option.id}>
-        <summary><div className={styles.dinnerPhotos}>{option.images.map((src, i) => <img src={src} key={src} alt={`${option.name} · ${i === 0 ? "restaurant photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>{option.status}</span><h3>{option.name}<ChevronDown size={18} /></h3><p>{option.branch}</p><p className={styles.serviceCharge}>{option.price}</p><p className={styles.serviceCharge}>{option.serviceCharge}</p></div></summary>
-        <div className={styles.dinnerDetails}><p>{option.description}</p><p>{option.note}</p><p className={styles.address}>{option.address}</p><p className={styles.small}>{option.transfer}</p></div>
+      <div className={styles.sectionHeading}><p className={styles.eyebrow}>Saturday 24 October · confirmed</p><h2 id="dinner-title">Your Saturday dinner.</h2><p>Shanghai Tang, Xintiandi · 7:30 PM. A Shanghainese dinner for two, followed by COA and then Pony Up.</p></div>
+      <div className={styles.reservationGrid}>
+        <article className={styles.dinnerCard}>
+          <div className={styles.dinnerPhotos}>{photos.shanghaiTang.map((src, i) => <img src={src} key={src} alt={`Shanghai Tang, Xintiandi · ${i === 0 ? "restaurant dish" : "exterior"}`} loading="lazy" />)}</div>
+          <div className={styles.dinnerCopy}><span className={styles.status}>{dinnerReservation.status}</span><h3>{dinnerReservation.name}</h3><p>{dinnerReservation.branch}</p></div>
+          <div className={styles.dinnerDetails}><p>{dinnerReservation.description}</p><p>{dinnerReservation.note}</p><p className={styles.address}>{dinnerReservation.address}</p></div>
+        </article>
+        <article className={styles.menuCard}>
+          <p className={styles.eyebrow}>Suggested advance-order dishes</p><h3>A few favourites, then choose the rest.</h3>
+          <p>{preorderNote}</p>
+          <ul className={styles.dishList}>{dinnerDishes.map(dish => <li key={dish.name}><div><strong>{dish.name}</strong><small>{dish.note}</small></div><span>RMB {dish.price}</span></li>)}</ul>
+          <p className={styles.menuTotal}>First two dishes: RMB 228 together.<br />With the optional crab dish: RMB 586 together.</p>
+          <p>{dinnerReservation.pricing}</p>
+          <p><strong>Choose other dishes yourself at the restaurant.</strong> The dishes above are a starting point, not your complete meal.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="bar-options" className={styles.dinnerSection} aria-labelledby="bars-title">
+      <div className={styles.sectionHeading}><p className={styles.eyebrow}>If you would rather skip a long queue</p><h2 id="bars-title">Two backup bars.</h2><p>COA first, then Pony Up remain your preferred plan. Both are walk-ins for this visit. The 60–90 minutes set aside at each is only a waiting buffer, not a prediction or confirmed queue. Use one of these alternatives if needed; you do not need to visit all four.</p></div>
+      <div className={styles.backupGrid}>{barAlternatives.map(bar => <details className={styles.dinnerCard} key={bar.id}>
+        <summary><div className={styles.dinnerPhotos}>{bar.images.map((src, i) => <img src={src} key={src} alt={`${bar.name} · ${i === 0 ? "venue photograph" : "a second look"}`} loading="lazy" />)}</div><div className={styles.dinnerCopy}><span className={styles.status}>Optional alternative · no reservation arranged</span><h3>{bar.name}<ChevronDown size={18} /></h3><p>{bar.summary}</p></div></summary>
+        <div className={styles.dinnerDetails}><p>{bar.description}</p><p className={styles.address}>{bar.address}</p><p className={styles.small}>{bar.transfer}</p></div>
       </details>)}</div>
     </section>
 
     <section id="final-details" className={styles.finalDetails} aria-labelledby="final-title">
-      <div><p className={styles.eyebrow}>The finishing touches</p><h2 id="final-title">A few details to confirm.</h2><p>We’ll refine the remaining arrangements around your preferred pace and restaurant choice.</p><a href="https://wa.me/8618201806768?text=Hi%20ChinaPal%2C%20I%20have%20a%20question%20about%20Theresa%27s%20Shanghai%20weekend." target="_blank" rel="noopener noreferrer">Message ChinaPal <ArrowUpRight size={16} /></a></div>
+      <div><p className={styles.eyebrow}>The finishing touches</p><h2 id="final-title">A few details to confirm.</h2><p>Dinner is confirmed. We’ll refine the dish pre-order, Sunday’s plans and the remaining practical details.</p><a href="https://wa.me/8618201806768?text=Hi%20ChinaPal%2C%20I%20have%20a%20question%20about%20Theresa%27s%20Shanghai%20weekend." target="_blank" rel="noopener noreferrer">Message ChinaPal <ArrowUpRight size={16} /></a></div>
       <ul>{finalDetails.map(detail => <li key={detail}><Check size={16} /><span>{detail}</span></li>)}</ul>
       <p className={styles.support}>Message us before or during the trip for practical help. We can connect on WeChat to share addresses, map pins and booking details, and will reply as promptly as we can.</p>
     </section>

@@ -258,5 +258,65 @@
     "width": 750,
     "height": 450,
     "downloadedOn": "2026-10-13"
+  },
+  {
+    "id": "nanxiang",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/117c21ba1f804d928fb9807d28f6e34a.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/nanxiang-steamed-bun-city-god-temple",
+    "alt": "Nanxiang Steamed Bun dish",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/nanxiang.webp",
+    "width": 1000,
+    "height": 800
+  },
+  {
+    "id": "nanxiang-2",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/d88c117bd6f94d06bbdbbd6ec60f463e.jpeg?format=webp&h=800&w=1000",
+    "source": "https://guide.michelin.com/us/en/shanghai-municipality/shanghai/restaurant/nanxiang-steamed-bun-city-god-temple",
+    "alt": "Nanxiang Steamed Bun exterior, Yuyuan",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/nanxiang-2.webp",
+    "width": 1000,
+    "height": 800
+  },
+  {
+    "id": "speak-low",
+    "url": "https://sg-management.jp/image/sipguzzle/store/store-main02-speaklow.jpg?0911",
+    "source": "https://sg-management.jp/en/establishments/speaklow/",
+    "alt": "Speak Low second-floor bar",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/speak-low.webp",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "id": "speak-low-2",
+    "url": "https://sg-management.jp/image/sipguzzle/store/store-main03-speaklow.jpg?0911",
+    "source": "https://sg-management.jp/en/establishments/speaklow/",
+    "alt": "Speak Low third-floor bar",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/speak-low-2.webp",
+    "width": 1200,
+    "height": 800
+  },
+  {
+    "id": "cantina-agave",
+    "url": "https://img.timeoutshanghai.com/201706/201706281126402_Large.jpg",
+    "source": "https://www.timeoutshanghai.com/venue/Restaurants-Mexican/44070/Cantina-Agave,-Fumin-Lu.html",
+    "alt": "Cantina Agave, Fumin Road venue photograph",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/cantina-agave.webp",
+    "width": 750,
+    "height": 422
+  },
+  {
+    "id": "cantina-agave-2",
+    "url": "https://img.timeoutshanghai.com/201706/20170628112639374.jpg",
+    "source": "https://www.timeoutshanghai.com/venue/Restaurants-Mexican/44070/Cantina-Agave,-Fumin-Lu.html",
+    "alt": "Cantina Agave, Fumin Road second photograph",
+    "downloadedOn": "2026-10-16",
+    "path": "/uploads/itinerary/theresa/cantina-agave-2.webp",
+    "width": 750,
+    "height": 500
   }
 ]
