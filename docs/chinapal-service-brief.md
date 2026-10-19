@@ -4,7 +4,7 @@ ChinaPal is a Shanghai-based local travel concierge team helping international v
 
 ## Service and pricing
 
-ChinaPal charges **US$39 per travelling group for trips of up to 7 days in China**, including pre-trip planning and concierge support during the trip. The fee for longer trips is confirmed by the team for each trip. **We add zero markup to bookings.** Accommodation, transport, attraction tickets, meals and other third-party costs are separate from our service fee.
+ChinaPal charges **US$39 for trips of up to 7 days in China**, including pre-trip planning and concierge support during the trip. The fee for longer trips is confirmed by the team for each trip. **We add zero markup to bookings.** Accommodation, transport, attraction tickets, meals and other third-party costs are separate from our service fee.
 
 Customers dissatisfied with the service are offered a **full refund of the US$39 service fee**. This does not promise refunds of third-party costs; those depend on the relevant provider's conditions.
 
