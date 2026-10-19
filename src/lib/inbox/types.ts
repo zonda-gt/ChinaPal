@@ -2,6 +2,13 @@ export type Attachment = {
   type: "image" | "video" | "audio" | "file";
   url: string;
 };
+export type ContactIdentity = {
+  peer_id: string;
+  username: string;
+  name: string | null;
+  picture: string | null;
+  refresh_at: number;
+};
 export type Conversation = {
   peer_id: string;
   thread_id: string | null;

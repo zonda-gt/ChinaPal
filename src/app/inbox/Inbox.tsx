@@ -26,6 +26,8 @@ import type { Conversation, Draft, Message, Staff } from "@/lib/inbox/types";
 import s from "./inbox.module.css";
 import TravelProfile from "./TravelProfile";
 import usePanelLayout from "./usePanelLayout";
+import useContactIdentities from "./useContactIdentities";
+import ContactAvatar from "./ContactAvatar";
 type Thread = {
   conversation: Conversation;
   messages: Message[];
@@ -57,11 +59,6 @@ const time = (value: string) =>
     hour: "numeric",
     minute: "2-digit",
   });
-const initials = (name: string) =>
-  name
-    .replace(/[^a-z0-9]/gi, "")
-    .slice(0, 2)
-    .toUpperCase();
 export default function Inbox() {
   const panels = usePanelLayout();
   const [staff, setStaff] = useState<Staff | null>(null),
@@ -70,6 +67,12 @@ export default function Inbox() {
   const [conversations, setConversations] = useState<Conversation[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [thread, setThread] = useState<Thread | null>(null);
+  const identities = useContactIdentities(conversations, !!staff);
+  function contactLabel(c?: Conversation) {
+    if (!c) return "Loading…";
+    const identity = identities.contacts[c.peer_id];
+    return identity?.name || `@${identity?.username || c.username}`;
+  }
   const [search, setSearch] = useState(""),
     [filter, setFilter] = useState("all"),
     [busy, setBusy] = useState(""),
@@ -367,6 +370,8 @@ export default function Inbox() {
     });
   }
   const active = thread?.conversation;
+  const selectedContact = conversations.find(c => c.peer_id === selected) || active;
+  const selectedIdentity = selected ? identities.contacts[selected] : undefined;
   const staleDraft = !!draft && draft.context_id !== (lastMessageId ?? null);
   const pending = thread?.drafts.find((d) => d.id === active?.sending_draft_id);
   const filtered = conversations.filter(
@@ -378,7 +383,9 @@ export default function Inbox() {
             !!c.last_message_at &&
             (!c.last_seen_at || c.last_message_at > c.last_seen_at)
           : c.stage === filter) &&
-      c.username.toLowerCase().includes(search.toLowerCase()),
+      [c.username, identities.contacts[c.peer_id]?.username,
+        identities.contacts[c.peer_id]?.name].some(value =>
+          value?.toLowerCase().includes(search.toLowerCase())),
   );
   const unread = conversations.filter(
     (c) =>
@@ -482,6 +489,7 @@ export default function Inbox() {
                   return;
                 await api("auth/logout", {});
                 threadCache.current.clear();
+                identities.clear();
                 latestRequests.current.clear();
                 sessionVersion.current++;
                 selectedRef.current = null;
@@ -566,10 +574,10 @@ export default function Inbox() {
                 className={`${s.conversationRow} ${selected === c.peer_id ? s.selected : ""}`}
                 onClick={() => choose(c.peer_id)}
               >
-                <span className={s.avatar}>{initials(c.username)}</span>
+                <ContactAvatar name={contactLabel(c)} picture={identities.contacts[c.peer_id]?.picture} />
                 <span className={s.rowContent}>
                   <span className={s.rowTop}>
-                    <strong>@{c.username}</strong>
+                    <strong title={`@${identities.contacts[c.peer_id]?.username || c.username}`}>{contactLabel(c)}</strong>
                     <time>{date(c.last_message_at)}</time>
                   </span>
                   <span className={s.rowBottom}>
@@ -591,7 +599,7 @@ export default function Inbox() {
               </h3>
               <p>
                 {search
-                  ? "Try another Instagram username."
+                  ? "Try another name or Instagram username."
                   : "Sync Instagram to bring your existing conversations into the inbox."}
               </p>
               {!search && (
@@ -638,19 +646,13 @@ export default function Inbox() {
               >
                 <ArrowLeft size={20} />
               </button>
-              <span className={s.avatar}>
-                {initials(active?.username || "")}
-              </span>
+              <ContactAvatar name={contactLabel(selectedContact)} picture={selectedIdentity?.picture} />
               <div className={s.threadTitle}>
                 <h2>
-                  @
-                  {active?.username ||
-                    conversations.find((c) => c.peer_id === selected)
-                      ?.username ||
-                    "Loading…"}
+                  {contactLabel(selectedContact)}
                 </h2>
                 <span>
-                  <Camera size={12} /> Instagram direct message
+                  <Camera size={12} /> {selectedIdentity?.username ? `@${selectedIdentity.username}` : "Instagram direct message"}
                 </span>
               </div>
               <button
@@ -993,20 +995,11 @@ export default function Inbox() {
         {selected ? (
           <>
             <div className={s.contactCard}>
-              <span className={s.avatar}>
-                {initials(
-                  active?.username ||
-                    conversations.find((c) => c.peer_id === selected)
-                      ?.username ||
-                    "",
-                )}
-              </span>
+              <ContactAvatar name={contactLabel(selectedContact)} picture={selectedIdentity?.picture} />
               <strong>
-                @
-                {active?.username ||
-                  conversations.find((c) => c.peer_id === selected)?.username}
+                {contactLabel(selectedContact)}
               </strong>
-              <span>Instagram</span>
+              <span>@{selectedIdentity?.username || selectedContact?.username}</span>
             </div>
             {thread && (
               <TravelProfile

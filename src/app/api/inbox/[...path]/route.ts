@@ -4,6 +4,7 @@ import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
 import { assertSameOrigin } from "@/lib/inbox/policy";
 import { mediaBytes } from "@/lib/inbox/graph";
+import { contactIdentity } from "@/lib/inbox/contacts";
 import {
   conversation,
   listConversations,
@@ -102,6 +103,8 @@ async function handler(
       const peer = path[1];
       if (!/^\d+$/.test(peer)) throw new InboxError("Invalid conversation.");
       const operation = path[2];
+      if (method === "POST" && operation === "identity")
+        return json(await contactIdentity(peer));
       if (method === "GET" && operation === "profile")
         return json(await getTravelProfile(peer));
       if (method === "POST" && operation === "profile")
