@@ -5,6 +5,7 @@
 // be exported as JSON; "Reveal" shows which version wrote each reply.
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import sharp from "sharp";
 import type { PromptContext } from "../../src/lib/inbox/prompt";
 
 // CommonJS project: top-level await is wrapped in main().
@@ -35,9 +36,14 @@ async function main() {
   async function imageTag(url?: string) {
     if (!url || url.startsWith("https://")) return "<em>[image]</em>";
     try {
-      const type = (await readFile(join(DIR, `${url}.type`), "utf8")).trim();
-      const data = (await readFile(join(DIR, url))).toString("base64");
-      return `<img src="data:${type};base64,${data}" alt="Customer image">`;
+      // Small previews keep the page light; the model saw the full image.
+      const data = (
+        await sharp(await readFile(join(DIR, url)))
+          .resize({ width: 480, withoutEnlargement: true })
+          .jpeg({ quality: 70 })
+          .toBuffer()
+      ).toString("base64");
+      return `<img src="data:image/jpeg;base64,${data}" alt="Customer image">`;
     } catch {
       return "<em>[image]</em>";
     }
