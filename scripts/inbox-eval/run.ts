@@ -1,5 +1,6 @@
 // Run reply-assistant versions over the frozen evaluation cases.
 // Usage: npx tsx scripts/inbox-eval/run.ts [--runs 2] [--only C01,C02] [--variants baseline,v2,v2-facts]
+//   [--cases data/eval/cases.json] [--alt prompt.txt]  (variant "v2-alt" uses the --alt instructions)
 // Reads data/eval/cases.json and writes data/eval/results/<timestamp>.json.
 // Nothing is saved to the inbox database and nothing is sent to customers.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -23,7 +24,9 @@ async function main() {
   const variants = arg("variants", "baseline,v2,v2-facts").split(",");
 
   type Case = { id: string; staff_facts: string; context: PromptContext };
-  const cases: Case[] = JSON.parse(await readFile(join(DIR, "cases.json"), "utf8"));
+  const cases: Case[] = JSON.parse(await readFile(arg("cases", join(DIR, "cases.json")), "utf8"));
+  const altFile = arg("alt", "");
+  const alt = altFile ? await readFile(altFile, "utf8") : undefined;
   const loadImage: LoadImage = async (url) => ({
     bytes: await readFile(join(DIR, url)),
     type: (await readFile(join(DIR, `${url}.type`), "utf8")).trim(),
@@ -52,6 +55,7 @@ async function main() {
                 client,
                 { ...c.context, staffFacts: variant === "v2-facts" ? c.staff_facts : undefined },
                 loadImage,
+                variant === "v2-alt" ? { instructions: alt } : {},
               );
         results.push({ case: c.id, variant, run, ...output });
       } catch (e) {

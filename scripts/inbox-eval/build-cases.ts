@@ -1,5 +1,5 @@
 // Freeze evaluation cases from saved inbox conversations (read-only).
-// Usage: npx tsx scripts/inbox-eval/build-cases.ts [data/eval/spec.json]
+// Usage: npx tsx scripts/inbox-eval/build-cases.ts [data/eval/spec.json] [output.json]
 // The spec and everything written under data/eval/ contain customer messages
 // and are git-ignored. Each spec entry names a conversation and the customer
 // message where the conversation is cut; the staff messages that followed
@@ -126,8 +126,9 @@ async function main() {
     });
     console.log(`${s.id} ${username}: ${history.length} messages, ${reference.length} reference`);
   }
-  await writeFile(join(DIR, "cases.json"), JSON.stringify(cases, null, 1));
-  console.log(`Wrote ${cases.length} cases to ${DIR}/cases.json`);
+  const out = process.argv[3] || join(DIR, "cases.json");
+  await writeFile(out, JSON.stringify(cases, null, 1));
+  console.log(`Wrote ${cases.length} cases to ${out}`);
 }
 main().catch((error) => {
   console.error(error);
