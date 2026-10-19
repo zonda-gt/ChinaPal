@@ -13,6 +13,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       "202610150001_instagram_webhook_deliveries.sql",
       "202610160001_inbox.sql",
       "202610160002_inbox_profiles.sql",
+      "202610190001_inbox_reply_assistant_v2.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -139,6 +140,17 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       )
     ).rows[0];
     assert.deepEqual(profileSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
+    const generationSecurity = (
+      await pg.query(
+        "select relrowsecurity as rls, has_table_privilege('anon','inbox_ai_generations','select') as anon_read, has_table_privilege('authenticated','inbox_ai_generations','select') as user_read, has_table_privilege('service_role','inbox_ai_generations','insert') as server_write from pg_class where oid='public.inbox_ai_generations'::regclass",
+      )
+    ).rows[0];
+    assert.deepEqual(generationSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
+    assert.deepEqual(
+      (await pg.query("select parts,staff_facts from inbox_drafts where id=$1", [old])).rows[0],
+      { parts: [], staff_facts: "" },
+      "Existing drafts keep working with no follow-up messages",
+    );
     await pg.exec("set role anon");
     await assert.rejects(
       pg.query("select * from inbox_messages"),
