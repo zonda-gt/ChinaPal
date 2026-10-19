@@ -8,6 +8,7 @@ import { contactIdentity } from "@/lib/inbox/contacts";
 import {
   conversation,
   listConversations,
+  queueNextPart,
   saveDraft,
   sendDraft,
   syncConversations,
@@ -30,6 +31,12 @@ function str(value: unknown, max = 10000) {
   if (typeof value !== "string" || value.length > max)
     throw new InboxError("Invalid request.");
   return value;
+}
+function parts(value: unknown) {
+  if (value === undefined) return undefined;
+  if (!Array.isArray(value) || value.length > 2)
+    throw new InboxError("Invalid follow-up messages.");
+  return value.map((v) => str(v, 4000));
 }
 function num(value: unknown) {
   if (!Number.isInteger(value) || Number(value) < 1)
@@ -177,6 +184,12 @@ async function handler(
             staff,
             body.id ? str(body.id, 50) : undefined,
             body.id ? num(body.version) : undefined,
+            [],
+            {
+              parts: parts(body.parts),
+              staffFacts:
+                body.staffFacts === undefined ? undefined : str(body.staffFacts, 2000),
+            },
           ),
         });
       }
@@ -187,7 +200,10 @@ async function handler(
               ? str(body.instruction, 2000)
               : undefined,
             currentText: body.currentText
-              ? str(body.currentText, 4000)
+              ? str(body.currentText, 6000)
+              : undefined,
+            staffFacts: body.staffFacts
+              ? str(body.staffFacts, 2000)
               : undefined,
             draftId: body.id ? str(body.id, 50) : undefined,
             version: body.id ? num(body.version) : undefined,
@@ -224,6 +240,12 @@ async function handler(
               : "Could not resolve the delivery.",
             409,
           );
+        if (body.outcome === "sent") {
+          const data = await threadData(peer, 1);
+          const resolved = data.drafts.find((d) => d.id === id);
+          if (resolved)
+            await queueNextPart(resolved, data.messages.at(-1)?.id ?? null, staff);
+        }
         return json({ ok: true });
       }
     }

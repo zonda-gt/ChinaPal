@@ -45,6 +45,10 @@ export type Draft = {
   edited_by: string;
   updated_at: string;
   sent_message_id: string | null;
+  // Follow-up messages that become the next draft after this one is sent.
+  parts: string[];
+  staff_facts: string;
+  generation_id: string | null;
 };
 export type Staff = { email: string; name: string };
 export class InboxError extends Error {

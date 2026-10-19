@@ -227,14 +227,23 @@ export async function saveDraft(
   id?: string,
   version?: number,
   warnings: string[] = [],
+  extra: { parts?: string[]; staffFacts?: string; generationId?: string } = {},
 ) {
   validateReply(body);
+  if (extra.parts) {
+    if (extra.parts.length > 2)
+      throw new InboxError("A draft can have at most two follow-up messages.");
+    extra.parts.forEach(validateReply);
+  }
   const record = {
     body,
     context_id: contextId,
     edited_by: staff.email,
     updated_at: new Date().toISOString(),
     warnings,
+    ...(extra.parts ? { parts: extra.parts.map((p) => p.trim()) } : {}),
+    ...(extra.staffFacts !== undefined ? { staff_facts: extra.staffFacts } : {}),
+    ...(extra.generationId ? { generation_id: extra.generationId } : {}),
   };
   if (id) {
     const { data, error } = await db()
@@ -357,5 +366,36 @@ export async function sendDraft(
     .eq("peer_id", peer)
     .eq("sending_draft_id", id);
   checked(unlockError);
-  return { status: "sent" };
+  const next = await queueNextPart(draft, sent.message_id, staff);
+  return { status: "sent", next: !!next };
+}
+// After a message is sent, its first follow-up becomes the next draft. It still
+// needs its own review and approval; nothing is sent automatically.
+export async function queueNextPart(
+  sent: Draft,
+  contextId: string | null,
+  staff: Staff,
+) {
+  const [body, ...rest] = sent.parts ?? [];
+  if (!body?.trim()) return null;
+  const { data, error } = await db()
+    .from("inbox_drafts")
+    .insert({
+      peer_id: sent.peer_id,
+      body,
+      parts: rest,
+      context_id: contextId,
+      edited_by: staff.email,
+      warnings: [],
+      staff_facts: sent.staff_facts ?? "",
+      generation_id: sent.generation_id,
+    })
+    .select()
+    .single();
+  // A draft someone started meanwhile wins; the follow-up text is not lost from the log.
+  if (error) {
+    console.error("[inbox] Could not queue the follow-up message", error.code);
+    return null;
+  }
+  return data as Draft;
 }

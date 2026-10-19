@@ -45,3 +45,5 @@ next-env.d.ts
 /data/db/*.sqlite
 /data/db/*.sqlite-*
 /data/cache/
+# reply-assistant evaluation cases and results (customer messages)
+/data/eval/

@@ -80,6 +80,8 @@ export default function Inbox() {
     [notice, setNotice] = useState("");
   const [draft, setDraft] = useState<Draft | null>(null),
     [text, setText] = useState(""),
+    [parts, setParts] = useState<string[]>([]),
+    [facts, setFacts] = useState(""),
     [instruction, setInstruction] = useState(""),
     [dirty, setDirty] = useState(false),
     [conflict, setConflict] = useState(false);
@@ -141,6 +143,8 @@ export default function Inbox() {
       if (reset || !dirtyRef.current) {
         setDraft(saved);
         setText(saved?.body || "");
+        setParts(saved?.parts ?? []);
+        setFacts(saved?.staff_facts ?? "");
         setConflict(false);
       } else if (
         saved?.id !== draftRef.current?.id ||
@@ -282,6 +286,8 @@ export default function Inbox() {
     setDraft(saved);
     draftRef.current = saved;
     setText(saved?.body || "");
+    setParts(saved?.parts ?? []);
+    setFacts(saved?.staff_facts ?? "");
     setNotes(cached?.data.conversation.notes || "");
     setStage(cached?.data.conversation.stage || "inquiry");
     setLimit(cached?.limit ?? 100);
@@ -316,6 +322,8 @@ export default function Inbox() {
     setDraft(d);
     draftRef.current = d;
     setText(d.body);
+    setParts(d.parts ?? []);
+    setFacts(d.staff_facts ?? "");
     setDirty(false);
     dirtyRef.current = false;
     setConflict(false);
@@ -326,6 +334,8 @@ export default function Inbox() {
       `conversations/${selected}/draft`,
       {
         text,
+        parts: parts.filter((p) => p.trim()),
+        staffFacts: facts,
         id: draft?.id,
         version: draft?.version,
         contextId: thread.messages.at(-1)?.id ?? null,
@@ -341,7 +351,9 @@ export default function Inbox() {
         `conversations/${selected}/generate`,
         {
           instruction: revision ?? instruction,
-          currentText: text,
+          // The whole multi-message draft, so a revision can rework all of it.
+          currentText: [text, ...parts].filter((p) => p.trim()).join("\n\n---\n\n"),
+          staffFacts: facts,
           id: draft?.id,
           version: draft?.version,
         },
@@ -355,18 +367,23 @@ export default function Inbox() {
     if (!selected || !draft || dirty) return;
     setConfirmSend(false);
     await run("send", async () => {
-      await api(`conversations/${selected}/send`, {
+      const result = await api<{ next?: boolean }>(`conversations/${selected}/send`, {
         id: draft.id,
         version: draft.version,
         approved: true,
       });
       setDraft(null);
       setText("");
+      setParts([]);
       setDirty(false);
       dirtyRef.current = false;
       await loadThread(selected, limit, true);
       await loadList();
-      setNotice("Reply sent on Instagram.");
+      setNotice(
+        result.next
+          ? "Reply sent on Instagram. The next message is ready below; review it before sending."
+          : "Reply sent on Instagram.",
+      );
     });
   }
   const active = thread?.conversation;
@@ -895,6 +912,53 @@ export default function Inbox() {
                     placeholder="Write your reply, or let AI prepare a first draft…"
                     disabled={!!busy || !!pending}
                   />
+                  {parts.map((part, i) => (
+                    <div key={i} className={s.followUp}>
+                      <div className={s.followUpHeading}>
+                        <span>
+                          Then send · message {i + 2} · {[...part].length}/1,000
+                        </span>
+                        <button
+                          aria-label={`Remove message ${i + 2}`}
+                          disabled={!!busy || !!pending}
+                          onClick={() => {
+                            setParts(parts.filter((_, j) => j !== i));
+                            setDirty(true);
+                            dirtyRef.current = true;
+                          }}
+                        >
+                          <X size={14} />
+                        </button>
+                      </div>
+                      <textarea
+                        className={s.reply}
+                        aria-label={`Follow-up message ${i + 2}`}
+                        value={part}
+                        maxLength={4000}
+                        onChange={(e) => {
+                          setParts(parts.map((p, j) => (j === i ? e.target.value : p)));
+                          setDirty(true);
+                          dirtyRef.current = true;
+                        }}
+                        disabled={!!busy || !!pending}
+                      />
+                    </div>
+                  ))}
+                  <label className={s.facts}>
+                    <span>What we&apos;ve done</span>
+                    <textarea
+                      aria-label="What we've done"
+                      value={facts}
+                      maxLength={2000}
+                      onChange={(e) => {
+                        setFacts(e.target.value);
+                        setDirty(true);
+                        dirtyRef.current = true;
+                      }}
+                      placeholder="Facts the AI can state as done, e.g. “Called Fu 1088: earliest 9pm, private room, RMB500 min spend, booked as backup”"
+                      disabled={!!busy || !!pending}
+                    />
+                  </label>
                   <div className={s.revision}>
                     <Sparkles size={15} />
                     <input
@@ -961,7 +1025,8 @@ export default function Inbox() {
                           conflict ||
                           !!pending ||
                           !thread.canSend ||
-                          [...text].length > 1000
+                          [...text].length > 1000 ||
+                          parts.some((p) => [...p].length > 1000)
                         }
                         onClick={() => setConfirmSend(true)}
                       >
@@ -1122,6 +1187,12 @@ export default function Inbox() {
               <strong>@{active?.username}</strong>.
             </p>
             <blockquote>{text}</blockquote>
+            {parts.length > 0 && (
+              <p>
+                Message 1 of {parts.length + 1}. The next message will be ready
+                for you to review and send after this one.
+              </p>
+            )}
             <div>
               <button onClick={() => setConfirmSend(false)}>
                 Keep editing

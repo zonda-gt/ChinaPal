@@ -13,7 +13,8 @@ Set these in `.env.local` locally and Vercel Production before deploying:
 | --- | --- |
 | `INBOX_ADMIN_PASSWORD` | Shared admin password, at least 16 characters. Rotation invalidates existing sessions. |
 | `OPENAI_API_KEY` | OpenAI project API key for drafting and image input. |
-| `INBOX_AI_MODEL` | Optional; defaults to `gpt-6.1-sol` with low reasoning effort. |
+| `INBOX_AI_MODEL` | Optional; defaults to `gpt-6.1-sol`. |
+| `INBOX_AI_REASONING` | Optional reply-assistant reasoning effort: `low`, `medium` (default) or `high`. |
 | `INSTAGRAM_ACCOUNT_ID` | Connected professional account's numeric ID. |
 | `INSTAGRAM_ACCESS_TOKEN` | Instagram read/send authorization. Monitor expiry and renew as needed. |
 | `INSTAGRAM_APP_SECRET` | Verifies Meta webhook signatures. |
@@ -43,10 +44,12 @@ panel widths. Drag above the reply assistant to adjust its height. Arrow keys
 also resize a focused divider; double-click or Home resets it. Only panel sizes
 are saved in browser localStorage. Customer messages are not persisted there.
 
-The drafting instructions include the approved brief in
-`docs/chinapal-service-brief.md`, mirrored in `src/lib/inbox/ai.ts`. Keep these
-aligned when changing service terms. The About profile is not included in
-reply generation.
+The reply assistant's instructions are in `src/lib/inbox/prompt.ts`; keep its
+service facts aligned with `docs/chinapal-service-brief.md` when changing terms.
+Generation itself (`src/lib/inbox/draft-core.ts`) has no database access, so the
+inbox and the offline evaluation (`scripts/inbox-eval/`) run the same request.
+The saved About profile is included as a trip summary; the conversation wins
+where they differ.
 
 About profiles use up to 1,000 saved messages, within a 120,000-character text
 budget, and show source messages and history coverage. Images are not included.
@@ -76,9 +79,17 @@ by hash and messages by Instagram ID. It never invokes AI or sends a reply.
   message viewer. Instagram may omit deleted/unsupported content.
 - The shared inbox polls saved data every 15 seconds while visible. Webhooks
   provide new data automatically once enabled; manual Refresh reads Instagram.
-- AI receives the latest 80 saved messages, private notes, the current draft,
-  revision instructions and up to six images from the latest 20 messages.
+- AI receives up to 400 recent saved messages within a 60,000-character budget,
+  the current Shanghai time, the customer's name, private notes, the saved trip
+  summary, staff facts ("What we've done"), the current draft, revision
+  instructions and up to six images from the latest 20 messages, in order.
   It has no web search or reservation tools. OpenAI response storage is disabled.
+- A draft can hold up to three messages. Staff approve and send each one; after
+  a send, the next message becomes the shared draft for review.
+- Every generation is logged in `inbox_ai_generations` (prompt version, model,
+  output, warnings, usage) so drafts can be compared with what was sent. Apply
+  `supabase/migrations/202610190001_inbox_reply_assistant_v2.sql` before
+  deploying this version.
 - Attachment links are saved, not the media binaries. Images are fetched through
   an authenticated server proxy and may expire; refresh messages to renew links.
   V1 previews JPEG/PNG/WebP/GIF up to 5 MB. Other media opens in Instagram.
