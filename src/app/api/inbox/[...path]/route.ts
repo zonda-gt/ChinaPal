@@ -1,6 +1,7 @@
 import { getTravelProfile, generateTravelProfile } from "@/lib/inbox/profile";
 import { editBrief, generateBrief, getBrief } from "@/lib/inbox/brief";
 import { translateMessage } from "@/lib/inbox/translate";
+import { askTrip, type AskTurn } from "@/lib/inbox/ask";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -114,6 +115,15 @@ async function handler(
       const operation = path[2];
       if (method === "POST" && operation === "identity")
         return json(await contactIdentity(peer));
+      if (method === "POST" && operation === "ask") {
+        if (!Array.isArray(body.history) || body.history.length > 20) throw new InboxError("Invalid conversation.");
+        const history: AskTurn[] = body.history.map((turn: unknown) => {
+          const t = turn as Record<string, unknown>;
+          if (t?.role !== "team" && t?.role !== "assistant") throw new InboxError("Invalid conversation.");
+          return { role: t.role, text: str(t.text, 6000) };
+        });
+        return json(await askTrip(peer, str(body.question, 2000), history));
+      }
       if (method === "POST" && operation === "translate")
         return json(await translateMessage(str(body.text, 4000)));
       if (method === "GET" && operation === "brief")
@@ -126,6 +136,7 @@ async function handler(
             action: body.action,
             text: body.text,
             target: body.target,
+            day: body.day,
           }),
         );
       if (method === "POST" && operation === "brief" && !path[3])

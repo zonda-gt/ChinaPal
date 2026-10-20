@@ -380,18 +380,18 @@ main.layout {
   flex-direction: column;
   align-items: flex-end;
   gap: 4px;
-  background: #fafbfc;
-  border: 1px solid var(--line);
+  background: #fffdf6;
+  border: 1px solid #f1e3bd;
   border-radius: 12px;
   padding: 8px 12px 10px;
 }
 .previewLabel {
   align-self: flex-start;
   font-size: 10px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.4px;
   text-transform: uppercase;
-  color: #8a97a3;
+  color: #a2741a;
 }
 .outgoing {
   display: flex;
@@ -403,21 +403,22 @@ main.layout {
   width: 100%;
   resize: none;
   overflow: hidden;
-  border: 0;
+  border: 1.5px dashed #e0a82e;
   border-radius: 18px;
-  background: #8338ec;
-  color: #fff;
+  background: #fff6dc;
+  color: #3d2e0b;
   padding: 10px 14px;
   font-size: 14px;
   line-height: 1.5;
   min-height: 42px;
 }
 .layout .bubbleInput::placeholder {
-  color: #e5d6fb;
+  color: #b39556;
 }
 .layout .bubbleInput:focus-visible {
-  outline: 3px solid #c9adf7;
+  outline: 3px solid #f6d58a;
   outline-offset: 1px;
+  border-style: solid;
 }
 .bubbleMeta {
   font-size: 10px;
@@ -439,7 +440,7 @@ main.layout {
 }
 .layout .addMessage {
   font-size: 11px;
-  color: #6b2fc4;
+  color: #a2741a;
   padding: 4px 8px;
   gap: 4px;
 }
@@ -935,4 +936,179 @@ main.layout {
   .find input {
     width: 100px;
   }
+}
+
+/* Day-by-day timeline */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.day {
+  border-left: 2px solid #e2d4f7;
+  padding: 2px 0 6px 10px;
+  margin-left: 4px;
+}
+.day.today {
+  border-left-color: #8338ec;
+  background: #faf6ff;
+  border-radius: 0 8px 8px 0;
+}
+.day.past {
+  opacity: 0.6;
+}
+.dayHead {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.dayHead b {
+  white-space: nowrap;
+}
+.dayHead > span:not(.todayTag) {
+  color: #5d6f7f;
+  flex: 1;
+  min-width: 0;
+}
+.todayTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #fff;
+  background: #8338ec;
+  border-radius: 999px;
+  padding: 0 6px;
+}
+.dayItem .itemBody {
+  grid-template-columns: 16px minmax(0, 1fr);
+  column-gap: 6px;
+}
+.dayItem .itemBody > :not(.stopDot) {
+  grid-column: 2;
+}
+.dayItem .stopDot {
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+}
+.time {
+  font-style: normal;
+  font-weight: 600;
+  color: #3a4a58;
+  margin-right: 5px;
+}
+.free {
+  font-size: 11.5px;
+  color: #9aa5b0;
+  padding: 2px 4px 0 26px;
+}
+
+/* Ask about this trip */
+.layout .askJump {
+  order: 2;
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0866ce;
+  background: #e8f2ff;
+  padding: 6px 10px;
+}
+.layout .clearAsk {
+  font-size: 11px;
+  color: #8a97a3;
+  padding: 2px 6px;
+}
+.suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin: 4px 0 8px;
+}
+.layout .suggestions button {
+  font-size: 11.5px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: #3a4a58;
+  text-align: left;
+}
+.askTurns {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.askQ {
+  align-self: flex-end;
+  max-width: 90%;
+  margin: 0;
+  background: #e8f2ff;
+  color: #123b6b;
+  border-radius: 12px 12px 2px 12px;
+  padding: 6px 10px;
+  white-space: pre-wrap;
+}
+.askA {
+  background: #f6f8fb;
+  border: 1px solid var(--line);
+  border-radius: 12px 12px 12px 2px;
+  padding: 8px 10px 4px;
+}
+.askA p {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.5;
+}
+.askA span {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+.layout .askA button {
+  font-size: 10.5px;
+  color: #6f8190;
+  padding: 2px 4px;
+  gap: 3px;
+}
+.askThinking {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #6f8190;
+  font-size: 12px;
+}
+.askForm {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  margin-top: 8px;
+  border: 1px solid #c9d4df;
+  border-radius: 10px;
+  padding: 4px 4px 4px 10px;
+  background: #fff;
+}
+.askForm textarea {
+  flex: 1;
+  border: 0;
+  outline: 0;
+  resize: none;
+  font-size: 12.5px;
+  line-height: 1.45;
+  padding: 4px 0;
+  background: transparent;
+}
+.layout .askForm button {
+  background: #0866ff;
+  color: #fff;
+  border-radius: 8px;
+  padding: 6px;
+}
+.askNote {
+  display: block;
+  margin-top: 4px;
+  font-size: 10.5px;
+  color: #9aa5b0;
 }

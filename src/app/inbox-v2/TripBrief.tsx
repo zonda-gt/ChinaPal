@@ -27,6 +27,7 @@ import {
 } from "@/lib/inbox/brief-data";
 import type { ProfileSource } from "@/lib/inbox/profile-data";
 import ContactAvatar from "../inbox/ContactAvatar";
+import TripAsk from "./TripAsk";
 import v from "./v2.module.css";
 
 const REQUEST_LABELS: Record<RequestStatus, string> = {
@@ -136,11 +137,11 @@ export default function TripBrief(props: Props) {
   }
   /** Replace an item: team items are rewritten, AI items are replaced by a team version. */
   async function replace(section: BriefSection, item: unknown, text: string) {
-    const editId = (item as { editId?: string } | null)?.editId;
+    const { editId, day } = (item ?? {}) as { editId?: string; day?: string };
     if (editId) {
       await edit({ remove: editId });
-      if (text.trim()) await edit({ section, action: "set", text });
-    } else if (text.trim()) await edit({ section, action: "set", text, target: itemText(section, item) });
+      if (text.trim()) await edit({ section, action: "set", text, day });
+    } else if (text.trim()) await edit({ section, action: "set", text, day, target: itemText(section, item) });
   }
   async function remove(section: BriefSection, item: unknown) {
     const editId = (item as { editId?: string }).editId;
@@ -161,6 +162,7 @@ export default function TripBrief(props: Props) {
     }, 900);
   }
 
+  const today = new Date().toLocaleDateString("en-CA", { timeZone: "Asia/Shanghai" });
   const saved = data?.saved;
   const brief = saved?.brief ? applyEdits(saved.brief, saved.edits) : null;
 
@@ -341,6 +343,16 @@ export default function TripBrief(props: Props) {
       </div>
 
       <div className={v.generateRow}>
+        <button
+          className={v.askJump}
+          onClick={() => {
+            const box = document.querySelector<HTMLTextAreaElement>("[aria-label='Ask about this trip']");
+            box?.scrollIntoView({ block: "center" });
+            box?.focus();
+          }}
+        >
+          Ask AI
+        </button>
         <button className={v.generate} onClick={() => void generate()} disabled={generating || loading || !coverage?.count}>
           {generating ? <Loader2 size={14} className={v.spin} /> : brief ? <RefreshCw size={14} /> : <Sparkles size={14} />}
           {generating ? "Reading the chat…" : brief ? "Update brief" : "Build trip brief"}
@@ -387,7 +399,66 @@ export default function TripBrief(props: Props) {
             </div>
           </div>
 
-          {renderSection({
+          {brief.days.length > 0 && (
+            <section className={v.briefSection}>
+              <header>
+                <h4>
+                  <CalendarDays size={13} /> Day by day
+                </h4>
+              </header>
+              <ol className={v.timeline}>
+                {brief.days.map((d, di) => {
+                  const key = d.date || d.label;
+                  const addId = `day-add-${di}`;
+                  const isToday = d.date === today;
+                  return (
+                    <li key={key || di} className={`${v.day} ${isToday ? v.today : ""} ${d.date && d.date < today ? v.past : ""}`}>
+                      <div className={v.dayHead}>
+                        <b>{d.label || d.date}</b>
+                        <span>{d.city}</span>
+                        {isToday && <span className={v.todayTag}>Today</span>}
+                        <button className={v.addButton} onClick={() => startEdit(addId, "")} aria-label={`Add to ${d.label}`} title="Add">
+                          <Plus size={12} />
+                        </button>
+                      </div>
+                      <ul>
+                        {d.items.map((item, ii) =>
+                          renderItem({
+                            key: `d${di}-${ii}`,
+                            id: `day-${di}-${ii}`,
+                            section: "days",
+                            item,
+                            certainty: item.certainty,
+                            sources: item.sources,
+                            className: `${v.dayItem} ${item.booked ? v.booked : ""}`,
+                            children: (
+                              <>
+                                <span className={v.stopDot} aria-hidden />
+                                <span>
+                                  {item.time && <em className={v.time}>{item.time}</em>}
+                                  {item.text}
+                                  {item.booked && <span className={v.bookedTag}> Booked</span>}
+                                </span>
+                              </>
+                            ),
+                          }),
+                        )}
+                        {!d.items.length && editing !== addId && <li className={v.free}>Free day</li>}
+                      </ul>
+                      {renderEditor({
+                        id: addId,
+                        initial: "",
+                        placeholder: `Add to ${d.label || "this day"}`,
+                        onSave: (t) => void edit({ section: "days", action: "set", text: t, day: key }),
+                      })}
+                    </li>
+                  );
+                })}
+              </ol>
+            </section>
+          )}
+
+          {brief.days.length === 0 && renderSection({
             title: "Route",
             icon: <MapPin size={13} />,
             section: "route",
@@ -568,6 +639,8 @@ export default function TripBrief(props: Props) {
           })}
         </>
       )}
+
+      <TripAsk peer={peer} onUse={props.onAddToReply} />
 
       <section className={v.briefSection}>
         <header>

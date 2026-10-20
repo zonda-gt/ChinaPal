@@ -29,6 +29,7 @@ Fields:
 - party: who is travelling (size, relationship, ages only if given).
 - paid: payment to ChinaPal, only if the chat shows it.
 - route: stops in travel order with dates; booked = true only when a booking is confirmed in the chat.
+- days: a day-by-day timeline, one entry for every calendar day from arrival in China to departure (include free days with no items), only when at least the arrival or a dated stop is known; otherwise []. date = YYYY-MM-DD when the year is clear (a date in the coming months is the next upcoming one after the message time), else "". label = short day name, e.g. "Sat 24 Oct". city = where they are or "Shanghai → Hangzhou" on travel days. items = what happens that day in time order: arrivals, transfers, check-ins, appointments, bookings, events and plans they mentioned, plus team suggestions marked suggested. time = "05:35", "morning" or "". booked = true only for confirmed bookings. For trips longer than 31 days, cover the first 31.
 - requests: each thing they asked us to do or we offered, with status: requested (asked, nothing done), proposed (we sent options or a plan), waiting_customer (we need their decision or info), booked, done, customer_handles (they do it themselves), declined. next = the next action and who does it.
 - deadlines: dates or times something must happen by (theirs or ours).
 - mustKnow: constraints that should change every recommendation: mobility, health, age-related needs, fears, diet, pregnancy, children, budget limits, fixed bookings.
@@ -36,7 +37,7 @@ Fields:
 - questions: up to 6 open points, owner = customer when we are waiting for them, team when we still need to ask or check.
 - ideas: up to 4 concrete ways ChinaPal could help next that fit their preferences, with why. These are suggestions for the team and need no sources. No prices.
 
-Keep it scannable: each text at most about 15 words, next at most about 12 words, ideas at most about 20 words. Do not repeat the same fact in several sections: route holds places and dates, requests hold our work, mustKnow holds constraints. critical = true only for health, safety, mobility, fears and fixed bookings that would cause real trouble if missed; budgets and room set-ups are not critical.
+Keep it scannable: each text at most about 15 words, next at most about 12 words, ideas at most about 20 words. Do not repeat the same fact in several sections: route holds places and dates, days hold what happens on each date, requests hold our work, mustKnow holds constraints. critical = true only for health, safety, mobility, fears and fixed bookings that would cause real trouble if missed; budgets and room set-ups are not critical.
 
 Rules: every fact cites 1 to 3 source message numbers. certainty: confirmed = the traveller said it or agreed to it; inferred = a reasonable reading of their words; suggested = proposed by the team and not accepted. Use null or an empty list when something is unknown; never write "Not mentioned". Prefer the latest corrections and keep different trips apart, focusing on the latest one. No invented dates, years, names, bookings or payments. Do not speculate about nationality, religion or other sensitive traits, and never include passport, card or login details.
 
@@ -154,13 +155,13 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
   }
 }
 
-const SECTIONS: BriefSection[] = [...SINGLE_SECTIONS, "route", "requests", "deadlines", "mustKnow", "preferences", "questions", "ideas"];
+const SECTIONS: BriefSection[] = [...SINGLE_SECTIONS, "route", "days", "requests", "deadlines", "mustKnow", "preferences", "questions", "ideas"];
 
 /** Add a team correction, or remove one by id. */
 export async function editBrief(
   peer: string,
   staff: Staff,
-  change: { remove?: string; section?: unknown; action?: unknown; text?: unknown; target?: unknown },
+  change: { remove?: string; section?: unknown; action?: unknown; text?: unknown; target?: unknown; day?: unknown },
 ): Promise<BriefResponse> {
   const saved = await readBrief(peer);
   let edits = saved.edits;
@@ -176,13 +177,15 @@ export async function editBrief(
     if (action === "set" && !text && !SINGLE_SECTIONS.includes(section as (typeof SINGLE_SECTIONS)[number]))
       throw new InboxError("Write the text for this item.");
     if (section === "stage" && !(text in STAGES)) throw new InboxError("Invalid stage.");
+    const day = typeof change.day === "string" && change.day ? change.day.slice(0, 30) : undefined;
+    if (section === "days" && action === "set" && !day) throw new InboxError("Choose the day for this item.");
     if (edits.length >= 100) throw new InboxError("This brief has too many edits. Remove some first.");
     // A newer value for a single field replaces the older one.
     if (action === "set" && SINGLE_SECTIONS.includes(section as (typeof SINGLE_SECTIONS)[number]))
       edits = edits.filter((e) => e.section !== section);
     edits = [
       ...edits,
-      { id: randomUUID(), section, action, text, target, by: staff.name || staff.email, at: new Date().toISOString() },
+      { id: randomUUID(), section, action, text, target, day, by: staff.name || staff.email, at: new Date().toISOString() },
     ];
   }
   await writeBrief(peer, { ...saved, edits });

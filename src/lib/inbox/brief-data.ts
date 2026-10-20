@@ -8,6 +8,9 @@ export type Certainty = "confirmed" | "inferred" | "suggested";
 // editId marks an item the team added, so it can be edited or removed again.
 export type BriefFact = { text: string; certainty: Certainty; sources: ProfileSource[]; editId?: string };
 export type RouteStop = BriefFact & { place: string; dates: string; booked: boolean };
+// One calendar day of the trip. day is the date (or label) the item belongs to.
+export type DayItem = BriefFact & { time: string; booked: boolean; day: string };
+export type TripDay = { date: string; label: string; city: string; items: DayItem[] };
 export type RequestStatus =
   | "requested"
   | "proposed"
@@ -41,6 +44,7 @@ export type TripBrief = {
   party: BriefFact | null;
   paid: BriefFact | null;
   route: RouteStop[];
+  days: TripDay[];
   requests: BriefRequest[];
   deadlines: Deadline[];
   mustKnow: MustKnow[];
@@ -57,6 +61,7 @@ export type BriefSection =
   | "paid"
   | "stage"
   | "route"
+  | "days"
   | "requests"
   | "deadlines"
   | "mustKnow"
@@ -71,6 +76,7 @@ export type BriefEdit = {
   action: "set" | "hide";
   text: string;
   target?: string; // the AI text this edit replaces or hides
+  day?: string; // for timeline items: the date or label of the day
   by: string;
   at: string;
 };
@@ -114,6 +120,20 @@ export const BRIEF_SCHEMA = {
     party: optional(fact()),
     paid: optional(fact()),
     route: list(fact({ place: text(80), dates: text(80), booked: { type: "boolean" } }), 12),
+    days: list(
+      {
+        type: "object",
+        additionalProperties: false,
+        properties: {
+          date: text(10),
+          label: text(30),
+          city: text(80),
+          items: list(fact({ time: text(30), booked: { type: "boolean" } }), 8),
+        },
+        required: ["date", "label", "city", "items"],
+      },
+      31,
+    ),
     requests: list(
       fact({
         item: text(80),
@@ -157,6 +177,7 @@ export const BRIEF_SCHEMA = {
     "party",
     "paid",
     "route",
+    "days",
     "requests",
     "deadlines",
     "mustKnow",
@@ -220,6 +241,16 @@ export function parseBrief(raw: string, messages: Message[]): TripBrief {
     party: parseFact(data.party),
     paid: parseFact(data.paid),
     route: facts(data.route, 12, (v) => ({ place: str(v.place, 80), dates: str(v.dates, 80), booked: v.booked === true })),
+    days: arr(data.days, 31).map((d) => {
+      const date = str(d.date, 10);
+      const day = {
+        date: /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : "",
+        label: str(d.label, 30),
+        city: str(d.city, 80),
+      };
+      const key = day.date || day.label;
+      return { ...day, items: facts(d.items, 8, (v) => ({ time: str(v.time, 30), booked: v.booked === true, day: key })) };
+    }),
     requests: facts(data.requests, 10, (v) => {
       const status = v.status as RequestStatus;
       if (!["requested", "proposed", "waiting_customer", "booked", "done", "customer_handles", "declined"].includes(status))
@@ -243,6 +274,7 @@ export function itemText(section: BriefSection, item: unknown): string {
   if (!item || typeof item !== "object") return "";
   const v = item as Record<string, unknown>;
   if (section === "route") return `${v.place} · ${v.dates}`;
+  if (section === "days") return `${v.day} · ${v.text}`;
   if (section === "requests") return String(v.item);
   return String(v.text ?? "");
 }
@@ -268,6 +300,20 @@ export function applyEdits(brief: TripBrief, edits: BriefEdit[]) {
     ...added(section).map((e) => ({ ...make(e.text), editId: e.id })),
   ];
   out.route = merge("route", brief.route, (t) => ({ ...team(t), place: t, dates: "", booked: false }));
+  // Timeline: hide or replace AI items by day, and add team items to their day.
+  const hiddenDays = hidden("days");
+  out.days = (brief.days ?? []).map((d) => {
+    const key = d.date || d.label;
+    return {
+      ...d,
+      items: [
+        ...d.items.filter((item) => !hiddenDays.has(itemText("days", item))),
+        ...added("days")
+          .filter((e) => e.day === key)
+          .map((e) => ({ ...team(e.text), time: "", booked: false, day: key, editId: e.id })),
+      ],
+    };
+  });
   out.requests = merge("requests", brief.requests, (t) => ({ ...team(t), item: t, status: "requested" as const, next: "" }));
   out.deadlines = merge("deadlines", brief.deadlines, (t) => ({ ...team(t), by: "" }));
   out.mustKnow = merge("mustKnow", brief.mustKnow, (t) => ({ ...team(t), critical: true }));
@@ -287,6 +333,7 @@ export const EMPTY_BRIEF: TripBrief = {
   party: null,
   paid: null,
   route: [],
+  days: [],
   requests: [],
   deadlines: [],
   mustKnow: [],
