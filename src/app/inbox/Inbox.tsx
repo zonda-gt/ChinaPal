@@ -28,6 +28,7 @@ import TravelProfile from "./TravelProfile";
 import usePanelLayout from "./usePanelLayout";
 import useContactIdentities from "./useContactIdentities";
 import ContactAvatar from "./ContactAvatar";
+import useMessageScroll from "./useMessageScroll";
 type Thread = {
   conversation: Conversation;
   messages: Message[];
@@ -68,6 +69,7 @@ export default function Inbox() {
     [selected, setSelected] = useState<string | null>(null),
     [thread, setThread] = useState<Thread | null>(null);
   const identities = useContactIdentities(conversations, !!staff);
+  const messageScroll = useMessageScroll(thread?.conversation.peer_id ?? null, thread?.messages);
   function contactLabel(c?: Conversation) {
     if (!c) return "Loading…";
     const identity = identities.contacts[c.peer_id];
@@ -106,8 +108,7 @@ export default function Inbox() {
   const selectedRef = useRef(selected),
     dirtyRef = useRef(dirty),
     draftRef = useRef(draft),
-    notesDirty = useRef(false),
-    end = useRef<HTMLDivElement>(null);
+    notesDirty = useRef(false);
   limitRef.current = limit;
   selectedRef.current = selected;
   dirtyRef.current = dirty;
@@ -215,9 +216,6 @@ export default function Inbox() {
     };
   }, [selected, staff, loadThread]);
   const lastMessageId = thread?.messages.at(-1)?.id;
-  useEffect(() => {
-    end.current?.scrollIntoView({ behavior: "smooth", block: "end" });
-  }, [selected, lastMessageId]);
   useEffect(() => {
     const handler = (e: BeforeUnloadEvent) => {
       if (dirtyRef.current || notesDirty.current) {
@@ -699,14 +697,14 @@ export default function Inbox() {
                 <PanelRight size={17} /> <span>Details</span>
               </button>
             </header>
-            <div className={s.messages}>
+            <div className={s.messages} ref={messageScroll.viewport} onScroll={messageScroll.onScroll} aria-label="Conversation messages">
               {!thread && (
                 <div className={s.loading}>
                   <Loader2 className={s.spin} /> Loading conversation…
                 </div>
               )}
               {thread && (
-                <>
+                <div ref={messageScroll.content}>
                   <div className={s.historyBar}>
                     <button
                       disabled={!!busy}
@@ -799,8 +797,7 @@ export default function Inbox() {
                       No saved messages yet. Refresh to load this conversation.
                     </div>
                   )}
-                  <div ref={end} />
-                </>
+                </div>
               )}
             </div>
             {thread && (
