@@ -4,14 +4,14 @@
 // see image-note-store.ts for saving and reusing notes.
 import OpenAI from "openai";
 
-export const IMAGE_NOTE_VERSION = "n1";
+export const IMAGE_NOTE_VERSION = "n2";
 
 const NOTE_INSTRUCTIONS = `Describe ONE image from an Instagram chat between a traveller and ChinaPal, a small Shanghai team that plans China trips. A teammate who cannot see the image will rely on your note, so capture everything useful for helping this traveller.
 
 Start with what it is, e.g. "Screenshot of a Trip.com hotel booking", "Xiaohongshu post", "Google Maps place card", "Photo of a waterfall with a dragon statue", "Price table".
 Then copy the useful details exactly as shown: place, shop, hotel and restaurant names (keep both English and Chinese when both appear), addresses, dates, times, flight and train numbers, stations, prices and totals, booking status, cancellation terms, ratings, menu items, captions and other on-screen text. For tables and itineraries, keep each row or day short but complete.
-For photos without text, say what and where it seems to be, marking guesses ("looks like…").
-Never copy passport or ID numbers, card numbers, phone numbers, email addresses, booking PINs or QR code contents: write [hidden]. Do not guess beyond what is visible.
+For photos without text, describe the distinctive features, then give your best guess of the exact place or thing when you have one, marked as a guess, e.g. "Likely Wukang Mansion (武康大楼), Shanghai: wedge-shaped red-brick building at a road junction (guess)". Never write that something cannot be identified; describe what would identify it instead.
+Never copy passport or ID numbers, card numbers, phone numbers, email addresses, booking PINs or QR code contents: write [hidden]. Apart from clearly marked guesses, don't add anything that isn't visible.
 Plain text, no preamble. Usually under 120 words; up to 220 for long lists, tables or itineraries.`;
 
 export type NoteInput = {
