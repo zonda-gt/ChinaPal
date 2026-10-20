@@ -976,7 +976,7 @@ export default function InboxV2() {
                             </div>
                           )}
                           <div className={v.preview}>
-                            <span className={v.previewLabel}>What they&apos;ll see</span>
+                            <span className={v.previewLabel}>Draft · not sent yet</span>
                             {messagesAll.map((m, i) => (
                               <div key={i} className={v.outgoing}>
                                 <BubbleInput

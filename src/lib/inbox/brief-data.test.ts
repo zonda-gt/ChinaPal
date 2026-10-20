@@ -26,6 +26,7 @@ const raw = (over: Record<string, unknown> = {}) =>
     party: null,
     paid: null,
     route: [],
+    days: [],
     requests: [],
     deadlines: [],
     mustKnow: [{ ...fact("Scared of heights", [1]), critical: true }],
@@ -81,4 +82,40 @@ test("team edits replace, add and hide items and survive a new AI brief", () => 
   assert.ok(out.preferences[0].editId);
   const hidden = applyEdits(brief, [edit({ action: "hide", target: "Scared of heights" })]);
   assert.equal(hidden.mustKnow.length, 0);
+});
+
+test("the day-by-day timeline keeps sourced items and team edits by day", () => {
+  const brief = parseBrief(
+    raw({
+      days: [
+        {
+          date: "2026-11-05",
+          label: "Thu 5 Nov",
+          city: "Wuyuan",
+          items: [
+            { ...fact("Arrive Wuyuan", [1]), time: "afternoon", booked: false },
+            { ...fact("Unsourced dinner booking", []), time: "", booked: true },
+          ],
+        },
+        { date: "Nov 6", label: "Fri 6 Nov", city: "Wuyuan", items: [] },
+      ],
+    }),
+    messages,
+  );
+  assert.equal(brief.days.length, 2);
+  assert.deepEqual(brief.days[0].items.map((i) => i.text), ["Arrive Wuyuan"]);
+  assert.equal(brief.days[1].date, "", "unclear dates are left empty");
+  const out = applyEdits(brief, [
+    { id: "a", section: "days", action: "hide", text: "", target: "2026-11-05 · Arrive Wuyuan", by: "Team", at: "" },
+    { id: "b", section: "days", action: "set", text: "Driver to Likeng", day: "Fri 6 Nov", by: "Team", at: "" },
+  ]);
+  assert.equal(out.days[0].items.length, 0);
+  assert.equal(out.days[1].items[0].text, "Driver to Likeng");
+  assert.equal(out.days[1].items[0].editId, "b");
+});
+
+test("briefs saved before the timeline existed still load", () => {
+  const { days, ...old } = parseBrief(raw(), messages);
+  assert.deepEqual(days, []);
+  assert.deepEqual(applyEdits(old as typeof old & { days: never[] }, []).days, []);
 });

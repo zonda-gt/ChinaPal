@@ -34,7 +34,7 @@ const MAX_IMAGES = 6;
 const IMAGE_WINDOW = 20;
 
 /** Recent images, in conversation order, labelled with their message number. */
-export async function imageContent(ctx: PromptContext, offset: number, load: LoadImage) {
+export async function imageContent(ctx: Pick<PromptContext, "messages">, offset: number, load: LoadImage) {
   const warnings: string[] = [];
   const recent = ctx.messages.slice(-IMAGE_WINDOW);
   const start = ctx.messages.length - recent.length;
