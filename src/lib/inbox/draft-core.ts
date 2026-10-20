@@ -14,7 +14,12 @@ import {
 import { InboxError } from "./types";
 
 export type LoadImage = (url: string) => Promise<{ bytes: Buffer; type: string }>;
-export type DraftOptions = { model?: string; reasoning?: "low" | "medium" | "high" };
+export type DraftOptions = {
+  model?: string;
+  reasoning?: "low" | "medium" | "high";
+  // Evaluation only: try alternative instructions against the same request.
+  instructions?: string;
+};
 export type DraftResult = {
   messages: string[];
   warnings: string[];
@@ -89,7 +94,7 @@ export async function runDraft(
       reasoning: { effort: reasoning },
       max_output_tokens: 8000,
       store: false,
-      instructions: INBOX_INSTRUCTIONS,
+      instructions: options.instructions ?? INBOX_INSTRUCTIONS,
       input: [
         {
           role: "user",
