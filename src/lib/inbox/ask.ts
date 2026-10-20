@@ -18,6 +18,8 @@ You get the Instagram conversation (numbered messages), the team's notes, facts 
 How to answer:
 - Answer the question directly and briefly. Use short lines or a compact list when it helps; no long preambles.
 - Be exact with what the traveller said: dates, times, names, hotels, flights. Cite message numbers like (#12) for facts taken from the chat, so the team can check them.
+- When the traveller's own words matter (a request, a preference, a date, a complaint), quote their key words in quotation marks, e.g. she wrote "maximum price: 1000-1200 yuan" (#6). Keep quotes short and exact; never change their wording.
+- Formatting: plain lines and "- " bullets; use **bold** only for the few words that matter most. No headings or tables.
 - Say clearly when something is not in the chat or is uncertain, and what to ask or check. Never invent bookings, prices, opening hours, availability or policies. General China travel knowledge is fine when it is stable and well known; mark anything time-sensitive as "check".
 - When asked to write something for the traveller (a message, a day plan for WeChat), write it ready to send in a warm, natural concierge voice, in their language.
 - Older images are not included; if the answer depends on one, say which message it was in.`;
@@ -70,7 +72,17 @@ export async function askTrip(peer: string, question: string, history: AskTurn[]
     });
     if (result.status !== "completed" || !result.output_text.trim())
       throw new InboxError("The assistant did not finish. Please ask again.", 502);
-    return { answer: result.output_text.trim() };
+    const answer = result.output_text.trim();
+    // The messages the answer cites, so the team can read them in full.
+    const sources = Object.fromEntries(
+      [...new Set([...answer.matchAll(/#(\d+)/g)].map((m) => Number(m[1])))].flatMap((n) => {
+        const m = history_.messages[n - 1];
+        return m
+          ? [[String(n), { role: m.direction === "inbound" ? "customer" : "team", time: m.sent_at, text: m.text.slice(0, 1200) }]]
+          : [];
+      }),
+    );
+    return { answer, sources };
   } catch (error) {
     if (error instanceof OpenAI.APIError)
       throw new InboxError(

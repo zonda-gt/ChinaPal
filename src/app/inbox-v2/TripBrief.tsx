@@ -9,6 +9,7 @@ import {
   Lightbulb,
   Loader2,
   MapPin,
+  MessageCircleQuestion,
   Pencil,
   Plus,
   RefreshCw,
@@ -91,7 +92,8 @@ export default function TripBrief(props: Props) {
     [draftText, setDraftText] = useState(""),
     [openSources, setOpenSources] = useState<string | null>(null),
     [notes, setNotes] = useState(props.notes),
-    [notesState, setNotesState] = useState<"" | "saving" | "saved">("");
+    [notesState, setNotesState] = useState<"" | "saving" | "saved">(""),
+    [askOpen, setAskOpen] = useState(false);
   const request = useRef(0);
   const notesTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
   const load = useCallback(async () => {
@@ -344,14 +346,12 @@ export default function TripBrief(props: Props) {
 
       <div className={v.generateRow}>
         <button
-          className={v.askJump}
-          onClick={() => {
-            const box = document.querySelector<HTMLTextAreaElement>("[aria-label='Ask about this trip']");
-            box?.scrollIntoView({ block: "center" });
-            box?.focus();
-          }}
+          className={`${v.askJump} ${askOpen ? v.askJumpOn : ""}`}
+          aria-expanded={askOpen}
+          aria-controls="trip-ask"
+          onClick={() => setAskOpen(!askOpen)}
         >
-          Ask AI
+          <MessageCircleQuestion size={14} /> Ask AI
         </button>
         <button className={v.generate} onClick={() => void generate()} disabled={generating || loading || !coverage?.count}>
           {generating ? <Loader2 size={14} className={v.spin} /> : brief ? <RefreshCw size={14} /> : <Sparkles size={14} />}
@@ -366,6 +366,9 @@ export default function TripBrief(props: Props) {
                 ? `${coverage.count} messages to read`
                 : "Open the chat to load messages first"}
         </span>
+      </div>
+      <div id="trip-ask" hidden={!askOpen}>
+        <TripAsk peer={peer} onUse={props.onAddToReply} onShowSource={props.onShowSource} />
       </div>
       {data?.stale && !generating && (
         <p className={v.stale}>New messages or edits since this brief. Update it when you need the latest picture.</p>
@@ -639,8 +642,6 @@ export default function TripBrief(props: Props) {
           })}
         </>
       )}
-
-      <TripAsk peer={peer} onUse={props.onAddToReply} />
 
       <section className={v.briefSection}>
         <header>
