@@ -5,6 +5,12 @@ API with Instagram Login, a dedicated Supabase database, and OpenAI Responses
 for draft generation. Replies require explicit human approval. Nothing sends
 when syncing messages, generating drafts, saving edits, or receiving webhooks.
 
+`/inbox` shows the current design (code in `src/app/inbox-v2/`), with the trip
+brief (`src/lib/inbox/brief.ts`, table `inbox_briefs`) and the team-only trip
+assistant (`src/lib/inbox/ask.ts`). The previous design stays at `/inbox-old` as a
+temporary fallback, and `/inbox-v2` redirects to `/inbox`. Analytics never load on
+any `/inbox…` page (`src/lib/private-pages.ts`).
+
 ## Server configuration
 
 Set these in `.env.local` locally and Vercel Production before deploying:
