@@ -1,5 +1,6 @@
 // Build a blind side-by-side review page from an evaluation run.
-// Usage: npx tsx scripts/inbox-eval/review.ts data/eval/results/<file>.json [--labelled]
+// Usage: npx tsx scripts/inbox-eval/review.ts data/eval/results/<file>.json[,more.json] [--labelled]
+//   [--cases data/eval/cases.json,more.json] [--variants baseline,v2,v2-facts] [--out review.html]
 // --labelled shows which version wrote each reply (data/eval/review-labelled.html).
 // Writes data/eval/review.html: a self-contained local page (contains customer
 // messages, so it is never published). Ratings are kept in the browser and can
@@ -16,10 +17,25 @@ async function main() {
   type Result = { case: string; variant: string; run: number; messages?: string[]; warnings?: string[]; error?: string };
   const resultsFile = process.argv[2];
   const labelled = process.argv.includes("--labelled");
-  const NAMES: Record<string, string> = { baseline: "V1 (current)", v2: "V2", "v2-facts": "V2 + staff facts", staff: "Actual message sent" };
+  const arg = (name: string, fallback: string) => {
+    const i = process.argv.indexOf(`--${name}`);
+    return i > 0 ? process.argv[i + 1] : fallback;
+  };
+  const NAMES: Record<string, string> = {
+    baseline: "V1 (current)",
+    v2: "V2 (GPT)",
+    "v2-facts": "V2 + staff facts",
+    sonnet: "Claude Sonnet 5.5",
+    opus: "Claude Opus 5.5",
+    "claude-session": "Claude (this session)",
+    staff: "Actual message sent",
+  };
   if (!resultsFile) throw new Error("Pass the results file to review.");
-  const cases: Case[] = JSON.parse(await readFile(join(DIR, "cases.json"), "utf8"));
-  const results: Result[] = JSON.parse(await readFile(resultsFile, "utf8"));
+  const readAll = async <T>(files: string) =>
+    (await Promise.all(files.split(",").map(async (f) => JSON.parse(await readFile(f, "utf8")) as T[]))).flat();
+  const cases = await readAll<Case>(arg("cases", join(DIR, "cases.json")));
+  const results = await readAll<Result>(resultsFile);
+  const variants = arg("variants", "baseline,v2,v2-facts").split(",");
   const esc = (t: string) =>
     t.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]!);
   const when = (iso: string) =>
@@ -64,7 +80,7 @@ async function main() {
   const sections: string[] = [];
   for (const c of cases) {
     const options: { key: string; messages: string[]; warnings: string[] }[] = [];
-    for (const variant of ["baseline", "v2", "v2-facts"]) {
+    for (const variant of variants) {
       const r = results.find((x) => x.case === c.id && x.variant === variant && x.run === 1 && x.messages);
       if (r) options.push({ key: variant, messages: r.messages!, warnings: r.warnings ?? [] });
     }
@@ -93,7 +109,7 @@ async function main() {
     <p class="tests">${esc(c.tests)}</p>
     ${earlier.length ? `<details class="earlier"><summary>Earlier conversation (${earlier.length} messages)</summary>${earlier.join("")}</details>` : ""}
     <div class="thread">${recent.join("")}</div>
-    ${c.staff_facts ? `<p class="facts"><b>Staff facts given to the "with facts" version:</b> ${esc(c.staff_facts)}</p>` : ""}
+    ${c.staff_facts && variants.includes("v2-facts") ? `<p class="facts"><b>Staff facts given to the "with facts" version:</b> ${esc(c.staff_facts)}</p>` : ""}
     <div class="options">${cards}</div>
     <textarea class="note" placeholder="Notes on this case (optional)"></textarea>
   </section>`);
@@ -149,7 +165,7 @@ async function main() {
    const el=document.getElementById("score");el.innerHTML=h+"</table>";el.style.display="block";el.scrollIntoView()};
   progress();
   </script></body></html>`;
-  const out = labelled ? "review-labelled.html" : "review.html";
+  const out = arg("out", labelled ? "review-labelled.html" : "review.html");
   await writeFile(join(DIR, out), html);
   console.log(`Wrote ${DIR}/${out} (${Object.keys(mapping).length} cases)`);
 }
