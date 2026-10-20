@@ -11,7 +11,27 @@ const SCHEMA = {
   ...DRAFT_SCHEMA,
   properties: { ...DRAFT_SCHEMA.properties, messages: { type: "array", items: { type: "string" } } },
 };
-const IMAGE_TYPES = ["image/jpeg", "image/png", "image/gif", "image/webp"] as const;
+// Claude takes up to 5 MB per image after base64; larger images are left out with a warning.
+const MAX_IMAGE_BYTES = 3_700_000;
+
+/** Claude checks the declared type against the bytes, and Instagram often labels PNGs as JPEG. */
+function claudeImage(dataUrl: string) {
+  const [, data] = dataUrl.match(/^data:[^;]+;base64,(.*)$/) ?? [];
+  if (!data) return null;
+  const bytes = Buffer.from(data, "base64");
+  if (bytes.length > MAX_IMAGE_BYTES) return null;
+  const hex = bytes.subarray(0, 12).toString("hex");
+  const media_type = hex.startsWith("ffd8ff")
+    ? "image/jpeg"
+    : hex.startsWith("89504e47")
+      ? "image/png"
+      : hex.startsWith("47494638")
+        ? "image/gif"
+        : hex.startsWith("52494646") && hex.slice(16) === "57454250"
+          ? "image/webp"
+          : null;
+  return media_type ? ({ media_type, data: bytes.toString("base64") } as const) : null;
+}
 
 export async function runClaudeDraft(
   client: Anthropic,
@@ -27,9 +47,8 @@ export async function runClaudeDraft(
   for (const part of images.content) {
     if (part.type === "input_text") content.push({ type: "text", text: part.text });
     if (part.type !== "input_image" || !part.image_url) continue;
-    const [, type, data] = part.image_url.match(/^data:([^;]+);base64,(.*)$/) ?? [];
-    const media = IMAGE_TYPES.find((t) => t === type);
-    if (media) content.push({ type: "image", source: { type: "base64", media_type: media, data } });
+    const image = claudeImage(part.image_url);
+    if (image) content.push({ type: "image", source: { type: "base64", ...image } });
     else images.warnings.push("An image could not be read. Review it in Instagram or refresh the conversation.");
   }
   const started = Date.now();

@@ -9,6 +9,7 @@ import { join } from "node:path";
 import { config } from "dotenv";
 import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
+import sharp from "sharp";
 import { runClaudeDraft } from "../../src/lib/inbox/draft-claude";
 import { runDraft, type LoadImage } from "../../src/lib/inbox/draft-core";
 import type { PromptContext } from "../../src/lib/inbox/prompt";
@@ -36,6 +37,13 @@ async function main() {
     bytes: await readFile(join(DIR, url)),
     type: (await readFile(join(DIR, `${url}.type`), "utf8")).trim(),
   });
+  // Claude rejects images over 5 MB and scales large ones to about 1568 px anyway.
+  const loadClaudeImage: LoadImage = async (url) => {
+    const image = await loadImage(url);
+    if (image.bytes.length < 3_500_000) return image;
+    const bytes = await sharp(image.bytes).resize({ width: 1568, height: 1568, fit: "inside" }).jpeg().toBuffer();
+    return { bytes, type: "image/jpeg" };
+  };
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 2, timeout: 180000 });
   const claude = new Anthropic({
     apiKey: process.env.ANTHROPIC_API_KEY,
@@ -63,7 +71,7 @@ async function main() {
           variant === "baseline"
             ? await runBaseline(client, c.context, loadImage)
             : CLAUDE[variant]
-              ? await runClaudeDraft(claude, c.context, loadImage, { model: CLAUDE[variant] })
+              ? await runClaudeDraft(claude, c.context, loadClaudeImage, { model: CLAUDE[variant] })
               : await runDraft(
                 client,
                 { ...c.context, staffFacts: variant === "v2-facts" ? c.staff_facts : undefined },
