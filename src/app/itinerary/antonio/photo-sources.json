@@ -24,30 +24,6 @@
     "downloadedOn": "2026-10-16"
   },
   {
-    "id": "xiandelai",
-    "url": "https://www.meet-in-shanghai.net/static//upload/mainpic/20200115153438_665204297.jpg",
-    "source": "https://www.meet-in-shanghai.net/cn/food/fresh-pork-ribs-rice-cake-yunnan-south-road-store-772278/",
-    "title": "Xiandelai pork chop and rice cakes",
-    "path": "/uploads/itinerary/antonio/xiandelai.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "rokid",
-    "url": "https://global.rokid.com/cdn/shop/files/001_8c854eae-1297-4a66-a5bc-808f5e127dfc.jpg?width=1000",
-    "source": "https://global.rokid.com/collections/glasses",
-    "title": "Rokid Glasses with display, official product photograph",
-    "path": "/uploads/itinerary/antonio/rokid.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "rokid-2",
-    "url": "https://global.rokid.com/cdn/shop/files/004.png?width=1000",
-    "source": "https://global.rokid.com/collections/glasses",
-    "title": "Rokid Glasses with display, official product photograph",
-    "path": "/uploads/itinerary/antonio/rokid-2.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
     "id": "crab-noodles",
     "url": "https://imagepphcloud.thepaper.cn/pph/image/283/179/186.jpg",
     "source": "https://www.thepaper.cn/newsDetail_forward_25714430",
@@ -100,48 +76,57 @@
     "downloadedOn": "2026-10-16"
   },
   {
-    "id": "grandmother",
-    "url": "https://assets.st-note.com/production/uploads/images/205396861/picture_pc_c6923ef53104335435f83879bdc23b6e.jpg",
-    "source": "https://note.com/tomulya/n/nc7aa7f5c8d03",
-    "title": "Shanghai Grandmother, 70 Fuzhou Road entrance",
-    "path": "/uploads/itinerary/antonio/grandmother.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "grandmother-2",
-    "url": "https://ak-d.tripcdn.com/images/1mi602215gt1bbro00D2B.jpg?proc=source%2Ftrip",
-    "source": "https://www.trip.com/moments/theme/poi-shanghai-grandmother-restaurant-13622469-restaurant-993134/",
-    "title": "Shanghai Grandmother dining room",
-    "path": "/uploads/itinerary/antonio/grandmother-2.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "dexing",
-    "url": "https://www.meet-in-shanghai.net/static//upload/place/main_20170717102656_215976002.jpg",
-    "source": "https://www.meet-in-shanghai.net/cn/food/dexing-hall-guangdong-road-main-store-946409/",
-    "title": "De Xing Guan, Guangdong Road",
-    "path": "/uploads/itinerary/antonio/dexing.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "dexing-2",
-    "url": "https://www.meet-in-shanghai.net/static//upload/place/md1_20170717102656_1304270202.jpg",
-    "source": "https://www.meet-in-shanghai.net/cn/food/dexing-hall-guangdong-road-main-store-946409/",
-    "title": "De Xing Guan, Guangdong Road second photograph",
-    "path": "/uploads/itinerary/antonio/dexing-2.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
-    "id": "sinan-2",
-    "url": "https://images.smartshanghai.com.cn/uploads/repository/2022/01/11/c684490d-7dec-43be-b83f-88f4f1809622.jpg",
-    "source": "https://www.smartshanghai.com/venue/7112/sinan_mansions_fuxing_zhong_lu",
-    "title": "Sinan Mansions pedestrian street",
-    "path": "/uploads/itinerary/antonio/sinan-2.webp",
-    "downloadedOn": "2026-10-16"
-  },
-  {
     "path": "/uploads/itinerary/xhs/bund.webp",
     "reusedFrom": "src/app/itinerary/xhs",
     "note": "Different Bund view from the hero photograph."
+  },
+  {
+    "id": "coffee-1",
+    "url": "https://www.starbucks.com.cn/design-studio/images/08-Sinan/small/1.jpg",
+    "source": "https://www.starbucks.com.cn/design-studio/stores/sinan/",
+    "title": "Starbucks Reserve Sinan Mansions, exterior",
+    "path": "/uploads/itinerary/antonio/coffee-1.webp",
+    "downloadedOn": "2026-10-20"
+  },
+  {
+    "id": "coffee-2",
+    "url": "https://www.starbucks.com.cn/design-studio/images/08-Sinan/small/2.jpg",
+    "source": "https://www.starbucks.com.cn/design-studio/stores/sinan/",
+    "title": "Starbucks Reserve Sinan Mansions, interior",
+    "path": "/uploads/itinerary/antonio/coffee-2.webp",
+    "downloadedOn": "2026-10-20"
+  },
+  {
+    "id": "laozhengxing-exterior",
+    "url": "https://prod-pics.guide.michelin.com/api/public/content/f0a28876a89b4c77bcc25544560aa668.jpeg?format=webp&h=500&w=500",
+    "source": "https://guide.michelin.com/ae-az/en/shanghai-municipality/shanghai/restaurant/lao-zheng-xing-huangpu",
+    "title": "Lao Zheng Xing, 556 Fuzhou Road exterior",
+    "path": "/uploads/itinerary/antonio/laozhengxing-exterior.webp",
+    "downloadedOn": "2026-10-20"
+  },
+  {
+    "id": "fuxing-park",
+    "url": "https://afar.brightspotcdn.com/dims4/default/29cb989/2147483647/strip/false/crop/800x450%2B0%2B25/resize/1200x675%21/quality/90/?url=https%3A%2F%2Fk3-prod-afar-media.s3.us-west-2.amazonaws.com%2Fbrightspot%2Fe6%2F42%2Fb2027595ae3bdd249c1efaba389d%2Foriginal-497054f388931c314fc745e3942cb218.jpg",
+    "source": "https://www.afar.com/places/fuxing-park-shanghai",
+    "title": "Fuxing Park",
+    "credit": "AFAR",
+    "path": "/uploads/itinerary/vivek/fuxing-park.webp",
+    "reusedFrom": "src/app/itinerary/vivek"
+  },
+  {
+    "id": "xintiandi-1",
+    "url": "https://english.shanghai.gov.cn/cmsres/12/120fc00e34a5497a851d38b00eafe44b/885b5bb8a62d7ea3d77aa8874cec8e88.jpg",
+    "source": "https://english.shanghai.gov.cn/en-HeritageZones/20240104/292e9fb43eec407783af83e547e61281.html",
+    "title": "Shanghai Xintiandi Shikumen Block, aerial view",
+    "path": "/uploads/itinerary/antonio/xintiandi-1.webp",
+    "downloadedOn": "2026-10-20"
+  },
+  {
+    "id": "xintiandi-2",
+    "url": "https://english.shanghai.gov.cn/cmsres/f9/f949e88b538b41cab232cd7c33044ffa/0bac699d5ba7023ea8c012860174d4df.jpg",
+    "source": "https://english.shanghai.gov.cn/en-SpecialtyShoppingAreas/20231207/521159f5af35430ab1641004f5c68d03.html",
+    "title": "Shanghai Xintiandi shikumen square",
+    "path": "/uploads/itinerary/antonio/xintiandi-2.webp",
+    "downloadedOn": "2026-10-20"
   }
 ]
