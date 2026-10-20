@@ -96,19 +96,10 @@
 
 .welcome { max-width:1104px; margin:28px auto 0; color:#796f69; font-size:13px; line-height:1.9; }
 .welcome strong { color:#52725c; }
-.rokidSection { max-width:1200px; margin:0 auto; padding:36px 48px 50px; display:grid; grid-template-columns:1fr 1.2fr; gap:40px; align-items:start; scroll-margin-top:85px; }
-.rokidSection h2 { font-size:32px; line-height:1.2; margin:0 0 18px; }
-.rokidSection p { font-size:12px; line-height:1.8; color:#796f69; }
-.rokidSection .eyebrow { color:#a13d49; font-size:10px; }
-.rokidSection ul { list-style:none; margin:18px 0; padding:0; }
-.rokidSection li { display:flex; gap:12px; border-bottom:1px solid #e1dbd4; padding:11px 0; font-size:12px; line-height:1.7; }
-.rokidSection li svg { flex-shrink:0; margin-top:3px; color:#a13d49; }
-.rokidPhotos { display:grid; grid-template-columns:1fr 1fr; gap:8px; }
-.rokidPhotos img { width:100%; aspect-ratio:4/5; object-fit:contain; border-radius:14px; background:white; }
-.rokidPhotos p { grid-column:1/-1; font-size:10px; }
+.serviceSection { max-width:1200px; margin:0 auto; padding:36px 48px 50px; display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:start; scroll-margin-top:85px; }
+.serviceSection h2 { font-size:30px; line-height:1.2; margin:0 0 18px; }
+.serviceSection p { font-size:12px; line-height:1.8; color:#796f69; }
+.serviceSection .eyebrow { color:#a13d49; font-size:10px; }
 .price { background:#eee8e1; border-radius:10px; padding:14px 18px; }
 @media(max-width:1199px) { .welcome { margin-left:48px; margin-right:48px; } }
-@media(max-width:760px) { .welcome { margin:22px 20px 0; font-size:12px; } .rokidSection { grid-template-columns:1fr; padding:24px 20px 35px; gap:20px; } .rokidSection h2 { font-size:27px; } .rokidPhotos img { aspect-ratio:4/3; } .stay { grid-template-columns:35% 1fr; } .flight strong { font-size:20px; } }
-
-/* Keep product photos in the itinerary card; the checklist is text only. */
-.rokidSection { grid-template-columns:1fr; max-width:800px; }
+@media(max-width:760px) { .welcome { margin:22px 20px 0; font-size:12px; } .serviceSection { grid-template-columns:1fr; padding:24px 20px 35px; gap:20px; } .serviceSection h2 { font-size:27px; } .stay { grid-template-columns:35% 1fr; } .flight strong { font-size:20px; } }

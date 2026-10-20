@@ -360,6 +360,8 @@
   display: none !important;
 }
 .messages {
+  scroll-behavior: auto;
+  overflow-anchor: none;
   flex: 1;
   overflow: auto;
   padding: 12px 22px 20px;
