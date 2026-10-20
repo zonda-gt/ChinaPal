@@ -3,13 +3,14 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, Suspense } from "react";
 import posthog from "posthog-js";
+import { isPrivatePath } from "@/lib/private-pages";
 
 function PageViewTracker() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname && pathname !== "/inbox" && !pathname.startsWith("/inbox/")) {
+    if (pathname && !isPrivatePath(pathname)) {
       let url = window.origin + pathname;
       if (searchParams.toString()) {
         url = url + "?" + searchParams.toString();

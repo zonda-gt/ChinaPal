@@ -4,6 +4,7 @@ import posthog from "posthog-js";
 import { PostHogProvider as PHProvider } from "posthog-js/react";
 import { useEffect, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
+import { isPrivatePath } from "@/lib/private-pages";
 
 const subscribe = () => () => {};
 const publicAnalyticsLoaded = () =>
@@ -12,7 +13,7 @@ const publicAnalyticsLoaded = () =>
 
 export function PostHogProvider({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const privatePage = pathname === "/inbox" || pathname.startsWith("/inbox/");
+  const privatePage = isPrivatePath(pathname);
   const safeToRender = useSyncExternalStore(
     subscribe,
     () => !publicAnalyticsLoaded(),

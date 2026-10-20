@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
   // Clean URLs for the Google Ads landing pages (static files in /public).
   // /landing-chat  ->  /public/landing-chat.html  (static files are matched
   // before this afterFiles rewrite, so /landing-chat.html still works too).
+  // The inbox redesign moved from its preview address to /inbox.
+  async redirects() {
+    return [{ source: "/inbox-v2", destination: "/inbox", permanent: false }];
+  },
   async rewrites() {
     return [
       { source: "/landing-chat", destination: "/landing-chat.html" },
