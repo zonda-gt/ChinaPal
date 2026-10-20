@@ -60,14 +60,16 @@ export async function listConversations() {
   // One indexed, bounded child lookup per conversation in the same DB request.
   const { data, error } = await db()
     .from("inbox_conversations")
-    .select("*, latest:inbox_messages(text,direction,deleted,attachments)")
+    .select("*, latest:inbox_messages(text,direction,deleted,attachments), drafts:inbox_drafts(id)")
     .order("last_message_at", { ascending: false, nullsFirst: false })
     .order("sent_at", { referencedTable: "latest", ascending: false })
     .order("id", { referencedTable: "latest", ascending: false })
     .limit(1, { referencedTable: "latest" })
+    .eq("drafts.status", "draft")
+    .limit(1, { referencedTable: "drafts" })
     .limit(500);
   checked(error);
-  return (data || []).map(({ latest, ...conversation }) => {
+  return (data || []).map(({ latest, drafts, ...conversation }) => {
     const message = latest?.[0];
     const attachment = message?.attachments?.[0]?.type;
     const preview = !message
@@ -88,6 +90,7 @@ export async function listConversations() {
       ...conversation,
       last_preview: preview.replace(/\s+/g, " ").slice(0, 180),
       last_direction: message?.direction,
+      has_draft: !!drafts?.length,
     } as Conversation;
   });
 }

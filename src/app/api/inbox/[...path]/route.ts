@@ -1,4 +1,5 @@
 import { getTravelProfile, generateTravelProfile } from "@/lib/inbox/profile";
+import { editBrief, generateBrief, getBrief } from "@/lib/inbox/brief";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -112,6 +113,20 @@ async function handler(
       const operation = path[2];
       if (method === "POST" && operation === "identity")
         return json(await contactIdentity(peer));
+      if (method === "GET" && operation === "brief")
+        return json(await getBrief(peer));
+      if (method === "POST" && operation === "brief" && path[3] === "edit")
+        return json(
+          await editBrief(peer, staff, {
+            remove: body.remove === undefined ? undefined : str(body.remove, 100),
+            section: body.section,
+            action: body.action,
+            text: body.text,
+            target: body.target,
+          }),
+        );
+      if (method === "POST" && operation === "brief" && !path[3])
+        return json(await generateBrief(peer));
       if (method === "GET" && operation === "profile")
         return json(await getTravelProfile(peer));
       if (method === "POST" && operation === "profile")

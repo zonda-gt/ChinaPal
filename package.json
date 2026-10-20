@@ -15,7 +15,7 @@
     "ingest:geocode": "tsx scripts/ingest/05-geocode.ts",
     "ingest:check": "tsx scripts/ingest/06-quality-check.ts",
     "ingest:all": "tsx scripts/ingest/run-all.ts",
-    "test:inbox": "node --import tsx --test src/lib/inbox/policy.test.ts src/lib/inbox/prompt.test.ts src/lib/instagram/webhook.test.ts scripts/inbox-database.test.mjs"
+    "test:inbox": "node --import tsx --test src/lib/inbox/policy.test.ts src/lib/inbox/prompt.test.ts src/lib/inbox/brief-data.test.ts src/lib/instagram/webhook.test.ts scripts/inbox-database.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",

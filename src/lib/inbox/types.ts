@@ -22,6 +22,7 @@ export type Conversation = {
   synced_at: string | null;
   last_preview?: string;
   last_direction?: string;
+  has_draft?: boolean;
   sending_draft_id: string | null;
 };
 export type Message = {

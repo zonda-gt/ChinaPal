@@ -14,6 +14,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       "202610160001_inbox.sql",
       "202610160002_inbox_profiles.sql",
       "202610190001_inbox_reply_assistant_v2.sql",
+      "202610200001_inbox_briefs.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -146,6 +147,18 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       )
     ).rows[0];
     assert.deepEqual(generationSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
+    const briefSecurity = (
+      await pg.query(
+        "select relrowsecurity as rls, has_table_privilege('anon','inbox_briefs','select') as anon_read, has_table_privilege('authenticated','inbox_briefs','select') as user_read, has_table_privilege('service_role','inbox_briefs','insert') as server_write from pg_class where oid='public.inbox_briefs'::regclass",
+      )
+    ).rows[0];
+    assert.deepEqual(briefSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
+    await pg.exec("insert into inbox_briefs(peer_id) values('123')");
+    assert.deepEqual(
+      (await pg.query("select edits from inbox_briefs where peer_id='123'")).rows[0],
+      { edits: [] },
+      "A conversation can hold team edits before any AI brief exists",
+    );
     assert.deepEqual(
       (await pg.query("select parts,staff_facts from inbox_drafts where id=$1", [old])).rows[0],
       { parts: [], staff_facts: "" },
