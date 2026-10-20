@@ -1,7 +1,8 @@
 // Build a labelled document of every reply in a model comparison, with the
 // conversation before it, the team's actual reply and (optionally) ratings.
 // Usage: npx tsx scripts/inbox-eval/document.ts --results a.json,b.json --cases a.json,b.json
-//   --operator data/eval/operator-replies.json [--ratings dir --map judge-map.json] [--out models.html]
+//   --operator data/eval/operator-replies.json [--ratings dir --map judge-map.json] [--notes notes.html]
+//   [--out models.html]
 // Writes a self-contained local page under data/eval/ (contains customer messages, never published).
 import { readFile, readdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -134,9 +135,11 @@ async function main() {
     .join("")}</table></div></section>`
     : "";
 
+  const notesFile = arg("notes");
+  const notes = notesFile ? `<section class="card notes">${await readFile(notesFile, "utf8")}</section>` : "";
   const sections: string[] = [];
   for (const c of cases) {
-    const replies: { key: string; messages: string[] }[] = [];
+    const replies: { key: string; messages: string[]; times?: string[] }[] = [];
     for (const [variant, run, key] of [
       ["v2", 1, "gpt-1"],
       ["v2", 2, "gpt-2"],
@@ -152,16 +155,17 @@ async function main() {
       replies.push({
         key: "operator",
         messages: op.map((m) => [m.text, ...m.attachments.map((a) => `[${a} sent]`)].filter(Boolean).join("\n")),
+        times: op.map((m) => (m.sent_at ? when(m.sent_at) : "")),
       });
     const msgs = c.context.messages;
     const recent = await Promise.all(msgs.slice(-12).map(messageHtml));
     const earlier = msgs.length > 12 ? await Promise.all(msgs.slice(0, -12).map(messageHtml)) : [];
     const cards = replies
-      .map(({ key, messages }) => {
+      .map(({ key, messages, times }) => {
         const r = ratings[c.id]?.[key];
         return `<article class="reply ${GROUP(key)}${r?.best ? " best" : ""}">
       <header><b>${SOURCES[key]}</b>${r ? `<span class="score">${r.score}/10${r.best ? " · best" : ""}</span>` : ""}</header>
-      ${messages.map((t, i) => `<div class="bubble"><small>Message ${i + 1}</small>${lines(t)}</div>`).join("")}
+      ${messages.map((t, i) => `<div class="bubble"><small>Message ${i + 1}${times?.[i] ? ` · ${times[i]}` : ""}</small>${lines(t)}</div>`).join("")}
       ${r ? `<p class="note">${r.flags.length ? `<span class="flags">${r.flags.map(esc).join(" · ")}</span> ` : ""}${esc(r.note)}</p>` : ""}
     </article>`;
       })
@@ -202,6 +206,7 @@ async function main() {
   <h1>Reply model comparison</h1>
   <p>${cases.length} real moments from ChinaPal's Instagram inbox. For each one: the conversation up to that point, then every draft (GPT V2.1 twice, Claude Sonnet 5.5 twice, Claude in this session once) and what the operator actually sent, including every message in that reply.</p>
   <nav>${cases.map((c) => `<a href="#${c.id}">${c.id}</a>`).join("")}</nav>
+  ${notes}
   ${scorecard}
   ${sections.join("\n")}
   </main></body></html>`;
