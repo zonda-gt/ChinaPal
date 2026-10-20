@@ -15,6 +15,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       "202610160002_inbox_profiles.sql",
       "202610190001_inbox_reply_assistant_v2.sql",
       "202610200001_inbox_briefs.sql",
+      "202610210001_inbox_image_notes.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -153,6 +154,12 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       )
     ).rows[0];
     assert.deepEqual(briefSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
+    const noteSecurity = (
+      await pg.query(
+        "select relrowsecurity as rls, has_table_privilege('anon','inbox_image_notes','select') as anon_read, has_table_privilege('authenticated','inbox_image_notes','select') as user_read, has_table_privilege('service_role','inbox_image_notes','insert') as server_write from pg_class where oid='public.inbox_image_notes'::regclass",
+      )
+    ).rows[0];
+    assert.deepEqual(noteSecurity, { rls: true, anon_read: false, user_read: false, server_write: true });
     await pg.exec("insert into inbox_briefs(peer_id) values('123')");
     assert.deepEqual(
       (await pg.query("select edits from inbox_briefs where peer_id='123'")).rows[0],

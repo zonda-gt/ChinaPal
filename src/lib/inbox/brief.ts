@@ -15,6 +15,7 @@ import {
   type SavedBrief,
 } from "./brief-data";
 import { readBrief, writeBrief } from "./brief-store";
+import { textWithNotes, withImageNotes } from "./image-note-store";
 
 const BRIEF_SYSTEM = `You prepare a trip brief for a ChinaPal team member from ONE Instagram conversation with a traveller. ChinaPal is a small Shanghai team that plans China trips online: itineraries, train/flight/hotel/restaurant/attraction bookings, guides and drivers, and support during the trip. The brief must let the team member understand in seconds who this is, what the trip is, what the person wants from us, and what is waiting on whom. It is a working brief, not a reply or a sales pitch.
 
@@ -43,9 +44,11 @@ Rules: every fact cites 1 to 3 source message numbers. certainty: confirmed = th
 
 Team inputs: team_notes and team_facts are written by ChinaPal staff and can be treated as true, but they are not message sources. team_corrections are edits staff made to an earlier brief: "set" items are true and must not be contradicted or repeated; "hide" items were wrong or unwanted, so do not include them again.`;
 
-async function snapshot(peer: string) {
+async function snapshot(peer: string, client?: OpenAI) {
   const { conversation, messages, drafts } = await threadData(peer, 1000);
-  const history = selectProfileHistory(messages, conversation.history_complete);
+  // Image notes become part of the text the brief reads; new ones only when building.
+  const noted = (await withImageNotes(peer, messages, client)).map((m) => ({ ...m, text: textWithNotes(m) }));
+  const history = selectProfileHistory(noted, conversation.history_complete);
   const facts = drafts
     .map((d) => d.staff_facts?.trim())
     .filter(Boolean)
@@ -83,10 +86,10 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
     throw new InboxError("Trip briefs need OPENAI_API_KEY on the server.", 503);
   await lease(`brief:${peer}`, 150);
   try {
-    const [current, saved] = await Promise.all([snapshot(peer), readBrief(peer)]);
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
+    const [current, saved] = await Promise.all([snapshot(peer, client), readBrief(peer)]);
     if (!current.messages.length)
       throw new InboxError("Load this conversation's messages before building a brief.");
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
     let result;
     try {
       result = await client.responses.create({

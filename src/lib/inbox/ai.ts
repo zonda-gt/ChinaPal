@@ -7,6 +7,7 @@ import { lease, release, saveDraft, threadData } from "./service";
 import { readProfile } from "./profile-store";
 import { contactIdentity } from "./contacts";
 import { runDraft } from "./draft-core";
+import { withImageNotes } from "./image-note-store";
 import { InboxError, type Staff } from "./types";
 
 // Loads the live conversation, runs the shared draft generator (draft-core.ts,
@@ -37,6 +38,8 @@ export async function generateDraft(
       maxRetries: 0,
       timeout: 110000,
     });
+    // Every image is described once and reused, so the draft can use all of them.
+    const noted = await withImageNotes(peer, messages, client);
     const result = await runDraft(
       client,
       {
@@ -46,7 +49,7 @@ export async function generateDraft(
         stage: conversation.stage,
         notes: conversation.notes,
         historyComplete: conversation.history_complete,
-        messages,
+        messages: noted,
         profile: profile ? { profile: profile.profile, generated_at: profile.generated_at } : null,
         staffFacts: input.staffFacts,
         instruction: input.instruction,

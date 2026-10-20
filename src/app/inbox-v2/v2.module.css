@@ -1173,3 +1173,28 @@ main.layout {
   padding: 0 2px;
   white-space: nowrap;
 }
+
+/* Image notes under chat images */
+.imageWrap {
+  display: block;
+}
+.imageNote {
+  max-width: 260px;
+  margin: 2px 0 4px;
+  font-size: 11.5px;
+}
+.imageNote summary {
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.75;
+  font-size: 11px;
+}
+.imageNote p {
+  margin: 4px 0 0;
+  padding: 6px 8px;
+  border-radius: 8px;
+  background: #ffffffd9;
+  color: #3a4a58;
+  white-space: pre-wrap;
+  line-height: 1.45;
+}
