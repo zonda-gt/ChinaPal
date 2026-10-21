@@ -1821,3 +1821,105 @@ main.layout {
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+/* Plan chat */
+.planChat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: #faf6ff;
+  border: 1px solid #e2d4f7;
+  border-radius: 10px;
+  padding: 10px;
+}
+.planChat h4 {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #6b2fc4;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.planChatLog {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.planChatLog li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  font-size: 12px;
+  line-height: 1.45;
+  border-radius: 10px;
+  padding: 6px 9px;
+  max-width: 92%;
+}
+.planChatLog small {
+  font-size: 10px;
+  color: #8a97a3;
+}
+.chatTeam {
+  align-self: flex-end;
+  background: #fff;
+  border: 1px solid #e2d4f7;
+  color: var(--ink);
+}
+.chatAi {
+  align-self: flex-start;
+  background: #efe6fc;
+  color: #3a2a5c;
+}
+.planChatForm {
+  display: flex;
+  gap: 6px;
+  align-items: flex-end;
+}
+.planChatForm textarea {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 12.5px;
+  padding: 7px 9px;
+  border: 1px solid #cdb8ef;
+  border-radius: 8px;
+  resize: vertical;
+  background: #fff;
+}
+.layout .planChatForm .generate {
+  padding: 8px 10px;
+}
+.planChatFoot {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 10.5px;
+  color: #8a97a3;
+  line-height: 1.4;
+}
+.updatedTag {
+  font-style: normal;
+  font-size: 9.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0 5px;
+  margin-left: 5px;
+  vertical-align: 1px;
+  background: #8338ec;
+  color: #fff;
+  white-space: nowrap;
+}
+.stopUpdated {
+  border-left-color: #8338ec;
+  background: #faf6ff;
+  border-radius: 0 8px 8px 0;
+}

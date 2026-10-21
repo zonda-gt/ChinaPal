@@ -13,9 +13,12 @@ import {
   Loader2,
   Map as MapIcon,
   Maximize2,
+  MessageSquare,
   RefreshCw,
+  Send,
   Sparkles,
   TrainFront,
+  Undo2,
   X,
 } from "lucide-react";
 import { BOOKING_LABELS, cleanText, type PlanItem, type SavedPlan, type TripPlan as Plan } from "@/lib/inbox/plan-data";
@@ -58,7 +61,7 @@ function splitDetail(detail: string) {
 }
 
 /** One readable day-by-day plan: short rows, details on tap. */
-function PlanView({ plan, wide }: { plan: Plan; wide: boolean }) {
+function PlanView({ plan, wide, changed }: { plan: Plan; wide: boolean; changed: Set<string> }) {
   const [open, setOpen] = useState<Set<string>>(new Set()),
     [closedDays, setClosedDays] = useState<Set<number>>(new Set()),
     [copied, setCopied] = useState<string | null>(null),
@@ -89,7 +92,7 @@ function PlanView({ plan, wide }: { plan: Plan; wide: boolean }) {
     const chinese = [item.place_cn, item.address_cn].filter(Boolean).join(" · ");
     const hasMore = !!(rest || chinese || item.getting_there || item.cost || item.verify || item.source);
     return (
-      <li key={id} className={`${v.stopRow} ${item.kind === "fixed" ? v.stopFixed : ""} ${item.kind === "option" ? v.stopOption : ""}`}>
+      <li key={id} className={`${v.stopRow} ${item.kind === "fixed" ? v.stopFixed : ""} ${item.kind === "option" ? v.stopOption : ""} ${changed.has(id) ? v.stopUpdated : ""}`}>
         <span className={v.stopTime}>{shortTime ? item.time : ""}</span>
         <div className={v.stopMain}>
           <button
@@ -102,6 +105,7 @@ function PlanView({ plan, wide }: { plan: Plan; wide: boolean }) {
               {item.title}
               {item.kind === "fixed" && <i className={v.stopTag}>Fixed</i>}
               {item.kind === "option" && <i className={v.stopTag}>Optional</i>}
+              {changed.has(id) && <i className={v.updatedTag}>Updated</i>}
               {item.verify && (
                 <i className={v.checkMark} title={`To check: ${cleanText(item.verify)}`}>
                   <AlertTriangle size={11} />
@@ -284,6 +288,8 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
     [instruction, setInstruction] = useState(""),
     [reviseOpen, setReviseOpen] = useState(false),
     [wide, setWide] = useState(false),
+    [chatText, setChatText] = useState(""),
+    [chatBusy, setChatBusy] = useState<"" | "send" | "undo">(""),
     [, setTick] = useState(0);
   const request = useRef(0),
     builtAt = useRef<string | null>(null);
@@ -346,7 +352,39 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
     }
   }
 
+  async function sendChat() {
+    const message = chatText.trim();
+    if (!message || chatBusy) return;
+    setChatBusy("send");
+    setError("");
+    try {
+      const body = await call<SavedPlan>(`conversations/${peer}/plan/chat`, { message });
+      request.current++;
+      setSaved(body);
+      setChatText("");
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setChatBusy("");
+    }
+  }
+  async function undo() {
+    setChatBusy("undo");
+    setError("");
+    try {
+      const body = await call<SavedPlan>(`conversations/${peer}/plan/undo`, {});
+      request.current++;
+      setSaved(body);
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setChatBusy("");
+    }
+  }
+
   const plan = saved?.plan;
+  // Stops changed by the latest chat reply get an "Updated" tag.
+  const changed = new Set(plan?.chat?.filter((t) => t.role === "assistant").at(-1)?.changed ?? []);
   const meta =
     saved && plan
       ? [
@@ -435,7 +473,56 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
               <Maximize2 size={12} /> Full view
             </button>
           </div>
-          <PlanView plan={plan} wide={false} />
+          <section className={v.planChat} aria-label="Change the plan with AI">
+            <h4>
+              <MessageSquare size={13} /> Change the plan with AI
+            </h4>
+            {!!plan.chat?.length && (
+              <ol className={v.planChatLog}>
+                {plan.chat.slice(-6).map((turn, i) => (
+                  <li key={i} className={turn.role === "team" ? v.chatTeam : v.chatAi}>
+                    {turn.role === "team" && turn.by && <small>{turn.by}</small>}
+                    <span>{turn.text}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+            <form
+              className={v.planChatForm}
+              onSubmit={(e) => {
+                e.preventDefault();
+                void sendChat();
+              }}
+            >
+              <textarea
+                value={chatText}
+                maxLength={2000}
+                rows={2}
+                disabled={!!chatBusy || running}
+                placeholder="e.g. Move the rowing boat to Monday afternoon and add lunch near Lingyin"
+                onChange={(e) => setChatText(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" && !e.shiftKey) {
+                    e.preventDefault();
+                    void sendChat();
+                  }
+                }}
+                aria-label="Ask the AI to change the plan"
+              />
+              <button type="submit" className={v.generate} disabled={!chatText.trim() || !!chatBusy || running} aria-label="Send">
+                {chatBusy === "send" ? <Loader2 size={14} className={v.spin} /> : <Send size={14} />}
+              </button>
+            </form>
+            <div className={v.planChatFoot}>
+              <span>{chatBusy === "send" ? "Updating the plan… usually 15–40 seconds" : "Changes are saved straight away. The AI can’t browse here; use Revise below for changes that need research."}</span>
+              {plan.undo && (
+                <button className={v.ghostSmall} onClick={() => void undo()} disabled={!!chatBusy || running}>
+                  {chatBusy === "undo" ? <Loader2 size={12} className={v.spin} /> : <Undo2 size={12} />} Undo last change
+                </button>
+              )}
+            </div>
+          </section>
+          <PlanView plan={plan} wide={false} changed={changed} />
           {!running &&
             (reviseOpen ? (
               startForm
@@ -461,7 +548,7 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
                   <X size={18} />
                 </button>
               </header>
-              <PlanView plan={plan} wide />
+              <PlanView plan={plan} wide changed={changed} />
             </div>
           </div>,
           document.body,

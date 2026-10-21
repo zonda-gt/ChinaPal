@@ -113,3 +113,31 @@ test("plan text loses inline citation links", () => {
     "Open 10:00–22:00. See the guide too.",
   );
 });
+
+test("chat edits refer to the plan as given and mark what changed", async () => {
+  const { applyPlanEdits } = await import("./plan-data");
+  const stopAt = (title: string) => ({ time: "", title, detail: "", kind: "suggested" as const, place_cn: "", address_cn: "", getting_there: "", cost: "", verify: "", source: "" });
+  const plan = {
+    overview: "Old",
+    days: [
+      { date: "", label: "Mon", city: "Hangzhou", base: "", items: [stopAt("Salon"), stopAt("Lake walk"), stopAt("Light show")] },
+      { date: "", label: "Tue", city: "Hangzhou", base: "", items: [stopAt("Lingyin"), stopAt("Boat")] },
+    ],
+    bookings: [],
+    tips: [],
+    sources: ["https://example.com/a"],
+  };
+  const { plan: next, changed, count } = applyPlanEdits(plan, [
+    { op: "remove_item", day: 2, index: 2 },
+    { op: "add_item", day: 1, index: 1, item: { ...stopAt("Boat"), source: "https://made-up.example/x" } },
+    { op: "set_item", day: 1, index: 3, item: stopAt("Light show from the pier") },
+    { op: "set_item", day: 9, index: 1, item: stopAt("No such day") },
+    { op: "set_overview", day: 0, index: 0, text: "New" },
+  ]);
+  assert.equal(count, 4);
+  assert.deepEqual(next.days[0].items.map((i) => i.title), ["Salon", "Boat", "Lake walk", "Light show from the pier"]);
+  assert.deepEqual(next.days[1].items.map((i) => i.title), ["Lingyin"]);
+  assert.deepEqual(changed, ["0-1", "0-3"]);
+  assert.equal(next.days[0].items[1].source, "", "unknown sources are dropped");
+  assert.equal(next.overview, "New");
+});
