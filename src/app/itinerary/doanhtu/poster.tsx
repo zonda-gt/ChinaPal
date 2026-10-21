@@ -50,7 +50,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 1", title: "Arrival · Beauty Shopping · Wukang Road", items: ["✈️ Land 05:35 · bags at Crystal Orange", "Da Hu Chun pan-fried buns for breakfast", "TX Huaihai · HARMAY · Wukang Road photos", "Lai Lai soup dumplings for dinner"] },
-      { day: "DAY 2", title: "DenTech Congress · To Hangzhou", items: ["DenTech Congress 09:00–14:00", "🚇 Line 2 direct to Hongqiao (44 min)", "🚄 G1583 16:32 → Hangzhou East 17:24"] },
+      { day: "DAY 2", title: "DenTech Congress · To Hangzhou", items: ["DenTech Congress 09:00–14:00", "🚕 Taxi to Hongqiao (35–45 min)", "🚄 G1583 16:32 → Hangzhou East 17:24"] },
     ],
   },
   {
@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 5", title: "Back to Shanghai · Tianzifang", items: ["🚄 G7506 09:53 → Hongqiao", "Tianzifang · Lipstick Lab: make your own lipstick", "Xintiandi for dinner"] },
-      { day: "DAY 6", title: "Wild Animal Park", items: ["🚇 Line 2 → Line 16 (~1.5 h)", "Red pandas · safari bus · feeding sessions"] },
+      { day: "DAY 6", title: "Wild Animal Park", items: ["🚕 Taxi ~1 h (or metro ~1.5 h)", "Red pandas · safari bus · feeding sessions"] },
       { day: "DAY 7", title: "Skyline · Qipao · Snacks", items: ["Lujiazui escalators & three towers", "Longfeng Qipao · Hema & snack shops", "North Bund sunset · the Bund at night"] },
       { day: "DAY 8", title: "Free Day", items: ["Anything you missed · pack for the group week"] },
       { day: "DAY 9", title: "Group Programme Begins", items: ["Join your group · Longjing & Zhujiajiao this week"] },
