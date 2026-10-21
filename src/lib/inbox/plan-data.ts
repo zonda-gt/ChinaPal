@@ -58,7 +58,9 @@ export const BOOKING_LABELS: Record<BookingStatus, string> = {
   no_booking: "No booking",
 };
 
-const text = (max: number) => ({ type: "string", maxLength: max });
+// No maxLength: a model forced to stop at a length cuts words in half. parsePlan
+// trims the text instead.
+const text = (max: number) => ({ type: "string", description: `About ${max} characters at most` });
 const list = (items: object, max: number) => ({ type: "array", maxItems: max, items });
 export const PLAN_SCHEMA = {
   type: "object",
@@ -120,6 +122,15 @@ export const PLAN_SCHEMA = {
   required: ["overview", "days", "bookings", "questions", "tips"],
 };
 
+/** Text without the inline citation links web search adds, e.g. "([site.com](https://…))". */
+export function cleanText(value: string) {
+  return value
+    .replace(/\s*\(\[[^\]]*\]\([^)]*\)\)/g, "")
+    .replace(/\[([^\]]*)\]\((https?:[^)]*)\)/g, "$1")
+    .replace(/[ \t]{2,}/g, " ")
+    .trim();
+}
+
 /** A URL reduced to what identifies the page, for matching against opened sources. */
 export function pageKey(url: string) {
   try {
@@ -137,7 +148,7 @@ export function pageKey(url: string) {
  */
 export function parsePlan(raw: string, opened: string[]): TripPlan {
   const data = JSON.parse(raw);
-  const str = (value: unknown, max: number) => (typeof value === "string" ? value.trim().slice(0, max) : "");
+  const str = (value: unknown, max: number) => (typeof value === "string" ? cleanText(value).slice(0, max) : "");
   const arr = (value: unknown, max: number) => (Array.isArray(value) ? (value.slice(0, max) as Record<string, unknown>[]) : []);
   const pages = [...new Set(opened.filter((u) => pageKey(u)))];
   const known = new Map(pages.map((u) => [pageKey(u), u]));
