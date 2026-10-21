@@ -7,6 +7,8 @@ import { lease, release, saveDraft, threadData } from "./service";
 import { readProfile } from "./profile-store";
 import { contactIdentity } from "./contacts";
 import { runDraft } from "./draft-core";
+import { linkDraft, listQuestions } from "./question-store";
+import { questionsToAsk } from "./question-data";
 import { InboxError, type Staff } from "./types";
 
 // Loads the live conversation, runs the shared draft generator (draft-core.ts,
@@ -26,11 +28,14 @@ export async function generateDraft(
     throw new InboxError("AI drafting needs OPENAI_API_KEY on the server.", 503);
   await lease(`ai:${peer}`, 180);
   try {
-    const [{ conversation, messages }, profile, identity] = await Promise.all([
+    const [{ conversation, messages }, profile, identity, questions] = await Promise.all([
       threadData(peer, 400),
       readProfile(peer).catch(() => null),
       contactIdentity(peer).catch(() => null),
+      // Before the questions migration there is simply nothing to ask.
+      listQuestions(peer).catch(() => []),
     ]);
+    const toAsk = questionsToAsk(questions);
     if (!messages.length) throw new InboxError("Load messages before generating a reply.");
     const client = new OpenAI({
       apiKey: process.env.OPENAI_API_KEY,
@@ -51,6 +56,7 @@ export async function generateDraft(
         staffFacts: input.staffFacts,
         instruction: input.instruction,
         currentDraft: input.currentText,
+        questions: toAsk.map((q) => ({ text: q.text, why: q.why })),
       },
       mediaBytes,
     );
@@ -65,6 +71,10 @@ export async function generateDraft(
       input.version,
       result.warnings,
       { parts, staffFacts: input.staffFacts ?? "", generationId },
+    );
+    // Sending this draft marks its questions as asked (route: send, resolve).
+    await linkDraft(peer, draft.id, toAsk.map((q) => q.id)).catch(() =>
+      console.error("[inbox-ai] Could not link the questions to the draft"),
     );
     // The log is for measuring draft quality later; it must never block a draft.
     const { error } = await db().from("inbox_ai_generations").insert({

@@ -9,12 +9,15 @@ import {
   SINGLE_SECTIONS,
   STAGES,
   parseBrief,
+  parseQuestionUpdates,
   type BriefEdit,
   type BriefResponse,
   type BriefSection,
   type SavedBrief,
 } from "./brief-data";
 import { readBrief, writeBrief } from "./brief-store";
+import { addQuestions, listQuestions, updateQuestions } from "./question-store";
+import { freshQuestions, questionsForPrompt } from "./question-data";
 
 const BRIEF_SYSTEM = `You prepare a trip brief for a ChinaPal team member from ONE Instagram conversation with a traveller. ChinaPal is a small Shanghai team that plans China trips online: itineraries, train/flight/hotel/restaurant/attraction bookings, guides and drivers, and support during the trip. The brief must let the team member understand in seconds who this is, what the trip is, what the person wants from us, and what is waiting on whom. It is a working brief, not a reply or a sales pitch.
 
@@ -34,7 +37,8 @@ Fields:
 - deadlines: dates or times something must happen by (theirs or ours).
 - mustKnow: constraints that should change every recommendation: mobility, health, age-related needs, fears, diet, pregnancy, children, budget limits, fixed bookings.
 - preferences: likes, travel style and dislikes that help choose options.
-- questions: up to 6 open points, owner = customer when we are waiting for them, team when we still need to ask or check.
+- questions: up to 6 NEW open points that are not already in question_list (not even reworded): information we still need from the traveller to help them (owner customer), or something we must check ourselves (owner team). Focus on basics that block planning or booking: dates, arrival and departure details, hotels for each night, who is travelling, budget, and the details each requested service needs. why = what the answer unblocks, at most about 10 words. urgent = true only when it blocks a booking or a deadline within about a week. Never ask for something the conversation already answers.
+- questionUpdates: question_list items that the conversation shows were asked by the team (status asked, cite the team message) or answered by the traveller (status answered, cite the traveller's message, answer = their answer in a few words). Use each item's ref. Leave out items with no change.
 - ideas: up to 4 concrete ways ChinaPal could help next that fit their preferences, with why. These are suggestions for the team and need no sources. No prices.
 
 Keep it scannable: each text at most about 15 words, next at most about 12 words, ideas at most about 20 words. Do not repeat the same fact in several sections: route holds places and dates, days hold what happens on each date, requests hold our work, mustKnow holds constraints. critical = true only for health, safety, mobility, fears and fixed bookings that would cause real trouble if missed; budgets and room set-ups are not critical.
@@ -43,7 +47,7 @@ Rules: every fact cites 1 to 3 source message numbers. certainty: confirmed = th
 
 Team inputs: team_notes and team_facts are written by ChinaPal staff and can be treated as true, but they are not message sources. team_corrections are edits staff made to an earlier brief: "set" items are true and must not be contradicted or repeated; "hide" items were wrong or unwanted, so do not include them again.`;
 
-async function snapshot(peer: string) {
+export async function snapshot(peer: string) {
   const { conversation, messages, drafts } = await threadData(peer, 1000);
   const history = selectProfileHistory(messages, conversation.history_complete);
   const facts = drafts
@@ -83,7 +87,13 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
     throw new InboxError("Trip briefs need OPENAI_API_KEY on the server.", 503);
   await lease(`brief:${peer}`, 150);
   try {
-    const [current, saved] = await Promise.all([snapshot(peer), readBrief(peer)]);
+    const [current, saved, questions] = await Promise.all([
+      snapshot(peer),
+      readBrief(peer),
+      // Before the questions migration the brief still works, without the list.
+      listQuestions(peer).catch(() => null),
+    ]);
+    const known = questionsForPrompt(questions ?? []);
     if (!current.messages.length)
       throw new InboxError("Load this conversation's messages before building a brief.");
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
@@ -100,6 +110,7 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
           coverage: current.coverage,
           team_notes: current.notes,
           team_facts: current.facts,
+          question_list: known.list,
           team_corrections: saved.edits.map((e) => ({
             section: e.section,
             action: e.action,
@@ -149,9 +160,36 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
       coverage: current.coverage,
     };
     await writeBrief(peer, next);
+    if (questions) await syncQuestions(peer, result.output_text, known.ids, questions, current.messages);
     return { saved: next, stale: next.fingerprint !== fingerprint(current, latest.edits), coverage: current.coverage };
   } finally {
     await release(`brief:${peer}`);
+  }
+}
+
+/** New questions from the brief go into the list; asked and answered ones are updated. */
+async function syncQuestions(
+  peer: string,
+  raw: string,
+  ids: Map<string, string>,
+  questions: Awaited<ReturnType<typeof listQuestions>>,
+  messages: Parameters<typeof parseBrief>[1],
+) {
+  try {
+    const data = JSON.parse(raw);
+    await addQuestions(peer, freshQuestions(data.questions, questions, 6), "brief", "Trip brief");
+    for (const u of parseQuestionUpdates(raw, ids, messages)) {
+      const q = questions.find((x) => x.id === u.id);
+      // Never move a question backwards, and keep the team's own answer.
+      if (!q || q.status === "answered" || q.status === "dismissed" || (u.status === "asked" && q.status === "asked")) continue;
+      await updateQuestions(peer, [u.id], {
+        status: u.status,
+        include: false,
+        ...(u.status === "answered" ? { answer: u.answer } : {}),
+      });
+    }
+  } catch {
+    console.error("[inbox-brief] Could not update the questions list");
   }
 }
 

@@ -34,6 +34,9 @@ import useContactIdentities from "../inbox/useContactIdentities";
 import ContactAvatar from "../inbox/ContactAvatar";
 import useMessageScroll from "../inbox/useMessageScroll";
 import TripBrief from "./TripBrief";
+import TripPlan from "./TripPlan";
+import TripQuestions from "./TripQuestions";
+import type { TripQuestion } from "@/lib/inbox/question-data";
 import v from "./v2.module.css";
 
 type Thread = {
@@ -110,6 +113,10 @@ export default function InboxV2() {
     [instruction, setInstruction] = useState(""),
     [dirty, setDirty] = useState(false),
     [conflict, setConflict] = useState(false);
+  // Right column: trip brief, the AI plan and the questions list.
+  const [panelTab, setPanelTab] = useState<"brief" | "plan" | "questions">("brief"),
+    [questions, setQuestions] = useState<TripQuestion[]>([]),
+    [questionsLoading, setQuestionsLoading] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false),
     [image, setImage] = useState<string | null>(null),
     [confirmSend, setConfirmSend] = useState(false),
@@ -299,6 +306,29 @@ export default function InboxV2() {
     setSelected(peer);
     setDetailsOpen(false);
   }
+  const loadQuestions = useCallback(async () => {
+    const peer = selectedRef.current;
+    if (!peer) return;
+    setQuestionsLoading(true);
+    try {
+      const result = await api<{ questions: TripQuestion[] }>(`conversations/${peer}/questions`);
+      if (selectedRef.current === peer) setQuestions(result.questions);
+    } catch {
+      // Before the questions migration the list simply stays empty.
+      if (selectedRef.current === peer) setQuestions([]);
+    } finally {
+      if (selectedRef.current === peer) setQuestionsLoading(false);
+    }
+  }, []);
+  useEffect(() => {
+    setQuestions([]);
+    if (selected) void loadQuestions();
+  }, [selected, loadQuestions]);
+  const toAsk = questions.filter((q) => q.owner === "customer" && q.status === "open" && q.include).length;
+  function openQuestions() {
+    setPanelTab("questions");
+    setDetailsOpen(true);
+  }
   function acceptDraft(d: Draft) {
     const cached = threadCache.current.get(d.peer_id);
     if (cached) {
@@ -348,6 +378,7 @@ export default function InboxV2() {
         version: draft?.version,
       });
       acceptDraft(result.draft);
+      void loadQuestions();
       setUndo(before.text.trim() ? before : null);
       setInstruction("");
       setTab("reply");
@@ -371,6 +402,7 @@ export default function InboxV2() {
       setUndo(null);
       await loadThread(selected, limit, true);
       await loadList();
+      void loadQuestions();
       setNotice(
         result.next
           ? "Reply sent on Instagram. The next message is ready below; review it before sending."
@@ -864,6 +896,11 @@ export default function InboxV2() {
                       </span>
                       {composerOpen ? <ChevronDown size={15} /> : <ChevronUp size={15} />}
                     </button>
+                    {toAsk > 0 && (
+                      <button className={v.askChip} onClick={openQuestions} title="Ticked questions the next AI draft will ask">
+                        <CircleHelp size={13} /> Asks {toAsk} question{toAsk > 1 ? "s" : ""}
+                      </button>
+                    )}
                     {composerOpen && (
                       <div className={v.tabs} role="tablist">
                         <button role="tab" aria-selected={tab === "reply"} className={tab === "reply" ? v.tabActive : ""} onClick={() => setTab("reply")}>
@@ -1117,33 +1154,57 @@ export default function InboxV2() {
         aria-label="Trip brief"
         className={`${s.infoPanel} ${v.info} ${detailsOpen && selected ? `${s.infoOpen} ${v.open}` : ""}`}
       >
-        <header className={`${s.infoHeading} ${v.infoHeading}`}>
-          <h2>Trip brief</h2>
+        <header className={`${s.infoHeading} ${v.infoHeading} ${v.panelHeading}`}>
+          <h2 className={v.srOnly}>Trip</h2>
+          <div className={v.panelTabs} role="tablist" aria-label="Trip panel">
+            {(
+              [
+                ["brief", "Brief"],
+                ["plan", "Plan"],
+                ["questions", "Questions"],
+              ] as const
+            ).map(([key, label]) => {
+              const open = questions.filter((q) => q.status === "open").length;
+              return (
+                <button key={key} role="tab" aria-selected={panelTab === key} className={panelTab === key ? v.panelTabOn : ""} onClick={() => setPanelTab(key)}>
+                  {label}
+                  {key === "questions" && open > 0 && <i className={v.panelCount}>{open}</i>}
+                </button>
+              );
+            })}
+          </div>
           <button className={s.infoClose} aria-label="Close trip brief" onClick={() => setDetailsOpen(false)}>
             <X size={18} />
           </button>
         </header>
+        {selected && thread && panelTab === "plan" && <TripPlan key={selected} peer={selected} onQuestionsChanged={loadQuestions} />}
+        {selected && thread && panelTab === "questions" && (
+          <TripQuestions key={selected} peer={selected} questions={questions} loading={questionsLoading} onChange={setQuestions} onError={setError} />
+        )}
         {selected && thread ? (
-          <TripBrief
-            key={selected}
-            peer={selected}
-            name={contactLabel(selectedContact)}
-            username={selectedIdentity?.username || selectedContact?.username || ""}
-            picture={selectedIdentity?.picture}
-            revision={String(thread.messages.length)}
-            notes={thread.conversation.notes}
-            archived={thread.conversation.stage === "archived"}
-            onNotes={(notes) => saveDetails(thread.conversation.stage, notes)}
-            onArchive={async (archive) => {
-              await run("details", async () => {
-                await saveDetails(archive ? "archived" : "inquiry", thread.conversation.notes);
-                await loadThread(selected, limit);
-                setNotice(archive ? "Conversation archived." : "Conversation moved back to the inbox.");
-              });
-            }}
-            onAddToReply={addToReply}
-            onShowSource={showSource}
-          />
+          <div hidden={panelTab !== "brief"}>
+            <TripBrief
+              key={selected}
+              peer={selected}
+              name={contactLabel(selectedContact)}
+              username={selectedIdentity?.username || selectedContact?.username || ""}
+              picture={selectedIdentity?.picture}
+              revision={String(thread.messages.length)}
+              notes={thread.conversation.notes}
+              archived={thread.conversation.stage === "archived"}
+              onNotes={(notes) => saveDetails(thread.conversation.stage, notes)}
+              onArchive={async (archive) => {
+                await run("details", async () => {
+                  await saveDetails(archive ? "archived" : "inquiry", thread.conversation.notes);
+                  await loadThread(selected, limit);
+                  setNotice(archive ? "Conversation archived." : "Conversation moved back to the inbox.");
+                });
+              }}
+              onAddToReply={addToReply}
+              onShowSource={showSource}
+              onBuilt={loadQuestions}
+            />
+          </div>
         ) : (
           <div className={s.infoEmpty}>
             <Check size={28} />

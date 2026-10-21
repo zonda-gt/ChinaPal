@@ -52,6 +52,7 @@ type Props = {
   onArchive: (archived: boolean) => Promise<void>;
   onAddToReply: (text: string) => void;
   onShowSource: (source: ProfileSource) => void;
+  onBuilt: () => void; // a new brief may have changed the questions list
 };
 
 async function call<T>(path: string, body?: unknown): Promise<T> {
@@ -120,6 +121,7 @@ export default function TripBrief(props: Props) {
       const body = await call<BriefResponse>(`conversations/${peer}/brief`, {});
       request.current++;
       setData(body);
+      props.onBuilt();
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -582,40 +584,6 @@ export default function TripBrief(props: Props) {
                 children: <span>{p.text}</span>,
               }),
             ),
-          })}
-
-          {renderSection({
-            title: "Open questions",
-            icon: <Clock size={13} />,
-            section: "questions",
-            empty: "Nothing open",
-            count: brief.questions.length,
-            children: (["customer", "team"] as const).map((owner) => {
-              const items = brief.questions.map((q, i) => ({ q, i })).filter(({ q }) => q.owner === owner);
-              if (!items.length) return null;
-              return (
-                <li key={owner} className={v.questionGroup}>
-                  <h5>{owner === "customer" ? "Waiting on them" : "We need to ask or check"}</h5>
-                  <ul>
-                    {items.map(({ q, i }) =>
-                      renderItem({
-                        key: `qq${i}`,
-                        id: `question-${i}`,
-                        section: "questions",
-                        item: q,
-                        children: <span>{q.text}</span>,
-                        extra:
-                          owner === "team" ? (
-                            <button className={v.addToReply} onClick={() => props.onAddToReply(q.text)}>
-                              Add to reply
-                            </button>
-                          ) : undefined,
-                      }),
-                    )}
-                  </ul>
-                </li>
-              );
-            }),
           })}
 
           {renderSection({
