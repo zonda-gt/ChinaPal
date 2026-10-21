@@ -1,7 +1,7 @@
 import { getTravelProfile, generateTravelProfile } from "@/lib/inbox/profile";
 import { editBrief, generateBrief, getBrief } from "@/lib/inbox/brief";
 import { translateMessage } from "@/lib/inbox/translate";
-import { cancelPlan, getPlan, startPlan } from "@/lib/inbox/plan";
+import { cancelPlan, chatPlan, getPlan, startPlan, undoPlan } from "@/lib/inbox/plan";
 import { changeQuestion } from "@/lib/inbox/questions";
 import { listQuestions, markAsked } from "@/lib/inbox/question-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
@@ -152,6 +152,10 @@ async function handler(
         return json(await getPlan(peer));
       if (method === "POST" && operation === "plan" && path[3] === "cancel")
         return json(await cancelPlan(peer));
+      if (method === "POST" && operation === "plan" && path[3] === "chat")
+        return json(await chatPlan(peer, staff, str(body.message, 2000)));
+      if (method === "POST" && operation === "plan" && path[3] === "undo")
+        return json(await undoPlan(peer, staff));
       if (method === "POST" && operation === "plan" && !path[3])
         return json(
           await startPlan(peer, staff, body.instruction === undefined ? "" : str(body.instruction, 2000).trim()),
