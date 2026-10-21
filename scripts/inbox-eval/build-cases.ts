@@ -18,9 +18,7 @@ async function main() {
     id: string;
     username?: string;
     docMessages?: string; // pre-converted transcript for chats outside Instagram
-    anchor?: string;
-    at?: number; // message index to cut at, instead of an anchor text
-    allImages?: boolean; // save every image in the history, not only recent ones
+    anchor: string;
     cat: string;
     tests: string;
     staff_facts?: string;
@@ -54,9 +52,9 @@ async function main() {
     return { conv, messages: data as PromptMessage[] };
   }
 
-  async function saveImages(caseId: string, messages: PromptMessage[], all = false) {
+  async function saveImages(caseId: string, messages: PromptMessage[]) {
     await mkdir(join(DIR, "media"), { recursive: true });
-    for (const m of all ? messages : messages.slice(-20)) {
+    for (const m of messages.slice(-20)) {
       for (const [i, a] of m.attachments.entries()) {
         if (a.type !== "image" || !a.url?.startsWith("https://")) continue;
         const file = `media/${caseId}_${m.id.slice(-12)}_${i}`;
@@ -92,8 +90,7 @@ async function main() {
       historyComplete = found.conv.history_complete;
     }
     const norm = (t: string) => t.replace(/\s+/g, " ").toLowerCase();
-    let cut =
-      s.at ?? messages.findIndex((m) => m.direction === "inbound" && norm(m.text).includes(norm(s.anchor ?? "")));
+    let cut = messages.findIndex((m) => m.direction === "inbound" && norm(m.text).includes(norm(s.anchor)));
     if (cut < 0) {
       console.warn(`Anchor not found for ${s.id}`);
       continue;
@@ -103,7 +100,7 @@ async function main() {
     for (let i = cut + 1; i < messages.length && messages[i].direction === "outbound"; i++)
       reference.push(messages[i]);
     const history = messages.slice(0, cut + 1).map((m) => ({ ...m, text: scrub(m.text) }));
-    await saveImages(s.id, history, s.allImages);
+    await saveImages(s.id, history);
     // The draft is written as if just before the real reply (or shortly after the
     // customer's message when nobody has replied yet).
     const now =

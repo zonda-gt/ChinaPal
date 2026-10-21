@@ -837,8 +837,7 @@ export default function InboxV2() {
                               {m.text && <p>{m.text}</p>}
                               {m.attachments.map((a, i) =>
                                 a.type === "image" ? (
-                                  <span key={i} className={v.imageWrap}>
-                                    <button className={s.imageButton} onClick={() => setImage(a.url)} aria-label="Open attached image">
+                                  <button key={i} className={s.imageButton} onClick={() => setImage(a.url)} aria-label="Open attached image">
                                     <img
                                       src={a.url}
                                       alt="Instagram message attachment"
@@ -848,13 +847,6 @@ export default function InboxV2() {
                                       }}
                                     />
                                   </button>
-                                    {a.note && (
-                                      <details className={v.imageNote}>
-                                        <summary>What the AI sees</summary>
-                                        <p>{a.note}</p>
-                                      </details>
-                                    )}
-                                  </span>
                                 ) : (
                                   <a key={i} href="https://www.instagram.com/direct/inbox/" target="_blank" rel="noreferrer">
                                     {a.type} attachment · View in Instagram <ArrowUpRight size={13} />

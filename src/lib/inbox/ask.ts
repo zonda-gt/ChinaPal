@@ -8,7 +8,6 @@ import { selectProfileHistory } from "./profile-data";
 import { applyEdits } from "./brief-data";
 import { readBrief } from "./brief-store";
 import { InboxError } from "./types";
-import { textWithNotes, withImageNotes } from "./image-note-store";
 
 export type AskTurn = { role: "team" | "assistant"; text: string };
 
@@ -23,18 +22,13 @@ How to answer:
 - Formatting: plain lines and "- " bullets; use **bold** only for the few words that matter most. No headings or tables.
 - Say clearly when something is not in the chat or is uncertain, and what to ask or check. Never invent bookings, prices, opening hours, availability or policies. General China travel knowledge is fine when it is stable and well known; mark anything time-sensitive as "check".
 - When asked to write something for the traveller (a message, a day plan for WeChat), write it ready to send in a warm, natural concierge voice, in their language.
-- Images appear in the conversation as [image: …] notes written from the actual images; the newest images are also attached. Notes can miss details: if an answer depends on a fine detail of an image, say which message it was in so the team can check.`;
+- Older images are not included; if the answer depends on one, say which message it was in.`;
 
 export async function askTrip(peer: string, question: string, history: AskTurn[]) {
   if (!process.env.OPENAI_API_KEY) throw new InboxError("The trip assistant needs OPENAI_API_KEY on the server.", 503);
-  const [{ conversation, messages: raw, drafts }, saved] = await Promise.all([threadData(peer, 1000), readBrief(peer)]);
-  if (!raw.length) throw new InboxError("Load this conversation's messages first.");
-  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 1, timeout: 90000 });
-  const messages = await withImageNotes(peer, raw, client);
-  const history_ = selectProfileHistory(
-    messages.map((m) => ({ ...m, text: textWithNotes(m) })),
-    conversation.history_complete,
-  );
+  const [{ conversation, messages, drafts }, saved] = await Promise.all([threadData(peer, 1000), readBrief(peer)]);
+  if (!messages.length) throw new InboxError("Load this conversation's messages first.");
+  const history_ = selectProfileHistory(messages, conversation.history_complete);
   const numbered = history_.messages
     .map(
       (m, i) =>
@@ -59,6 +53,7 @@ export async function askTrip(peer: string, question: string, history: AskTurn[]
   const imageParts: ResponseInputContent[] = images.content.map((part) =>
     part.type === "input_text" ? { ...part, text: part.text.replace(/message #\d+/, "a recent message") } : part,
   );
+  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 1, timeout: 90000 });
   try {
     const result = await client.responses.create({
       model: process.env.INBOX_AI_MODEL || "gpt-6.1-sol",

@@ -16,7 +16,6 @@ import {
   type SavedBrief,
 } from "./brief-data";
 import { readBrief, writeBrief } from "./brief-store";
-import { textWithNotes, withImageNotes } from "./image-note-store";
 import { addQuestions, listQuestions, updateQuestions } from "./question-store";
 import { freshQuestions, questionsForPrompt } from "./question-data";
 
@@ -48,11 +47,9 @@ Rules: every fact cites 1 to 3 source message numbers. certainty: confirmed = th
 
 Team inputs: team_notes and team_facts are written by ChinaPal staff and can be treated as true, but they are not message sources. team_corrections are edits staff made to an earlier brief: "set" items are true and must not be contradicted or repeated; "hide" items were wrong or unwanted, so do not include them again.`;
 
-export async function snapshot(peer: string, client?: OpenAI) {
+export async function snapshot(peer: string) {
   const { conversation, messages, drafts } = await threadData(peer, 1000);
-  // Image notes become part of the text the brief reads; new ones only when building.
-  const noted = (await withImageNotes(peer, messages, client)).map((m) => ({ ...m, text: textWithNotes(m) }));
-  const history = selectProfileHistory(noted, conversation.history_complete);
+  const history = selectProfileHistory(messages, conversation.history_complete);
   const facts = drafts
     .map((d) => d.staff_facts?.trim())
     .filter(Boolean)
@@ -90,9 +87,8 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
     throw new InboxError("Trip briefs need OPENAI_API_KEY on the server.", 503);
   await lease(`brief:${peer}`, 150);
   try {
-    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
     const [current, saved, questions] = await Promise.all([
-      snapshot(peer, client),
+      snapshot(peer),
       readBrief(peer),
       // Before the questions migration the brief still works, without the list.
       listQuestions(peer).catch(() => null),
@@ -100,6 +96,7 @@ export async function generateBrief(peer: string): Promise<BriefResponse> {
     const known = questionsForPrompt(questions ?? []);
     if (!current.messages.length)
       throw new InboxError("Load this conversation's messages before building a brief.");
+    const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
     let result;
     try {
       result = await client.responses.create({

@@ -40,7 +40,7 @@ Team inputs: team_notes, team_facts and the team instruction are written by Chin
 async function input(peer: string, instruction: string, previous: SavedPlan["plan"]) {
   const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 0, timeout: 110000 });
   const [current, brief, questions] = await Promise.all([
-    snapshot(peer, client),
+    snapshot(peer),
     readBrief(peer),
     listQuestions(peer).catch(() => []),
   ]);

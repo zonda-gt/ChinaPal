@@ -5,7 +5,6 @@ import { cancelPlan, getPlan, startPlan } from "@/lib/inbox/plan";
 import { changeQuestion } from "@/lib/inbox/questions";
 import { listQuestions, markAsked } from "@/lib/inbox/question-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
-import { withImageNotes } from "@/lib/inbox/image-note-store";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -170,16 +169,13 @@ async function handler(
           ),
         );
         const data = await threadData(peer, limit);
-        // Saved image notes only; reading a chat never describes new images.
-        const messages = await withImageNotes(peer, data.messages);
         return json({
           ...data,
-          messages: messages.map((m: Message) => ({
+          messages: data.messages.map((m: Message) => ({
             ...m,
             attachments: m.attachments.map((a, index) => ({
               type: a.type,
               url: `/api/inbox/media?id=${encodeURIComponent(m.id)}&index=${index}`,
-              ...(a.note ? { note: a.note } : {}),
             })),
           })),
         });

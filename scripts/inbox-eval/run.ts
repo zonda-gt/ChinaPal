@@ -2,7 +2,6 @@
 // Usage: npx tsx scripts/inbox-eval/run.ts [--runs 2] [--only C01,C02] [--variants baseline,v2,v2-facts]
 //   [--cases data/eval/cases.json,more.json] [--alt prompt.txt]  (variant "v2-alt" uses the --alt instructions)
 // Variants "sonnet" and "opus" send the V2 request to Claude (needs ANTHROPIC_API_KEY).
-// Variant "v2-notes" adds image notes from --notes (default data/eval/image-notes.json; see notes.ts).
 // Reads data/eval/cases.json and writes data/eval/results/<timestamp>.json.
 // Nothing is saved to the inbox database and nothing is sent to customers.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -32,17 +31,6 @@ async function main() {
   const cases: Case[] = [];
   for (const file of arg("cases", join(DIR, "cases.json")).split(","))
     cases.push(...JSON.parse(await readFile(file, "utf8")));
-  const notesFile = arg("notes", join(DIR, "image-notes.json"));
-  const notes: Record<string, { note: string }> = variants.includes("v2-notes")
-    ? JSON.parse(await readFile(notesFile, "utf8"))
-    : {};
-  const withNotes = (ctx: PromptContext): PromptContext => ({
-    ...ctx,
-    messages: ctx.messages.map((m) => ({
-      ...m,
-      attachments: m.attachments.map((a, i) => ({ ...a, note: notes[`${m.id}:${i}`]?.note })),
-    })),
-  });
   const altFile = arg("alt", "");
   const alt = altFile ? await readFile(altFile, "utf8") : undefined;
   const loadImage: LoadImage = async (url) => ({
@@ -86,10 +74,7 @@ async function main() {
               ? await runClaudeDraft(claude, c.context, loadClaudeImage, { model: CLAUDE[variant] })
               : await runDraft(
                 client,
-                {
-                  ...(variant === "v2-notes" ? withNotes(c.context) : c.context),
-                  staffFacts: variant === "v2-facts" ? c.staff_facts : undefined,
-                },
+                { ...c.context, staffFacts: variant === "v2-facts" ? c.staff_facts : undefined },
                 loadImage,
                 variant === "v2-alt" ? { instructions: alt } : {},
               );

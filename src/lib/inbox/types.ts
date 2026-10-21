@@ -1,7 +1,6 @@
 export type Attachment = {
   type: "image" | "video" | "audio" | "file";
   url: string;
-  note?: string; // a description written from the image (image-notes.ts); added when read, never stored here
 };
 export type ContactIdentity = {
   peer_id: string;
