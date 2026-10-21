@@ -96,6 +96,8 @@ export type PromptContext = {
   staffFacts?: string;
   instruction?: string;
   currentDraft?: string;
+  // Questions the team ticked in the questions list for this reply.
+  questions?: { text: string; why: string }[];
 };
 
 const HISTORY_MESSAGES = 400;
@@ -187,6 +189,10 @@ export function buildPromptText(ctx: PromptContext) {
   const request = [
     ctx.staffFacts?.trim() && `Staff facts (verified by the team for this reply):\n${ctx.staffFacts.trim()}`,
     ctx.currentDraft?.trim() && `Current draft:\n${ctx.currentDraft.trim()}`,
+    ctx.questions?.length &&
+      `Questions the team wants asked in this reply. Ask each one in your own words, most important first; this overrides the usual limit of one or two questions, and a short numbered list is fine when there are more than two. If the conversation already answers one, leave it out and add a warning:\n${ctx.questions
+        .map((q, i) => `${i + 1}. ${q.text}${q.why ? ` (why we need it: ${q.why})` : ""}`)
+        .join("\n")}`,
     `Staff instruction: ${ctx.instruction?.trim() || "Draft the best next reply to the customer."}`,
   ].filter(Boolean);
   return { text: [...header, ...(notes ? [notes] : []), history, ...request].join("\n\n"), offset, selected };

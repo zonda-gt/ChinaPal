@@ -7,7 +7,9 @@ when syncing messages, generating drafts, saving edits, or receiving webhooks.
 
 `/inbox` shows the current design (code in `src/app/inbox-v2/`), with the trip
 brief (`src/lib/inbox/brief.ts`, table `inbox_briefs`) and the team-only trip
-assistant (`src/lib/inbox/ask.ts`). The previous design stays at `/inbox-old` as a
+assistant (`src/lib/inbox/ask.ts`). The right column has three tabs: Brief, Plan
+(`src/lib/inbox/plan.ts`, table `inbox_plans`) and Questions
+(`src/lib/inbox/question-store.ts`, table `inbox_questions`). The previous design stays at `/inbox-old` as a
 temporary fallback, and `/inbox-v2` redirects to `/inbox`. Analytics never load on
 any `/inbox…` page (`src/lib/private-pages.ts`).
 
@@ -21,6 +23,8 @@ Set these in `.env.local` locally and Vercel Production before deploying:
 | `OPENAI_API_KEY` | OpenAI project API key for drafting and image input. |
 | `INBOX_AI_MODEL` | Optional; defaults to `gpt-6.1-sol`. |
 | `INBOX_AI_REASONING` | Optional reply-assistant reasoning effort: `low`, `medium` (default) or `high`. |
+| `INBOX_PLAN_MODEL` | Optional trip-plan model; defaults to `INBOX_AI_MODEL`. |
+| `INBOX_PLAN_EFFORT` | Optional trip-plan reasoning effort: `low`, `medium` (default) or `high`. |
 | `INSTAGRAM_ACCOUNT_ID` | Connected professional account's numeric ID. |
 | `INSTAGRAM_ACCESS_TOKEN` | Instagram read/send authorization. Monitor expiry and renew as needed. |
 | `INSTAGRAM_APP_SECRET` | Verifies Meta webhook signatures. |
@@ -129,3 +133,20 @@ Local networking: on this Mac, Clash Verge's proxy is `http://127.0.0.1:7897`.
 Use `NODE_USE_ENV_PROXY=1 HTTPS_PROXY=http://127.0.0.1:7897
 NO_PROXY=localhost,127.0.0.1 npm run dev` for Node 24 local API access.
 Never configure this local proxy address on Vercel.
+
+## Trip plans and the questions list
+
+Apply `supabase/migrations/202610220001_inbox_plans_questions.sql` before using
+the Plan and Questions tabs (without it the brief and drafts keep working and the
+two tabs show a migration message).
+
+- **Questions**: what to ask the traveller ("customer") or check ourselves ("team").
+  Updating the trip brief adds missing basics and marks questions asked or answered
+  from the chat (each change must cite a real message). Building a plan adds the
+  blockers it met. Ticked customer questions are given to the next AI draft and are
+  marked asked when that draft is sent (or resolved as sent).
+- **Plan**: an OpenAI background response with web search (`store: true` is required
+  for background mode; the stored response is deleted once the plan is saved).
+  Opening the Plan tab checks on a running job; jobs over 30 minutes are stopped.
+  Item sources are kept only when they are pages the research actually opened.
+

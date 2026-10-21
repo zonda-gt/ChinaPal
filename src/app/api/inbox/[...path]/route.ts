@@ -1,6 +1,9 @@
 import { getTravelProfile, generateTravelProfile } from "@/lib/inbox/profile";
 import { editBrief, generateBrief, getBrief } from "@/lib/inbox/brief";
 import { translateMessage } from "@/lib/inbox/translate";
+import { cancelPlan, getPlan, startPlan } from "@/lib/inbox/plan";
+import { changeQuestion } from "@/lib/inbox/questions";
+import { listQuestions, markAsked } from "@/lib/inbox/question-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
 import { withImageNotes } from "@/lib/inbox/image-note-store";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
@@ -142,6 +145,18 @@ async function handler(
         );
       if (method === "POST" && operation === "brief" && !path[3])
         return json(await generateBrief(peer));
+      if (method === "GET" && operation === "questions")
+        return json({ questions: await listQuestions(peer) });
+      if (method === "POST" && operation === "questions")
+        return json(await changeQuestion(peer, staff, body));
+      if (method === "GET" && operation === "plan")
+        return json(await getPlan(peer));
+      if (method === "POST" && operation === "plan" && path[3] === "cancel")
+        return json(await cancelPlan(peer));
+      if (method === "POST" && operation === "plan" && !path[3])
+        return json(
+          await startPlan(peer, staff, body.instruction === undefined ? "" : str(body.instruction, 2000).trim()),
+        );
       if (method === "GET" && operation === "profile")
         return json(await getTravelProfile(peer));
       if (method === "POST" && operation === "profile")
@@ -245,9 +260,10 @@ async function handler(
       if (method === "POST" && operation === "send") {
         if (body.approved !== true)
           throw new InboxError("Review and approve the reply before sending.");
-        return json(
-          await sendDraft(peer, str(body.id, 50), num(body.version), staff),
-        );
+        const id = str(body.id, 50);
+        const result = await sendDraft(peer, id, num(body.version), staff);
+        await markAsked(peer, id);
+        return json(result);
       }
       if (method === "POST" && operation === "resolve") {
         const c = await conversation(peer);
@@ -274,6 +290,7 @@ async function handler(
             409,
           );
         if (body.outcome === "sent") {
+          await markAsked(peer, id);
           const data = await threadData(peer, 1);
           const resolved = data.drafts.find((d) => d.id === id);
           if (resolved)

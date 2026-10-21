@@ -3,6 +3,7 @@
 // messages it came from; team edits are kept across regenerations.
 import type { Message } from "./types";
 import type { ProfileCoverage, ProfileSource } from "./profile-data";
+import { NEW_QUESTION_SCHEMA } from "./question-data";
 
 export type Certainty = "confirmed" | "inferred" | "suggested";
 // editId marks an item the team added, so it can be edited or removed again.
@@ -148,14 +149,20 @@ export const BRIEF_SCHEMA = {
     deadlines: list(fact({ by: text(80) }), 5),
     mustKnow: list(fact({ critical: { type: "boolean" } }), 6),
     preferences: list(fact(), 8),
-    questions: list(
+    questions: list(NEW_QUESTION_SCHEMA, 6),
+    questionUpdates: list(
       {
         type: "object",
         additionalProperties: false,
-        properties: { text: text(300), owner: { type: "string", enum: ["customer", "team"] } },
-        required: ["text", "owner"],
+        properties: {
+          ref: text(10),
+          status: { type: "string", enum: ["asked", "answered"] },
+          answer: text(200),
+          sources,
+        },
+        required: ["ref", "status", "answer", "sources"],
       },
-      6,
+      20,
     ),
     ideas: list(
       {
@@ -183,6 +190,7 @@ export const BRIEF_SCHEMA = {
     "mustKnow",
     "preferences",
     "questions",
+    "questionUpdates",
     "ideas",
   ],
 };
@@ -267,6 +275,30 @@ export function parseBrief(raw: string, messages: Message[]): TripBrief {
     }),
     ideas: arr(data.ideas, 4).map((i) => ({ text: str(i.text, 300), why: str(i.why, 200) })),
   };
+}
+
+export type QuestionUpdate = { id: string; status: "asked" | "answered"; answer: string };
+
+/**
+ * Questions-list items the chat shows were asked by the team or answered by the
+ * traveller. refs map to the list the model was given; each update must cite a
+ * real message from the right side (team for asked, traveller for answered).
+ */
+export function parseQuestionUpdates(raw: string, ids: Map<string, string>, messages: Message[]): QuestionUpdate[] {
+  const data = JSON.parse(raw);
+  if (!Array.isArray(data.questionUpdates)) return [];
+  return (data.questionUpdates as Record<string, unknown>[]).flatMap((u) => {
+    const id = typeof u.ref === "string" ? ids.get(u.ref) : undefined;
+    const status = u.status;
+    if (!id || (status !== "asked" && status !== "answered") || !Array.isArray(u.sources)) return [];
+    const want = status === "asked" ? "outbound" : "inbound";
+    const cited = (u.sources as unknown[]).some((n) => {
+      const m = Number.isInteger(n) ? messages[(n as number) - 1] : undefined;
+      return m && !m.deleted && m.direction === want;
+    });
+    if (!cited) return [];
+    return [{ id, status, answer: status === "answered" && typeof u.answer === "string" ? u.answer.trim().slice(0, 200) : "" }];
+  });
 }
 
 /** The text a section item is identified by when the team hides or replaces it. */

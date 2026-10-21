@@ -1198,3 +1198,352 @@ main.layout {
   white-space: pre-wrap;
   line-height: 1.45;
 }
+
+/* Right column tabs: Brief | Plan | Questions */
+.layout .panelHeading {
+  padding: 10px 12px;
+}
+.panelTabs {
+  display: flex;
+  gap: 2px;
+  background: #f1f3f6;
+  border-radius: 8px;
+  padding: 2px;
+  flex: 1;
+}
+.layout .panelTabs button {
+  flex: 1;
+  font-size: 12.5px;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: #4b5c6b;
+}
+.layout .panelTabs .panelTabOn {
+  background: #fff;
+  color: var(--ink);
+  font-weight: 600;
+  box-shadow: 0 1px 2px #1f2d3a1f;
+}
+.panelCount {
+  font-style: normal;
+  font-size: 10px;
+  font-weight: 700;
+  min-width: 16px;
+  padding: 0 4px;
+  border-radius: 999px;
+  background: #8338ec;
+  color: #fff;
+  line-height: 16px;
+}
+.layout .askChip {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #6b2fc4;
+  background: #f4effc;
+  border: 1px solid #e2d4f7;
+  border-radius: 999px;
+  padding: 2px 9px;
+  gap: 4px;
+  white-space: nowrap;
+}
+
+/* Questions list */
+.questionsIntro,
+.questionsHint {
+  margin: 0;
+  font-size: 11.5px;
+  line-height: 1.5;
+  color: var(--subtle);
+}
+.questionsIntro {
+  background: #f6f8fb;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 7px 10px;
+}
+.question {
+  flex-wrap: nowrap;
+  gap: 6px;
+  padding: 3px 2px;
+  border-radius: 6px;
+}
+.questionOn {
+  background: #faf6ff;
+}
+.questionTick {
+  display: flex;
+  padding-top: 3px;
+}
+.questionTick input {
+  width: 14px;
+  height: 14px;
+  accent-color: #8338ec;
+  cursor: pointer;
+}
+.questionDot {
+  width: 6px;
+  height: 6px;
+  margin: 7px 4px 0;
+  border-radius: 50%;
+  background: #b9c7d6;
+  flex-shrink: 0;
+}
+.questionBody {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.45;
+}
+.questionMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 10.5px;
+  color: #8a97a3;
+}
+.urgentTag,
+.inDraftTag {
+  font-size: 9.5px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 0 5px;
+}
+.urgentTag {
+  background: #fde8e6;
+  color: #b42318;
+}
+.inDraftTag {
+  background: #f1eafd;
+  color: #6b2fc4;
+}
+.answer {
+  font-size: 11.5px;
+  color: #17734c;
+}
+.questionAdd {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+.questionAdd > input:first-child {
+  flex: 1 1 100%;
+  font-size: 12.5px;
+  padding: 5px 8px;
+  border: 1px solid #b9c7d6;
+  border-radius: 6px;
+}
+.questionAdd label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  color: #4b5c6b;
+  margin-right: auto;
+}
+.layout .questionAdd button[type="submit"] {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 6px;
+  background: #8338ec;
+  color: #fff;
+}
+.closedQuestions {
+  border-top: 1px solid var(--line);
+  padding-top: 8px;
+}
+.closedQuestions summary {
+  cursor: pointer;
+  font-size: 11.5px;
+  color: #5d6f7f;
+}
+.closedQuestions ul {
+  list-style: none;
+  margin: 6px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0.8;
+}
+
+/* Trip plan */
+.planStart {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.planStart textarea {
+  font: inherit;
+  font-size: 12.5px;
+  padding: 7px 9px;
+  border: 1px solid #b9c7d6;
+  border-radius: 8px;
+  resize: vertical;
+}
+.planRunning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: #faf6ff;
+  border: 1px solid #e2d4f7;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: #6b2fc4;
+}
+.planRunning > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.planRunning span {
+  font-size: 11.5px;
+  color: #5d6f7f;
+  line-height: 1.45;
+}
+.layout .ghostSmall {
+  font-size: 11.5px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #4b5c6b;
+}
+.planMeta {
+  margin: 0;
+  font-size: 11px;
+  color: var(--subtle);
+}
+.planOverview {
+  margin: 0;
+  line-height: 1.55;
+  background: #f6f8fb;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 11px;
+  color: #2c3a47;
+}
+.planBase {
+  margin: 1px 0 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #8a97a3;
+}
+.briefSection .planItems {
+  gap: 6px;
+  margin-top: 4px;
+}
+.planItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  border-radius: 8px;
+  padding: 6px 8px;
+  background: #fff;
+  border: 1px solid var(--line);
+}
+.planFixed {
+  background: #f6f8fb;
+}
+.planOption {
+  border-style: dashed;
+}
+.planItem p {
+  margin: 0;
+  line-height: 1.45;
+  color: #3a4a58;
+}
+.planItemHead {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+.planKind {
+  font-size: 9.5px;
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 0 5px;
+  background: #f1f3f6;
+  color: #6f8190;
+}
+.layout .planChinese {
+  justify-content: flex-start;
+  text-align: left;
+  gap: 5px;
+  font-size: 12px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: #f4effc;
+  color: #3a2a5c;
+  align-self: stretch;
+}
+.planChinese > span {
+  flex: 1;
+  min-width: 0;
+}
+.planChinese small {
+  color: #17734c;
+  font-weight: 600;
+}
+.planRoute,
+.planCost {
+  font-size: 11.5px;
+}
+.planRoute {
+  display: flex;
+  gap: 5px;
+}
+.planRoute svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: #7a8ea3;
+}
+.planItem .planVerify {
+  display: flex;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #8a5a00;
+  background: #fff6e6;
+  border-radius: 6px;
+  padding: 3px 6px;
+}
+.planVerify svg {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.planSource {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10.5px;
+  color: #6f8190;
+}
+.planBooking {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  padding: 4px;
+}
+.planBooking small {
+  color: var(--subtle);
+  font-size: 11.5px;
+}
+.planTips {
+  padding-left: 16px !important;
+  list-style: disc !important;
+  gap: 4px !important;
+  line-height: 1.45;
+  color: #3a4a58;
+}
+.planSources li a {
+  font-size: 11.5px;
+  color: #6f8190;
+}
