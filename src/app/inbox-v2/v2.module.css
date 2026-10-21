@@ -1346,7 +1346,7 @@ main.layout {
   opacity: 0.8;
 }
 
-/* Trip plan */
+/* Trip plan: short rows per stop, details on tap, and a full-width reading view. */
 .planStart {
   display: flex;
   flex-direction: column;
@@ -1388,13 +1388,52 @@ main.layout {
   border: 1px solid var(--line);
   background: #fff;
   color: #4b5c6b;
+  gap: 5px;
+  white-space: nowrap;
 }
-.planMeta {
-  margin: 0;
+.planToolbar {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
   font-size: 11px;
   color: var(--subtle);
+  line-height: 1.45;
 }
-.planOverview {
+.layout .reviseButton {
+  align-self: flex-start;
+  font-size: 12px;
+  color: #6b2fc4;
+  padding: 4px 2px;
+  gap: 6px;
+}
+
+.planView {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 12.5px;
+  color: var(--ink);
+}
+.planView ul,
+.planView ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.planView button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-align: left;
+}
+.planView button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+.planView .planOverview {
   margin: 0;
   line-height: 1.55;
   background: #f6f8fb;
@@ -1403,62 +1442,188 @@ main.layout {
   padding: 9px 11px;
   color: #2c3a47;
 }
-.planBase {
-  margin: 1px 0 2px;
+.planCounts {
+  margin: -4px 0 0;
   display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #5d6f7f;
+}
+.planCountsCheck {
+  color: #8a5a00;
+  display: inline-flex;
   align-items: center;
+  gap: 3px;
+}
+.planCounts .moreLink {
+  margin-left: auto;
+}
+.planDays {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.planView .planDayHead {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  width: 100%;
+  padding: 0 0 4px;
+  border-bottom: 1px solid var(--line);
+  font-size: 13px;
+  justify-content: flex-start;
+}
+.planDayHead svg {
+  align-self: center;
+  color: #8a97a3;
+  flex-shrink: 0;
+}
+.planDayHead b {
+  white-space: nowrap;
+}
+.planDayHead span {
+  color: #5d6f7f;
+  font-size: 12px;
+  min-width: 0;
+}
+.planBase {
+  margin: 4px 0 2px 20px;
+  display: flex;
+  align-items: flex-start;
   gap: 5px;
   font-size: 11px;
   color: #8a97a3;
+  line-height: 1.4;
 }
-.briefSection .planItems {
-  gap: 6px;
-  margin-top: 4px;
+.planBase svg {
+  flex-shrink: 0;
+  margin-top: 1px;
 }
-.planItem {
+.stopList {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  border-radius: 8px;
-  padding: 6px 8px;
-  background: #fff;
-  border: 1px solid var(--line);
+  margin-top: 4px !important;
 }
-.planFixed {
+.stopRow {
+  display: grid;
+  grid-template-columns: 50px minmax(0, 1fr);
+  column-gap: 6px;
+  padding: 5px 0;
+  border-left: 2px solid #e2d4f7;
+  padding-left: 8px;
+  margin-left: 5px;
+}
+.stopFixed {
+  border-left-color: #7a8ea3;
+}
+.stopOption {
+  border-left-style: dashed;
+}
+.stopTime {
+  font-weight: 600;
+  font-size: 11.5px;
+  color: #3a4a58;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.35;
+}
+.stopMain {
+  min-width: 0;
+}
+.planView .stopHead {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  width: 100%;
+  padding: 2px 18px 2px 4px;
+  border-radius: 6px;
+}
+.planView .stopHead:not(:disabled):hover {
   background: #f6f8fb;
 }
-.planOption {
-  border-style: dashed;
+.stopTitle {
+  font-weight: 600;
+  line-height: 1.4;
 }
-.planItem p {
-  margin: 0;
-  line-height: 1.45;
-  color: #3a4a58;
-}
-.planItemHead {
-  display: flex;
-  align-items: baseline;
-  flex-wrap: wrap;
-  gap: 4px;
-}
-.planKind {
+.stopTag {
+  font-style: normal;
   font-size: 9.5px;
   font-weight: 600;
   border-radius: 4px;
   padding: 0 5px;
+  margin-left: 5px;
+  vertical-align: 1px;
+  white-space: nowrap;
+}
+.stopTag {
   background: #f1f3f6;
   color: #6f8190;
 }
-.layout .planChinese {
-  justify-content: flex-start;
+.checkMark {
+  display: inline-flex;
+  font-style: normal;
+  margin-left: 5px;
+  color: #c27c0e;
+  vertical-align: -1px;
+}
+.planCountsCheck svg {
+  display: inline;
+}
+.planView .planOverview {
+  display: block;
+  width: 100%;
+  font-size: inherit;
   text-align: left;
+}
+.planView .overviewClamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.stopWhen {
+  font-size: 11px;
+  color: #5d6f7f;
+}
+.stopSummary {
+  color: #4b5c6b;
+  line-height: 1.45;
+}
+.stopChevron {
+  position: absolute;
+  right: 3px;
+  top: 5px;
+  color: #9aa5b0;
+}
+.stopDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px 4px 2px;
+}
+.stopDetails p {
+  margin: 0;
+  line-height: 1.45;
+  color: #3a4a58;
+}
+.planView .planChinese {
+  display: flex;
+  align-items: flex-start;
   gap: 5px;
   font-size: 12px;
   padding: 3px 6px;
   border-radius: 6px;
   background: #f4effc;
   color: #3a2a5c;
-  align-self: stretch;
+  width: 100%;
+}
+.planChinese svg {
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 .planChinese > span {
   flex: 1;
@@ -1468,8 +1633,8 @@ main.layout {
   color: #17734c;
   font-weight: 600;
 }
-.planRoute,
-.planCost {
+.stopDetails .planRoute,
+.stopDetails .planCost {
   font-size: 11.5px;
 }
 .planRoute {
@@ -1481,7 +1646,7 @@ main.layout {
   margin-top: 2px;
   color: #7a8ea3;
 }
-.planItem .planVerify {
+.stopDetails .planVerify {
   display: flex;
   gap: 5px;
   font-size: 11.5px;
@@ -1501,14 +1666,62 @@ main.layout {
   font-size: 10.5px;
   color: #6f8190;
 }
+.planSection {
+  border-top: 1px solid var(--line);
+  padding-top: 10px;
+}
+.planSection h4,
+.planSection summary {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #5d6f7f;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.planSection summary {
+  cursor: pointer;
+  list-style: none;
+}
+.planSection ul {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 .planBooking {
   display: flex;
   flex-direction: column;
   gap: 1px;
-  padding: 4px;
 }
 .planBooking small {
   color: var(--subtle);
+  font-size: 11.5px;
+  line-height: 1.45;
+}
+.planBooking .bookingBy {
+  color: #3a4a58;
+}
+.planView .moreLink {
+  align-self: flex-start;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b2fc4;
+  padding: 0;
+}
+.checkList li {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  line-height: 1.45;
+}
+.checkList b {
+  font-size: 11.5px;
+}
+.checkList span {
+  color: #8a5a00;
   font-size: 11.5px;
 }
 .planTips {
@@ -1521,4 +1734,90 @@ main.layout {
 .planSources li a {
   font-size: 11.5px;
   color: #6f8190;
+}
+
+/* Full-width reading view (rendered outside the inbox layout) */
+.planOverlay {
+  --ink: #253340;
+  --subtle: #657786;
+  --line: #dde3ea;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #1f2d3a66;
+  display: flex;
+  justify-content: center;
+  padding: 3vh 16px;
+}
+.planSheet {
+  width: min(880px, 100%);
+  max-height: 94vh;
+  overflow-y: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px #1f2d3a40;
+  padding: 0 28px 28px;
+  font-family: inherit;
+}
+.planSheet > header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 0 12px;
+  margin-bottom: 8px;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.planSheet h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--ink);
+}
+.planSheet > header span {
+  font-size: 12px;
+  color: var(--subtle);
+}
+.planSheet > header button {
+  border: 0;
+  background: #f1f3f6;
+  border-radius: 8px;
+  padding: 6px;
+  cursor: pointer;
+  color: #4b5c6b;
+  display: flex;
+}
+.planWide {
+  font-size: 14px;
+  gap: 16px;
+}
+.planWide .stopRow {
+  grid-template-columns: 64px minmax(0, 1fr);
+  padding: 8px 0 8px 12px;
+}
+.planWide .stopTime {
+  font-size: 13px;
+}
+.planWide .planDayHead {
+  font-size: 15px;
+  padding-top: 6px;
+}
+.planWide .stopDetails {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 4px 16px;
+}
+.planWide .stopDetails > p:first-child {
+  grid-column: 1 / -1;
+}
+@media (max-width: 700px) {
+  .planSheet {
+    padding: 0 16px 20px;
+  }
+  .planWide .stopDetails {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }

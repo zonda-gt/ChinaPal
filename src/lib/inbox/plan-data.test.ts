@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { pageKey, parsePlan } from "./plan-data";
+import { cleanText, pageKey, parsePlan } from "./plan-data";
 import { freshQuestions, questionsForPrompt, questionsToAsk, type TripQuestion } from "./question-data";
 import { parseQuestionUpdates } from "./brief-data";
 import type { Message } from "./types";
@@ -105,4 +105,11 @@ test("plan sources must be pages the research opened", () => {
   assert.equal(plan.days[0].items[1].source, "");
   assert.equal(plan.bookings[0].status, "to_book");
   assert.equal(pageKey("javascript:alert(1)"), "");
+});
+
+test("plan text loses inline citation links", () => {
+  assert.equal(
+    cleanText("Open 10:00–22:00. ([harmay.com](https://harmay.com/en/stores)) See [the guide](https://x.com/a) too."),
+    "Open 10:00–22:00. See the guide too.",
+  );
 });

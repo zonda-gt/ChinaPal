@@ -1,19 +1,24 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import {
   AlertTriangle,
   BedDouble,
   CalendarCheck,
+  ChevronDown,
+  ChevronRight,
   Copy,
   ExternalLink,
   Lightbulb,
   Loader2,
   Map as MapIcon,
+  Maximize2,
   RefreshCw,
   Sparkles,
   TrainFront,
+  X,
 } from "lucide-react";
-import { BOOKING_LABELS, type PlanItem, type SavedPlan } from "@/lib/inbox/plan-data";
+import { BOOKING_LABELS, cleanText, type PlanItem, type SavedPlan, type TripPlan as Plan } from "@/lib/inbox/plan-data";
 import v from "./v2.module.css";
 
 type Props = { peer: string; onQuestionsChanged: () => void };
@@ -44,6 +49,231 @@ const host = (url: string) => {
     return url;
   }
 };
+/** The first sentence, used as the one-line summary of a stop. */
+function splitDetail(detail: string) {
+  const text = cleanText(detail);
+  const match = text.match(/^.+?[.!?](?=\s+[A-Z(]|$)/);
+  const first = match ? match[0] : text;
+  return { first, rest: text.slice(first.length).trim() };
+}
+
+/** One readable day-by-day plan: short rows, details on tap. */
+function PlanView({ plan, wide }: { plan: Plan; wide: boolean }) {
+  const [open, setOpen] = useState<Set<string>>(new Set()),
+    [closedDays, setClosedDays] = useState<Set<number>>(new Set()),
+    [copied, setCopied] = useState<string | null>(null),
+    [allOpen, setAllOpen] = useState(false);
+  const toggle = <T,>(set: Set<T>, key: T) => {
+    const next = new Set(set);
+    if (next.has(key)) next.delete(key);
+    else next.add(key);
+    return next;
+  };
+  function copy(id: string, text: string) {
+    void navigator.clipboard?.writeText(text).then(() => {
+      setCopied(id);
+      setTimeout(() => setCopied((c) => (c === id ? null : c)), 1500);
+    });
+  }
+  const checks = plan.days.flatMap((d) =>
+    d.items.filter((i) => i.verify).map((i) => ({ day: d.label || d.date, title: i.title, verify: cleanText(i.verify) })),
+  );
+  const ourBookings = plan.bookings.filter((b) => b.status === "to_book").length;
+
+  function renderStop(item: PlanItem, id: string) {
+    const expanded = allOpen || open.has(id);
+    const { first, rest } = splitDetail(item.detail);
+    // Clock times sit in the time column; longer phrases go under the title.
+    const shortTime =
+      item.time.length <= 13 && (/^~?\d{1,2}:\d{2}/.test(item.time) || item.time.split(/\s+/).every((w) => w.length <= 7));
+    const chinese = [item.place_cn, item.address_cn].filter(Boolean).join(" · ");
+    const hasMore = !!(rest || chinese || item.getting_there || item.cost || item.verify || item.source);
+    return (
+      <li key={id} className={`${v.stopRow} ${item.kind === "fixed" ? v.stopFixed : ""} ${item.kind === "option" ? v.stopOption : ""}`}>
+        <span className={v.stopTime}>{shortTime ? item.time : ""}</span>
+        <div className={v.stopMain}>
+          <button
+            className={v.stopHead}
+            onClick={() => hasMore && setOpen(toggle(open, id))}
+            aria-expanded={hasMore ? expanded : undefined}
+            disabled={!hasMore}
+          >
+            <span className={v.stopTitle}>
+              {item.title}
+              {item.kind === "fixed" && <i className={v.stopTag}>Fixed</i>}
+              {item.kind === "option" && <i className={v.stopTag}>Optional</i>}
+              {item.verify && (
+                <i className={v.checkMark} title={`To check: ${cleanText(item.verify)}`}>
+                  <AlertTriangle size={11} />
+                </i>
+              )}
+            </span>
+            {!shortTime && item.time && <span className={v.stopWhen}>{item.time}</span>}
+            {first && <span className={v.stopSummary}>{first}</span>}
+            {hasMore && (expanded ? <ChevronDown size={13} className={v.stopChevron} /> : <ChevronRight size={13} className={v.stopChevron} />)}
+          </button>
+          {expanded && hasMore && (
+            <div className={v.stopDetails}>
+              {rest && <p>{rest}</p>}
+              {chinese && (
+                <button className={v.planChinese} onClick={() => copy(id, item.address_cn || item.place_cn)} title="Copy for Amap or DiDi">
+                  <MapIcon size={12} />
+                  <span>{chinese}</span>
+                  {copied === id ? <small>Copied</small> : <Copy size={11} />}
+                </button>
+              )}
+              {item.getting_there && (
+                <p className={v.planRoute}>
+                  <TrainFront size={12} /> <span>{cleanText(item.getting_there)}</span>
+                </p>
+              )}
+              {item.cost && <p className={v.planCost}>{cleanText(item.cost)}</p>}
+              {item.verify && (
+                <p className={v.planVerify}>
+                  <AlertTriangle size={12} /> <span>{cleanText(item.verify)}</span>
+                </p>
+              )}
+              {item.source && (
+                <a className={v.planSource} href={item.source} target="_blank" rel="noreferrer noopener">
+                  <ExternalLink size={11} /> {host(item.source)}
+                </a>
+              )}
+            </div>
+          )}
+        </div>
+      </li>
+    );
+  }
+
+  return (
+    <div className={`${v.planView} ${wide ? v.planWide : ""}`}>
+      {plan.overview && (
+        <button
+          className={v.planOverview}
+          onClick={() => setOpen(toggle(open, "overview"))}
+          title={wide ? undefined : "Show the whole overview"}
+        >
+          <span className={!wide && !open.has("overview") ? v.overviewClamp : ""}>{cleanText(plan.overview)}</span>
+        </button>
+      )}
+      <p className={v.planCounts}>
+        <span>{plan.days.length} days</span>
+        {ourBookings > 0 && <span>{ourBookings} for us to book</span>}
+        {checks.length > 0 && (
+          <span className={v.planCountsCheck}>
+            <AlertTriangle size={11} /> {checks.length} to check
+          </span>
+        )}
+        <button className={v.moreLink} onClick={() => (setAllOpen(!allOpen), setOpen(new Set()))}>
+          {allOpen ? "Hide details" : "Show all details"}
+        </button>
+      </p>
+
+      <ol className={v.planDays}>
+        {plan.days.map((d, di) => {
+          const closed = closedDays.has(di);
+          return (
+            <li key={di} className={v.planDay}>
+              <button className={v.planDayHead} onClick={() => setClosedDays(toggle(closedDays, di))} aria-expanded={!closed}>
+                {closed ? <ChevronRight size={14} /> : <ChevronDown size={14} />}
+                <b>{d.label || d.date}</b>
+                <span>{d.city}</span>
+              </button>
+              {!closed && (
+                <>
+                  {d.base && (
+                    <p className={v.planBase}>
+                      <BedDouble size={12} /> {cleanText(d.base)}
+                    </p>
+                  )}
+                  <ul className={v.stopList}>
+                    {d.items.map((item, ii) => renderStop(item, `${di}-${ii}`))}
+                    {!d.items.length && <li className={v.free}>Free day</li>}
+                  </ul>
+                </>
+              )}
+            </li>
+          );
+        })}
+      </ol>
+
+      {plan.bookings.length > 0 && (
+        <section className={v.planSection}>
+          <h4>
+            <CalendarCheck size={13} /> To book
+          </h4>
+          <ul>
+            {plan.bookings.map((b, i) => (
+              <li key={i} className={v.planBooking}>
+                <span className={v.requestTop}>
+                  <b>{b.item}</b>
+                  <span className={`${v.status} ${b.status === "booked" ? v.status_booked : ""}`}>{BOOKING_LABELS[b.status]}</span>
+                </span>
+                {b.when && <small>{cleanText(b.when)}</small>}
+                {b.deadline && <small className={v.bookingBy}>By: {cleanText(b.deadline)}</small>}
+                {(allOpen || open.has(`b${i}`)) && b.how ? (
+                  <small>{cleanText(b.how)}</small>
+                ) : (
+                  b.how && (
+                    <button className={v.moreLink} onClick={() => setOpen(toggle(open, `b${i}`))}>
+                      How
+                    </button>
+                  )
+                )}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {checks.length > 0 && (
+        <details className={v.planSection}>
+          <summary>
+            <AlertTriangle size={13} /> Still to check ({checks.length})
+          </summary>
+          <ul className={v.checkList}>
+            {checks.map((c, i) => (
+              <li key={i}>
+                <b>
+                  {c.day} · {c.title}
+                </b>
+                <span>{c.verify}</span>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+
+      {plan.tips.length > 0 && (
+        <section className={v.planSection}>
+          <h4>
+            <Lightbulb size={13} /> Tips for this trip
+          </h4>
+          <ul className={v.planTips}>
+            {plan.tips.map((t, i) => (
+              <li key={i}>{cleanText(t)}</li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {plan.sources.length > 0 && (
+        <details className={v.planSection}>
+          <summary>Pages the research used ({plan.sources.length})</summary>
+          <ul className={v.planSources}>
+            {plan.sources.map((url) => (
+              <li key={url}>
+                <a href={url} target="_blank" rel="noreferrer noopener">
+                  {host(url)}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+    </div>
+  );
+}
 
 /** The AI's researched day-by-day plan, built in the background on request. */
 export default function TripPlan({ peer, onQuestionsChanged }: Props) {
@@ -52,7 +282,8 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
     [starting, setStarting] = useState(false),
     [error, setError] = useState(""),
     [instruction, setInstruction] = useState(""),
-    [copied, setCopied] = useState<string | null>(null),
+    [reviseOpen, setReviseOpen] = useState(false),
+    [wide, setWide] = useState(false),
     [, setTick] = useState(0);
   const request = useRef(0),
     builtAt = useRef<string | null>(null);
@@ -83,6 +314,12 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
       clock = setInterval(() => setTick((t) => t + 1), 30000);
     return () => (clearInterval(poll), clearInterval(clock));
   }, [running, load]);
+  useEffect(() => {
+    if (!wide) return;
+    const close = (e: KeyboardEvent) => e.key === "Escape" && setWide(false);
+    window.addEventListener("keydown", close);
+    return () => window.removeEventListener("keydown", close);
+  }, [wide]);
 
   async function start() {
     setStarting(true);
@@ -92,6 +329,7 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
       request.current++;
       setSaved(body);
       setInstruction("");
+      setReviseOpen(false);
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -107,52 +345,45 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
       setError((e as Error).message);
     }
   }
-  function copy(id: string, text: string) {
-    void navigator.clipboard?.writeText(text).then(() => {
-      setCopied(id);
-      setTimeout(() => setCopied((c) => (c === id ? null : c)), 1500);
-    });
-  }
 
   const plan = saved?.plan;
-  function renderItem(item: PlanItem, id: string) {
-    const chinese = [item.place_cn, item.address_cn].filter(Boolean).join(" · ");
-    return (
-      <li key={id} className={`${v.planItem} ${item.kind === "fixed" ? v.planFixed : ""} ${item.kind === "option" ? v.planOption : ""}`}>
-        <div className={v.planItemHead}>
-          {item.time && <em className={v.time}>{item.time}</em>}
-          <b>{item.title}</b>
-          {item.kind === "fixed" && <span className={v.planKind}>Fixed</span>}
-          {item.kind === "option" && <span className={v.planKind}>Option</span>}
-        </div>
-        {item.detail && <p>{item.detail}</p>}
-        {chinese && (
-          <button className={v.planChinese} onClick={() => copy(id, item.address_cn || item.place_cn)} title="Copy the Chinese name or address">
-            <MapIcon size={12} />
-            <span>{chinese}</span>
-            <Copy size={11} />
-            {copied === id && <small>Copied</small>}
-          </button>
-        )}
-        {item.getting_there && (
-          <p className={v.planRoute}>
-            <TrainFront size={12} /> {item.getting_there}
-          </p>
-        )}
-        {item.cost && <p className={v.planCost}>{item.cost}</p>}
-        {item.verify && (
-          <p className={v.planVerify}>
-            <AlertTriangle size={12} /> Check: {item.verify}
-          </p>
-        )}
-        {item.source && (
-          <a className={v.planSource} href={item.source} target="_blank" rel="noreferrer noopener">
-            <ExternalLink size={11} /> {host(item.source)}
-          </a>
-        )}
-      </li>
-    );
-  }
+  const meta =
+    saved && plan
+      ? [
+          saved.generated_at && `Built ${ago(saved.generated_at)}`,
+          saved.started_by && `by ${saved.started_by}`,
+          saved.usage && `${saved.usage.searches} web searches`,
+          saved.instruction && `asked: “${saved.instruction}”`,
+        ]
+          .filter(Boolean)
+          .join(" · ")
+      : "";
+  const startForm = (
+    <form
+      className={v.planStart}
+      onSubmit={(e) => {
+        e.preventDefault();
+        void start();
+      }}
+    >
+      <textarea
+        value={instruction}
+        maxLength={2000}
+        rows={2}
+        autoFocus={!!plan}
+        placeholder={plan ? "What should change? e.g. move the perm to Tuesday, add a qipao shop" : "Anything to focus on? (optional) e.g. perm on Monday, relaxed first day"}
+        onChange={(e) => setInstruction(e.target.value)}
+        aria-label="Instruction for the plan"
+      />
+      <div className={v.generateRow}>
+        <button className={v.generate} type="submit" disabled={starting}>
+          {starting ? <Loader2 size={14} className={v.spin} /> : plan ? <RefreshCw size={14} /> : <Sparkles size={14} />}
+          {starting ? "Starting…" : plan ? (instruction.trim() ? "Revise plan" : "Rebuild from scratch") : "Build plan"}
+        </button>
+        <span>{plan ? "A few minutes · this plan stays until the new one is ready" : "Takes 3–10 minutes"}</span>
+      </div>
+    </form>
+  );
 
   return (
     <div className={v.brief}>
@@ -171,8 +402,7 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
           {saved.error}
         </p>
       )}
-
-      {running ? (
+      {running && (
         <div className={v.planRunning}>
           <Loader2 size={16} className={v.spin} />
           <div>
@@ -186,128 +416,56 @@ export default function TripPlan({ peer, onQuestionsChanged }: Props) {
             Stop
           </button>
         </div>
-      ) : (
-        !loading && (
-          <form
-            className={v.planStart}
-            onSubmit={(e) => {
-              e.preventDefault();
-              void start();
-            }}
-          >
-            {!plan && (
-              <p className={v.briefEmpty}>
-                A researched day-by-day plan around their fixed points, with Chinese addresses, metro routes, what to book
-                and what still needs checking. Anything it can&apos;t plan without goes into Questions.
-              </p>
-            )}
-            <textarea
-              value={instruction}
-              maxLength={2000}
-              rows={2}
-              placeholder={plan ? "What should change? e.g. move the perm to Tuesday, add a qipao shop" : "Anything to focus on? (optional) e.g. perm on Monday, relaxed first day"}
-              onChange={(e) => setInstruction(e.target.value)}
-              aria-label="Instruction for the plan"
-            />
-            <div className={v.generateRow}>
-              <button className={v.generate} type="submit" disabled={starting}>
-                {starting ? <Loader2 size={14} className={v.spin} /> : plan ? <RefreshCw size={14} /> : <Sparkles size={14} />}
-                {starting ? "Starting…" : plan ? (instruction.trim() ? "Revise plan" : "Rebuild plan") : "Build plan"}
-              </button>
-              <span>{plan ? "Takes a few minutes · the current plan stays until the new one is ready" : "Takes 3–10 minutes"}</span>
-            </div>
-          </form>
-        )
       )}
-
-      {plan && saved && (
+      {!loading && !running && !plan && (
         <>
-          <p className={v.planMeta}>
-            Built {saved.generated_at ? ago(saved.generated_at) : ""}
-            {saved.started_by ? ` by ${saved.started_by}` : ""}
-            {saved.usage ? ` · ${saved.usage.searches} web searches` : ""}
-            {saved.started_at && saved.generated_at ? ` · took ${minutes(saved.started_at, Date.parse(saved.generated_at))} min` : ""}
-            {saved.instruction ? ` · asked: “${saved.instruction}”` : ""}
+          <p className={v.briefEmpty}>
+            A researched day-by-day plan around their fixed points, with Chinese addresses, metro routes, what to book and
+            what still needs checking. Anything it can&apos;t plan without goes into Questions.
           </p>
-          {plan.overview && <p className={v.planOverview}>{plan.overview}</p>}
-
-          <section className={v.briefSection}>
-            <ol className={v.timeline}>
-              {plan.days.map((d, di) => (
-                <li key={di} className={v.day}>
-                  <div className={v.dayHead}>
-                    <b>{d.label || d.date}</b>
-                    <span>{d.city}</span>
-                  </div>
-                  {d.base && (
-                    <p className={v.planBase}>
-                      <BedDouble size={12} /> {d.base}
-                    </p>
-                  )}
-                  <ul className={v.planItems}>
-                    {d.items.map((item, ii) => renderItem(item, `${di}-${ii}`))}
-                    {!d.items.length && <li className={v.free}>Free day</li>}
-                  </ul>
-                </li>
-              ))}
-            </ol>
-          </section>
-
-          {plan.bookings.length > 0 && (
-            <section className={v.briefSection}>
-              <header>
-                <h4>
-                  <CalendarCheck size={13} /> To book
-                </h4>
-              </header>
-              <ul>
-                {plan.bookings.map((b, i) => (
-                  <li key={i} className={v.planBooking}>
-                    <span className={v.requestTop}>
-                      <b>{b.item}</b>
-                      <span className={`${v.status} ${b.status === "booked" ? v.status_booked : ""}`}>{BOOKING_LABELS[b.status]}</span>
-                    </span>
-                    <small>
-                      {[b.when, b.how].filter(Boolean).join(" · ")}
-                      {b.deadline && <strong> · by {b.deadline}</strong>}
-                    </small>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          {plan.tips.length > 0 && (
-            <section className={v.briefSection}>
-              <header>
-                <h4>
-                  <Lightbulb size={13} /> Tips for this trip
-                </h4>
-              </header>
-              <ul className={v.planTips}>
-                {plan.tips.map((t, i) => (
-                  <li key={i}>{t}</li>
-                ))}
-              </ul>
-            </section>
-          )}
-
-          {plan.sources.length > 0 && (
-            <details className={v.closedQuestions}>
-              <summary>Pages the research used ({plan.sources.length})</summary>
-              <ul className={v.planSources}>
-                {plan.sources.map((url) => (
-                  <li key={url}>
-                    <a href={url} target="_blank" rel="noreferrer noopener">
-                      {host(url)}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </details>
-          )}
+          {startForm}
         </>
       )}
+
+      {plan && (
+        <>
+          <div className={v.planToolbar}>
+            <span>{meta}</span>
+            <button className={v.ghostSmall} onClick={() => setWide(true)} title="Read the plan full width">
+              <Maximize2 size={12} /> Full view
+            </button>
+          </div>
+          <PlanView plan={plan} wide={false} />
+          {!running &&
+            (reviseOpen ? (
+              startForm
+            ) : (
+              <button className={v.reviseButton} onClick={() => setReviseOpen(true)}>
+                <RefreshCw size={13} /> Revise or rebuild this plan
+              </button>
+            ))}
+        </>
+      )}
+
+      {wide &&
+        plan &&
+        createPortal(
+          <div className={v.planOverlay} role="dialog" aria-modal="true" aria-label="Trip plan" onClick={() => setWide(false)}>
+            <div className={v.planSheet} onClick={(e) => e.stopPropagation()}>
+              <header>
+                <div>
+                  <h2>Trip plan</h2>
+                  <span>{meta}</span>
+                </div>
+                <button aria-label="Close" onClick={() => setWide(false)} autoFocus>
+                  <X size={18} />
+                </button>
+              </header>
+              <PlanView plan={plan} wide />
+            </div>
+          </div>,
+          document.body,
+        )}
     </div>
   );
 }
