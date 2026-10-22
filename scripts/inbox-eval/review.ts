@@ -28,6 +28,9 @@ async function main() {
     sonnet: "Claude Sonnet 5.5",
     opus: "Claude Opus 5.5",
     "claude-session": "Claude (this session)",
+    "v2-edit": "Today's prompt + editor",
+    focus: "Focus prompt",
+    "focus-edit": "Focus prompt + editor",
     staff: "Actual message sent",
   };
   if (!resultsFile) throw new Error("Pass the results file to review.");
@@ -97,6 +100,9 @@ async function main() {
         return `<article class="option" data-label="${label}">
     <header><label><input type="radio" name="best-${c.id}" value="${label}"> Best: <b>${label}</b></label><span class="who"${labelled ? "" : " hidden"}>${labelled ? NAMES[o.key] : ""}</span></header>
     ${o.messages.map((t) => `<div class="draft">${esc(t).replace(/\n/g, "<br>")}</div>`).join("")}
+    <div class="verdict">${[["send", "Send as is"], ["edit", "Small edits"], ["rewrite", "Rewrite"]]
+      .map(([v, t]) => `<label><input type="radio" name="verdict-${c.id}-${label}" value="${v}"> ${t}</label>`)
+      .join("")}</div>
     ${o.warnings.length ? `<details class="warn"><summary>Staff warnings (${o.warnings.length})</summary><ul>${o.warnings.map((w) => `<li>${esc(w)}</li>`).join("")}</ul></details>` : ""}
     <div class="tags">${["Wrong or invented fact", "Asked for known info", "Vague / not specific", "Too long", "Missed the question", "Too salesy", "Sounds like a bot"]
       .map((t) => `<label><input type="checkbox" data-tag="${t}"> ${t}</label>`)
@@ -132,13 +138,13 @@ async function main() {
   .options{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-top:14px}
   .option{border:1px solid var(--line);border-radius:8px;padding:10px;display:flex;flex-direction:column;gap:8px}.option header{display:flex;justify-content:space-between}
   .option.best{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}.who{font-size:12px;color:var(--accent);font-weight:600}
-  .draft{white-space:normal;background:var(--bg);padding:8px;border-radius:6px;overflow-wrap:anywhere}.tags{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}
+  .draft{white-space:normal;background:var(--bg);padding:8px;border-radius:6px;overflow-wrap:anywhere}.tags{display:flex;flex-direction:column;font-size:12px;color:var(--muted)}.verdict{display:flex;gap:10px;flex-wrap:wrap;font-size:13px}
   .warn{font-size:12px;color:var(--muted)}.note{width:100%;margin-top:10px;min-height:44px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px}
   table{border-collapse:collapse;margin-top:8px}td,th{border:1px solid var(--line);padding:4px 8px;text-align:left}#score{display:none}
   @media (max-width:600px){body{padding:16px 16px}.msg img{max-width:100%}}
   </style></head><body><main>
   <h1>Reply assistant review</h1>
-  <p>${labelled ? "Each reply is labelled with the version that wrote it. Pick the best reply and tick any problems. Ratings save in this browser." : "For each case, pick the best reply and tick any problems. Labels are shuffled; don't reveal until you've finished. Ratings save in this browser."}</p>
+  <p>${labelled ? "Each reply is labelled with the version that wrote it. Pick the best reply and tick any problems. Ratings save in this browser." : "For each case, say whether you would send each reply, pick the best one and tick any problems. Labels are shuffled; don't reveal until you've finished. Ratings save in this browser."}</p>
   <div class="bar"><span id="progress"></span><button id="export">Export ratings</button><button id="reveal">${labelled ? "Show score" : "Reveal versions + score"}</button></div>
   <div id="score"></div>
   ${sections.join("\n")}
@@ -149,19 +155,20 @@ async function main() {
   let state={};try{state=JSON.parse(localStorage.getItem(KEY)||"{}")}catch{}
   const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(state))}catch{}progress()};
   function progress(){const n=Object.keys(MAP).length,d=Object.keys(MAP).filter(c=>state[c]?.best).length;document.getElementById("progress").textContent=d+" of "+n+" cases rated"}
-  document.querySelectorAll(".case").forEach(sec=>{const c=sec.dataset.case;state[c]=state[c]||{best:null,tags:{},note:""};
-   sec.querySelectorAll("input[type=radio]").forEach(r=>{if(state[c].best===r.value)r.checked=true;r.onchange=()=>{state[c].best=r.value;mark(sec,c);save()}});
+  document.querySelectorAll(".case").forEach(sec=>{const c=sec.dataset.case;state[c]=state[c]||{best:null,tags:{},note:""};state[c].verdict=state[c].verdict||{};
+   sec.querySelectorAll(".verdict input").forEach(r=>{const L=r.closest(".option").dataset.label;if(state[c].verdict[L]===r.value)r.checked=true;r.onchange=()=>{state[c].verdict[L]=r.value;save()}});
+   sec.querySelectorAll("header input[type=radio]").forEach(r=>{if(state[c].best===r.value)r.checked=true;r.onchange=()=>{state[c].best=r.value;mark(sec,c);save()}});
    sec.querySelectorAll(".option").forEach(o=>{const L=o.dataset.label;o.querySelectorAll("input[type=checkbox]").forEach(cb=>{const t=cb.dataset.tag;cb.checked=!!state[c].tags[L]?.includes(t);cb.onchange=()=>{const s=new Set(state[c].tags[L]||[]);cb.checked?s.add(t):s.delete(t);state[c].tags[L]=[...s];save()}})});
    const note=sec.querySelector(".note");note.value=state[c].note||"";note.oninput=()=>{state[c].note=note.value;save()};mark(sec,c)});
   function mark(sec,c){sec.querySelectorAll(".option").forEach(o=>o.classList.toggle("best",o.dataset.label===state[c].best))}
-  document.getElementById("export").onclick=()=>{const out=Object.fromEntries(Object.entries(state).map(([c,s])=>[c,{...s,best_version:MAP[c]?.[s.best]||null,tags_by_version:Object.fromEntries(Object.entries(s.tags).map(([L,t])=>[MAP[c]?.[L],t]))}]));
+  document.getElementById("export").onclick=()=>{const out=Object.fromEntries(Object.entries(state).map(([c,s])=>[c,{...s,best_version:MAP[c]?.[s.best]||null,tags_by_version:Object.fromEntries(Object.entries(s.tags).map(([L,t])=>[MAP[c]?.[L],t])),verdict_by_version:Object.fromEntries(Object.entries(s.verdict||{}).map(([L,v])=>[MAP[c]?.[L],v]))}]));
    const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:"application/json"}));a.download="review-ratings.json";a.click()};
   document.getElementById("reveal").onclick=()=>{if(!LABELLED&&!confirm("Reveal which version wrote each reply?"))return;
    document.querySelectorAll(".case").forEach(sec=>{const c=sec.dataset.case;sec.querySelectorAll(".option").forEach(o=>{const w=o.querySelector(".who");w.textContent=${JSON.stringify(NAMES)}[MAP[c][o.dataset.label]];w.hidden=false})});
-   const wins={},seen={},tags={};for(const [c,m] of Object.entries(MAP)){for(const v of Object.values(m))seen[v]=(seen[v]||0)+1;const s=state[c];if(s?.best)wins[m[s.best]]=(wins[m[s.best]]||0)+1;for(const [L,t] of Object.entries(s?.tags||{}))for(const x of t){const v=m[L];tags[v]=tags[v]||{};tags[v][x]=(tags[v][x]||0)+1}}
+   const wins={},seen={},tags={},verdicts={};for(const [c,m] of Object.entries(MAP)){for(const v of Object.values(m))seen[v]=(seen[v]||0)+1;const s=state[c];for(const [L,x] of Object.entries(s?.verdict||{})){const v=m[L];verdicts[v]=verdicts[v]||{};verdicts[v][x]=(verdicts[v][x]||0)+1}if(s?.best)wins[m[s.best]]=(wins[m[s.best]]||0)+1;for(const [L,t] of Object.entries(s?.tags||{}))for(const x of t){const v=m[L];tags[v]=tags[v]||{};tags[v][x]=(tags[v][x]||0)+1}}
    const names=${JSON.stringify(NAMES)};const allTags=[...new Set(Object.values(tags).flatMap(o=>Object.keys(o)))];
-   let h="<h2>Scorecard</h2><table><tr><th>Version</th><th>Picked best</th><th>Cases shown</th>"+allTags.map(t=>"<th>"+t+"</th>").join("")+"</tr>";
-   for(const v of Object.keys(seen))h+="<tr><td>"+names[v]+"</td><td>"+(wins[v]||0)+"</td><td>"+seen[v]+"</td>"+allTags.map(t=>"<td>"+((tags[v]||{})[t]||0)+"</td>").join("")+"</tr>";
+   let h="<h2>Scorecard</h2><table><tr><th>Version</th><th>Picked best</th><th>Cases shown</th><th>Send as is</th><th>Small edits</th><th>Rewrite</th>"+allTags.map(t=>"<th>"+t+"</th>").join("")+"</tr>";
+   for(const v of Object.keys(seen))h+="<tr><td>"+names[v]+"</td><td>"+(wins[v]||0)+"</td><td>"+seen[v]+"</td>"+["send","edit","rewrite"].map(x=>"<td>"+((verdicts[v]||{})[x]||0)+"</td>").join("")+allTags.map(t=>"<td>"+((tags[v]||{})[t]||0)+"</td>").join("")+"</tr>";
    const el=document.getElementById("score");el.innerHTML=h+"</table>";el.style.display="block";el.scrollIntoView()};
   progress();
   </script></body></html>`;
