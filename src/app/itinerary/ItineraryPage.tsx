@@ -6,7 +6,7 @@
    Layout: Mobile-first single column, desktop 2-column with sticky sidebar
    Fonts: Fraunces (display headings) + Plus Jakarta Sans (body)
 */
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { MapPin, Clock, Utensils, Camera, Sunset, Moon, Sun, ChevronDown, ChevronUp, ChevronLeft, ChevronRight, MessageCircle, Star, Info, Plane, Hotel, Navigation, Check, Sparkles, Pencil, Heart, Car, TramFront, TrainFront, Bus, Footprints } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -120,6 +120,17 @@ interface TimelineItem {
   showPhotoPreview?: boolean;
   previewLine?: string;
   transportAfter?: TransportLeg;
+  /* Other choices for this slot, shown as cards to swipe beside the main one */
+  alternatives?: Alternative[];
+}
+
+interface Alternative {
+  tag: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  images?: string[];
+  gettingThere?: string;
 }
 
 interface MeiPick {
@@ -533,6 +544,89 @@ function TimelineCardWithTransport({ item, index }: { item: TimelineItem; index:
   );
 }
 
+function AlternativeCard({ alt }: { alt: Alternative }) {
+  const images = alt.images ?? [];
+  return (
+    <div style={{ background: "#fff", borderRadius: 18, border: "1.5px dashed #E2D9CE", padding: "12px 14px 14px" }}>
+      <span style={{ display: "inline-block", fontSize: 10.5, fontWeight: 800, color: "#B45309", background: "#FFF6E8", padding: "3px 9px", borderRadius: 20, marginBottom: 7 }}>{alt.tag}</span>
+      {alt.subtitle && <p style={{ fontSize: 10.5, color: "#8A8A8A", fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{alt.subtitle}</p>}
+      <h3 style={{ fontSize: 15, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{alt.title}</h3>
+      {images.length > 0 && (
+        <div style={{ display: "grid", gridTemplateColumns: images.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginTop: 10 }}>
+          {images.slice(0, 2).map((src) => (
+            <div key={src} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
+              <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+          ))}
+        </div>
+      )}
+      {alt.description.split("\n\n").map((paragraph, i) => (
+        <p key={i} style={{ fontSize: 12.5, color: "#555", margin: "9px 0 0", lineHeight: 1.5 }}>{paragraph}</p>
+      ))}
+      {alt.gettingThere && (
+        <p style={{ display: "flex", gap: 6, alignItems: "flex-start", fontSize: 11.5, color: "#777", margin: "9px 0 0", lineHeight: 1.45 }}>
+          <Car size={13} color="#AAA" style={{ flexShrink: 0, marginTop: 1 }} />
+          <span>{alt.gettingThere}</span>
+        </p>
+      )}
+    </div>
+  );
+}
+
+/* The main card plus its alternatives in a row that snaps card by card. The
+   next card peeks in from the right so people can see there is more. */
+function OptionsRow({ main, alternatives }: { main: React.ReactNode; alternatives: Alternative[] }) {
+  const rowRef = useRef<HTMLDivElement | null>(null);
+  const [current, setCurrent] = useState(0);
+  const count = alternatives.length + 1;
+  const go = (index: number) => {
+    const row = rowRef.current;
+    const card = row?.children[index] as HTMLElement | undefined;
+    if (row && card) row.scrollTo({ left: card.offsetLeft - row.offsetLeft, behavior: "smooth" });
+  };
+  const onScroll = () => {
+    const row = rowRef.current;
+    if (!row) return;
+    const cards = Array.from(row.children) as HTMLElement[];
+    const left = row.scrollLeft;
+    let nearest = 0;
+    cards.forEach((card, i) => {
+      if (Math.abs(card.offsetLeft - row.offsetLeft - left) < Math.abs(cards[nearest].offsetLeft - row.offsetLeft - left)) nearest = i;
+    });
+    if (nearest !== current) setCurrent(nearest);
+  };
+  /* The row takes the height of the card in view, so a taller alternative
+     doesn't leave a gap under the main card. */
+  useEffect(() => {
+    const row = rowRef.current;
+    const card = row?.children[current] as HTMLElement | undefined;
+    if (!row || !card) return;
+    const fit = () => { row.style.height = `${card.offsetHeight}px`; };
+    fit();
+    const observer = new ResizeObserver(fit);
+    observer.observe(card);
+    return () => observer.disconnect();
+  }, [current]);
+  return (
+    <>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 7px" }}>
+        <button onClick={() => go(0)} style={{ border: "none", cursor: "pointer", fontSize: 10.5, fontWeight: 800, padding: "3px 9px", borderRadius: 20, background: current === 0 ? "#D0021B" : "#F2EEE8", color: current === 0 ? "#fff" : "#888", fontFamily: "inherit" }}>★ Our pick</button>
+        <button onClick={() => go(current === count - 1 ? 0 : current + 1)} style={{ border: "none", background: "none", cursor: "pointer", fontSize: 11, fontWeight: 700, color: "#B45309", padding: 0, fontFamily: "inherit" }}>
+          {current === 0 ? `+${alternatives.length} other option${alternatives.length > 1 ? "s" : ""} →` : `Option ${current} of ${alternatives.length} · ${current === count - 1 ? "back to our pick" : "next"} →`}
+        </button>
+      </div>
+      <div ref={rowRef} onScroll={onScroll} className="itinerary-options-row" style={{ display: "flex", gap: 10, overflowX: "auto", overflowY: "hidden", transition: "height 0.25s ease", scrollSnapType: "x mandatory", alignItems: "flex-start", scrollbarWidth: "none", WebkitOverflowScrolling: "touch", marginRight: -16, paddingRight: 16 }}>
+        <div style={{ flex: "0 0 86%", scrollSnapAlign: "start", minWidth: 0 }}>{main}</div>
+        {alternatives.map((alt) => (
+          <div key={alt.title} style={{ flex: "0 0 86%", scrollSnapAlign: "start", minWidth: 0 }}>
+            <AlternativeCard alt={alt} />
+          </div>
+        ))}
+      </div>
+    </>
+  );
+}
+
 function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   const [expanded, setExpanded] = useState(false);
   const [imgIdx, setImgIdx] = useState(0);
@@ -554,6 +648,128 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   const isHotel = item.type === "hotel";
   const isCompact = (isMeal || isTransport || isHotel) && !item.showPhotoPreview;
 
+  const card = (
+    <div
+      style={{
+        background: isCompact ? "#FBFAF8" : "#fff",
+        borderRadius: isCompact ? 12 : 18,
+        overflow: "hidden",
+        boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
+        border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
+        cursor: canExpand ? "pointer" : "default",
+      }}
+      onClick={() => canExpand && setExpanded(!expanded)}
+    >
+      {/* Hero image carousel — only shown when expanded */}
+      {images.length > 0 && expanded && (
+        <div style={{ position: "relative", height: 160, overflow: "hidden" }}>
+          <img src={images[imgIdx]} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.2s" }} />
+          {images.length > 1 && (
+            <>
+              <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx - 1 + images.length) % images.length); }} style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                <ChevronLeft size={16} color="#fff" />
+              </button>
+              <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx + 1) % images.length); }} style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
+                <ChevronRight size={16} color="#fff" />
+              </button>
+              <div style={{ position: "absolute", bottom: 8, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 5 }}>
+                {images.map((_, i) => (
+                  <div key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === imgIdx ? "#fff" : "rgba(255,255,255,0.45)", transition: "background 0.2s" }} />
+                ))}
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
+      <div style={{ padding: isCompact ? "9px 13px" : "14px 16px" }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
+          <div style={{ flex: 1 }}>
+            <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
+            <h3 style={{ fontSize: isCompact ? 13 : 16, fontWeight: isCompact ? 700 : 800, color: isCompact ? "#666" : "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
+          </div>
+          {canExpand && !(!expanded && hasPhotoPreview) && (
+            <div style={{ width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
+              {expanded ? <ChevronUp size={isCompact ? 12 : 14} color="#888" /> : <ChevronDown size={isCompact ? 12 : 14} color="#888" />}
+            </div>
+          )}
+        </div>
+
+        {/* Photo previews for activities and opted-in dining or hotel stops */}
+        {!expanded && hasPhotoPreview && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ display: "grid", gridTemplateColumns: previewImages.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginBottom: 8 }}>
+              {previewImages.slice(0, 2).map((src, i) => (
+                <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
+                  <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                </div>
+              ))}
+            </div>
+            {item.previewLine && (
+              <p style={{ fontSize: 12.5, color: "#666", margin: 0, lineHeight: 1.5 }}>{item.previewLine}</p>
+            )}
+            <div style={{ display: "flex", justifyContent: "center", marginTop: 4, marginBottom: -4 }}>
+              <ChevronDown size={14} color="#C0C0C0" />
+            </div>
+          </div>
+        )}
+
+        {/* COLLAPSED PREVIEW — transport: inline duration + price + train info */}
+        {!expanded && item.type === "transport" && item.previewLine && (
+          <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
+            {item.previewLine.split("·").map((part, i, arr) => (
+              <React.Fragment key={i}>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{part.trim()}</span>
+                {i < arr.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
+              </React.Fragment>
+            ))}
+          </div>
+        )}
+
+        {/* COLLAPSED PREVIEW — meal: inline restaurant names */}
+        {!expanded && item.type === "meal" && item.restaurants && (
+          <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
+            {item.restaurants.map((r, i) => (
+              <React.Fragment key={r.name}>
+                <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{r.englishName || r.name}</span>
+                {i < item.restaurants!.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
+              </React.Fragment>
+            ))}
+            <span style={{ fontSize: 10, color: "#AAA", marginLeft: 2 }}>{item.restaurants[0].price}</span>
+          </div>
+        )}
+
+        {expanded && (
+          <div style={{ marginTop: 12 }}>
+            {item.description.split("\n\n").map((paragraph, paragraphIndex) => (
+              <p key={paragraphIndex} style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{paragraph}</p>
+            ))}
+
+            {item.restaurants && (
+              <div onClick={(e) => e.stopPropagation()}>
+                <p style={{ fontSize: 11, fontWeight: 800, color: "#1A1A1A", margin: "0 0 6px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
+                  Recommended restaurants
+                </p>
+                <p style={{ fontSize: 12, color: "#888", margin: "0 0 10px", lineHeight: 1.4 }}>
+                  These are hard to book without a Chinese phone number — we reserve them for you.
+                </p>
+                {item.restaurants.map((r) => (
+                  <RestaurantCard key={r.name} r={r} />
+                ))}
+              </div>
+            )}
+
+            {item.tip && (
+              <div style={{ background: "#FFF8F0", borderRadius: 12, padding: "10px 14px", marginTop: 12 }}>
+                <p style={{ fontSize: 12.5, color: "#555", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>{item.tip}</p>
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+
   return (
     <div style={{ display: "flex", gap: 0, marginBottom: 0 }}>
       {/* Timeline spine */}
@@ -572,128 +788,10 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
       </div>
 
       {/* Card */}
-      <div style={{ flex: 1, paddingBottom: isCompact ? 14 : 20, paddingLeft: 8 }}>
+      <div style={{ flex: 1, minWidth: 0, paddingBottom: isCompact ? 14 : 20, paddingLeft: 8 }}>
         <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : "#999", fontWeight: 700, margin: "0 0 3px", letterSpacing: "0.06em", textTransform: "uppercase", paddingTop: isCompact ? 6 : 10 }}>{item.time}</p>
 
-        <div
-          style={{
-            background: isCompact ? "#FBFAF8" : "#fff",
-            borderRadius: isCompact ? 12 : 18,
-            overflow: "hidden",
-            boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
-            border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
-            cursor: canExpand ? "pointer" : "default",
-          }}
-          onClick={() => canExpand && setExpanded(!expanded)}
-        >
-          {/* Hero image carousel — only shown when expanded */}
-          {images.length > 0 && expanded && (
-            <div style={{ position: "relative", height: 160, overflow: "hidden" }}>
-              <img src={images[imgIdx]} alt={item.title} style={{ width: "100%", height: "100%", objectFit: "cover", transition: "opacity 0.2s" }} />
-              {images.length > 1 && (
-                <>
-                  <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx - 1 + images.length) % images.length); }} style={{ position: "absolute", left: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
-                    <ChevronLeft size={16} color="#fff" />
-                  </button>
-                  <button onClick={(e) => { e.stopPropagation(); setImgIdx((imgIdx + 1) % images.length); }} style={{ position: "absolute", right: 8, top: "50%", transform: "translateY(-50%)", background: "rgba(0,0,0,0.45)", border: "none", borderRadius: "50%", width: 28, height: 28, display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
-                    <ChevronRight size={16} color="#fff" />
-                  </button>
-                  <div style={{ position: "absolute", bottom: 8, left: "50%", transform: "translateX(-50%)", display: "flex", gap: 5 }}>
-                    {images.map((_, i) => (
-                      <div key={i} style={{ width: 6, height: 6, borderRadius: "50%", background: i === imgIdx ? "#fff" : "rgba(255,255,255,0.45)", transition: "background 0.2s" }} />
-                    ))}
-                  </div>
-                </>
-              )}
-            </div>
-          )}
-
-          <div style={{ padding: isCompact ? "9px 13px" : "14px 16px" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
-              <div style={{ flex: 1 }}>
-                <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
-                <h3 style={{ fontSize: isCompact ? 13 : 16, fontWeight: isCompact ? 700 : 800, color: isCompact ? "#666" : "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{item.title}</h3>
-              </div>
-              {canExpand && !(!expanded && hasPhotoPreview) && (
-                <div style={{ width: isCompact ? 22 : 28, height: isCompact ? 22 : 28, borderRadius: 8, background: "#F5F2EE", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginLeft: 8 }}>
-                  {expanded ? <ChevronUp size={isCompact ? 12 : 14} color="#888" /> : <ChevronDown size={isCompact ? 12 : 14} color="#888" />}
-                </div>
-              )}
-            </div>
-
-            {/* Photo previews for activities and opted-in dining or hotel stops */}
-            {!expanded && hasPhotoPreview && (
-              <div style={{ marginTop: 10 }}>
-                <div style={{ display: "grid", gridTemplateColumns: previewImages.length > 1 ? "1fr 1fr" : "1fr", gap: 5, marginBottom: 8 }}>
-                  {previewImages.slice(0, 2).map((src, i) => (
-                    <div key={i} style={{ aspectRatio: "4/3", borderRadius: 10, overflow: "hidden" }}>
-                      <img src={src} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                    </div>
-                  ))}
-                </div>
-                {item.previewLine && (
-                  <p style={{ fontSize: 12.5, color: "#666", margin: 0, lineHeight: 1.5 }}>{item.previewLine}</p>
-                )}
-                <div style={{ display: "flex", justifyContent: "center", marginTop: 4, marginBottom: -4 }}>
-                  <ChevronDown size={14} color="#C0C0C0" />
-                </div>
-              </div>
-            )}
-
-            {/* COLLAPSED PREVIEW — transport: inline duration + price + train info */}
-            {!expanded && item.type === "transport" && item.previewLine && (
-              <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
-                {item.previewLine.split("·").map((part, i, arr) => (
-                  <React.Fragment key={i}>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{part.trim()}</span>
-                    {i < arr.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
-                  </React.Fragment>
-                ))}
-              </div>
-            )}
-
-            {/* COLLAPSED PREVIEW — meal: inline restaurant names */}
-            {!expanded && item.type === "meal" && item.restaurants && (
-              <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
-                {item.restaurants.map((r, i) => (
-                  <React.Fragment key={r.name}>
-                    <span style={{ fontSize: 11, fontWeight: 700, color: "#555" }}>{r.englishName || r.name}</span>
-                    {i < item.restaurants!.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>·</span>}
-                  </React.Fragment>
-                ))}
-                <span style={{ fontSize: 10, color: "#AAA", marginLeft: 2 }}>{item.restaurants[0].price}</span>
-              </div>
-            )}
-
-            {expanded && (
-              <div style={{ marginTop: 12 }}>
-                {item.description.split("\n\n").map((paragraph, paragraphIndex) => (
-                  <p key={paragraphIndex} style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{paragraph}</p>
-                ))}
-
-                {item.restaurants && (
-                  <div onClick={(e) => e.stopPropagation()}>
-                    <p style={{ fontSize: 11, fontWeight: 800, color: "#1A1A1A", margin: "0 0 6px", textTransform: "uppercase", letterSpacing: "0.06em" }}>
-                      Recommended restaurants
-                    </p>
-                    <p style={{ fontSize: 12, color: "#888", margin: "0 0 10px", lineHeight: 1.4 }}>
-                      These are hard to book without a Chinese phone number — we reserve them for you.
-                    </p>
-                    {item.restaurants.map((r) => (
-                      <RestaurantCard key={r.name} r={r} />
-                    ))}
-                  </div>
-                )}
-
-                {item.tip && (
-                  <div style={{ background: "#FFF8F0", borderRadius: 12, padding: "10px 14px", marginTop: 12 }}>
-                    <p style={{ fontSize: 12.5, color: "#555", margin: 0, lineHeight: 1.5, fontStyle: "italic" }}>{item.tip}</p>
-                  </div>
-                )}
-              </div>
-            )}
-          </div>
-        </div>
+        {item.alternatives?.length ? <OptionsRow main={card} alternatives={item.alternatives} /> : card}
       </div>
     </div>
   );
@@ -944,6 +1042,7 @@ export default function ItineraryPage({ images, leadName, config, chromeless, in
     <div style={{ minHeight: chromeless ? "auto" : "100vh", background: "#F7F5F2", fontFamily: "'Plus Jakarta Sans', sans-serif", paddingBottom: chromeless ? 40 : 100 }}>
       {!chromeless && <Navbar />}
       <style>{`
+        .itinerary-options-row::-webkit-scrollbar { display: none; }
         @media (min-width: 900px) {
           .itinerary-layout {
             grid-template-columns: 320px minmax(0,1fr) !important;
