@@ -1,4 +1,4 @@
-import { Baby, Camera, Car, Castle, Footprints, Hotel, Moon, Plane, Ship, Sparkles, Sun, Sunset, TrainFront, Utensils } from "lucide-react";
+import { Baby, Camera, Car, Castle, Footprints, Hotel, Moon, Plane, Ship, ShoppingBag, Sparkles, Sun, Sunset, TrainFront, Utensils } from "lucide-react";
 import type { ItineraryConfig } from "../ItineraryPage";
 
 /* Places, opening days, addresses and journey times were checked in Amap on
@@ -13,6 +13,8 @@ const DO = "/uploads/itinerary/doanhtu";
 
 export const photos = {
   sofitelSh: [A("sofitel-sh"), A("sofitel-sh-2")],
+  millfun: [A("millfun"), A("millfun-2")],
+  nanjingDay: [`${SH}/lego-flagship.jpg`, `${SH}/nanjing-road-neon.jpg`],
   lailai: [`${DO}/lailai.webp`, `${DO}/lailai-2.webp`],
   xintiandi: ["/uploads/itinerary/antonio/xintiandi-1.webp", "/uploads/itinerary/antonio/xintiandi-2.webp", "/uploads/itinerary/vivek/xintiandi.webp"],
   yugarden: [A("yugarden"), `${SH}/yugarden-bridge.jpg`],
@@ -75,15 +77,12 @@ function alt(tag: string, title: string, description: string, extra: Partial<Alt
   return { tag, title, description, ...extra };
 }
 
-export const finalDetails = [
-  "Your flight on 16 December: is 08:00 the flight time or the pickup time? We’ll set the airport pickup to match.",
-  "Trains: tickets for 9 December go on sale on 25 November, 11 December on 27 November and 12 December on 28 November. We’ll help you book them as soon as they open.",
-  "Museums and gardens: the Natural History Museum, Science & Technology Museum, Suzhou Museum and Humble Administrator’s Garden open bookings about 7 days ahead. We’ll remind you and help you book with your passports.",
-  "LEGOLAND and Disney tickets: LEGOLAND hasn’t published its December hours yet, and Disney prices for 14–15 December appear about a month ahead. We’ll confirm both.",
-  "Your suitcases: we’ll confirm with YaQING that it can receive the bags you send ahead from Shanghai.",
-  "Car seats: ordinary DiDi cars don’t have child seats. Let us know if you’d like a car with child seats for the longer rides (airport, LEGOLAND → Disney).",
-  "How tall is your 5-year-old? Some rides have height limits, and children under 6 ride the train free on your lap. You can also buy them their own seat.",
-  "Please bring your own stroller and a baby carrier. Rental strollers at Disney and LEGOLAND are for older children, and the gardens have steps.",
+/* Places we like but left out of the daily plan, shown as cards at the end. */
+export const recommended = [
+  { id: "szmuseum", title: "Suzhou Museum", tag: "Suzhou · Day 5", image: photos.szmuseum[0], desc: "I. M. Pei’s museum, a modern take on a Suzhou garden, with ponds, white walls and rock paintings.", note: "5 minutes’ walk from the Humble Administrator’s Garden. Free, but book 1–7 days ahead. Closed on Mondays." },
+  { id: "postmuseum", title: "Shanghai Post Museum", tag: "10 minutes from your hotel", image: photos.postmuseum[0], desc: "A grand 1924 post office with old mail vans and stamps inside, and a rooftop garden over Suzhou Creek.", note: "Free. Open Wednesday, Thursday and weekends, 09:00–17:00. Easy to add to any afternoon in Shanghai." },
+  { id: "ferry", title: "The ¥2 Huangpu Ferry", tag: "Lujiazui ↔ the Bund", image: photos.ferry[0], desc: "The ferry Shanghai commuters take across the river: five minutes on the water with the Bund in front of you.", note: "From 东昌路渡口, 20 minutes’ walk from the aquarium, to 金陵东路 on the Bund side. Every 15 minutes until 18:15." },
+  { id: "millfun", title: "1933 Old Millfun", tag: "Next to your hotel", image: photos.millfun[0], desc: "A 1930s concrete Art Deco building full of ramps, sky-bridges and staircases to explore.", note: "2 minutes’ walk from the Sofitel. Free, open until 20:00, so it fits a spare half hour." },
 ];
 
 export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
@@ -96,7 +95,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
         { name: "莱莱小笼", englishName: "Lai Lai Xiao Long", cuisine: "Shanghai xiaolongbao", note: "Michelin Bib Gourmand. Order at the counter, then share a table. Let the dumplings cool before giving them to the children. Open until 20:00. 天津路506号.", price: "~¥60–100 pp", rating: 4.7, image: photos.lailai[1] },
         { name: "大壶春（四川中路店）", englishName: "Da Hu Chun", cuisine: "Pan-fried buns", note: "If Lai Lai has a long queue: crisp-bottomed pork buns, on the way to the Bund. Open until 19:30. 四川中路136号.", price: "~¥30–50 pp", rating: 4.6 },
       ], tip: "Our tip: Cards aren’t always accepted at Lai Lai, so have Alipay or cash ready.", transportAfter: { mode: "walk", duration: "~20 min", note: "Walk down Nanjing Road to the Bund" } }),
-      stop("bund-night", "~19:15", "Nanjing Road & the Bund at Night", "Walk down Nanjing Road’s pedestrian street, all lit up, to the river. At the end is the Bund: the 1920s buildings glowing gold on your side, and the Lujiazui skyscrapers lit up across the water. It’s flat and easy with the stroller. Stay as long as the children last, then it’s 8 minutes back to the hotel.\n\n南京路步行街 → 外滩 · 黄浦区中山东一路", { icon: Moon, iconBg: "#EDE7F6", subtitle: "Free · Shanghai’s famous skyline", previewLine: "The skyline lit up on your first night", pictures: photos.bund, transportAfter: { mode: "taxi", duration: "8–10 min", note: "Taxi ~¥14 back to your hotel" }, alternatives: [
+      stop("bund-night", "~19:15", "Nanjing Road & the Bund at Night", "Walk down Nanjing Road’s pedestrian street, all lit up, to the river. At the end is the Bund: the 1920s buildings glowing gold on your side, and the Lujiazui skyscrapers lit up across the water. It’s flat and easy with the stroller. Stay as long as the children last, then it’s 8 minutes back to the hotel.\n\n南京路步行街 → 外滩 · 黄浦区中山东一路", { icon: Moon, iconBg: "#EDE7F6", subtitle: "Free · Shanghai’s famous skyline", previewLine: "The skyline lit up on your first night", pictures: [`${SH}/nanjing-road-neon.jpg`, ...photos.bund], transportAfter: { mode: "taxi", duration: "8–10 min", note: "Taxi ~¥14 back to your hotel" }, alternatives: [
         alt("😴 Tired after the flight?", "Dinner near the hotel, the Bund another night", "Have soup dumplings 12 minutes’ walk from the hotel and go to bed early. You’ll see the Bund from the river cruise on Day 2.", { gettingThere: "Walk ~12 min · 佳家汤包, 虬江支路180弄 · or 麟笼坊, 乍浦路332号" }),
       ] }),
     ] },
@@ -155,21 +154,20 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SUZHOU · 9 Dec ═══════ */
-    { label: "Day 5", city: "Suzhou", subtitle: "Wed 9 Dec · Suzhou day trip · Gardens & canals", color: SUZHOU, items: [
+    { label: "Day 5", city: "Suzhou", subtitle: "Wed 9 Dec · Suzhou day trip · Garden & canals", color: SUZHOU, items: [
       leave("go-shst", "08:15", "To Shanghai Railway Station", "Taxi 20–25 min · ~¥19 · or Line 4, 35 min", { mode: "taxi", duration: "20–25 min", note: "Taxi ~¥19 · or Line 4, two stops to 上海火车站, 35 min" }),
       stop("train-sz", "09:00", "High-Speed Train to Suzhou", "G7006, Shanghai Station 09:00 → Suzhou 09:25, about ¥46 per adult in second class. Backups: G8254 at 09:05 or D2906 at 08:41. Children under 6 can travel free on your lap.\n\nBring your passports: they are your tickets. Be at the station by 08:30 for the passport check and security.", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "Shanghai → Suzhou · 25 min", previewLine: "G7006 · 09:00 → 09:25 · ~¥46", pictures: photos.train, showPhotoPreview: false, transportAfter: { mode: "taxi", duration: "15–20 min", note: "Taxi ~¥10 to the Humble Administrator’s Garden" } }),
       stop("zhuozheng", "09:45", "Humble Administrator’s Garden · 拙政园", "Suzhou’s most famous classical garden: ponds, bridges and pavilions. ¥70 per adult in December. Allow about 1½ hours.\n\n拙政园 · 苏州市姑苏区东北街178号 · 07:30–17:00", { icon: Sun, iconBg: "#E8F5E9", subtitle: "¥70 · book with your passports", previewLine: "Ponds, bridges and pavilions", tip: "Our tip: Book in the “苏州园林” mini-program with your passports. There are steps and arched bridges, so bring the baby carrier as well as the stroller.", pictures: photos.zhuozheng, transportAfter: { mode: "walk", duration: "3 min", note: "Walk to Suzhou Taitai, 园林路88号" } }),
       stop("lunch-5", "11:45", "Lunch · Suzhou cooking", "Suzhou food is mild and slightly sweet, which usually suits children.", { icon: Utensils, iconBg: "#FFF1F3", type: "meal", subtitle: "Suzhou dishes · by the garden", restaurants: [
         { name: "苏州太太苏帮菜（拙政园店）", englishName: "Suzhou Taitai", cuisine: "Suzhou cuisine", note: "Highly rated and good value: squirrel fish, shrimp, Suzhou noodles. 园林路88号.", price: "~¥60 pp", rating: 4.7 },
         { name: "话雨楼·精品苏帮菜馆（拙政园店）", englishName: "Hua Yu Lou", cuisine: "Suzhou cuisine", note: "Next to the garden’s north gate. 百家巷8号.", price: "~¥78 pp", rating: 4.5 },
-      ], transportAfter: { mode: "walk", duration: "5 min", note: "Walk to the Suzhou Museum, 东北街204号" } }),
-      stop("szmuseum", "13:00", "Suzhou Museum · 苏州博物馆", "I. M. Pei’s beautiful museum, a modern take on a Suzhou garden. Free with a reservation 1–7 days ahead; closed on Mondays.\n\n苏州博物馆 · 东北街204号 · 09:00–17:00", { icon: Camera, iconBg: "#F3E8FF", subtitle: "Free · book 1–7 days ahead", previewLine: "I. M. Pei’s modern garden museum", pictures: photos.szmuseum, transportAfter: { mode: "taxi", duration: "10–15 min", note: "Taxi ~¥10 · or Line 6, one stop to 悬桥巷" } }),
-      stop("pingjiang", "14:30", "Pingjiang Road · 平江路", "A canal-side lane of old houses, little bridges and snack shops: the Suzhou postcard. Stop for noodles at Tong De Xing: in winter, try the red-braised pork noodles (红汤焖肉面).\n\n平江路 · 苏州市姑苏区 · 同得兴, 平江路94号", { icon: Sunset, iconBg: "#FFF3E0", subtitle: "Canals · bridges · Suzhou noodles", previewLine: "Canals, bridges and a bowl of Suzhou noodles", pictures: [...photos.pingjiang, ...photos.tongdexing.slice(0, 1)], transportAfter: { mode: "taxi", duration: "20–30 min", note: "Taxi ~¥16 to Suzhou Station · or metro, 42 min" } }),
+      ], transportAfter: { mode: "taxi", duration: "10–15 min", note: "Taxi ~¥10 to Pingjiang Road · or Line 6, one stop to 悬桥巷" } }),
+      stop("pingjiang", "~13:00", "Pingjiang Road · 平江路", "A canal-side lane of old houses, little bridges and snack shops: the Suzhou postcard. Take it slowly: find a canal-side teahouse while the little one naps in the stroller, and stop for noodles at Tong De Xing. In winter, try the red-braised pork noodles (红汤焖肉面).\n\n平江路 · 苏州市姑苏区 · 同得兴, 平江路94号", { icon: Sunset, iconBg: "#FFF3E0", subtitle: "Canals · bridges · Suzhou noodles", previewLine: "Canals, bridges and a bowl of Suzhou noodles", pictures: [...photos.pingjiang, ...photos.tongdexing.slice(0, 1)], transportAfter: { mode: "taxi", duration: "20–30 min", note: "Taxi ~¥16 to Suzhou Station · or metro, 42 min" } }),
       stop("train-back-5", "17:14", "Train back to Shanghai", "G7019, Suzhou 17:14 → Shanghai Station ~17:40. Backup: G7021 at 18:14.", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "Suzhou → Shanghai · 26 min", previewLine: "G7019 · 17:14 → 17:40", transportAfter: { mode: "taxi", duration: "~20 min", note: "Taxi back to your hotel · dinner nearby" } }),
     ] },
 
     /* ═══════ SHANGHAI · 10 Dec ═══════ */
-    { label: "Day 6", city: "Shanghai", subtitle: "Thu 10 Dec · Aquarium · Skyline · ¥2 ferry", color: SHANGHAI, items: [
+    { label: "Day 6", city: "Shanghai", subtitle: "Thu 10 Dec · Aquarium · Skyline · Nanjing Road", color: SHANGHAI, items: [
       leave("go-ljz", "09:00", "To Lujiazui", "Taxi 13–15 min · ~¥15", { mode: "taxi", duration: "13–15 min", note: "Taxi ~¥15 to the aquarium" }),
       stop("aquarium", "09:30", "Shanghai Ocean Aquarium", "One of Asia’s biggest aquariums, with a long underwater tunnel where sharks and rays swim over your heads. Adults ¥160, children ¥110; little ones free (we’ll confirm the height rules).\n\n上海海洋水族馆 · 浦东新区陆家嘴环路1388号 · 09:00–18:00", { icon: Sparkles, iconBg: "#E3F2FD", subtitle: "Underwater tunnel · indoors", previewLine: "Sharks and rays over your heads", pictures: photos.aquarium, transportAfter: { mode: "walk", duration: "~10 min", note: "Walk to Shanghai Tower, 银城中路501号" } }),
       stop("deck", "11:30", "Shanghai Tower viewing deck · 上海之巅", "The 118th floor of China’s tallest building, with a 360° view over the city. The lift is one of the fastest in the world. Adults ¥180, children ¥90.\n\n上海之巅观光厅 · 银城中路501号 · 08:30–22:00", { icon: Camera, iconBg: "#E8F5E9", subtitle: "Highest in the city · ¥180 / ¥90", previewLine: "Shanghai from the 118th floor", pictures: photos.shtower, transportAfter: { mode: "walk", duration: "~8 min", note: "Walk to lunch" }, alternatives: [
@@ -180,9 +178,8 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
         { name: "鼎泰丰（国金中心店）", englishName: "Din Tai Fung", cuisine: "Taiwanese dumplings", note: "Very child-friendly, with high chairs. IFC mall, 世纪大道8号.", price: "~¥115 pp", rating: 4.5 },
         { name: "小杨生煎（东方明珠店）", englishName: "Yang’s Dumplings", cuisine: "Pan-fried buns", note: "Quick and cheap. 陆家嘴环路1406号.", price: "~¥39 pp", rating: 4.4 },
         { name: "麻六记（正大广场店）", englishName: "Ma Liu Ji", cuisine: "Sichuan · spicy", note: "Spicy Sichuan noodles and dishes. Super Brand Mall 6F, 陆家嘴西路168号.", price: "~¥100 pp", rating: 4.4 },
-      ], transportAfter: { mode: "walk", duration: "~20 min", note: "Walk along the river to 东昌路渡口, 滨江大道3528号" } }),
-      stop("ferry", "14:00", "The ¥2 ferry across the Huangpu", "The ferry Shanghai commuters take across the river. Five minutes on the water, for ¥2, with the Bund in front of you. Ferries leave about every 15 minutes until 18:15.\n\n东昌路渡口 → 金陵东路渡口", { icon: Ship, iconBg: "#E3F2FD", subtitle: "The locals’ ferry · ¥2 · 5 minutes", previewLine: "The commuter ferry, with the Bund ahead", pictures: photos.ferry, transportAfter: { mode: "taxi", duration: "~10 min", note: "Taxi to the Post Museum, 天潼路395号" } }),
-      stop("postmuseum", "14:45", "Shanghai Post Museum", "A grand 1924 post office building with old mail vans and stamps inside, and a rooftop garden over Suzhou Creek. Free; open Wednesday, Thursday and weekends 09:00–17:00.\n\n上海邮政博物馆 · 虹口区天潼路395号", { icon: Camera, iconBg: "#F3E8FF", subtitle: "Free · rooftop garden", previewLine: "A 1924 post office with a rooftop garden", tip: "Our tip: We’ll check that the rooftop garden is open that week.", pictures: photos.postmuseum, transportAfter: { mode: "taxi", duration: "~8 min", note: "Taxi back to your hotel · or a 21-min walk" } }),
+      ], transportAfter: { mode: "metro", duration: "~30 min", note: "Line 2 陆家嘴 (Exit 1) → 南京东路, one stop · or taxi ~20 min, ¥20" } }),
+      stop("nanjing-day", "~14:00", "Nanjing Road by Day · LEGO & Local Sweets", "One stop on the metro brings you to Shanghai’s main shopping street. Walk west along the pedestrian street to the Shanghai No.1 Food Store (上海市第一食品商店) for Shanghai sweets and snacks to take home. A few doors further on, finish at the big LEGO store in Shimao Plaza.\n\n上海市第一食品商店 · 南京东路720号\nLEGO乐高（上海世茂广场）· 南京东路829号 G层", { icon: ShoppingBag, iconBg: "#FFF0EE", subtitle: "Free to wander · about 1½ hours", previewLine: "The LEGO store and Shanghai sweets", pictures: photos.nanjingDay, transportAfter: { mode: "taxi", duration: "~15 min", note: "Taxi ~¥15 back to your hotel" } }),
       stop("bags", "Evening", "Send your extra suitcases ahead", "Tomorrow you travel to Hangzhou with one bag. Ask the hotel concierge tonight to send the other suitcases by SF Express (顺丰) to your LEGOLAND hotel, YaQING, for collection tomorrow morning. It costs about ¥50–100 per suitcase and arrives the next day.\n\nKeep passports, medicines, valuables and two days of the children’s things with you, not in the forwarded bags.", { icon: Hotel, iconBg: "#E3F2FD", type: "hotel", subtitle: "Luggage · SF Express via the concierge", previewLine: "SF Express to YaQING · ~¥50–100 per bag" }),
     ] },
 

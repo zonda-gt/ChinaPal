@@ -58,13 +58,13 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Suzhou",
     days: [
-      { day: "DAY 5", title: "Gardens & Canals", items: ["🚄 G7006 09:00 → Suzhou 09:25", "Humble Administrator’s Garden · Suzhou Museum", "Pingjiang Road · Suzhou noodles"] },
+      { day: "DAY 5", title: "Garden & Canals", items: ["🚄 G7006 09:00 → Suzhou 09:25", "Humble Administrator’s Garden", "Pingjiang Road · Suzhou noodles"] },
     ],
   },
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Aquarium · Skyline · ¥2 Ferry", items: ["🦈 Ocean Aquarium", "Shanghai Tower viewing deck", "⛴️ ¥2 ferry · Post Museum"] },
+      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower viewing deck", "🚇 Nanjing Road · LEGO store"] },
     ],
   },
   {
