@@ -49,8 +49,8 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 1", title: "Arrival · 1933 Old Millfun", items: ["✈️ Land ~15:00 at Pudong · pickup booked", "1933 Old Millfun next to your hotel", "Soup dumplings for dinner"] },
-      { day: "DAY 2", title: "Yu Garden · The Bund · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "The Bund · nap time", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land ~15:00 at Pudong · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
+      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "Xintiandi · nap time", "🚢 Huangpu sunset cruise"] },
       { day: "DAY 3", title: "Dinosaurs · Indoor Play", items: ["🦖 Natural History Museum", "Huanghe Road food street", "MELAND indoor playground"] },
       { day: "DAY 4", title: "Science Museum · Century Park", items: ["🔬 Science & Technology Museum · Mini World", "Century Park", "Jinchao 8 Lane for dinner"] },
     ],
