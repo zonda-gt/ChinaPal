@@ -56,7 +56,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Hangzhou",
     days: [
-      { day: "DAY 3", title: "Salon · White Horse Lake · Light Show", items: ["Perm at Pinbai salon (time to confirm)", "Lakeside afternoon by your hotel", "Qiantang River light show 19:30"] },
+      { day: "DAY 3", title: "Salon · White Horse Lake · Light Show", items: ["💇 Perm at Pinbai salon 10:30", "Lakeside afternoon by your hotel", "Qiantang River light show 19:30"] },
       { day: "DAY 4", title: "Lingyin Temple · West Lake", items: ["Lingyin Temple & Feilai Peak carvings", "in77 shopping · MU SPRING qipao", "Rowing boat · Zhiweiguan dinner · fountain 19:30"] },
     ],
   },
