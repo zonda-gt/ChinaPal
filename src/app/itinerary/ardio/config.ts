@@ -25,7 +25,7 @@ export const photos = {
   meland: [A("meland"), A("meland-2")],
   scitech: [A("scitech"), A("scitech-2")],
   century: [A("century"), A("century-2")],
-  jinchao: [A("jinchao"), A("jinchao-2")],
+  jinchao: [A("jinchao")],
   zhuozheng: [A("zhuozheng"), A("zhuozheng-2")],
   szmuseum: ["/uploads/itinerary/vivek/suzhou-museum.webp"],
   pingjiang: [A("pingjiang"), A("pingjiang-2"), "/uploads/itinerary/vivek/pingjiang-road.webp"],
