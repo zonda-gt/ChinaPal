@@ -120,6 +120,7 @@ export default function InboxV2() {
   const [detailsOpen, setDetailsOpen] = useState(false),
     [image, setImage] = useState<string | null>(null),
     [confirmSend, setConfirmSend] = useState(false),
+    [sendingStale, setSendingStale] = useState(false),
     [limit, setLimit] = useState(100);
   // Redesign state: composer layout, the warnings checklist, undo and chat tools.
   const [composerOpen, setComposerOpen] = useState(false),
@@ -384,6 +385,19 @@ export default function InboxV2() {
       setTab("reply");
       setNotice("Draft ready. Review the details before sending.");
     });
+  }
+  // Sending needs a saved draft anchored to the newest message, so a typed,
+  // edited or out-of-date reply is saved first; the confirm dialog still shows
+  // exactly what will go out.
+  async function approve() {
+    setSendingStale(staleDraft);
+    if (draft && !dirty && !staleDraft) return setConfirmSend(true);
+    let saved = false;
+    await run("save", async () => {
+      await save();
+      saved = true;
+    });
+    if (saved) setConfirmSend(true);
   }
   async function send() {
     if (!selected || !draft || dirty) return;
@@ -1130,9 +1144,8 @@ export default function InboxV2() {
                           </button>
                           <button
                             className={s.primary}
-                            disabled={!!busy || !draft || dirty || staleDraft || conflict || !!pending || !thread.canSend || tooLong}
-                            onClick={() => setConfirmSend(true)}
-                            title={dirty ? "Save the draft first" : undefined}
+                            disabled={!!busy || !text.trim() || conflict || !!pending || !thread.canSend || tooLong}
+                            onClick={() => void approve()}
                           >
                             <Send size={15} /> Approve & send
                           </button>
@@ -1245,6 +1258,7 @@ export default function InboxV2() {
             <p>
               This will send a real Instagram DM to <strong>@{active?.username}</strong>.
             </p>
+            {sendingStale && <p className={s.warning}>New messages arrived after this draft was written. Check it still answers them.</p>}
             <blockquote>{text}</blockquote>
             {parts.length > 0 && (
               <p>
