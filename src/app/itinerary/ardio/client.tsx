@@ -53,7 +53,7 @@ function RecommendedPlaces() {
             <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>Recommended places</p>
             <span style={{ fontSize: 10, background: "#FFF1F3", color: "#D0021B", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>If you have time</span>
           </div>
-          <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>More places we like near your route. Tell us if you’d like any of them added to a day.</p>
+          <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>More places we like in Shanghai, Suzhou and Hangzhou. Tell us if you’d like any of them added to a day.</p>
         </div>
         <div className="itinerary-options-row" style={{ display: "flex", gap: 12, padding: "0 16px 4px", overflowX: "auto", scrollbarWidth: "none", scrollSnapType: "x mandatory", scrollPaddingLeft: 16 }}>
           {recommended.map((place) => (
@@ -61,7 +61,8 @@ function RecommendedPlaces() {
               <div style={{ height: 240, position: "relative", overflow: "hidden" }}>
                 <img src={place.image} alt={place.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%)" }} />
-                <p style={{ position: "absolute", bottom: 8, left: 10, fontSize: 10, color: "rgba(255,255,255,0.9)", fontWeight: 700, margin: 0, textTransform: "uppercase", letterSpacing: "0.05em" }}>{place.tag}</p>
+                <span style={{ position: "absolute", top: 10, left: 10, fontSize: 10, fontWeight: 800, color: "#1A1A1A", background: "rgba(255,255,255,0.92)", padding: "3px 8px", borderRadius: 20 }}>{place.city}</span>
+                <p style={{ position: "absolute", bottom: 8, left: 10, right: 10, fontSize: 10, color: "rgba(255,255,255,0.95)", fontWeight: 700, margin: 0, textTransform: "uppercase", letterSpacing: "0.05em", lineHeight: 1.35 }}>{place.tag}</p>
               </div>
               <div style={{ padding: "12px 14px 14px" }}>
                 <p style={{ fontSize: 14, fontWeight: 800, color: "#1A1A1A", margin: "0 0 5px", fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{place.title}</p>
