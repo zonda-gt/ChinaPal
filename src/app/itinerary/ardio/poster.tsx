@@ -50,7 +50,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land ~15:00 at Pudong · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
-      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "Xintiandi · nap time", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "Xintiandi · rest at the hotel", "🚢 Huangpu sunset cruise"] },
       { day: "DAY 3", title: "Dinosaurs · Indoor Play", items: ["🦖 Natural History Museum", "Huanghe Road food street", "MELAND indoor playground"] },
       { day: "DAY 4", title: "Science Museum · Century Park", items: ["🔬 Science & Technology Museum · Mini World", "Century Park", "Jinchao 8 Lane for dinner"] },
     ],
@@ -78,7 +78,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     days: [
       { day: "DAY 8", title: "LEGOLAND", items: ["🚄 G7502 08:15 → Jinshan North", "A full day at LEGOLAND"] },
       { day: "DAY 9", title: "Water Town · To Disney", items: ["Fengjing Ancient Town (optional)", "🚗 To the Disneyland Hotel · Disneytown"] },
-      { day: "DAY 10", title: "Disneyland Day 1", items: ["🏰 Early entry · nap at the hotel · parade"] },
+      { day: "DAY 10", title: "Disneyland Day 1", items: ["🏰 Early entry · rest at the hotel · parade"] },
       { day: "DAY 11", title: "Disneyland Day 2", items: ["🏰 Early entry · Novotel Chuansha"] },
       { day: "DAY 12", title: "Flight Home", items: ["✈️ Pickup to Pudong Airport"] },
     ],
@@ -128,6 +128,8 @@ function DayBadge({ label }: { label: string }) {
 
 export default function ArdioPoster() {
   const [carouselIndex, setCarouselIndex] = useState(0);
+  // The overview starts as one line per day; the details are optional.
+  const [showDetails, setShowDetails] = useState(false);
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const goToSlide = (index: number) => {
     const scroller = scrollerRef.current;
@@ -161,7 +163,7 @@ export default function ArdioPoster() {
               <p className="text-[13px] font-normal leading-snug text-[#4A4A4A]">Shanghai · Suzhou · Hangzhou · LEGOLAND · Disney · 5–16 Dec 2026</p>
             </div>
             <div className="flex flex-wrap gap-2">
-              {["Planned around nap times", "Chinese addresses for Amap & DiDi", "Taxi & metro times", "WeChat concierge included"].map((tag) => (
+              {["Made for ages 1 & 5", "Every museum open on your day", "Restaurants our team picked", "Travel light to Hangzhou"].map((tag) => (
                 <span key={tag} className="border border-[#F0C8D1] px-2 py-1 text-[11px] font-semibold text-[#D3567E]">
                   {tag}
                 </span>
@@ -205,34 +207,39 @@ export default function ArdioPoster() {
           <div className="absolute inset-0 bg-gradient-to-b from-[#4A0F16]/88 via-[#3B0A11]/85 to-[#2A070C]/92" />
           <div className="relative px-5 py-6 text-white">
             <p className="mb-5 text-center text-[11px] font-semibold uppercase tracking-[0.22em] text-white/75">Day-by-Day Overview</p>
-            <div className="space-y-6">
+            <div className={showDetails ? "space-y-6" : "space-y-4"}>
               {cityItineraries.map((itin, i) => (
-                <div key={i} className="space-y-4">
+                <div key={i} className={showDetails ? "space-y-4" : "space-y-2.5"}>
                   <div className="flex items-center gap-3">
                     <div className="h-px flex-1 bg-white/30" />
                     <p className="text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#F5C6CB]">{itin.cityName}</p>
                     <div className="h-px flex-1 bg-white/30" />
                   </div>
-                  <div className="space-y-4">
+                  <div className={showDetails ? "space-y-4" : "space-y-2"}>
                     {itin.days.map((entry) => (
                       <div key={entry.day} className="space-y-2">
                         <div className="flex items-center gap-2">
                           <DayBadge label={entry.day} />
                           <p className="min-w-0 text-[14px] font-extrabold leading-[1.1] text-white">{entry.title}</p>
                         </div>
-                        <div className="space-y-1 pl-[6px]">
-                          {entry.items.map((item) => (
-                            <p key={item} className="text-[12px] font-normal leading-[1.45] text-white/90">
-                              {item}
-                            </p>
-                          ))}
-                        </div>
+                        {showDetails && (
+                          <div className="space-y-1 pl-[6px]">
+                            {entry.items.map((item) => (
+                              <p key={item} className="text-[12px] font-normal leading-[1.45] text-white/90">
+                                {item}
+                              </p>
+                            ))}
+                          </div>
+                        )}
                       </div>
                     ))}
                   </div>
                 </div>
               ))}
             </div>
+            <button onClick={() => setShowDetails(!showDetails)} className="mx-auto mt-6 flex items-center gap-1.5 rounded-full border border-white/40 px-4 py-2 text-[12px] font-bold text-white">
+              {showDetails ? "Hide the details ▴" : "What’s in each day ▾"}
+            </button>
           </div>
         </motion.div>
       </div>

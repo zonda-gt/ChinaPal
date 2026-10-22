@@ -30,7 +30,7 @@ export default function ArdioClient({ images, withOptions = false }: { images: I
           </div>
           <p style={{ fontSize: 13, color: "#888", margin: "12px 0 0", fontFamily: FONT, lineHeight: 1.6 }}>
             Every stop has its Chinese name and address for Amap or DiDi, with the taxi time first and the metro as a backup.
-            Journey times were checked in Amap for the time of day you’ll travel, and each day leaves time for naps.
+            Journey times were checked in Amap for the time of day you’ll travel, and each day leaves time to rest.
             {withOptions && <><br /><br /><b style={{ color: "#B45309" }}>★ Our pick</b> is what we recommend. Where you see <b style={{ color: "#B45309" }}>+ other options</b>, swipe the card to see a different choice for the same time, such as one for a rainy day or tired kids.</>}
           </p>
         </div>
