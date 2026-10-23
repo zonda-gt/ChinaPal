@@ -29,7 +29,7 @@ create table if not exists public.inbox_sessions (
   token_hash text primary key, password_version text not null, expires_at timestamptz not null
 );
 create table if not exists public.inbox_conversations (
-  peer_id text primary key, thread_id text, username text not null, name text,
+  peer_id text primary key, thread_id text, username text not null,
   stage text not null default 'inquiry' check(stage in ('inquiry','customer','archived')),
   notes text not null default '', last_message_at timestamptz, last_seen_at timestamptz,
   history_cursor text, history_complete boolean not null default false, synced_at timestamptz,

@@ -150,12 +150,3 @@ two tabs show a migration message).
   Opening the Plan tab checks on a running job; jobs over 30 minutes are stopped.
   Item sources are kept only when they are pages the research actually opened.
 
-
-## Saved contact names
-
-Apply `supabase/migrations/202610230001_inbox_contact_names.sql` to keep each
-customer's Instagram display name on their conversation. The inbox list then shows
-names immediately and AI drafts always know the customer's name, instead of
-waiting on Meta's profile API. Names are saved whenever a profile is fetched.
-Profile pictures are still fetched live, because Meta's picture links expire.
-Without the migration the inbox works as before.

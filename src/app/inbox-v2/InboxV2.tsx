@@ -99,7 +99,7 @@ export default function InboxV2() {
   function contactLabel(c?: Conversation) {
     if (!c) return "Loading…";
     const identity = identities.contacts[c.peer_id];
-    return identity?.name || c.name || `@${identity?.username || c.username}`;
+    return identity?.name || `@${identity?.username || c.username}`;
   }
   const [search, setSearch] = useState(""),
     [filter, setFilter] = useState<Filter>("all"),
@@ -516,7 +516,7 @@ export default function InboxV2() {
             : filter === "unread"
               ? isUnread(c)
               : c.stage === "archived") &&
-      [c.username, c.name, identities.contacts[c.peer_id]?.username, identities.contacts[c.peer_id]?.name].some((value) =>
+      [c.username, identities.contacts[c.peer_id]?.username, identities.contacts[c.peer_id]?.name].some((value) =>
         value?.toLowerCase().includes(search.toLowerCase()),
       ),
   );

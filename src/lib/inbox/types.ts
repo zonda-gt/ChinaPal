@@ -13,8 +13,6 @@ export type Conversation = {
   peer_id: string;
   thread_id: string | null;
   username: string;
-  /** Instagram display name, saved whenever the profile is fetched. */
-  name?: string | null;
   stage: "inquiry" | "customer" | "archived";
   notes: string;
   last_message_at: string | null;

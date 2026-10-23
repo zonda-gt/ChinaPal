@@ -73,7 +73,7 @@ export default function Inbox() {
   function contactLabel(c?: Conversation) {
     if (!c) return "Loading…";
     const identity = identities.contacts[c.peer_id];
-    return identity?.name || c.name || `@${identity?.username || c.username}`;
+    return identity?.name || `@${identity?.username || c.username}`;
   }
   const [search, setSearch] = useState(""),
     [filter, setFilter] = useState("all"),
