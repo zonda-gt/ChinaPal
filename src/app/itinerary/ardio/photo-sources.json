@@ -398,5 +398,149 @@
     "title": "Huanghe Road, Shanghai: Tai Sheng Yuan restaurant on the food street",
     "path": "/uploads/itinerary/ardio/huanghe.webp",
     "downloadedOn": "2026-10-22"
+  },
+  {
+    "id": "ifc",
+    "url": "https://ak-d.tripcdn.com/images/1mi1p224x9b06kqvkF41F.jpg",
+    "source": "https://sg.trip.com/moments/poi-shanghai-ifc-mall-10568711/",
+    "title": "Shanghai IFC mall entrance with Shanghai Tower behind",
+    "path": "/uploads/itinerary/ardio/ifc.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "ifc-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi3u224x9b06yu4p937D.jpg",
+    "source": "https://sg.trip.com/moments/poi-shanghai-ifc-mall-10568711/",
+    "title": "Oriental Pearl Tower seen from the IFC mall rooftop terrace",
+    "path": "/uploads/itinerary/ardio/ifc-2.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "pigcafe-2",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/daydream-pig-petting-cafe/review_2_2.jpeg",
+    "source": "ChinaPal attractions database (Dianping review photos)",
+    "title": "Piglets at Daydream Pig Petting Café",
+    "path": "/uploads/itinerary/ardio/pigcafe-2.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "pigcafe-3",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/daydream-pig-petting-cafe/review_5_0.jpeg",
+    "source": "ChinaPal attractions database (Dianping review photos)",
+    "title": "Piglets at Daydream Pig Petting Café",
+    "path": "/uploads/itinerary/ardio/pigcafe-3.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "pigcafe-4",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/daydream-pig-petting-cafe/review_101_0.jpeg",
+    "source": "ChinaPal attractions database (Dianping review photos)",
+    "title": "Piglets at Daydream Pig Petting Café",
+    "path": "/uploads/itinerary/ardio/pigcafe-4.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "pigcafe",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/daydream-pig-petting-cafe/review_1_1.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "pigcafe",
+    "path": "/uploads/itinerary/ardio/pigcafe.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "vangogh",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/van-gogh-starry-sky-art-museum/review_90_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "vangogh",
+    "path": "/uploads/itinerary/ardio/vangogh.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "timecube",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/space-time-cube-metaverse-experience-hall/review_55_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "timecube",
+    "path": "/uploads/itinerary/ardio/timecube.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "map-pudong",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/museum-of-art-pudong/review_132_2.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "map-pudong",
+    "path": "/uploads/itinerary/ardio/map-pudong.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "zoo-panda",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/shanghai-zoo/review_6_1.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "zoo-panda",
+    "path": "/uploads/itinerary/ardio/zoo-panda.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "greenhouse-db",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/attraction-images/shanghai-greenhouse-garden/review_2_4.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "greenhouse-db",
+    "path": "/uploads/itinerary/ardio/greenhouse-db.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-chansanchi",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/chan-san-chi-crab-xiaolongbao/review_69_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-chansanchi",
+    "path": "/uploads/itinerary/ardio/r-chansanchi.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-yuanyuan",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/yuan-yuan/review_108_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-yuanyuan",
+    "path": "/uploads/itinerary/ardio/r-yuanyuan.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-xinya",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/xinya-tea-house/review_187_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-xinya",
+    "path": "/uploads/itinerary/ardio/r-xinya.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-jesse",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/jesse/review_21_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-jesse",
+    "path": "/uploads/itinerary/ardio/r-jesse.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-shutanji",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/shu-tan-ji-zigong-salt-cuisine/review_96_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-shutanji",
+    "path": "/uploads/itinerary/ardio/r-shutanji.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-xunyuji",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/xun-yu-ji-wok-fried-topping-noodles/review_164_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-xunyuji",
+    "path": "/uploads/itinerary/ardio/r-xunyuji.webp",
+    "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "r-commune",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/commune/review_2_2.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-commune",
+    "path": "/uploads/itinerary/ardio/r-commune.webp",
+    "downloadedOn": "2026-10-23"
   }
 ]
