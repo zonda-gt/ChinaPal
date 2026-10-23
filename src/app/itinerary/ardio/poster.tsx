@@ -20,7 +20,7 @@ const cities: City[] = [
     days: "Days 1–4 & 6",
     small: [
       { nameEn: "Science & Technology Museum", image: photos.scitech[0] },
-      { nameEn: "Natural History Museum", image: photos.nathist[0] },
+      { nameEn: "Giant Pandas at Shanghai Zoo", image: photos.zoo[0] },
     ],
     featured: { nameEn: "The Bund & the River", image: photos.bund[0] },
   },
@@ -49,22 +49,22 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land ~15:00 at Pudong · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
-      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "Xintiandi · rest at the hotel", "🚢 Huangpu sunset cruise"] },
-      { day: "DAY 3", title: "Dinosaurs · Indoor Play", items: ["🦖 Natural History Museum", "Huanghe Road food street", "MELAND indoor playground"] },
-      { day: "DAY 4", title: "Science Museum · Century Park", items: ["🔬 Science & Technology Museum · Mini World", "Century Park", "Jinchao 8 Lane for dinner"] },
+      { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land 14:35 at Pudong (SQ 830) · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
+      { day: "DAY 2", title: "Yu Garden · Tianzifang · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Tianzifang & Xintiandi", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 3", title: "Pandas · Wukang Road", items: ["🐼 Shanghai Zoo by metro", "Lunch in a 1920s mansion", "🛍️ Wukang & Anfu Road · spicy dinner"] },
+      { day: "DAY 4", title: "Science Museum · Greenhouse", items: ["🔬 Science & Technology Museum · Mini World", "🌿 Shanghai Greenhouse Garden", "Jinchao 8 Lane for dinner"] },
     ],
   },
   {
     cityName: "Suzhou",
     days: [
-      { day: "DAY 5", title: "Garden & Canals", items: ["🚄 G7006 09:00 → Suzhou 09:25", "Humble Administrator’s Garden", "Pingjiang Road · Suzhou noodles"] },
+      { day: "DAY 5", title: "Garden & Canals", items: ["🚄 G7006 09:00 → Suzhou 09:25", "Humble Administrator’s Garden · Lion Grove maze", "Pingjiang Road · Suzhou noodles"] },
     ],
   },
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower viewing deck", "🚇 Nanjing Road · LEGO store"] },
+      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · coffee on the 52nd floor", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
     ],
   },
   {
@@ -78,7 +78,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     days: [
       { day: "DAY 8", title: "LEGOLAND", items: ["🚄 G7502 08:15 → Jinshan North", "A full day at LEGOLAND"] },
       { day: "DAY 9", title: "Water Town · To Disney", items: ["Fengjing Ancient Town (optional)", "🚗 To the Disneyland Hotel · Disneytown"] },
-      { day: "DAY 10", title: "Disneyland Day 1", items: ["🏰 Early entry · rest at the hotel · parade"] },
+      { day: "DAY 10", title: "Disneyland Day 1", items: ["🏰 Early entry · parade · evening show"] },
       { day: "DAY 11", title: "Disneyland Day 2", items: ["🏰 Early entry · Novotel Chuansha"] },
       { day: "DAY 12", title: "Flight Home", items: ["✈️ Pickup to Pudong Airport"] },
     ],
