@@ -2,11 +2,11 @@
 // Usage: npx tsx scripts/inbox-eval/run.ts [--runs 2] [--only C01,C02] [--variants baseline,v2,v2-facts]
 //   [--cases data/eval/cases.json,more.json] [--alt prompt.txt]  (variant "v2-alt" uses the --alt instructions)
 // Variants "sonnet" and "opus" send the V2 request to Claude (needs ANTHROPIC_API_KEY).
-// Variant "focus" uses the candidate prompt in focus-prompt.ts. Adding "-edit" to a
-// variant (v2-edit, focus-edit) also runs the second-pass editor on that variant's
-// drafts; the plain variant's result is kept too. The editor's examples come from
-// the case files' live drafts and real replies, never from the same conversation.
-// The A/B/C/D test: --cases data/eval/real-cases.json --variants v2,v2-edit,focus,focus-edit
+// Adding "-edit" to a variant (e.g. v2-edit) also runs the second-pass editor on that
+// variant's drafts; the plain variant's result is kept too. The editor's examples come
+// from the case files' live drafts and real replies, never from the same conversation.
+// Real cases: --cases data/eval/real-cases.json --variants v2,v2-edit
+// (The focus prompt tested as variant "focus" on 23 Oct is now the live prompt, v2.2.)
 // Reads data/eval/cases.json and writes data/eval/results/<timestamp>.json.
 // Nothing is saved to the inbox database and nothing is sent to customers.
 import { mkdir, readFile, writeFile } from "node:fs/promises";
@@ -20,7 +20,6 @@ import { runDraft, type LoadImage } from "../../src/lib/inbox/draft-core";
 import type { PromptContext } from "../../src/lib/inbox/prompt";
 import { runBaseline } from "./baseline";
 import { pickExamples, runEditor } from "./editor";
-import { FOCUS_INSTRUCTIONS, FOCUS_VERSION } from "./focus-prompt";
 
 // CommonJS project: top-level await is wrapped in main().
 async function main() {
@@ -92,13 +91,8 @@ async function main() {
                 client,
                 { ...c.context, staffFacts: variant === "v2-facts" ? c.staff_facts : c.context.staffFacts },
                 loadImage,
-                variant === "v2-alt"
-                  ? { instructions: alt }
-                  : variant === "focus"
-                    ? { instructions: FOCUS_INSTRUCTIONS }
-                    : {},
+                variant === "v2-alt" ? { instructions: alt } : {},
               );
-        if (variant === "focus") output.promptVersion = FOCUS_VERSION;
         results.push({ case: c.id, variant, run, ...output });
         if (edited.has(variant)) {
           const examples = pickExamples(cases, c.conversation);

@@ -1,6 +1,6 @@
 // Blind AI judge and scorecard for an evaluation run against real cases.
 // Usage: npx tsx scripts/inbox-eval/judge.ts --results data/eval/results/<file>.json
-//   [--cases data/eval/real-cases.json] [--variants v2,v2-edit,focus,focus-edit]
+//   [--cases data/eval/real-cases.json] [--variants v2,v2-edit]
 //   [--out data/eval/judged.json]
 // For every case and run, the judge sees the conversation, what the team actually
 // sent next and the drafts under shuffled labels, and says whether the team would
@@ -18,8 +18,10 @@ import { buildPromptText, type PromptContext } from "../../src/lib/inbox/prompt"
 import { charCount, compareWithSent, questionCount } from "./text-metrics";
 
 const NAMES: Record<string, string> = {
-  v2: "A · today's prompt",
-  "v2-edit": "D · today's prompt + editor",
+  v2: "Live prompt",
+  "v2.1": "A · prompt v2.1 (before 23 Oct)",
+  "v2-edit": "Live prompt + editor",
+  v22: "Prompt v2.2 (focus + latest-message fix)",
   focus: "B · focus prompt",
   "focus-edit": "C · focus prompt + editor",
   live: "Live draft (logged at the time)",
@@ -109,7 +111,7 @@ async function main() {
   const results: Result[] = (
     await Promise.all(resultsFile.split(",").map(async (f) => JSON.parse(await readFile(f, "utf8")) as Result[]))
   ).flat();
-  const variants = arg("variants", "v2,v2-edit,focus,focus-edit").split(",");
+  const variants = arg("variants", "v2,v2-edit").split(",");
   const out = arg("out", join(DIR, "judged.json"));
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 2, timeout: 180000 });
 
