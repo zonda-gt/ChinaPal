@@ -50,7 +50,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land 14:35 at Pudong (SQ 830) · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
-      { day: "DAY 2", title: "Yu Garden · Tianzifang · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Tianzifang & Xintiandi", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Xintiandi & Huaihai Road shopping", "🚢 Huangpu sunset cruise"] },
       { day: "DAY 3", title: "Pandas · Wukang Road", items: ["🐼 Shanghai Zoo by metro", "Lunch in a 1920s mansion", "🛍️ Wukang & Anfu Road · spicy dinner"] },
       { day: "DAY 4", title: "Science Museum · Greenhouse", items: ["🔬 Science & Technology Museum · Mini World", "🌿 Shanghai Greenhouse Garden", "Jinchao 8 Lane for dinner"] },
     ],
@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · coffee on the 52nd floor", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
+      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · 52nd-floor coffee · IFC", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
     ],
   },
   {
