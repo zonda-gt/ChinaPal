@@ -19,7 +19,7 @@ export async function contactIdentity(peer: string): Promise<ContactIdentity> {
     let result: ContactIdentity = {
       peer_id: peer,
       username: contact.username,
-      name: saved?.name ?? null,
+      name: saved?.name ?? contact.name ?? null,
       picture: null,
       refresh_at: Date.now() + 5 * 60_000,
     };
@@ -30,7 +30,7 @@ export async function contactIdentity(peer: string): Promise<ContactIdentity> {
       result = {
         peer_id: peer,
         username: profile.username || contact.username,
-        name: profile.name || null,
+        name: profile.name || contact.name || null,
         picture: safeMediaUrl(profile.profile_pic),
         refresh_at: Date.now() + 60 * 60_000,
       };
@@ -40,6 +40,10 @@ export async function contactIdentity(peer: string): Promise<ContactIdentity> {
         // Retry persistence sooner, without hiding an otherwise usable identity.
         if (error) result.refresh_at = Date.now() + 5 * 60_000;
       }
+      // Saved separately and best-effort: the list shows it on the next load,
+      // and a database without the name column only loses that shortcut.
+      if (profile.name && profile.name !== contact.name)
+        await db().from("inbox_conversations").update({ name: profile.name }).eq("peer_id", peer);
     } catch {
       // Missing consent, deleted accounts or transient API failures must never
       // prevent staff from opening the saved conversation or composing a reply.

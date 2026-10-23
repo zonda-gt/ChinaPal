@@ -16,6 +16,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       "202610190001_inbox_reply_assistant_v2.sql",
       "202610200001_inbox_briefs.sql",
       "202610220001_inbox_plans_questions.sql",
+      "202610230001_inbox_contact_names.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -27,6 +28,8 @@ test("private storage, deduplication, optimistic edits and send reservations", a
     await pg.exec(
       "insert into inbox_conversations(peer_id,username) values('123','test_customer');",
     );
+    await pg.exec("update inbox_conversations set name='Test Customer' where peer_id='123';");
+    assert.equal((await pg.query("select name from inbox_conversations")).rows[0].name, "Test Customer");
     const message = {
       id: "m1",
       peer_id: "123",

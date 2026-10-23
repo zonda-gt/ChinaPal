@@ -46,7 +46,7 @@ export async function generateDraft(
       client,
       {
         now: new Date().toISOString(),
-        customerName: identity?.name ?? null,
+        customerName: identity?.name ?? conversation.name ?? null,
         username: identity?.username || conversation.username,
         stage: conversation.stage,
         notes: conversation.notes,
