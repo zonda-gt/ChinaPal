@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · 52nd-floor coffee · IFC", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
+      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · 52nd-floor coffee · IFC shopping", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
     ],
   },
   {
