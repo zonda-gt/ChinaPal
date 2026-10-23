@@ -1,17 +1,18 @@
 // Blind AI judge and scorecard for an evaluation run against real cases.
 // Usage: npx tsx scripts/inbox-eval/judge.ts --results data/eval/results/<file>.json
 //   [--cases data/eval/real-cases.json] [--variants v2,v2-edit,focus,focus-edit]
-//   [--judge opus|gpt] [--out data/eval/judged.json]
+//   [--out data/eval/judged.json]
 // For every case and run, the judge sees the conversation, what the team actually
 // sent next and the drafts under shuffled labels, and says whether the team would
 // send each draft as is, after small edits, or rewrite it. The scorecard adds
 // length, questions and closeness to what was sent, overall and per conversation
 // (so the busiest conversations don't decide the result). Writes the judgments to
 // --out and the scorecard next to it as .md. Local only: contains customer messages.
+// The judge is a separate request to the same GPT model; every version is GPT, so
+// any preference for its own writing applies to all of them equally.
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { config } from "dotenv";
-import Anthropic from "@anthropic-ai/sdk";
 import OpenAI from "openai";
 import { buildPromptText, type PromptContext } from "../../src/lib/inbox/prompt";
 import { charCount, compareWithSent, questionCount } from "./text-metrics";
@@ -109,40 +110,21 @@ async function main() {
     await Promise.all(resultsFile.split(",").map(async (f) => JSON.parse(await readFile(f, "utf8")) as Result[]))
   ).flat();
   const variants = arg("variants", "v2,v2-edit,focus,focus-edit").split(",");
-  const judge = arg("judge", process.env.ANTHROPIC_API_KEY ? "opus" : "gpt");
   const out = arg("out", join(DIR, "judged.json"));
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 2, timeout: 180000 });
-  const claude = new Anthropic({
-    apiKey: process.env.ANTHROPIC_API_KEY,
-    baseURL: "https://api.anthropic.com", // ignore any proxy URL set in the shell
-    maxRetries: 2,
-  });
 
   async function ask(text: string, labels: string[]) {
-    if (judge === "gpt") {
-      const r = await openai.responses.create({
-        model: process.env.INBOX_AI_MODEL || "gpt-6.1-sol",
-        reasoning: { effort: "medium" },
-        max_output_tokens: 8000,
-        store: false,
-        instructions: JUDGE_INSTRUCTIONS,
-        input: [{ role: "user", content: [{ type: "input_text", text }] }],
-        text: { format: { type: "json_schema", name: "judgment", strict: true, schema: schema(labels) } },
-      });
-      if (r.status !== "completed") throw new Error(`Judge did not complete: ${r.status}`);
-      return JSON.parse(r.output_text);
-    }
-    const r = await claude.messages
-      .stream({
-        model: "claude-opus-5-5",
-        max_tokens: 16000,
-        thinking: { type: "adaptive" },
-        output_config: { effort: "medium", format: { type: "json_schema", schema: schema(labels) } },
-        system: JUDGE_INSTRUCTIONS,
-        messages: [{ role: "user", content: [{ type: "text", text }] }],
-      })
-      .finalMessage();
-    return JSON.parse(r.content.flatMap((b) => (b.type === "text" ? [b.text] : [])).join(""));
+    const r = await openai.responses.create({
+      model: process.env.INBOX_AI_MODEL || "gpt-6.1-sol",
+      reasoning: { effort: "medium" },
+      max_output_tokens: 8000,
+      store: false,
+      instructions: JUDGE_INSTRUCTIONS,
+      input: [{ role: "user", content: [{ type: "input_text", text }] }],
+      text: { format: { type: "json_schema", name: "judgment", strict: true, schema: schema(labels) } },
+    });
+    if (r.status !== "completed") throw new Error(`Judge did not complete: ${r.status}`);
+    return JSON.parse(r.output_text);
   }
 
   const runs = [...new Set(results.map((r) => r.run))].sort();
@@ -221,7 +203,7 @@ async function main() {
   const lines = [
     `# Reply assistant A/B/C/D test`,
     ``,
-    `${cases.length} real cases, ${runs.length} run(s) each, judged blind by ${judge === "gpt" ? "GPT" : "Claude Opus"}. "Ready to send" = sent as is or after small edits.`,
+    `${cases.length} real cases, ${runs.length} run(s) each, judged blind by a separate GPT request. "Ready to send" = sent as is or after small edits.`,
     ``,
     `| Version | Judged | Score /10 | Sent as is | Ready to send | Rewrite | Picked best | Ready to send (per customer) | Score (per customer) |`,
     `|---|---|---|---|---|---|---|---|---|`,
