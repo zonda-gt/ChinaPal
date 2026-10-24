@@ -542,5 +542,85 @@
     "title": "r-commune",
     "path": "/uploads/itinerary/ardio/r-commune.webp",
     "downloadedOn": "2026-10-23"
+  },
+  {
+    "id": "apoli",
+    "url": "https://aos-comment.amap.com/B0K2HANSIQ/comment/ADDDD1D4_8C57_4150_B09D_53EB3739B14E_L0_001_1500_200_1768025385061_96192079.jpg",
+    "source": "Amap place photos (APOLI ITABAKERY 兴国路380号)",
+    "title": "apoli",
+    "path": "/uploads/itinerary/ardio/apoli.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "apoli-2",
+    "url": "https://aos-comment.amap.com/B0K2HANSIQ/comment/content_media_external_images_media_1000022558_ss__1768378080722_61772939.jpg",
+    "source": "Amap place photos (APOLI ITABAKERY 兴国路380号)",
+    "title": "apoli-2",
+    "path": "/uploads/itinerary/ardio/apoli-2.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "matchawang",
+    "url": "https://store.is.autonavi.com/showpic/3736c98a4e751a920000000734926114?type=pic",
+    "source": "Amap place photos (Matcha Wang HAI550)",
+    "title": "matchawang",
+    "path": "/uploads/itinerary/ardio/matchawang.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "matchawang-2",
+    "url": "https://aos-comment.amap.com/B0LKKMNL3N/comment/%5B2026-01-02-17-30-36%5D57220970-D5BF-4658-BD18-2BE763C9481_1767346261201_57208416.jpg",
+    "source": "Amap place photos (Matcha Wang HAI550)",
+    "title": "matchawang-2",
+    "path": "/uploads/itinerary/ardio/matchawang-2.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "zhangyuan",
+    "url": "https://store.is.autonavi.com/showpic/a974f64dd960d1300000008353474054?type=pic",
+    "source": "Amap place photos (张园)",
+    "title": "zhangyuan",
+    "path": "/uploads/itinerary/ardio/zhangyuan.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "zhangyuan-2",
+    "url": "https://store.is.autonavi.com/showpic/d188c31a4703d8c50000002748330561?type=pic",
+    "source": "Amap place photos (张园)",
+    "title": "zhangyuan-2",
+    "path": "/uploads/itinerary/ardio/zhangyuan-2.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "yuyuan",
+    "url": "https://aos-comment.amap.com/B0JGAYBTM7/comment/content_media_external_file_1000011712_ss__1766816488011_42128114.jpg",
+    "source": "Amap place photos (愚园艺术生活街区)",
+    "title": "yuyuan",
+    "path": "/uploads/itinerary/ardio/yuyuan.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "yuyuan-2",
+    "url": "https://aos-comment.amap.com/BZAFR0027V/comment/076EBC5C_C12F_408C_87F7_1CC63513C1F7_L0_001_1708_200_1758692710934_75271473.jpg",
+    "source": "Amap place photos (愚园路)",
+    "title": "yuyuan-2",
+    "path": "/uploads/itinerary/ardio/yuyuan-2.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "r-jhouse",
+    "url": "https://exybdmfburmyseaqchat.supabase.co/storage/v1/object/public/restaurant-images/jhouse/review_171_0.jpeg",
+    "source": "ChinaPal database (Dianping review photos)",
+    "title": "r-jhouse",
+    "path": "/uploads/itinerary/ardio/r-jhouse.webp",
+    "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "anfu",
+    "url": "https://store.is.autonavi.com/showpic/95fce5684937ca423bf2ae5172bbf76e",
+    "source": "Amap place photos (安福路)",
+    "title": "anfu",
+    "path": "/uploads/itinerary/ardio/anfu.webp",
+    "downloadedOn": "2026-10-24"
   }
 ]
