@@ -4,6 +4,8 @@ import { translateMessage } from "@/lib/inbox/translate";
 import { cancelPlan, chatPlan, getPlan, startPlan, undoPlan } from "@/lib/inbox/plan";
 import { changeQuestion } from "@/lib/inbox/questions";
 import { listQuestions, markAsked } from "@/lib/inbox/question-store";
+import { changeCare, dueCounts, getCare } from "@/lib/inbox/care";
+import { markCareSent } from "@/lib/inbox/care-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
@@ -83,6 +85,8 @@ async function handler(
     if (method === "GET" && action === "session") return json({ staff });
     if (method === "GET" && action === "conversations")
       return json({ conversations: await listConversations() });
+    if (method === "GET" && action === "care/due")
+      return json({ due: await dueCounts() });
     if (method === "POST" && action === "sync")
       return json(
         await syncConversations(
@@ -148,6 +152,10 @@ async function handler(
         return json({ questions: await listQuestions(peer) });
       if (method === "POST" && operation === "questions")
         return json(await changeQuestion(peer, staff, body));
+      if (method === "GET" && operation === "care")
+        return json(await getCare(peer));
+      if (method === "POST" && operation === "care")
+        return json(await changeCare(peer, staff, body));
       if (method === "GET" && operation === "plan")
         return json(await getPlan(peer));
       if (method === "POST" && operation === "plan" && path[3] === "cancel")
@@ -263,6 +271,7 @@ async function handler(
         const id = str(body.id, 50);
         const result = await sendDraft(peer, id, num(body.version), staff);
         await markAsked(peer, id);
+        await markCareSent(peer, id, staff.name || staff.email);
         return json(result);
       }
       if (method === "POST" && operation === "resolve") {
@@ -291,6 +300,7 @@ async function handler(
           );
         if (body.outcome === "sent") {
           await markAsked(peer, id);
+          await markCareSent(peer, id, staff.name || staff.email);
           const data = await threadData(peer, 1);
           const resolved = data.drafts.find((d) => d.id === id);
           if (resolved)
