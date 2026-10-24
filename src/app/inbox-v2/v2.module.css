@@ -1953,3 +1953,188 @@ main.layout {
   color: inherit;
   cursor: pointer;
 }
+
+/* Care tab: reminders while the traveller is close to or on their trip */
+.tagCare {
+  background: #e3f4ec;
+  color: #17734c;
+}
+.layout .copyReply {
+  margin-left: 8px;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 6px;
+  border: 1px solid #b9c7d6;
+  background: #fff;
+}
+.careLoading {
+  padding: 14px 16px;
+}
+.careNow {
+  background: #f3faf6;
+  border: 1px solid #cfe8da;
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.careNow p {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #1d4d36;
+}
+.careNow small {
+  color: #4b6b5a;
+  font-size: 11.5px;
+}
+.careWarning {
+  margin: 0;
+  font-size: 11.5px;
+  color: #a65a00;
+  background: #fff6e8;
+  border-radius: 8px;
+  padding: 6px 10px;
+}
+.layout .careList {
+  gap: 6px;
+}
+.careReminder {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.careDue {
+  border-color: #9fd5b9;
+  background: #f6fcf8;
+}
+.careReminderTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+.careReminderTop strong {
+  font-size: 12.5px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.careReminderTop strong svg {
+  color: #17734c;
+  flex-shrink: 0;
+}
+.careWhen {
+  font-size: 11px;
+  color: var(--subtle);
+  white-space: nowrap;
+}
+.layout .careSummary {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  gap: 0;
+  font-size: 11.5px;
+  color: #5d6f7f;
+}
+.careActions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin-top: 2px;
+}
+.layout .careActions button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11.5px;
+  white-space: nowrap;
+  padding: 3px 7px;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: #4b5c6b;
+}
+.layout .careActions .careDraft {
+  background: #8338ec;
+  border-color: #8338ec;
+  color: #fff;
+  font-weight: 600;
+}
+.careHint {
+  font-size: 11px;
+  color: #6b2fc4;
+}
+.layout .careMore {
+  font-size: 11.5px;
+  color: #0866ce;
+  padding: 4px 0 0;
+  background: none;
+}
+.careInfoLine {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+}
+.careInfoLine small {
+  color: var(--subtle);
+}
+.layout .careInfoLine button {
+  padding: 3px;
+  color: #8a97a3;
+  flex-shrink: 0;
+}
+.careForm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  padding-top: 4px;
+}
+.careForm input,
+.careForm textarea {
+  font: inherit;
+  font-size: 12.5px;
+  padding: 5px 8px;
+  border: 1px solid #b9c7d6;
+  border-radius: 6px;
+  min-width: 0;
+}
+.careForm input:nth-child(3),
+.careForm textarea,
+.careForm div {
+  grid-column: 1 / -1;
+}
+.careForm div {
+  display: flex;
+  gap: 6px;
+}
+.layout .careForm button {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 6px;
+}
+.layout .careForm button[type="submit"] {
+  font-weight: 600;
+  background: #8338ec;
+  color: #fff;
+}
+.careQuestions > .brief {
+  padding: 0;
+}
+.spinIcon {
+  animation: careSpin 1s linear infinite;
+}
+@keyframes careSpin {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -36,6 +36,7 @@ import useMessageScroll from "../inbox/useMessageScroll";
 import TripBrief from "./TripBrief";
 import TripPlan from "./TripPlan";
 import TripQuestions from "./TripQuestions";
+import TripCare from "./TripCare";
 import type { TripQuestion } from "@/lib/inbox/question-data";
 import v from "./v2.module.css";
 
@@ -46,7 +47,7 @@ type Thread = {
   canSend: boolean;
   latestInbound: string | null;
 };
-type Filter = "all" | "needs" | "drafts" | "unread" | "archived";
+type Filter = "all" | "needs" | "due" | "drafts" | "unread" | "archived";
 const MAX_MESSAGES = 3;
 
 async function api<T>(path: string, body?: unknown): Promise<T> {
@@ -114,7 +115,8 @@ export default function InboxV2() {
     [dirty, setDirty] = useState(false),
     [conflict, setConflict] = useState(false);
   // Right column: trip brief, the AI plan and the questions list.
-  const [panelTab, setPanelTab] = useState<"brief" | "plan" | "questions">("brief"),
+  const [panelTab, setPanelTab] = useState<"brief" | "plan" | "care">("brief"),
+    [due, setDue] = useState<Record<string, number>>({}),
     [questions, setQuestions] = useState<TripQuestion[]>([]),
     [questionsLoading, setQuestionsLoading] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false),
@@ -192,6 +194,18 @@ export default function InboxV2() {
     }, 15000);
     return () => clearInterval(timer);
   }, [staff, loadList]);
+  // Reminders due tonight, per traveller. They change slowly, so every few minutes is enough.
+  useEffect(() => {
+    if (!staff) return;
+    const load = () => api<{ due: Record<string, number> }>("care/due").then((r) => setDue(r.due)).catch(() => {});
+    void load();
+    const timer = setInterval(() => document.visibilityState === "visible" && void load(), 300000);
+    return () => clearInterval(timer);
+  }, [staff]);
+  const onCareDue = useCallback((count: number) => {
+    const peer = selectedRef.current;
+    if (peer) setDue((d) => (d[peer] === count || (!count && !d[peer]) ? d : { ...d, [peer]: count }));
+  }, []);
   useEffect(() => {
     if (!selected || !staff) return;
     let cancelled = false;
@@ -327,7 +341,7 @@ export default function InboxV2() {
   }, [selected, loadQuestions]);
   const toAsk = questions.filter((q) => q.owner === "customer" && q.status === "open" && q.include).length;
   function openQuestions() {
-    setPanelTab("questions");
+    setPanelTab("care");
     setDetailsOpen(true);
   }
   function acceptDraft(d: Draft) {
@@ -385,6 +399,31 @@ export default function InboxV2() {
       setTab("reply");
       setNotice("Draft ready. Review the details before sending.");
     });
+  }
+  // A reminder replaces the reply box with a fresh draft written from the trip plan.
+  async function draftReminder(reminder: string) {
+    if (!selected) return null;
+    if (dirty && text.trim() && !window.confirm("Replace the reply you're writing with this reminder?")) return null;
+    setComposerOpen(true);
+    const before = { text, parts };
+    let id: string | null = null;
+    await run("generate", async () => {
+      const result = await api<{ draft: Draft }>(`conversations/${selected}/generate`, {
+        instruction: reminder,
+        currentText: "",
+        staffFacts: facts,
+        id: draft?.id,
+        version: draft?.version,
+      });
+      acceptDraft(result.draft);
+      setUndo(before.text.trim() ? before : null);
+      setTab("reply");
+      setNotice("Reminder drafted. Review it before sending.");
+      id = result.draft.id;
+    });
+    // On a phone the panel covers the reply box.
+    if (id && window.matchMedia("(max-width: 1200px)").matches) setDetailsOpen(false);
+    return id;
   }
   // Sending needs a saved draft anchored to the newest message, so a typed,
   // edited or out-of-date reply is saved first; the confirm dialog still shows
@@ -502,6 +541,7 @@ export default function InboxV2() {
 
   const counts = {
     needs: conversations.filter(needsReply).length,
+    due: conversations.filter((c) => due[c.peer_id] && c.stage !== "archived").length,
     drafts: conversations.filter((c) => c.has_draft && c.stage !== "archived").length,
     unread: conversations.filter(isUnread).length,
   };
@@ -511,7 +551,9 @@ export default function InboxV2() {
         ? c.stage !== "archived"
         : filter === "needs"
           ? needsReply(c)
-          : filter === "drafts"
+          : filter === "due"
+            ? !!due[c.peer_id] && c.stage !== "archived"
+            : filter === "drafts"
             ? c.has_draft && c.stage !== "archived"
             : filter === "unread"
               ? isUnread(c)
@@ -658,6 +700,7 @@ export default function InboxV2() {
             [
               ["all", "All", 0],
               ["needs", "Needs reply", counts.needs],
+              ["due", "Due tonight", counts.due],
               ["drafts", "Drafts", counts.drafts],
               ["unread", "Unread", counts.unread],
               ["archived", "Archived", 0],
@@ -691,7 +734,7 @@ export default function InboxV2() {
                   </span>
                   {isUnread(c) && <i className={s.unreadDot} />}
                 </span>
-                {(needsReply(c) || c.has_draft) && (
+                {(needsReply(c) || c.has_draft || !!due[c.peer_id]) && (
                   <span className={v.rowTags}>
                     {needsReply(c) && (
                       <span
@@ -701,6 +744,9 @@ export default function InboxV2() {
                       </span>
                     )}
                     {c.has_draft && <span className={`${v.tag} ${v.tagDraft}`}>Draft ready</span>}
+                    {!!due[c.peer_id] && (
+                      <span className={`${v.tag} ${v.tagCare}`}>{due[c.peer_id] > 1 ? `${due[c.peer_id]} reminders due` : "Reminder due"}</span>
+                    )}
                   </span>
                 )}
               </span>
@@ -709,7 +755,7 @@ export default function InboxV2() {
           {!filtered.length && (
             <div className={s.listEmpty}>
               <MessageSquare size={28} />
-              <h3>{search ? "No matching conversations" : filter === "needs" ? "Everyone has a reply" : "Nothing here"}</h3>
+              <h3>{search ? "No matching conversations" : filter === "needs" ? "Everyone has a reply" : filter === "due" ? "No reminders due tonight" : "Nothing here"}</h3>
               <p>{search ? "Try another name or Instagram username." : "Choose another filter to see more chats."}</p>
             </div>
           )}
@@ -1145,7 +1191,26 @@ export default function InboxV2() {
                       )}
 
                       <div className={`${s.composerFooter} ${v.footer}`}>
-                        <span>{!thread.canSend && <b className={v.closedWindow}>Reply in Instagram: the 24-hour window has closed</b>}</span>
+                        <span>
+                          {!thread.canSend && (
+                            <>
+                              <b className={v.closedWindow}>Reply in Instagram: the 24-hour window has closed</b>
+                              {text.trim() && (
+                                <button
+                                  className={v.copyReply}
+                                  onClick={() =>
+                                    void navigator.clipboard
+                                      .writeText([text, ...parts].filter((p) => p.trim()).join("\n\n"))
+                                      .then(() => setNotice("Copied. Paste it in the Instagram app, then mark the reminder sent if it was one."))
+                                      .catch(() => setError("Could not copy. Select the text instead."))
+                                  }
+                                >
+                                  Copy
+                                </button>
+                              )}
+                            </>
+                          )}
+                        </span>
                         <div>
                           <button
                             disabled={!!busy || !text.trim() || conflict || !!pending || (!dirty && !!draft && !staleDraft)}
@@ -1190,25 +1255,24 @@ export default function InboxV2() {
               [
                 ["brief", "Brief"],
                 ["plan", "Plan"],
-                ["questions", "Questions"],
+                ["care", "Care"],
               ] as const
-            ).map(([key, label]) => {
-              const open = questions.filter((q) => q.status === "open").length;
-              return (
-                <button key={key} role="tab" aria-selected={panelTab === key} className={panelTab === key ? v.panelTabOn : ""} onClick={() => setPanelTab(key)}>
-                  {label}
-                  {key === "questions" && open > 0 && <i className={v.panelCount}>{open}</i>}
-                </button>
-              );
-            })}
+            ).map(([key, label]) => (
+              <button key={key} role="tab" aria-selected={panelTab === key} className={panelTab === key ? v.panelTabOn : ""} onClick={() => setPanelTab(key)}>
+                {label}
+                {key === "care" && selected && !!due[selected] && <i className={v.panelCount} title="Reminders due tonight">{due[selected]}</i>}
+              </button>
+            ))}
           </div>
           <button className={s.infoClose} aria-label="Close trip brief" onClick={() => setDetailsOpen(false)}>
             <X size={18} />
           </button>
         </header>
         {selected && thread && panelTab === "plan" && <TripPlan key={selected} peer={selected} onQuestionsChanged={loadQuestions} />}
-        {selected && thread && panelTab === "questions" && (
-          <TripQuestions key={selected} peer={selected} questions={questions} loading={questionsLoading} onChange={setQuestions} onError={setError} />
+        {selected && thread && panelTab === "care" && (
+          <TripCare key={selected} peer={selected} refresh={String(thread.messages.length)} onDraft={draftReminder} onDue={onCareDue} onError={setError}>
+            <TripQuestions peer={selected} questions={questions} loading={questionsLoading} onChange={setQuestions} onError={setError} />
+          </TripCare>
         )}
         {selected && thread ? (
           <div hidden={panelTab !== "brief"}>
