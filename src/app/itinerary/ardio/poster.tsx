@@ -20,7 +20,7 @@ const cities: City[] = [
     days: "Days 1–4 & 6",
     small: [
       { nameEn: "Science & Technology Museum", image: photos.scitech[0] },
-      { nameEn: "Giant Pandas at Shanghai Zoo", image: photos.zoo[0] },
+      { nameEn: "Wukang Mansion", image: photos.wukang[0] },
     ],
     featured: { nameEn: "The Bund & the River", image: photos.bund[0] },
   },
@@ -50,8 +50,8 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land 14:35 at Pudong (SQ 830) · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
-      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Xintiandi & Huaihai Road shopping", "🚢 Huangpu sunset cruise"] },
-      { day: "DAY 3", title: "Pandas · Wukang Road", items: ["🐼 Shanghai Zoo by metro", "Lunch in a 1920s mansion", "🛍️ Wukang & Anfu Road · spicy dinner"] },
+      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Xintiandi & Huaihai Road · 🍵 the lamb latte", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 3", title: "“Harry Potter” Bakery · Wukang Road", items: ["🥐 Breakfast at the “Harry Potter” bakery", "Wukang Mansion · lunch in a 1920s mansion", "🛍️ Anfu Road · spicy dinner"] },
       { day: "DAY 4", title: "Science Museum · Greenhouse", items: ["🔬 Science & Technology Museum · Mini World", "🌿 Shanghai Greenhouse Garden", "Jinchao 8 Lane for dinner"] },
     ],
   },
@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Aquarium · Skyline · Nanjing Road", items: ["🦈 Ocean Aquarium", "Shanghai Tower · 52nd-floor coffee · IFC shopping", "🛍️ Nanjing Road · LEGO store · piglets 🐷"] },
+      { day: "DAY 6", title: "Free Day · Jing’an Lanes", items: ["Shanghai Tower 118F (optional) · 52nd-floor coffee", "🛍️ Zhangyuan’s restored stone-gate lanes", "☕ Yuyuan Road cafés & shops · Shanghainese dinner"] },
     ],
   },
   {
