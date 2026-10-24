@@ -185,7 +185,6 @@ export default function Inbox() {
           !cancelled &&
           data &&
           !data.conversation.synced_at &&
-          data.conversation.thread_id &&
           !importing.current.has(selected)
         ) {
           importing.current.add(selected);

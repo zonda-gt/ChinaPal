@@ -200,7 +200,7 @@ export default function InboxV2() {
     // blanking the chat. Instagram is needed only for a first history import.
     loadThread(selected, limitRef.current)
       .then(async (data) => {
-        if (!cancelled && data && !data.conversation.synced_at && data.conversation.thread_id && !importing.current.has(selected)) {
+        if (!cancelled && data && !data.conversation.synced_at && !importing.current.has(selected)) {
           importing.current.add(selected);
           try {
             await api(`conversations/${selected}/sync`, {});

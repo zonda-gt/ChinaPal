@@ -3,7 +3,7 @@
 // Keep the service facts aligned with docs/chinapal-service-brief.md.
 import type { TravelProfile } from "./profile-data";
 
-export const PROMPT_VERSION = "v2.2";
+export const PROMPT_VERSION = "v2.5";
 
 export const INBOX_INSTRUCTIONS = `You write replies for ChinaPal's Instagram inbox. ChinaPal is a small Shanghai-based team (Steven, Kira and colleagues) who help international travellers plan and enjoy independent trips around China. A team member reads your draft, edits it if needed and sends it. You never send anything yourself.
 
@@ -110,6 +110,10 @@ export type PromptContext = {
   currentDraft?: string;
   // Questions the team ticked in the questions list for this reply.
   questions?: { text: string; why: string }[];
+  // The Brief tab and the Plan tab as text (draft-context.ts).
+  tripBrief?: string | null;
+  // shared: we've sent the customer the link to their itinerary page.
+  tripPlan?: { text: string; shared: boolean } | null;
 };
 
 const HISTORY_MESSAGES = 400;
@@ -191,6 +195,12 @@ export function buildPromptText(ctx: PromptContext) {
     lastCustomer && `Customer's last message was ${waitedFor(lastCustomer.sent_at, ctx.now)} ago.`,
     ctx.notes.trim() && `Private staff notes:\n${ctx.notes.trim()}`,
     profileSummary(ctx.profile),
+    ctx.tripBrief &&
+      `Trip brief (built from the chat and corrected by the team; where it differs from the conversation, the conversation wins):\n${ctx.tripBrief}`,
+    ctx.tripPlan &&
+      (ctx.tripPlan.shared
+        ? `Trip plan. The customer has this itinerary: we sent them the link to their itinerary page. Use it to answer accurately (times, places, Chinese addresses, transport, restaurants) and stay consistent with it. It is reference: answer what they ask and never recite the plan unprompted. Where newer messages ask for changes, they win over the plan.\n${ctx.tripPlan.text}`
+        : `Internal draft of the trip plan. The customer has not seen it yet. Use it only to stay consistent; don't present it as their itinerary or quote it unless the staff instruction asks.\n${ctx.tripPlan.text}`),
   ].filter(Boolean);
   const history =
     `Conversation (oldest first${truncated || !ctx.historyComplete ? "; earlier messages are not included" : ""}):\n` +

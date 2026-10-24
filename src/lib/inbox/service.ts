@@ -146,9 +146,26 @@ export async function syncConversations(after?: string) {
     await release("sync-list");
   }
 }
+// A chat that starts with a webhook has no thread id until the list is
+// refreshed, so look it up by the customer's id instead.
+async function linkThread(peer: string) {
+  const page = await graph<GraphPage<{ id: string }>>(
+    `${accountId()}/conversations`,
+    { platform: "instagram", user_id: peer, fields: "id" },
+  );
+  const id = page.data[0]?.id;
+  if (!id) return null;
+  const { error } = await db()
+    .from("inbox_conversations")
+    .update({ thread_id: id })
+    .eq("peer_id", peer);
+  checked(error);
+  return id;
+}
 export async function syncThread(peer: string, older = false) {
   const c = await conversation(peer);
-  if (!c.thread_id)
+  const threadId = c.thread_id ?? (await linkThread(peer));
+  if (!threadId)
     throw new InboxError(
       "Refresh the conversation list first to connect this new chat.",
     );
@@ -161,7 +178,7 @@ export async function syncThread(peer: string, older = false) {
       ...(older && c.history_cursor ? { after: c.history_cursor } : {}),
     };
     const page = await graph<GraphPage<{ id: string; created_time: string }>>(
-      `${encodeURIComponent(c.thread_id)}/messages`,
+      `${encodeURIComponent(threadId)}/messages`,
       params,
     );
     // Bound parallel requests and only advance the cursor when every detail is saved.
