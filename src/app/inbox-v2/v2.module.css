@@ -1923,3 +1923,33 @@ main.layout {
   background: #faf6ff;
   border-radius: 0 8px 8px 0;
 }
+
+/* Notices: a short pill, centred at the top of the chat. */
+.toastAnchor {
+  position: relative;
+  height: 0;
+  z-index: 15;
+}
+.toast.toast {
+  left: 50%;
+  right: auto;
+  transform: translateX(-50%);
+  width: max-content;
+  max-width: min(460px, calc(100% - 24px));
+  padding: 6px 8px 6px 14px;
+  gap: 8px;
+  border-radius: 999px;
+  line-height: 1.35;
+}
+.toastAnchor .toast {
+  top: 8px;
+  bottom: auto;
+}
+.toast button {
+  display: flex;
+  padding: 2px;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+}

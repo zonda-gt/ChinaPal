@@ -571,6 +571,21 @@ export default function InboxV2() {
         <Link href="/privacy">Privacy policy</Link>
       </main>
     );
+  // Shown at the top of the open chat; with no chat open it falls back to the page.
+  const toast = (error || notice) && (
+    <div role={error ? "alert" : "status"} className={`${s.toast} ${v.toast} ${error ? s.error : s.success}`}>
+      <span>{error || notice}</span>
+      <button
+        aria-label="Dismiss notification"
+        onClick={() => {
+          setError("");
+          setNotice("");
+        }}
+      >
+        <X size={14} />
+      </button>
+    </div>
+  );
   return (
     <main
       ref={panels.workspace}
@@ -797,6 +812,7 @@ export default function InboxV2() {
                 <PanelRight size={17} /> <span>Brief</span>
               </button>
             </header>
+            {toast && <div className={v.toastAnchor}>{toast}</div>}
             <div className={s.messages} ref={messageScroll.viewport} onScroll={messageScroll.onScroll} aria-label="Conversation messages">
               {!thread && (
                 <div className={s.loading}>
@@ -1226,20 +1242,7 @@ export default function InboxV2() {
           </div>
         )}
       </aside>
-      {(error || notice) && (
-        <div role={error ? "alert" : "status"} className={`${s.toast} ${error ? s.error : s.success}`}>
-          {error || notice}
-          <button
-            aria-label="Dismiss notification"
-            onClick={() => {
-              setError("");
-              setNotice("");
-            }}
-          >
-            <X size={16} />
-          </button>
-        </div>
-      )}
+      {!selected && toast}
       {image && (
         <div className={s.overlay} onClick={() => setImage(null)}>
           <button aria-label="Close image" className={s.closeImage}>
