@@ -678,5 +678,13 @@
     "title": "anfu-night",
     "path": "/uploads/itinerary/ardio/anfu-night.webp",
     "downloadedOn": "2026-10-25"
+  },
+  {
+    "id": "warehouse3",
+    "url": "https://thirdeyetraveller.com/wp-content/uploads/No-3-Warehouse-Shanghai-Futuristic-Restaurant-10.jpg",
+    "source": "Web: Third Eye Traveller, No. 3 Warehouse Shanghai (New World City branch)",
+    "title": "warehouse3",
+    "path": "/uploads/itinerary/ardio/warehouse3.webp",
+    "downloadedOn": "2026-10-25"
   }
 ]
