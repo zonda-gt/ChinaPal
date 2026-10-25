@@ -51,7 +51,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     days: [
       { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land 14:35 at Pudong (SQ 830) · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
       { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Xintiandi & Huaihai Road · 🍵 the lamb latte", "🚢 Huangpu sunset cruise"] },
-      { day: "DAY 3", title: "“Harry Potter” Bakery · Wukang Road", items: ["🥐 Breakfast at the “Harry Potter” bakery", "Wukang Mansion · lunch in a 1920s mansion", "🛍️ Anfu Road · spicy dinner"] },
+      { day: "DAY 3", title: "Wukang Road · “Harry Potter” Bakery", items: ["Wukang Mansion & Wukang Road", "🥐 The “Harry Potter” bakery · lunch in a 1920s mansion", "🛍️ Anfu Road · spicy dinner"] },
       { day: "DAY 4", title: "Science Museum · Greenhouse", items: ["🔬 Science & Technology Museum · Mini World", "🌿 Shanghai Greenhouse Garden", "Jinchao 8 Lane for dinner"] },
     ],
   },
