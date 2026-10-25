@@ -622,5 +622,37 @@
     "title": "anfu",
     "path": "/uploads/itinerary/ardio/anfu.webp",
     "downloadedOn": "2026-10-24"
+  },
+  {
+    "id": "haus-nowhere",
+    "url": "https://store.is.autonavi.com/showpic/56bb388bc0dc8b840000002249864803?type=pic",
+    "source": "Amap place photos (HAUS NOWHERE)",
+    "title": "haus-nowhere",
+    "path": "/uploads/itinerary/ardio/haus-nowhere.webp",
+    "downloadedOn": "2026-10-25"
+  },
+  {
+    "id": "lv-ship",
+    "url": "https://store.is.autonavi.com/showpic/1d8bb4e680588df90000000721204242?type=pic",
+    "source": "Amap place photos (LV路易威登非凡之旅)",
+    "title": "lv-ship",
+    "path": "/uploads/itinerary/ardio/lv-ship.webp",
+    "downloadedOn": "2026-10-25"
+  },
+  {
+    "id": "1000-trees",
+    "url": "https://aos-comment.amap.com/B0M2LKO2YA/comment/bd42cfa1-bca7-453a-bc23-148d6feaa149.png",
+    "source": "Amap place photos (天安千树)",
+    "title": "1000-trees",
+    "path": "/uploads/itinerary/ardio/1000-trees.webp",
+    "downloadedOn": "2026-10-25"
+  },
+  {
+    "id": "cubic3",
+    "url": "https://aos-comment.amap.com/B0L0GC3XTU/comment/%5B2026-02-16-03-16-03%5DDCCF26B8-2C67-49D0-BB5B-3AFD1D76832_1771182999321_85177672.jpg",
+    "source": "Amap place photos (CUBIC3 愚园路)",
+    "title": "cubic3",
+    "path": "/uploads/itinerary/ardio/cubic3.webp",
+    "downloadedOn": "2026-10-25"
   }
 ]
