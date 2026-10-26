@@ -1,7 +1,6 @@
-import type { TripBrief } from "./brief-data";
 import type { PlanCore, PlanItem } from "./plan-data";
 
-// The trip brief and trip plan as reference text for the reply drafter. Only
+// The trip plan as reference text for the reply drafter. Only
 // customer-safe facts go in: the plan's verify and source notes are left out,
 // and long descriptions are cut to their first sentence to keep drafts short.
 
@@ -45,20 +44,4 @@ export function planForDraft(plan: PlanCore) {
     bookings.length && `Bookings:\n${bookings.join("\n")}`,
     plan.tips.length && `Tips:\n${plan.tips.map((t) => `- ${t}`).join("\n")}`,
   ].filter(Boolean).join("\n\n");
-}
-
-export function briefForDraft(brief: TripBrief, withDays: boolean) {
-  const list = (label: string, rows: string[]) => (rows.length ? `${label}:\n${rows.map((r) => `- ${r}`).join("\n")}` : "");
-  return [
-    brief.need && `Need: ${brief.need.text}`,
-    brief.dates && `Dates: ${brief.dates.text}`,
-    brief.party && `Travellers: ${brief.party.text}`,
-    brief.paid && `Payment: ${brief.paid.text}`,
-    list("Route", brief.route.map((r) => `${r.place} ${r.dates}${r.booked ? " (booked)" : ""}`)),
-    withDays && list("Days", brief.days.flatMap((d) => d.items.map((i) => `${d.label || d.date}: ${i.time ? `${i.time} ` : ""}${i.text}${i.booked ? " (booked)" : ""}`))),
-    list("Requests", brief.requests.map((r) => `${r.item}: ${r.status.replace("_", " ")}${r.next ? ` (next: ${r.next})` : ""}`)),
-    list("Deadlines", brief.deadlines.map((d) => `${d.text}${d.by ? ` (by ${d.by})` : ""}`)),
-    list("Must know", brief.mustKnow.map((m) => `${m.critical ? "IMPORTANT: " : ""}${m.text}`)),
-    list("Preferences", brief.preferences.map((p) => p.text)),
-  ].filter(Boolean).join("\n");
 }
