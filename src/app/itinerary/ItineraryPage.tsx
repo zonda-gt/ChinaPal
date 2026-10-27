@@ -162,6 +162,53 @@ interface DayConfig {
   color: string;
   items: TimelineItem[];
   city?: string;
+  /* Local snacks on or near the day's route, and something to take home */
+  tryNearby?: { spots: NearbySpot[]; takeHome?: string };
+}
+
+interface NearbySpot {
+  name: string;
+  cn: string; // Chinese name and address
+  order: string; // what to get
+  near: string; // which stop of the day it is near
+  price?: string;
+}
+
+/* A small box after the day's timeline: names when closed, details when open. */
+function TryNearby({ data }: { data: NonNullable<DayConfig["tryNearby"]> }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div onClick={() => setOpen(!open)} style={{ background: "#FFFBF5", border: "1px solid #F1E6D6", borderRadius: 14, padding: "12px 14px", margin: "4px 0 10px", cursor: "pointer" }}>
+      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+        <div style={{ minWidth: 0 }}>
+          <p style={{ fontSize: 11, fontWeight: 800, color: "#B45309", margin: 0, textTransform: "uppercase", letterSpacing: "0.06em", display: "flex", alignItems: "center", gap: 6 }}>
+            <Utensils size={12} color="#B45309" /> Try nearby
+          </p>
+          {!open && <p style={{ fontSize: 12, fontWeight: 700, color: "#555", margin: "4px 0 0", lineHeight: 1.4 }}>{data.spots.map((s) => s.name).join(" · ")}</p>}
+        </div>
+        {open ? <ChevronUp size={14} color="#B45309" /> : <ChevronDown size={14} color="#B45309" />}
+      </div>
+      {open && (
+        <div style={{ marginTop: 8 }}>
+          {data.spots.map((spot) => (
+            <div key={spot.name} style={{ padding: "8px 0", borderTop: "1px solid #F1E6D6" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
+                <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>{spot.name}</p>
+                {spot.price && <span style={{ fontSize: 10.5, color: "#888", fontWeight: 600, flexShrink: 0 }}>{spot.price}</span>}
+              </div>
+              <p style={{ fontSize: 12, color: "#555", margin: "2px 0 0", lineHeight: 1.45 }}>{spot.order}</p>
+              <p style={{ fontSize: 11, color: "#999", margin: "3px 0 0", lineHeight: 1.4 }}>{spot.near} · {spot.cn}</p>
+            </div>
+          ))}
+          {data.takeHome && (
+            <p style={{ fontSize: 12, color: "#7A4A12", margin: 0, padding: "8px 0 0", borderTop: "1px solid #F1E6D6", lineHeight: 1.45 }}>
+              <b>Take home:</b> {data.takeHome}
+            </p>
+          )}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export interface ItineraryConfig {
@@ -1304,6 +1351,8 @@ export default function ItineraryPage({ images, leadName, config, chromeless, in
                       <TimelineCardWithTransport item={item} index={i} />
                     </React.Fragment>
                   ))}
+
+                  {day.tryNearby && <TryNearby data={day.tryNearby} />}
 
                   {/* Departure card on last day */}
                   {isLastDay && (
