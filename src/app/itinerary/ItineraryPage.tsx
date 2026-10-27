@@ -131,6 +131,7 @@ interface WalkStop {
   note: string;
   place?: string; // Chinese name and address, to show a driver or search in a map app
   image?: string;
+  hero?: string; // a highlight stop: a full-width photo in the opened route
   next?: string; // how far to the next stop, e.g. "9 min walk"
 }
 
@@ -553,7 +554,7 @@ function WalkRoute({ stops }: { stops: WalkStop[] }) {
         <div key={stop.name}>
           <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
             <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#D0021B", color: "#fff", fontSize: 11, fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>{i + 1}</div>
-            {stop.image && (
+            {stop.image && !stop.hero && (
               <div style={{ width: 56, height: 56, borderRadius: 10, overflow: "hidden", flexShrink: 0, background: "#F7F5F2" }}>
                 <img src={stop.image} alt={stop.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               </div>
@@ -564,6 +565,11 @@ function WalkRoute({ stops }: { stops: WalkStop[] }) {
               {stop.place && <p style={{ fontSize: 11, color: "#999", margin: "3px 0 0", lineHeight: 1.4 }}>{stop.place}</p>}
             </div>
           </div>
+          {stop.hero && (
+            <div style={{ marginLeft: 32, marginTop: 8, aspectRatio: "16/10", borderRadius: 12, overflow: "hidden", background: "#F7F5F2" }}>
+              <img src={stop.hero} alt={stop.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+          )}
           {i < stops.length - 1 && (
             <div style={{ display: "flex", gap: 10, alignItems: "center", minHeight: 30 }}>
               <div style={{ width: 22, display: "flex", justifyContent: "center", alignSelf: "stretch" }}>

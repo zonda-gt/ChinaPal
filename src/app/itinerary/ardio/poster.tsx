@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Famous Food · Jing’an Lanes", items: ["Shanghai Tower (optional) · No. 3 Warehouse lunch", "🛍️ Zhangyuan · the Louis Vuitton ship", "☕ Yuyuan Road · Renhe Guan dinner"] },
+      { day: "DAY 6", title: "Famous Food · Jing’an Lanes", items: ["🌳 1000 Trees · No. 3 Warehouse lunch", "🛍️ Zhangyuan · the Louis Vuitton ship", "☕ Yuyuan Road · Renhe Guan dinner"] },
     ],
   },
   {
