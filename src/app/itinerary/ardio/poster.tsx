@@ -50,8 +50,8 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
     cityName: "Shanghai",
     days: [
       { day: "DAY 1", title: "Arrival · The Bund at Night", items: ["✈️ Land 14:35 at Pudong (SQ 830) · pickup booked", "Lai Lai soup dumplings for dinner", "Nanjing Road & the Bund lit up"] },
-      { day: "DAY 2", title: "Yu Garden · Xintiandi · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Xintiandi & Huaihai Road · 🍵 the lamb latte", "🚢 Huangpu sunset cruise"] },
-      { day: "DAY 3", title: "Wukang Road · “Harry Potter” Bakery", items: ["Wukang Mansion & Wukang Road", "🥐 The “Harry Potter” bakery · lunch in a 1920s mansion", "🛍️ Anfu Road · spicy dinner"] },
+      { day: "DAY 2", title: "Yu Garden · Huaihai Road · River Cruise", items: ["Yu Garden at opening · Nanxiang xiaolongbao", "🛍️ Huaihai Road walk: Matcha Wang, Adidas, HAUS NOWHERE, Songmont", "🚢 Huangpu sunset cruise"] },
+      { day: "DAY 3", title: "Wukang Road · Dinosaurs", items: ["Wukang Mansion · breakfast at the “Harry Potter” bakery", "🛍️ Anfu Road · lunch in a 1920s mansion", "🦕 Natural History Museum · spicy dinner"] },
       { day: "DAY 4", title: "Science Museum · Greenhouse", items: ["🔬 Science & Technology Museum · Mini World", "🌿 Shanghai Greenhouse Garden", "Jinchao 8 Lane for dinner"] },
     ],
   },
@@ -64,7 +64,7 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 6", title: "Free Day · Jing’an Lanes", items: ["Shanghai Tower 118F (optional) · 52nd-floor coffee", "🛍️ Zhangyuan’s restored stone-gate lanes", "☕ Yuyuan Road cafés & shops · Shanghainese dinner"] },
+      { day: "DAY 6", title: "Famous Food · Jing’an Lanes", items: ["Shanghai Tower (optional) · No. 3 Warehouse lunch", "🛍️ Zhangyuan · the Louis Vuitton ship", "☕ Yuyuan Road · Renhe Guan dinner"] },
     ],
   },
   {

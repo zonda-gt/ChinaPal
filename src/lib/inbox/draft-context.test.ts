@@ -1,7 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { briefForDraft, planForDraft, planShared } from "./draft-context";
-import type { TripBrief } from "./brief-data";
+import { planForDraft, planShared } from "./draft-context";
 import type { PlanCore, PlanItem } from "./plan-data";
 
 const item = (over: Partial<PlanItem>): PlanItem => ({
@@ -64,31 +63,4 @@ test("planForDraft keeps customer-safe facts and drops internal notes", () => {
   assert.match(text, /Other option \(Indoor\): Shanghai Museum$/m);
   assert.match(text, /Yu Garden \(6 Dec\): to book; Before the visit/);
   assert.doesNotMatch(text, /Monday closure|example\.com/);
-});
-
-test("briefForDraft lists the brief's days only when there is no plan", () => {
-  const fact = (text: string) => ({ text, certainty: "confirmed" as const, sources: [] });
-  const brief: TripBrief = {
-    name: "Ardio",
-    language: "English",
-    stage: { value: "planning", reason: "" },
-    need: fact("Family itinerary"),
-    dates: fact("5–16 Dec 2026"),
-    start: "2026-12-05",
-    party: null,
-    paid: null,
-    route: [{ ...fact(""), place: "Shanghai", dates: "5–11 Dec", booked: true }],
-    days: [{ date: "2026-12-06", label: "Sun 6 Dec", city: "Shanghai", items: [{ ...fact("Yu Garden"), time: "", booked: false, day: "" }] }],
-    requests: [],
-    deadlines: [],
-    mustKnow: [{ ...fact("Child is 1"), critical: true }],
-    preferences: [],
-    questions: [],
-    ideas: [],
-  };
-  const withDays = briefForDraft(brief, true);
-  assert.match(withDays, /Route:\n- Shanghai 5–11 Dec \(booked\)/);
-  assert.match(withDays, /Days:\n- Sun 6 Dec: Yu Garden/);
-  assert.match(withDays, /IMPORTANT: Child is 1/);
-  assert.doesNotMatch(briefForDraft(brief, false), /Days:/);
 });

@@ -678,5 +678,29 @@
     "title": "anfu-night",
     "path": "/uploads/itinerary/ardio/anfu-night.webp",
     "downloadedOn": "2026-10-25"
+  },
+  {
+    "id": "adidas-huaihai",
+    "url": "https://english.shanghai.gov.cn/cmsres/6e/6ecbf4ca47e141048a1812f7bac02552/21ad0bd836b90d08f4cf640b4c298e7c.jpg",
+    "source": "Web: english.shanghai.gov.cn, Middle Huaihai Road: Shanghai's new fashion frontier (2024)",
+    "title": "adidas-huaihai",
+    "path": "/uploads/itinerary/ardio/adidas-huaihai.webp",
+    "downloadedOn": "2026-10-27"
+  },
+  {
+    "id": "songmont-huaihai",
+    "url": "https://aos-comment.amap.com/B0H3ZAFFYD/comment/4CD73C9D_D7C2_4EF1_9A42_143B8C049F34_L0_001_1280_191_1762500716898_58783573.jpg",
+    "source": "Amap place photos (Songmont山下有松 淮海中路店)",
+    "title": "songmont-huaihai",
+    "path": "/uploads/itinerary/ardio/songmont-huaihai.webp",
+    "downloadedOn": "2026-10-27"
+  },
+  {
+    "id": "r-warehouse3",
+    "url": "https://aos-comment.amap.com/B0KKD55SHY/comment/content_media_external_file_38520_1749565753677_45136832.jpg",
+    "source": "Amap place photos (3号仓库 正大广场店)",
+    "title": "r-warehouse3",
+    "path": "/uploads/itinerary/ardio/r-warehouse3.webp",
+    "downloadedOn": "2026-10-27"
   }
 ]

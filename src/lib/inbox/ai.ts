@@ -5,10 +5,8 @@ import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { mediaBytes } from "./graph";
 import { lease, release, saveDraft, threadData } from "./service";
 import { readProfile } from "./profile-store";
-import { readBrief } from "./brief-store";
 import { readPlan } from "./plan-store";
-import { applyEdits } from "./brief-data";
-import { briefForDraft, planForDraft, planShared } from "./draft-context";
+import { planForDraft, planShared } from "./draft-context";
 import { contactIdentity } from "./contacts";
 import { runDraft } from "./draft-core";
 import { linkDraft, listQuestions } from "./question-store";
@@ -32,18 +30,16 @@ export async function generateDraft(
     throw new InboxError("AI drafting needs OPENAI_API_KEY on the server.", 503);
   await lease(`ai:${peer}`, 180);
   try {
-    const [{ conversation, messages }, profile, identity, questions, brief, plan] = await Promise.all([
+    const [{ conversation, messages }, profile, identity, questions, plan] = await Promise.all([
       threadData(peer, 400),
       readProfile(peer).catch(() => null),
       contactIdentity(peer).catch(() => null),
       // Before the questions migration there is simply nothing to ask.
       listQuestions(peer).catch(() => []),
-      // A missing table or row only means the draft goes without them.
-      readBrief(peer).catch(() => null),
+      // A missing table or row only means the draft goes without a plan.
       readPlan(peer).catch(() => null),
     ]);
     const tripPlan = plan?.plan?.days.length ? plan.plan : null;
-    const tripBrief = brief?.brief ? applyEdits(brief.brief, brief.edits) : null;
     const toAsk = questionsToAsk(questions);
     if (!messages.length) throw new InboxError("Load messages before generating a reply.");
     const client = new OpenAI({
@@ -66,7 +62,6 @@ export async function generateDraft(
         instruction: input.instruction,
         currentDraft: input.currentText,
         questions: toAsk.map((q) => ({ text: q.text, why: q.why })),
-        tripBrief: tripBrief ? briefForDraft(tripBrief, !tripPlan) : null,
         tripPlan: tripPlan ? { text: planForDraft(tripPlan), shared: planShared(messages) } : null,
       },
       mediaBytes,

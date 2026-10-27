@@ -122,6 +122,16 @@ interface TimelineItem {
   transportAfter?: TransportLeg;
   /* Other choices for this slot, shown as cards to swipe beside the main one */
   alternatives?: Alternative[];
+  /* A city walk: several stops in order, shown inside this one card */
+  walk?: WalkStop[];
+}
+
+interface WalkStop {
+  name: string;
+  note: string;
+  place?: string; // Chinese name and address, to show a driver or search in a map app
+  image?: string;
+  next?: string; // how far to the next stop, e.g. "9 min walk"
 }
 
 interface Alternative {
@@ -535,6 +545,43 @@ function RestaurantCard({ r }: { r: Restaurant }) {
   );
 }
 
+/* The numbered route inside an expanded city-walk card. */
+function WalkRoute({ stops }: { stops: WalkStop[] }) {
+  return (
+    <div style={{ margin: "2px 0 12px" }}>
+      {stops.map((stop, i) => (
+        <div key={stop.name}>
+          <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+            <div style={{ width: 22, height: 22, borderRadius: "50%", background: "#D0021B", color: "#fff", fontSize: 11, fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, marginTop: 2 }}>{i + 1}</div>
+            {stop.image && (
+              <div style={{ width: 56, height: 56, borderRadius: 10, overflow: "hidden", flexShrink: 0, background: "#F7F5F2" }}>
+                <img src={stop.image} alt={stop.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              </div>
+            )}
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <p style={{ fontSize: 13.5, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.25 }}>{stop.name}</p>
+              <p style={{ fontSize: 12, color: "#555", margin: "2px 0 0", lineHeight: 1.45 }}>{stop.note}</p>
+              {stop.place && <p style={{ fontSize: 11, color: "#999", margin: "3px 0 0", lineHeight: 1.4 }}>{stop.place}</p>}
+            </div>
+          </div>
+          {i < stops.length - 1 && (
+            <div style={{ display: "flex", gap: 10, alignItems: "center", minHeight: 30 }}>
+              <div style={{ width: 22, display: "flex", justifyContent: "center", alignSelf: "stretch" }}>
+                <div style={{ borderLeft: "2px dashed #E2D9CE" }} />
+              </div>
+              {stop.next && (
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 4, fontSize: 11, color: "#999", fontWeight: 600 }}>
+                  <Footprints size={11} color="#BBB" /> {stop.next}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function TimelineCardWithTransport({ item, index }: { item: TimelineItem; index: number }) {
   return (
     <>
@@ -714,6 +761,27 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
           </div>
         )}
 
+        {/* COLLAPSED PREVIEW — city walk: a strip of the stops and their names */}
+        {!expanded && item.walk && (
+          <div style={{ marginTop: 10 }}>
+            <div style={{ display: "grid", gridTemplateColumns: `repeat(${item.walk.length}, 1fr)`, gap: 4, marginBottom: 8 }}>
+              {item.walk.map((stop) => (
+                <div key={stop.name} style={{ aspectRatio: "1/1", borderRadius: 8, overflow: "hidden", background: "#F7F5F2" }}>
+                  {stop.image && <img src={stop.image} alt="" style={{ width: "100%", height: "100%", objectFit: "cover" }} />}
+                </div>
+              ))}
+            </div>
+            <div style={{ display: "flex", gap: 6, flexWrap: "wrap", alignItems: "center" }}>
+              {item.walk.map((stop, i) => (
+                <React.Fragment key={stop.name}>
+                  <span style={{ fontSize: 11.5, fontWeight: 700, color: "#555" }}>{stop.name}</span>
+                  {i < item.walk!.length - 1 && <span style={{ fontSize: 10, color: "#CCC" }}>→</span>}
+                </React.Fragment>
+              ))}
+            </div>
+          </div>
+        )}
+
         {/* COLLAPSED PREVIEW — transport: inline duration + price + train info */}
         {!expanded && item.type === "transport" && item.previewLine && (
           <div style={{ display: "flex", gap: 6, marginTop: 6, flexWrap: "wrap", alignItems: "center" }}>
@@ -744,6 +812,8 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
             {item.description.split("\n\n").map((paragraph, paragraphIndex) => (
               <p key={paragraphIndex} style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{paragraph}</p>
             ))}
+
+            {item.walk && <WalkRoute stops={item.walk} />}
 
             {item.restaurants && (
               <div onClick={(e) => e.stopPropagation()}>
