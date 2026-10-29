@@ -7,7 +7,7 @@ import { useSearchParams } from "next/navigation";
 import type { ImageMap } from "@/lib/itinerary-images";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ItineraryPage from "../ItineraryPage";
+import ItineraryPage from "../itinerary/ItineraryPage";
 import SamplePoster from "./poster";
 import { buildSampleConfig, recommended } from "./config";
 

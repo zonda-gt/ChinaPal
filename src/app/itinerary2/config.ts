@@ -1,5 +1,5 @@
 import { Camera, Car, Castle, Footprints, Hotel, Moon, Plane, Ship, ShoppingBag, Sparkles, Sun, Sunset, TrainFront, Utensils } from "lucide-react";
-import type { ItineraryConfig } from "../ItineraryPage";
+import type { ItineraryConfig } from "../itinerary/ItineraryPage";
 
 /* A sample 10-day trip to show leads what a ChinaPal itinerary looks like:
    a couple on their first trip, Beijing → Chongqing → Shanghai, 14–23 April
