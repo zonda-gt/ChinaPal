@@ -84,7 +84,7 @@ const RESTAURANT_IMAGES = {
   xibuStreetSnacks: "/uploads/itinerary/restaurants/xibu-street-snacks.jpg",
   xianghuaBbq: "/uploads/itinerary/restaurants/xianghua-bbq.jpg",
   watersideBar: "/uploads/itinerary/restaurants/waterside-bar.jpg",
-  xitangJiafan: "/uploads/itinerary/restaurants/xitang-jiafan.JPG",
+  xitangJiafan: "/uploads/itinerary/restaurants/xitang-jiafan.jpg",
 } as const;
 
 interface Restaurant {
