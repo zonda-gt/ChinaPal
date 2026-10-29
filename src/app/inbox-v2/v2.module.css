@@ -2138,33 +2138,3 @@ main.layout {
     transform: rotate(360deg);
   }
 }
-
-/* Sign-in: who is signing in */
-.whoLabel {
-  display: block;
-  font-size: 13px;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.whoPicker {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-bottom: 18px;
-}
-.layout .whoPicker button,
-.whoPicker button {
-  padding: 10px 0;
-  border-radius: 10px;
-  border: 1px solid #d9dfd2;
-  background: #fff;
-  font: inherit;
-  font-weight: 600;
-  color: #4b5c4a;
-  cursor: pointer;
-}
-main .whoPicker button.whoOn {
-  border-color: #2f5d3a;
-  background: #2f5d3a;
-  color: #fff;
-}

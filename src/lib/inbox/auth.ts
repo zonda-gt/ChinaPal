@@ -44,8 +44,8 @@ export async function requireStaff(): Promise<Staff> {
   return { email: member.id, name: member.name };
 }
 export async function login(who: string, value: string, request: Request) {
-  const member = TEAM.find((m) => m.id === who);
-  if (!member) throw new InboxError("Choose who is signing in.");
+  const member = TEAM.find((m) => m.id === who.trim().toLowerCase());
+  if (!member) throw new InboxError("Unknown username.", 401);
   const expected = password(member.id);
   // Global and per-source throttles are durable across Vercel instances.
   await lease("login-global", 1);

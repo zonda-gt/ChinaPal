@@ -23,7 +23,6 @@ import {
   X,
 } from "lucide-react";
 import type { Conversation, Draft, Message, Staff } from "@/lib/inbox/types";
-import { TEAM, type TeamId } from "@/lib/inbox/team";
 import s from "./inbox.module.css";
 import TravelProfile from "./TravelProfile";
 import usePanelLayout from "./usePanelLayout";
@@ -66,7 +65,7 @@ export default function Inbox() {
   const [staff, setStaff] = useState<Staff | null>(null),
     [checking, setChecking] = useState(true),
     [password, setPassword] = useState(""),
-    [who, setWho] = useState<TeamId>(TEAM[0].id);
+    [who, setWho] = useState("");
   const [conversations, setConversations] = useState<Conversation[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [thread, setThread] = useState<Thread | null>(null);
@@ -435,14 +434,15 @@ export default function Inbox() {
             Sign in to the private ChinaPal inbox to help travelers and prepare
             replies together.
           </p>
-          <label htmlFor="inbox-who">Who&apos;s signing in?</label>
-          <select id="inbox-who" value={who} onChange={(e) => setWho(e.target.value as TeamId)}>
-            {TEAM.map((m) => (
-              <option key={m.id} value={m.id}>
-                {m.name}
-              </option>
-            ))}
-          </select>
+          <label htmlFor="inbox-username">Username</label>
+          <input
+            id="inbox-username"
+            autoComplete="username"
+            autoCapitalize="none"
+            value={who}
+            onChange={(e) => setWho(e.target.value)}
+            required
+          />
           <label htmlFor="admin-password">Password</label>
           <input
             id="admin-password"

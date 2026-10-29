@@ -38,7 +38,7 @@ import TripPlan from "./TripPlan";
 import TripQuestions from "./TripQuestions";
 import TripCare from "./TripCare";
 import type { TripQuestion } from "@/lib/inbox/question-data";
-import { TEAM, teamName, type TeamId } from "@/lib/inbox/team";
+import { teamName } from "@/lib/inbox/team";
 import v from "./v2.module.css";
 
 type Thread = {
@@ -94,12 +94,11 @@ export default function InboxV2() {
   const [staff, setStaff] = useState<Staff | null>(null),
     [checking, setChecking] = useState(true),
     [password, setPassword] = useState(""),
-    [who, setWho] = useState<TeamId>(() => {
+    [who, setWho] = useState(() => {
       try {
-        const saved = localStorage.getItem("cp-inbox-who");
-        return TEAM.some((m) => m.id === saved) ? (saved as TeamId) : TEAM[0].id;
+        return localStorage.getItem("cp-inbox-who") ?? "";
       } catch {
-        return TEAM[0].id;
+        return "";
       }
     });
   const [conversations, setConversations] = useState<Conversation[]>([]),
@@ -279,7 +278,7 @@ export default function InboxV2() {
     await run("login", async () => {
       await api("auth/login", { who, password });
       try {
-        localStorage.setItem("cp-inbox-who", who);
+        localStorage.setItem("cp-inbox-who", who.trim());
       } catch {}
       const result = await api<{ staff: Staff }>("session");
       setPassword("");
@@ -601,14 +600,17 @@ export default function InboxV2() {
             <br />a little easier.
           </h1>
           <p>Sign in to the private ChinaPal inbox to help travelers and prepare replies together.</p>
-          <span className={v.whoLabel}>Who&apos;s signing in?</span>
-          <div className={v.whoPicker} role="radiogroup" aria-label="Who is signing in">
-            {TEAM.map((m) => (
-              <button key={m.id} type="button" role="radio" aria-checked={who === m.id} className={who === m.id ? v.whoOn : ""} onClick={() => setWho(m.id)}>
-                {m.name}
-              </button>
-            ))}
-          </div>
+          <label htmlFor="inbox-username">Username</label>
+          <input
+            id="inbox-username"
+            autoComplete="username"
+            autoCapitalize="none"
+            placeholder="Steven or Kira"
+            value={who}
+            onChange={(e) => setWho(e.target.value)}
+            required
+            autoFocus={!who}
+          />
           <label htmlFor="admin-password">Password</label>
           <input
             id="admin-password"
@@ -617,7 +619,7 @@ export default function InboxV2() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             required
-            autoFocus
+            autoFocus={!!who}
           />
           {error && (
             <div role="alert" className={s.error}>
