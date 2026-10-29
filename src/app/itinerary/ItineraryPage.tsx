@@ -92,7 +92,7 @@ interface Restaurant {
   cuisine: string;
   note: string;
   price: string;
-  rating: number;
+  rating?: number;
   image?: string;
 }
 
