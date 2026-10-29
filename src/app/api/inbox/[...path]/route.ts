@@ -7,8 +7,9 @@ import { listQuestions, markAsked } from "@/lib/inbox/question-store";
 import { changeCare, getCare, inboxFlags } from "@/lib/inbox/care";
 import { markCareSent } from "@/lib/inbox/care-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
+import { after } from "next/server";
 import { backfillReels, processPending } from "@/lib/inbox/reels";
-import { reelsForPeer } from "@/lib/inbox/reel-store";
+import { changeRule, commentPage, retryComment } from "@/lib/inbox/comments";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -90,6 +91,19 @@ async function handler(
       return json({ conversations: await listConversations() });
     if (method === "POST" && action === "reels/backfill")
       return json(await backfillReels());
+    // The /comment page: keyword comment replies.
+    if (method === "GET" && action === "comments")
+      return json(await commentPage());
+    if (method === "POST" && action === "comments/rule") {
+      await changeRule(staff, body);
+      return json(await commentPage());
+    }
+    if (method === "POST" && action === "comments/retry") {
+      const id = str(body.commentId, 40);
+      if (!/^\d+$/.test(id)) throw new InboxError("Invalid comment.");
+      await retryComment(id);
+      return json(await commentPage());
+    }
     if (method === "GET" && action === "care/due")
       return json(await inboxFlags());
     if (method === "POST" && action === "sync")
@@ -158,8 +172,12 @@ async function handler(
       if (method === "POST" && operation === "questions")
         return json(await changeQuestion(peer, staff, body));
       if (method === "POST" && operation === "reels") {
-        await processPending({ peer, deadline: Date.now() + 280_000 });
-        return json({ reels: await reelsForPeer(peer) });
+        // Reading takes longer than the proxy in front of the site waits for a
+        // reply, so it carries on after this answer; the open chat refreshes
+        // every 15 seconds and shows each reel as it is done.
+        const deadline = Date.now() + 280_000;
+        after(() => processPending({ peer, deadline }).catch((e) => console.error("[inbox-reels]", (e as Error).message)));
+        return json({ started: true });
       }
       if (method === "GET" && operation === "care")
         return json(await getCare(peer));

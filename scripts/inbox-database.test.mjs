@@ -192,3 +192,40 @@ test("private storage, deduplication, optimistic edits and send reservations", a
     await pg.close();
   }
 });
+
+test("comment replies: one rule per keyword and post, each comment logged and claimed once", async () => {
+  const pg = await PGlite.create();
+  try {
+    await pg.exec("create role anon; create role authenticated; create role service_role bypassrls;");
+    const sql = await readFile(new URL("../supabase/migrations/202610300001_inbox_comment_replies.sql", import.meta.url), "utf8");
+    await pg.exec(sql);
+    await pg.exec(sql); // Safe to reapply.
+    const rule = (media) =>
+      pg.query("insert into inbox_comment_rules(media_id,keyword,message) values($1,'china','Here is the itinerary') returning id", [media]);
+    const all = (await rule(null)).rows[0].id;
+    await assert.rejects(rule(null), /duplicate key/, "the same keyword twice for every post");
+    await rule("111");
+    await assert.rejects(rule("111"), /duplicate key/);
+    await assert.rejects(pg.query("insert into inbox_comment_rules(keyword,message) values('','x')"), /check constraint/);
+    const log = () =>
+      pg.query(
+        "insert into inbox_comment_replies(comment_id,media_id,rule_id,commenter_id,commented_at) values('180','111',$1,'555',now()) on conflict (comment_id) do nothing returning comment_id",
+        [all],
+      );
+    assert.equal((await log()).rows.length, 1);
+    assert.equal((await log()).rows.length, 0, "a webhook retry logs nothing new");
+    const claims = await Promise.all(
+      [1, 2].map(() => pg.query("update inbox_comment_replies set status='sending' where comment_id='180' and status in ('pending') returning comment_id")),
+    );
+    assert.equal(claims.filter((r) => r.rows.length).length, 1, "only one sender claims a comment");
+    await assert.rejects(pg.query("update inbox_comment_replies set status='done'"), /check constraint/);
+    await pg.query("delete from inbox_comment_rules where id=$1", [all]);
+    assert.equal((await pg.query("select rule_id from inbox_comment_replies")).rows[0].rule_id, null, "deleting a rule keeps the log");
+    const grants = await pg.query(
+      "select count(*)::integer n from information_schema.role_table_grants where table_name like 'inbox_comment_%' and grantee in ('anon','authenticated')",
+    );
+    assert.equal(grants.rows[0].n, 0, "browsers can't read or write comment tables");
+  } finally {
+    await pg.close();
+  }
+});

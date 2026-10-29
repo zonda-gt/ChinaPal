@@ -194,23 +194,20 @@ export default function InboxV2() {
     return data;
   }, []);
   // Shared reels are read on the server when they arrive; any still waiting
-  // (older ones, or a failed try) are read when their chat is opened.
+  // (older ones, or a failed try) start reading when their chat is opened, and
+  // the chat's regular refresh shows each one as it is done.
   const reelsAsked = useRef(new Set<string>());
   const [readingReels, setReadingReels] = useState<string | null>(null);
-  const readReels = useCallback(
-    async (peer: string) => {
-      setReadingReels(peer);
-      try {
-        await api(`conversations/${peer}/reels`, {});
-      } catch (e) {
-        setError((e as Error).message);
-      } finally {
-        setReadingReels((r) => (r === peer ? null : r));
-      }
-      if (selectedRef.current === peer) await loadThread(peer, limitRef.current).catch(() => {});
-    },
-    [loadThread],
-  );
+  const readReels = useCallback(async (peer: string) => {
+    setReadingReels(peer);
+    try {
+      await api(`conversations/${peer}/reels`, {});
+    } catch (e) {
+      setError((e as Error).message);
+    } finally {
+      setReadingReels((r) => (r === peer ? null : r));
+    }
+  }, []);
   useEffect(() => {
     const peer = thread?.conversation.peer_id;
     if (!peer || reelsAsked.current.has(peer) || !Object.values(thread.reels ?? {}).some((r) => needsWork(r))) return;
