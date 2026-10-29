@@ -55,7 +55,7 @@ export default function RootLayout({
         {process.env.NODE_ENV === "production" && (
           <script
             dangerouslySetInnerHTML={{
-              __html: `if(!/^\\/inbox(?:-[a-z0-9]+)?(?:\\/|$)/.test(location.pathname)){window.__chinaPalPublicAnalytics=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w0yzfjrluq");}`,
+              __html: `if(!/^\\/(?:inbox(?:-[a-z0-9]+)?|comment)(?:\\/|$)/.test(location.pathname)){window.__chinaPalPublicAnalytics=true;(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "w0yzfjrluq");}`,
             }}
           />
         )}
@@ -63,7 +63,7 @@ export default function RootLayout({
           <>
             <script
               dangerouslySetInnerHTML={{
-                __html: `if(!/^\\/inbox(?:-[a-z0-9]+)?(?:\\/|$)/.test(location.pathname)){window.__chinaPalPublicAnalytics=true;var tag=document.createElement('script');tag.async=true;tag.src='https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}';document.head.appendChild(tag);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ADS_ID}');}`,
+                __html: `if(!/^\\/(?:inbox(?:-[a-z0-9]+)?|comment)(?:\\/|$)/.test(location.pathname)){window.__chinaPalPublicAnalytics=true;var tag=document.createElement('script');tag.async=true;tag.src='https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}';document.head.appendChild(tag);window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GOOGLE_ADS_ID}');}`,
               }}
             />
           </>

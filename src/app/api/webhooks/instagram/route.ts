@@ -1,6 +1,7 @@
 import { after } from "next/server";
 import { processDelivery } from "@/lib/inbox/events";
 import { captureReels, processPending } from "@/lib/inbox/reels";
+import { captureComments, sendPending } from "@/lib/inbox/comments";
 import { getConciergeDatabase } from "@/lib/instagram/database";
 import { receiveInstagramWebhook, verifyInstagramWebhook } from "@/lib/instagram/webhook";
 
@@ -31,6 +32,15 @@ export async function POST(request: Request) {
       if (reels) {
         const deadline = Date.now() + 290_000;
         after(() => processPending({ deadline }).catch((e) => console.error("[inbox-reels]", (e as Error).message)));
+      }
+      // Keyword comments get their DM and public reply once the delivery is acknowledged.
+      const comments = await captureComments(delivery).catch((e) => {
+        console.error("[inbox-comments] capture failed", (e as Error).message);
+        return 0;
+      });
+      if (comments) {
+        const deadline = Date.now() + 290_000;
+        after(() => sendPending({ deadline }).catch((e) => console.error("[inbox-comments]", (e as Error).message)));
       }
     },
   });

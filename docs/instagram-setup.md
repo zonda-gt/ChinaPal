@@ -150,3 +150,37 @@ two tabs show a migration message).
   Opening the Plan tab checks on a running job; jobs over 30 minutes are stopped.
   Item sources are kept only when they are pages the research actually opened.
 
+
+## Comment replies (/comment)
+
+`/comment` (code in `src/app/comment/`, `src/lib/inbox/comments.ts`) answers
+keyword comments: when someone comments e.g. "CHINA" on one of our posts or
+reels, we send them a DM (Instagram's private reply) and, optionally, reply
+under their comment. Sign in with the inbox username and password. The team
+writes every message; no AI is involved, and this is the one place the app
+sends without a person approving each message.
+
+- A reply for **every post** applies to all posts and reels, including future
+  ones. A post can have its **own** reply for the same keyword, which wins.
+- Keywords match as whole words, ignoring case, emoji and punctuation
+  ("China!!" matches CHINA, "Chinatown" does not). Chinese or Japanese
+  keywords match anywhere in the comment.
+- Instagram allows one private reply per comment, within 7 days. Each comment
+  is logged once in `inbox_comment_replies`, so webhook retries never send
+  twice. A failed send shows Instagram's reason and a Retry button; parts
+  already sent (the DM or the public reply) are not repeated.
+- Our own comments, including our public replies, are ignored.
+
+Setup, once:
+
+1. Apply `supabase/migrations/202610300001_inbox_comment_replies.sql`.
+2. In Meta → Instagram use case → API setup with Instagram login, make sure the
+   app has `instagram_business_manage_comments` (as well as the messaging
+   permission), regenerate `INSTAGRAM_ACCESS_TOKEN` if it was issued without
+   it, and subscribe the webhook to the **comments** field next to `messages`.
+3. Save a reply on `/comment`, comment the keyword on one of our posts from
+   another account, and check the DM, the public reply and the log.
+
+Meta sends every comment on our posts, not only keyword ones. Only matching
+comments are logged, but each delivery is still kept in
+`instagram_webhook_deliveries` like message webhooks.

@@ -9,6 +9,7 @@ import { markCareSent } from "@/lib/inbox/care-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
 import { backfillReels, processPending } from "@/lib/inbox/reels";
 import { reelsForPeer } from "@/lib/inbox/reel-store";
+import { changeRule, commentPage, retryComment } from "@/lib/inbox/comments";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -90,6 +91,19 @@ async function handler(
       return json({ conversations: await listConversations() });
     if (method === "POST" && action === "reels/backfill")
       return json(await backfillReels());
+    // The /comment page: keyword comment replies.
+    if (method === "GET" && action === "comments")
+      return json(await commentPage());
+    if (method === "POST" && action === "comments/rule") {
+      await changeRule(staff, body);
+      return json(await commentPage());
+    }
+    if (method === "POST" && action === "comments/retry") {
+      const id = str(body.commentId, 40);
+      if (!/^\d+$/.test(id)) throw new InboxError("Invalid comment.");
+      await retryComment(id);
+      return json(await commentPage());
+    }
     if (method === "GET" && action === "care/due")
       return json(await inboxFlags());
     if (method === "POST" && action === "sync")
