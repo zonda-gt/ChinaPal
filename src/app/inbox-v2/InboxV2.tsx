@@ -38,6 +38,7 @@ import TripPlan from "./TripPlan";
 import TripQuestions from "./TripQuestions";
 import TripCare from "./TripCare";
 import type { TripQuestion } from "@/lib/inbox/question-data";
+import { TEAM, teamName, type TeamId } from "@/lib/inbox/team";
 import v from "./v2.module.css";
 
 type Thread = {
@@ -46,6 +47,7 @@ type Thread = {
   drafts: Draft[];
   canSend: boolean;
   latestInbound: string | null;
+  senders?: Record<string, string>; // Instagram message id → who sent it from the inbox
 };
 type Filter = "all" | "needs" | "due" | "drafts" | "unread" | "archived";
 const MAX_MESSAGES = 3;
@@ -91,7 +93,15 @@ export default function InboxV2() {
   const panels = usePanelLayout();
   const [staff, setStaff] = useState<Staff | null>(null),
     [checking, setChecking] = useState(true),
-    [password, setPassword] = useState("");
+    [password, setPassword] = useState(""),
+    [who, setWho] = useState<TeamId>(() => {
+      try {
+        const saved = localStorage.getItem("cp-inbox-who");
+        return TEAM.some((m) => m.id === saved) ? (saved as TeamId) : TEAM[0].id;
+      } catch {
+        return TEAM[0].id;
+      }
+    });
   const [conversations, setConversations] = useState<Conversation[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [thread, setThread] = useState<Thread | null>(null);
@@ -267,7 +277,10 @@ export default function InboxV2() {
   async function signIn(e: React.FormEvent) {
     e.preventDefault();
     await run("login", async () => {
-      await api("auth/login", { password });
+      await api("auth/login", { who, password });
+      try {
+        localStorage.setItem("cp-inbox-who", who);
+      } catch {}
       const result = await api<{ staff: Staff }>("session");
       setPassword("");
       setStaff(result.staff);
@@ -588,7 +601,15 @@ export default function InboxV2() {
             <br />a little easier.
           </h1>
           <p>Sign in to the private ChinaPal inbox to help travelers and prepare replies together.</p>
-          <label htmlFor="admin-password">Admin password</label>
+          <span className={v.whoLabel}>Who&apos;s signing in?</span>
+          <div className={v.whoPicker} role="radiogroup" aria-label="Who is signing in">
+            {TEAM.map((m) => (
+              <button key={m.id} type="button" role="radio" aria-checked={who === m.id} className={who === m.id ? v.whoOn : ""} onClick={() => setWho(m.id)}>
+                {m.name}
+              </button>
+            ))}
+          </div>
+          <label htmlFor="admin-password">Password</label>
           <input
             id="admin-password"
             type="password"
@@ -646,8 +667,8 @@ export default function InboxV2() {
           {counts.needs > 0 && <span className={s.railBadge}>{counts.needs}</span>}
         </button>
         <div className={s.railBottom}>
-          <div className={s.staffAvatar} title="ChinaPal team · Shared admin access">
-            CP
+          <div className={s.staffAvatar} title={`Signed in as ${staff.name}`}>
+            {staff.name.slice(0, 2).toUpperCase()}
           </div>
           <button
             aria-label="Sign out"
@@ -939,7 +960,7 @@ export default function InboxV2() {
                           </p>
                         )}
                         <time>
-                          {m.direction === "outbound" && "ChinaPal · "}
+                          {m.direction === "outbound" && `${teamName(thread.senders?.[m.id]) ?? "ChinaPal"} · `}
                           {time(m.sent_at)}
                           {m.direction === "inbound" && m.text.trim() && !translations[m.id] && (
                             <button className={v.translate} onClick={() => void translate(m)} disabled={!!translating}>

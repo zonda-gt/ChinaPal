@@ -73,7 +73,7 @@ async function handler(
         throw new InboxError("Invalid request.");
       }
       if (action === "auth/login") {
-        await login(str(body.password, 256), request);
+        await login(str(body.who ?? "", 20), str(body.password, 256), request);
         return json({ ok: true });
       }
       if (action === "auth/logout") {

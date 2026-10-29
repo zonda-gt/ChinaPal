@@ -210,7 +210,7 @@ export async function syncThread(peer: string, older = false) {
 }
 export async function threadData(peer: string, limit = 100) {
   const c = await conversation(peer);
-  const [{ data: messages, error }, { data: drafts, error: draftError }] =
+  const [{ data: messages, error }, { data: drafts, error: draftError }, { data: sent }] =
     await Promise.all([
       db()
         .from("inbox_messages")
@@ -225,6 +225,14 @@ export async function threadData(peer: string, limit = 100) {
         .eq("peer_id", peer)
         .order("updated_at", { ascending: false })
         .limit(10),
+      // Who sent each reply from the inbox, by Instagram message id.
+      db()
+        .from("inbox_drafts")
+        .select("sent_message_id,edited_by")
+        .eq("peer_id", peer)
+        .eq("status", "sent")
+        .not("sent_message_id", "is", null)
+        .limit(1000),
     ]);
   checked(error);
   checked(draftError);
@@ -237,6 +245,9 @@ export async function threadData(peer: string, limit = 100) {
     drafts: drafts as Draft[],
     canSend: replyWindowOpen(latestInbound),
     latestInbound,
+    senders: Object.fromEntries(
+      (sent ?? []).map((d: { sent_message_id: string; edited_by: string }) => [d.sent_message_id, d.edited_by]),
+    ) as Record<string, string>,
   };
 }
 export async function saveDraft(
