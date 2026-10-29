@@ -726,21 +726,21 @@ function RestaurantCard({ r, onPlay }: { r: Restaurant; onPlay: (r: Restaurant) 
       }}
     >
       {r.instagram?.cover ? (
-        <VideoCover video={r.instagram} onPlay={() => onPlay(r)} width={112} minHeight={190} />
+        <VideoCover video={r.instagram} onPlay={() => onPlay(r)} width={100} minHeight={178} />
       ) : r.image && (
         <div style={{ width: 100, minHeight: 100, flexShrink: 0, overflow: "hidden", background: "#F7F5F2" }}>
           <img src={r.image} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
       )}
       <div style={{ padding: "10px 12px", flex: 1, minWidth: 0 }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", gap: 6 }}>
-          <div>
-            <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif" }}>{r.englishName || r.name}</p>
-            {r.englishName && <p style={{ fontSize: 10, color: "#999", margin: "1px 0 0" }}>{r.name}</p>}
-          </div>
-          <span style={{ fontSize: 10, color: "#888", fontWeight: 600, flexShrink: 0 }}>{r.price}</span>
+        {/* The name gets the full width; the price sits with the cuisine, so
+            long names don't squeeze into a narrow column on small phones. */}
+        <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0, fontFamily: "'Fraunces', serif", lineHeight: 1.25, overflowWrap: "anywhere" }}>{r.englishName || r.name}</p>
+        {r.englishName && <p style={{ fontSize: 10, color: "#999", margin: "1px 0 0", overflowWrap: "anywhere" }}>{r.name}</p>}
+        <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "4px 8px", margin: "5px 0 4px" }}>
+          <span style={{ fontSize: 8, fontWeight: 700, color: "#D0021B", background: "#FFF1F3", padding: "1px 6px", borderRadius: 20, textTransform: "uppercase", letterSpacing: "0.04em" }}>{r.cuisine}</span>
+          <span style={{ fontSize: 10, color: "#888", fontWeight: 600, whiteSpace: "nowrap" }}>{r.price}</span>
         </div>
-        <span style={{ display: "inline-block", fontSize: 8, fontWeight: 700, color: "#D0021B", background: "#FFF1F3", padding: "1px 6px", borderRadius: 20, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 4 }}>{r.cuisine}</span>
         <p style={{ fontSize: 11.5, color: "#555", margin: "4px 0 0", lineHeight: 1.45 }}>{r.note}</p>
         {r.instagram && !r.instagram.cover && <WatchLink onPlay={() => onPlay(r)} handle={r.instagram.handle} />}
       </div>
@@ -1338,6 +1338,16 @@ export default function ItineraryPage({ images, leadName, config, chromeless, in
     const y = el.getBoundingClientRect().top + window.scrollY - 64;
     window.scrollTo({ top: y, behavior: "smooth" });
   };
+  /* Keep the current day's tab in view when the day changes, e.g. from
+     "Continue to Day 9" on a phone where the later tabs are off to the right. */
+  useEffect(() => {
+    const bar = dayTabsRef.current;
+    const tab = bar?.children[activeDay - 1] as HTMLElement | undefined;
+    if (!bar || !tab) return;
+    const left = tab.getBoundingClientRect().left - bar.getBoundingClientRect().left + bar.scrollLeft;
+    if (left < bar.scrollLeft || left + tab.offsetWidth > bar.scrollLeft + bar.clientWidth)
+      bar.scrollTo({ left: Math.max(0, left - (bar.clientWidth - tab.offsetWidth) / 2), behavior: "smooth" });
+  }, [activeDay]);
 
   return (
     <ImgCtx.Provider value={img}>

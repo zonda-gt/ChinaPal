@@ -131,7 +131,7 @@ export default function SamplePoster({ name }: { name?: string | null }) {
   };
 
   return (
-    <div className={`${dmSans.className} bg-stone-100 px-4 py-6`}>
+    <div className={`${dmSans.className} bg-stone-100 px-4 pb-6 pt-[88px]`}>
       <div className="mx-auto max-w-[420px] space-y-4">
         <section className="-mx-4 overflow-hidden bg-white">
           <div className="relative">
@@ -140,7 +140,7 @@ export default function SamplePoster({ name }: { name?: string | null }) {
                 <img key={index} src={image} alt={`Trip preview ${index + 1}`} className="h-[500px] w-full shrink-0 snap-center snap-always object-cover" draggable={false} />
               ))}
             </div>
-            <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#C23845]">{name ? `A sample trip for ${name}` : "A sample trip"}</span>
+            <span className="absolute left-4 top-4 max-w-[calc(100%-2rem)] truncate rounded-full bg-white/90 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.12em] text-[#C23845]">{name ? `A sample trip for ${name}` : "A sample trip"}</span>
             <div className="absolute inset-x-0 bottom-6 flex items-center justify-center gap-3">
               {CAROUSEL_IMAGES.map((_, index) => (
                 <button key={index} onClick={() => goToSlide(index)} className={`h-3 w-3 rounded-full border border-white/70 ${carouselIndex === index ? "bg-[#C23845]" : "bg-white"}`} aria-label={`Go to slide ${index + 1}`} />
