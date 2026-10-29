@@ -356,5 +356,15 @@
     "author": "see the source page",
     "path": "/uploads/itinerary/sample/zhajiang.webp",
     "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "maglev",
+    "url": "https://commons.wikimedia.org/wiki/File:China-Shanghai_(2024)_Maglev_train_-_img_01.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:China-Shanghai_(2024)_Maglev_train_-_img_01.jpg",
+    "title": "China-Shanghai (2024) Maglev train - img 01.jpg",
+    "license": "CC BY 4.0",
+    "author": "see the source page",
+    "path": "/uploads/itinerary/sample/maglev.webp",
+    "downloadedOn": "2026-10-29"
   }
 ]

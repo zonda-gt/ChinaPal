@@ -249,7 +249,7 @@ export function buildSampleConfig(): ItineraryConfig {
     { label: "Day 10", city: "Shanghai", subtitle: "Fri 23 Apr · Last morning · The Maglev to Pudong", color: SHANGHAI, items: [
       stop("last-morning", "~09:30", "Last morning on Nanjing Road", "A slow breakfast, then last presents: White Rabbit candy and Shanghai snacks at the No.1 Food Store, and old Shanghai sweets at Shen Da Cheng, both on Nanjing Road East.\n\n上海市第一食品商店 · 南京东路720号", { icon: ShoppingBag, iconBg: "#FFF0EE", subtitle: "Free time · presents to take home", previewLine: "White Rabbit candy and Shanghai sweets", pictures: [photos.nanjingRoad[0]], transportAfter: { mode: "walk", duration: "~10 min", note: "Back to the hotel to check out" } }),
       leave("go-maglev", "~12:00", "Check out & to the Maglev", "Line 2 direct to 龙阳路, ~25 min", { mode: "metro", duration: "~25 min", note: "Line 2 南京东路 direct to 龙阳路 · or taxi ~25 min, ~¥45" }),
-      stop("maglev", "~12:30", "The Maglev to Pudong Airport", "A floating train that reaches 300 km/h and gets you to the airport in 8 minutes. A last ‘wow’ on the way home. ¥50, or ¥40 with your plane ticket.\n\n上海磁浮 · 龙阳路站 → 浦东国际机场", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "8 minutes · up to 300 km/h", previewLine: "Shanghai to the airport in 8 minutes" }),
+      stop("maglev", "~12:30", "The Maglev to Pudong Airport", "A floating train that reaches 300 km/h and gets you to the airport in 8 minutes. A last ‘wow’ on the way home. ¥50, or ¥40 with your plane ticket.\n\n上海磁浮 · 龙阳路站 → 浦东国际机场", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "8 minutes · up to 300 km/h", previewLine: "Shanghai to the airport in 8 minutes", pictures: [S("maglev")] }),
     ] },
   ];
 
