@@ -142,7 +142,7 @@ export default function ArdioPoster() {
   };
 
   return (
-    <div className={`${dmSans.className} bg-stone-100 px-4 py-6`}>
+    <div className={`${dmSans.className} bg-stone-100 px-4 pb-6 pt-[88px]`}>
       <div className="mx-auto max-w-[420px] space-y-4">
         <section className="-mx-4 overflow-hidden bg-white">
           <div className="relative">
