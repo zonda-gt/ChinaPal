@@ -96,6 +96,8 @@ interface Restaurant {
   rating?: number;
   image?: string;
   instagram?: InstagramVideo;
+  /* Chinese address, shown in the video viewer */
+  address?: string;
 }
 
 /* A public Instagram reel or post about a place, e.g. one a traveller sent us.
@@ -589,107 +591,131 @@ function InstagramGlyph({ size = 14 }: { size?: number }) {
   );
 }
 
+const INSTAGRAM_GRADIENT = "linear-gradient(45deg,#F58529,#DD2A7B 55%,#8134AF)";
+
+function InstagramBadge({ size = 18 }: { size?: number }) {
+  return (
+    <span style={{ width: size, height: size, borderRadius: size * 0.28, background: INSTAGRAM_GRADIENT, color: "#fff", display: "inline-flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
+      <InstagramGlyph size={Math.round(size * 0.6)} />
+    </span>
+  );
+}
+
+/* A white disc with a dark triangle: reads as "play" on dark and bright covers alike. */
+function PlayDisc({ size = 34 }: { size?: number }) {
+  return (
+    <span style={{ width: size, height: size, borderRadius: "50%", background: "rgba(255,255,255,0.96)", boxShadow: "0 4px 14px rgba(0,0,0,0.28)", display: "flex", alignItems: "center", justifyContent: "center", paddingLeft: size * 0.06 }}>
+      <svg viewBox="0 0 24 24" width={size * 0.42} height={size * 0.42} aria-hidden>
+        <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="#1A1A1A" />
+      </svg>
+    </span>
+  );
+}
+
 declare global {
   interface Window { instgrm?: { Embeds: { process: () => void } } }
 }
 
-/* Instagram's own player, in a panel over the page. embed.js only loads the
+/* What the viewer says about the video: the place, when it is in the trip,
+   and a few facts. back names the button that closes it ("Back to Day 8"). */
+interface VideoPlace {
+  title: string;
+  context?: string;
+  facts?: string[];
+  back: string;
+}
+interface Playing { video: InstagramVideo; place: VideoPlace }
+
+/* Instagram's own player, centred on a dark backdrop. embed.js only loads the
    first time someone opens a video, so the page stays light. */
-function InstagramSheet({ video, permalink, onClose }: { video: InstagramVideo; permalink: string; onClose: () => void }) {
+function InstagramViewer({ video, place, onClose }: Playing & { onClose: () => void }) {
+  const permalink = instagramPermalink(video.url) ?? video.url;
+  const handle = video.handle?.replace(/^@/, "");
   useEffect(() => {
-    const scrollY = document.body.style.overflow;
+    const overflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
     window.addEventListener("keydown", onKey);
+    const script = document.getElementById("instagram-embed-js");
     if (window.instgrm) window.instgrm.Embeds.process();
-    else if (!document.getElementById("instagram-embed-js")) {
-      const script = document.createElement("script");
-      script.id = "instagram-embed-js";
-      script.async = true;
-      script.src = "https://www.instagram.com/embed.js";
-      document.body.appendChild(script);
-    } else {
-      // Loading already: process this embed once it's ready.
-      document.getElementById("instagram-embed-js")?.addEventListener("load", () => window.instgrm?.Embeds.process(), { once: true });
+    else if (script) script.addEventListener("load", () => window.instgrm?.Embeds.process(), { once: true });
+    else {
+      const tag = document.createElement("script");
+      tag.id = "instagram-embed-js";
+      tag.async = true;
+      tag.src = "https://www.instagram.com/embed.js";
+      document.body.appendChild(tag);
     }
-    return () => { document.body.style.overflow = scrollY; window.removeEventListener("keydown", onKey); };
+    return () => { document.body.style.overflow = overflow; window.removeEventListener("keydown", onKey); };
   }, [onClose]);
 
+  const pill: React.CSSProperties = { fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.85)", border: "1px solid rgba(255,255,255,0.22)", borderRadius: 20, padding: "4px 9px" };
   return createPortal(
-    <div onClick={onClose} style={{ position: "fixed", inset: 0, zIndex: 1000, background: "rgba(20,16,12,0.6)", display: "flex", alignItems: "flex-end", justifyContent: "center", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-      <div onClick={(e) => e.stopPropagation()} role="dialog" aria-label="Instagram video" style={{ width: "100%", maxWidth: 440, maxHeight: "92vh", background: "#fff", borderRadius: "20px 20px 0 0", display: "flex", flexDirection: "column", overflow: "hidden" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, padding: "12px 14px", borderBottom: "1px solid #F0EDE8" }}>
-          <span style={{ width: 28, height: 28, borderRadius: 8, background: "linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><InstagramGlyph size={15} /></span>
+    <div onClick={onClose} role="dialog" aria-label={`Video of ${place.title}`} style={{ position: "fixed", inset: 0, zIndex: 1000, background: "rgba(12,10,8,0.9)", backdropFilter: "blur(4px)", WebkitBackdropFilter: "blur(4px)", overflowY: "auto", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+      <div style={{ minHeight: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 12, padding: "14px 18px 20px", boxSizing: "border-box", maxWidth: 420, margin: "0 auto" }}>
+        <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", display: "flex", alignItems: "flex-start", gap: 10, color: "#fff" }}>
           <div style={{ flex: 1, minWidth: 0 }}>
-            <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>{video.handle ? `@${video.handle.replace(/^@/, "")}` : "On Instagram"}</p>
-            <p style={{ fontSize: 11, color: "#999", margin: 0 }}>The video that inspired this stop</p>
+            <h3 style={{ fontFamily: "'Fraunces', serif", fontSize: 19, fontWeight: 800, margin: 0, lineHeight: 1.2 }}>{place.title}</h3>
+            <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.65)", margin: "4px 0 0", display: "flex", alignItems: "center", gap: 6 }}>
+              <InstagramBadge size={15} />
+              {[handle && `Video by @${handle}`, place.context].filter(Boolean).join(" · ")}
+            </p>
           </div>
-          <button onClick={onClose} aria-label="Close" style={{ border: "none", background: "#F5F2EE", width: 30, height: 30, borderRadius: "50%", fontSize: 16, color: "#666", cursor: "pointer" }}>✕</button>
+          <button onClick={onClose} aria-label="Close" style={{ width: 34, height: 34, borderRadius: "50%", background: "rgba(255,255,255,0.14)", border: 0, color: "#fff", fontSize: 15, cursor: "pointer", flexShrink: 0 }}>✕</button>
         </div>
-        <div style={{ overflowY: "auto", padding: "12px 12px 4px", WebkitOverflowScrolling: "touch" }}>
-          <blockquote className="instagram-media" data-instgrm-permalink={`${permalink}?utm_source=ig_embed`} data-instgrm-version="14" style={{ margin: 0, width: "100%", minWidth: 0, maxWidth: "100%", border: 0, borderRadius: 12, background: "#F7F5F2", minHeight: 420, display: "flex", alignItems: "center", justifyContent: "center" }}>
+        <div onClick={(e) => e.stopPropagation()} style={{ width: "100%", maxWidth: 360 }}>
+          <blockquote className="instagram-media" data-instgrm-permalink={`${permalink}?utm_source=ig_embed`} data-instgrm-version="14" style={{ margin: 0, width: "100%", minWidth: 0, maxWidth: "100%", border: 0, borderRadius: 14, background: "#fff", minHeight: 460, display: "flex", alignItems: "center", justifyContent: "center" }}>
             <a href={permalink} target="_blank" rel="noopener noreferrer" style={{ fontSize: 13, color: "#888" }}>Loading the video…</a>
           </blockquote>
         </div>
-        <a href={permalink} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", padding: "12px 0 16px", fontSize: 12.5, fontWeight: 700, color: "#DD2A7B", textDecoration: "none" }}>
-          Open in Instagram ↗
-        </a>
+        {place.facts?.length ? (
+          <div onClick={(e) => e.stopPropagation()} style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center" }}>
+            {place.facts.map((fact) => <span key={fact} style={pill}>{fact}</span>)}
+          </div>
+        ) : null}
+        <div onClick={(e) => e.stopPropagation()} style={{ display: "flex", gap: 8, width: "100%", maxWidth: 360 }}>
+          <button onClick={onClose} style={{ flex: 1, background: "#fff", color: "#1A1A1A", border: 0, borderRadius: 12, padding: "12px 0", fontSize: 13, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>{place.back}</button>
+          <a href={permalink} target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 12, padding: "12px 14px", fontSize: 13, fontWeight: 700, textDecoration: "none" }}>Instagram ↗</a>
+        </div>
       </div>
     </div>,
     document.body,
   );
 }
 
-/* "Watch on Instagram": opens the reel in a panel. Clicks don't reach the
-   card underneath, so the card doesn't fold or unfold. */
-function InstagramButton({ video, short = false }: { video: InstagramVideo; short?: boolean }) {
-  const [open, setOpen] = useState(false);
-  const close = React.useCallback(() => setOpen(false), []);
-  const permalink = instagramPermalink(video.url);
-  if (!permalink) return null;
+/* The video's saved cover as a tall picture with the play disc, the
+   Instagram badge and a caption at the bottom. */
+function VideoCover({ video, onPlay, width, minHeight, caption }: { video: InstagramVideo; onPlay: () => void; width: number; minHeight: number; caption?: React.ReactNode }) {
   const handle = video.handle?.replace(/^@/, "");
-  const sheet = open && <InstagramSheet video={video} permalink={permalink} onClose={close} />;
-  if (video.cover) {
-    const width = short ? 42 : 56;
-    return (
-      <>
-        <button
-          onClick={(e) => { e.stopPropagation(); setOpen(true); }}
-          aria-label={`Watch ${handle ? `@${handle}’s` : "the"} video on Instagram`}
-          style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10, padding: 5, paddingRight: 14, maxWidth: "100%", border: "1px solid #F3D3E4", borderRadius: 14, background: "#FFF5FA", cursor: "pointer", fontFamily: "inherit", textAlign: "left" }}
-        >
-          <span style={{ position: "relative", width, aspectRatio: "9/16", borderRadius: 9, overflow: "hidden", flexShrink: 0, background: "#1A1A1A" }}>
-            <img src={video.cover} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
-            <span style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.35))" }} />
-            <span style={{ position: "absolute", top: 4, left: 4, width: short ? 13 : 16, height: short ? 13 : 16, borderRadius: 4, background: "linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><InstagramGlyph size={short ? 8 : 10} /></span>
-            <span style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: short ? 20 : 26, height: short ? 20 : 26, borderRadius: "50%", background: "rgba(255,255,255,0.92)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: short ? 8 : 10, color: "#1A1A1A", paddingLeft: 2 }}>▶</span>
-          </span>
-          <span style={{ minWidth: 0 }}>
-            {handle && <span style={{ display: "block", fontSize: short ? 11.5 : 12.5, fontWeight: 800, color: "#1A1A1A", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>@{handle}</span>}
-            {!short && <span style={{ display: "block", fontSize: 10.5, color: "#999", margin: "1px 0 3px" }}>Seen on Instagram</span>}
-            <span style={{ display: "block", fontSize: short ? 11 : 11.5, fontWeight: 800, color: "#B0216B", marginTop: short ? 3 : 0, whiteSpace: "nowrap" }}>{short ? "▶ Watch" : "▶ Watch the video"}</span>
-          </span>
-        </button>
-        {sheet}
-      </>
-    );
-  }
   return (
-    <>
-      <button
-        onClick={(e) => { e.stopPropagation(); setOpen(true); }}
-        style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 8, padding: "5px 11px 5px 6px", border: "1px solid #F3D3E4", borderRadius: 20, background: "#FFF5FA", color: "#B0216B", fontSize: 11.5, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
-      >
-        <span style={{ width: 20, height: 20, borderRadius: 6, background: "linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><InstagramGlyph size={12} /></span>
-        ▶ Watch on Instagram{handle && !short ? ` · @${handle}` : ""}
-      </button>
-      {sheet}
-    </>
+    <button
+      onClick={(e) => { e.stopPropagation(); onPlay(); }}
+      aria-label={`Watch ${handle ? `@${handle}’s` : "the"} video`}
+      style={{ position: "relative", width, minHeight, flexShrink: 0, alignSelf: "stretch", padding: 0, border: 0, background: "#111", cursor: "pointer", overflow: "hidden", fontFamily: "inherit" }}
+    >
+      <img src={video.cover} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+      <span style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6))" }} />
+      <span style={{ position: "absolute", top: 6, left: 6 }}><InstagramBadge /></span>
+      <span style={{ position: "absolute", top: "46%", left: "50%", transform: "translate(-50%,-50%)" }}><PlayDisc size={width > 100 ? 38 : 34} /></span>
+      <span style={{ position: "absolute", left: 7, right: 5, bottom: 7, color: "#fff", fontSize: 10.5, fontWeight: 800, lineHeight: 1.25, textAlign: "left", overflow: "hidden" }}>
+        {caption}
+        {handle && <span style={{ display: "block", fontSize: caption ? 9.5 : 10, fontWeight: caption ? 600 : 800, opacity: caption ? 0.8 : 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>@{handle}</span>}
+      </span>
+    </button>
+  );
+}
+
+/* For a video without a saved cover: a plain link that opens the viewer. */
+function WatchLink({ onPlay, handle }: { onPlay: () => void; handle?: string }) {
+  return (
+    <button onClick={(e) => { e.stopPropagation(); onPlay(); }} style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 8, padding: 0, border: 0, background: "none", color: "#D0021B", fontSize: 11.5, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>
+      <InstagramBadge size={16} /> ▸ Watch the video{handle ? <span style={{ color: "#999", fontWeight: 600 }}> · @{handle.replace(/^@/, "")}</span> : null}
+    </button>
   );
 }
 
 // Interactive restaurant card with selection state
-function RestaurantCard({ r }: { r: Restaurant }) {
+function RestaurantCard({ r, onPlay }: { r: Restaurant; onPlay: (r: Restaurant) => void }) {
   return (
     <div
       style={{
@@ -702,7 +728,9 @@ function RestaurantCard({ r }: { r: Restaurant }) {
         display: "flex",
       }}
     >
-      {r.image && (
+      {r.instagram?.cover ? (
+        <VideoCover video={r.instagram} onPlay={() => onPlay(r)} width={112} minHeight={190} caption="Watch the video" />
+      ) : r.image && (
         <div style={{ width: 100, minHeight: 100, flexShrink: 0, overflow: "hidden", background: "#F7F5F2" }}>
           <img src={r.image} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
         </div>
@@ -717,7 +745,7 @@ function RestaurantCard({ r }: { r: Restaurant }) {
         </div>
         <span style={{ display: "inline-block", fontSize: 8, fontWeight: 700, color: "#D0021B", background: "#FFF1F3", padding: "1px 6px", borderRadius: 20, textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: 4 }}>{r.cuisine}</span>
         <p style={{ fontSize: 11.5, color: "#555", margin: "4px 0 0", lineHeight: 1.45 }}>{r.note}</p>
-        {r.instagram && <InstagramButton video={r.instagram} short />}
+        {r.instagram && !r.instagram.cover && <WatchLink onPlay={() => onPlay(r)} handle={r.instagram.handle} />}
       </div>
     </div>
   );
@@ -765,10 +793,10 @@ function WalkRoute({ stops }: { stops: WalkStop[] }) {
   );
 }
 
-function TimelineCardWithTransport({ item, index }: { item: TimelineItem; index: number }) {
+function TimelineCardWithTransport({ item, index, dayLabel }: { item: TimelineItem; index: number; dayLabel: string }) {
   return (
     <>
-      <TimelineCard item={item} index={index} />
+      <TimelineCard item={item} index={index} dayLabel={dayLabel} />
       {item.transportAfter && <TransportConnector leg={item.transportAfter} />}
     </>
   );
@@ -857,8 +885,10 @@ function OptionsRow({ main, alternatives }: { main: React.ReactNode; alternative
   );
 }
 
-function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
+function TimelineCard({ item, index, dayLabel }: { item: TimelineItem; index: number; dayLabel: string }) {
   const [expanded, setExpanded] = useState(false);
+  const [playing, setPlaying] = useState<Playing | null>(null);
+  const stopPlaying = React.useCallback(() => setPlaying(null), []);
   const [imgIdx, setImgIdx] = useState(0);
   const Icon = item.icon;
   const images = item.image ? [item.image, ...(item.previewImages || [])].filter((v, i, a) => a.indexOf(v) === i) : [];
@@ -877,7 +907,15 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
   const isTransport = item.type === "transport";
   const isHotel = item.type === "hotel";
   const isCompact = (isMeal || isTransport || isHotel) && !item.showPhotoPreview;
-  const foldedVideo = item.instagram ?? item.restaurants?.find((r) => r.instagram)?.instagram;
+  /* "Day 8 · dinner" for a meal, "Day 8" otherwise. */
+  const when = isMeal ? `${dayLabel} · ${item.title.split(" · ")[0].toLowerCase()}` : dayLabel;
+  const back = `Back to ${dayLabel}`;
+  const playRestaurant = (r: Restaurant) => r.instagram && setPlaying({ video: r.instagram, place: { title: r.englishName || r.name, context: when, facts: [r.price, r.address].filter((f): f is string => !!f), back } });
+  const playStop = () => item.instagram && setPlaying({ video: item.instagram, place: { title: item.title, context: when, facts: item.subtitle ? [item.subtitle] : [], back } });
+  const videoRestaurant = item.restaurants?.find((r) => r.instagram);
+  const foldedVideo = item.instagram ?? videoRestaurant?.instagram;
+  const playFolded = () => (item.instagram ? playStop() : videoRestaurant && playRestaurant(videoRestaurant));
+  const sideVideo = !expanded && foldedVideo?.cover ? foldedVideo : null;
 
   const card = (
     <div
@@ -888,9 +926,13 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
         boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
         border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
         cursor: canExpand ? "pointer" : "default",
+        display: sideVideo ? "flex" : undefined,
       }}
       onClick={() => canExpand && setExpanded(!expanded)}
     >
+      {/* Folded, with a video: its cover on the left, like the restaurant card */}
+      {sideVideo && <VideoCover video={sideVideo} onPlay={playFolded} width={78} minHeight={138} />}
+
       {/* Hero image carousel — only shown when expanded */}
       {images.length > 0 && expanded && (
         <div style={{ position: "relative", height: 160, overflow: "hidden" }}>
@@ -913,7 +955,7 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
         </div>
       )}
 
-      <div style={{ padding: isCompact ? "9px 13px" : "14px 16px" }}>
+      <div style={{ padding: isCompact ? "9px 13px" : "14px 16px", ...(sideVideo ? { flex: 1, minWidth: 0, display: "flex", flexDirection: "column" } : {}) }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div style={{ flex: 1 }}>
             <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
@@ -991,11 +1033,16 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
           </div>
         )}
 
-        {!expanded && foldedVideo && <InstagramButton video={foldedVideo} />}
+        {sideVideo && (
+          <button onClick={(e) => { e.stopPropagation(); playFolded(); }} style={{ marginTop: "auto", border: 0, background: "none", padding: "10px 0 0", textAlign: "left", cursor: "pointer", fontFamily: "inherit", fontSize: 11.5, fontWeight: 800, color: "#D0021B" }}>
+            ▸ Watch the video <span style={{ color: "#999", fontWeight: 600 }}>· Instagram</span>
+          </button>
+        )}
+        {!expanded && foldedVideo && !foldedVideo.cover && <WatchLink onPlay={playFolded} handle={foldedVideo.handle} />}
 
         {expanded && (
           <div style={{ marginTop: 12 }}>
-            {item.instagram && <div style={{ margin: "-4px 0 12px" }}><InstagramButton video={item.instagram} /></div>}
+            {item.instagram && <div style={{ margin: "-8px 0 12px" }}><WatchLink onPlay={playStop} handle={item.instagram.handle} /></div>}
             {item.description.split("\n\n").map((paragraph, paragraphIndex) => (
               <p key={paragraphIndex} style={{ fontSize: 13.5, color: "#444", lineHeight: 1.6, margin: "0 0 12px" }}>{paragraph}</p>
             ))}
@@ -1011,7 +1058,7 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
                   These are hard to book without a Chinese phone number — we reserve them for you.
                 </p>
                 {item.restaurants.map((r) => (
-                  <RestaurantCard key={r.name} r={r} />
+                  <RestaurantCard key={r.name} r={r} onPlay={playRestaurant} />
                 ))}
               </div>
             )}
@@ -1050,6 +1097,7 @@ function TimelineCard({ item, index }: { item: TimelineItem; index: number }) {
 
         {item.alternatives?.length ? <OptionsRow main={card} alternatives={item.alternatives} /> : card}
       </div>
+      {playing && <InstagramViewer {...playing} onClose={stopPlaying} />}
     </div>
   );
 }
@@ -1482,7 +1530,7 @@ export default function ItineraryPage({ images, leadName, config, chromeless, in
                   </div>
                   {day.items.map((item, i) => (
                     <React.Fragment key={item.id}>
-                      <TimelineCardWithTransport item={item} index={i} />
+                      <TimelineCardWithTransport item={item} index={i} dayLabel={`Day ${dayNum}`} />
                     </React.Fragment>
                   ))}
 
