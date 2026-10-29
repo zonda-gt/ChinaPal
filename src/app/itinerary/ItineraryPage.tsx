@@ -601,13 +601,14 @@ function InstagramBadge({ size = 18 }: { size?: number }) {
   );
 }
 
-/* A white disc with a dark triangle: reads as "play" on dark and bright covers alike. */
-function PlayDisc({ size = 34 }: { size?: number }) {
+/* A white "Play" pill: reads on dark and bright covers alike. */
+function PlayPill() {
   return (
-    <span style={{ width: size, height: size, borderRadius: "50%", background: "rgba(255,255,255,0.96)", boxShadow: "0 4px 14px rgba(0,0,0,0.28)", display: "flex", alignItems: "center", justifyContent: "center", paddingLeft: size * 0.06 }}>
-      <svg viewBox="0 0 24 24" width={size * 0.42} height={size * 0.42} aria-hidden>
+    <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "rgba(255,255,255,0.96)", borderRadius: 20, padding: "4px 10px 4px 8px", fontSize: 10.5, fontWeight: 800, color: "#1A1A1A", boxShadow: "0 3px 10px rgba(0,0,0,0.25)", whiteSpace: "nowrap" }}>
+      <svg viewBox="0 0 24 24" width={10} height={10} aria-hidden>
         <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.2-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" fill="#1A1A1A" />
       </svg>
+      Play
     </span>
   );
 }
@@ -675,7 +676,7 @@ function InstagramViewer({ video, place, onClose }: Playing & { onClose: () => v
         ) : null}
         <div onClick={(e) => e.stopPropagation()} style={{ display: "flex", gap: 8, width: "100%", maxWidth: 360 }}>
           <button onClick={onClose} style={{ flex: 1, background: "#fff", color: "#1A1A1A", border: 0, borderRadius: 12, padding: "12px 0", fontSize: 13, fontWeight: 800, cursor: "pointer", fontFamily: "inherit" }}>{place.back}</button>
-          <a href={permalink} target="_blank" rel="noopener noreferrer" style={{ background: "transparent", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 12, padding: "12px 14px", fontSize: 13, fontWeight: 700, textDecoration: "none" }}>Instagram ↗</a>
+          <a href={permalink} target="_blank" rel="noopener noreferrer" aria-label="Open in Instagram" title="Open in Instagram" style={{ width: 46, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center", color: "#fff", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 12 }}><InstagramGlyph size={20} /></a>
         </div>
       </div>
     </div>,
@@ -683,9 +684,9 @@ function InstagramViewer({ video, place, onClose }: Playing & { onClose: () => v
   );
 }
 
-/* The video's saved cover as a tall picture with the play disc, the
-   Instagram badge and a caption at the bottom. */
-function VideoCover({ video, onPlay, width, minHeight, caption }: { video: InstagramVideo; onPlay: () => void; width: number; minHeight: number; caption?: React.ReactNode }) {
+/* The video's saved cover as a tall picture with the Instagram badge and a
+   "Play" pill at the bottom. */
+function VideoCover({ video, onPlay, width, minHeight }: { video: InstagramVideo; onPlay: () => void; width: number; minHeight: number }) {
   const handle = video.handle?.replace(/^@/, "");
   return (
     <button
@@ -694,13 +695,9 @@ function VideoCover({ video, onPlay, width, minHeight, caption }: { video: Insta
       style={{ position: "relative", width, minHeight, flexShrink: 0, alignSelf: "stretch", padding: 0, border: 0, background: "#111", cursor: "pointer", overflow: "hidden", fontFamily: "inherit" }}
     >
       <img src={video.cover} alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
-      <span style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6))" }} />
+      <span style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0) 60%, rgba(0,0,0,0.45))" }} />
       <span style={{ position: "absolute", top: 6, left: 6 }}><InstagramBadge /></span>
-      <span style={{ position: "absolute", top: "46%", left: "50%", transform: "translate(-50%,-50%)" }}><PlayDisc size={width > 100 ? 38 : 34} /></span>
-      <span style={{ position: "absolute", left: 7, right: 5, bottom: 7, color: "#fff", fontSize: 10.5, fontWeight: 800, lineHeight: 1.25, textAlign: "left", overflow: "hidden" }}>
-        {caption}
-        {handle && <span style={{ display: "block", fontSize: caption ? 9.5 : 10, fontWeight: caption ? 600 : 800, opacity: caption ? 0.8 : 1, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>@{handle}</span>}
-      </span>
+      <span style={{ position: "absolute", left: 0, right: 0, bottom: 8, display: "flex", justifyContent: "center" }}><PlayPill /></span>
     </button>
   );
 }
@@ -729,7 +726,7 @@ function RestaurantCard({ r, onPlay }: { r: Restaurant; onPlay: (r: Restaurant) 
       }}
     >
       {r.instagram?.cover ? (
-        <VideoCover video={r.instagram} onPlay={() => onPlay(r)} width={112} minHeight={190} caption="Watch the video" />
+        <VideoCover video={r.instagram} onPlay={() => onPlay(r)} width={112} minHeight={190} />
       ) : r.image && (
         <div style={{ width: 100, minHeight: 100, flexShrink: 0, overflow: "hidden", background: "#F7F5F2" }}>
           <img src={r.image} alt={r.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
