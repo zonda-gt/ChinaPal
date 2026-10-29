@@ -49,7 +49,7 @@ type Thread = {
   latestInbound: string | null;
   senders?: Record<string, string>; // Instagram message id → who sent it from the inbox
 };
-type Filter = "all" | "needs" | "due" | "drafts" | "unread" | "archived";
+type Filter = "all" | "paid" | "needs" | "due" | "drafts" | "unread" | "archived";
 const MAX_MESSAGES = 3;
 
 async function api<T>(path: string, body?: unknown): Promise<T> {
@@ -126,6 +126,7 @@ export default function InboxV2() {
   // Right column: trip brief, the AI plan and the questions list.
   const [panelTab, setPanelTab] = useState<"brief" | "plan" | "care">("brief"),
     [due, setDue] = useState<Record<string, number>>({}),
+    [paid, setPaid] = useState<Set<string>>(new Set()),
     [questions, setQuestions] = useState<TripQuestion[]>([]),
     [questionsLoading, setQuestionsLoading] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false),
@@ -203,14 +204,23 @@ export default function InboxV2() {
     }, 15000);
     return () => clearInterval(timer);
   }, [staff, loadList]);
-  // Reminders due tonight, per traveller. They change slowly, so every few minutes is enough.
+  // Reminders due tonight and who has paid, per traveller. They change slowly, so every few minutes is enough.
+  const loadFlags = useCallback(
+    () =>
+      api<{ due: Record<string, number>; paid: string[] }>("care/due")
+        .then((r) => {
+          setDue(r.due);
+          setPaid(new Set(r.paid));
+        })
+        .catch(() => {}),
+    [],
+  );
   useEffect(() => {
     if (!staff) return;
-    const load = () => api<{ due: Record<string, number> }>("care/due").then((r) => setDue(r.due)).catch(() => {});
-    void load();
-    const timer = setInterval(() => document.visibilityState === "visible" && void load(), 300000);
+    void loadFlags();
+    const timer = setInterval(() => document.visibilityState === "visible" && void loadFlags(), 300000);
     return () => clearInterval(timer);
-  }, [staff]);
+  }, [staff, loadFlags]);
   const onCareDue = useCallback((count: number) => {
     const peer = selectedRef.current;
     if (peer) setDue((d) => (d[peer] === count || (!count && !d[peer]) ? d : { ...d, [peer]: count }));
@@ -552,6 +562,7 @@ export default function InboxV2() {
   }, [needle, match]);
 
   const counts = {
+    paid: conversations.filter((c) => paid.has(c.peer_id) && c.stage !== "archived").length,
     needs: conversations.filter(needsReply).length,
     due: conversations.filter((c) => due[c.peer_id] && c.stage !== "archived").length,
     drafts: conversations.filter((c) => c.has_draft && c.stage !== "archived").length,
@@ -561,6 +572,8 @@ export default function InboxV2() {
     (c) =>
       (filter === "all"
         ? c.stage !== "archived"
+        : filter === "paid"
+          ? paid.has(c.peer_id) && c.stage !== "archived"
         : filter === "needs"
           ? needsReply(c)
           : filter === "due"
@@ -722,6 +735,7 @@ export default function InboxV2() {
           {(
             [
               ["all", "All", 0],
+              ["paid", "Paid", counts.paid],
               ["needs", "Needs reply", counts.needs],
               ["due", "Due tonight", counts.due],
               ["drafts", "Drafts", counts.drafts],
@@ -778,8 +792,14 @@ export default function InboxV2() {
           {!filtered.length && (
             <div className={s.listEmpty}>
               <MessageSquare size={28} />
-              <h3>{search ? "No matching conversations" : filter === "needs" ? "Everyone has a reply" : filter === "due" ? "No reminders due tonight" : "Nothing here"}</h3>
-              <p>{search ? "Try another name or Instagram username." : "Choose another filter to see more chats."}</p>
+              <h3>{search ? "No matching conversations" : filter === "needs" ? "Everyone has a reply" : filter === "due" ? "No reminders due tonight" : filter === "paid" ? "No paid customers yet" : "Nothing here"}</h3>
+              <p>
+                {search
+                  ? "Try another name or Instagram username."
+                  : filter === "paid"
+                    ? "A chat shows here when its Brief stage is Paid, Planning, In trip or Done."
+                    : "Choose another filter to see more chats."}
+              </p>
             </div>
           )}
         </div>
@@ -1319,6 +1339,7 @@ export default function InboxV2() {
               onAddToReply={addToReply}
               onShowSource={showSource}
               onBuilt={loadQuestions}
+              onStage={loadFlags}
             />
           </div>
         ) : (

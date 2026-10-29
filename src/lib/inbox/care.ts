@@ -3,7 +3,7 @@ import { readdir } from "node:fs/promises";
 import { join } from "node:path";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { InboxError, type Staff } from "./types";
-import { applyEdits, type BriefEdit, type TripBrief } from "./brief-data";
+import { applyEdits, PAID_STAGES, type BriefEdit, type TripBrief } from "./brief-data";
 import type { PlanCore } from "./plan-data";
 import { readBrief } from "./brief-store";
 import { readPlan } from "./plan-store";
@@ -75,8 +75,8 @@ async function localRows<T>(folder: string, read: (peer: string) => Promise<T>) 
   return Promise.all(peers.map(async (peer_id) => ({ peer_id, ...(await read(peer_id)) })));
 }
 
-/** How many reminders are waiting tonight, per traveller. */
-export async function dueCounts(): Promise<Record<string, number>> {
+/** How many reminders are waiting tonight, per traveller, and which travellers have paid (from their brief's stage). */
+export async function inboxFlags(): Promise<{ due: Record<string, number>; paid: string[] }> {
   const [plans, briefs, rows] = await Promise.all([
     local
       ? localRows("inbox-plans", async (p) => ({ plan: (await readPlan(p)).plan }))
@@ -95,5 +95,6 @@ export async function dueCounts(): Promise<Record<string, number>> {
     const due = view(planOf.get(peer) ?? null, briefOf.get(peer) ?? null, byPeer.get(peer) ?? []).reminders.filter((r) => isDue(r)).length;
     if (due) counts[peer] = due;
   }
-  return counts;
+  const paid = [...briefOf].filter(([, b]) => PAID_STAGES.includes(b.stage.value)).map(([peer]) => peer);
+  return { due: counts, paid };
 }

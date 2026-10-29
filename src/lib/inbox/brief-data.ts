@@ -35,6 +35,8 @@ export const STAGES: Record<Stage, string> = {
   done: "Done",
   not_a_lead: "Not a lead",
 };
+/** Stages where the traveller has paid ChinaPal. */
+export const PAID_STAGES: Stage[] = ["paid", "planning", "in_trip", "done"];
 export type TripBrief = {
   name: string;
   language: string;
