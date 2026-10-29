@@ -64,7 +64,8 @@ export default function Inbox() {
   const panels = usePanelLayout();
   const [staff, setStaff] = useState<Staff | null>(null),
     [checking, setChecking] = useState(true),
-    [password, setPassword] = useState("");
+    [password, setPassword] = useState(""),
+    [who, setWho] = useState("");
   const [conversations, setConversations] = useState<Conversation[]>([]),
     [selected, setSelected] = useState<string | null>(null),
     [thread, setThread] = useState<Thread | null>(null);
@@ -243,7 +244,7 @@ export default function Inbox() {
   async function signIn(e: React.FormEvent) {
     e.preventDefault();
     await run("login", async () => {
-      await api("auth/login", { password });
+      await api("auth/login", { who, password });
       const result = await api<{ staff: Staff }>("session");
       setPassword("");
       setStaff(result.staff);
@@ -433,7 +434,16 @@ export default function Inbox() {
             Sign in to the private ChinaPal inbox to help travelers and prepare
             replies together.
           </p>
-          <label htmlFor="admin-password">Admin password</label>
+          <label htmlFor="inbox-username">Username</label>
+          <input
+            id="inbox-username"
+            autoComplete="username"
+            autoCapitalize="none"
+            value={who}
+            onChange={(e) => setWho(e.target.value)}
+            required
+          />
+          <label htmlFor="admin-password">Password</label>
           <input
             id="admin-password"
             type="password"

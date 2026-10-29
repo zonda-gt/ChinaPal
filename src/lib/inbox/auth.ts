@@ -4,10 +4,13 @@ import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { InboxError, type Staff } from "./types";
 import { lease } from "./service";
+import { TEAM, type TeamId } from "./team";
 const COOKIE = "cp-inbox-session";
 const digest = (s: string) => createHash("sha256").update(s).digest("hex");
-function password() {
-  const value = process.env.INBOX_ADMIN_PASSWORD;
+// Each person can have their own password (INBOX_PASSWORD_STEVEN, ...);
+// without one they share INBOX_ADMIN_PASSWORD.
+function password(id: TeamId) {
+  const value = process.env[`INBOX_PASSWORD_${id.toUpperCase()}`] || process.env.INBOX_ADMIN_PASSWORD;
   if (!value || value.length < 16)
     throw new InboxError(
       "Set an admin password of at least 16 characters on the server.",
@@ -15,6 +18,9 @@ function password() {
     );
   return value;
 }
+// A session records who signed in through its password version, so changing
+// a password signs that person out and no schema change is needed.
+const sessionVersion = (id: TeamId) => digest(`${id}:${password(id)}`);
 export async function requireStaff(): Promise<Staff> {
   const token = (await cookies()).get(COOKIE)?.value;
   if (!token || !/^[a-f0-9]{64}$/.test(token))
@@ -29,16 +35,18 @@ export async function requireStaff(): Promise<Staff> {
       "The inbox database needs setup. Apply the inbox SQL migration first.",
       503,
     );
-  if (
-    !data ||
-    Date.parse(data.expires_at) <= Date.now() ||
-    data.password_version !== digest(password())
-  )
+  const member =
+    data && Date.parse(data.expires_at) > Date.now()
+      ? TEAM.find((m) => data.password_version === sessionVersion(m.id))
+      : undefined;
+  if (!member)
     throw new InboxError("Your session expired. Please sign in again.", 401);
-  return { email: "admin", name: "Admin" };
+  return { email: member.id, name: member.name };
 }
-export async function login(value: string, request: Request) {
-  const expected = password();
+export async function login(who: string, value: string, request: Request) {
+  const member = TEAM.find((m) => m.id === who.trim().toLowerCase());
+  if (!member) throw new InboxError("Unknown username.", 401);
+  const expected = password(member.id);
   // Global and per-source throttles are durable across Vercel instances.
   await lease("login-global", 1);
   const ip =
@@ -49,13 +57,13 @@ export async function login(value: string, request: Request) {
   if (
     !timingSafeEqual(Buffer.from(digest(value)), Buffer.from(digest(expected)))
   )
-    throw new InboxError("Incorrect admin password.", 401);
+    throw new InboxError("Incorrect password.", 401);
   const token = randomBytes(32).toString("hex");
   const { error } = await db()
     .from("inbox_sessions")
     .insert({
       token_hash: digest(token),
-      password_version: digest(expected),
+      password_version: sessionVersion(member.id),
       expires_at: new Date(Date.now() + 12 * 60 * 60 * 1000).toISOString(),
     });
   if (error)

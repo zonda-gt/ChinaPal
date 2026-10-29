@@ -104,9 +104,7 @@ export const recommended = [
 export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
   const days: ItineraryConfig["days"] = [
     /* ═══════ SHANGHAI · 5 Dec ═══════ */
-    { label: "Day 1", tryNearby: { spots: [
-      { name: "Shen Da Cheng", cn: "沈大成（南京东路店）· 南京路步行街636号 · 07:30–22:00", order: "Old Shanghai sweets: soft glutinous rice cakes like 双酿团 and 条头糕.", near: "On tonight’s Nanjing Road walk", price: "~¥43 pp" },
-    ], takeHome: "White Rabbit milk candy and Shanghai snacks from the No.1 Food Store (上海市第一食品商店, 南京东路720号), on the same walk." }, city: "Shanghai", subtitle: "Sat 5 Dec · Arrival · Nanjing Road & the Bund at night", color: SHANGHAI, items: [
+    { label: "Day 1", city: "Shanghai", subtitle: "Sat 5 Dec · Arrival · Nanjing Road & the Bund at night", color: SHANGHAI, items: [
       stop("arrive", "14:35", "Land at Shanghai Pudong · SQ 830", "Welcome to China! Your flight from Singapore lands at Terminal 2 at 14:35. Allow about an hour for immigration and your bags. Your pickup is already booked: the driver will meet you in arrivals and take you straight to the hotel.", { icon: Plane, iconBg: "#E3F2FD", type: "transport", subtitle: "Pudong Airport (PVG) Terminal 2 · pickup booked", previewLine: "Pre-booked pickup · about 55–70 min", transportAfter: { mode: "car", duration: "55–70 min", note: "Pudong Airport → Sofitel North Bund" } }),
       stop("sofitel", "~16:45", "Sofitel Shanghai North Bund", "Your Shanghai base for six nights, next to Hailun Road metro (Lines 4 and 10). Check in and settle the children in.\n\n上海北外滩金辉索菲特酒店 · 虹口区溧阳路601号", { icon: Hotel, iconBg: "#E3F2FD", type: "hotel", subtitle: "Booked · 5–11 December", previewLine: "溧阳路601号 · Hailun Road metro", pictures: photos.sofitelSh, transportAfter: { mode: "taxi", duration: "15–20 min", note: "Taxi ~¥14 to Lai Lai Xiao Long, 天津路506号" } }),
       stop("dinner-1", "18:15", "Dinner · Lai Lai Xiao Long", "Shanghai soup dumplings, one block north of Nanjing Road, to start the trip.", { icon: Utensils, iconBg: "#FFF1F3", type: "meal", subtitle: "Soup dumplings · arrive by 19:00", restaurants: [
@@ -119,10 +117,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SHANGHAI · 6 Dec ═══════ */
-    { label: "Day 2", tryNearby: { spots: [
-      { name: "Da Hu Chun", cn: "大壶春（豫园店）· 豫园老街64号 · 08:30–21:30", order: "Shanghai pan-fried pork buns (生煎) with a crisp golden base.", near: "In the Yu Garden bazaar", price: "~¥40 pp" },
-      { name: "Shu Cai Ji", cn: "舒蔡记生煎菜饭 · 淮海中路462弄口 · 07:00–19:30", order: "A tiny local favourite for pan-fried buns (生煎) and Shanghai vegetable rice (菜饭).", near: "On Huaihai Road, near the start of your walk", price: "~¥25 pp" },
-    ] }, city: "Shanghai", subtitle: "Sun 6 Dec · Yu Garden · Huaihai Road walk · River cruise", color: SHANGHAI, items: [
+    { label: "Day 2", city: "Shanghai", subtitle: "Sun 6 Dec · Yu Garden · Huaihai Road walk · River cruise", color: SHANGHAI, items: [
       leave("go-yu", "08:45", "To Yu Garden", "Taxi 15–20 min · ~¥16 · or Line 10, 42 min", { mode: "taxi", duration: "15–20 min", note: "Taxi ~¥16 · or Line 10 海伦路 → 豫园 Exit 7, 42 min" }),
       stop("yugarden", "09:00", "Yu Garden · 豫园", "A Ming-dynasty garden of pavilions, rockeries and koi ponds in the old town. Go at opening, before the crowds. About ¥30 per adult in December; the children are free.\n\n上海豫园 · 黄浦区福佑路168号 · 09:00–16:30", { icon: Sun, iconBg: "#FFF3E0", subtitle: "About ¥30 · book with your passports", previewLine: "Pavilions, rockeries and koi ponds", tip: "Our tip: Book on the “上海豫园” WeChat account with your passports. The paths have some steps, so a baby carrier is handy.", pictures: [...photos.yugarden, photos.nanxiang[1]], transportAfter: { mode: "walk", duration: "5 min", note: "Walk through the bazaar to Nanxiang" } }),
       stop("lunch-2", "~10:30", "Early lunch · Nanxiang Mantou Dian", "Shanghai’s most famous xiaolongbao, right by the garden.", { icon: Utensils, iconBg: "#FFF1F3", type: "meal", subtitle: "Soup dumplings · arrive before 10:30", restaurants: [
@@ -148,9 +143,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SHANGHAI · 7 Dec ═══════ */
-    { label: "Day 3", tryNearby: { spots: [
-      { name: "Wang Jia Sha", cn: "王家沙点心店（南京西路总店）· 南京西路805号 · 07:00–20:00", order: "A classic Shanghai snack house: shrimp wontons (虾仁馄饨) and crispy pan-fried noodles (两面黄).", near: "10 minutes from the Natural History Museum", price: "~¥47 pp" },
-    ] }, city: "Shanghai", subtitle: "Mon 7 Dec · Wukang Road · “Harry Potter” bakery · Natural History Museum", color: SHANGHAI, items: [
+    { label: "Day 3", city: "Shanghai", subtitle: "Mon 7 Dec · Wukang Road · “Harry Potter” bakery · Natural History Museum", color: SHANGHAI, items: [
       leave("go-wukang", "08:00", "To Wukang Road", "Line 10 direct, ~40 min, ¥4 · or taxi ~31 min", { mode: "metro", duration: "~40 min", note: "Line 10 海伦路 (Exit 3) direct to 交通大学 (Exit 7), 8 stops, ¥4, then a 7-min walk to Wukang Mansion · or taxi ~31 min, ~¥31" }),
       stop("wukang-walk", "~08:40", "Wukang Road & Anfu Road", "Your morning, as one easy walk through the prettiest part of old Shanghai: the famous building while it’s quiet, breakfast at the bakery, then up leafy Wukang Road to the cafés and shops of Anfu Road. More good stops on the way: Baker & Spice (No. 195), SMFK (No. 161) and Plusone coffee (No. 156). Most shops open at about 10:00.", { icon: Footprints, iconBg: "#FFF0EE", subtitle: "City walk · ~1.7 km · morning", tip: "Our tip: Wukang Mansion is a residential building, so take photos from the street. The traffic island opposite gives the classic view.", walk: [
         { name: "Wukang Mansion · 武康大楼", note: "Shanghai’s most photographed building, a 1924 wedge on a corner of plane-tree streets. Early morning is the quietest time for photos.", place: "徐汇区淮海中路1850号", image: photos.wukang[0], hero: photos.wukang[0], next: "2 min walk" },
@@ -169,10 +162,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SHANGHAI · 8 Dec ═══════ */
-    { label: "Day 4", tryNearby: { spots: [
-      { name: "Jia Jia Tang Bao", cn: "佳家汤包（四川北路店）· 虬江支路180弄 · 07:00–20:30", order: "Soup dumplings (汤包), one of Shanghai’s best-known, near your hotel.", near: "Sichuan North Road, by Jinchao 8 Lane", price: "~¥38 pp" },
-      { name: "Yong Fu big buns", cn: "永福手工大包 · 四川北路1545弄 大德里恒安坊 · 05:00–18:00", order: "Big handmade steamed buns, a local breakfast before you set off.", near: "Near your hotel", price: "~¥12 pp" },
-    ] }, city: "Shanghai", subtitle: "Tue 8 Dec · Science & Technology Museum · Greenhouse Garden", color: SHANGHAI, items: [
+    { label: "Day 4", city: "Shanghai", subtitle: "Tue 8 Dec · Science & Technology Museum · Greenhouse Garden", color: SHANGHAI, items: [
       leave("go-sci", "08:30", "To the Science & Technology Museum", "Taxi 25–30 min · ~¥30 · or metro, 48 min", { mode: "taxi", duration: "25–30 min", note: "Taxi ~¥30 · or Line 4 → Line 2 to 上海科技馆 Exit 8, 48 min" }),
       stop("scitech", "09:00", "Shanghai Science & Technology Museum", "Your must-do. Hands-on galleries, robots, a rainforest and space halls. Adults ¥45; children 6 and under are free. It’s closed on Mondays, which is why it’s today.\n\n上海科技馆 · 浦东新区世纪大道2000号 · 09:00–17:00", { icon: Sparkles, iconBg: "#F3E8FF", subtitle: "Your must-do · ¥45 adults, kids free", previewLine: "Robots, a rainforest and hands-on galleries", tip: "Our tip: Mini World (一米世界) is a zone built for ages 3–8. Its time slots open at 08:30 but can only be booked once you’re inside, and they go fast, so be at the door at 09:00. Book your entry tickets up to 7 days ahead in the “上海科技馆自然博物馆天文馆门票” WeChat mini-program, with your passports. If the booking doesn’t work out, Thursday 10 December is the backup day.", pictures: photos.scitech, transportAfter: { mode: "walk", duration: "2 min", note: "Lunch inside the museum or next door" } }),
       stop("lunch-4", "~12:00", "Lunch · at the museum or next door", "Keep lunch simple and close.", { icon: Utensils, iconBg: "#FFF1F3", type: "meal", subtitle: "Quick and close", restaurants: [
@@ -189,9 +179,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SUZHOU · 9 Dec ═══════ */
-    { label: "Day 5", tryNearby: { spots: [
-      { name: "Yaba Shengjian", cn: "哑巴生煎（临顿路店）· 临顿路温家岸12号 · 06:30–19:30", order: "One of Suzhou’s best-known spots for pan-fried buns (生煎); expect a short queue.", near: "4 minutes from Pingjiang Road", price: "~¥28 pp" },
-    ], takeHome: "Suzhou rice cakes (糕团) from Huang Tian Yuan (黄天源, 观前街86号), an old Suzhou name for them. Eat them within a day or two." }, city: "Suzhou", subtitle: "Wed 9 Dec · Suzhou day trip · Garden & canals", color: SUZHOU, items: [
+    { label: "Day 5", city: "Suzhou", subtitle: "Wed 9 Dec · Suzhou day trip · Garden & canals", color: SUZHOU, items: [
       leave("go-shst", "08:15", "To Shanghai Railway Station", "Taxi 20–25 min · ~¥19 · or Line 4, 35 min", { mode: "taxi", duration: "20–25 min", note: "Taxi ~¥19 · or Line 4, two stops to 上海火车站, 35 min" }),
       stop("train-sz", "09:00", "High-Speed Train to Suzhou", "G7006, Shanghai Station 09:00 → Suzhou 09:25, about ¥46 per adult in second class. Backups: G8254 at 09:05 or D2906 at 08:41. Children under 6 can travel free on your lap.\n\nBring your passports: they are your tickets. Be at the station by 08:30 for the passport check and security.", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "Shanghai → Suzhou · 25 min", previewLine: "G7006 · 09:00 → 09:25 · ~¥46", pictures: photos.train, showPhotoPreview: false, transportAfter: { mode: "taxi", duration: "15–20 min", note: "Taxi ~¥10 to the Humble Administrator’s Garden" } }),
       stop("zhuozheng", "09:45", "Humble Administrator’s Garden · 拙政园", "Suzhou’s most famous classical garden: ponds, bridges and pavilions. ¥70 per adult in December. Allow about an hour.\n\n拙政园 · 苏州市姑苏区东北街178号 · 07:30–17:00", { icon: Sun, iconBg: "#E8F5E9", subtitle: "¥70 · book with your passports", previewLine: "Ponds, bridges and pavilions", tip: "Our tip: Book in the “苏州园林” mini-program with your passports. There are steps and arched bridges, so bring the baby carrier as well as the stroller.", pictures: photos.zhuozheng, transportAfter: { mode: "walk", duration: "8 min", note: "Walk to Lion Grove, 园林路23号" } }),
@@ -205,10 +193,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ SHANGHAI · 10 Dec ═══════ */
-    { label: "Day 6", tryNearby: { spots: [
-      { name: "Xinya Tea House", cn: "新雅（丰盛里店）· 茂名北路281弄 · 11:00–16:00", order: "Cantonese dim sum and pastries in a Shanghai institution.", near: "Next to Zhangyuan", price: "~¥126 pp" },
-      { name: "BUTTERFUL & CREAMOROUS", cn: "BUTTERFUL&CREAMOROUS（上海旗舰店）· 吴江路289号 · 11:00–22:00", order: "A popular bakery for fresh butter breads and pastries.", near: "3 minutes from Zhangyuan", price: "~¥45 pp" },
-    ] }, city: "Shanghai", subtitle: "Thu 10 Dec · 1000 Trees · No. 3 Warehouse · Louis Vuitton ship · Yuyuan Road", color: SHANGHAI, items: [
+    { label: "Day 6", city: "Shanghai", subtitle: "Thu 10 Dec · 1000 Trees · No. 3 Warehouse · Louis Vuitton ship · Yuyuan Road", color: SHANGHAI, items: [
       leave("go-trees", "09:40", "To 1000 Trees", "Taxi ~14 min · ~¥21", { mode: "taxi", duration: "~14 min", note: "Taxi ~¥21 to 1000 Trees, 莫干山路600号" }),
       stop("trees", "~10:00", "1000 Trees · 天安千树", "Thomas Heatherwick’s terraced building, like a mountain with about a thousand trees growing on its columns, and a mall inside. Walk the riverside path across Suzhou Creek for the full view, then look around inside. Free.\n\n天安千树 · 普陀区莫干山路600号 · 10:00–22:00", { icon: Camera, iconBg: "#E8F5E9", subtitle: "A mountain of trees on Suzhou Creek · free", previewLine: "About a thousand trees growing on a building", pictures: [A("1000-trees-2"), A("1000-trees")], transportAfter: { mode: "taxi", duration: "~18 min", note: "Taxi ~¥17 to New World City, 南京西路2号" }, alternatives: [
         alt("🏙️ City views", "Shanghai Tower viewing deck", "The 118th floor of China’s tallest building, with a 360° view over the city, then coffee at Duoyun Books on the 52nd floor. Adults ¥180, children ¥90.", { images: photos.shtower, gettingThere: "Taxi ~10 min from your hotel · 银城中路501号 · 08:30–22:00 · then taxi ~21 min to lunch" }),
@@ -230,9 +215,7 @@ export function buildArdioConfig(withOptions: boolean): ItineraryConfig {
     ] },
 
     /* ═══════ HANGZHOU · 11 Dec ═══════ */
-    { label: "Day 7", tryNearby: { spots: [
-      { name: "Qi Xin Lao Long Tang", cn: "齐心老弄堂面馆 · 长生路29号 · 09:00–22:00", order: "Hangzhou’s pian’erchuan noodles (片儿川): pork, pickled greens and bamboo shoots.", near: "By Hubin, near the lake", price: "~¥31 pp" },
-    ], takeHome: "West Lake Longjing green tea. Buy it from a proper tea shop rather than street sellers by the lake." }, city: "Hangzhou", subtitle: "Fri 11 Dec · Train to Hangzhou · West Lake", color: HANGZHOU, items: [
+    { label: "Day 7", city: "Hangzhou", subtitle: "Fri 11 Dec · Train to Hangzhou · West Lake", color: HANGZHOU, items: [
       leave("go-hq", "09:00", "Check out & to Hongqiao Station", "Taxi 45–55 min · ~¥77 · or Line 10, 59 min", { mode: "taxi", duration: "45–55 min", note: "Taxi ~¥77 · or Line 10 direct to 虹桥火车站 Exit B, 59 min" }, "Hand the extra suitcases to the concierge for SF Express and check out. Then taxi to Shanghai Hongqiao station, 45–55 minutes, about ¥77. Or take Line 10 direct from Hailun Road to 虹桥火车站, 59 minutes."),
       stop("train-hz", "10:00", "High-Speed Train to Hangzhou", "G201, Hongqiao 10:00 → Hangzhou East 10:45, about ¥87 per adult. Backups: G7461 at 10:02 or G7319 at 10:07. Hongqiao is huge, so be there by 09:30.", { icon: TrainFront, iconBg: "#E3F2FD", type: "transport", subtitle: "Hongqiao → Hangzhou East · 45 min", previewLine: "G201 · 10:00 → 10:45 · ~¥87", transportAfter: { mode: "taxi", duration: "25–35 min", note: "Taxi ~¥27 · or Line 1 to 定安路 Exit C, 35 min" } }),
       stop("sofitel-hz", "~11:30", "Sofitel Hangzhou Westlake", "Right by West Lake. Leave your bag and head out for lunch; check-in is usually from 14:00.\n\n杭州索菲特西湖大酒店 · 上城区西湖大道333号", { icon: Hotel, iconBg: "#E3F2FD", type: "hotel", subtitle: "Booked · 11–12 December", previewLine: "西湖大道333号 · by the lake", pictures: photos.sofitelHz, transportAfter: { mode: "walk", duration: "4 min", note: "Walk to Grandma’s Home, 南山路147号" } }),
