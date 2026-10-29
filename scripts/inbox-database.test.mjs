@@ -16,6 +16,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
       "202610190001_inbox_reply_assistant_v2.sql",
       "202610200001_inbox_briefs.sql",
       "202610220001_inbox_plans_questions.sql",
+      "202610290001_inbox_whatsapp.sql",
     ]) {
       const sql = await readFile(
         new URL(`../supabase/migrations/${file}`, import.meta.url),
@@ -128,7 +129,7 @@ test("private storage, deduplication, optimistic edits and send reservations", a
     );
     const security = (
       await pg.query(
-        "select has_table_privilege('anon','inbox_messages','select') as anon_read, has_table_privilege('authenticated','inbox_messages','select') as user_read, has_function_privilege('anon','inbox_claim_send(uuid,integer,text)','execute') as anon_send",
+        "select has_table_privilege('anon','inbox_messages','select') as anon_read, has_table_privilege('authenticated','inbox_messages','select') as user_read, has_function_privilege('anon','inbox_claim_send(uuid,integer,text,text)','execute') as anon_send",
       )
     ).rows[0];
     assert.deepEqual(security, {
@@ -187,6 +188,90 @@ test("private storage, deduplication, optimistic edits and send reservations", a
     await assert.rejects(
       pg.query("select * from inbox_messages"),
       /permission denied/,
+    );
+  } finally {
+    await pg.close();
+  }
+});
+
+test("a WhatsApp-linked chat keeps a separate reply window per app", async () => {
+  const pg = await PGlite.create();
+  try {
+    await pg.exec(
+      "create role anon; create role authenticated; create role service_role bypassrls;",
+    );
+    for (const file of [
+      "202610160001_inbox.sql",
+      "202610190001_inbox_reply_assistant_v2.sql",
+      "202610290001_inbox_whatsapp.sql",
+    ]) {
+      const sql = await readFile(
+        new URL(`../supabase/migrations/${file}`, import.meta.url),
+        "utf8",
+      );
+      await pg.exec(sql);
+      await pg.exec(sql);
+    }
+    await pg.exec(
+      "insert into inbox_conversations(peer_id,username) values('123','linked'),('456','other');",
+    );
+    const store = (m) =>
+      pg.query("select inbox_store_message($1::jsonb)", [JSON.stringify(m)]);
+    const recent = new Date(Date.now() - 60000).toISOString();
+    const old = new Date(Date.now() - 25 * 3600000).toISOString();
+    await store({ id: "ig1", peer_id: "123", direction: "inbound", sent_at: old, text: "Instagram hello" });
+    await store({ id: "wamid.1", peer_id: "123", direction: "inbound", sent_at: recent, text: "WhatsApp hello", channel: "whatsapp" });
+    assert.deepEqual(
+      (await pg.query("select id,channel from inbox_messages order by sent_at")).rows,
+      [{ id: "ig1", channel: "instagram" }, { id: "wamid.1", channel: "whatsapp" }],
+      "Messages without a channel stay Instagram",
+    );
+    const draft = async (peer, context) =>
+      (await pg.query(
+        "insert into inbox_drafts(peer_id,body,context_id,edited_by) values($1,'Reply',$2,'admin') returning id",
+        [peer, context],
+      )).rows[0].id;
+    const d = await draft("123", "wamid.1");
+    await assert.rejects(
+      pg.query("select inbox_claim_send($1,1,'admin')", [d]),
+      /Instagram reply window has closed/,
+      "A recent WhatsApp message does not open Instagram sending",
+    );
+    await assert.rejects(
+      pg.query("select inbox_claim_send($1,1,'admin','whatsapp')", [d]),
+      /not linked to WhatsApp/,
+    );
+    await assert.rejects(
+      pg.query("update inbox_conversations set whatsapp_id='+44 7700' where peer_id='123'"),
+      /check constraint/,
+    );
+    await pg.exec("update inbox_conversations set whatsapp_id='447700900123' where peer_id='123'");
+    await assert.rejects(
+      pg.query("update inbox_conversations set whatsapp_id='447700900123' where peer_id='456'"),
+      /duplicate key/,
+      "One number links to one chat",
+    );
+    await pg.query("select inbox_claim_send($1,1,'admin','whatsapp')", [d]);
+    assert.deepEqual(
+      (await pg.query("select status,channel from inbox_drafts where id=$1", [d])).rows[0],
+      { status: "sending", channel: "whatsapp" },
+    );
+    await pg.exec("update inbox_conversations set sending_draft_id=null; update inbox_drafts set status='sent';");
+    await store({ id: "ig2", peer_id: "123", direction: "inbound", sent_at: new Date().toISOString(), text: "Back on Instagram" });
+    await pg.exec("update inbox_messages set sent_at=now()-interval '25 hours' where channel='whatsapp'");
+    const d2 = await draft("123", "ig2");
+    await assert.rejects(
+      pg.query("select inbox_claim_send($1,1,'admin','whatsapp')", [d2]),
+      /WhatsApp reply window has closed/,
+    );
+    await pg.query("select inbox_claim_send($1,1,'admin')", [d2]);
+    assert.equal(
+      (await pg.query("select channel from inbox_drafts where id=$1", [d2])).rows[0].channel,
+      "instagram",
+    );
+    assert.equal(
+      (await pg.query("select has_function_privilege('anon','inbox_claim_send(uuid,integer,text,text)','execute') as anon_send")).rows[0].anon_send,
+      false,
     );
   } finally {
     await pg.close();

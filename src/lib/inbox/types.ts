@@ -2,6 +2,7 @@ export type Attachment = {
   type: "image" | "video" | "audio" | "file";
   url: string;
 };
+export type Channel = "instagram" | "whatsapp";
 export type ContactIdentity = {
   peer_id: string;
   username: string;
@@ -24,6 +25,8 @@ export type Conversation = {
   last_direction?: string;
   has_draft?: boolean;
   sending_draft_id: string | null;
+  // Set by hand in Supabase for the one chat that also uses WhatsApp.
+  whatsapp_id?: string | null;
 };
 export type Message = {
   id: string;
@@ -34,6 +37,8 @@ export type Message = {
   attachments: Attachment[];
   deleted: boolean;
   unavailable: boolean;
+  // Missing before the WhatsApp migration; treat as Instagram.
+  channel?: Channel;
 };
 export type Draft = {
   id: string;
@@ -46,6 +51,8 @@ export type Draft = {
   edited_by: string;
   updated_at: string;
   sent_message_id: string | null;
+  // Where the draft was sent; null until a send is claimed.
+  channel?: Channel | null;
   // Follow-up messages that become the next draft after this one is sent.
   parts: string[];
   staff_facts: string;

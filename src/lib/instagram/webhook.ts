@@ -1,6 +1,6 @@
 import { createHash, createHmac, timingSafeEqual } from "node:crypto";
 
-type JsonObject = Record<string, unknown>;
+export type JsonObject = Record<string, unknown>;
 
 export type InstagramDelivery = {
   delivery_hash: string;
@@ -14,7 +14,7 @@ type WebhookOptions = {
   save: (delivery: InstagramDelivery) => Promise<void>;
 };
 
-function text(body: string, status = 200) {
+export function text(body: string, status = 200) {
   return new Response(body, {
     status,
     headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "no-store" },
@@ -43,14 +43,16 @@ export function verifyInstagramWebhook(request: Request, verifyToken?: string) {
   return text(challenge);
 }
 
-function isObject(value: unknown): value is JsonObject {
+export function isObject(value: unknown): value is JsonObject {
   return typeof value === "object" && value !== null && !Array.isArray(value);
 }
 
-export async function receiveInstagramWebhook(request: Request, options: WebhookOptions) {
-  const { appSecret, accountId, save } = options;
-  if (!appSecret || !accountId) return text("Webhook not configured", 503);
-
+// Meta signs webhook bodies with the app secret. Returns the parsed JSON object
+// and raw bytes, or the response to send when the delivery is not genuine.
+export async function readSignedJson(
+  request: Request,
+  appSecret: string,
+): Promise<Response | { raw: Buffer; payload: JsonObject }> {
   const signature = request.headers.get("x-hub-signature-256");
   if (!signature || !/^sha256=[a-fA-F0-9]{64}$/.test(signature)) {
     return text("Invalid signature", 401);
@@ -72,6 +74,15 @@ export async function receiveInstagramWebhook(request: Request, options: Webhook
     return text("Invalid JSON", 400);
   }
   if (!isObject(payload)) return text("Invalid payload", 400);
+  return { raw, payload };
+}
+
+export async function receiveInstagramWebhook(request: Request, options: WebhookOptions) {
+  const { appSecret, accountId, save } = options;
+  if (!appSecret || !accountId) return text("Webhook not configured", 503);
+  const body = await readSignedJson(request, appSecret);
+  if (body instanceof Response) return body;
+  const { raw, payload } = body;
   if (payload.object !== "instagram") return text("EVENT_RECEIVED");
   if (!Array.isArray(payload.entry) || !payload.entry.every(isObject)) {
     return text("Invalid entries", 400);

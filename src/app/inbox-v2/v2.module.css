@@ -479,6 +479,35 @@ main.layout {
   font-size: 11px;
   font-weight: 600;
 }
+/* Reply-on toggle, shown only in the chat linked to WhatsApp */
+.footer .channelSwitch {
+  display: inline-flex;
+  margin-right: 8px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.footer .channelSwitch button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 9px;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: var(--subtle);
+  font-size: 11px;
+}
+.footer .channelSwitch button[aria-pressed="true"] {
+  background: #e7f6ec;
+  color: #126b34;
+  font-weight: 600;
+}
+.waTag {
+  color: #126b34;
+  font-weight: 600;
+}
 
 /* Trip brief panel */
 .layout .infoHeading {

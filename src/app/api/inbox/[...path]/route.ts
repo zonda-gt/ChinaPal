@@ -269,7 +269,9 @@ async function handler(
         if (body.approved !== true)
           throw new InboxError("Review and approve the reply before sending.");
         const id = str(body.id, 50);
-        const result = await sendDraft(peer, id, num(body.version), staff);
+        if (body.channel !== undefined && body.channel !== "instagram" && body.channel !== "whatsapp")
+          throw new InboxError("Invalid channel.");
+        const result = await sendDraft(peer, id, num(body.version), staff, body.channel ?? "instagram");
         await markAsked(peer, id);
         await markCareSent(peer, id, staff.name || staff.email);
         return json(result);
