@@ -3,7 +3,6 @@ import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { safeMediaUrl } from "./policy";
 import { storeMessage } from "./service";
 import type { InstagramDelivery } from "@/lib/instagram/webhook";
-import type { WhatsAppMessage } from "@/lib/whatsapp/webhook";
 import type { Attachment } from "./types";
 type Event = {
   sender?: { id: string };
@@ -74,32 +73,5 @@ export async function processDelivery(delivery: InstagramDelivery) {
         unavailable: !message.text && !attachments.length,
       });
     }
-  }
-}
-// Only numbers linked by hand to a conversation are stored. Messages from any
-// other WhatsApp number are dropped, so no unrelated customer data is kept.
-export async function storeWhatsAppMessages(messages: WhatsAppMessage[]) {
-  for (const m of messages) {
-    const { data, error } = await db()
-      .from("inbox_conversations")
-      .select("peer_id")
-      .eq("whatsapp_id", m.wa_id)
-      .maybeSingle();
-    if (error) throw Error("WhatsApp link lookup failed");
-    if (!data) {
-      console.warn("[whatsapp-webhook] Ignored a message from an unlinked number");
-      continue;
-    }
-    await storeMessage({
-      id: m.id,
-      peer_id: data.peer_id,
-      direction: m.direction,
-      sent_at: m.sent_at,
-      text: m.text,
-      attachments: [],
-      deleted: false,
-      unavailable: m.unavailable,
-      channel: "whatsapp",
-    });
   }
 }

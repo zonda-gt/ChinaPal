@@ -10,10 +10,8 @@ import {
   type GraphPage,
   type GraphThread,
 } from "./graph";
-import { sendWhatsApp } from "./whatsapp";
 import {
   InboxError,
-  type Channel,
   type Conversation,
   type Draft,
   type Message,
@@ -238,13 +236,9 @@ export async function threadData(peer: string, limit = 100) {
     ]);
   checked(error);
   checked(draftError);
-  // Each channel has its own 24-hour window. Messages saved before the
-  // WhatsApp migration have no channel and are Instagram.
-  const latest = (channel: Channel) =>
-    (messages as Message[]).find(
-      (m) => m.direction === "inbound" && !m.deleted && (m.channel ?? "instagram") === channel,
-    )?.sent_at ?? null;
-  const latestInbound = latest("instagram");
+  const latestInbound =
+    (messages as Message[]).find((m) => m.direction === "inbound" && !m.deleted)
+      ?.sent_at ?? null;
   return {
     conversation: c,
     messages: (messages as Message[]).reverse(),
@@ -254,8 +248,6 @@ export async function threadData(peer: string, limit = 100) {
     senders: Object.fromEntries(
       (sent ?? []).map((d: { sent_message_id: string; edited_by: string }) => [d.sent_message_id, d.edited_by]),
     ) as Record<string, string>,
-    // Only the conversation linked by hand gets the WhatsApp reply option.
-    whatsapp: c.whatsapp_id ? { canSend: replyWindowOpen(latest("whatsapp")) } : null,
   };
 }
 export async function saveDraft(
@@ -320,9 +312,7 @@ export async function sendDraft(
   id: string,
   version: number,
   staff: Staff,
-  channel: Channel = "instagram",
 ) {
-  const app = channel === "whatsapp" ? "WhatsApp" : "Instagram";
   const { data: existing, error } = await db()
     .from("inbox_drafts")
     .select("*")
@@ -333,15 +323,11 @@ export async function sendDraft(
   if (!existing) throw new InboxError("Draft not found.", 404);
   if (existing.status === "sent") return { status: "sent" }; // Idempotent browser retry.
   validateReply(existing.body);
-  const whatsappId = channel === "whatsapp" ? (await conversation(peer)).whatsapp_id : null;
-  if (channel === "whatsapp" && !whatsappId)
-    throw new InboxError("This chat is not linked to WhatsApp.");
   // Refresh immediately before sending so drafts cannot silently ignore a new DM.
   await syncThread(peer);
   const { data: claimed, error: claimError } = await db().rpc(
     "inbox_claim_send",
-    // Instagram calls keep the original arguments so they work before and after the WhatsApp migration.
-    { p_id: id, p_version: version, p_email: staff.email, ...(whatsappId ? { p_channel: "whatsapp" } : {}) },
+    { p_id: id, p_version: version, p_email: staff.email },
   );
   if (claimError)
     throw new InboxError(
@@ -353,13 +339,11 @@ export async function sendDraft(
   const draft = claimed as Draft;
   let sent: { message_id: string };
   try {
-    sent = whatsappId
-      ? await sendWhatsApp(whatsappId, draft.body)
-      : await graph<{ message_id: string }>(
-          `${accountId()}/messages`,
-          {},
-          { recipient: { id: peer }, message: { text: draft.body } },
-        );
+    sent = await graph<{ message_id: string }>(
+      `${accountId()}/messages`,
+      {},
+      { recipient: { id: peer }, message: { text: draft.body } },
+    );
   } catch (e) {
     const definite = e instanceof GraphError && e.definiteFailure;
     await db()
@@ -377,15 +361,15 @@ export async function sendDraft(
         .eq("sending_draft_id", id);
     throw new InboxError(
       definite
-        ? `${app} rejected the reply. Refresh the chat and check the reply window before creating a new draft.`
-        : `Delivery is uncertain. Check ${app} before sending anything else; automatic retries are disabled.`,
+        ? "Instagram rejected the reply. Refresh the chat and check the reply window before creating a new draft."
+        : "Delivery is uncertain. Check Instagram before sending anything else; automatic retries are disabled.",
       502,
     );
   }
-  // Once the app accepted the send, a storage failure must never cause a resend.
+  // Once Instagram accepted the send, a storage failure must never cause a resend.
   if (!sent.message_id)
     throw new InboxError(
-      `Delivery is uncertain. Check ${app} before sending anything else.`,
+      "Delivery is uncertain. Check Instagram before sending anything else.",
       502,
     );
   await storeMessage({
@@ -397,7 +381,6 @@ export async function sendDraft(
     attachments: [],
     deleted: false,
     unavailable: false,
-    channel,
   });
   const { error: finalError } = await db()
     .from("inbox_drafts")

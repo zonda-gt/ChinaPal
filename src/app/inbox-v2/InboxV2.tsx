@@ -15,7 +15,6 @@ import {
   Loader2,
   LockKeyhole,
   LogOut,
-  MessageCircle,
   MessageSquare,
   PanelRight,
   Plus,
@@ -27,7 +26,7 @@ import {
   Undo2,
   X,
 } from "lucide-react";
-import type { Channel, Conversation, Draft, Message, Staff } from "@/lib/inbox/types";
+import type { Conversation, Draft, Message, Staff } from "@/lib/inbox/types";
 import type { ProfileSource } from "@/lib/inbox/profile-data";
 import s from "../inbox/inbox.module.css";
 import usePanelLayout from "../inbox/usePanelLayout";
@@ -49,8 +48,6 @@ type Thread = {
   canSend: boolean;
   latestInbound: string | null;
   senders?: Record<string, string>; // Instagram message id → who sent it from the inbox
-  // Set only for the conversation linked to WhatsApp by hand.
-  whatsapp?: { canSend: boolean } | null;
 };
 type Filter = "all" | "needs" | "due" | "drafts" | "unread" | "archived";
 const MAX_MESSAGES = 3;
@@ -135,7 +132,6 @@ export default function InboxV2() {
     [image, setImage] = useState<string | null>(null),
     [confirmSend, setConfirmSend] = useState(false),
     [sendingStale, setSendingStale] = useState(false),
-    [channelChoice, setChannelChoice] = useState<{ peer: string; channel: Channel } | null>(null),
     [limit, setLimit] = useState(100);
   // Redesign state: composer layout, the warnings checklist, undo and chat tools.
   const [composerOpen, setComposerOpen] = useState(false),
@@ -462,7 +458,6 @@ export default function InboxV2() {
         id: draft.id,
         version: draft.version,
         approved: true,
-        ...(channel === "whatsapp" ? { channel } : {}),
       });
       setDraft(null);
       setText("");
@@ -475,8 +470,8 @@ export default function InboxV2() {
       void loadQuestions();
       setNotice(
         result.next
-          ? `Reply sent on ${appName}. The next message is ready below; review it before sending.`
-          : `Reply sent on ${appName}.`,
+          ? "Reply sent on Instagram. The next message is ready below; review it before sending."
+          : "Reply sent on Instagram.",
       );
     });
   }
@@ -530,13 +525,6 @@ export default function InboxV2() {
   const checkKey = (i: number) => `${draft?.id}:${draft?.version}:${i}`;
   const checkedCount = warnings.filter((_, i) => checked[checkKey(i)]).length;
   const tooLong = messagesAll.some((m) => [...m].length > 1000);
-  // A linked chat replies where the customer last wrote, unless staff pick the other app.
-  const linked = !!thread?.whatsapp;
-  const lastInboundChannel = thread?.messages.findLast((m) => m.direction === "inbound")?.channel ?? "instagram";
-  const channel: Channel = !linked ? "instagram" : channelChoice?.peer === selected ? channelChoice.channel : lastInboundChannel;
-  const appName = channel === "whatsapp" ? "WhatsApp" : "Instagram";
-  const canSend = channel === "whatsapp" ? !!thread?.whatsapp?.canSend : !!thread?.canSend;
-  const pendingApp = pending?.channel === "whatsapp" ? "WhatsApp" : "Instagram";
 
   // Where the new messages start: after the draft was written, or after our last reply.
   const msgs = thread?.messages ?? [];
@@ -829,7 +817,6 @@ export default function InboxV2() {
                 <h2>{contactLabel(selectedContact)}</h2>
                 <span>
                   <Camera size={12} /> {selectedIdentity?.username ? `@${selectedIdentity.username}` : "Instagram direct message"}
-                  {linked && <> · <MessageCircle size={12} /> WhatsApp linked</>}
                 </span>
               </div>
               {findOpen && (
@@ -965,9 +952,7 @@ export default function InboxV2() {
                                   </a>
                                 ),
                               )}
-                              {m.channel === "whatsapp"
-                                ? m.unavailable && <em>Photo, file or other content not shown here. View it in WhatsApp.</em>
-                                : !m.text && !m.attachments.length && <em>Content unavailable through the API. View in Instagram.</em>}
+                              {!m.text && !m.attachments.length && <em>Content unavailable through the API. View in Instagram.</em>}
                             </>
                           )}
                         </div>
@@ -978,7 +963,6 @@ export default function InboxV2() {
                         )}
                         <time>
                           {m.direction === "outbound" && `${teamName(thread.senders?.[m.id]) ?? "ChinaPal"} · `}
-                          {linked && m.channel === "whatsapp" && <span className={v.waTag}>WhatsApp · </span>}
                           {time(m.sent_at)}
                           {m.direction === "inbound" && m.text.trim() && !translations[m.id] && (
                             <button className={v.translate} onClick={() => void translate(m)} disabled={!!translating}>
@@ -1047,7 +1031,7 @@ export default function InboxV2() {
                       {pending && (
                         <div className={s.warning}>
                           <strong>A reply is being sent or awaiting confirmation.</strong> If this remains pending for two
-                          minutes, check the actual {pendingApp} chat before resolving it.
+                          minutes, check the actual Instagram chat before resolving it.
                           <div>
                             {[
                               ["sent", "It was sent"],
@@ -1057,7 +1041,7 @@ export default function InboxV2() {
                                 key={outcome}
                                 disabled={!!busy || Date.now() - Date.parse(pending.updated_at) < 120000}
                                 onClick={() => {
-                                  if (window.confirm(`Have you checked the actual ${pendingApp} chat and confirmed this delivery status?`))
+                                  if (window.confirm("Have you checked the actual Instagram chat and confirmed this delivery status?"))
                                     run("resolve", async () => {
                                       await api(`conversations/${selected}/resolve`, { id: pending.id, outcome, checkedInstagram: true });
                                       await loadThread(selected, limit, true);
@@ -1231,31 +1215,16 @@ export default function InboxV2() {
 
                       <div className={`${s.composerFooter} ${v.footer}`}>
                         <span>
-                          {linked && (
-                            <span className={v.channelSwitch} role="group" aria-label="Reply on">
-                              {(["instagram", "whatsapp"] as const).map((c) => (
-                                <button
-                                  key={c}
-                                  aria-pressed={channel === c}
-                                  disabled={!!busy || !!pending}
-                                  onClick={() => selected && setChannelChoice({ peer: selected, channel: c })}
-                                >
-                                  {c === "whatsapp" ? <MessageCircle size={13} /> : <Camera size={13} />}
-                                  {c === "whatsapp" ? "WhatsApp" : "Instagram"}
-                                </button>
-                              ))}
-                            </span>
-                          )}
-                          {!canSend && (
+                          {!thread.canSend && (
                             <>
-                              <b className={v.closedWindow}>Reply in {appName}: the 24-hour window has closed</b>
+                              <b className={v.closedWindow}>Reply in Instagram: the 24-hour window has closed</b>
                               {text.trim() && (
                                 <button
                                   className={v.copyReply}
                                   onClick={() =>
                                     void navigator.clipboard
                                       .writeText([text, ...parts].filter((p) => p.trim()).join("\n\n"))
-                                      .then(() => setNotice(`Copied. Paste it in the ${appName} app, then mark the reminder sent if it was one.`))
+                                      .then(() => setNotice("Copied. Paste it in the Instagram app, then mark the reminder sent if it was one."))
                                       .catch(() => setError("Could not copy. Select the text instead."))
                                   }
                                 >
@@ -1279,7 +1248,7 @@ export default function InboxV2() {
                           </button>
                           <button
                             className={s.primary}
-                            disabled={!!busy || !text.trim() || conflict || !!pending || !canSend || tooLong}
+                            disabled={!!busy || !text.trim() || conflict || !!pending || !thread.canSend || tooLong}
                             onClick={() => void approve()}
                           >
                             <Send size={15} /> Approve & send
@@ -1377,15 +1346,7 @@ export default function InboxV2() {
             </div>
             <h2 id="send-title">Send this reply?</h2>
             <p>
-              {channel === "whatsapp" ? (
-                <>
-                  This will send a real WhatsApp message to <strong>@{active?.username}</strong>&apos;s linked number.
-                </>
-              ) : (
-                <>
-                  This will send a real Instagram DM to <strong>@{active?.username}</strong>.
-                </>
-              )}
+              This will send a real Instagram DM to <strong>@{active?.username}</strong>.
             </p>
             {sendingStale && <p className={s.warning}>New messages arrived after this draft was written. Check it still answers them.</p>}
             <blockquote>{text}</blockquote>

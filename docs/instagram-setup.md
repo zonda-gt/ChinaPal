@@ -13,8 +13,6 @@ assistant (`src/lib/inbox/ask.ts`). The right column has three tabs: Brief, Plan
 temporary fallback, and `/inbox-v2` redirects to `/inbox`. Analytics never load on
 any `/inbox…` page (`src/lib/private-pages.ts`).
 
-One conversation can also use WhatsApp; see `docs/whatsapp-setup.md`.
-
 ## Server configuration
 
 Set these in `.env.local` locally and Vercel Production before deploying:
