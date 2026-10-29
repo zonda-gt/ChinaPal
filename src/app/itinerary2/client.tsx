@@ -1,0 +1,123 @@
+"use client";
+
+/* eslint-disable @next/next/no-img-element */
+
+import { MessageCircle } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import type { ImageMap } from "@/lib/itinerary-images";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ItineraryPage from "../itinerary/ItineraryPage";
+import SamplePoster from "./poster";
+import { buildSampleConfig, recommended } from "./config";
+
+const FONT = "'Plus Jakarta Sans', sans-serif";
+const WA_LINK = "https://wa.me/8618201806768?text=Hi%20ChinaPal!%20I%20saw%20your%2010-day%20sample%20itinerary%20and%20I%E2%80%99d%20like%20one%20for%20my%20trip.";
+
+/* ?name=Sarah personalises the page for a lead: "A sample trip for Sarah". */
+function leadName(raw: string | null) {
+  const name = raw?.trim().slice(0, 30);
+  return name ? name.charAt(0).toUpperCase() + name.slice(1) : null;
+}
+
+export default function SampleClient({ images }: { images: ImageMap }) {
+  const name = leadName(useSearchParams().get("name"));
+  const config = buildSampleConfig();
+  return (
+    <>
+      <style>{`
+        header button[aria-label="Toggle menu"] { display: none !important; }
+      `}</style>
+      <Navbar />
+      <SamplePoster name={name} />
+      <div style={{ background: "#F7F5F2", padding: "32px 16px 16px", textAlign: "center" }}>
+        <div style={{ maxWidth: 640, margin: "0 auto" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 16, justifyContent: "center" }}>
+            <div style={{ flex: 1, maxWidth: 120, height: 1, background: "#D0021B", opacity: 0.4 }} />
+            <p style={{ fontSize: 11, fontWeight: 800, color: "#D0021B", textTransform: "uppercase", letterSpacing: "0.2em", margin: 0 }}>Daily Plan</p>
+            <div style={{ flex: 1, maxWidth: 120, height: 1, background: "#D0021B", opacity: 0.4 }} />
+          </div>
+          <p style={{ fontSize: 13, color: "#888", margin: "12px 0 0", fontFamily: FONT, lineHeight: 1.6 }}>
+            Every stop has its Chinese name and address for Amap or DiDi, with the taxi or metro to get there and what it costs.
+            The days are planned around opening days and sunsets, and the tickets that sell out are the ones we book for you.
+            <br /><br /><b style={{ color: "#B45309" }}>★ Our pick</b> is what we recommend. Where you see <b style={{ color: "#B45309" }}>+ other options</b>, swipe the card to see a different choice for the same time.
+          </p>
+        </div>
+      </div>
+      <ItineraryPage images={images} config={config} leadName={name ?? undefined} chromeless />
+      <RecommendedPlaces />
+      <GetYourPlan />
+      <Footer />
+    </>
+  );
+}
+
+/* Places we like but left out of the daily plan, as tall cards to swipe
+   through, in the style of the main itinerary page's "You could also do". */
+function RecommendedPlaces() {
+  return (
+    <section style={{ background: "#F7F5F2", padding: "8px 0 32px", fontFamily: FONT }}>
+      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+        <div style={{ padding: "0 16px 12px" }}>
+          <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 2 }}>
+            <p style={{ fontSize: 13, fontWeight: 800, color: "#1A1A1A", margin: 0 }}>Recommended places</p>
+            <span style={{ fontSize: 10, background: "#FFF1F3", color: "#D0021B", fontWeight: 700, padding: "2px 7px", borderRadius: 20 }}>If you have time</span>
+          </div>
+          <p style={{ fontSize: 12, color: "#888", margin: 0, lineHeight: 1.4 }}>More places we like in Beijing, Chongqing and Shanghai, to swap in or add a day for.</p>
+        </div>
+        <div className="itinerary-options-row" style={{ display: "flex", gap: 12, padding: "0 16px 4px", overflowX: "auto", scrollbarWidth: "none", scrollSnapType: "x mandatory", scrollPaddingLeft: 16 }}>
+          {recommended.map((place) => (
+            <div key={place.id} style={{ flexShrink: 0, width: 220, scrollSnapAlign: "start", background: "#fff", borderRadius: 18, overflow: "hidden", boxShadow: "0 2px 16px rgba(0,0,0,0.08)", border: "1px solid #F0EDE8" }}>
+              <div style={{ height: 240, position: "relative", overflow: "hidden" }}>
+                <img src={place.image} alt={place.title} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.5) 100%)" }} />
+                <span style={{ position: "absolute", top: 10, left: 10, fontSize: 10, fontWeight: 800, color: "#1A1A1A", background: "rgba(255,255,255,0.92)", padding: "3px 8px", borderRadius: 20 }}>{place.city}</span>
+                <p style={{ position: "absolute", bottom: 8, left: 10, right: 10, fontSize: 10, color: "rgba(255,255,255,0.95)", fontWeight: 700, margin: 0, textTransform: "uppercase", letterSpacing: "0.05em", lineHeight: 1.35 }}>{place.tag}</p>
+              </div>
+              <div style={{ padding: "12px 14px 14px" }}>
+                <p style={{ fontSize: 14, fontWeight: 800, color: "#1A1A1A", margin: "0 0 5px", fontFamily: "'Fraunces', serif", lineHeight: 1.2 }}>{place.title}</p>
+                <p style={{ fontSize: 12, color: "#666", margin: "0 0 10px", lineHeight: 1.5 }}>{place.desc}</p>
+                <div style={{ background: "#FFF8F0", borderRadius: 10, padding: "8px 10px", display: "flex", gap: 7, alignItems: "flex-start" }}>
+                  <MessageCircle size={13} color="#B45309" style={{ flexShrink: 0, marginTop: 2 }} />
+                  <p style={{ fontSize: 11, color: "#7A5C3A", margin: 0, lineHeight: 1.45 }}>{place.note}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* The ask: how a lead gets a plan like this one. */
+function GetYourPlan() {
+  const steps = [
+    { title: "Tell us about your trip", desc: "Your dates, the cities you’re thinking of, and what you love: food, history, shopping, nature." },
+    { title: "Your first draft in about two days", desc: "A page like this one, built around your hotels, your pace and the days things are open." },
+    { title: "We change it with you, then book", desc: "Tickets, trains and restaurants that need a Chinese phone or app. Then we’re on chat for the whole trip." },
+  ];
+  return (
+    <section style={{ background: "#F7F5F2", padding: "8px 16px 48px", fontFamily: FONT }}>
+      <div style={{ maxWidth: 640, margin: "0 auto", background: "#1A1A1A", borderRadius: 20, padding: "24px 20px", color: "#fff" }}>
+        <p style={{ fontSize: 11, fontWeight: 800, color: "#F5C6CB", textTransform: "uppercase", letterSpacing: "0.18em", margin: "0 0 8px" }}>Your trip, planned like this</p>
+        <h2 style={{ fontSize: 24, fontWeight: 800, fontFamily: "'Fraunces', serif", lineHeight: 1.2, margin: "0 0 18px" }}>Want a plan like this for your own dates?</h2>
+        <div style={{ display: "grid", gap: 14, marginBottom: 22 }}>
+          {steps.map((step, i) => (
+            <div key={step.title} style={{ display: "flex", gap: 12, alignItems: "flex-start" }}>
+              <span style={{ width: 26, height: 26, borderRadius: "50%", background: "#D0021B", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 13, fontWeight: 800, flexShrink: 0 }}>{i + 1}</span>
+              <div>
+                <p style={{ fontSize: 14, fontWeight: 800, margin: "2px 0 2px" }}>{step.title}</p>
+                <p style={{ fontSize: 12.5, color: "rgba(255,255,255,0.7)", margin: 0, lineHeight: 1.5 }}>{step.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, background: "#D0021B", color: "#fff", borderRadius: 12, padding: "14px 0", fontSize: 14, fontWeight: 800, textDecoration: "none" }}>
+          <MessageCircle size={16} /> Message us to start
+        </a>
+        <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: "10px 0 0", textAlign: "center" }}>Or message us on Instagram, wherever you found us.</p>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,370 @@
+[
+  {
+    "id": "fc-taihe",
+    "url": "data/故宫博物院(北京）/image/highlight_image/太和殿.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "太和殿 · 故宫博物院(北京）",
+    "path": "/uploads/itinerary/sample/fc-taihe.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "fc-treasure",
+    "url": "data/故宫博物院(北京）/image/highlight_image/珍宝馆.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "珍宝馆 · 故宫博物院(北京）",
+    "path": "/uploads/itinerary/sample/fc-treasure.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "fc-west",
+    "url": "data/故宫博物院(北京）/image/highlight_image/西六宫.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "西六宫 · 故宫博物院(北京）",
+    "path": "/uploads/itinerary/sample/fc-west.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "jingshan",
+    "url": "data/景山公园(北京）/image/highlight_image/万春亭.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "万春亭 · 景山公园(北京）",
+    "path": "/uploads/itinerary/sample/jingshan.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "beihai",
+    "url": "data/北海公园(北京）/image/highlight_image/白塔.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "白塔 · 北海公园(北京）",
+    "path": "/uploads/itinerary/sample/beihai.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "beihai-2",
+    "url": "data/北海公园(北京）/image/highlight_image/五龙亭.webp",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "五龙亭 · 北海公园(北京）",
+    "path": "/uploads/itinerary/sample/beihai-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "mutianyu",
+    "url": "data/慕田峪长城(北京）/image/highlight_image/西路线.webp",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "西路线 · 慕田峪长城(北京）",
+    "path": "/uploads/itinerary/sample/mutianyu.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "mutianyu-toboggan",
+    "url": "data/慕田峪长城(北京）/image/highlight_image/滑道.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "滑道 · 慕田峪长城(北京）",
+    "path": "/uploads/itinerary/sample/mutianyu-toboggan.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "toh",
+    "url": "data/天坛(北京）/image/highlight_image/祈年殿.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "祈年殿 · 天坛(北京）",
+    "path": "/uploads/itinerary/sample/toh.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "toh-morning",
+    "url": "data/天坛(北京）/image/highlight_image/公园晨练文化.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "公园晨练文化 · 天坛(北京）",
+    "path": "/uploads/itinerary/sample/toh-morning.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "toh-echo",
+    "url": "data/天坛(北京）/image/highlight_image/回音壁.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "回音壁 · 天坛(北京）",
+    "path": "/uploads/itinerary/sample/toh-echo.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sp-tower",
+    "url": "data/颐和园(北京）/image/highlight_image/佛香阁.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "佛香阁 · 颐和园(北京）",
+    "path": "/uploads/itinerary/sample/sp-tower.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sp-corridor",
+    "url": "data/颐和园(北京）/image/highlight_image/长廊.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "长廊 · 颐和园(北京）",
+    "path": "/uploads/itinerary/sample/sp-corridor.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sp-bridge",
+    "url": "data/颐和园(北京）/image/highlight_image/十七孔桥.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "十七孔桥 · 颐和园(北京）",
+    "path": "/uploads/itinerary/sample/sp-bridge.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sp-boat",
+    "url": "data/颐和园(北京）/image/highlight_image/石舫.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "石舫 · 颐和园(北京）",
+    "path": "/uploads/itinerary/sample/sp-boat.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "hutong",
+    "url": "data/胡同（南锣鼓巷等）(北京）/image/highlight_image/南锣鼓巷十六条胡同.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "南锣鼓巷十六条胡同 · 胡同（南锣鼓巷等）(北京）",
+    "path": "/uploads/itinerary/sample/hutong.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "drum-tower",
+    "url": "data/胡同（南锣鼓巷等）(北京）/image/highlight_image/鼓楼钟楼附近.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "鼓楼钟楼附近 · 胡同（南锣鼓巷等）(北京）",
+    "path": "/uploads/itinerary/sample/drum-tower.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "shichahai",
+    "url": "data/胡同（南锣鼓巷等）(北京）/image/highlight_image/什刹海湖区.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "什刹海湖区 · 胡同（南锣鼓巷等）(北京）",
+    "path": "/uploads/itinerary/sample/shichahai.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "hutong-snacks",
+    "url": "data/胡同（南锣鼓巷等）(北京）/image/highlight_image/主街小吃.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "主街小吃 · 胡同（南锣鼓巷等）(北京）",
+    "path": "/uploads/itinerary/sample/hutong-snacks.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "lama",
+    "url": "data/雍和宫(北京）/image/highlight_image/雍和宫殿.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "雍和宫殿 · 雍和宫(北京）",
+    "path": "/uploads/itinerary/sample/lama.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "art798",
+    "url": "data/798艺术区(北京）/image/highlight_image/包豪斯工业建筑.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "包豪斯工业建筑 · 798艺术区(北京）",
+    "path": "/uploads/itinerary/sample/art798.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "hongyadong",
+    "url": "data/洪崖洞(重庆）/image/highlight_image/千厮门桥夜景全景.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "千厮门桥夜景全景 · 洪崖洞(重庆）",
+    "path": "/uploads/itinerary/sample/hongyadong.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "hongyadong-2",
+    "url": "data/洪崖洞(重庆）/image/highlight_image/十一层立体城市体验.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "十一层立体城市体验 · 洪崖洞(重庆）",
+    "path": "/uploads/itinerary/sample/hongyadong-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "ciqikou",
+    "url": "data/磁器口古镇(重庆）/image/highlight_image/迎龙门.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "迎龙门 · 磁器口古镇(重庆）",
+    "path": "/uploads/itinerary/sample/ciqikou.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "ciqikou-2",
+    "url": "data/磁器口古镇(重庆）/image/highlight_image/小巷深处.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "小巷深处 · 磁器口古镇(重庆）",
+    "path": "/uploads/itinerary/sample/ciqikou-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "ciqikou-tea",
+    "url": "data/磁器口古镇(重庆）/image/highlight_image/茶馆.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "茶馆 · 磁器口古镇(重庆）",
+    "path": "/uploads/itinerary/sample/ciqikou-tea.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "ciqikou-snacks",
+    "url": "data/磁器口古镇(重庆）/image/highlight_image/小吃一条街.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "小吃一条街 · 磁器口古镇(重庆）",
+    "path": "/uploads/itinerary/sample/ciqikou-snacks.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "liziba",
+    "url": "data/李子坝轻轨站(重庆）/image/highlight_image/轻轨穿楼.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "轻轨穿楼 · 李子坝轻轨站(重庆）",
+    "path": "/uploads/itinerary/sample/liziba.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "liziba-2",
+    "url": "data/李子坝轻轨站(重庆）/image/highlight_image/嘉陵江沿线轻轨.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "嘉陵江沿线轻轨 · 李子坝轻轨站(重庆）",
+    "path": "/uploads/itinerary/sample/liziba-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "nanshan",
+    "url": "data/南山一棵树观景台(重庆）/image/highlight_image/夜景全景.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "夜景全景 · 南山一棵树观景台(重庆）",
+    "path": "/uploads/itinerary/sample/nanshan.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "nanshan-2",
+    "url": "data/南山一棵树观景台(重庆）/image/highlight_image/日落到夜景变化.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "日落到夜景变化 · 南山一棵树观景台(重庆）",
+    "path": "/uploads/itinerary/sample/nanshan-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sanxia",
+    "url": "data/三峡博物馆(重庆）/image/highlight_image/壮丽三峡.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "壮丽三峡 · 三峡博物馆(重庆）",
+    "path": "/uploads/itinerary/sample/sanxia.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "sanxia-2",
+    "url": "data/三峡博物馆(重庆）/image/highlight_image/抗战岁月.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "抗战岁月 · 三峡博物馆(重庆）",
+    "path": "/uploads/itinerary/sample/sanxia-2.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "greathall",
+    "url": "data/人民大礼堂(重庆）/image/highlight_image/人民大礼堂外观和穹顶.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "人民大礼堂外观和穹顶 · 人民大礼堂(重庆）",
+    "path": "/uploads/itinerary/sample/greathall.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "greathall-night",
+    "url": "data/人民大礼堂(重庆）/image/highlight_image/人民广场夜景.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "人民广场夜景 · 人民大礼堂(重庆）",
+    "path": "/uploads/itinerary/sample/greathall-night.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "wulong",
+    "url": "data/武隆喀斯特(重庆）/image/highlight_image/天生三桥.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "天生三桥 · 武隆喀斯特(重庆）",
+    "path": "/uploads/itinerary/sample/wulong.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "jiefangbei",
+    "url": "data/解放碑步行街(重庆）/image/highlight_image/人民解放纪念碑.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "人民解放纪念碑 · 解放碑步行街(重庆）",
+    "path": "/uploads/itinerary/sample/jiefangbei.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "bayi",
+    "url": "data/解放碑步行街(重庆）/image/highlight_image/八一好吃街.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "八一好吃街 · 解放碑步行街(重庆）",
+    "path": "/uploads/itinerary/sample/bayi.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "jiefangbei-night",
+    "url": "data/解放碑步行街(重庆）/image/highlight_image/夜景霓虹.png",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "夜景霓虹 · 解放碑步行街(重庆）",
+    "path": "/uploads/itinerary/sample/jiefangbei-night.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "shtower-top",
+    "url": "data/上海中心大厦(上海）/image/highlight_image/上海之巅.webp",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "上海之巅 · 上海中心大厦(上海）",
+    "path": "/uploads/itinerary/sample/shtower-top.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "museum-east",
+    "url": "data/上海博物馆（东馆）(上海）/image/highlight_image/数字展厅与螺旋坡道.jpg",
+    "source": "ChinaPal attractions database (highlight image)",
+    "title": "数字展厅与螺旋坡道 · 上海博物馆（东馆）(上海）",
+    "path": "/uploads/itinerary/sample/museum-east.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "duck",
+    "url": "https://commons.wikimedia.org/wiki/File:Peking_Duck,_2014_(01).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Peking_Duck,_2014_(01).jpg",
+    "title": "Peking Duck, 2014 (01).jpg",
+    "license": "CC BY 2.0",
+    "author": "see the source page",
+    "path": "/uploads/itinerary/sample/duck.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "hotpot",
+    "url": "https://commons.wikimedia.org/wiki/File:Chongqing_hotpot.1.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Chongqing_hotpot.1.jpg",
+    "title": "Chongqing hotpot.1.jpg",
+    "license": "Public domain",
+    "author": "see the source page",
+    "path": "/uploads/itinerary/sample/hotpot.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "zhajiang",
+    "url": "https://commons.wikimedia.org/wiki/File:Zhajiangmian_after_stirring_at_Fangzhuanchang_(20210115131416).jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:Zhajiangmian_after_stirring_at_Fangzhuanchang_(20210115131416).jpg",
+    "title": "Zhajiangmian after stirring at Fangzhuanchang (20210115131416).jpg",
+    "license": "CC BY-SA 4.0",
+    "author": "see the source page",
+    "path": "/uploads/itinerary/sample/zhajiang.webp",
+    "downloadedOn": "2026-10-29"
+  },
+  {
+    "id": "maglev",
+    "url": "https://commons.wikimedia.org/wiki/File:China-Shanghai_(2024)_Maglev_train_-_img_01.jpg",
+    "source": "https://commons.wikimedia.org/wiki/File:China-Shanghai_(2024)_Maglev_train_-_img_01.jpg",
+    "title": "China-Shanghai (2024) Maglev train - img 01.jpg",
+    "license": "CC BY 4.0",
+    "author": "see the source page",
+    "path": "/uploads/itinerary/sample/maglev.webp",
+    "downloadedOn": "2026-10-29"
+  }
+]
