@@ -4,7 +4,7 @@ import { translateMessage } from "@/lib/inbox/translate";
 import { cancelPlan, chatPlan, getPlan, startPlan, undoPlan } from "@/lib/inbox/plan";
 import { changeQuestion } from "@/lib/inbox/questions";
 import { listQuestions, markAsked } from "@/lib/inbox/question-store";
-import { changeCare, dueCounts, getCare } from "@/lib/inbox/care";
+import { changeCare, getCare, inboxFlags } from "@/lib/inbox/care";
 import { markCareSent } from "@/lib/inbox/care-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
@@ -86,7 +86,7 @@ async function handler(
     if (method === "GET" && action === "conversations")
       return json({ conversations: await listConversations() });
     if (method === "GET" && action === "care/due")
-      return json({ due: await dueCounts() });
+      return json(await inboxFlags());
     if (method === "POST" && action === "sync")
       return json(
         await syncConversations(

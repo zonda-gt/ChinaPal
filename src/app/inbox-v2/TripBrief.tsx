@@ -53,6 +53,7 @@ type Props = {
   onAddToReply: (text: string) => void;
   onShowSource: (source: ProfileSource) => void;
   onBuilt: () => void; // a new brief may have changed the questions list
+  onStage: () => void; // the stage decides whether the chat shows under Paid
 };
 
 async function call<T>(path: string, body?: unknown): Promise<T> {
@@ -122,6 +123,7 @@ export default function TripBrief(props: Props) {
       request.current++;
       setData(body);
       props.onBuilt();
+      props.onStage();
     } catch (e) {
       setError((e as Error).message);
     } finally {
@@ -135,6 +137,7 @@ export default function TripBrief(props: Props) {
       request.current++;
       setData(body);
       setEditing(null);
+      if (change.section === "stage") props.onStage();
     } catch (e) {
       setError((e as Error).message);
     }
