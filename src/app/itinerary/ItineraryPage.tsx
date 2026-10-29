@@ -99,10 +99,12 @@ interface Restaurant {
 }
 
 /* A public Instagram reel or post about a place, e.g. one a traveller sent us.
-   url is the link from Instagram's "Copy link"; handle is the creator. */
+   url is the link from Instagram's "Copy link"; handle is the creator; cover
+   is its saved cover image (npm run instagram:cover -- <link>). */
 interface InstagramVideo {
   url: string;
   handle?: string;
+  cover?: string;
 }
 
 type TransportMode = "taxi" | "walk" | "cable-car" | "shuttle" | "light-rail" | "metro" | "car" | "train";
@@ -645,6 +647,33 @@ function InstagramButton({ video, short = false }: { video: InstagramVideo; shor
   const close = React.useCallback(() => setOpen(false), []);
   const permalink = instagramPermalink(video.url);
   if (!permalink) return null;
+  const handle = video.handle?.replace(/^@/, "");
+  const sheet = open && <InstagramSheet video={video} permalink={permalink} onClose={close} />;
+  if (video.cover) {
+    const width = short ? 42 : 56;
+    return (
+      <>
+        <button
+          onClick={(e) => { e.stopPropagation(); setOpen(true); }}
+          aria-label={`Watch ${handle ? `@${handle}’s` : "the"} video on Instagram`}
+          style={{ display: "flex", alignItems: "center", gap: 10, marginTop: 10, padding: 5, paddingRight: 14, maxWidth: "100%", border: "1px solid #F3D3E4", borderRadius: 14, background: "#FFF5FA", cursor: "pointer", fontFamily: "inherit", textAlign: "left" }}
+        >
+          <span style={{ position: "relative", width, aspectRatio: "9/16", borderRadius: 9, overflow: "hidden", flexShrink: 0, background: "#1A1A1A" }}>
+            <img src={video.cover} alt="" style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }} />
+            <span style={{ position: "absolute", inset: 0, background: "linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0,0.35))" }} />
+            <span style={{ position: "absolute", top: 4, left: 4, width: short ? 13 : 16, height: short ? 13 : 16, borderRadius: 4, background: "linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><InstagramGlyph size={short ? 8 : 10} /></span>
+            <span style={{ position: "absolute", top: "50%", left: "50%", transform: "translate(-50%,-50%)", width: short ? 20 : 26, height: short ? 20 : 26, borderRadius: "50%", background: "rgba(255,255,255,0.92)", display: "flex", alignItems: "center", justifyContent: "center", fontSize: short ? 8 : 10, color: "#1A1A1A", paddingLeft: 2 }}>▶</span>
+          </span>
+          <span style={{ minWidth: 0 }}>
+            {handle && <span style={{ display: "block", fontSize: short ? 11.5 : 12.5, fontWeight: 800, color: "#1A1A1A", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" }}>@{handle}</span>}
+            {!short && <span style={{ display: "block", fontSize: 10.5, color: "#999", margin: "1px 0 3px" }}>Seen on Instagram</span>}
+            <span style={{ display: "block", fontSize: short ? 11 : 11.5, fontWeight: 800, color: "#B0216B", marginTop: short ? 3 : 0, whiteSpace: "nowrap" }}>{short ? "▶ Watch" : "▶ Watch the video"}</span>
+          </span>
+        </button>
+        {sheet}
+      </>
+    );
+  }
   return (
     <>
       <button
@@ -652,9 +681,9 @@ function InstagramButton({ video, short = false }: { video: InstagramVideo; shor
         style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 8, padding: "5px 11px 5px 6px", border: "1px solid #F3D3E4", borderRadius: 20, background: "#FFF5FA", color: "#B0216B", fontSize: 11.5, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}
       >
         <span style={{ width: 20, height: 20, borderRadius: 6, background: "linear-gradient(45deg,#F58529,#DD2A7B 50%,#8134AF)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}><InstagramGlyph size={12} /></span>
-        ▶ Watch on Instagram{video.handle && !short ? ` · @${video.handle.replace(/^@/, "")}` : ""}
+        ▶ Watch on Instagram{handle && !short ? ` · @${handle}` : ""}
       </button>
-      {open && <InstagramSheet video={video} permalink={permalink} onClose={close} />}
+      {sheet}
     </>
   );
 }
