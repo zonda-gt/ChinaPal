@@ -12,6 +12,7 @@ import { runDraft } from "./draft-core";
 import { linkDraft, listQuestions } from "./question-store";
 import { questionsToAsk } from "./question-data";
 import { InboxError, type Staff } from "./types";
+import { reelLine } from "./reel-data";
 
 // Loads the live conversation, runs the shared draft generator (draft-core.ts,
 // prompt in prompt.ts) and saves the result as the conversation's shared draft.
@@ -30,7 +31,7 @@ export async function generateDraft(
     throw new InboxError("AI drafting needs OPENAI_API_KEY on the server.", 503);
   await lease(`ai:${peer}`, 180);
   try {
-    const [{ conversation, messages }, profile, identity, questions, plan] = await Promise.all([
+    const [{ conversation, messages: thread, reels }, profile, identity, questions, plan] = await Promise.all([
       threadData(peer, 400),
       readProfile(peer).catch(() => null),
       contactIdentity(peer).catch(() => null),
@@ -39,6 +40,10 @@ export async function generateDraft(
       // A missing table or row only means the draft goes without a plan.
       readPlan(peer).catch(() => null),
     ]);
+    // A shared reel reaches the AI as one line on what it shows, not "[shared post]".
+    const messages = thread.map((m) =>
+      reels[m.id] ? { ...m, text: [m.text, reelLine(reels[m.id])].filter(Boolean).join(" "), unavailable: false } : m,
+    );
     const tripPlan = plan?.plan?.days.length ? plan.plan : null;
     const toAsk = questionsToAsk(questions);
     if (!messages.length) throw new InboxError("Load messages before generating a reply.");

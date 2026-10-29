@@ -2138,3 +2138,97 @@ main.layout {
     transform: rotate(360deg);
   }
 }
+
+/* A reel the traveller shared, with what the AI found in it */
+.reel {
+  min-width: min(320px, 70vw);
+  max-width: 420px;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.reelHead {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  opacity: 0.8;
+}
+.reelHead span {
+  font-weight: 400;
+}
+.reelHead a {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-weight: 600;
+  color: inherit;
+}
+.reelShort {
+  margin: 6px 0 4px;
+  font-weight: 600;
+}
+.reelState {
+  margin: 6px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.85;
+}
+.reelState small {
+  flex-basis: 100%;
+  opacity: 0.75;
+}
+.reelState button {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font: inherit;
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid currentColor;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+.reelDetails summary {
+  cursor: pointer;
+  font-size: 12px;
+  opacity: 0.75;
+}
+.reelDetails p {
+  margin: 6px 0;
+}
+.reelDetails ul {
+  margin: 4px 0;
+  padding-left: 18px;
+}
+.reelDetails li {
+  margin-bottom: 6px;
+}
+.reelDetails li ul li {
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+.reelMatch {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  opacity: 0.7;
+}
+.reelMatch svg {
+  flex: none;
+}
+.reelMatch small {
+  flex-basis: 100%;
+  margin-left: 14px;
+}
+.reelMatchOk {
+  color: #2f6b3f;
+  opacity: 1;
+}
