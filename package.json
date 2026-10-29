@@ -16,7 +16,7 @@
     "ingest:check": "tsx scripts/ingest/06-quality-check.ts",
     "ingest:all": "tsx scripts/ingest/run-all.ts",
     "instagram:cover": "node scripts/instagram-cover.mjs",
-    "test:inbox": "node --import tsx --test src/lib/inbox/policy.test.ts src/lib/inbox/prompt.test.ts src/lib/inbox/brief-data.test.ts src/lib/inbox/plan-data.test.ts src/lib/instagram/webhook.test.ts scripts/inbox-database.test.mjs"
+    "test:inbox": "node --import tsx --test src/lib/inbox/policy.test.ts src/lib/inbox/prompt.test.ts src/lib/inbox/brief-data.test.ts src/lib/inbox/plan-data.test.ts src/lib/inbox/reel-data.test.ts src/lib/instagram/webhook.test.ts scripts/inbox-database.test.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.92.0",

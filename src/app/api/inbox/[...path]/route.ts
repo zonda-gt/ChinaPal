@@ -7,6 +7,8 @@ import { listQuestions, markAsked } from "@/lib/inbox/question-store";
 import { changeCare, getCare, inboxFlags } from "@/lib/inbox/care";
 import { markCareSent } from "@/lib/inbox/care-store";
 import { askTrip, type AskTurn } from "@/lib/inbox/ask";
+import { backfillReels, processPending } from "@/lib/inbox/reels";
+import { reelsForPeer } from "@/lib/inbox/reel-store";
 import { getConciergeDatabase as db } from "@/lib/instagram/database";
 import { logout, login, requireStaff } from "@/lib/inbox/auth";
 import { generateDraft } from "@/lib/inbox/ai";
@@ -26,7 +28,8 @@ import {
 import { InboxError, type Message } from "@/lib/inbox/types";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
-export const maxDuration = 120;
+// Reading a shared reel takes a minute or two.
+export const maxDuration = 300;
 const noStore = {
   "Cache-Control": "private, no-store",
   "X-Robots-Tag": "noindex, nofollow",
@@ -85,6 +88,8 @@ async function handler(
     if (method === "GET" && action === "session") return json({ staff });
     if (method === "GET" && action === "conversations")
       return json({ conversations: await listConversations() });
+    if (method === "POST" && action === "reels/backfill")
+      return json(await backfillReels());
     if (method === "GET" && action === "care/due")
       return json(await inboxFlags());
     if (method === "POST" && action === "sync")
@@ -152,6 +157,10 @@ async function handler(
         return json({ questions: await listQuestions(peer) });
       if (method === "POST" && operation === "questions")
         return json(await changeQuestion(peer, staff, body));
+      if (method === "POST" && operation === "reels") {
+        await processPending({ peer, deadline: Date.now() + 280_000 });
+        return json({ reels: await reelsForPeer(peer) });
+      }
       if (method === "GET" && operation === "care")
         return json(await getCare(peer));
       if (method === "POST" && operation === "care")

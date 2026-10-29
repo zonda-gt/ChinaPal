@@ -37,6 +37,8 @@ import TripBrief from "./TripBrief";
 import TripPlan from "./TripPlan";
 import TripQuestions from "./TripQuestions";
 import TripCare from "./TripCare";
+import ReelCard from "./ReelCard";
+import { needsWork, type ReelView } from "@/lib/inbox/reel-data";
 import type { TripQuestion } from "@/lib/inbox/question-data";
 import { teamName } from "@/lib/inbox/team";
 import v from "./v2.module.css";
@@ -48,6 +50,7 @@ type Thread = {
   canSend: boolean;
   latestInbound: string | null;
   senders?: Record<string, string>; // Instagram message id → who sent it from the inbox
+  reels?: Record<string, ReelView & { attempts: number; updated_at: string }>; // message id → the reel it shared
 };
 type Filter = "all" | "paid" | "needs" | "due" | "drafts" | "unread" | "archived";
 const MAX_MESSAGES = 3;
@@ -190,6 +193,30 @@ export default function InboxV2() {
     if (seenAt && document.visibilityState === "visible") await api(`conversations/${peer}/read`, { seenAt });
     return data;
   }, []);
+  // Shared reels are read on the server when they arrive; any still waiting
+  // (older ones, or a failed try) are read when their chat is opened.
+  const reelsAsked = useRef(new Set<string>());
+  const [readingReels, setReadingReels] = useState<string | null>(null);
+  const readReels = useCallback(
+    async (peer: string) => {
+      setReadingReels(peer);
+      try {
+        await api(`conversations/${peer}/reels`, {});
+      } catch (e) {
+        setError((e as Error).message);
+      } finally {
+        setReadingReels((r) => (r === peer ? null : r));
+      }
+      if (selectedRef.current === peer) await loadThread(peer, limitRef.current).catch(() => {});
+    },
+    [loadThread],
+  );
+  useEffect(() => {
+    const peer = thread?.conversation.peer_id;
+    if (!peer || reelsAsked.current.has(peer) || !Object.values(thread.reels ?? {}).some((r) => needsWork(r))) return;
+    reelsAsked.current.add(peer);
+    void readReels(peer);
+  }, [thread, readReels]);
   useEffect(() => {
     api<{ staff: Staff }>("session")
       .then((d) => setStaff(d.staff))
@@ -972,7 +999,15 @@ export default function InboxV2() {
                                   </a>
                                 ),
                               )}
-                              {!m.text && !m.attachments.length && <em>Content unavailable through the API. View in Instagram.</em>}
+                              {thread.reels?.[m.id] ? (
+                                <ReelCard
+                                  reel={thread.reels[m.id]}
+                                  busy={readingReels === thread.conversation.peer_id}
+                                  onRetry={() => void readReels(thread.conversation.peer_id)}
+                                />
+                              ) : (
+                                !m.text && !m.attachments.length && <em>Content unavailable through the API. View in Instagram.</em>
+                              )}
                             </>
                           )}
                         </div>
