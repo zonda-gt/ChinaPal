@@ -131,6 +131,8 @@ interface TimelineItem {
   restaurants?: Restaurant[];
   previewImages?: string[];
   showPhotoPreview?: boolean;
+  /* A meal folded like the restaurant card: its photo on the left instead of a video cover */
+  sidePhoto?: boolean;
   previewLine?: string;
   transportAfter?: TransportLeg;
   /* Other choices for this slot, shown as cards to swipe beside the main one */
@@ -913,6 +915,7 @@ function TimelineCard({ item, index, dayLabel }: { item: TimelineItem; index: nu
   const foldedVideo = item.instagram ?? videoRestaurant?.instagram;
   const playFolded = () => (item.instagram ? playStop() : videoRestaurant && playRestaurant(videoRestaurant));
   const sideVideo = !expanded && foldedVideo?.cover ? foldedVideo : null;
+  const sidePhoto = !expanded && !sideVideo && item.sidePhoto ? images[0] : undefined;
 
   const card = (
     <div
@@ -923,12 +926,17 @@ function TimelineCard({ item, index, dayLabel }: { item: TimelineItem; index: nu
         boxShadow: isCompact ? "none" : "0 2px 16px rgba(0,0,0,0.07)",
         border: `1px solid ${isCompact ? "#EEEAE3" : "#F0EDE8"}`,
         cursor: canExpand ? "pointer" : "default",
-        display: sideVideo ? "flex" : undefined,
+        display: sideVideo || sidePhoto ? "flex" : undefined,
       }}
       onClick={() => canExpand && setExpanded(!expanded)}
     >
       {/* Folded, with a video: its cover on the left, like the restaurant card */}
       {sideVideo && <VideoCover video={sideVideo} onPlay={playFolded} width={78} minHeight={138} />}
+      {sidePhoto && (
+        <div style={{ position: "relative", width: 78, minHeight: 120, flexShrink: 0, alignSelf: "stretch", overflow: "hidden", background: "#F7F5F2" }}>
+          <img src={sidePhoto} alt={item.title} style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />
+        </div>
+      )}
 
       {/* Hero image carousel — only shown when expanded */}
       {images.length > 0 && expanded && (
@@ -952,7 +960,7 @@ function TimelineCard({ item, index, dayLabel }: { item: TimelineItem; index: nu
         </div>
       )}
 
-      <div style={{ padding: isCompact ? "9px 13px" : "14px 16px", ...(sideVideo ? { flex: 1, minWidth: 0, display: "flex", flexDirection: "column" } : {}) }}>
+      <div style={{ padding: isCompact ? "9px 13px" : "14px 16px", ...(sideVideo || sidePhoto ? { flex: 1, minWidth: 0, display: "flex", flexDirection: "column" } : {}) }}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
           <div style={{ flex: 1 }}>
             <p style={{ fontSize: isCompact ? 10 : 11, color: isCompact ? "#B0B0B0" : typeColors[item.type], fontWeight: 700, margin: "0 0 2px", textTransform: "uppercase", letterSpacing: "0.04em" }}>{item.subtitle}</p>
