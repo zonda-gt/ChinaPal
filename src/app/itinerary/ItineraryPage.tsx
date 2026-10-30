@@ -1300,7 +1300,8 @@ function PersonalisationBanner() {
 }
 
 
-export default function ItineraryPage({ images, leadName, config, chromeless, initialDay = 1 }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig; chromeless?: boolean; initialDay?: number }) {
+/* contactLink replaces the WhatsApp link in the sidebar, e.g. an Instagram DM link. */
+export default function ItineraryPage({ images, leadName, config, chromeless, initialDay = 1, contactLink = WA_LINK }: { images?: ImageMap; leadName?: string; config?: ItineraryConfig; chromeless?: boolean; initialDay?: number; contactLink?: string }) {
   const searchParams = useSearchParams();
   const visitorName = leadName || searchParams.get("name");
   const img = images ?? DEFAULT_IMAGES;
@@ -1475,7 +1476,7 @@ export default function ItineraryPage({ images, leadName, config, chromeless, in
               </div>
             ))}
             <a
-              href={WA_LINK}
+              href={contactLink}
               target="_blank" rel="noopener noreferrer"
               style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, background: "#F7F5F2", padding: "12px 0", textDecoration: "none", color: "#1A1A1A", fontSize: 12, fontWeight: 700, borderTop: "1px solid #F0EDE8" }}
             >
