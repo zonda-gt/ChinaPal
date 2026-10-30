@@ -38,7 +38,7 @@ const cities: City[] = [
     days: "Days 8–11",
     small: [
       { nameEn: "Bailong Elevator", image: photos.bailong[0] },
-      { nameEn: "Tianmen Mountain", image: photos.tianmen[0] },
+      { nameEn: "Tianzi Mountain", image: photos.tianzi[0] },
     ],
     featured: { nameEn: "Yuanjiajie’s “Avatar” Peaks", image: photos.yuanjiajie[0] },
   },
@@ -58,37 +58,37 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
   {
     cityName: "Beijing",
     days: [
-      { day: "DAY 1", title: "Arrival in Beijing", items: ["✈️ Pickup with an infant seat · your apartment"] },
-      { day: "DAY 2", title: "Forbidden City · Peking Duck", items: ["🏯 Forbidden City, south to north", "🦆 Siji Minfu duck by the palace walls"] },
-      { day: "DAY 3", title: "Great Wall · Sanlitun", items: ["🧱 Mutianyu by enclosed cable car", "🛍️ Sanlitun Taikoo Li lit up at night"] },
-      { day: "DAY 4", title: "Pandas · Hutongs", items: ["🐼 Meng Lan at the new Panda House", "🏮 Shichahai lakes and hutongs"] },
+      { day: "DAY 1", title: "Arrival · Ritan Park", items: ["✈️ Pickup with an infant seat · your apartment", "🌳 Ritan Park if you land early"] },
+      { day: "DAY 2", title: "Forbidden City · Jingshan · Wangfujing", items: ["🏯 Forbidden City, south to north", "🦆 Siji Minfu duck by the palace walls", "⛰️ Jingshan view · 🛍️ Wangfujing at night"] },
+      { day: "DAY 3", title: "Great Wall · Sanlitun", items: ["🧱 Mutianyu by enclosed cable car · lunch below the Wall", "🛍️ Sanlitun Taikoo Li for dinner"] },
+      { day: "DAY 4", title: "Pandas · Moscow Restaurant · Hutongs", items: ["🐼 Meng Lan · the Aquarium", "🍽️ Lunch at the 1954 Moscow Restaurant", "🏮 Shichahai · Kao Rou Ji dinner"] },
     ],
   },
   {
     cityName: "Xi’an",
     days: [
-      { day: "DAY 5", title: "Train to Xi’an", items: ["🚄 Beijing West → Xi’an North", "Mercure Xi’an Downtown"] },
-      { day: "DAY 6", title: "Terracotta Warriors · Muslim Quarter", items: ["🗿 Terracotta Warriors", "🍲 Lao Sun Jia paomo", "🏮 Bell & Drum Towers · street-food dinner"] },
-      { day: "DAY 7", title: "City Wall · Tang Nights", items: ["🧱 City Wall at the South Gate", "🥟 Yongxingfang food street", "✨ Datang Everbright City at night"] },
+      { day: "DAY 5", title: "Train to Xi’an · Bell Tower · Muslim Quarter", items: ["🚄 Beijing West → Xi’an North", "🏮 Bell & Drum Towers at dusk", "🍢 Muslim Quarter street food"] },
+      { day: "DAY 6", title: "Terracotta Warriors · Yongxingfang", items: ["🗿 Terracotta Warriors", "🍲 Lao Sun Jia paomo", "🧱 Sunset on the wall · Yongxingfang dinner"] },
+      { day: "DAY 7", title: "City Wall · Museum · Tang Nights", items: ["🧱 City Wall at the South Gate", "🏺 Shaanxi History Museum", "✨ Big Wild Goose Pagoda · Datang Everbright City"] },
     ],
   },
   {
     cityName: "Zhangjiajie",
     days: [
-      { day: "DAY 8", title: "Fly to Zhangjiajie", items: ["✈️ Xi’an → Zhangjiajie · Wulingyuan hotel"] },
-      { day: "DAY 9", title: "Tianzi Mountain", items: ["🚡 Cable car up to the peaks", "🚂 Ten-Mile Gallery (optional)"] },
-      { day: "DAY 10", title: "Golden Whip Stream · Yuanjiajie", items: ["🌿 Flat stream walk", "🛗 Bailong Elevator to the Avatar peaks", "🏮 XiBu Street at night"] },
-      { day: "DAY 11", title: "Tianmen Mountain · 72 Wonder Buildings", items: ["⛰️ Tianmen Mountain by Route C", "✨ 72 Wonder Buildings & Dayong at night"] },
+      { day: "DAY 8", title: "Fly in · XiBu Street", items: ["✈️ Xi’an → Zhangjiajie", "🏮 XiBu Street dinner"] },
+      { day: "DAY 9", title: "National Forest Park · Tianzi Mountain", items: ["🚂 Ten-Mile Gallery mini-train", "🚡 Tianzi Mountain cable car & viewpoints", "⛵ Baofeng Lake by boat · 🎭 Charming Xiangxi (optional)"] },
+      { day: "DAY 10", title: "National Forest Park · Yuanjiajie", items: ["🌿 Golden Whip Stream", "🛗 Bailong Elevator to the Avatar peaks", "🦇 Huanglong Cave"] },
+      { day: "DAY 11", title: "Tianmen Mountain · 72 Wonder Buildings", items: ["⛰️ Tianmen Mountain by Route C", "✨ 72 Wonder Buildings & Dayong dinner"] },
     ],
   },
   {
     cityName: "Shanghai",
     days: [
-      { day: "DAY 12", title: "Fly to Shanghai", items: ["✈️ Zhangjiajie → Shanghai", "🥟 Yang’s pan-fried buns"] },
-      { day: "DAY 13", title: "Yu Garden · Christmas Market", items: ["🥟 Nanxiang breakfast · Yu Garden", "🎄 Christkindlmarkt on the Bund"] },
-      { day: "DAY 14", title: "Skyline · River Cruise", items: ["🏙️ Shanghai Tower · IFC Christmas tree", "🥟 Lai Lai crab-roe dumplings", "🚢 Huangpu night cruise"] },
-      { day: "DAY 15", title: "French Concession · Christmas Eve", items: ["🌳 Wukang Road & Anfu Road", "🍚 Hikiniku To Come · White Foods", "🎄 Xintiandi Christmas lights"] },
-      { day: "DAY 16", title: "Flight Home", items: ["✈️ Transfer to the airport"] },
+      { day: "DAY 12", title: "Fly in · Nanjing Road & the Bund", items: ["✈️ Zhangjiajie → Shanghai", "🌃 Nanjing Road to the Bund · Yang’s buns"] },
+      { day: "DAY 13", title: "Yu Garden · Museum · Christmas Market", items: ["🥟 Nanxiang · Yu Garden · Lu Bo Lang lunch", "🏺 Shanghai Museum", "🎄 Christkindlmarkt on the Bund"] },
+      { day: "DAY 14", title: "Skyline · Zhangyuan · River Cruise", items: ["🏙️ Shanghai Tower · IFC Christmas tree", "🥟 Lai Lai · Zhangyuan & Jing’an Temple", "🚢 Huangpu night cruise"] },
+      { day: "DAY 15", title: "French Concession · Christmas Eve", items: ["🌳 Wukang Road · Hikiniku To Come · White Foods", "🛍️ Tianzifang", "🎄 Xintiandi Christmas lights"] },
+      { day: "DAY 16", title: "Flight Home", items: ["🌅 Morning on the Bund · ✈️ to the airport"] },
     ],
   },
 ];
