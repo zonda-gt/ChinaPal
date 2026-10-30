@@ -12,7 +12,9 @@ import SamplePoster from "./poster";
 import { buildSampleConfig, recommended } from "./config";
 
 const FONT = "'Plus Jakarta Sans', sans-serif";
-const WA_LINK = "https://wa.me/8618201806768?text=Hi%20ChinaPal!%20I%20saw%20your%2010-day%20sample%20itinerary%20and%20I%E2%80%99d%20like%20one%20for%20my%20trip.";
+/* Opens a DM with us in the Instagram app (or instagram.com on a computer). */
+const INSTAGRAM_HANDLE = "steven_chinapal";
+const DM_LINK = `https://ig.me/m/${INSTAGRAM_HANDLE}`;
 
 /* ?name=Sarah personalises the page for a lead: "A sample trip for Sarah". */
 function leadName(raw: string | null) {
@@ -44,7 +46,7 @@ export default function SampleClient({ images }: { images: ImageMap }) {
           </p>
         </div>
       </div>
-      <ItineraryPage images={images} config={config} leadName={name ?? undefined} chromeless />
+      <ItineraryPage images={images} config={config} leadName={name ?? undefined} chromeless contactLink={DM_LINK} />
       <RecommendedPlaces />
       <GetYourPlan />
       <Footer />
@@ -113,10 +115,15 @@ function GetYourPlan() {
             </div>
           ))}
         </div>
-        <a href={WA_LINK} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, background: "#D0021B", color: "#fff", borderRadius: 12, padding: "14px 0", fontSize: 14, fontWeight: 800, textDecoration: "none" }}>
-          <MessageCircle size={16} /> Message us to start
+        <a href={DM_LINK} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 8, background: "#D0021B", color: "#fff", borderRadius: 12, padding: "14px 0", fontSize: 14, fontWeight: 800, textDecoration: "none" }}>
+          <svg width={17} height={17} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} aria-hidden>
+            <rect x="3" y="3" width="18" height="18" rx="5" />
+            <circle cx="12" cy="12" r="4" />
+            <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
+          </svg>
+          Message us on Instagram
         </a>
-        <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: "10px 0 0", textAlign: "center" }}>Or message us on Instagram, wherever you found us.</p>
+        <p style={{ fontSize: 11.5, color: "rgba(255,255,255,0.55)", margin: "10px 0 0", textAlign: "center" }}>Opens a chat with @{INSTAGRAM_HANDLE}</p>
       </div>
     </section>
   );
