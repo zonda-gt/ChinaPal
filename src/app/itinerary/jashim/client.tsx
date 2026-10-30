@@ -32,7 +32,7 @@ export default function JashimClient({ images, withOptions = false }: { images: 
           </div>
           <p style={{ fontSize: 13, color: "#888", margin: "12px 0 0", fontFamily: FONT, lineHeight: 1.6 }}>
             Every stop has its Chinese name and address for Amap or DiDi, and a baby tip: whether to bring the stroller or the carrier, and where to feed and change.
-            Each day has one main outing in the morning and time back at the hotel for naps.
+            Each day has one main outing in the morning and time back at the hotel for naps. Taxi times, fares and metro routes are from Amap and change with traffic.
             {withOptions && <><br /><br />Where you see <b style={{ color: "#B45309" }}>+ other options</b>, swipe the card to see a choice for the same time, such as one for a rainy day.</>}
           </p>
         </div>
