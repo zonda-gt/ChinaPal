@@ -26,7 +26,7 @@ const cities: City[] = [
   },
   {
     name: "Xi’an",
-    days: "Days 5–7",
+    days: "Days 5–6",
     small: [
       { nameEn: "Terracotta Warriors", image: photos.terracotta[0] },
       { nameEn: "The City Wall", image: photos.cityWall[0] },
@@ -35,9 +35,9 @@ const cities: City[] = [
   },
   {
     name: "Zhangjiajie",
-    days: "Days 8–11",
+    days: "Days 7–11",
     small: [
-      { nameEn: "Bailong Elevator", image: photos.bailong[0] },
+      { nameEn: "Grand Canyon Glass Bridge", image: photos.glass[0] },
       { nameEn: "Tianzi Mountain", image: photos.tianzi[0] },
     ],
     featured: { nameEn: "Yuanjiajie’s “Avatar” Peaks", image: photos.yuanjiajie[0] },
@@ -61,23 +61,23 @@ const cityItineraries: { cityName: string; days: ItineraryDay[] }[] = [
       { day: "DAY 1", title: "Arrival · Ritan Park", items: ["✈️ Pickup with an infant seat · your apartment", "🌳 Ritan Park if you land early"] },
       { day: "DAY 2", title: "Forbidden City · Jingshan · Wangfujing", items: ["🏯 Forbidden City, south to north", "🦆 Siji Minfu duck by the palace walls", "⛰️ Jingshan view · 🛍️ Wangfujing at night"] },
       { day: "DAY 3", title: "Great Wall · Sanlitun", items: ["🧱 Mutianyu by enclosed cable car · lunch below the Wall", "🛍️ Sanlitun Taikoo Li for dinner"] },
-      { day: "DAY 4", title: "Pandas · Moscow Restaurant · Hutongs", items: ["🐼 Meng Lan · the Aquarium", "🍽️ Lunch at the 1954 Moscow Restaurant", "🏮 Shichahai · Kao Rou Ji dinner"] },
+      { day: "DAY 4", title: "Pandas · Zhajiang Noodles · Hutongs", items: ["🐼 Meng Lan · the Aquarium", "🍜 Zhajiang noodles at the zoo gate", "🏮 Shichahai · Kao Rou Ji dinner"] },
     ],
   },
   {
     cityName: "Xi’an",
     days: [
       { day: "DAY 5", title: "Train to Xi’an · Bell Tower · Muslim Quarter", items: ["🚄 Beijing West → Xi’an North", "🏮 Bell & Drum Towers at dusk", "🍢 Muslim Quarter street food"] },
-      { day: "DAY 6", title: "Terracotta Warriors · Yongxingfang", items: ["🗿 Terracotta Warriors", "🍲 Lao Sun Jia paomo", "🧱 Sunset on the wall · Yongxingfang dinner"] },
-      { day: "DAY 7", title: "City Wall · Museum · Tang Nights", items: ["🧱 City Wall at the South Gate", "🏺 Shaanxi History Museum", "✨ Big Wild Goose Pagoda · Datang Everbright City"] },
+      { day: "DAY 6", title: "Terracotta Warriors · City Wall · Tang Nights", items: ["🗿 Terracotta Warriors · 🍲 Lao Sun Jia paomo", "🧱 Sunset on the City Wall", "✨ Big Wild Goose Pagoda · Datang Everbright City"] },
     ],
   },
   {
     cityName: "Zhangjiajie",
     days: [
-      { day: "DAY 8", title: "Fly in · XiBu Street", items: ["✈️ Xi’an → Zhangjiajie", "🏮 XiBu Street dinner"] },
-      { day: "DAY 9", title: "National Forest Park · Tianzi Mountain", items: ["🚂 Ten-Mile Gallery mini-train", "🚡 Tianzi Mountain cable car & viewpoints", "⛵ Baofeng Lake by boat · 🎭 Charming Xiangxi (optional)"] },
-      { day: "DAY 10", title: "National Forest Park · Yuanjiajie", items: ["🌿 Golden Whip Stream", "🛗 Bailong Elevator to the Avatar peaks", "🦇 Huanglong Cave"] },
+      { day: "DAY 7", title: "Fly in · XiBu Street", items: ["✈️ Xi’an → Zhangjiajie", "🏮 XiBu Street dinner"] },
+      { day: "DAY 8", title: "National Forest Park · Tianzi Mountain", items: ["🚂 Ten-Mile Gallery mini-train", "🚡 Tianzi Mountain cable car & viewpoints", "🎭 Charming Xiangxi (optional)"] },
+      { day: "DAY 9", title: "National Forest Park · Yuanjiajie", items: ["🌿 Golden Whip Stream", "🛗 Bailong Elevator to the Avatar peaks", "⛵ Baofeng Lake by boat"] },
+      { day: "DAY 10", title: "Glass Bridge · Huanglong Cave", items: ["🌉 Grand Canyon Glass Bridge", "🦇 Huanglong Cave"] },
       { day: "DAY 11", title: "Tianmen Mountain · 72 Wonder Buildings", items: ["⛰️ Tianmen Mountain by Route C", "✨ 72 Wonder Buildings & Dayong dinner"] },
     ],
   },

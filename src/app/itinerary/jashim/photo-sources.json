@@ -710,5 +710,37 @@
     "title": "Pillar peaks along the Ten-Mile Gallery valley",
     "path": "/uploads/itinerary/jashim/tenmile-2.webp",
     "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "glass",
+    "url": "https://ak-d.tripcdn.com/images/1lo3v12000ei1ghm5D6E2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/cili/zhangjiajie-great-canyon-22544507/",
+    "title": "Zhangjiajie Grand Canyon Glass Bridge across the canyon in the mist",
+    "path": "/uploads/itinerary/jashim/glass.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "glass-2",
+    "url": "https://ak-d.tripcdn.com/images/1lo0e12000ei1gve736D2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/cili/zhangjiajie-great-canyon-22544507/",
+    "title": "Waterfall in Zhangjiajie Grand Canyon",
+    "path": "/uploads/itinerary/jashim/glass-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "zhajiang",
+    "url": "https://ak-d.tripcdn.com/images/1mi5b224x93qfx5lwF4D2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/beijing-1-134514613/",
+    "title": "Zhajiang noodles with their toppings, Fangzhuanchang No. 69",
+    "path": "/uploads/itinerary/jashim/zhajiang.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "zhajiang-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi42224x93qg42fn07A6_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/beijing-1-134514613/",
+    "title": "Fangzhuanchang No. 69 Zhajiang Noodles shopfront",
+    "path": "/uploads/itinerary/jashim/zhajiang-2.webp",
+    "downloadedOn": "2026-10-30"
   }
 ]
