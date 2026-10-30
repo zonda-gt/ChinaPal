@@ -1,0 +1,602 @@
+[
+  {
+    "id": "siji-duck",
+    "url": "https://ak-d.tripcdn.com/images/1mi5i224x99n7czkdC3E4_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-146886672/",
+    "title": "Peking duck being carved at Siji Minfu, Forbidden City branch",
+    "path": "/uploads/itinerary/jashim/siji-duck.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "siji-view",
+    "url": "https://ak-d.tripcdn.com/images/1mi3p224x99n79l1y6E44_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-146886672/",
+    "title": "Forbidden City corner tower and moat, beside Siji Minfu",
+    "path": "/uploads/itinerary/jashim/siji-view.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "taikooli",
+    "url": "https://ak-d.tripcdn.com/images/0105g12000aeugc2i70F0_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/beijing/taikoo-li-sanlitun-18175563/",
+    "title": "Taikoo Li Sanlitun at night",
+    "path": "/uploads/itinerary/jashim/taikooli.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "taikooli-2",
+    "url": "https://ak-d.tripcdn.com/images/0105p12000tdwsbsa0A17_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/beijing/taikoo-li-sanlitun-18175563/",
+    "title": "Taikoo Li Sanlitun north zone lit up",
+    "path": "/uploads/itinerary/jashim/taikooli-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "panda",
+    "url": "https://ak-d.tripcdn.com/images/1mi6r12000rrt1top1ABE_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/moments/detail/beijing-1-142921997/",
+    "title": "Giant panda Meng Lan at Beijing Zoo",
+    "path": "/uploads/itinerary/jashim/panda.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "panda-snow",
+    "url": "https://ak-d.tripcdn.com/images/1mi6p12000tzvewidEAF4_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-153688550/",
+    "title": "Giant panda eating bamboo in the snow, Beijing Zoo Panda House",
+    "path": "/uploads/itinerary/jashim/panda-snow.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "zoo-gate",
+    "url": "https://ak-d.tripcdn.com/images/0102e12000jo9eeaa1097_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/beijing/beijing-zoo-76612/",
+    "title": "Beijing Zoo main gate",
+    "path": "/uploads/itinerary/jashim/zoo-gate.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hanfu-bj",
+    "url": "https://ak-d.tripcdn.com/images/1mi1u224x927qfwyqC9B9_Z_1280_853_R50_Q90.jpg",
+    "source": "https://hk.trip.com/moments/detail/beijing-1-132971967?locale=en-HK",
+    "title": "Qing-style costume photoshoot by the red palace walls, Beijing",
+    "path": "/uploads/itinerary/jashim/hanfu-bj.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hanfu-bj-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi1z224x927qzljbF2F6_Z_1280_853_R50_Q90.jpg",
+    "source": "https://hk.trip.com/moments/detail/beijing-1-132971967?locale=en-HK",
+    "title": "Costume photoshoot at the Imperial Ancestral Temple, Beijing",
+    "path": "/uploads/itinerary/jashim/hanfu-bj-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "dadong",
+    "url": "https://ak-d.tripcdn.com/images/1mi1a12000u6y9fdb8FF1_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-155269836/",
+    "title": "Roast duck being carved at Da Dong",
+    "path": "/uploads/itinerary/jashim/dadong.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "dadong-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi6o12000u6y843v66EE_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-155269836/",
+    "title": "Da Dong roast duck with pancakes and condiments",
+    "path": "/uploads/itinerary/jashim/dadong-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "copperpot",
+    "url": "https://ak-d.tripcdn.com/images/1mi3912000g1mw5e4CEFB_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-125189863/",
+    "title": "Old Beijing copper-pot mutton hotpot",
+    "path": "/uploads/itinerary/jashim/copperpot.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "copperpot-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi6l12000g1mwah9EE9E_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/beijing-1-125189863/",
+    "title": "Copper-pot hotpot with hand-sliced mutton and sesame sauce",
+    "path": "/uploads/itinerary/jashim/copperpot-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "mercure",
+    "url": "https://ak-d.tripcdn.com/images/200d14000000vwonq3B33_Z_1280_853_R50_Q90.jpg",
+    "source": "https://uk.trip.com/hotels/xi-an-hotel-detail-435167/mercure-hotel-xi-an-bell-tower-muslim-street/",
+    "title": "Mercure Xi'an Downtown at night, 8 Xixin Street",
+    "path": "/uploads/itinerary/jashim/mercure.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "mercure-2",
+    "url": "https://ak-d.tripcdn.com/images/0226t12000c40c4123847_Z_1280_853_R50_Q90.jpg",
+    "source": "https://uk.trip.com/hotels/xi-an-hotel-detail-435167/mercure-hotel-xi-an-bell-tower-muslim-street/",
+    "title": "Mercure Xi'an Downtown lobby bar",
+    "path": "/uploads/itinerary/jashim/mercure-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "terracotta-2",
+    "url": "https://ak-d.tripcdn.com/images/0104012000f6rbl4996B9_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/poi-xi-an-bell-tower-84631-thorough-guides-993136/",
+    "title": "Terracotta warriors close up",
+    "path": "/uploads/itinerary/jashim/terracotta-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "paomo",
+    "url": "https://ak-d.tripcdn.com/images/1mi5p12000awqem2d5268_Z_1280_853_R50_Q90.jpg",
+    "source": "https://id.trip.com/moments/detail/xi-an-7-119182163?locale=en-ID",
+    "title": "Bowls of torn bread waiting for mutton soup (yangrou paomo)",
+    "path": "/uploads/itinerary/jashim/paomo.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "paomo-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi6h12000awqya6b7E85_Z_1280_853_R50_Q90.jpg",
+    "source": "https://id.trip.com/moments/detail/xi-an-7-119182163?locale=en-ID",
+    "title": "Paomo restaurant front in Xi'an",
+    "path": "/uploads/itinerary/jashim/paomo-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "belltower",
+    "url": "https://ak-d.tripcdn.com/images/100k0m000000e1id6CE4C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/xi-an-bell-tower-84631/",
+    "title": "Xi'an Bell Tower lit up at night",
+    "path": "/uploads/itinerary/jashim/belltower.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "drumtower",
+    "url": "https://ak-d.tripcdn.com/images/10051b000001a407t7EE3_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/xi-an-drum-tower-13219372/",
+    "title": "Xi'an Drum Tower lit up at night",
+    "path": "/uploads/itinerary/jashim/drumtower.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "muslimq",
+    "url": "https://ak-d.tripcdn.com/images/0100w12000mr1jn5aA653_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/xi-an-muslim-quarter-10559031/",
+    "title": "Muslim Quarter food street at night with lanterns",
+    "path": "/uploads/itinerary/jashim/muslimq.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "muslimq-2",
+    "url": "https://ak-d.tripcdn.com/images/100h1f000001grspnC73E_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/xi-an-muslim-quarter-10559031/",
+    "title": "Snack shops in Xi'an's Muslim Quarter",
+    "path": "/uploads/itinerary/jashim/muslimq-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "skewers",
+    "url": "https://ak-d.tripcdn.com/images/1mi5k12000s1z4t7177FB_Z_1280_853_R50_Q90.jpg",
+    "source": "https://my.trip.com/moments/detail/xi-an-7-143970667?locale=en-MY",
+    "title": "Lamb skewers on the grill, Muslim Quarter",
+    "path": "/uploads/itinerary/jashim/skewers.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "citywall",
+    "url": "https://ak-d.tripcdn.com/images/0100f120005q6fsy8B56A_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/poi-xi-an-bell-tower-84631-thorough-guides-993136/",
+    "title": "Xi'an City Wall gate framed by an archway at sunset",
+    "path": "/uploads/itinerary/jashim/citywall.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "citywall-2",
+    "url": "https://ak-d.tripcdn.com/images/10010x000000lr669CE8C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/poi-xi-an-bell-tower-84631-thorough-guides-993136/",
+    "title": "Xi'an City Wall gate tower",
+    "path": "/uploads/itinerary/jashim/citywall-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yongxing",
+    "url": "https://ak-d.tripcdn.com/images/1A0o1d000001ea8u4A579_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/yongxing-fang-39706665/",
+    "title": "Yongxingfang food street gate with red lanterns",
+    "path": "/uploads/itinerary/jashim/yongxing.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yongxing-2",
+    "url": "https://ak-d.tripcdn.com/images/100e0r000000hdpfuB2DA_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/yongxing-fang-39706665/",
+    "title": "Lanterns over Yongxingfang food street",
+    "path": "/uploads/itinerary/jashim/yongxing-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "datang",
+    "url": "https://ak-d.tripcdn.com/images/100c1f000001gsxqd9E36_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/xi-an-7-143182572/",
+    "title": "Datang Everbright City Zhenguan Square lit up at night",
+    "path": "/uploads/itinerary/jashim/datang.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "datang-2",
+    "url": "https://ak-d.tripcdn.com/images/100m10000000qecbzE3EC_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/xi-an-7-143182572/",
+    "title": "Datang Everbright City boulevard from above at night",
+    "path": "/uploads/itinerary/jashim/datang-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "goose",
+    "url": "https://ak-d.tripcdn.com/images/0103m12000u490ftq89D2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/big-wild-goose-pagoda-75680/",
+    "title": "Big Wild Goose Pagoda at dusk",
+    "path": "/uploads/itinerary/jashim/goose.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "changan",
+    "url": "https://ak-d.tripcdn.com/images/01073120009riwid0BBDB_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/xi-an-7-143182572/",
+    "title": "Tang-dynasty costumes in the Chang'an Twelve Hours theme block",
+    "path": "/uploads/itinerary/jashim/changan.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "changan-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi1j12000s8ebalo9A41_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/moments/detail/xi-an-7-144671711/",
+    "title": "Lanterns inside the Chang'an Twelve Hours theme block",
+    "path": "/uploads/itinerary/jashim/changan-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "shaanxi-museum",
+    "url": "https://ak-d.tripcdn.com/images/0100412000t33kac8C3FF_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/shaanxi-history-museum-75684/",
+    "title": "Shaanxi History Museum",
+    "path": "/uploads/itinerary/jashim/shaanxi-museum.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "shaanxi-museum-2",
+    "url": "https://ak-d.tripcdn.com/images/0104b12000hxnwov5CF13_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/xi-an/shaanxi-history-museum-75684/",
+    "title": "Tang gold dragon, Shaanxi History Museum",
+    "path": "/uploads/itinerary/jashim/shaanxi-museum-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hilton-zjj",
+    "url": "https://ak-d.tripcdn.com/images/1mc3312000kwgxn3zD5A4_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/hotels/zhangjiajie-hotel-detail-127627506/hilton-garden-inn-zhangjiajie-wulingyuan/",
+    "title": "Hilton Garden Inn Zhangjiajie Wulingyuan at dusk",
+    "path": "/uploads/itinerary/jashim/hilton-zjj.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hilton-zjj-2",
+    "url": "https://ak-d.tripcdn.com/images/1mc2q12000ky3otg7CB99_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/hotels/zhangjiajie-hotel-detail-127627506/hilton-garden-inn-zhangjiajie-wulingyuan/",
+    "title": "Hilton Garden Inn Zhangjiajie Wulingyuan pool with mountains",
+    "path": "/uploads/itinerary/jashim/hilton-zjj-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "tianzi-sunrise",
+    "url": "https://ak-d.tripcdn.com/images/1mc0c12000ry86vvf97CD_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/hotels/zhangjiajie-hotel-detail-127627506/hilton-garden-inn-zhangjiajie-wulingyuan/",
+    "title": "Sunrise over the Wulingyuan sandstone peaks",
+    "path": "/uploads/itinerary/jashim/tianzi-sunrise.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "golden",
+    "url": "https://ak-d.tripcdn.com/images/0100h12000tmu6uzg4A4C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/golden-whip-stream-75857/",
+    "title": "Golden Whip Stream under the stone pillars",
+    "path": "/uploads/itinerary/jashim/golden.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "golden-2",
+    "url": "https://ak-d.tripcdn.com/images/0103f120005sdtzthEC87_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/golden-whip-stream-75857/",
+    "title": "Misty forest along Golden Whip Stream",
+    "path": "/uploads/itinerary/jashim/golden-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "bailong",
+    "url": "https://ak-d.tripcdn.com/images/1lo0u12000lyrtyhjDD47_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/bailong-elevator-88602/",
+    "title": "Bailong Elevator on the cliff above the clouds",
+    "path": "/uploads/itinerary/jashim/bailong.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "bailong-2",
+    "url": "https://ak-d.tripcdn.com/images/1lo5512000lyrtvtaA110_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/bailong-elevator-88602/",
+    "title": "Bailong Elevator from above",
+    "path": "/uploads/itinerary/jashim/bailong-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yuanjiajie",
+    "url": "https://ak-d.tripcdn.com/images/0106q12000f6turu2F806_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "Yuanjiajie pillars in the mist",
+    "path": "/uploads/itinerary/jashim/yuanjiajie.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yuanjiajie-2",
+    "url": "https://ak-d.tripcdn.com/images/0103q120009h4fu0eDEA5_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "Sandstone pillars rising out of the clouds, Zhangjiajie",
+    "path": "/uploads/itinerary/jashim/yuanjiajie-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xibu",
+    "url": "https://ak-d.tripcdn.com/images/1A0a160000010eu3r52D9_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/xibu-street-10530168/",
+    "title": "XiBu Street gate, Wulingyuan",
+    "path": "/uploads/itinerary/jashim/xibu.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xibu-2",
+    "url": "https://ak-d.tripcdn.com/images/0103f12000ry8mrvn2789_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/xibu-street-10530168/",
+    "title": "XiBu Street riverside stilt houses",
+    "path": "/uploads/itinerary/jashim/xibu-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "huanglong",
+    "url": "https://ak-d.tripcdn.com/images/1lo0v12000oeirtq4F2D0_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/huanglong-cave-75851/",
+    "title": "Lit walkway inside Huanglong Cave",
+    "path": "/uploads/itinerary/jashim/huanglong.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "huanglong-2",
+    "url": "https://ak-d.tripcdn.com/images/1lo2q12000oeiqy3xBDD8_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/huanglong-cave-75851/",
+    "title": "Underground river in Huanglong Cave",
+    "path": "/uploads/itinerary/jashim/huanglong-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "baofeng",
+    "url": "https://ak-d.tripcdn.com/images/10040y000000m0hsm0A6A_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/baofeng-lake-10558605/",
+    "title": "Boat on Baofeng Lake below the peaks",
+    "path": "/uploads/itinerary/jashim/baofeng.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "baofeng-2",
+    "url": "https://ak-d.tripcdn.com/images/0106c12000u5qh5i335A5_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/baofeng-lake-10558605/",
+    "title": "Baofeng Lake",
+    "path": "/uploads/itinerary/jashim/baofeng-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "wyndham-zjj",
+    "url": "https://ak-d.tripcdn.com/images/1mc6s12000gpkq1ehB7C8_Z_1280_853_R50_Q90.jpg",
+    "source": "https://uk.trip.com/hotels/zhangjiajie-hotel-detail-123308210/wyndham-garden-zhangjiajie-tianmen-mountain/",
+    "title": "Wyndham Garden Zhangjiajie Tianmen Mountain",
+    "path": "/uploads/itinerary/jashim/wyndham-zjj.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "wyndham-zjj-2",
+    "url": "https://ak-d.tripcdn.com/images/1mc4m12000fsx3dqvFB9C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://uk.trip.com/hotels/zhangjiajie-hotel-detail-123308210/wyndham-garden-zhangjiajie-tianmen-mountain/",
+    "title": "Wyndham Garden Zhangjiajie room with a mountain view",
+    "path": "/uploads/itinerary/jashim/wyndham-zjj-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "tianmen",
+    "url": "https://ak-d.tripcdn.com/images/1lo1j12000oll883fAFE6_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "Tianmen Mountain summit above the clouds",
+    "path": "/uploads/itinerary/jashim/tianmen.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "qilou",
+    "url": "https://ak-d.tripcdn.com/images/0102h12000o1yd8qp22EA_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "72 Wonder Buildings lit up at night",
+    "path": "/uploads/itinerary/jashim/qilou.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "qilou-2",
+    "url": "https://ak-d.tripcdn.com/images/0103x12000lgqckyt5EE5_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "72 Wonder Buildings at dusk",
+    "path": "/uploads/itinerary/jashim/qilou-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "dayong",
+    "url": "https://ak-d.tripcdn.com/images/1mi5k424x9as71geo1215_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-72-wonder-tower-dayong-ancient-city-2184988-attraction-993137/",
+    "title": "Lantern street in Dayong Ancient City",
+    "path": "/uploads/itinerary/jashim/dayong.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xiangxi",
+    "url": "https://ak-d.tripcdn.com/images/35061b000001azi3p1115_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/zhangjiajie-charming-xiangxi-show-18090315/",
+    "title": "Charming Xiangxi show stage",
+    "path": "/uploads/itinerary/jashim/xiangxi.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xiangxi-2",
+    "url": "https://ak-d.tripcdn.com/images/350l1b000001az145492A_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/zhangjiajie/zhangjiajie-charming-xiangxi-show-18090315/",
+    "title": "Charming Xiangxi show, water and dancers",
+    "path": "/uploads/itinerary/jashim/xiangxi-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "furong",
+    "url": "https://ak-d.tripcdn.com/images/01A6g120008wralyi8E8C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-furong-ancient-town-2135788-attraction-993137/",
+    "title": "Furong Town waterfall from above",
+    "path": "/uploads/itinerary/jashim/furong.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "furong-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi57224x98kjc87x2D55_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/theme/destination-furong-ancient-town-2135788-attraction-993137/",
+    "title": "Furong Town and its waterfall",
+    "path": "/uploads/itinerary/jashim/furong-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "atour",
+    "url": "https://ak-d.tripcdn.com/images/0202l12000gcq395gB360_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/hotels/shanghai-hotel-detail-124046968/atour-hotel-peoples-square-metro-station-shanghai/",
+    "title": "Atour Hotel People's Square Metro Station entrance, 199 Beijing West Road",
+    "path": "/uploads/itinerary/jashim/atour.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "atour-2",
+    "url": "https://ak-d.tripcdn.com/images/1mc3k12000gcvqy5d14C3_Z_1280_853_R50_Q90.jpg",
+    "source": "https://us.trip.com/hotels/shanghai-hotel-detail-124046968/atour-hotel-peoples-square-metro-station-shanghai/",
+    "title": "Atour Hotel People's Square guest room",
+    "path": "/uploads/itinerary/jashim/atour-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yangs",
+    "url": "https://ak-d.tripcdn.com/images/0103d1200092d0mt62906_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/moments/detail/shanghai-2-130598946/",
+    "title": "Shengjianbao pan-fried pork buns, Yang's Dumpling",
+    "path": "/uploads/itinerary/jashim/yangs.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yangs-2",
+    "url": "https://ak-d.tripcdn.com/images/010441200092d07v2D3EC_Z_1280_853_R50_Q90.jpg",
+    "source": "https://sg.trip.com/moments/detail/shanghai-2-130598946/",
+    "title": "Yang's Dumpling shengjianbao",
+    "path": "/uploads/itinerary/jashim/yangs-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "yugarden-2",
+    "url": "https://ak-d.tripcdn.com/images/0100e12000jthbptyC685_Z_1280_853_R50_Q90.jpg",
+    "source": "https://in.trip.com/moments/detail/yu-garden-area-2036179-124763396?locale=en-IN",
+    "title": "Yu Garden pavilion over the pond",
+    "path": "/uploads/itinerary/jashim/yugarden-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xmas",
+    "url": "https://ak-d.tripcdn.com/images/1mi6012000q5o77tl978C_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/shanghai-2-138750495/",
+    "title": "Christmas market on the Bund at night",
+    "path": "/uploads/itinerary/jashim/xmas.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xmas-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi6912000q5oydjp9453_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/shanghai-2-138750495/",
+    "title": "Christmas baubles and lights at the Bund Christmas market",
+    "path": "/uploads/itinerary/jashim/xmas-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "xmas-3",
+    "url": "https://ak-d.tripcdn.com/images/1mi0a12000q5oun4sDEF2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/moments/detail/shanghai-2-138750495/",
+    "title": "Nutcracker and Christmas pyramid at the Bund Christmas market",
+    "path": "/uploads/itinerary/jashim/xmas-3.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hikiniku",
+    "url": "https://rachelgouk.com/wp-content/uploads/2026/05/hikuniku-to-come-shanghai-restaurant-29.jpg",
+    "source": "https://rachelgouk.com/new-restaurants-in-shanghai-2026-mid-year-review/",
+    "title": "Hikiniku To Come wagyu hamburger steak over rice",
+    "path": "/uploads/itinerary/jashim/hikiniku.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hikiniku-2",
+    "url": "https://rachelgouk.com/wp-content/uploads/2026/05/hikuniku-to-come-shanghai-restaurant-1.jpg",
+    "source": "https://rachelgouk.com/new-restaurants-in-shanghai-2026-mid-year-review/",
+    "title": "Hikiniku To Come counter and grill",
+    "path": "/uploads/itinerary/jashim/hikiniku-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "whitefoods",
+    "url": "https://rachelgouk.com/wp-content/uploads/2026/03/white-foods-restaurant-shanghai-matcha-japanese-33.jpg",
+    "source": "https://rachelgouk.com/new-restaurants-in-shanghai-2026-mid-year-review/",
+    "title": "White Foods claypot rice set",
+    "path": "/uploads/itinerary/jashim/whitefoods.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "whitefoods-2",
+    "url": "https://rachelgouk.com/wp-content/uploads/2026/03/white-foods-restaurant-shanghai-matcha-japanese-18.jpg",
+    "source": "https://rachelgouk.com/new-restaurants-in-shanghai-2026-mid-year-review/",
+    "title": "White Foods matcha desserts",
+    "path": "/uploads/itinerary/jashim/whitefoods-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hanfu-sh",
+    "url": "https://ak-d.tripcdn.com/images/1mi0312000fq760vz3B31_Z_1280_853_R50_Q90.jpg",
+    "source": "https://in.trip.com/moments/detail/yu-garden-area-2036179-124763396?locale=en-IN",
+    "title": "Hanfu photoshoot in Yu Garden",
+    "path": "/uploads/itinerary/jashim/hanfu-sh.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "hanfu-sh-2",
+    "url": "https://ak-d.tripcdn.com/images/1mi0u324x9a69bslw03D2_Z_1280_853_R50_Q90.jpg",
+    "source": "https://th.trip.com/moments/detail/shanghai-2-149519561?locale=en-TH",
+    "title": "Hanfu photoshoot at night in the old town",
+    "path": "/uploads/itinerary/jashim/hanfu-sh-2.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "shmuseum",
+    "url": "https://ak-d.tripcdn.com/images/0102312000hyfn8793D36_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/shanghai/shanghai-museum-76144/",
+    "title": "Shanghai Museum on People's Square",
+    "path": "/uploads/itinerary/jashim/shmuseum.webp",
+    "downloadedOn": "2026-10-30"
+  },
+  {
+    "id": "shmuseum-2",
+    "url": "https://ak-d.tripcdn.com/images/0101c12000hyfn9jx7F26_Z_1280_853_R50_Q90.jpg",
+    "source": "https://www.trip.com/travel-guide/attraction/shanghai/shanghai-museum-76144/",
+    "title": "Shanghai Museum atrium",
+    "path": "/uploads/itinerary/jashim/shmuseum-2.webp",
+    "downloadedOn": "2026-10-30"
+  }
+]
