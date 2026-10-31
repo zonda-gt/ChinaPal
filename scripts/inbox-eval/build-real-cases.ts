@@ -2,7 +2,9 @@
 // answered (in the inbox or in Instagram) becomes a case, cut at the moment the
 // draft was generated, with what the team actually sent as the reference.
 // Usage: npx tsx scripts/inbox-eval/build-real-cases.ts [--out data/eval/real-cases.json]
-//   [--since 2026-10-19] [--skip jobo5808]
+//   [--since 2026-10-19] [--skip jobo5808] [--unanswered]
+// --unanswered also keeps the latest draft of a chat the team hasn't replied to yet
+// (no reference reply), to test how a new prompt handles it.
 // Read-only. Writes under data/eval/ (git-ignored: contains customer messages).
 import { mkdir, writeFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -20,6 +22,7 @@ async function main() {
   };
   // Test conversations, not customers.
   const skip = arg("skip", "jobo5808").split(",").filter(Boolean);
+  const unanswered = process.argv.includes("--unanswered");
   const scrub = (t: string) =>
     t
       .replace(/[\w.+-]+@[\w-]+\.[\w.]+/g, "[email]")
@@ -100,10 +103,10 @@ async function main() {
     const reply = (replyEnd < 0 ? after : after.slice(0, replyEnd)).filter(
       (m) => m.direction === "outbound" && !m.deleted,
     );
-    if (!reply.length) continue;
+    if (!reply.length && (!unanswered || replyEnd >= 0)) continue;
     // Only the last draft before the reply: earlier ones were regenerated.
     const later = (generations as Generation[]).slice(index + 1);
-    if (later.some((x) => x.peer_id === g.peer_id && x.created_at < reply[0].sent_at)) continue;
+    if (later.some((x) => x.peer_id === g.peer_id && (!reply.length || x.created_at < reply[0].sent_at))) continue;
     // The draft box still held the previous draft when the team asked for a revision.
     const previous = (generations as Generation[])
       .slice(0, index)

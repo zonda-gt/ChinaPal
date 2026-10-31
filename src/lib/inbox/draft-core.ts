@@ -9,6 +9,7 @@ import {
   PROMPT_VERSION,
   buildPromptText,
   fitMessages,
+  wordCount,
   type PromptContext,
 } from "./prompt";
 import { InboxError } from "./types";
@@ -129,6 +130,8 @@ export async function runDraft(
   ];
   if (messages.length > 3)
     warnings.push("The AI wrote more than three messages; only the first three were kept.");
+  if (messages.slice(0, 3).some((m) => wordCount(m) > 100))
+    warnings.push("A message is over 100 words. Consider shortening it before sending.");
   return {
     messages: messages.slice(0, 3),
     warnings,
