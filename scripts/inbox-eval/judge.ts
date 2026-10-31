@@ -1,10 +1,14 @@
 // Blind AI judge and scorecard for an evaluation run against real cases.
 // Usage: npx tsx scripts/inbox-eval/judge.ts --results data/eval/results/<file>.json
 //   [--cases data/eval/real-cases.json] [--variants v2,v2-edit]
-//   [--out data/eval/judged.json]
+//   [--out data/eval/judged.json] [--mode traveller|team]
 // For every case and run, the judge sees the conversation, what the team actually
-// sent next and the drafts under shuffled labels, and says whether the team would
-// send each draft as is, after small edits, or rewrite it. The scorecard adds
+// sent next and the drafts under shuffled labels.
+// --mode traveller (default) reads each draft as the customer would: someone who has
+// paid (or is deciding whether to pay) for help making their China trip great, scored
+// against ChinaPal's standard for a great reply, with the service facts for accuracy.
+// The team's real reply is context only. --mode team asks whether the team would send
+// each draft as is, after small edits, or rewrite it, using the real reply as a guide. The scorecard adds
 // length, questions and closeness to what was sent, overall and per conversation
 // (so the busiest conversations don't decide the result). Writes the judgments to
 // --out and the scorecard next to it as .md. Local only: contains customer messages.
@@ -14,7 +18,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { config } from "dotenv";
 import OpenAI from "openai";
-import { buildPromptText, type PromptContext } from "../../src/lib/inbox/prompt";
+import { SERVICE_FACTS, buildPromptText, type PromptContext } from "../../src/lib/inbox/prompt";
 import { charCount, compareWithSent, questionCount } from "./text-metrics";
 
 const NAMES: Record<string, string> = {
@@ -39,9 +43,38 @@ const FLAGS = [
   "wrong_or_invented_fact",
   "missing_key_info",
   "awkward_or_robotic",
+  "generic_not_specific",
+  "doesnt_get_them",
+  "no_clear_next_step",
 ] as const;
 
-const JUDGE_INSTRUCTIONS = `You judge AI-drafted Instagram replies for ChinaPal, a small Shanghai-based team that helps international travellers with independent trips in China. A team member reads each draft and decides whether to send it.
+const TRAVELLER_INSTRUCTIONS = `You are judging Instagram replies from ChinaPal, a small Shanghai-based team that helps international travellers plan and enjoy independent trips in China, from the traveller's side.
+
+Put yourself in the customer's place. If the stage is "customer", you have paid ChinaPal US$39–59 for planning and online support and you want this trip to be really good. Otherwise you are deciding whether to trust them with it. Read each reply on your phone as that person: does it make you feel understood and well looked after, and is it worth reading?
+
+A great reply:
+1. Understands them: the advice clearly fits their situation, without reciting it back to them.
+2. Is thoughtful: notices what matters to them, including what they haven't thought of yet, and gives a reasoned pick rather than a list.
+3. Shows real work: specific places, Chinese names, timings, or what the team has actually done.
+4. Gives a clear next step when that helps: for a paying customer, what the team is doing now; for someone deciding, an easy, useful invitation. Not needed when they are just saying thanks or the reply already ends on the question that is the next step.
+5. Is straight to the point and friendly: no padding, no process talk, nothing explained at length that could be said briefly. Around 50 words a message is ideal; over 100 is too long.
+6. Is accurate. The customer can't see this, but you must check it: no invented facts, prices or claims that the team called, checked or booked something unless the conversation or staff facts say so. Prices and terms must match the service facts below.
+
+Also: asking again for something they already said, repeating known details (a baby, older parents) in every message, needless questions, sales pitches when they didn't ask, and disclaimers that don't change their decision all make the experience worse.
+
+You also see what the team actually sent next. It is context only (what happened), not the target: a draft can be better or worse than it. Don't mark a draft down for lacking facts only the team knew when they replied, unless the staff facts gave them to the AI.
+
+ChinaPal service facts:
+${SERVICE_FACTS}
+
+For each draft:
+- verdict: "send_as_is" (great as it is), "small_edits" (good, needs a small fix) or "rewrite" (not good enough for this customer).
+- score: 1 to 10 for this moment, as the customer would feel it (accuracy problems lower it a lot).
+- flags: any that apply: too_long; off_current_topic; unneeded_caveats; too_many_questions; repeats_service_or_price; did_too_much; missed_the_question; wrong_or_invented_fact; missing_key_info; awkward_or_robotic; generic_not_specific; doesnt_get_them (misses or misreads their situation); no_clear_next_step (when one was needed).
+- note: one short sentence.
+Then name the best draft. Judge each draft on its own merits; the labels are in random order.`;
+
+const TEAM_INSTRUCTIONS = `You judge AI-drafted Instagram replies for ChinaPal, a small Shanghai-based team that helps international travellers with independent trips in China. A team member reads each draft and decides whether to send it.
 
 You get the conversation as the AI saw it, what the team actually sent next, and several drafts under random labels. The team's real reply shows what they judged right at that moment: the focus, the length, the tone and what could wait. Use it as a strong guide, not the only right answer. Do not mark a draft down for lacking facts only the team knew when they replied (a booking made since, a price they looked up, a link), unless the staff facts gave them to the AI.
 
@@ -114,6 +147,8 @@ async function main() {
   ).flat();
   const variants = arg("variants", "v2,v2-edit").split(",");
   const out = arg("out", join(DIR, "judged.json"));
+  const mode = arg("mode", "traveller");
+  if (mode !== "traveller" && mode !== "team") throw new Error("--mode is traveller or team");
   const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY, maxRetries: 2, timeout: 180000 });
 
   async function ask(text: string, labels: string[]) {
@@ -122,7 +157,7 @@ async function main() {
       reasoning: { effort: "medium" },
       max_output_tokens: 8000,
       store: false,
-      instructions: JUDGE_INSTRUCTIONS,
+      instructions: mode === "team" ? TEAM_INSTRUCTIONS : TRAVELLER_INSTRUCTIONS,
       input: [{ role: "user", content: [{ type: "input_text", text }] }],
       text: { format: { type: "json_schema", name: "judgment", strict: true, schema: schema(labels) } },
     });
@@ -146,7 +181,7 @@ async function main() {
       const text = [
         buildPromptText(c.context).text,
         c.reference.length
-          ? `What the team actually sent next:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`
+          ? `What the team actually sent next${mode === "team" ? "" : " (context only, not the target)"}:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`
           : "The team has not replied yet, so there is no real reply to compare with: judge each draft on its own merits.",
         ...shuffled.map(
           (d, i) =>
@@ -209,7 +244,7 @@ async function main() {
   const lines = [
     `# Reply assistant A/B/C/D test`,
     ``,
-    `${cases.length} real cases, ${runs.length} run(s) each, judged blind by a separate GPT request. "Ready to send" = sent as is or after small edits.`,
+    `${cases.length} real cases, ${runs.length} run(s) each, judged blind by a separate GPT request (${mode === "team" ? "as the team: would they send it" : "as the traveller: Sent as is = great as it is, Rewrite = not good enough"}). "Ready to send" = sent as is or after small edits.`,
     ``,
     `| Version | Judged | Score /10 | Sent as is | Ready to send | Rewrite | Picked best | Ready to send (per customer) | Score (per customer) |`,
     `|---|---|---|---|---|---|---|---|---|`,

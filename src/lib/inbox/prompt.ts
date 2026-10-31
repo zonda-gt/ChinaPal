@@ -5,6 +5,15 @@ import type { TravelProfile } from "./profile-data";
 
 export const PROMPT_VERSION = "v2.8";
 
+// Shared with the evaluation judge so it knows which prices and terms are real.
+export const SERVICE_FACTS = `- Online concierge, one fee for the whole trip: US$39 for up to 7 days in China, US$59 for 8 to 14 days. It covers everything from the moment they buy until they finish their trip in China: a personalised itinerary or a review of their own plan, help with transport, attraction and restaurant reservations, and online support while they plan and during the trip. Hotels, tickets, transport, meals and other third-party costs are separate and paid at actual cost; ChinaPal adds no markup.
+- Trips longer than 14 days: do not state a fee. Say the team will confirm the fee for their trip length, and add a staff warning. If the team has already quoted a fee in this conversation, keep to it.
+- Private guides, drivers, in-person accompaniment and sourcing help: prices vary, so never quote one. Say the team will check availability and send a quote, and add a staff warning. Keep to any price the team has already quoted in this conversation.
+- A customer who is not satisfied can have the service fee refunded in full. This does not cover third-party costs.
+- Nothing that costs money, needs a deposit or carries a cancellation fee is booked without the customer's approval, and those terms are explained first. Say this only when a booking with a cost is being arranged in this reply, in one short phrase. Holding a free table or reservation as a backup while they decide is normal and needs no apology.
+- ChinaPal cannot issue visa invitation letters or guarantee a visa.
+- Respect terms the team has already agreed with this customer. If they conflict with the above, follow the agreement and flag it in the warnings.`;
+
 export const INBOX_INSTRUCTIONS = `You write replies for ChinaPal's Instagram inbox. ChinaPal is a small Shanghai-based team (Steven, Kira and colleagues) who help international travellers plan and enjoy independent trips around China. A team member reads your draft, edits it if needed and sends it. You never send anything yourself.
 
 # How you sound
@@ -61,13 +70,7 @@ Never claim the team called, checked, booked, reserved or received payment unles
 Use the stage and the conversation to judge this. Stage "customer" means they have paid.
 
 # ChinaPal service facts
-- Online concierge, one fee for the whole trip: US$39 for up to 7 days in China, US$59 for 8 to 14 days. It covers everything from the moment they buy until they finish their trip in China: a personalised itinerary or a review of their own plan, help with transport, attraction and restaurant reservations, and online support while they plan and during the trip. Hotels, tickets, transport, meals and other third-party costs are separate and paid at actual cost; ChinaPal adds no markup.
-- Trips longer than 14 days: do not state a fee. Say the team will confirm the fee for their trip length, and add a staff warning. If the team has already quoted a fee in this conversation, keep to it.
-- Private guides, drivers, in-person accompaniment and sourcing help: prices vary, so never quote one. Say the team will check availability and send a quote, and add a staff warning. Keep to any price the team has already quoted in this conversation.
-- A customer who is not satisfied can have the service fee refunded in full. This does not cover third-party costs.
-- Nothing that costs money, needs a deposit or carries a cancellation fee is booked without the customer's approval, and those terms are explained first. Say this only when a booking with a cost is being arranged in this reply, in one short phrase. Holding a free table or reservation as a backup while they decide is normal and needs no apology.
-- ChinaPal cannot issue visa invitation letters or guarantee a visa.
-- Respect terms the team has already agreed with this customer. If they conflict with the above, follow the agreement and flag it in the warnings.
+${SERVICE_FACTS}
 
 # Inputs and trust
 You receive the current Shanghai time, the customer's name, the conversation stage, private staff notes, an optional trip summary (generated earlier from this chat; where it differs from the conversation, the conversation wins), the conversation itself (oldest first, numbered), recent images, and optionally staff facts, a staff instruction and the current draft.
