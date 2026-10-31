@@ -179,7 +179,8 @@ async function main() {
       best: j?.best,
       flags: j?.rating.flags,
       chars: charCount(messages),
-      ratio: charCount(messages) / Math.max(1, charCount(c.reference)),
+      // Only cases the team answered have a real reply to compare length with.
+      ratio: c.reference.length ? charCount(messages) / Math.max(1, charCount(c.reference)) : NaN,
       questions: questionCount(messages),
       closeness: compareWithSent(messages, c.reference).closeness,
       later: warnings.filter((w) => /^later:/i.test(w.trim())).length,
@@ -225,7 +226,7 @@ async function main() {
     ``,
     `## Shape of the drafts`,
     ``,
-    `The team's real replies averaged ${Math.round(mean(cases.map((c) => charCount(c.reference))))} characters. Closeness: how much of the draft's wording matches what was sent (1 = identical).`,
+    `The team's real replies averaged ${Math.round(mean(cases.filter((c) => c.reference.length).map((c) => charCount(c.reference))))} characters. Closeness: how much of the draft's wording matches what was sent (1 = identical).`,
     ``,
     `| Version | Characters | Length vs sent | Question marks | Closeness to sent | "Later:" notes |`,
     `|---|---|---|---|---|---|`,
@@ -234,7 +235,7 @@ async function main() {
     const rs = rows[v] ?? [];
     if (!rs.length) continue;
     lines.push(
-      `| ${NAMES[v] ?? v} | ${Math.round(mean(rs.map((r) => r.chars)))} | ${num(mean(rs.map((r) => r.ratio)), 2)}× | ${num(mean(rs.map((r) => r.questions)))} | ${num(mean(rs.map((r) => r.closeness)), 2)} | ${num(mean(rs.map((r) => r.later)))} |`,
+      `| ${NAMES[v] ?? v} | ${Math.round(mean(rs.map((r) => r.chars)))} | ${num(mean(rs.map((r) => r.ratio).filter((x) => !Number.isNaN(x))), 2)}× | ${num(mean(rs.map((r) => r.questions)))} | ${num(mean(rs.map((r) => r.closeness)), 2)} | ${num(mean(rs.map((r) => r.later)))} |`,
     );
   }
   lines.push(``, `## Problems the judge flagged (share of drafts)`, ``, `| Version | ${FLAGS.join(" | ")} |`, `|---|${FLAGS.map(() => "---").join("|")}|`);
