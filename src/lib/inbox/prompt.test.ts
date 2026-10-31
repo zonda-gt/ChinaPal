@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { buildPromptText, fitMessages, selectHistory, waitedFor, type PromptContext, type PromptMessage } from "./prompt";
+import { buildPromptText, fitMessages, selectHistory, waitedFor, wordCount, type PromptContext, type PromptMessage } from "./prompt";
 
 const message = (n: number, over: Partial<PromptMessage> = {}): PromptMessage => ({
   id: `m${n}`,
@@ -61,4 +61,9 @@ test("waiting time reads naturally", () => {
   assert.equal(waitedFor("2026-10-10T00:00:00Z", "2026-10-10T00:05:00Z"), "5 minutes");
   assert.equal(waitedFor("2026-10-10T00:00:00Z", "2026-10-10T03:00:00Z"), "3 hours");
   assert.equal(waitedFor("2026-10-10T00:00:00Z", "2026-10-13T00:00:00Z"), "3 days");
+});
+
+test("word count treats each Chinese character as a word", () => {
+  assert.equal(wordCount("Take the metro to 人民广场 today"), 9);
+  assert.equal(wordCount("  "), 0);
 });
