@@ -22,6 +22,7 @@ const NAMES: Record<string, string> = {
   "v2.1": "A · prompt v2.1 (before 23 Oct)",
   "v2-edit": "Live prompt + editor",
   v22: "Prompt v2.2 (focus + latest-message fix)",
+  "v2-alt": "Candidate prompt (--alt)",
   focus: "B · focus prompt",
   "focus-edit": "C · focus prompt + editor",
   live: "Live draft (logged at the time)",
@@ -144,7 +145,9 @@ async function main() {
       const labels = shuffled.map((_, i) => String.fromCharCode(65 + i));
       const text = [
         buildPromptText(c.context).text,
-        `What the team actually sent next:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`,
+        c.reference.length
+          ? `What the team actually sent next:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`
+          : "The team has not replied yet, so there is no real reply to compare with: judge each draft on its own merits.",
         ...shuffled.map(
           (d, i) =>
             `Draft ${labels[i]}:\n${d.r!.messages!.map((m, j) => `[message ${j + 1}] ${m}`).join("\n")}${
@@ -240,7 +243,7 @@ async function main() {
     lines.push(`| ${NAMES[v] ?? v} | ${FLAGS.map((f) => pct(rs.length ? rs.filter((r) => r.flags!.includes(f)).length / rs.length : NaN)).join(" | ")} |`);
   }
   // Head to head on the same case and run.
-  const pairs = [["focus", "v2"], ["v2-edit", "v2"], ["focus-edit", "focus"], ["focus-edit", "v2"], ["focus-edit", "v2-edit"]].filter(
+  const pairs = [["v2-alt", "v2"], ["focus", "v2"], ["v2-edit", "v2"], ["focus-edit", "focus"], ["focus-edit", "v2"], ["focus-edit", "v2-edit"]].filter(
     ([a, b]) => variants.includes(a) && variants.includes(b),
   );
   if (pairs.length) {
