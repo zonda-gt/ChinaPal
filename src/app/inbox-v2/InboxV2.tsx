@@ -116,9 +116,15 @@ export default function InboxV2() {
   }
   const [search, setSearch] = useState(""),
     [filter, setFilter] = useState<Filter>("all"),
-    [busy, setBusy] = useState(""),
+    [working, setBusy] = useState(""),
     [error, setError] = useState(""),
     [notice, setNotice] = useState("");
+  // Chats with a draft being written. Writing a draft takes a while, so it runs
+  // per chat instead of locking the whole inbox: staff can open other chats
+  // meanwhile, and only the chat being drafted waits.
+  const [drafting, setDrafting] = useState<Record<string, true>>({});
+  const draftingRef = useRef(new Set<string>());
+  const busy = working || (selected && drafting[selected] ? "generate" : "");
   const [draft, setDraft] = useState<Draft | null>(null),
     [text, setText] = useState(""),
     [parts, setParts] = useState<string[]>([]),
@@ -400,8 +406,10 @@ export default function InboxV2() {
         drafts: [d, ...cached.data.drafts.filter((other) => other.id !== d.id && other.status !== "draft")],
       };
       threadCache.current.set(d.peer_id, { ...cached, data });
-      setThread(data);
+      if (selectedRef.current === d.peer_id) setThread(data);
     }
+    // A draft finished after staff moved to another chat stays saved for its own chat.
+    if (selectedRef.current !== d.peer_id) return;
     setDraft(d);
     draftRef.current = d;
     setText(d.body);
@@ -425,51 +433,80 @@ export default function InboxV2() {
     setUndo(null);
     return result.draft;
   }
+  // Writes a draft for one chat. The chat is fixed when it starts, so the result
+  // is saved to that chat even if staff have opened another one in the meantime.
+  async function draftFor(peer: string, body: Record<string, unknown>, onOpen: () => void) {
+    if (draftingRef.current.has(peer)) return null;
+    draftingRef.current.add(peer);
+    setDrafting((d) => ({ ...d, [peer]: true }));
+    setError("");
+    setNotice("");
+    const session = sessionVersion.current;
+    const name = contactLabel(conversations.find((c) => c.peer_id === peer));
+    try {
+      const result = await api<{ draft: Draft }>(`conversations/${peer}/generate`, body);
+      if (sessionVersion.current !== session) return null;
+      acceptDraft(result.draft);
+      setConversations((list) => list.map((c) => (c.peer_id === peer ? { ...c, has_draft: true } : c)));
+      if (selectedRef.current === peer) onOpen();
+      else setNotice(`Draft ready for ${name}.`);
+      return result.draft;
+    } catch (e) {
+      if (sessionVersion.current === session)
+        setError(selectedRef.current === peer ? (e as Error).message : `Couldn't draft a reply for ${name}: ${(e as Error).message}`);
+      return null;
+    } finally {
+      draftingRef.current.delete(peer);
+      setDrafting((d) => {
+        const next = { ...d };
+        delete next[peer];
+        return next;
+      });
+    }
+  }
   async function generate(revision?: string) {
-    if (!selected) return;
+    const peer = selected;
+    if (!peer || busyRef.current) return;
     setComposerOpen(true);
     const before = { text, parts };
-    await run("generate", async () => {
-      const result = await api<{ draft: Draft }>(`conversations/${selected}/generate`, {
+    await draftFor(
+      peer,
+      {
         instruction: revision ?? instruction,
         // The whole multi-message draft, so a revision can rework all of it.
         currentText: [text, ...parts].filter((p) => p.trim()).join("\n\n---\n\n"),
         staffFacts: facts,
         id: draft?.id,
         version: draft?.version,
-      });
-      acceptDraft(result.draft);
-      void loadQuestions();
-      setUndo(before.text.trim() ? before : null);
-      setInstruction("");
-      setTab("reply");
-      setNotice("Draft ready. Review the details before sending.");
-    });
+      },
+      () => {
+        void loadQuestions();
+        setUndo(before.text.trim() ? before : null);
+        setInstruction("");
+        setTab("reply");
+        setNotice("Draft ready. Review the details before sending.");
+      },
+    );
   }
   // A reminder replaces the reply box with a fresh draft written from the trip plan.
   async function draftReminder(reminder: string) {
-    if (!selected) return null;
+    const peer = selected;
+    if (!peer || busyRef.current) return null;
     if (dirty && text.trim() && !window.confirm("Replace the reply you're writing with this reminder?")) return null;
     setComposerOpen(true);
     const before = { text, parts };
-    let id: string | null = null;
-    await run("generate", async () => {
-      const result = await api<{ draft: Draft }>(`conversations/${selected}/generate`, {
-        instruction: reminder,
-        currentText: "",
-        staffFacts: facts,
-        id: draft?.id,
-        version: draft?.version,
-      });
-      acceptDraft(result.draft);
-      setUndo(before.text.trim() ? before : null);
-      setTab("reply");
-      setNotice("Reminder drafted. Review it before sending.");
-      id = result.draft.id;
-    });
-    // On a phone the panel covers the reply box.
-    if (id && window.matchMedia("(max-width: 1200px)").matches) setDetailsOpen(false);
-    return id;
+    const result = await draftFor(
+      peer,
+      { instruction: reminder, currentText: "", staffFacts: facts, id: draft?.id, version: draft?.version },
+      () => {
+        setUndo(before.text.trim() ? before : null);
+        setTab("reply");
+        setNotice("Reminder drafted. Review it before sending.");
+        // On a phone the panel covers the reply box.
+        if (window.matchMedia("(max-width: 1200px)").matches) setDetailsOpen(false);
+      },
+    );
+    return result?.id ?? null;
   }
   // Sending needs a saved draft anchored to the newest message, so a typed,
   // edited or out-of-date reply is saved first; the confirm dialog still shows
@@ -697,7 +734,7 @@ export default function InboxV2() {
       data-ph-no-capture
       data-clarity-mask="true"
     >
-      <aside className={s.rail}>
+      <aside className={`${s.rail} ${v.rail}`}>
         <Link href="/" className={s.railBrand} aria-label="ChinaPal home" title="ChinaPal home">
           C<span>P</span>
         </Link>
@@ -720,6 +757,8 @@ export default function InboxV2() {
                 identities.clear();
                 latestRequests.current.clear();
                 sessionVersion.current++;
+                draftingRef.current.clear();
+                setDrafting({});
                 selectedRef.current = null;
                 selectionVersion.current++;
                 setStaff(null);
@@ -795,7 +834,7 @@ export default function InboxV2() {
                   </span>
                   {isUnread(c) && <i className={s.unreadDot} />}
                 </span>
-                {(needsReply(c) || c.has_draft || !!due[c.peer_id]) && (
+                {(needsReply(c) || c.has_draft || drafting[c.peer_id] || !!due[c.peer_id]) && (
                   <span className={v.rowTags}>
                     {needsReply(c) && (
                       <span
@@ -804,7 +843,11 @@ export default function InboxV2() {
                         Needs reply · {waited(c.last_message_at)}
                       </span>
                     )}
-                    {c.has_draft && <span className={`${v.tag} ${v.tagDraft}`}>Draft ready</span>}
+                    {drafting[c.peer_id] ? (
+                      <span className={`${v.tag} ${v.tagDraft}`}>Drafting…</span>
+                    ) : (
+                      c.has_draft && <span className={`${v.tag} ${v.tagDraft}`}>Draft ready</span>
+                    )}
                     {!!due[c.peer_id] && (
                       <span className={`${v.tag} ${v.tagCare}`}>{due[c.peer_id] > 1 ? `${due[c.peer_id]} reminders due` : "Reminder due"}</span>
                     )}
