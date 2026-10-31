@@ -22,6 +22,7 @@ const NAMES: Record<string, string> = {
   "v2.1": "A · prompt v2.1 (before 23 Oct)",
   "v2-edit": "Live prompt + editor",
   v22: "Prompt v2.2 (focus + latest-message fix)",
+  "v2-alt": "Candidate prompt (--alt)",
   focus: "B · focus prompt",
   "focus-edit": "C · focus prompt + editor",
   live: "Live draft (logged at the time)",
@@ -144,7 +145,9 @@ async function main() {
       const labels = shuffled.map((_, i) => String.fromCharCode(65 + i));
       const text = [
         buildPromptText(c.context).text,
-        `What the team actually sent next:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`,
+        c.reference.length
+          ? `What the team actually sent next:\n${c.reference.map((m, i) => `[message ${i + 1}] ${m}`).join("\n")}`
+          : "The team has not replied yet, so there is no real reply to compare with: judge each draft on its own merits.",
         ...shuffled.map(
           (d, i) =>
             `Draft ${labels[i]}:\n${d.r!.messages!.map((m, j) => `[message ${j + 1}] ${m}`).join("\n")}${
@@ -176,7 +179,8 @@ async function main() {
       best: j?.best,
       flags: j?.rating.flags,
       chars: charCount(messages),
-      ratio: charCount(messages) / Math.max(1, charCount(c.reference)),
+      // Only cases the team answered have a real reply to compare length with.
+      ratio: c.reference.length ? charCount(messages) / Math.max(1, charCount(c.reference)) : NaN,
       questions: questionCount(messages),
       closeness: compareWithSent(messages, c.reference).closeness,
       later: warnings.filter((w) => /^later:/i.test(w.trim())).length,
@@ -222,7 +226,7 @@ async function main() {
     ``,
     `## Shape of the drafts`,
     ``,
-    `The team's real replies averaged ${Math.round(mean(cases.map((c) => charCount(c.reference))))} characters. Closeness: how much of the draft's wording matches what was sent (1 = identical).`,
+    `The team's real replies averaged ${Math.round(mean(cases.filter((c) => c.reference.length).map((c) => charCount(c.reference))))} characters. Closeness: how much of the draft's wording matches what was sent (1 = identical).`,
     ``,
     `| Version | Characters | Length vs sent | Question marks | Closeness to sent | "Later:" notes |`,
     `|---|---|---|---|---|---|`,
@@ -231,7 +235,7 @@ async function main() {
     const rs = rows[v] ?? [];
     if (!rs.length) continue;
     lines.push(
-      `| ${NAMES[v] ?? v} | ${Math.round(mean(rs.map((r) => r.chars)))} | ${num(mean(rs.map((r) => r.ratio)), 2)}× | ${num(mean(rs.map((r) => r.questions)))} | ${num(mean(rs.map((r) => r.closeness)), 2)} | ${num(mean(rs.map((r) => r.later)))} |`,
+      `| ${NAMES[v] ?? v} | ${Math.round(mean(rs.map((r) => r.chars)))} | ${num(mean(rs.map((r) => r.ratio).filter((x) => !Number.isNaN(x))), 2)}× | ${num(mean(rs.map((r) => r.questions)))} | ${num(mean(rs.map((r) => r.closeness)), 2)} | ${num(mean(rs.map((r) => r.later)))} |`,
     );
   }
   lines.push(``, `## Problems the judge flagged (share of drafts)`, ``, `| Version | ${FLAGS.join(" | ")} |`, `|---|${FLAGS.map(() => "---").join("|")}|`);
@@ -240,7 +244,7 @@ async function main() {
     lines.push(`| ${NAMES[v] ?? v} | ${FLAGS.map((f) => pct(rs.length ? rs.filter((r) => r.flags!.includes(f)).length / rs.length : NaN)).join(" | ")} |`);
   }
   // Head to head on the same case and run.
-  const pairs = [["focus", "v2"], ["v2-edit", "v2"], ["focus-edit", "focus"], ["focus-edit", "v2"], ["focus-edit", "v2-edit"]].filter(
+  const pairs = [["v2-alt", "v2"], ["focus", "v2"], ["v2-edit", "v2"], ["focus-edit", "focus"], ["focus-edit", "v2"], ["focus-edit", "v2-edit"]].filter(
     ([a, b]) => variants.includes(a) && variants.includes(b),
   );
   if (pairs.length) {

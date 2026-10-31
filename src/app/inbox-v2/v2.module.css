@@ -15,6 +15,17 @@ main.layout {
 .layout .main {
   grid-row: 1;
 }
+/* The side rail (logo, inbox, sign out) is for laptops and desktops. Touch
+   screens without a mouse, such as phones, foldables and tablets, don't get it,
+   whatever their width: an unfolded phone is wider than the 700px phone layout. */
+@media (hover: none) and (pointer: coarse) {
+  main.layout {
+    --rail-width: 0px;
+  }
+  .layout .rail {
+    display: none;
+  }
+}
 .layout .info {
   grid-row: 1;
   margin-top: 12px;

@@ -7,7 +7,7 @@
   --default-list-width: 320px;
   --default-details-width: 290px;
   --effective-details-width: clamp(260px, var(--details-width, var(--default-details-width)), min(560px, calc(100vw - 684px)));
-  grid-template-columns: 64px clamp(260px, var(--list-width, var(--default-list-width)), min(520px, calc(100vw - 424px - var(--effective-details-width)))) minmax(0, 1fr) var(--effective-details-width);
+  grid-template-columns: var(--rail-width, 64px) clamp(260px, var(--list-width, var(--default-list-width)), min(520px, calc(100vw - 424px - var(--effective-details-width)))) minmax(0, 1fr) var(--effective-details-width);
   grid-template-rows: 76px 54px minmax(0, 1fr);
   height: 100dvh;
   overflow: hidden;
@@ -1063,7 +1063,7 @@
 }
 @media (max-width: 1200px) {
   .workspace {
-    grid-template-columns: 56px clamp(240px, var(--list-width, 290px), min(520px, calc(100vw - 376px))) minmax(0, 1fr);
+    grid-template-columns: var(--rail-width, 56px) clamp(240px, var(--list-width, 290px), min(520px, calc(100vw - 376px))) minmax(0, 1fr);
   }
   .infoPanel {
     display: none;
